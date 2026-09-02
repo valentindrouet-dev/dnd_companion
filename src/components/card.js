@@ -4,6 +4,7 @@
 import { h } from '../dom.js';
 import { icon } from '../icons.js';
 import { store } from '../store.js';
+import { markup } from '../markup.js';
 import { hiddenRow, noteButton, noteArea } from './block.js';
 
 /**
@@ -31,10 +32,13 @@ export function card(o) {
       ? h('button', { class: 'btn btn-sm btn-ghost', onclick: (e) => { e.stopPropagation(); store.setHidden(o.key, true); } }, icon('check'), o.hideLabel)
       : null);
 
+  // les sous-titres viennent des données : ils acceptent le balisage (**gras**, DD 15, [[m:…]])
+  const line = (v, cls) => (v == null || v === '' ? null
+    : typeof v === 'string' ? markup(v, 'div', cls) : h('div', { class: cls }, v));
   const main = h('div', { class: 'card-main' },
     h('div', { class: 'card-title' }, o.title, o.pills),
-    o.sub ? h('div', { class: 'card-sub' }, o.sub) : null,
-    o.sub2 ? h('div', { class: 'card-sub tactic' }, o.sub2) : null);
+    line(o.sub, 'card-sub'),
+    line(o.sub2, 'card-sub tactic'));
 
   const badge = o.badge != null ? h('div', { class: 'card-badge ' + (o.badgeClass || '') }, o.badge) : null;
 

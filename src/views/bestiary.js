@@ -5,6 +5,7 @@ import { icon } from '../icons.js';
 import { allMonsters } from '../data.js';
 import { shell } from './shell.js';
 import { card, pill } from '../components/card.js';
+import { openEncounterPopup } from '../encounters/ui.js';
 import { openMonsterPopup } from '../components/monster.js';
 
 let query = '';
@@ -36,8 +37,10 @@ export async function bestiaryView(route) {
   if (route.monster) setTimeout(() => openMonsterPopup(route.monster), 0);
 
   const main = h('div', null,
-    h('div', { class: 'hero' }, h('h1', null, 'Bestiaire'), h('p', null, `${allMonsters().length} créatures disponibles hors-ligne.`)),
-    h('div', { class: 'search', style: { marginBottom: '16px' } }, icon('search'), input),
+    h('div', { class: 'hero' }, h('h1', null, 'Bestiaire')),
+    h('div', { class: 'toolbar', style: { marginBottom: '14px' } },
+      h('div', { class: 'search', style: { flex: '1', minWidth: '200px' } }, icon('search'), input),
+      h('button', { class: 'btn', onclick: () => openEncounterPopup({}) }, icon('dice'), 'Rencontre')),
     list);
 
   return shell({ title: 'Bestiaire', back: '', main });

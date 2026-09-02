@@ -36,6 +36,9 @@ export async function loadAdventure(id) {
   const meta = (index.adventures || []).find((a) => a.id === id);
   if (!meta) throw new Error(`Aventure inconnue : ${id}`);
   const adv = await getJSON(BASE + meta.path);
+  // métadonnées de l'index qui ne sont pas répétées dans le fichier de l'aventure
+  adv.map ||= meta.map;
+  adv.levels ||= meta.levels;
   prepare(adv);
   adventures.set(id, adv);
   return adv;

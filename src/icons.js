@@ -34,8 +34,37 @@ const PATHS = {
   heart: '<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>',
   notes: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>',
   flag: '<path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/>',
+  key: '<path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/>',
+  crown: '<path d="M2 18h20l-2-11-5 4-3-6-3 6-5-4z"/><line x1="2" y1="21" x2="22" y2="21"/>',
+  lock: '<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
+  portal: '<ellipse cx="12" cy="12" rx="6" ry="9"/><ellipse cx="12" cy="12" rx="2.5" ry="5"/>',
+  slash: '<circle cx="12" cy="12" r="9"/><line x1="6" y1="18" x2="18" y2="6"/>',
+  target: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/>',
+  bow: '<path d="M4 20L20 4"/><path d="M5 5a14 14 0 0 1 14 14"/><path d="M4 12v8h8"/>',
+  image: '<rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>',
+  expand: '<polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/>',
+  layers: '<polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/>',
+  drop: '<path d="M12 2.7l5.3 5.3a7.5 7.5 0 1 1-10.6 0z"/>',
+  water: '<path d="M3 12s2-2 4.5-2 3 2 5 2 3-2 5-2 3.5 2 3.5 2"/><path d="M3 17s2-2 4.5-2 3 2 5 2 3-2 5-2 3.5 2 3.5 2"/><path d="M3 7s2-2 4.5-2 3 2 5 2 3-2 5-2 3.5 2 3.5 2"/>',
+  tree: '<path d="M12 2l5 7h-3l4 6h-3.5l3 4H14v3h-4v-3H6.5l3-4H6l4-6H7z"/>',
+  question: '<circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>',
+  plus: '<line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>',
+  minus: '<line x1="5" y1="12" x2="19" y2="12"/>',
+  wand: '<path d="M15 4V2M15 16v-2M8 9h2M20 9h2M17.8 11.8L19 13M17.8 6.2L19 5M3 21l9-9M12.2 6.2L11 5"/>',
   trap: '<path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/>',
 };
+
+/** Icône associée à une étiquette de salle ou à un type d'élément. */
+const TAG_ICONS = {
+  combat: 'sword', boss: 'crown', piege: 'trap', tresor: 'gem', social: 'chat', pnj: 'users',
+  enigme: 'key', secret: 'lock', portail: 'portal', vide: 'slash', danger: 'alert',
+  exterieur: 'sun', magique: 'wand', cache: 'eyeOff',
+};
+
+export function tagIcon(tag) {
+  const k = String(tag ?? '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  return TAG_ICONS[k] || null;
+}
 
 export function icon(name, cls = '') {
   const tpl = document.createElement('template');

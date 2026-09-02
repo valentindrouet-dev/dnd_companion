@@ -16,13 +16,13 @@ export function connectionCards(adv, room) {
     if (!target) return card({ key: key(adv.id, room.id, 'link', c.to), badge: '?', title: `Salle inconnue : ${c.to}`, noNote: true });
     return card({
       key: key(adv.id, room.id, 'link', c.to),
-      badge: target.number ?? '→',
+      badge: target.number ?? icon('door'),
       badgeClass: c.secret ? 'accent' : (c.implicit ? '' : 'info'),
       title: target.name,
       pills: [
-        c.secret ? h('span', { class: 'pill accent' }, 'secret') : null,
-        c.oneWay ? h('span', { class: 'pill' }, 'sens unique') : null,
-        c.implicit ? h('span', { class: 'pill' }, 'accès depuis') : null,
+        c.secret ? h('span', { class: 'pill accent' }, icon('lock'), 'secret') : null,
+        c.oneWay ? h('span', { class: 'pill' }, icon('forward'), 'sens unique') : null,
+        c.implicit ? h('span', { class: 'pill' }, icon('back'), 'accès depuis') : null,
       ],
       sub: [c.via, c.note].filter(Boolean).join(' — ') || null,
       onOpen: () => navigate(roomPath(adv.id, target.id)),

@@ -5,12 +5,15 @@ pour être utilisée sur iPad pendant une partie (en parallèle de Fantasy Groun
 texte à lire, notes du MJ, créatures avec résumé tactique, PNJ et répliques, trésors,
 pièges et tests, liaisons vers les salles connectées, générateur de loot.
 
-- **Cocher les salles faites** (bouton « Faite » dans la salle, coches dans la liste) et suivre la
-  progression ; **vue en liste** de toutes les salles triée par numéro, avec recherche et filtre.
+- **Vue en liste sur deux colonnes**, triée par numéro, avec recherche, filtre et **pourcentage
+  d'avancement** par salle ; case « faite » sur chaque ligne et anneau de progression dans la salle.
+- **Plan par salle** : vignette de la carte cadrée sur la pièce, carte complète zoomable, et une
+  description topologique (murs, plafond, sol, accès) en tête de chaque salle.
 - **Masquer ce qui a été lu / dit / vaincu / distribué** d'un appui ; réafficher d'un autre.
 - **Annoter et modifier à la volée** n'importe quel texte (l'original reste restaurable).
-- **Fenêtres** pour les fiches de monstres (résumé MJ + bloc de stats), les dialogues, le
-  trésor, la rencontre complète, le générateur de loot.
+- **Fiches de monstres compactes** : résumé pour le MJ, CA/PV/vitesse, défenses sur une ligne et
+  actions résumées (corps à corps ou distance, bonus, dégâts).
+- **Générateur de rencontres** basé sur le budget de PX par niveau, et générateur de loot.
 - **Hors-ligne** : données embarquées, service worker ; installable sur l'écran d'accueil.
 - Zéro build, zéro dépendance : HTML/CSS/JS modernes, déployable tel quel sur GitHub Pages.
 
@@ -19,7 +22,8 @@ pièges et tests, liaisons vers les salles connectées, générateur de loot.
 ```
 index.html, styles/, src/        l'application
 data/                            aventures et monstres (JSON) — voir docs/DATA_SCHEMA.md
-tools/                           validateur, serveur local, icônes, extraction PDF
+assets/maps/                     images de carte découpées salle par salle
+tools/                           validateur, serveur local, icônes, extraction PDF, découpe des cartes
 docs/                            schéma des données, procédure d'ingestion
 sources/                         PDF et textes extraits (ignorés par git)
 ```
@@ -29,6 +33,7 @@ sources/                         PDF et textes extraits (ignorés par git)
 ```bash
 npm start             # http://localhost:8080  (+ adresse Wi-Fi pour l'iPad)
 npm run validate      # vérifie data/ et la liste hors-ligne du service worker
+npm run maps          # redécoupe les images de carte depuis le PDF (voir tools/map-coords.json)
 ```
 
 ## Déployer sur l'iPad (GitHub Pages)
@@ -44,12 +49,11 @@ npm run validate      # vérifie data/ et la liste hors-ligne du service worker
 L'état de partie (masquages, annotations, notes) reste sur l'iPad ; il s'exporte et
 s'importe en JSON depuis **Réglages**.
 
-## Aventures incluses
+## Aventure incluse
 
-- **Strate 2 : les Salles Arcaniques** (Waterdeep : le Donjon du Mage dément) — 70 zones,
-  transposées depuis l'édition française pour un usage personnel à la table. Le contenu du
-  livre lui-même n'est pas versionné : seules ces notes de jeu structurées le sont.
-- **La Crypte du Veilleur** — aventure d'exemple, contenu original, 7 salles.
+**Strate 2 : les Salles Arcaniques** (Waterdeep : le Donjon du Mage dément) — 70 zones,
+transposées depuis l'édition française pour un usage personnel à la table, avec les cadrages
+de carte correspondants. Le PDF source lui-même n'est pas versionné.
 
 ## Ajouter une aventure
 

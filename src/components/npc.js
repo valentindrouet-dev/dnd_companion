@@ -10,17 +10,17 @@ import { hiddenRow } from './block.js';
 import { asTextItem } from '../dom.js';
 
 const ATTITUDE = {
-  amical: ['Amical', 'ok'],
-  neutre: ['Neutre', ''],
-  hostile: ['Hostile', 'danger'],
-  mefiant: ['Méfiant', 'info'],
-  méfiant: ['Méfiant', 'info'],
+  amical: ['Amical', 'ok', 'heart'],
+  neutre: ['Neutre', '', 'users'],
+  hostile: ['Hostile', 'danger', 'sword'],
+  mefiant: ['Méfiant', 'info', 'eye'],
+  méfiant: ['Méfiant', 'info', 'eye'],
 };
 
 export function attitudePill(att) {
   if (!att) return null;
-  const [label, cls] = ATTITUDE[att] || [att, ''];
-  return h('span', { class: 'pill ' + cls }, label);
+  const [label, cls, ico] = ATTITUDE[att] || [att, '', null];
+  return h('span', { class: 'pill ' + cls }, ico ? icon(ico) : null, label);
 }
 
 /**

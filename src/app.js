@@ -12,6 +12,7 @@ import { bestiaryView } from './views/bestiary.js';
 import { settingsView } from './views/settings.js';
 import { openMonsterPopup } from './components/monster.js';
 import { closeAllPopups } from './ui/popup.js';
+import { loadMaps } from './components/map.js';
 import { toast } from './ui/toast.js';
 
 const app = document.getElementById('app');
@@ -85,6 +86,7 @@ async function boot() {
   try {
     await loadIndex();
     await loadMonsters();
+    await loadMaps();
   } catch (e) {
     app.replaceChildren(errorView(e));
     return;

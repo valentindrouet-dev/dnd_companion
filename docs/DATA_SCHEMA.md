@@ -29,7 +29,7 @@ Tous les champs texte acceptent un mini-balisage :
 ```json
 {
   "adventures": [
-    { "id": "slug", "title": "Titre", "levels": "1-3", "source": "Livre, p. 12", "summary": "Une phrase.", "path": "adventures/slug.json" }
+    { "id": "slug", "title": "Titre", "levels": "1-3", "source": "Livre, p. 12", "path": "adventures/slug.json", "map": "strate-2" }
   ],
   "monsters": ["monsters/srd-2024.json"]
 }
@@ -63,7 +63,9 @@ salles orphelines dans l'ordre de `rooms`.
   "id": "r4",                          // stable, utilisé dans les liaisons et les clés d'état
   "number": "4",                       // affiché (peut être "4a", "B12"…)
   "name": "Salle des gardes",
-  "tags": ["combat", "pnj"],           // combat, piège, trésor, social, pnj, énigme, boss, extérieur…
+  "tags": ["combat", "pnj"],           // combat, piège, trésor, social, pnj, énigme, boss, secret,
+                                       // portail, danger, vide, extérieur — chacun a son icône
+  "layout": "Salle de 12 × 9 m, plafond voûté à 6 m, murs de granit…",   // topologie, affichée en tête
   "readAloud": [ "Texte lu aux joueurs…", { "id": "suite", "text": "…" } ],   // string ou tableau
   "notes": [ "Note MJ…" ],
   "features": [ { "id": "autel", "title": "L’autel", "text": "…" } ],
@@ -136,4 +138,13 @@ séance, salles visitées et **salles cochées « faites »** sont stockés sur 
 en JSON depuis **Réglages**.
 
 Le champ `number` sert au tri de la vue en liste (tri naturel : 1, 1a, 1b, 2, 10, 13c–13d…).
+Le pourcentage d'avancement d'une salle est le rapport entre les éléments masqués et le nombre
+total d'éléments cochables (lectures, notes, éléments, créatures, trésors, pièges, tests, répliques).
+
+## Cartes (`assets/maps/`, `data/maps.json`)
+
+`tools/map-coords.json` donne, pour chaque carte, le PDF source, la page, le cadre de la carte et
+la position de chaque salle en points PDF. `npm run maps` produit `assets/maps/<carte>/complete.jpg`,
+un cadrage `<salle>.jpg` par salle (avec un repère doré) et `data/maps.json`, que le service worker
+précache pour l'usage hors-ligne. L'aventure est reliée à sa carte par le champ `map` de `index.json`.
 Les données d'aventure elles-mêmes ne sont jamais modifiées par l'app.

@@ -1,6 +1,6 @@
 {
   "name": "dnd-companion",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "description": "Compagnon de table pour MJ D&D 5e (2024), pensé pour iPad.",
   "type": "module",
@@ -8,7 +8,8 @@
     "start": "node tools/serve.mjs",
     "validate": "node tools/validate.mjs",
     "test": "node tools/validate.mjs",
-    "icons": "python3 tools/make-icons.py"
+    "icons": "python3 tools/make-icons.py",
+    "maps": "python3 tools/make-maps.py"
   },
   "engines": {
     "node": ">=18"

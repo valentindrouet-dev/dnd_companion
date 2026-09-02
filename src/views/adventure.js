@@ -1,7 +1,7 @@
 // Vue d'ensemble d'une aventure : synopsis, introduction, PNJ récurrents, plan des salles.
 
 import { h, asTextItem, elemId } from '../dom.js';
-import { icon } from '../icons.js';
+import { icon, tagIcon } from '../icons.js';
 import { loadAdventure } from '../data.js';
 import { store, key } from '../store.js';
 import { navigate, roomPath, advPath, listPath } from '../router.js';
@@ -11,6 +11,9 @@ import { textBlock } from '../components/block.js';
 import { card } from '../components/card.js';
 import { attitudePill, openNpcPopup } from '../components/npc.js';
 import { slug } from '../util.js';
+import { adventureProgress } from '../progress.js';
+import { openMapPopup, fullMap } from '../components/map.js';
+import { openEncounterPopup } from '../encounters/ui.js';
 
 export async function adventureView(route) {
   const adv = await loadAdventure(route.adv);
@@ -25,12 +28,15 @@ export async function adventureView(route) {
       h('div', { class: 'room-meta' },
         adv.levels ? h('span', null, `Niveaux ${adv.levels}`) : null,
         adv.source?.book ? h('span', null, `${adv.source.book}${adv.source.pages ? ', p. ' + adv.source.pages : ''}`) : null,
-        h('span', { class: 'pill ' + (store.doneCount(adv.id) === adv.roomOrder.length ? 'ok' : '') }, `${store.doneCount(adv.id)} / ${adv.roomOrder.length} salles faites`))),
+        h('span', { class: 'pill ' + (store.doneCount(adv.id) === adv.roomOrder.length ? 'ok' : '') }, icon('check'), `${store.doneCount(adv.id)} / ${adv.roomOrder.length} salles`),
+        h('span', { class: 'pill' }, `${adventureProgress(adv).pct} % coché`))),
 
     h('div', { class: 'toolbar', style: { marginBottom: '22px' } },
       first ? h('button', { class: 'btn btn-primary', onclick: () => navigate(roomPath(adv.id, first.id)) }, icon('flag'), 'Commencer') : null,
       last && last !== first?.id ? h('button', { class: 'btn', onclick: () => navigate(roomPath(adv.id, last)) }, icon('forward'), 'Reprendre') : null,
-      h('button', { class: 'btn', onclick: () => navigate(listPath(adv.id)) }, icon('list'), 'Liste des salles')),
+      h('button', { class: 'btn', onclick: () => navigate(listPath(adv.id)) }, icon('list'), 'Salles'),
+      fullMap(adv.map) ? h('button', { class: 'btn', onclick: () => openMapPopup(adv) }, icon('map'), 'Carte') : null,
+      h('button', { class: 'btn', onclick: () => openEncounterPopup({ adv }) }, icon('dice'), 'Rencontre')),
 
     adv.summary ? section('Synopsis', textBlock({ key: K('summary'), text: adv.summary, kindLabel: 'Synopsis', hideLabel: 'Vu' })) : null,
 
@@ -73,5 +79,8 @@ function roomTile(adv, r) {
   return h('button', { class: 'room-tile' + (done ? ' is-done' : store.isVisited(adv.id, r.id) ? ' is-visited' : ''), onclick: () => navigate(roomPath(adv.id, r.id)) },
     h('span', { class: 'num' }, done ? icon('check') : (r.number ?? '•')),
     h('span', { class: 'name' }, r.name),
-    h('span', { class: 'tags' }, (r.tags || []).slice(0, 2).map((t) => h('span', { class: 'tag ' + slug(t) }, t))));
+    h('span', { class: 'tags' }, (r.tags || []).slice(0, 3).map((t) => {
+      const ico = tagIcon(t);
+      return ico ? h('span', { class: 'tag ' + slug(t), title: t }, icon(ico)) : null;
+    })));
 }

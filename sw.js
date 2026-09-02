@@ -22,6 +22,7 @@ const SHELL = [
   './src/dom.js',
   './src/icons.js',
   './src/markup.js',
+  './src/progress.js',
   './src/router.js',
   './src/store.js',
   './src/util.js',
@@ -30,6 +31,7 @@ const SHELL = [
   './src/components/block.js',
   './src/components/card.js',
   './src/components/connections.js',
+  './src/components/map.js',
   './src/components/monster.js',
   './src/components/npc.js',
   './src/components/treasure.js',
@@ -43,10 +45,28 @@ const SHELL = [
   './src/views/sidebar.js',
   './src/loot/generator.js',
   './src/loot/ui.js',
+  './src/encounters/generator.js',
+  './src/encounters/ui.js',
+  './data/maps.json',
 ];
 
+// Les images de carte sont listées dans data/maps.json : on les met aussi hors-ligne.
+async function precache() {
+  const cache = await caches.open(CACHE);
+  await cache.addAll(SHELL);
+  try {
+    const res = await fetch('./data/maps.json', { cache: 'no-cache' });
+    if (res.ok) {
+      const files = (await res.json()).files || [];
+      await Promise.all(files.map((f) => cache.add('./' + f).catch(() => {})));
+    }
+  } catch (e) {
+    // sans cartes, l'application reste utilisable
+  }
+}
+
 self.addEventListener('install', (event) => {
-  event.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
+  event.waitUntil(precache().then(() => self.skipWaiting()));
 });
 
 self.addEventListener('activate', (event) => {

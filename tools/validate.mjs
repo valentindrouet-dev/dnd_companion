@@ -104,6 +104,7 @@ function checkAdventure(adv, meta) {
       if (n.monster && !hasMonster(n.monster)) err(`${w} : PNJ « ${n.name} » → monstre inconnu « ${n.monster} »`);
       for (const d of n.dialogues || []) if (typeof d !== 'string' && !d.line) err(`${w} : réplique de « ${n.name} » sans line`);
     }
+    if (r.layout != null && typeof r.layout !== 'string') err(`${w}.layout : doit être une chaîne`);
     for (const k of ['readAloud', 'notes', 'features', 'enemies', 'npcs', 'treasure', 'traps', 'checks', 'connections', 'dialogues', 'tags']) {
       if (r[k] != null && !Array.isArray(r[k]) && !(typeof r[k] === 'string' && ['readAloud', 'notes'].includes(k))) err(`${w}.${k} : doit être un tableau`);
     }
@@ -142,6 +143,22 @@ function walkStrings(node, fn, path = '') {
   if (typeof node === 'string') return fn(node, path);
   if (Array.isArray(node)) return node.forEach((n, i) => walkStrings(n, fn, `${path}[${i}]`));
   if (node && typeof node === 'object') for (const [k, v] of Object.entries(node)) walkStrings(v, fn, path ? `${path}.${k}` : k);
+}
+
+// ---------- cartes ----------
+const mapsPath = join(DATA, 'maps.json');
+if (existsSync(mapsPath)) {
+  const maps = readJSON(mapsPath) || {};
+  for (const f of maps.files || []) if (!existsSync(join(ROOT, f))) err(`data/maps.json : image manquante ${f}`);
+  for (const meta of index.adventures || []) {
+    if (!meta.map) continue;
+    const m = maps.maps?.[meta.map];
+    if (!m) { err(`index.json : carte « ${meta.map} » absente de data/maps.json`); continue; }
+    const adv = readJSON(join(DATA, meta.path));
+    for (const r of adv?.rooms || []) if (!m.rooms?.[r.id]) warn(`carte « ${meta.map} » : pas de cadrage pour la salle « ${r.id} »`);
+  }
+} else if ((index.adventures || []).some((a) => a.map)) {
+  warn('data/maps.json absent : lance « npm run maps » pour générer les cartes.');
 }
 
 // ---------- service worker : tous les fichiers de src/ et styles/ doivent être pré-cachés ----------

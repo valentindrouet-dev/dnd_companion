@@ -18,7 +18,7 @@ export function treasureCards(advId, room, opts = {}) {
     badge: t.qty != null ? `×${t.qty}` : icon('gem'),
     badgeClass: t.magic ? 'accent' : '',
     title: t.item,
-    pills: [t.magic ? h('span', { class: 'pill accent' }, 'magique') : null, t.value ? h('span', { class: 'pill' }, t.value) : null],
+    pills: [t.magic ? h('span', { class: 'pill accent' }, icon('wand'), 'magique') : null, t.value ? h('span', { class: 'pill' }, t.value) : null],
     sub: [t.where, t.note].filter(Boolean).join(' — ') || null,
     hideLabel: 'Distribué',
     onOpen: opts.compact ? () => openTreasurePopup(advId, room) : undefined,

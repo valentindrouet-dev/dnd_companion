@@ -648,47 +648,147 @@ hr.sep { border: 0; border-top: 1px solid var(--border); margin: 16px 0; }
 .room-tile.is-done .num { background: var(--ok); color: #fff; }
 .room-tile.is-done .name { color: var(--muted); }
 
-/* ---------- Vue en liste des salles ---------- */
-.list-row {
-  display: flex;
-  align-items: stretch;
-  gap: 8px;
-  margin-bottom: 6px;
+/* ---------- Vue en liste des salles (2 colonnes, compacte) ---------- */
+.list-toolbar { margin-bottom: 10px; gap: 8px; }
+.room-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 6px 10px;
 }
-.list-main {
+.lrow { display: flex; align-items: stretch; gap: 4px; min-width: 0; }
+.lrow-main {
   flex: 1;
   min-width: 0;
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 12px;
-  min-height: 60px;
-  padding: 6px 12px;
-  border-radius: var(--radius);
+  gap: 8px;
+  height: 40px;
+  padding: 0 10px 0 6px;
+  border-radius: 9px;
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--text);
   text-align: left;
+  overflow: hidden;
 }
-.list-main:active { background: var(--surface-2); }
-.list-main .num {
+.lrow-main:active { background: var(--surface-2); }
+.lrow-main .num {
   flex: 0 0 auto;
-  min-width: 52px;
-  height: 44px;
-  padding: 0 8px;
-  border-radius: 12px;
+  min-width: 38px;
+  height: 26px;
+  padding: 0 6px;
+  border-radius: 7px;
   background: var(--surface-2);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-weight: 800;
-  font-size: 1.05em;
+  font-weight: 700;
+  font-size: 0.82em;
+  font-variant-numeric: tabular-nums;
 }
-.list-main .text { flex: 1; min-width: 0; display: flex; flex-direction: column; }
-.list-main .name { font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.list-main .sec { color: var(--muted); font-size: 0.82em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.list-main .tags { display: flex; gap: 4px; flex: 0 0 auto; }
-.list-row .check { align-self: stretch; height: auto; min-height: 60px; width: 60px; color: var(--muted); }
-.list-row.is-done .num { background: var(--ok); color: #fff; }
-.list-row.is-done .name { color: var(--muted); text-decoration: line-through; }
-.list-row.is-done .check { color: var(--ok); }
-@media (max-width: 600px) { .list-main .tags { display: none; } }
+.lrow-main .name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 0.95em; }
+.lrow-main .ltags { display: flex; gap: 3px; flex: 0 0 auto; color: var(--muted); }
+.lrow-main .ltags .icon { width: 15px; height: 15px; }
+.lrow-main .lpct { flex: 0 0 auto; font-size: 0.76em; color: var(--muted); font-variant-numeric: tabular-nums; min-width: 30px; text-align: right; }
+.lrow-main .lbar { position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: transparent; }
+.lrow-main .lbar i { display: block; height: 100%; background: var(--accent); opacity: 0.75; }
+.lcheck {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 9px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.lcheck:active { background: var(--surface-2); }
+.lrow.is-done .lrow-main { opacity: 0.55; }
+.lrow.is-done .num { background: var(--ok); color: #fff; }
+.lrow.is-done .name { text-decoration: line-through; }
+.lrow.is-done .lbar i { background: var(--ok); }
+.lcheck.is-done { background: var(--ok-soft); border-color: var(--ok); color: var(--ok); }
+@media (max-width: 620px) { .lrow-main .ltags { display: none; } }
+
+/* ---------- Anneau de progression (en-tête de salle) ---------- */
+.ring { flex: 0 0 auto; width: 42px; height: 42px; position: relative; }
+.ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.ring circle { fill: none; stroke-width: 4; }
+.ring .bg { stroke: var(--surface-2); }
+.ring .fg { stroke: var(--accent); stroke-linecap: round; transition: stroke-dasharray 0.3s ease; }
+.ring.full .fg { stroke: var(--ok); }
+.ring b { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 0.62em; font-weight: 800; }
+
+/* ---------- Cartes (images) ---------- */
+.map-thumb {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #efeae0;
+  line-height: 0;
+  position: relative;
+}
+.map-thumb img { width: 100%; height: auto; display: block; }
+.map-thumb .zoom {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  border-radius: 8px;
+  padding: 5px 7px;
+  line-height: 0;
+}
+.map-full { overflow: auto; -webkit-overflow-scrolling: touch; max-height: 100%; background: #efeae0; border-radius: var(--radius); }
+.map-full img { display: block; width: 100%; height: auto; transform-origin: 0 0; }
+
+/* ---------- Fiche de monstre compacte ---------- */
+.mline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  padding: 8px 0;
+  border-top: 1px solid var(--border);
+  font-size: 0.92em;
+}
+.mline b { color: var(--muted); font-weight: 700; text-transform: uppercase; font-size: 0.82em; letter-spacing: 0.04em; margin-right: 4px; }
+.mline span { display: inline; }
+.act { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; padding: 5px 0; }
+.act .aname { font-weight: 700; }
+.act .adam { font-variant-numeric: tabular-nums; }
+.act .arest { flex-basis: 100%; color: var(--text-2); font-size: 0.88em; }
+.act-plain { padding: 5px 0; }
+.act-plain b { font-style: italic; }
+
+/* ---------- Générateur de rencontres ---------- */
+.gen-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; margin-bottom: 12px; }
+.gen-field { display: flex; flex-direction: column; gap: 4px; }
+.gen-field label { font-size: 0.76em; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); font-weight: 700; }
+.budget { display: flex; gap: 14px; flex-wrap: wrap; align-items: baseline; color: var(--muted); font-size: 0.9em; margin-bottom: 10px; }
+.budget b { color: var(--text); font-variant-numeric: tabular-nums; }
+
+/* ---------- Plan de la salle + topologie ---------- */
+.plan { display: grid; grid-template-columns: minmax(220px, 340px) 1fr; gap: 18px; align-items: start; }
+.plan .plan-map { min-width: 0; }
+.plan .plan-text { min-width: 0; }
+.plan .sec-head { margin-bottom: 6px; }
+@media (max-width: 720px) { .plan { grid-template-columns: 1fr; gap: 12px; } }
+
+/* ---------- Icônes dans les intitulés et pastilles ---------- */
+.sec-head > .icon { color: var(--muted); flex: 0 0 auto; }
+.tag .icon { width: 13px; height: 13px; margin-right: 4px; }
+.room-tile .tags .icon { width: 14px; height: 14px; }
+.room-tile .tags .tag { padding: 3px; }
+.summary h3 { display: flex; align-items: center; gap: 6px; }
+.summary h3 .icon { width: 15px; height: 15px; }
+
+/* ---------- Cartes d'aventure (accueil), épurées ---------- */
+.adv-card { padding: 14px 16px; }
+.adv-line { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+.adv-line h2 { font-size: 1.25em; margin: 0; }

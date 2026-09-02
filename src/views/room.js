@@ -1,8 +1,8 @@
-// Page d'une salle : lecture, notes MJ, éléments, créatures, PNJ, trésor,
-// pièges & tests, sorties, notes de séance.
+// Page d'une salle : plan, topologie, lecture, notes MJ, éléments, créatures,
+// PNJ, trésor, pièges, sorties et notes de séance.
 
 import { h, asTextItem, elemId } from '../dom.js';
-import { icon } from '../icons.js';
+import { icon, tagIcon } from '../icons.js';
 import { markup } from '../markup.js';
 import { loadAdventure, roomNeighbours, getMonster, encounterXP } from '../data.js';
 import { store, key } from '../store.js';
@@ -17,17 +17,32 @@ import { openMonsterPopup, monsterSummary, monsterStatblock } from '../component
 import { attitudePill, openNpcPopup } from '../components/npc.js';
 import { treasureCards, openTreasurePopup, normalizeTreasure } from '../components/treasure.js';
 import { connectionCards } from '../components/connections.js';
+import { mapThumb, openMapPopup, roomMap } from '../components/map.js';
 import { openLootPopup } from '../loot/ui.js';
+import { openEncounterPopup } from '../encounters/ui.js';
+import { roomProgress } from '../progress.js';
 import { slug } from '../util.js';
 
 function list(x) { return (Array.isArray(x) ? x : x ? [x] : []).map(asTextItem); }
 
-function section(title, children, { count, actions } = {}) {
+function section(title, children, { count, actions, ico } = {}) {
   const kids = Array.isArray(children) ? children.flat().filter(Boolean) : [children].filter(Boolean);
   if (!kids.length) return null;
   return h('div', { class: 'sec' },
-    h('div', { class: 'sec-head' }, h('h2', null, title), count != null ? h('span', { class: 'count' }, count) : null, actions),
+    h('div', { class: 'sec-head' },
+      ico ? icon(ico) : null,
+      h('h2', null, title),
+      count != null ? h('span', { class: 'count' }, count) : null,
+      actions),
     kids);
+}
+
+/** Anneau de progression (proportion d'éléments cochés). */
+function progressRing(pct) {
+  const r = 18, c = 2 * Math.PI * r;
+  return h('div', { class: 'ring' + (pct >= 100 ? ' full' : ''), title: `${pct} % des éléments cochés` },
+    h('div', { html: `<svg viewBox="0 0 42 42"><circle class="bg" cx="21" cy="21" r="${r}"/><circle class="fg" cx="21" cy="21" r="${r}" stroke-dasharray="${(c * pct) / 100} ${c}"/></svg>` }),
+    h('b', null, pct + '%'));
 }
 
 export async function roomView(route) {
@@ -41,59 +56,59 @@ export async function roomView(route) {
 
   const { prev, next } = roomNeighbours(adv, room);
   const sectionMeta = adv.sectionById.get(room.section);
+  const done = store.isDone(adv.id, room.id);
+  const prog = roomProgress(adv.id, room);
   const K = (...p) => key(adv.id, room.id, ...p);
   const navBtn = (r, ico, label) => h('button', {
     class: 'btn btn-icon', 'aria-label': label, disabled: !r,
     onclick: () => r && navigate(roomPath(adv.id, r.id)),
   }, icon(ico));
 
-  // ----- En-tête -----
   const head = h('div', { class: 'room-head' },
     h('div', { class: 'room-num' }, room.number ?? '•'),
     h('div', { class: 'room-title' },
       h('h1', null, room.name),
       h('div', { class: 'room-meta' },
         sectionMeta ? h('span', null, sectionMeta.title) : null,
-        (room.tags || []).map((t) => h('span', { class: 'tag ' + slug(t) }, t)))),
+        (room.tags || []).map((t) => {
+          const ico = tagIcon(t);
+          return h('span', { class: 'tag ' + slug(t) }, ico ? icon(ico) : null, t);
+        }))),
+    progressRing(prog.pct),
     h('div', { class: 'room-nav' },
       h('button', {
-        class: 'btn' + (store.isDone(adv.id, room.id) ? ' is-done' : ''),
-        'aria-label': 'Marquer la salle comme faite',
+        class: 'btn btn-icon' + (done ? ' is-done' : ''), 'aria-label': done ? 'Salle faite' : 'Marquer la salle comme faite',
         onclick: () => { store.toggleDone(adv.id, room.id); toast(store.isDone(adv.id, room.id) ? 'Salle cochée' : 'Salle décochée'); },
-      }, icon('check'), store.isDone(adv.id, room.id) ? 'Faite' : 'À faire'),
+      }, icon('check')),
       navBtn(prev, 'back', 'Salle précédente'), navBtn(next, 'forward', 'Salle suivante')));
 
-  // ----- Créatures -----
   const enemies = (room.enemies || []).map((e, i) => ({ ...e, _id: elemId(e, i) }));
   const xp = encounterXP(enemies);
   const enemyCards = enemies.map((e) => {
     const m = getMonster(e.monster);
     const name = e.name || m?.name || e.monster;
-    const count = e.count || 1;
     return card({
       key: K('enemy', e._id),
-      badge: `×${count}`,
+      badge: `×${e.count || 1}`,
       badgeClass: 'danger',
       title: name,
       pills: [
         e.hidden ? pill('caché', 'info', 'eyeOff') : null,
-        m?.cr != null ? pill(`FP ${m.cr}`) : null,
-        e.hp ? pill(`${e.hp} PV`, 'danger') : null,
+        m?.cr != null ? pill(`FP ${m.cr}`, '', 'skull') : null,
+        e.hp ? pill(`${e.hp} PV`, 'danger', 'heart') : null,
       ],
       sub: e.where,
       sub2: e.tactics || m?.summary?.tactics,
       hideLabel: 'Vaincu',
-      preview: `×${count} ${name}`,
-      onOpen: () => openMonsterPopup(e.monster, { note: [e.where, e.tactics].filter(Boolean).join(' — ') }),
+      preview: `×${e.count || 1} ${name}`,
+      onOpen: () => openMonsterPopup(e.monster),
     });
   });
 
-  // ----- PNJ & dialogues -----
   const npcs = [...(room.npcs || [])];
-  if ((room.dialogues || []).length) npcs.push({ id: '_room', name: 'Répliques de la salle', role: 'Sans PNJ particulier', dialogues: room.dialogues });
+  if ((room.dialogues || []).length) npcs.push({ id: '_room', name: 'Répliques de la salle', dialogues: room.dialogues });
   const npcCards = npcs.map((n, i) => {
     const id = n.id ?? String(i);
-    const m = n.monster ? getMonster(n.monster) : null;
     const total = (n.dialogues || []).length;
     const said = (n.dialogues || []).filter((d, j) => store.isHidden(key(K('npc', id), 'line', (typeof d === 'string' ? j : d.id ?? j)))).length;
     return card({
@@ -101,20 +116,19 @@ export async function roomView(route) {
       badge: icon(n.attitude === 'hostile' ? 'sword' : 'users'),
       badgeClass: n.attitude === 'hostile' ? 'danger' : n.attitude === 'amical' ? 'ok' : '',
       title: n.name,
-      pills: [attitudePill(n.attitude), total ? pill(`${said}/${total} dit${said > 1 ? 's' : ''}`, said === total && total ? 'ok' : '', 'chat') : null, m ? pill(`FP ${m.cr}`) : null],
+      pills: [attitudePill(n.attitude), total ? pill(`${said}/${total}`, said === total ? 'ok' : '', 'chat') : null],
       sub: n.role,
       sub2: n.wants ? `Veut : ${n.wants}` : null,
       onOpen: () => openNpcPopup(adv.id, room, { ...n, id }),
     });
   });
 
-  // ----- Pièges & tests -----
   const traps = (room.traps || []).map((t, i) => card({
     key: K('trap', elemId(t, i)),
     badge: t.dc != null ? `DD ${t.dc}` : icon('trap'),
     badgeClass: 'info',
     title: t.name,
-    pills: [pill('piège', 'info')],
+    pills: [pill('piège', 'info', 'trap')],
     sub: t.trigger,
     sub2: t.effect,
     hideLabel: 'Fait',
@@ -130,61 +144,66 @@ export async function roomView(route) {
     hideLabel: 'Fait',
   }));
 
-  // ----- Notes de séance -----
   const sessionNotes = h('textarea', {
-    class: 'textarea', placeholder: 'Notes prises pendant la partie (PV restants, décisions des joueurs, PNJ tués…)',
+    class: 'textarea', placeholder: 'Notes de partie (PV restants, décisions des joueurs…)',
     value: store.getRoomNote(adv.id, room.id),
     oninput: (e) => store.setRoomNote(adv.id, room.id, e.target.value),
   });
 
+  const thumb = mapThumb(adv, room);
   const main = h('div', null,
     head,
 
+    (thumb || room.layout) ? h('div', { class: 'sec plan' },
+      thumb ? h('div', { class: 'plan-map' }, thumb) : null,
+      room.layout ? h('div', { class: 'plan-text' },
+        h('div', { class: 'sec-head' }, icon('layers'), h('h2', null, 'Topologie')),
+        markup(room.layout, 'div', 'block-body')) : null) : null,
+
     section('À lire aux joueurs', list(room.readAloud).map((t) =>
-      textBlock({ key: K('read', t.id), text: t.text, title: t.title, kind: 'read', hideLabel: 'Lu', kindLabel: 'Lecture' }))),
+      textBlock({ key: K('read', t.id), text: t.text, title: t.title, kind: 'read', hideLabel: 'Lu', kindLabel: 'Lecture' })), { ico: 'book' }),
 
     section('Notes du MJ', list(room.notes).map((t) =>
-      textBlock({ key: K('note', t.id), text: t.text, title: t.title, hideLabel: 'Vu', kindLabel: 'Note MJ' }))),
+      textBlock({ key: K('note', t.id), text: t.text, title: t.title, hideLabel: 'Vu', kindLabel: 'Note MJ' })), { ico: 'notes' }),
 
-    section('Éléments de la salle', list(room.features).map((t) =>
-      textBlock({ key: K('feature', t.id), text: t.text, title: t.title || 'Élément', hideLabel: 'Vu' }))),
+    section('Éléments', list(room.features).map((t) =>
+      textBlock({ key: K('feature', t.id), text: t.text, title: t.title || 'Élément', hideLabel: 'Vu' })), { ico: 'search' }),
 
     section('Créatures', enemyCards, {
+      ico: 'skull',
       count: enemies.reduce((n, e) => n + (e.count || 1), 0),
-      actions: enemies.length ? [
+      actions: [
         xp ? h('span', { class: 'xp-total' }, `${xp} PX`) : null,
-        h('button', { class: 'btn btn-sm', onclick: () => openEncounterPopup(adv, room, enemies) }, icon('sword'), 'Rencontre'),
-      ] : null,
+        h('button', { class: 'btn btn-sm btn-icon', 'aria-label': 'Toutes les fiches', onclick: () => openEncounterSheet(adv, room, enemies) }, icon('layers')),
+      ],
     }),
 
-    section('PNJ & dialogues', npcCards, { count: npcs.length }),
+    section('PNJ & dialogues', npcCards, { ico: 'chat', count: npcs.length }),
 
     section('Trésor', [
       room.treasureNote ? markup(room.treasureNote, 'p', 'muted') : null,
       treasureCards(adv.id, room),
     ], {
+      ico: 'gem',
       count: normalizeTreasure(room.treasure).length || null,
-      actions: [
-        normalizeTreasure(room.treasure).length ? h('button', { class: 'btn btn-sm', onclick: () => openTreasurePopup(adv.id, room) }, icon('gem'), 'Détail') : null,
-        h('button', { class: 'btn btn-sm', onclick: () => openLootPopup({ adv, room }) }, icon('dice'), 'Loot aléatoire'),
-      ],
-    }) || section('Trésor', [], { actions: h('button', { class: 'btn btn-sm', onclick: () => openLootPopup({ adv, room }) }, icon('dice'), 'Loot aléatoire') }),
+      actions: h('button', { class: 'btn btn-sm btn-icon', 'aria-label': 'Loot aléatoire', onclick: () => openLootPopup({ adv, room }) }, icon('dice')),
+    }),
 
-    section('Pièges & tests', [traps, checks], { count: traps.length + checks.length }),
+    section('Pièges & tests', [traps, checks], { ico: 'trap', count: traps.length + checks.length }),
 
-    section('Sorties', connectionCards(adv, room)),
+    section('Sorties', connectionCards(adv, room), { ico: 'door' }),
 
-    section('Notes de séance', sessionNotes),
+    section('Notes de séance', sessionNotes, { ico: 'edit' }),
 
     h('div', { class: 'toolbar', style: { marginTop: '10px', justifyContent: 'space-between' } },
       h('div', { class: 'toolbar' },
-        prev ? h('button', { class: 'btn', onclick: () => navigate(roomPath(adv.id, prev.id)) }, icon('back'), `${prev.number ?? ''} ${prev.name}`.trim()) : null,
+        prev ? h('button', { class: 'btn', onclick: () => navigate(roomPath(adv.id, prev.id)) }, icon('back'), `${prev.number ?? ''}`) : null,
         next ? h('button', { class: 'btn btn-primary', onclick: () => navigate(roomPath(adv.id, next.id)) }, `${next.number ?? ''} ${next.name}`.trim(), icon('forward')) : null),
       h('button', { class: 'btn btn-sm btn-danger', onclick: async () => {
         if (await confirmPopup({ title: 'Réinitialiser la salle', text: 'Réafficher tous les éléments masqués et supprimer les annotations et notes de cette salle ?', okLabel: 'Réinitialiser', danger: true })) {
           store.resetRoom(adv.id, room.id); toast('Salle réinitialisée');
         }
-      } }, icon('undo'), 'Réinitialiser la salle')),
+      } }, icon('undo'))),
   );
 
   return shell({
@@ -193,14 +212,18 @@ export async function roomView(route) {
     back: advPath(adv.id),
     sidebar: roomSidebar(adv, room.id),
     main,
-    actions: [h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Liste des salles', onclick: () => navigate(listPath(adv.id)) }, icon('list'))],
+    actions: [
+      roomMap(adv.map, room.id) ? h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Carte', onclick: () => openMapPopup(adv, room) }, icon('map')) : null,
+      h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Rencontre aléatoire', onclick: () => openEncounterPopup({ adv, room }) }, icon('dice')),
+      h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Liste des salles', onclick: () => navigate(listPath(adv.id)) }, icon('list')),
+    ],
   });
 }
 
-/** Fenêtre « Rencontre » : toutes les créatures de la salle, résumé + stats. */
-function openEncounterPopup(adv, room, enemies) {
+/** Toutes les fiches des créatures de la salle, à la suite. */
+function openEncounterSheet(adv, room, enemies) {
   openPopup({
-    title: 'Rencontre',
+    title: 'Créatures de la salle',
     subtitle: `${room.number ? room.number + '. ' : ''}${room.name} · ${encounterXP(enemies)} PX`,
     size: 'lg',
     render: () => h('div', null, enemies.map((e) => {
