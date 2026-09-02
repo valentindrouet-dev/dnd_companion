@@ -1116,3 +1116,58 @@ a.gref:active { color: var(--c-feature); }
 .star .icon { width: 14px; height: 14px; fill: currentColor; stroke-width: 1.5; }
 .block .star { margin-left: 2px; }
 .star-inline { width: 15px; height: 15px; fill: var(--accent); color: var(--accent); vertical-align: -2px; }
+
+/* ---------- Récolte d'ennemis ---------- */
+.b-danger { background: var(--danger-soft); border-left-color: var(--danger); }
+.b-danger .kind-icon, .b-danger .block-kind { color: var(--danger); }
+
+.loot-head { align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+.loot-head b { font-size: 1.05em; }
+
+.loot-pick { display: grid; grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 6px; }
+.loot-chip {
+  min-height: 40px;
+  padding: 6px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.86em;
+  font-weight: 600;
+  line-height: 1.15;
+  text-align: center;
+  cursor: pointer;
+}
+.loot-chip:active { transform: scale(0.97); }
+/* Teinte par catégorie de créature, comme dans le générateur d'origine. */
+.lt-human, .lt-humanoid { background: color-mix(in srgb, var(--c-note) 18%, var(--surface-2)); border-color: color-mix(in srgb, var(--c-note) 45%, transparent); }
+.lt-aberration        { background: color-mix(in srgb, var(--c-feature) 18%, var(--surface-2)); border-color: color-mix(in srgb, var(--c-feature) 45%, transparent); }
+.lt-undead            { background: color-mix(in srgb, var(--muted) 22%, var(--surface-2)); border-color: color-mix(in srgb, var(--muted) 50%, transparent); }
+.lt-beast             { background: color-mix(in srgb, var(--c-read) 18%, var(--surface-2)); border-color: color-mix(in srgb, var(--c-read) 45%, transparent); }
+.lt-ooze, .lt-plant   { background: color-mix(in srgb, var(--c-dialogue) 18%, var(--surface-2)); border-color: color-mix(in srgb, var(--c-dialogue) 45%, transparent); }
+.lt-monstrosity       { background: color-mix(in srgb, var(--c-combat) 18%, var(--surface-2)); border-color: color-mix(in srgb, var(--c-combat) 45%, transparent); }
+.lt-construct         { background: color-mix(in srgb, var(--text-2) 16%, var(--surface-2)); border-color: color-mix(in srgb, var(--text-2) 40%, transparent); }
+.lt-elemental         { background: color-mix(in srgb, var(--c-portal) 18%, var(--surface-2)); border-color: color-mix(in srgb, var(--c-portal) 45%, transparent); }
+.lt-giant             { background: color-mix(in srgb, var(--c-layout) 18%, var(--surface-2)); border-color: color-mix(in srgb, var(--c-layout) 45%, transparent); }
+
+.loot-list { display: flex; flex-direction: column; gap: 3px; }
+.loot-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  border: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+}
+.loot-row .lname { flex: 1; min-width: 0; font-weight: 600; }
+.loot-row .lval { flex: 0 0 auto; font-size: 0.82em; color: var(--muted); text-align: right; }
+.loot-row.coins { background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+.loot-row.magic { background: var(--c-feature-bg); border-color: color-mix(in srgb, var(--c-feature) 45%, transparent); }
+.loot-row.magic .lname { color: var(--c-feature); }
+.loot-list.proba { margin-top: 8px; }
+.loot-list.proba .lp { flex: 0 0 auto; font-weight: 700; font-variant-numeric: tabular-nums; min-width: 44px; text-align: right; }
+.loot-list.proba .lp.hi { color: var(--ok); }
+.loot-list.proba .lp.mid { color: var(--accent); }
+.loot-list.proba .lp.lo { color: var(--c-todo); }

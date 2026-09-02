@@ -14,6 +14,7 @@ import { openMonsterPopup } from './components/monster.js';
 import { closeAllPopups } from './ui/popup.js';
 import { loadMaps } from './components/map.js';
 import { loadGlossary, linkGlossary, openGlossaryPopup } from './glossary.js';
+import { loadLoot } from './loot/generator.js';
 import { setTextDecorator } from './markup.js';
 import { glossaryView } from './views/glossary.js';
 import { toast } from './ui/toast.js';
@@ -82,6 +83,7 @@ async function boot() {
     await loadMonsters();
     await loadMaps();
     await loadGlossary(getIndex().glossary || []);
+    await loadLoot(getIndex().loot || []);
     setTextDecorator(linkGlossary);
   } catch (e) {
     app.replaceChildren(errorView(e));

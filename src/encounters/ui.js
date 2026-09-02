@@ -66,9 +66,12 @@ export function openEncounterPopup({ adv, room } = {}) {
 
 function result(r, adv, room) {
   if (!r.groups.length) return h('div', { class: 'empty' }, r.note || 'Rien à proposer.');
+  // Consulter une fiche depuis la rencontre ne doit pas perdre le tirage :
+  // la fiche affiche une flèche de retour et sa fermeture rouvre la rencontre.
+  const back = { label: 'Rencontre aléatoire', open: () => openEncounterPopup({ adv, room }) };
   return h('div', null,
     r.hook ? h('div', { class: 'block block-read' }, h('div', { class: 'block-body read' }, r.hook)) : null,
-    r.groups.map((g) => h('button', { class: 'card', onclick: () => openMonsterPopup(g.monster.id) },
+    r.groups.map((g) => h('button', { class: 'card', onclick: () => openMonsterPopup(g.monster.id, { back }) },
       h('div', { class: 'card-badge danger' }, `×${g.count}`),
       h('div', { class: 'card-main' },
         h('div', { class: 'card-title' }, g.monster.name,

@@ -177,6 +177,49 @@ coches et les notes des éléments masqués sont conservées, jamais effacées.
 
 Sans `summary`, le mode Résumé retombe sur la première phrase du texte, tronquée si besoin.
 
+## Tables de récolte (`data/loot/*.json`)
+
+Le butin qu'on trouve sur un cadavre, créature par créature.
+
+```jsonc
+{
+  "rules": {
+    "brokenChance": 0.75,                       // un objet « brisé » l'est vraiment 3 fois sur 4
+    "rarity":   [["Commun", 45], ["Peu commun", 30], …],   // poids en %, total exactement 100
+    "itemType": [["Objet merveilleux", 36], ["Arme", 21], …]
+  },
+  "creatures": [{
+    "id": "troll", "name": "Troll", "en": "Troll",
+    "type": "giant",                            // teinte du bouton dans le sélecteur
+    "match": ["half-troll", "cave-troll", "gaunt-troll"],  // fiches qui affichent « Récolte »
+    "hidden": true,                             // facultatif : table conservée mais retirée du choix
+    "description": "Texte d'ambiance lu au moment de la fouille.",
+    "check": { "skill": "Survie", "dc": 15 },
+    "duration": "25 min",
+    "danger": "Ce qui arrive sur un 1 naturel (accepte le **balisage**).",
+    "loot": [
+      { "emoji": "🦴", "name": "Peau de troll", "en": "Troll Hide",
+        "p": 35, "qty": "1", "value": "30 po", "use": "composante (armure)" },
+      { "emoji": "⚔️", "name": "Cimeterre", "brokenName": "Cimeterre brisé",
+        "p": 25, "qty": "1", "value": "5 po" },
+      { "emoji": "💰", "name": "Pièces", "p": 35, "qty": "3d10", "coin": "po" },
+      { "emoji": "✨", "name": "Objet magique", "p": 10, "qty": "1", "magic": "B" }
+    ]
+  }]
+}
+```
+
+- `p` : probabilité en %, tirée **indépendamment** pour chaque ligne.
+- `qty` : un nombre ou une notation `XdY`.
+- `brokenName` : le nom quand l'objet sort cassé — `value` reçoit alors « (après réparation) ».
+  Sans ce champ, l'objet n'est jamais soumis à la règle des 75 %.
+- `coin` : la ligne donne des pièces (cumulées séparément quand on fouille plusieurs cadavres).
+- `magic` : la ligne tire un objet magique ; la valeur est la table du DMG (« A », « B », « A ou B »).
+- `en` : le nom d'origine en anglais, conservé pour retrouver la ligne dans le générateur source.
+
+Un monstre ne peut être réclamé que par une seule table ; le validateur le vérifie, comme
+il vérifie que `rarity` et `itemType` totalisent bien 100 %.
+
 ## Index (`data/glossary/*.json`)
 
 Personnages, factions, lieux, objets et divinités. Les `aliases` sont repérés automatiquement

@@ -162,6 +162,7 @@ function walkStrings(node, fn, path = '') {
 
 // ---------- glossaire ----------
 const gloss = new Map();
+const lootByMonster = new Map();
 for (const gp of index.glossary || []) {
   const file = join(DATA, gp);
   if (!existsSync(file)) { err(`index.json : glossaire manquant ${gp}`); continue; }
@@ -177,6 +178,40 @@ for (const gp of index.glossary || []) {
     if (!e.what) warn(`${gp}/${e.id} : pas de description (what)`);
     if (e.kind && !KINDS.includes(noAccent(e.kind))) warn(`${gp}/${e.id} : kind « ${e.kind} » inconnu`);
     if (e.monster && !monsters.has(e.monster)) err(`${gp}/${e.id} : monstre inconnu « ${e.monster} »`);
+  });
+}
+
+// ---------- tables de récolte ----------
+const lootIds = new Set();
+for (const lp of index.loot || []) {
+  const file = join(DATA, lp);
+  if (!existsSync(file)) { err(`index.json : table de récolte manquante ${lp}`); continue; }
+  const data = readJSON(file) || {};
+  for (const key of ['rarity', 'itemType']) {
+    const table = data.rules?.[key];
+    if (!Array.isArray(table)) { err(`${lp} : rules.${key} manquante`); continue; }
+    const sum = table.reduce((t, [, w]) => t + w, 0);
+    if (sum !== 100) err(`${lp} : rules.${key} totalise ${sum} % au lieu de 100`);
+  }
+  (data.creatures || []).forEach((c, i) => {
+    if (!c.id) return err(`${lp}[${i}] : id manquant`);
+    if (lootIds.has(c.id)) err(`${lp} : id en double « ${c.id} »`);
+    lootIds.add(c.id);
+    if (!c.name) err(`${lp}/${c.id} : name manquant`);
+    if (!c.check?.skill || c.check?.dc == null) err(`${lp}/${c.id} : test de récolte (check) incomplet`);
+    if (!c.danger) warn(`${lp}/${c.id} : pas de conséquence sur échec critique (danger)`);
+    for (const mid of c.match || []) {
+      if (!monsters.has(mid)) err(`${lp}/${c.id} : monstre inconnu « ${mid} »`);
+      if (lootByMonster.has(mid)) err(`${lp} : le monstre « ${mid} » est réclamé par « ${lootByMonster.get(mid)} » et « ${c.id} »`);
+      lootByMonster.set(mid, c.id);
+    }
+    (c.loot || []).forEach((l, j) => {
+      const w = `${lp}/${c.id}[${j}]`;
+      if (!l.name) err(`${w} : name manquant`);
+      if (!(l.p > 0 && l.p <= 100)) err(`${w} : probabilité « ${l.p} » hors de 1-100`);
+      if (!/^\d+(d\d+)?$/.test(String(l.qty))) err(`${w} : quantité « ${l.qty} » n'est ni un nombre ni « XdY »`);
+      if (!l.value && !l.coin && !l.magic) warn(`${w} : ni valeur, ni pièces, ni objet magique`);
+    });
   });
 }
 

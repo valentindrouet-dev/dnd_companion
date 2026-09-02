@@ -24,7 +24,11 @@ pièges et tests, liaisons vers les salles connectées, générateur de loot.
 - **Annoter et modifier à la volée** n'importe quel texte (l'original reste restaurable).
 - **Fiches de monstres compactes** : résumé pour le MJ, CA/PV/vitesse, défenses sur une ligne et
   actions résumées (corps à corps ou distance, bonus, dégâts).
-- **Générateur de rencontres** basé sur le budget de PX par niveau, et générateur de loot.
+- **Générateur de rencontres** basé sur le budget de PX par niveau. Consulter une fiche depuis
+  une rencontre ne perd pas le tirage : la refermer y ramène.
+- **Récolte d'ennemis** : chaque créature a sa table de butin (test, durée, danger sur 1 naturel,
+  probabilité ligne par ligne). Le bouton **Récolte** de la fiche est pré-rempli avec le nombre de
+  créatures du groupe, et le résultat part dans les notes de séance.
 - **Mots-clés cliquables** : les noms de personnages, factions, lieux et objets ouvrent une fiche
   (qui, but, état en cours de partie, modifiable), et un **index alphabétique** les rassemble.
 - **Drapeau de fin de séance** : un seul par aventure, « Reprendre » y ramène.
@@ -99,10 +103,16 @@ masqués, avec leurs coches et leurs notes.
 
 Voir `docs/INGESTION.md` (PDF → JSON) et `docs/DATA_SCHEMA.md` (format).
 
-## Générateur de loot
+## Récolte d'ennemis
 
-`src/loot/generator.js` contient un générateur provisoire et le contrat attendu par
-l'interface. Remplacer son contenu par le générateur existant suffit.
+Les tables vivent dans `data/loot/creatures.json` (transcription du générateur
+« Enemy Looting ») ; `src/loot/generator.js` ne fait que les appliquer. Chaque ligne est
+tirée indépendamment de sa probabilité, les objets « brisés » le sont réellement 3 fois
+sur 4, et les objets magiques tirent leur rareté puis leur type.
+
+Le champ `match` d'une table liste les créatures du bestiaire auxquelles elle s'applique :
+c'est ce qui fait apparaître le bouton **Récolte** sur leur fiche. Ajouter une créature
+revient à ajouter un objet au tableau `creatures` — voir `docs/DATA_SCHEMA.md`.
 
 ## Licences
 

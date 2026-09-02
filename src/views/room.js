@@ -133,7 +133,7 @@ export async function roomView(route) {
       sub2: e.tactics || m?.summary?.tactics,
       hideLabel: 'Vaincu',
       preview: `×${e.count || 1} ${name}`,
-      onOpen: () => openMonsterPopup(e.monster),
+      onOpen: () => openMonsterPopup(e.monster, { count: e.count || 1, adv, room }),
     });
   });
 
@@ -252,7 +252,7 @@ export async function roomView(route) {
     actions: [
       roomMap(adv.map, room.id) ? h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Carte', onclick: () => openMapPopup(adv, room) }, icon('map')) : null,
       h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Rencontre aléatoire', onclick: () => openEncounterPopup({ adv, room }) }, icon('dice')),
-      h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Loot aléatoire', onclick: () => openLootPopup({ adv, room }) }, icon('gem')),
+      h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Récolte d’ennemis', onclick: () => openLootPopup({ adv, room }) }, icon('gem')),
       h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Index', onclick: () => navigate('index') }, icon('book')),
       h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Liste des salles', onclick: () => navigate(listPath(adv.id)) }, icon('list')),
     ],

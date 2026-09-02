@@ -6,19 +6,40 @@ import { icon } from '../icons.js';
 import { markup } from '../markup.js';
 import { getMonster } from '../data.js';
 import { openPopup } from '../ui/popup.js';
+import { lootTableFor } from '../loot/generator.js';
+import { openLootPopup } from '../loot/ui.js';
 
-export function openMonsterPopup(id) {
+/**
+ * @param {string} id
+ * @param {object} [opts]
+ * @param {{ label: string, open: Function }} [opts.back] d'où l'on vient : la croix y ramène.
+ * @param {number} [opts.count] nombre de créatures du groupe (pré-remplit la récolte)
+ * @param {object} [opts.adv] @param {object} [opts.room] pour « ajouter aux notes »
+ */
+export function openMonsterPopup(id, opts = {}) {
   const m = getMonster(id);
   if (!m) {
-    openPopup({ title: 'Monstre introuvable', render: () => h('p', { class: 'muted' }, `Aucune fiche pour « ${id} ». Ajoute-la dans data/monsters/.`) });
+    openPopup({ title: 'Monstre introuvable', back: opts.back, render: () => h('p', { class: 'muted' }, `Aucune fiche pour « ${id} ». Ajoute-la dans data/monsters/.`) });
     return;
   }
+  const back = { label: m.name, open: () => openMonsterPopup(id, opts) };
   openPopup({
     title: m.name,
     subtitle: [m.size, m.type, m.alignment].filter(Boolean).join(' · '),
     size: 'lg',
-    render: () => h('div', null, monsterSummary(m), monsterStatblock(m)),
+    back: opts.back,
+    render: () => h('div', null, lootButton(m, back, opts), monsterSummary(m), monsterStatblock(m)),
   });
+}
+
+/** Bouton Récolte, seulement si une table de butin existe pour cette créature. */
+function lootButton(m, back, opts) {
+  const table = lootTableFor(m.id);
+  if (!table) return null;
+  const open = () => openLootPopup({ creatureId: table.id, count: opts.count, adv: opts.adv, room: opts.room, back });
+  return h('div', { class: 'toolbar', style: { marginBottom: '10px' } },
+    h('button', { class: 'btn btn-sm', onclick: open }, icon('gem'), 'Récolte',
+      opts.count > 1 ? h('span', { class: 'pill' }, `×${opts.count}`) : null));
 }
 
 export function monsterSummary(m) {

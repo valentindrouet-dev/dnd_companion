@@ -1,52 +1,119 @@
 // ============================================================
-//  GÉNÉRATEUR DE LOOT — point d'accroche
-//  Remplace le contenu de ce fichier par ton générateur existant.
-//  Contrat attendu par l'interface (src/loot/ui.js) :
+//  RÉCOLTE D'ENNEMIS — générateur de butin par créature.
+//  Transcription du générateur « Enemy Looting » : les tables, les
+//  probabilités et les règles viennent de data/loot/creatures.json,
+//  ce fichier ne fait que les appliquer.
 //
-//    generateLoot({ level, kind, rng }) -> {
-//      coins: { pp?, po?, pa?, pc? },          // pièces (nombres)
-//      items: [{ name, qty?, value?, note?, magic? }],
-//      summary?: string                        // phrase d'ambiance facultative
+//    generateLoot({ creature, count, rng }) -> {
+//      creature, count,
+//      coins: { po },                       // pièces cumulées
+//      items: [{ emoji, name, qty, value, use?, magic? }],
 //    }
-//
-//    LOOT_KINDS : liste des types proposés dans le menu.
 // ============================================================
 
-export const LOOT_KINDS = [
-  ['poche', 'Poches d’une créature'],
-  ['coffre', 'Coffre / cachette'],
-  ['tresor', 'Trésor de repaire'],
-];
+export const GENERATOR_NAME = 'Récolte d’ennemis';
 
-export const GENERATOR_NAME = 'Générateur provisoire (à remplacer)';
+let data = null;
+const byMonster = new Map();
 
-const TRINKETS = [
-  'Dé en os taillé', 'Fiole de parfum rance', 'Petit miroir fêlé', 'Chapelet de dents de loup',
-  'Carte au trésor incompréhensible', 'Bague en étain', 'Peigne en ivoire', 'Flûte en roseau',
-  'Sachet d’herbes séchées', 'Bougie noire à moitié fondue', 'Clé rouillée sans serrure connue',
-  'Figurine de chouette en bois', 'Pierre à aiguiser gravée d’un nom', 'Lettre d’amour jamais envoyée',
-];
-const GEMS = [['Agate', 10], ['Quartz bleu', 10], ['Œil de tigre', 10], ['Onyx', 50], ['Jaspe', 50], ['Grenat', 100], ['Perle', 100], ['Ambre', 100]];
-const CONSUMABLES = [['Potion de soins', true], ['Huile', false], ['Rations (3 jours)', false], ['Torches ×5', false], ['Parchemin de sort (niveau 1)', true]];
-
-function d(rng, n) { return 1 + Math.floor(rng() * n); }
-function pick(rng, arr) { return arr[Math.floor(rng() * arr.length)]; }
-
-export function generateLoot({ level = 1, kind = 'poche', rng = Math.random } = {}) {
-  const mult = kind === 'tresor' ? 12 : kind === 'coffre' ? 4 : 1;
-  const coins = {};
-  const pc = d(rng, 6) * mult * 2; if (pc) coins.pc = pc;
-  const pa = d(rng, 6) * mult; if (pa) coins.pa = pa;
-  const po = Math.max(0, (d(rng, 6) - 2) * Math.ceil(level / 2) * mult); if (po) coins.po = po;
-  if (kind === 'tresor' && level >= 5) coins.pp = d(rng, 4) * Math.ceil(level / 5);
-
-  const items = [];
-  const nb = kind === 'tresor' ? d(rng, 4) + 1 : kind === 'coffre' ? d(rng, 3) : d(rng, 2) - 1;
-  for (let i = 0; i < nb; i++) {
-    const roll = rng();
-    if (roll < 0.4) items.push({ name: pick(rng, TRINKETS), note: 'babiole' });
-    else if (roll < 0.75) { const [name, value] = pick(rng, GEMS); items.push({ name, value: `${value} po` }); }
-    else { const [name, magic] = pick(rng, CONSUMABLES); items.push({ name, magic }); }
+export async function loadLoot(paths = []) {
+  for (const path of paths) {
+    const res = await fetch('./data/' + path, { cache: 'no-cache' });
+    if (!res.ok) throw new Error(`Impossible de charger ${path} (${res.status})`);
+    data = await res.json();
+    for (const c of data.creatures || []) {
+      for (const id of c.match || []) byMonster.set(id, c);
+    }
   }
-  return { coins, items, summary: kind === 'poche' ? 'Fouille rapide des poches.' : 'Contenu trouvé après une fouille attentive.' };
+}
+
+/** Toutes les tables, hors celles masquées dans les données. */
+export function lootCreatures() {
+  return (data?.creatures || []).filter((c) => !c.hidden).sort((a, b) => a.name.localeCompare(b.name, 'fr'));
+}
+
+export function lootCreature(id) { return (data?.creatures || []).find((c) => c.id === id) || null; }
+
+/** Table de butin associée à une créature du bestiaire, ou null. */
+export function lootTableFor(monsterId) {
+  const c = byMonster.get(monsterId) || null;
+  return c && !c.hidden ? c : null;
+}
+
+export function lootLevels() {
+  return [...new Set((data?.creatures || []).map((c) => c.level || 1))].sort((a, b) => a - b);
+}
+
+// ---------------------------------------------------------------- dés
+
+/** « 2d6 », « 1d4 » ou un nombre. */
+export function rollDice(notation, rng = Math.random) {
+  const m = String(notation ?? '').match(/(\d+)\s*d\s*(\d+)/i);
+  if (!m) return Number(notation) || 1;
+  let total = 0;
+  for (let i = 0; i < Number(m[1]); i++) total += 1 + Math.floor(rng() * Number(m[2]));
+  return total;
+}
+
+/** Tire dans une table [[libellé, poids en %], …]. */
+function weighted(table, rng) {
+  let roll = rng() * 100;
+  for (const [label, weight] of table) {
+    roll -= weight;
+    if (roll < 0) return label;
+  }
+  return table[table.length - 1][0];
+}
+
+function magicItem(tables, rng) {
+  const rules = data?.rules || {};
+  const rarity = weighted(rules.rarity || [['Commun', 100]], rng);
+  const kind = weighted(rules.itemType || [['Objet merveilleux', 100]], rng);
+  return { rarity, kind, tables };
+}
+
+// ---------------------------------------------------------------- tirage
+
+/** Une fouille : chaque ligne est tirée indépendamment de sa probabilité. */
+function rollOnce(creature, rng) {
+  const found = [];
+  for (const line of creature.loot || []) {
+    if (rng() * 100 >= line.p) continue;
+    const qty = rollDice(line.qty, rng);
+
+    if (line.magic) {
+      const { rarity, kind, tables } = magicItem(line.magic, rng);
+      found.push({ emoji: line.emoji, name: `Objet magique (${rarity})`, qty, magic: rarity, value: kind, use: `table ${tables}` });
+      continue;
+    }
+    if (line.coin) { found.push({ coin: line.coin, qty }); continue; }
+
+    // Objet « brisé » : 75 % réellement cassé, 25 % en bon état (et sans la réparation).
+    const isBroken = line.brokenName ? rng() < (data?.rules?.brokenChance ?? 0.75) : false;
+    found.push({
+      emoji: line.emoji,
+      name: isBroken ? line.brokenName : line.name,
+      qty,
+      value: isBroken && line.value ? `${line.value} (après réparation)` : line.value,
+      use: line.use,
+    });
+  }
+  return found;
+}
+
+/** Fouille `count` cadavres et regroupe le résultat. */
+export function generateLoot({ creature, count = 1, rng = Math.random } = {}) {
+  const coins = {};
+  const merged = new Map();
+  for (let i = 0; i < Math.max(1, count); i++) {
+    for (const found of rollOnce(creature, rng)) {
+      if (found.coin) { coins[found.coin] = (coins[found.coin] || 0) + found.qty; continue; }
+      // Les objets magiques ne fusionnent pas : chacun est un objet distinct.
+      const key = found.magic ? `magic:${merged.size}` : `${found.name}|${found.value ?? ''}`;
+      const prev = merged.get(key);
+      if (prev) prev.qty += found.qty;
+      else merged.set(key, { ...found });
+    }
+  }
+  return { creature, count: Math.max(1, count), coins, items: [...merged.values()] };
 }

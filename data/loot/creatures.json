@@ -1,0 +1,1928 @@
+{
+  "name": "Récolte d’ennemis",
+  "source": "Générateur de Valentin (artefact « Enemy Looting »)",
+  "rules": {
+    "brokenChance": 0.75,
+    "rarity": [
+      [
+        "Commun",
+        45
+      ],
+      [
+        "Peu commun",
+        30
+      ],
+      [
+        "Rare",
+        15
+      ],
+      [
+        "Très rare",
+        7
+      ],
+      [
+        "Légendaire",
+        2
+      ],
+      [
+        "Artefact",
+        1
+      ]
+    ],
+    "itemType": [
+      [
+        "Objet merveilleux",
+        36
+      ],
+      [
+        "Arme",
+        21
+      ],
+      [
+        "Armure",
+        14
+      ],
+      [
+        "Anneau",
+        11
+      ],
+      [
+        "Parchemin",
+        10
+      ],
+      [
+        "Bâton",
+        8
+      ]
+    ]
+  },
+  "creatures": [
+    {
+      "id": "goblin",
+      "name": "Gobelin",
+      "en": "Goblin",
+      "level": 1,
+      "type": "humanoid",
+      "match": [
+        "goblin-warrior",
+        "goblin-boss"
+      ],
+      "description": "Après le combat, les aventuriers fouillent les corps des gobelins. C’est sale et expéditif : dents arrachées, flèches récupérées, armes tordues et armures poisseuses sont mises de côté.",
+      "check": {
+        "skill": "Survie",
+        "dc": 10
+      },
+      "duration": "10 min",
+      "danger": "Le PJ se coupe ou se pique sur une lame rouillée ou une flèche brisée. Il subit **1d4 dégâts** perforants et la récolte est immédiatement interrompue (aucun butin).",
+      "loot": [
+        {
+          "emoji": "🏹",
+          "name": "Flèches",
+          "en": "Arrows",
+          "p": 50,
+          "qty": "2d6",
+          "value": "valeur négligeable"
+        },
+        {
+          "emoji": "🦴",
+          "name": "Dents de gobelin",
+          "en": "Goblin Teeth",
+          "p": 40,
+          "qty": "1d8",
+          "value": "1 po par dent"
+        },
+        {
+          "emoji": "⚔️",
+          "name": "Cimeterre",
+          "en": "Scimitar",
+          "p": 25,
+          "qty": "1",
+          "value": "5 po",
+          "brokenName": "Cimeterre brisé"
+        },
+        {
+          "emoji": "🏹",
+          "name": "Arc court",
+          "en": "Shortbow",
+          "p": 20,
+          "qty": "1",
+          "value": "12 po",
+          "brokenName": "Arc court brisé"
+        },
+        {
+          "emoji": "🛡️",
+          "name": "Bouclier",
+          "en": "Shield",
+          "p": 20,
+          "qty": "1",
+          "value": "5 po",
+          "brokenName": "Bouclier brisé"
+        },
+        {
+          "emoji": "🛡️",
+          "name": "Armure de cuir (petite taille)",
+          "en": "Leather Armor (Small)",
+          "p": 15,
+          "qty": "1",
+          "value": "5 po",
+          "brokenName": "Armure de cuir abîmée (petite taille)"
+        },
+        {
+          "emoji": "💰",
+          "name": "Pièces",
+          "en": "Coins",
+          "p": 40,
+          "qty": "1d6",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 5,
+          "qty": "1",
+          "magic": "A"
+        }
+      ]
+    },
+    {
+      "id": "bandit",
+      "name": "Bandit",
+      "en": "Bandit",
+      "level": 1,
+      "type": "human",
+      "match": [
+        "cultist"
+      ],
+      "description": "Les cadavres sont retournés un à un. Sous les vêtements imbibés de sueur et de poussière, on récupère armes émoussées et bourses poisseuses. Le cuir colle aux doigts.",
+      "check": {
+        "skill": "Survie",
+        "dc": 10
+      },
+      "duration": "5 min",
+      "danger": "Un mécanisme d’arbalète se déclenche. **1d6 dégâts** perforants et **+1d4 minutes**.",
+      "loot": [
+        {
+          "emoji": "🏹",
+          "name": "Flèches",
+          "en": "Arrows",
+          "p": 45,
+          "qty": "2d6",
+          "value": "valeur négligeable"
+        },
+        {
+          "emoji": "⚔️",
+          "name": "Épée courte",
+          "en": "Shortsword",
+          "p": 25,
+          "qty": "1",
+          "value": "5 po",
+          "brokenName": "Épée courte brisée"
+        },
+        {
+          "emoji": "🏹",
+          "name": "Arbalète légère",
+          "en": "Light Crossbow",
+          "p": 20,
+          "qty": "1",
+          "value": "12 po",
+          "brokenName": "Arbalète légère brisée"
+        },
+        {
+          "emoji": "🛡️",
+          "name": "Armure de cuir",
+          "en": "Leather Armor",
+          "p": 20,
+          "qty": "1",
+          "value": "5 po",
+          "brokenName": "Armure de cuir abîmée"
+        },
+        {
+          "emoji": "💰",
+          "name": "Bourse",
+          "en": "Coin Pouch",
+          "p": 50,
+          "qty": "1d6",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 5,
+          "qty": "1",
+          "magic": "A"
+        }
+      ]
+    },
+    {
+      "id": "bugbear",
+      "name": "Gobelours",
+      "en": "Bugbear",
+      "level": 1,
+      "type": "humanoid",
+      "match": [
+        "bugbear"
+      ],
+      "description": "La fourrure est épaisse, humide, imprégnée d’une odeur animale tenace. Il faut couper et arracher pour récupérer quoi que ce soit, laissant une masse de chair et de poils ensanglantés.",
+      "check": {
+        "skill": "Survie",
+        "dc": 11
+      },
+      "duration": "15 min",
+      "danger": "Le poids du corps entraîne une mauvaise chute. **2d6 dégâts** contondants, récolte perdue.",
+      "loot": [
+        {
+          "emoji": "🗡️",
+          "name": "Javelines",
+          "en": "Javelins",
+          "p": 45,
+          "qty": "1d3",
+          "value": "valeur négligeable"
+        },
+        {
+          "emoji": "⚔️",
+          "name": "Morgenstern",
+          "en": "Morningstar",
+          "p": 25,
+          "qty": "1",
+          "value": "8 po",
+          "brokenName": "Morgenstern brisé"
+        },
+        {
+          "emoji": "🛡️",
+          "name": "Armure de peau",
+          "en": "Hide Armor",
+          "p": 25,
+          "qty": "1",
+          "value": "6 po",
+          "brokenName": "Armure de peau abîmée"
+        },
+        {
+          "emoji": "🧶",
+          "name": "Touffes de fourrure de gobelours",
+          "en": "Bugbear Fur Tufts",
+          "p": 30,
+          "qty": "1d4",
+          "value": "2 po la touffe"
+        },
+        {
+          "emoji": "🍖",
+          "name": "Rations",
+          "en": "Rations",
+          "p": 35,
+          "qty": "2d6",
+          "value": "valeur négligeable"
+        },
+        {
+          "emoji": "💰",
+          "name": "Bourse",
+          "en": "Coin Pouch",
+          "p": 40,
+          "qty": "2d6",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 5,
+          "qty": "1",
+          "magic": "A"
+        }
+      ]
+    },
+    {
+      "id": "grey-ooze",
+      "name": "Vase grise",
+      "en": "Grey Ooze",
+      "level": 1,
+      "type": "ooze",
+      "match": [],
+      "description": "La masse visqueuse se contracte encore. Des bulles acides éclatent tandis que la matière gluante brûle lentement les outils et la peau.",
+      "check": {
+        "skill": "Arcanes",
+        "dc": 10
+      },
+      "duration": "20 min",
+      "danger": "Éclaboussures d’acide. **2d6 dégâts** d’acide et équipement non magique exposé corrodé.",
+      "loot": [
+        {
+          "emoji": "🧪",
+          "name": "Acide (fiole)",
+          "en": "Acid (vial)",
+          "p": 40,
+          "qty": "1d2",
+          "value": "25 po la fiole"
+        },
+        {
+          "emoji": "🧪",
+          "name": "Résidu de matériel d’alchimiste",
+          "en": "Alchemist's Supplies Residue",
+          "p": 25,
+          "qty": "1",
+          "value": "10 po"
+        },
+        {
+          "emoji": "⚙️",
+          "name": "Ferraille corrodée",
+          "en": "Corroded Metal Scrap",
+          "p": 45,
+          "qty": "1d6",
+          "value": "aucune valeur"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 5,
+          "qty": "1",
+          "magic": "A"
+        }
+      ]
+    },
+    {
+      "id": "intellect-devourer",
+      "name": "Dévoreur d’intellect",
+      "en": "Intellect Devourer",
+      "level": 1,
+      "type": "aberration",
+      "match": [
+        "intellect-devourer"
+      ],
+      "description": "Le cerveau déformé est extrait avec précaution. Il palpite encore faiblement, et une pression mal contrôlée libère une bouillie tiède, translucide, à l’odeur métallique et profondément écœurante.",
+      "check": {
+        "skill": "Arcanes",
+        "dc": 12
+      },
+      "duration": "15 min",
+      "danger": "Onde psionique parasite. **2d6 dégâts** psychiques et désavantage au prochain test d’Intelligence.",
+      "loot": [
+        {
+          "emoji": "🧠",
+          "name": "Échantillon de tissu cérébral",
+          "en": "Brain Tissue Sample",
+          "p": 40,
+          "qty": "1",
+          "value": "25 po"
+        },
+        {
+          "emoji": "🦴",
+          "name": "Fragments de chitine",
+          "en": "Chitin Fragments",
+          "p": 25,
+          "qty": "1d2",
+          "value": "5 po chacun"
+        },
+        {
+          "emoji": "💎",
+          "name": "Cristal focalisateur psionique",
+          "en": "Psionic Focus Crystal",
+          "p": 15,
+          "qty": "1",
+          "value": "10 po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 5,
+          "qty": "1",
+          "magic": "A ou B"
+        }
+      ]
+    },
+    {
+      "id": "grell",
+      "name": "Grell",
+      "en": "Grell",
+      "level": 1,
+      "type": "aberration",
+      "match": [],
+      "description": "Les tentacules pendent, humides, parcourus de spasmes. Les sectionner libère un liquide sombre et visqueux à l’odeur marine rance.",
+      "check": {
+        "skill": "Arcanes",
+        "dc": 13
+      },
+      "duration": "20 min",
+      "danger": "Décharge résiduelle. **2d8 dégâts** de foudre, jet de CON DD 12 ou empoisonné 1 minute.",
+      "loot": [
+        {
+          "emoji": "🦑",
+          "name": "Tentacules de grell",
+          "en": "Grell Tentacles",
+          "p": 40,
+          "qty": "1d6",
+          "value": "5 po le tentacule"
+        },
+        {
+          "emoji": "☠️",
+          "name": "Poison (basique)",
+          "en": "Poison (basic)",
+          "p": 30,
+          "qty": "1d2",
+          "value": "100 po la dose"
+        },
+        {
+          "emoji": "🦷",
+          "name": "Fragment de bec",
+          "en": "Beak Fragment",
+          "p": 25,
+          "qty": "1",
+          "value": "10 po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Composantes arcaniques",
+          "en": "Arcane Components",
+          "p": 20,
+          "qty": "1",
+          "value": "15 po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 10,
+          "qty": "1",
+          "magic": "B"
+        }
+      ]
+    },
+    {
+      "id": "doppelganger",
+      "name": "Métamorphe",
+      "en": "Doppelganger",
+      "level": 1,
+      "type": "aberration",
+      "match": [],
+      "description": "La chair refuse toute stabilité. Sous les outils, elle se ramollit, se dédouble puis s’affaisse en une matière tiède et indécise, se décomposant à vue d’œil.",
+      "check": {
+        "skill": "Arcanes",
+        "dc": 13
+      },
+      "duration": "15 min",
+      "danger": "La chair se liquéfie soudainement. **1d10 dégâts** nécrotiques et perte de la moitié du butin potentiel.",
+      "loot": [
+        {
+          "emoji": "🩸",
+          "name": "Sang (fiole)",
+          "en": "Blood (vial)",
+          "p": 45,
+          "qty": "1d4",
+          "value": "20 po la fiole"
+        },
+        {
+          "emoji": "🥩",
+          "name": "Échantillon de chair",
+          "en": "Flesh Sample",
+          "p": 25,
+          "qty": "1",
+          "value": "15 po"
+        },
+        {
+          "emoji": "🧬",
+          "name": "Restes organiques instables",
+          "en": "Unstable Organic Remains",
+          "p": 35,
+          "qty": "1d3",
+          "value": "aucune valeur"
+        },
+        {
+          "emoji": "💰",
+          "name": "Pièces",
+          "en": "Coins",
+          "p": 35,
+          "qty": "2d10",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 10,
+          "qty": "1",
+          "magic": "B"
+        }
+      ]
+    },
+    {
+      "id": "bandit-captain",
+      "name": "Capitaine bandit",
+      "en": "Bandit Captain",
+      "level": 1,
+      "type": "human",
+      "match": [
+        "drow-elite-warrior",
+        "champion"
+      ],
+      "description": "L’équipement est de meilleure facture, mais le corps reste lourd et déjà froid. Les objets récupérés sont imprégnés de sueur, de sang et de poussière.",
+      "check": {
+        "skill": "Survie",
+        "dc": 12
+      },
+      "duration": "10 min",
+      "danger": "Un piège personnel se déclenche. **2d6 dégâts** perforants et **+30 minutes**.",
+      "loot": [
+        {
+          "emoji": "⚔️",
+          "name": "Cimeterre",
+          "en": "Scimitar",
+          "p": 40,
+          "qty": "1",
+          "value": "25 po"
+        },
+        {
+          "emoji": "🛡️",
+          "name": "Armure de cuir clouté",
+          "en": "Studded Leather Armor",
+          "p": 35,
+          "qty": "1",
+          "value": "45 po"
+        },
+        {
+          "emoji": "🏹",
+          "name": "Arbalète légère",
+          "en": "Light Crossbow",
+          "p": 25,
+          "qty": "1",
+          "value": "25 po"
+        },
+        {
+          "emoji": "🏹",
+          "name": "Carreaux d’arbalète",
+          "en": "Crossbow Bolts",
+          "p": 45,
+          "qty": "2d6",
+          "value": "valeur négligeable"
+        },
+        {
+          "emoji": "💰",
+          "name": "Bourse",
+          "en": "Coin Pouch",
+          "p": 70,
+          "qty": "2d10",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 10,
+          "qty": "1",
+          "magic": "B"
+        }
+      ]
+    },
+    {
+      "id": "thug",
+      "name": "Malfrat",
+      "en": "Thug",
+      "level": 1,
+      "type": "human",
+      "match": [
+        "tough",
+        "berserker"
+      ],
+      "description": "Le corps est lourd à manipuler. Les sangles enfoncées dans la chair doivent être arrachées pour libérer des armes cabossées, accompagnées de craquements sourds.",
+      "check": {
+        "skill": "Survie",
+        "dc": 10
+      },
+      "duration": "5 min",
+      "danger": "Une arme lourde tombe. **1d8 dégâts** contondants et 1 niveau d’épuisement jusqu’au prochain repos court.",
+      "loot": [
+        {
+          "emoji": "🏹",
+          "name": "Carreaux d’arbalète",
+          "en": "Crossbow Bolts",
+          "p": 45,
+          "qty": "2d6",
+          "value": "valeur négligeable"
+        },
+        {
+          "emoji": "⚔️",
+          "name": "Masse d’armes",
+          "en": "Mace",
+          "p": 25,
+          "qty": "1",
+          "value": "5 po",
+          "brokenName": "Masse d’armes brisée"
+        },
+        {
+          "emoji": "🏹",
+          "name": "Arbalète lourde",
+          "en": "Heavy Crossbow",
+          "p": 25,
+          "qty": "1",
+          "value": "25 po",
+          "brokenName": "Arbalète lourde brisée"
+        },
+        {
+          "emoji": "🛡️",
+          "name": "Armure de cuir",
+          "en": "Leather Armor",
+          "p": 25,
+          "qty": "1",
+          "value": "5 po",
+          "brokenName": "Armure de cuir abîmée"
+        },
+        {
+          "emoji": "💰",
+          "name": "Pièces",
+          "en": "Coins",
+          "p": 55,
+          "qty": "1d10",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 5,
+          "qty": "1",
+          "magic": "A"
+        }
+      ]
+    },
+    {
+      "id": "grick",
+      "name": "Grick",
+      "en": "Grick",
+      "level": 1,
+      "type": "aberration",
+      "match": [
+        "grick"
+      ],
+      "description": "La chair coriace est striée de tentacules visqueux. Les couper libère un liquide épais et froid qui colle aux doigts et dégage une odeur minérale désagréable.",
+      "check": {
+        "skill": "Arcanes",
+        "dc": 12
+      },
+      "duration": "15 min",
+      "danger": "Un tentacule se contracte brutalement. **2d6 dégâts** contondants et le PJ lâche ses outils.",
+      "loot": [
+        {
+          "emoji": "🦑",
+          "name": "Tentacules de grick",
+          "en": "Grick Tentacles",
+          "p": 40,
+          "qty": "1d4",
+          "value": "5 po le tentacule"
+        },
+        {
+          "emoji": "🦴",
+          "name": "Lambeaux de peau de grick",
+          "en": "Grick Hide Scraps",
+          "p": 25,
+          "qty": "1",
+          "value": "10 po"
+        },
+        {
+          "emoji": "🦴",
+          "name": "Fragments d’os corrodés",
+          "en": "Corroded Bone Fragments",
+          "p": 35,
+          "qty": "1d3",
+          "value": "aucune valeur"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 5,
+          "qty": "1",
+          "magic": "A ou B"
+        }
+      ]
+    },
+    {
+      "id": "giant-rat",
+      "name": "Rat géant",
+      "en": "Giant Rat",
+      "level": 1,
+      "type": "beast",
+      "match": [
+        "giant-rat"
+      ],
+      "description": "Le pelage est humide et infesté. En incisant la carcasse, une odeur de charogne et de graisse rance se répand immédiatement.",
+      "check": {
+        "skill": "Survie",
+        "dc": 10
+      },
+      "duration": "5 min",
+      "danger": "Morsure post-mortem ou griffure infectée. **1d4 dégâts** perforants et jet de CON DD 10 ou empoisonné 1 heure.",
+      "loot": [
+        {
+          "emoji": "🦫",
+          "name": "Peau de rat géant",
+          "en": "Giant Rat Hide",
+          "p": 35,
+          "qty": "1",
+          "value": "2 po"
+        },
+        {
+          "emoji": "🦷",
+          "name": "Dents de rat",
+          "en": "Rat Teeth",
+          "p": 25,
+          "qty": "1d6",
+          "value": "valeur négligeable"
+        },
+        {
+          "emoji": "🥩",
+          "name": "Viande malade",
+          "en": "Diseased Meat",
+          "p": 20,
+          "qty": "1",
+          "value": "aucune valeur"
+        },
+        {
+          "emoji": "💰",
+          "name": "Pièces (avalées)",
+          "en": "Coins (ingested)",
+          "p": 10,
+          "qty": "1d4",
+          "coin": "po"
+        }
+      ]
+    },
+    {
+      "id": "stirge",
+      "name": "Stirge",
+      "en": "Stirge",
+      "level": 1,
+      "type": "beast",
+      "match": [],
+      "description": "Le corps éclate presque sous la pression. Du sang coagulé s’écoule du thorax gonflé, attirant immédiatement les insectes.",
+      "check": {
+        "skill": "Survie",
+        "dc": 10
+      },
+      "duration": "5 min",
+      "danger": "Le PJ se pique sur le rostre. **1d4 dégâts** perforants et **1d4 dégâts** nécrotiques.",
+      "loot": [
+        {
+          "emoji": "🦟",
+          "name": "Rostre de stirge",
+          "en": "Stirge Proboscis",
+          "p": 40,
+          "qty": "1",
+          "value": "5 po"
+        },
+        {
+          "emoji": "🩸",
+          "name": "Poche de sang coagulé",
+          "en": "Blood Sac (coagulated)",
+          "p": 30,
+          "qty": "1",
+          "value": "5 po"
+        },
+        {
+          "emoji": "🪽",
+          "name": "Membrane alaire fragile",
+          "en": "Fragile Wing Membrane",
+          "p": 20,
+          "qty": "1",
+          "value": "aucune valeur"
+        }
+      ]
+    },
+    {
+      "id": "shadow",
+      "name": "Ombre",
+      "en": "Shadow",
+      "level": 1,
+      "type": "undead",
+      "match": [
+        "specter"
+      ],
+      "description": "La forme se dissipe à peine touchée. Il ne reste qu’un froid intense et des traces d’ombre figées sur les surfaces proches.",
+      "check": {
+        "skill": "Religion",
+        "dc": 12
+      },
+      "duration": "10 min",
+      "danger": "L’ombre s’accroche au PJ. **1d6 dégâts** nécrotiques et désavantage au prochain test de Force.",
+      "loot": [
+        {
+          "emoji": "👻",
+          "name": "Essence d’ombre",
+          "en": "Shadow Essence",
+          "p": 35,
+          "qty": "1",
+          "value": "15 po"
+        },
+        {
+          "emoji": "🌑",
+          "name": "Résidu umbral",
+          "en": "Umbral Residue",
+          "p": 25,
+          "qty": "1d2",
+          "value": "5 po chacun"
+        }
+      ]
+    },
+    {
+      "id": "grick-alpha",
+      "name": "Grick alpha",
+      "en": "Grick Alpha",
+      "level": 1,
+      "type": "aberration",
+      "match": [],
+      "description": "La carcasse est massive et résistante. Les tentacules épais sont encore luisants d’un mucus froid ; les sectionner libère un fluide visqueux à l’odeur minérale. La peau dure et striée oppose une forte résistance, et le bec, solidement ancré dans le crâne, doit être extrait en forçant, au prix d’efforts peu ragoûtants.",
+      "check": {
+        "skill": "Arcanes",
+        "dc": 15
+      },
+      "duration": "25 min",
+      "danger": "Un spasme post-mortem secoue violemment un tentacule. Le PJ subit **3d6 dégâts** contondants, lâche ses outils, et la récolte est interrompue.",
+      "loot": [
+        {
+          "emoji": "🦴",
+          "name": "Bec de grick alpha",
+          "en": "Grick Alpha Beak",
+          "p": 35,
+          "qty": "1",
+          "value": "30 po",
+          "use": "composante (hache d’armes)"
+        },
+        {
+          "emoji": "🦴",
+          "name": "Peau de grick alpha",
+          "en": "Grick Alpha Hide",
+          "p": 35,
+          "qty": "1",
+          "value": "75 po",
+          "use": "composante (cape)"
+        },
+        {
+          "emoji": "🦑",
+          "name": "Tentacules de grick",
+          "en": "Grick Tentacles",
+          "p": 45,
+          "qty": "1d4",
+          "value": "2 po chacun",
+          "use": "composante (dague)"
+        },
+        {
+          "emoji": "🍖",
+          "name": "Rations",
+          "en": "Rations",
+          "p": 55,
+          "qty": "2d6",
+          "value": "valeur négligeable",
+          "use": "consommable"
+        },
+        {
+          "emoji": "🦴",
+          "name": "Fragments d’os durcis",
+          "en": "Hardened Bone Fragments",
+          "p": 30,
+          "qty": "1d6",
+          "value": "5 po chacun",
+          "use": "composante (os)"
+        },
+        {
+          "emoji": "💰",
+          "name": "Pièces (partiellement digérées)",
+          "en": "Coins (partially digested)",
+          "p": 35,
+          "qty": "4d10",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 15,
+          "qty": "1",
+          "magic": "B"
+        }
+      ]
+    },
+    {
+      "id": "spy",
+      "name": "Espion",
+      "en": "Spy",
+      "level": 1,
+      "type": "human",
+      "match": [
+        "scout"
+      ],
+      "description": "Le corps est léger, soigneusement équipé. Les aventuriers fouillent rapidement des vêtements discrets, des coutures dissimulant parfois de petites poches cousues à la hâte.",
+      "check": {
+        "skill": "Survie",
+        "dc": 11
+      },
+      "duration": "5 min",
+      "danger": "Une lame cachée ou une aiguille empoisonnée blesse le PJ. **1d6 dégâts** perforants.",
+      "loot": [
+        {
+          "emoji": "🗡️",
+          "name": "Dague",
+          "en": "Dagger",
+          "p": 40,
+          "qty": "1",
+          "value": "2 po",
+          "use": "arme"
+        },
+        {
+          "emoji": "👔",
+          "name": "Vêtements de déguisement",
+          "en": "Disguised Clothing",
+          "p": 30,
+          "qty": "1",
+          "value": "5 po",
+          "use": "équipement"
+        },
+        {
+          "emoji": "💰",
+          "name": "Bourse",
+          "en": "Coin Pouch",
+          "p": 50,
+          "qty": "1d10",
+          "coin": "po"
+        },
+        {
+          "emoji": "☠️",
+          "name": "Poison (basique)",
+          "en": "Poison (basic)",
+          "p": 15,
+          "qty": "1",
+          "value": "100 po",
+          "use": "consommable"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 5,
+          "qty": "1",
+          "magic": "A"
+        }
+      ]
+    },
+    {
+      "id": "manticore",
+      "name": "Manticore",
+      "en": "Manticore",
+      "level": 1,
+      "type": "monstrosity",
+      "match": [],
+      "description": "La peau est épaisse et poisseuse de sang séché. Extraire les pointes de la queue demande de la force, chaque retrait s’accompagnant d’un bruit humide peu engageant.",
+      "check": {
+        "skill": "Survie",
+        "dc": 13
+      },
+      "duration": "20 min",
+      "danger": "Une pointe se brise et se plante dans le PJ. **2d8 dégâts** perforants.",
+      "loot": [
+        {
+          "emoji": "🦴",
+          "name": "Pointes de manticore",
+          "en": "Manticore Spikes",
+          "p": 45,
+          "qty": "1d6",
+          "value": "5 po chacune",
+          "use": "composante (arme)"
+        },
+        {
+          "emoji": "🦴",
+          "name": "Peau épaisse",
+          "en": "Thick Hide",
+          "p": 35,
+          "qty": "1",
+          "value": "25 po",
+          "use": "composante (armure)"
+        },
+        {
+          "emoji": "💀",
+          "name": "Crâne à crocs",
+          "en": "Fanged Skull",
+          "p": 20,
+          "qty": "1",
+          "value": "15 po",
+          "use": "trophée"
+        },
+        {
+          "emoji": "💰",
+          "name": "Pièces (proies éparpillées)",
+          "en": "Coins (scattered prey)",
+          "p": 35,
+          "qty": "2d10",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 10,
+          "qty": "1",
+          "magic": "B"
+        }
+      ]
+    },
+    {
+      "id": "giant-spider",
+      "name": "Araignée géante",
+      "en": "Giant Spider",
+      "level": 1,
+      "type": "beast",
+      "match": [],
+      "description": "Les pattes rêches sont couvertes de poils collants. En ouvrant l’abdomen, un liquide laiteux s’écoule lentement, imprégnant le sol d’une odeur âcre.",
+      "check": {
+        "skill": "Survie",
+        "dc": 12
+      },
+      "duration": "20 min",
+      "danger": "Une glande de venin éclate. **2d8 dégâts** de poison, jet de CON DD 11 ou empoisonné 1 minute.",
+      "hidden": true,
+      "loot": [
+        {
+          "emoji": "☠️",
+          "name": "Venin d’araignée",
+          "en": "Spider Venom",
+          "p": 35,
+          "qty": "1d2",
+          "value": "100 po chacun",
+          "use": "consommable"
+        },
+        {
+          "emoji": "🕸️",
+          "name": "Écheveau de soie",
+          "en": "Silk Bundle",
+          "p": 40,
+          "qty": "1",
+          "value": "10 po",
+          "use": "composante (corde)"
+        },
+        {
+          "emoji": "🦴",
+          "name": "Plaques de chitine",
+          "en": "Chitin Plates",
+          "p": 25,
+          "qty": "1d3",
+          "value": "5 po chacune",
+          "use": "composante (armure)"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 5,
+          "qty": "1",
+          "magic": "A"
+        }
+      ]
+    },
+    {
+      "id": "gelatinous-cube",
+      "name": "Cube gélatineux",
+      "en": "Gelatinous Cube",
+      "level": 1,
+      "type": "ooze",
+      "match": [
+        "gelatinous-cube",
+        "gelatinous-cube-giant"
+      ],
+      "description": "La masse translucide ondule encore lentement. Pour récupérer quoi que ce soit, il faut plonger les bras dans une substance froide, brûlante et collante à la fois.",
+      "check": {
+        "skill": "Arcanes",
+        "dc": 12
+      },
+      "duration": "20 min",
+      "danger": "Le PJ est partiellement dissous. **2d6 dégâts** d’acide et immobilisé jusqu’à la fin du prochain tour.",
+      "loot": [
+        {
+          "emoji": "🧪",
+          "name": "Gel dissolvant",
+          "en": "Dissolving Gel",
+          "p": 40,
+          "qty": "1d3",
+          "value": "15 po chacun",
+          "use": "composante (acide)"
+        },
+        {
+          "emoji": "📦",
+          "name": "Objets conservés",
+          "en": "Preserved Objects",
+          "p": 35,
+          "qty": "1d4",
+          "value": "à la discrétion du MJ",
+          "use": "équipement"
+        },
+        {
+          "emoji": "💰",
+          "name": "Pièces (en suspension)",
+          "en": "Coins (suspended)",
+          "p": 40,
+          "qty": "2d10",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 5,
+          "qty": "1",
+          "magic": "A"
+        }
+      ]
+    },
+    {
+      "id": "black-pudding",
+      "name": "Pouding noir",
+      "en": "Black Pudding",
+      "level": 1,
+      "type": "ooze",
+      "match": [
+        "ochre-jelly"
+      ],
+      "description": "La masse noire se divise et se reforme lentement. Chaque tentative de prélèvement ronge les outils et fait fumer l’air autour.",
+      "check": {
+        "skill": "Arcanes",
+        "dc": 14
+      },
+      "duration": "25 min",
+      "danger": "Une projection acide frappe violemment. **3d8 dégâts** d’acide et un objet non magique est détruit.",
+      "loot": [
+        {
+          "emoji": "🧪",
+          "name": "Boue acide",
+          "en": "Acidic Sludge",
+          "p": 40,
+          "qty": "1d3",
+          "value": "25 po chacune",
+          "use": "composante (acide)"
+        },
+        {
+          "emoji": "⚙️",
+          "name": "Résidu de métal dissous",
+          "en": "Dissolved Metal Residue",
+          "p": 25,
+          "qty": "1",
+          "value": "10 po",
+          "use": "composante (métal)"
+        },
+        {
+          "emoji": "💰",
+          "name": "Pièces (corrodées)",
+          "en": "Coins (corroded)",
+          "p": 30,
+          "qty": "3d10",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 10,
+          "qty": "1",
+          "magic": "B"
+        }
+      ]
+    },
+    {
+      "id": "skeleton",
+      "name": "Squelette",
+      "en": "Skeleton",
+      "level": 1,
+      "type": "undead",
+      "match": [
+        "skeleton"
+      ],
+      "description": "Les os s’effritent sous la pression, libérant une poussière sèche et âcre. Certains fragments vibrent encore faiblement d’une magie morte.",
+      "check": {
+        "skill": "Religion",
+        "dc": 11
+      },
+      "duration": "10 min",
+      "danger": "Un contrecoup nécromantique traverse le PJ. **1d6 dégâts** nécrotiques.",
+      "loot": [
+        {
+          "emoji": "🦴",
+          "name": "Fragments d’os",
+          "en": "Bone Fragments",
+          "p": 40,
+          "qty": "1d6",
+          "value": "valeur négligeable",
+          "use": "composante (os)"
+        },
+        {
+          "emoji": "⚔️",
+          "name": "Arme rouillée",
+          "en": "Rusted Weapon",
+          "p": 25,
+          "qty": "1",
+          "value": "5 po (après réparation)",
+          "use": "arme"
+        },
+        {
+          "emoji": "💰",
+          "name": "Pièces anciennes",
+          "en": "Ancient Coins",
+          "p": 30,
+          "qty": "1d10",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 5,
+          "qty": "1",
+          "magic": "A"
+        }
+      ]
+    },
+    {
+      "id": "flesh-golem",
+      "name": "Golem de chair",
+      "en": "Flesh Golem",
+      "level": 1,
+      "type": "construct",
+      "match": [
+        "flesh-golem"
+      ],
+      "description": "La chair cousue est froide et lourde. Les coutures cèdent parfois, laissant s’échapper des fluides alchimiques à l’odeur écœurante.",
+      "check": {
+        "skill": "Arcanes",
+        "dc": 15
+      },
+      "duration": "25 min",
+      "danger": "Une charge résiduelle se libère. **3d6 dégâts** de foudre et le PJ est étourdi jusqu’à la fin du prochain tour.",
+      "loot": [
+        {
+          "emoji": "🦴",
+          "name": "Panneaux de peau cousue",
+          "en": "Stitched Hide Panels",
+          "p": 35,
+          "qty": "1",
+          "value": "20 po",
+          "use": "composante (armure)"
+        },
+        {
+          "emoji": "🥩",
+          "name": "Morceaux de chair conservée",
+          "en": "Preserved Flesh Chunks",
+          "p": 35,
+          "qty": "1d4",
+          "value": "15 po chacun",
+          "use": "composante (organique)"
+        },
+        {
+          "emoji": "🧪",
+          "name": "Fluide alchimique de liaison",
+          "en": "Alchemical Binding Fluid",
+          "p": 30,
+          "qty": "1d2",
+          "value": "25 po la fiole",
+          "use": "composante (alchimie)"
+        },
+        {
+          "emoji": "✨",
+          "name": "Résidu arcanique",
+          "en": "Arcane Residue",
+          "p": 20,
+          "qty": "1",
+          "value": "15 po",
+          "use": "composante (arcane)"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 10,
+          "qty": "1",
+          "magic": "B"
+        }
+      ]
+    },
+    {
+      "id": "revenant",
+      "name": "Revenant",
+      "en": "Revenant",
+      "level": 1,
+      "type": "undead",
+      "match": [],
+      "description": "Le corps est dense, chargé d’une haine persistante. La chair est dure, presque rigide, et se détache difficilement des os.",
+      "check": {
+        "skill": "Religion",
+        "dc": 15
+      },
+      "duration": "15 min",
+      "danger": "Une vague de rancœur surnaturelle frappe le PJ. **2d6 dégâts** nécrotiques et effrayé 1 round.",
+      "loot": [
+        {
+          "emoji": "🦴",
+          "name": "Éclats d’os de revenant",
+          "en": "Revenant Bone Shards",
+          "p": 35,
+          "qty": "1d4",
+          "value": "10 po chacun",
+          "use": "composante (os)"
+        },
+        {
+          "emoji": "🛡️",
+          "name": "Pièces d’armure en lambeaux",
+          "en": "Tattered Armor Pieces",
+          "p": 25,
+          "qty": "1",
+          "value": "15 po",
+          "use": "composante (armure)"
+        },
+        {
+          "emoji": "💰",
+          "name": "Pièces funéraires",
+          "en": "Grave Coins",
+          "p": 35,
+          "qty": "2d10",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 10,
+          "qty": "1",
+          "magic": "B"
+        }
+      ]
+    },
+    {
+      "id": "mimic",
+      "name": "Mimique",
+      "en": "Mimic",
+      "level": 1,
+      "type": "monstrosity",
+      "match": [
+        "mimic"
+      ],
+      "description": "La « matière » colle aux lames et aux doigts. En décollant la peau caoutchouteuse, une glaire épaisse file en longs rubans, et l’odeur sucrée-rance devient vite insupportable.",
+      "check": {
+        "skill": "Survie",
+        "dc": 12
+      },
+      "duration": "15 min",
+      "danger": "Le PJ reste collé à la créature. **2d6 dégâts** d’acide et immobilisé jusqu’à la fin du prochain tour.",
+      "loot": [
+        {
+          "emoji": "🧴",
+          "name": "Adhésif de mimique",
+          "en": "Mimic Adhesive",
+          "p": 40,
+          "qty": "1d3",
+          "value": "25 po chacun",
+          "use": "composante (colle)"
+        },
+        {
+          "emoji": "🦴",
+          "name": "Peau de mimique",
+          "en": "Mimic Hide",
+          "p": 30,
+          "qty": "1",
+          "value": "30 po",
+          "use": "composante (armure)"
+        },
+        {
+          "emoji": "🥩",
+          "name": "Tissu de pseudopode",
+          "en": "Pseudopod Tissue",
+          "p": 25,
+          "qty": "1d2",
+          "value": "10 po chacun",
+          "use": "composante (arme)"
+        },
+        {
+          "emoji": "💰",
+          "name": "Pièces (à l’intérieur)",
+          "en": "Coins (inside)",
+          "p": 50,
+          "qty": "3d10",
+          "coin": "po"
+        },
+        {
+          "emoji": "📦",
+          "name": "Objets conservés",
+          "en": "Preserved Objects",
+          "p": 25,
+          "qty": "1d2",
+          "value": "à la discrétion du MJ",
+          "use": "équipement"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 5,
+          "qty": "1",
+          "magic": "A"
+        }
+      ]
+    },
+    {
+      "id": "shrieker",
+      "name": "Hurleur",
+      "en": "Shrieker",
+      "level": 1,
+      "type": "plant",
+      "match": [],
+      "description": "Le champignon vibre encore. Au moindre contact, il libère une odeur humide et une poussière fine qui colle au palais et fait pleurer les yeux.",
+      "check": {
+        "skill": "Survie",
+        "dc": 10
+      },
+      "duration": "10 min",
+      "danger": "Un nuage de spores se répand. Jet de CON DD 10 ou empoisonné 10 minutes (toux, yeux irrités).",
+      "loot": [
+        {
+          "emoji": "🍄",
+          "name": "Spores de hurleur",
+          "en": "Shrieker Spores",
+          "p": 35,
+          "qty": "1d3",
+          "value": "10 po chacune",
+          "use": "composante (poison)"
+        },
+        {
+          "emoji": "🍄",
+          "name": "Chapeau de champignon",
+          "en": "Fungus Cap",
+          "p": 40,
+          "qty": "1",
+          "value": "2 po",
+          "use": "ration"
+        },
+        {
+          "emoji": "🧵",
+          "name": "Fibres de mycélium",
+          "en": "Mycelium Fibers",
+          "p": 25,
+          "qty": "1d4",
+          "value": "1 po chacune",
+          "use": "composante (corde)"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 5,
+          "qty": "1",
+          "magic": "A"
+        }
+      ]
+    },
+    {
+      "id": "air-elemental",
+      "name": "Élémentaire d’air",
+      "en": "Air Elemental",
+      "level": 1,
+      "type": "elemental",
+      "match": [
+        "lightning-elemental"
+      ],
+      "description": "Le tourbillon se défait en souffles glacés. On tente de « capturer » l’air chargé d’énergie dans des contenants improvisés, tandis que la statique hérisse les poils et pique la peau.",
+      "check": {
+        "skill": "Arcanes",
+        "dc": 15
+      },
+      "duration": "20 min",
+      "danger": "Une bourrasque explose au visage. **2d8 dégâts** contondants et le PJ est renversé à terre.",
+      "loot": [
+        {
+          "emoji": "💨",
+          "name": "Essence élémentaire (air)",
+          "en": "Elemental Essence (Air)",
+          "p": 40,
+          "qty": "1",
+          "value": "25 po",
+          "use": "composante (baguette)"
+        },
+        {
+          "emoji": "💎",
+          "name": "Cristal de vent condensé",
+          "en": "Condensed Wind Crystal",
+          "p": 25,
+          "qty": "1",
+          "value": "20 po",
+          "use": "composante (amulette)"
+        },
+        {
+          "emoji": "⚡",
+          "name": "Poussière chargée de statique",
+          "en": "Static-Charged Dust",
+          "p": 30,
+          "qty": "1d3",
+          "value": "10 po chacune",
+          "use": "composante (parchemin)"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 10,
+          "qty": "1",
+          "magic": "B"
+        }
+      ]
+    },
+    {
+      "id": "ettin",
+      "name": "Ettin",
+      "en": "Ettin",
+      "level": 1,
+      "type": "giant",
+      "match": [],
+      "description": "Les deux têtes pendent lourdement. La chair épaisse est marquée de coups, et l’odeur de sueur rance rend la manipulation pénible quand on dégage peau, dents et os.",
+      "check": {
+        "skill": "Survie",
+        "dc": 14
+      },
+      "duration": "25 min",
+      "danger": "Un membre mal calé s’effondre. **2d10 dégâts** contondants et la récolte est retardée de 10 minutes.",
+      "loot": [
+        {
+          "emoji": "🦴",
+          "name": "Peau d’ettin",
+          "en": "Ettin Hide",
+          "p": 35,
+          "qty": "1",
+          "value": "30 po",
+          "use": "composante (armure)"
+        },
+        {
+          "emoji": "🦷",
+          "name": "Dents (grande taille)",
+          "en": "Teeth (Large)",
+          "p": 30,
+          "qty": "1d4",
+          "value": "5 po chacune",
+          "use": "composante (arme)"
+        },
+        {
+          "emoji": "🦴",
+          "name": "Gros fragments d’os",
+          "en": "Large Bone Fragments",
+          "p": 40,
+          "qty": "1d6",
+          "value": "2 po chacun",
+          "use": "composante (os)"
+        },
+        {
+          "emoji": "💰",
+          "name": "Pièces (magot grossier)",
+          "en": "Coins (crude stash)",
+          "p": 40,
+          "qty": "3d10",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 10,
+          "qty": "1",
+          "magic": "B"
+        }
+      ]
+    },
+    {
+      "id": "troll",
+      "name": "Troll",
+      "en": "Troll",
+      "level": 1,
+      "type": "giant",
+      "match": [
+        "half-troll",
+        "cave-troll",
+        "gaunt-troll"
+      ],
+      "description": "Même mort, la chair semble « vivre ». En la tranchant, ça saigne chaud et abondant, et certains morceaux se contractent encore avant de se relâcher, luisants et écœurants.",
+      "check": {
+        "skill": "Survie",
+        "dc": 15
+      },
+      "duration": "25 min",
+      "danger": "Un spasme violent frappe le PJ. **2d10 dégâts** contondants et la récolte est interrompue.",
+      "loot": [
+        {
+          "emoji": "🦴",
+          "name": "Peau de troll",
+          "en": "Troll Hide",
+          "p": 35,
+          "qty": "1",
+          "value": "30 po",
+          "use": "composante (armure)"
+        },
+        {
+          "emoji": "🥩",
+          "name": "Chair régénérante",
+          "en": "Regenerating Flesh",
+          "p": 25,
+          "qty": "1d2",
+          "value": "25 po chacune",
+          "use": "composante (potion)"
+        },
+        {
+          "emoji": "🦴",
+          "name": "Gros fragments d’os",
+          "en": "Large Bone Fragments",
+          "p": 40,
+          "qty": "1d6",
+          "value": "2 po chacun",
+          "use": "composante (os)"
+        },
+        {
+          "emoji": "💰",
+          "name": "Pièces (avalées)",
+          "en": "Coins (swallowed)",
+          "p": 35,
+          "qty": "3d10",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 10,
+          "qty": "1",
+          "magic": "B"
+        }
+      ]
+    },
+    {
+      "id": "carrion-crawler",
+      "name": "Charognard rampant",
+      "en": "Carrion Crawler",
+      "level": 1,
+      "type": "monstrosity",
+      "match": [],
+      "description": "La bête pue la charogne. Les tentacules suintent une bave jaunâtre ; en les sectionnant, le liquide colle aux doigts et donne la nausée.",
+      "check": {
+        "skill": "Survie",
+        "dc": 12
+      },
+      "duration": "20 min",
+      "danger": "Contact avec une sécrétion paralysante. Jet de CON DD 12 ou paralysé 1 round.",
+      "loot": [
+        {
+          "emoji": "🦑",
+          "name": "Tentacules de charognard",
+          "en": "Carrion Crawler Tentacles",
+          "p": 45,
+          "qty": "1d6",
+          "value": "5 po chacun",
+          "use": "composante (fouet)"
+        },
+        {
+          "emoji": "🧪",
+          "name": "Bave paralysante",
+          "en": "Paralytic Slime",
+          "p": 30,
+          "qty": "1d2",
+          "value": "20 po la fiole",
+          "use": "composante (poison)"
+        },
+        {
+          "emoji": "🦴",
+          "name": "Plaques de chitine",
+          "en": "Chitin Plates",
+          "p": 25,
+          "qty": "1d3",
+          "value": "5 po chacune",
+          "use": "composante (armure)"
+        },
+        {
+          "emoji": "🍖",
+          "name": "Rations (à demi digérées)",
+          "en": "Rations (half-digested)",
+          "p": 35,
+          "qty": "1d6",
+          "value": "valeur négligeable",
+          "use": "consommable"
+        },
+        {
+          "emoji": "💰",
+          "name": "Pièces (récupérées)",
+          "en": "Coins (scavenged)",
+          "p": 30,
+          "qty": "2d10",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 5,
+          "qty": "1",
+          "magic": "A"
+        }
+      ]
+    },
+    {
+      "id": "rust-monster",
+      "name": "Oxydeur",
+      "en": "Rust Monster",
+      "level": 1,
+      "type": "monstrosity",
+      "match": [
+        "rust-monster",
+        "giant-rust-monster"
+      ],
+      "description": "Ses antennes frémissent encore. Tout ce qui est métallique autour est piqué, terni, comme « mangé » par une rouille accélérée.",
+      "check": {
+        "skill": "Survie",
+        "dc": 11
+      },
+      "duration": "10 min",
+      "danger": "L’antenne touche une arme ou une armure tenue au mauvais moment : un objet métallique non magique porté par le PJ est corrodé (à ta discrétion).",
+      "loot": [
+        {
+          "emoji": "📡",
+          "name": "Antennes d’oxydeur",
+          "en": "Rust Monster Antennae",
+          "p": 40,
+          "qty": "1d2",
+          "value": "15 po chacune",
+          "use": "composante (sceptre)"
+        },
+        {
+          "emoji": "🧪",
+          "name": "Paillettes de rouille",
+          "en": "Rust Flakes",
+          "p": 35,
+          "qty": "1d4",
+          "value": "5 po chacune",
+          "use": "composante (acide)"
+        },
+        {
+          "emoji": "🦴",
+          "name": "Éclats de chitine",
+          "en": "Chitin Bits",
+          "p": 25,
+          "qty": "1d3",
+          "value": "3 po chacun",
+          "use": "composante (armure)"
+        },
+        {
+          "emoji": "⚙️",
+          "name": "Ferraille corrodée",
+          "en": "Corroded Metal Scrap",
+          "p": 45,
+          "qty": "1d6",
+          "value": "aucune valeur",
+          "use": "composante (métal)"
+        },
+        {
+          "emoji": "💰",
+          "name": "Pièces (ternies)",
+          "en": "Coins (dull)",
+          "p": 25,
+          "qty": "1d10",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 5,
+          "qty": "1",
+          "magic": "A"
+        }
+      ]
+    },
+    {
+      "id": "duergar",
+      "name": "Duergar",
+      "en": "Duergar",
+      "level": 1,
+      "type": "humanoid",
+      "match": [],
+      "description": "Le nain gris a la peau froide et dure. Son équipement est compact, militaire, et fouiller ses poches revient à dégager des objets lourds, gras de suie et de sueur.",
+      "check": {
+        "skill": "Survie",
+        "dc": 11
+      },
+      "duration": "10 min",
+      "danger": "Une lame mal rangée entaille le PJ. **1d6 dégâts** tranchants et la fouille perd 5 minutes.",
+      "loot": [
+        {
+          "emoji": "⚔️",
+          "name": "Pic de guerre",
+          "en": "War Pick",
+          "p": 35,
+          "qty": "1",
+          "value": "5 po",
+          "use": "arme"
+        },
+        {
+          "emoji": "🗡️",
+          "name": "Javelines",
+          "en": "Javelins",
+          "p": 45,
+          "qty": "1d4",
+          "value": "valeur négligeable",
+          "use": "arme"
+        },
+        {
+          "emoji": "🛡️",
+          "name": "Bouclier",
+          "en": "Shield",
+          "p": 35,
+          "qty": "1",
+          "value": "10 po",
+          "use": "équipement"
+        },
+        {
+          "emoji": "🛡️",
+          "name": "Chemise d’écailles",
+          "en": "Scale Mail",
+          "p": 25,
+          "qty": "1",
+          "value": "50 po",
+          "use": "équipement"
+        },
+        {
+          "emoji": "💰",
+          "name": "Bourse",
+          "en": "Coin Pouch",
+          "p": 45,
+          "qty": "2d10",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 5,
+          "qty": "1",
+          "magic": "A"
+        }
+      ]
+    },
+    {
+      "id": "defective-shield",
+      "name": "Bouclier défectueux",
+      "en": "Defective Shield",
+      "level": 1,
+      "type": "construct",
+      "match": [
+        "flying-sword",
+        "baliste-animee"
+      ],
+      "description": "Le bouclier « bouge » encore par à-coups, grinçant comme un insecte blessé. Le détacher sans le briser demande de forcer sur des rivets tordus et des plaques qui vibrent encore de magie instable.",
+      "check": {
+        "skill": "Arcanes",
+        "dc": 10
+      },
+      "duration": "10 min",
+      "danger": "Un arc électrique ou une pulsation magique jaillit. **2d6 dégâts** de force et désavantage au prochain test d’Arcanes.",
+      "loot": [
+        {
+          "emoji": "🛡️",
+          "name": "Bouclier défectueux",
+          "en": "Defective Shield",
+          "p": 35,
+          "qty": "1",
+          "value": "10 po",
+          "use": "composante (bouclier)"
+        },
+        {
+          "emoji": "✨",
+          "name": "Résidu arcanique",
+          "en": "Arcane Residue",
+          "p": 30,
+          "qty": "1",
+          "value": "15 po",
+          "use": "composante (parchemin)"
+        },
+        {
+          "emoji": "⚙️",
+          "name": "Ferrures métalliques",
+          "en": "Metal Fittings",
+          "p": 40,
+          "qty": "1d4",
+          "value": "2 po chacune",
+          "use": "composante (armure)"
+        },
+        {
+          "emoji": "💰",
+          "name": "Pièces (coincées dans les jointures)",
+          "en": "Coins (stuck in seams)",
+          "p": 30,
+          "qty": "1d10",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 5,
+          "qty": "1",
+          "magic": "A"
+        }
+      ]
+    }
+  ]
+}
