@@ -1,0 +1,886 @@
+[
+  {
+    "id": "bugbear",
+    "name": "Guerrier gobelours",
+    "nameEn": "Bugbear Warrior",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier",
+    "size": "M", "type": "Fée (gobelinoïde)", "alignment": "Chaotique mauvais",
+    "cr": "1", "xp": 200, "pb": 2,
+    "ac": 14, "acNote": "armure de peau", "hp": 33, "hpFormula": "6d8 + 6", "speed": "9 m",
+    "abilities": { "str": 15, "dex": 14, "con": 13, "int": 8, "wis": 11, "cha": 9 },
+    "skills": "Discrétion +6, Survie +2",
+    "senses": "vision dans le noir 18 m ; Perception passive 10",
+    "languages": "commun, gobelin",
+    "traits": [
+      { "name": "Enlèvement", "text": "Le gobelours n’a pas besoin de dépenser de mouvement supplémentaire pour déplacer une créature qu’il agrippe." }
+    ],
+    "actions": [
+      { "name": "Saisie", "text": "Jet d’attaque au corps à corps : +4, allonge 3 m. Touché : 9 (2d6 + 2) dégâts contondants. Si la cible est de taille M ou inférieure, elle est agrippée (DD 12 pour s’échapper)." },
+      { "name": "Marteau léger", "text": "Jet d’attaque au corps à corps ou à distance : +4, allonge 3 m ou portée 6/18 m. Touché : 9 (3d4 + 2) dégâts contondants, ou 12 (4d4 + 2) si la cible est agrippée par le gobelours." }
+    ],
+    "summary": {
+      "style": "Cogneur d’embuscade : frappe fort à 3 m d’allonge, agrippe et traîne.",
+      "intent": "Mercenaire : se bat pour la paie, pas pour l’honneur.",
+      "tactics": "Saisit l’adversaire le plus fragile puis le martèle (dégâts majorés sur cible agrippée). Reste à 3 m des lames adverses grâce à son allonge.",
+      "flee": "Se rend ou change de camp si on lui offre plus que son employeur (5 po suffisent aux gobelours de Yek).",
+      "weakness": "Discret mais peu endurant : 33 PV. Vulnérable aux tests de Persuasion intéressée."
+    }
+  },
+  {
+    "id": "scout",
+    "name": "Éclaireur",
+    "nameEn": "Scout",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier",
+    "size": "M", "type": "Humanoïde", "alignment": "Neutre",
+    "cr": "1/2", "xp": 100, "pb": 2,
+    "ac": 13, "acNote": "armure de cuir", "hp": 16, "hpFormula": "3d8 + 3", "speed": "9 m",
+    "abilities": { "str": 11, "dex": 14, "con": 12, "int": 11, "wis": 13, "cha": 11 },
+    "skills": "Nature +4, Perception +5, Discrétion +6, Survie +5",
+    "senses": "Perception passive 15",
+    "languages": "commun + une langue",
+    "actions": [
+      { "name": "Attaques multiples", "text": "L’éclaireur effectue deux attaques, avec son Épée courte ou son Arc long dans n’importe quelle combinaison." },
+      { "name": "Épée courte", "text": "Jet d’attaque au corps à corps : +4, allonge 1,50 m. Touché : 5 (1d6 + 2) dégâts perforants." },
+      { "name": "Arc long", "text": "Jet d’attaque à distance : +4, portée 45/180 m. Touché : 6 (1d8 + 2) dégâts perforants." }
+    ],
+    "summary": {
+      "style": "Tireur mobile et discret.",
+      "intent": "Survivre, repérer, frapper de loin.",
+      "tactics": "Deux flèches par tour depuis un couvert, puis se déplace. Évite le corps à corps.",
+      "flee": "Décroche dès qu’il est pris à revers ou sous la moitié de ses PV."
+    }
+  },
+  {
+    "id": "specter",
+    "name": "Spectre",
+    "nameEn": "Specter",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier",
+    "size": "M", "type": "Mort-vivant", "alignment": "Chaotique mauvais",
+    "cr": "1", "xp": 200, "pb": 2,
+    "ac": 12, "hp": 22, "hpFormula": "5d8", "speed": "9 m, vol 15 m (vol stationnaire)",
+    "abilities": { "str": 1, "dex": 14, "con": 11, "int": 10, "wis": 10, "cha": 11 },
+    "resistances": "acide, contondant, feu, foudre, froid, perforant, tonnerre, tranchant",
+    "immunities": "nécrotique, poison ; à terre, agrippé, charmé, empoisonné, entravé, épuisement, inconscient, paralysé, pétrifié",
+    "senses": "vision dans le noir 18 m ; Perception passive 10",
+    "languages": "comprend les langues de son vivant, ne parle pas",
+    "traits": [
+      { "name": "Déplacement intangible", "text": "Le spectre peut traverser les créatures et les objets comme s’il s’agissait d’un terrain difficile. Il subit 5 (1d10) dégâts de force s’il termine son tour à l’intérieur d’un objet." },
+      { "name": "Sensibilité à la lumière du soleil", "text": "Désavantage aux jets d’attaque et aux tests de Sagesse (Perception) fondés sur la vue en plein soleil." }
+    ],
+    "actions": [
+      { "name": "Absorption de vie", "text": "Jet d’attaque au corps à corps : +4, allonge 1,50 m. Touché : 10 (3d6) dégâts nécrotiques. Si la cible est une créature, son maximum de points de vie diminue d’un montant égal aux dégâts subis (jusqu’à un repos long)." }
+    ],
+    "summary": {
+      "style": "Fantôme haineux qui surgit des murs et draine la vie.",
+      "intent": "Détruire les vivants qui troublent son repos.",
+      "tactics": "Traverse murs et meubles pour frapper depuis un angle inattendu, puis se retire dans la pierre. Cible celui qui a le moins de PV max.",
+      "flee": "Jamais vraiment : se replie dans les murs et revient.",
+      "weakness": "Armes magiques, dégâts radiants, Renvoi des morts-vivants. Ses résistances ne couvrent pas les armes magiques."
+    }
+  },
+  {
+    "id": "flying-sword",
+    "name": "Épée volante (ou objet animé)",
+    "nameEn": "Animated Flying Sword",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier",
+    "size": "P", "type": "Créature artificielle", "alignment": "Non aligné",
+    "cr": "1/4", "xp": 50, "pb": 2,
+    "ac": 17, "acNote": "armure naturelle", "hp": 14, "hpFormula": "4d6", "speed": "1,50 m, vol 15 m (vol stationnaire)",
+    "abilities": { "str": 12, "dex": 15, "con": 11, "int": 1, "wis": 5, "cha": 1 },
+    "saves": "Dex +4",
+    "immunities": "poison, psychique ; assourdi, aveuglé, charmé, empoisonné, épuisement, paralysé, pétrifié, terrorisé",
+    "senses": "vision aveugle 18 m (aveugle au-delà) ; Perception passive 7",
+    "traits": [
+      { "name": "Apparence trompeuse", "text": "Immobile, l’objet est indiscernable d’un objet ordinaire." }
+    ],
+    "actions": [
+      { "name": "Frappe", "text": "Jet d’attaque au corps à corps : +3, allonge 1,50 m. Touché : 5 (1d8 + 1) dégâts tranchants (contondants pour une casserole ou une poêle)." }
+    ],
+    "summary": {
+      "style": "Objet qui fond sur sa cible et frappe sans relâche.",
+      "intent": "Obéir à celui qui l’anime.",
+      "tactics": "Harcèle la cible désignée ; difficile à toucher (CA 17) mais fragile (14 PV).",
+      "flee": "Jamais ; tombe inerte si son maître est détruit."
+    }
+  },
+  {
+    "id": "mage",
+    "name": "Mage",
+    "nameEn": "Mage",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier (sorts notamment)",
+    "size": "M", "type": "Humanoïde", "alignment": "Neutre",
+    "cr": "6", "xp": 2300, "pb": 3,
+    "ac": 15, "acNote": "armure du mage", "hp": 81, "hpFormula": "18d8", "speed": "9 m",
+    "abilities": { "str": 9, "dex": 14, "con": 11, "int": 17, "wis": 12, "cha": 11 },
+    "saves": "Int +6, Sag +4",
+    "skills": "Arcanes +6, Histoire +6, Perception +4",
+    "senses": "Perception passive 14",
+    "languages": "commun + trois langues",
+    "actions": [
+      { "name": "Attaques multiples", "text": "Le mage effectue trois attaques de Décharge arcanique." },
+      { "name": "Décharge arcanique", "text": "Jet d’attaque au corps à corps ou à distance : +6, allonge 1,50 m ou portée 36 m. Touché : 16 (3d8 + 3) dégâts de force." },
+      { "name": "Incantation", "text": "Le mage lance un des sorts suivants (Intelligence, DD 14, +6 pour toucher). À volonté : armure du mage (incluse dans la CA), détection de la magie, lumière, main du mage, prestidigitation. 2/jour chacun : boule de feu (niveau 4), invisibilité, vol. 1/jour : cône de froid." }
+    ],
+    "bonusActions": [
+      { "name": "Pas brumeux (3/jour)", "text": "Le mage lance pas brumeux." }
+    ],
+    "reactions": [
+      { "name": "Magie protectrice (3/jour)", "text": "Le mage lance bouclier en réponse à une attaque qui le prend pour cible." }
+    ],
+    "summary": {
+      "style": "Artilleur arcanique : trois décharges de force par tour, boule de feu si le groupe est massé.",
+      "intent": "Variable selon le PNJ (Kalabash : ivre et fou, attaque tout ce qu’il voit).",
+      "tactics": "Ouvre par boule de feu sur le groupe, puis Décharges arcaniques ×3 sur la cible la plus blessée. Pas brumeux pour rompre le contact, bouclier contre la première grosse attaque.",
+      "flee": "Invisibilité puis vol s’il est sous 25 PV.",
+      "weakness": "Concentration : le forcer à sauvegarder. Empoisonné (Kalabash) = désavantage à ses attaques."
+    }
+  },
+  {
+    "id": "flameskull",
+    "name": "Crânefeu",
+    "nameEn": "Flameskull",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier (sorts notamment)",
+    "size": "TP", "type": "Mort-vivant", "alignment": "Neutre mauvais",
+    "cr": "4", "xp": 1100, "pb": 2,
+    "ac": 13, "hp": 40, "hpFormula": "9d8", "speed": "0 m, vol 12 m (vol stationnaire)",
+    "abilities": { "str": 1, "dex": 17, "con": 14, "int": 16, "wis": 10, "cha": 11 },
+    "skills": "Arcanes +5, Perception +2",
+    "resistances": "foudre, nécrotique, perforant",
+    "immunities": "feu, froid, poison ; à terre, charmé, empoisonné, paralysé, terrorisé",
+    "senses": "vision dans le noir 18 m ; Perception passive 12",
+    "languages": "commun",
+    "traits": [
+      { "name": "Illumination", "text": "Lumière vive dans un rayon de 4,50 m, faible sur 4,50 m de plus." },
+      { "name": "Résistance à la magie", "text": "Avantage aux jets de sauvegarde contre les sorts et effets magiques." },
+      { "name": "Reconstitution", "text": "Détruit, le crâne récupère tous ses points de vie 1 heure plus tard, sauf si on l’asperge d’eau bénite ou si on lance dissipation de la magie ou délivrance des malédictions sur ses restes." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "Le crânefeu effectue deux attaques de Rayon de feu." },
+      { "name": "Rayon de feu", "text": "Jet d’attaque à distance : +5, portée 18 m. Touché : 10 (3d6) dégâts de feu." },
+      { "name": "Incantation", "text": "Le crânefeu lance un des sorts suivants (Intelligence, DD 13). À volonté : main du mage ; 1/jour chacun : boule de feu, flou, projectile magique, sphère de feu." }
+    ],
+    "reactions": [
+      { "name": "Bouclier (1/jour)", "text": "Le crânefeu lance bouclier en réponse à une attaque." }
+    ],
+    "summary": {
+      "style": "Tourelle volante et ricanante : deux rayons par tour, hors de portée des lames.",
+      "intent": "Garder le lieu qui lui est confié, éternellement.",
+      "tactics": "Reste au plafond, tire deux rayons sur la même cible, garde boule de feu pour un groupe massé. Bouclier contre la première attaque qui le toucherait.",
+      "flee": "Non : il sait qu’il se reconstitue.",
+      "weakness": "40 PV seulement. Détruit-le puis **asperge d’eau bénite** ou dissipe la magie, sinon il revient dans 1 h."
+    }
+  },
+  {
+    "id": "flesh-golem",
+    "name": "Golem de chair",
+    "nameEn": "Flesh Golem",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier",
+    "size": "M", "type": "Créature artificielle", "alignment": "Neutre",
+    "cr": "5", "xp": 1800, "pb": 3,
+    "ac": 9, "hp": 127, "hpFormula": "15d8 + 60", "speed": "9 m",
+    "abilities": { "str": 19, "dex": 9, "con": 18, "int": 6, "wis": 10, "cha": 5 },
+    "immunities": "foudre, poison, psychique ; charmé, empoisonné, épuisement, paralysé, pétrifié, terrorisé",
+    "senses": "vision dans le noir 18 m ; Perception passive 10",
+    "languages": "comprend les langues de son créateur, ne parle pas",
+    "traits": [
+      { "name": "Aversion pour le feu", "text": "S’il subit des dégâts de feu, le golem est désavantagé aux jets d’attaque et aux tests de caractéristique jusqu’à la fin de son prochain tour." },
+      { "name": "Fou furieux", "text": "Quand il commence son tour avec 40 PV ou moins, lancez 1d6 : sur un 6, le golem devient fou furieux et attaque la créature la plus proche à chaque tour (ou un objet s’il n’y a personne). Son créateur peut tenter de le calmer par une action (Charisme (Persuasion) DD 15)." },
+      { "name": "Forme immuable", "text": "Immunisé contre tout sort ou effet qui altérerait sa forme." },
+      { "name": "Absorption de la foudre", "text": "Quand il devrait subir des dégâts de foudre, le golem ne subit aucun dégât et récupère à la place autant de points de vie." },
+      { "name": "Résistance à la magie", "text": "Avantage aux jets de sauvegarde contre les sorts et effets magiques." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "Le golem effectue deux attaques de Coup." },
+      { "name": "Coup", "text": "Jet d’attaque au corps à corps : +7, allonge 1,50 m. Touché : 13 (2d8 + 4) dégâts contondants." }
+    ],
+    "summary": {
+      "style": "Masse de muscles increvable qui frappe deux fois par tour.",
+      "intent": "Obéir aux ordres reçus (ici : tuer les intrus, ne jamais quitter la salle).",
+      "tactics": "Avance sur la cible la plus proche et cogne. **Se soigne avec la foudre** : ne jamais lui lancer éclair. Sous 40 PV, il peut devenir fou furieux et frapper n’importe qui, y compris ses alliés.",
+      "flee": "Jamais.",
+      "weakness": "CA 9 : il se touche facilement. Le **feu** le désavantage. Il ne sort pas de sa salle : on peut le harceler depuis le seuil."
+    }
+  },
+  {
+    "id": "ghast",
+    "name": "Blême",
+    "nameEn": "Ghast",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier",
+    "size": "M", "type": "Mort-vivant", "alignment": "Chaotique mauvais",
+    "cr": "2", "xp": 450, "pb": 2,
+    "ac": 13, "hp": 36, "hpFormula": "8d8", "speed": "9 m",
+    "abilities": { "str": 16, "dex": 17, "con": 10, "int": 11, "wis": 10, "cha": 8 },
+    "resistances": "nécrotique",
+    "immunities": "poison ; charmé, empoisonné, épuisement",
+    "senses": "vision dans le noir 18 m ; Perception passive 10",
+    "languages": "commun",
+    "traits": [
+      { "name": "Puanteur", "text": "Toute créature qui commence son tour à 1,50 m du blême doit réussir un jet de sauvegarde de Constitution DD 10 ou être empoisonnée jusqu’au début de son prochain tour. En cas de réussite, elle est immunisée contre la puanteur de ce blême pendant 24 h." },
+      { "name": "Défi au renvoi", "text": "Le blême et les goules à 9 m de lui ont l’avantage aux jets de sauvegarde contre les effets qui renvoient les morts-vivants." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "Le blême effectue une attaque de Morsure et une attaque de Griffe." },
+      { "name": "Morsure", "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 12 (2d8 + 3) dégâts perforants." },
+      { "name": "Griffe", "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 10 (2d6 + 3) dégâts tranchants. Si la cible est une créature autre qu’un mort-vivant, elle doit réussir un jet de sauvegarde de Constitution DD 10 ou être paralysée jusqu’à la fin de son prochain tour." }
+    ],
+    "summary": {
+      "style": "Goule améliorée : plus rapide, plus dure, et elle pue.",
+      "intent": "Dévorer. Protéger le garde-manger.",
+      "tactics": "Embuscade derrière une porte. Griffe d’abord pour paralyser (même les elfes, contrairement à la goule), puis morsure sur la cible paralysée. Les trois blêmes se concentrent sur un seul PJ.",
+      "flee": "Se replient sous 10 PV pour revenir plus tard.",
+      "weakness": "Radiant, Renvoi des morts-vivants (mais avantage au jet). Puanteur évitable en restant à plus de 1,50 m : privilégier la distance."
+    }
+  },
+  {
+    "id": "tough",
+    "name": "Malfrat",
+    "nameEn": "Tough (ex-Thug)",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier",
+    "size": "M", "type": "Humanoïde", "alignment": "Neutre",
+    "cr": "1/2", "xp": 100, "pb": 2,
+    "ac": 12, "acNote": "armure de cuir", "hp": 32, "hpFormula": "5d8 + 10", "speed": "9 m",
+    "abilities": { "str": 15, "dex": 11, "con": 14, "int": 10, "wis": 10, "cha": 11 },
+    "skills": "Intimidation +2",
+    "senses": "Perception passive 10",
+    "languages": "commun",
+    "traits": [
+      { "name": "Tactique de groupe", "text": "Avantage aux jets d’attaque contre une créature si au moins un allié du malfrat est à 1,50 m d’elle et n’est pas neutralisé." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "Le malfrat effectue deux attaques de Masse d’armes." },
+      { "name": "Masse d’armes", "text": "Jet d’attaque au corps à corps : +4, allonge 1,50 m. Touché : 5 (1d6 + 2) dégâts contondants." },
+      { "name": "Arbalète lourde", "text": "Jet d’attaque à distance : +2, portée 30/120 m. Touché : 6 (1d10 + 1) dégâts perforants." }
+    ],
+    "summary": {
+      "style": "Gros bras de gang : encercle et cogne en groupe.",
+      "intent": "Obéir au chef, capturer plutôt que tuer si le chef l’ordonne.",
+      "tactics": "Se mettent à deux sur une cible pour la Tactique de groupe, deux coups de masse chacun. Tirent à l’arbalète seulement si on les tient à distance.",
+      "flee": "Se rendent si le chef tombe ou s’ils sont moins de deux."
+    }
+  },
+  {
+    "id": "intellect-devourer",
+    "name": "Dévoreur d’intellect",
+    "nameEn": "Intellect Devourer",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier",
+    "size": "TP", "type": "Aberration", "alignment": "Loyal mauvais",
+    "cr": "2", "xp": 450, "pb": 2,
+    "ac": 12, "hp": 21, "hpFormula": "6d6", "speed": "12 m",
+    "abilities": { "str": 6, "dex": 14, "con": 13, "int": 12, "wis": 11, "cha": 10 },
+    "skills": "Perception +2, Discrétion +4",
+    "immunities": "aveuglé",
+    "senses": "vision aveugle 18 m (aveugle au-delà) ; Perception passive 12",
+    "languages": "comprend le profond, télépathie 18 m",
+    "traits": [
+      { "name": "Détection des consciences", "text": "Le dévoreur perçoit la présence et la position de toute créature d’Intelligence 3 ou plus à 90 m, quelle que soit la barrière, sauf si elle est protégée par un sort d’esprit impénétrable." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "Le dévoreur effectue une attaque de Griffes et utilise Dévorer l’intellect." },
+      { "name": "Griffes", "text": "Jet d’attaque au corps à corps : +4, allonge 1,50 m. Touché : 7 (2d4 + 2) dégâts tranchants." },
+      { "name": "Dévorer l’intellect", "text": "Jet de sauvegarde d’Intelligence DD 12, une créature à 3 m dotée d’un cerveau. Échec : 11 (2d10) dégâts psychiques et son Intelligence est réduite de 1d4 (elle est étourdie si elle tombe à 0, jusqu’à ce qu’elle récupère au moins 1 point)." },
+      { "name": "Voleur de corps", "text": "Le dévoreur entre dans l’espace d’un humanoïde neutralisé à 1,50 m et tente un test d’Intelligence opposé. S’il gagne, il consume le cerveau, prend le contrôle du corps (il connaît ses souvenirs et ses aptitudes) et se protège de toute détection. Le corps meurt si le dévoreur le quitte ou est tué." }
+    ],
+    "summary": {
+      "style": "Cerveau sur pattes tapi dans le crâne d’un hôte.",
+      "intent": "Repérer les intrus par télépathie, puis voler un nouveau corps si le sien meurt.",
+      "tactics": "Caché dans un malfrat : agit comme lui jusqu’à ce que l’hôte meure, puis surgit et vise le PJ neutralisé le plus proche (Voleur de corps). Dévorer l’intellect sur le lanceur de sorts.",
+      "flee": "Cherche un nouvel hôte plutôt que de fuir.",
+      "weakness": "21 PV. Une créature sous *esprit impénétrable* ou avec une haute Intelligence lui résiste."
+    }
+  },
+  {
+    "id": "drow-elite-warrior",
+    "name": "Guerrier d’élite drow",
+    "nameEn": "Drow Elite Warrior",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier",
+    "size": "M", "type": "Humanoïde (elfe)", "alignment": "Neutre mauvais",
+    "cr": "5", "xp": 1800, "pb": 3,
+    "ac": 18, "acNote": "cuir clouté, bouclier", "hp": 71, "hpFormula": "11d8 + 22", "speed": "9 m",
+    "abilities": { "str": 13, "dex": 18, "con": 14, "int": 11, "wis": 13, "cha": 12 },
+    "saves": "Dex +7, Con +5, Sag +4",
+    "skills": "Perception +4, Discrétion +10",
+    "senses": "vision dans le noir 36 m ; Perception passive 14",
+    "languages": "elfique, commun des profondeurs",
+    "traits": [
+      { "name": "Ascendance féerique", "text": "Avantage aux jets de sauvegarde contre l’état charmé ; la magie ne peut pas l’endormir." },
+      { "name": "Sensibilité à la lumière du soleil", "text": "Désavantage aux jets d’attaque et aux tests de Perception fondés sur la vue en plein soleil." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "Le drow effectue deux attaques d’Épée courte. Il peut remplacer une attaque par un lancer de lumières féeriques ou de ténèbres." },
+      { "name": "Épée courte", "text": "Jet d’attaque au corps à corps : +7, allonge 1,50 m. Touché : 7 (1d6 + 4) dégâts perforants plus 10 (3d6) dégâts de poison." },
+      { "name": "Arbalète de poing", "text": "Jet d’attaque à distance : +7, portée 9/36 m. Touché : 7 (1d6 + 4) dégâts perforants, et la cible doit réussir un jet de sauvegarde de Constitution DD 13 ou être empoisonnée 1 heure (inconsciente si elle rate de 5 ou plus)." },
+      { "name": "Incantation", "text": "Sagesse, DD 12. À volonté : lumières dansantes. 1/jour chacun : lumières féeriques, ténèbres." }
+    ],
+    "reactions": [
+      { "name": "Parade", "text": "Le drow ajoute 3 à sa CA contre une attaque au corps à corps qui le toucherait, s’il voit l’attaquant et tient une arme de corps à corps." }
+    ],
+    "summary": {
+      "style": "Duelliste empoisonné, gracieux et discret.",
+      "intent": "Impressionner, commander, capturer des trophées vivants pour Skullport.",
+      "tactics": "Lumières féeriques sur le groupe puis deux coups d’épée empoisonnés sur la cible avantagée. Carreau empoisonné pour endormir un PJ isolé. Parade contre le gros frappeur.",
+      "flee": "Ténèbres puis retraite vers ses gobelours s’il tombe sous 25 PV.",
+      "weakness": "Lumière du soleil (rare ici). Immunité au poison = la moitié de ses dégâts en moins."
+    }
+  },
+  {
+    "id": "gelatinous-cube",
+    "name": "Cube gélatineux",
+    "nameEn": "Gelatinous Cube",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier",
+    "size": "G", "type": "Vase", "alignment": "Non aligné",
+    "cr": "2", "xp": 450, "pb": 2,
+    "ac": 6, "hp": 63, "hpFormula": "6d10 + 30", "speed": "4,50 m",
+    "abilities": { "str": 14, "dex": 3, "con": 20, "int": 1, "wis": 6, "cha": 1 },
+    "immunities": "acide ; à terre, assourdi, aveuglé, charmé, épuisement, terrorisé",
+    "senses": "vision aveugle 18 m (aveugle au-delà) ; Perception passive 8",
+    "traits": [
+      { "name": "Cube de vase", "text": "Le cube occupe tout son espace. D’autres créatures peuvent y entrer, mais y sont alors engouffrées (voir Engouffrer). Une créature à 1,50 m du cube peut utiliser une action pour tirer une créature ou un objet hors du cube (test de Force DD 12 ; elle subit 10 (3d6) dégâts d’acide)." },
+      { "name": "Transparent", "text": "Même en pleine lumière, il faut réussir un test de Sagesse (Perception) DD 15 pour repérer un cube immobile. Une créature qui entre sans le voir est surprise par le cube." }
+    ],
+    "actions": [
+      { "name": "Pseudopode", "text": "Jet d’attaque au corps à corps : +4, allonge 1,50 m. Touché : 12 (3d6 + 2) dégâts d’acide." },
+      { "name": "Engouffrer", "text": "Le cube se déplace jusqu’à sa vitesse et peut entrer dans l’espace de créatures de taille G ou inférieure. Chacune doit réussir un jet de sauvegarde de Dextérité DD 12 : réussite, elle est repoussée de 1,50 m ; échec, elle subit 10 (3d6) dégâts d’acide et est engouffrée (entravée, ne peut pas respirer, subit 21 (6d6) dégâts d’acide au début de chaque tour du cube). Une créature engouffrée peut utiliser une action pour tenter un test de Force DD 12 et s’extraire à 1,50 m du cube." }
+    ],
+    "summary": {
+      "style": "Mur invisible et lent qui digère tout ce qui entre.",
+      "intent": "Nettoyer la salle. Ici, agrandi par un crâne duergar (voir notes de la salle).",
+      "tactics": "Attend qu’on entre dedans. Sinon avance (4,50 m) et Engouffre autant de PJ que possible. Le crâne en suspension est l’appât.",
+      "flee": "Jamais.",
+      "weakness": "Lent : on le fuit à pied. Attaques à distance depuis le seuil. Retirer le crâne le fait rétrécir."
+    }
+  },
+  {
+    "id": "ochre-jelly",
+    "name": "Gelée ocre",
+    "nameEn": "Ochre Jelly",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier",
+    "size": "G", "type": "Vase", "alignment": "Non aligné",
+    "cr": "2", "xp": 450, "pb": 2,
+    "ac": 8, "hp": 52, "hpFormula": "7d10 + 14", "speed": "6 m, escalade 6 m",
+    "abilities": { "str": 15, "dex": 6, "con": 14, "int": 2, "wis": 6, "cha": 1 },
+    "resistances": "acide",
+    "immunities": "foudre, tranchant ; à terre, agrippé, assourdi, aveuglé, charmé, entravé, épuisement, terrorisé",
+    "senses": "vision aveugle 18 m (aveugle au-delà) ; Perception passive 8",
+    "traits": [
+      { "name": "Amorphe", "text": "La gelée peut se faufiler par un espace de 2,5 cm sans se comprimer." },
+      { "name": "Pattes d’araignée", "text": "Escalade les surfaces difficiles, y compris les plafonds, sans test." }
+    ],
+    "actions": [
+      { "name": "Pseudopode", "text": "Jet d’attaque au corps à corps : +4, allonge 1,50 m. Touché : 9 (2d6 + 2) dégâts contondants plus 3 (1d6) dégâts d’acide." }
+    ],
+    "reactions": [
+      { "name": "Scission", "text": "Quand la gelée de taille M ou plus subit des dégâts de foudre ou tranchants alors qu’elle a au moins 10 PV, elle se scinde en deux gelées d’une taille inférieure, chacune avec la moitié de ses PV (arrondi à l’inférieur)." }
+    ],
+    "summary": {
+      "style": "Flaque acide qui se divise quand on la tranche.",
+      "intent": "Dévorer la chair offerte (l’autel le promet).",
+      "tactics": "Coule sur la cible la plus proche. Grimpe au plafond pour tomber sur un PJ.",
+      "flee": "Jamais.",
+      "weakness": "**Ne pas utiliser d’armes tranchantes ni de foudre** (elle se scinde). Contondant, feu, froid, radiant."
+    }
+  },
+  {
+    "id": "priest",
+    "name": "Prêtre",
+    "nameEn": "Priest",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier (sorts notamment)",
+    "size": "M", "type": "Humanoïde", "alignment": "Neutre",
+    "cr": "2", "xp": 450, "pb": 2,
+    "ac": 13, "acNote": "chemise de mailles", "hp": 38, "hpFormula": "7d8 + 7", "speed": "9 m",
+    "abilities": { "str": 10, "dex": 10, "con": 12, "int": 13, "wis": 16, "cha": 13 },
+    "skills": "Médecine +7, Persuasion +3, Religion +5",
+    "senses": "Perception passive 13",
+    "languages": "commun + une langue",
+    "actions": [
+      { "name": "Attaques multiples", "text": "Le prêtre effectue deux attaques, avec Masse d’armes ou Flamme radiante dans n’importe quelle combinaison." },
+      { "name": "Masse d’armes", "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 6 (1d6 + 3) dégâts contondants plus 5 (2d4) dégâts radiants." },
+      { "name": "Flamme radiante", "text": "Jet d’attaque à distance : +5, portée 18 m. Touché : 11 (2d10) dégâts radiants." },
+      { "name": "Incantation", "text": "Sagesse, DD 13. À volonté : lumière, thaumaturgie. 1/jour chacun : esprits gardiens, injonction (niveau 2)." }
+    ],
+    "bonusActions": [
+      { "name": "Aide divine (3/jour)", "text": "Le prêtre lance bénédiction, dissipation de la magie, mot de guérison ou restauration partielle." }
+    ],
+    "summary": {
+      "style": "Ecclésiastique de combat : frappe radiante, se soigne, fait tenir ses alliés.",
+      "intent": "Variable selon le PNJ (Midna : être laissée tranquille, survivre à tout prix).",
+      "tactics": "Esprits gardiens dès que le groupe approche, puis Flamme radiante depuis l’arrière. Mot de guérison sur elle-même en action bonus.",
+      "flee": "Négocie dès que ses protections tombent (Midna s’excuse et offre le banquet).",
+      "weakness": "Concentration sur esprits gardiens : la briser désamorce la moitié de sa menace."
+    }
+  },
+  {
+    "id": "living-unseen-servant",
+    "name": "Serviteur invisible vivant",
+    "nameEn": "Living Unseen Servant",
+    "source": "Le Donjon du Mage dément, annexe A — reconstitué de mémoire, à vérifier",
+    "size": "M", "type": "Créature artificielle", "alignment": "Non aligné",
+    "cr": "0", "xp": 10, "pb": 2,
+    "ac": 10, "hp": 9, "hpFormula": "2d8", "speed": "9 m",
+    "abilities": { "str": 10, "dex": 10, "con": 10, "int": 3, "wis": 10, "cha": 1 },
+    "immunities": "poison, psychique ; charmé, empoisonné, épuisement, paralysé, pétrifié, terrorisé",
+    "senses": "vision aveugle 9 m (aveugle au-delà) ; Perception passive 10",
+    "languages": "comprend une langue, ne parle pas",
+    "traits": [
+      { "name": "Invisible", "text": "Le serviteur est invisible en permanence." }
+    ],
+    "actions": [
+      { "name": "Coup", "text": "Jet d’attaque au corps à corps : +2, allonge 1,50 m. Touché : 2 (1d4) dégâts contondants." }
+    ],
+    "summary": {
+      "style": "Nuée de mains invisibles qui giflent et bousculent.",
+      "intent": "Servir celui ou celle qui ressemble à leur créateur.",
+      "tactics": "Neuf serviteurs = neuf attaques à +2 par tour, faibles individuellement. Ils frappent pour assommer (dégâts non létaux) si Midna l’ordonne.",
+      "flee": "S’arrêtent dès que Midna l’ordonne.",
+      "weakness": "9 PV, CA 10 : n’importe quelle attaque de zone les balaie. Invisibles mais audibles."
+    }
+  },
+  {
+    "id": "gibbering-mouther",
+    "name": "Babélien",
+    "nameEn": "Gibbering Mouther",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier",
+    "size": "M", "type": "Aberration", "alignment": "Chaotique neutre",
+    "cr": "2", "xp": 450, "pb": 2,
+    "ac": 9, "hp": 52, "hpFormula": "7d8 + 21", "speed": "6 m, nage 6 m",
+    "abilities": { "str": 10, "dex": 8, "con": 16, "int": 3, "wis": 10, "cha": 6 },
+    "immunities": "à terre",
+    "senses": "vision dans le noir 18 m ; Perception passive 10",
+    "traits": [
+      { "name": "Sol aberrant", "text": "Le sol dans un rayon de 3 m autour du babélien est un terrain difficile." },
+      { "name": "Babil", "text": "Chaque créature qui commence son tour à 6 m du babélien et peut l’entendre doit réussir un jet de sauvegarde de Sagesse DD 10 ou lancer 1d8 pour son action : 1-4 rien ; 5-6 se déplace aléatoirement ; 7-8 attaque au corps à corps une créature aléatoire à portée (sinon rien)." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "Le babélien effectue une attaque de Morsure et, si possible, utilise Crachat aveuglant." },
+      { "name": "Morsure", "text": "Jet d’attaque au corps à corps : +2, allonge 1,50 m. Touché : 7 (2d6) dégâts perforants. Si la cible est de taille M ou inférieure, elle est à terre. Une créature tuée par cette attaque est absorbée dans le babélien." },
+      { "name": "Crachat aveuglant (recharge 5-6)", "text": "Le babélien crache une boule chimique sur un point à 4,50 m. Chaque créature à 1,50 m de ce point doit réussir un jet de sauvegarde de Dextérité DD 10 ou être aveuglée jusqu’à la fin du prochain tour du babélien." }
+    ],
+    "summary": {
+      "style": "Amas de bouches hurlantes qui rend fou et ralentit tout.",
+      "intent": "Aucune : la faim et le chaos.",
+      "tactics": "Son Babil fait perdre des actions à 6 m : les PJ qui le combattent au contact risquent de s’entretuer. Crache pour aveugler puis mord.",
+      "flee": "Jamais ; combat jusqu’à la mort.",
+      "weakness": "CA 9, lent (6 m). **Le tuer à distance** en restant à plus de 6 m, ou se boucher les oreilles (immunité au Babil)."
+    }
+  },
+  {
+    "id": "nothic",
+    "name": "Nothic",
+    "nameEn": "Nothic",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier",
+    "size": "M", "type": "Aberration", "alignment": "Neutre mauvais",
+    "cr": "2", "xp": 450, "pb": 2,
+    "ac": 15, "acNote": "armure naturelle", "hp": 45, "hpFormula": "6d8 + 18", "speed": "9 m",
+    "abilities": { "str": 14, "dex": 16, "con": 16, "int": 13, "wis": 10, "cha": 8 },
+    "skills": "Arcanes +3, Perception +2, Perspicacité +4, Discrétion +5",
+    "senses": "vision lucide 36 m ; Perception passive 12",
+    "languages": "commun des profondeurs",
+    "actions": [
+      { "name": "Attaques multiples", "text": "Le nothic effectue deux attaques de Griffe." },
+      { "name": "Griffe", "text": "Jet d’attaque au corps à corps : +4, allonge 1,50 m. Touché : 6 (1d6 + 3) dégâts tranchants." },
+      { "name": "Regard putréfiant", "text": "Jet de sauvegarde de Constitution DD 12, une créature que le nothic voit à 9 m. Échec : 10 (3d6) dégâts nécrotiques." },
+      { "name": "Perspicacité étrange", "text": "Le nothic cible une créature qu’il voit à 9 m. Elle doit réussir un jet de sauvegarde de Charisme DD 12, sinon le nothic apprend un fait ou un secret la concernant." }
+    ],
+    "summary": {
+      "style": "Ancien magicien devenu bête à un œil : fouineur, lâche, cruel.",
+      "intent": "Découvrir des secrets ; obéir au mezzoloth par peur.",
+      "tactics": "Regard putréfiant à distance tant que possible, griffes si acculé. Ils reculent devant les lanceurs de sorts qui font étalage de magie.",
+      "flee": "S’intimident facilement : un sort visible suffit à les rendre coopératifs.",
+      "roleplay": "Chuchote des vérités gênantes sur les PJ (Perspicacité étrange). Sait des choses sur les rats-garous et « le magicien elfe violet »."
+    }
+  },
+  {
+    "id": "mezzoloth",
+    "name": "Mezzoloth",
+    "nameEn": "Mezzoloth",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier",
+    "size": "M", "type": "Fiélon (yugoloth)", "alignment": "Neutre mauvais",
+    "cr": "5", "xp": 1800, "pb": 3,
+    "ac": 18, "acNote": "armure naturelle", "hp": 75, "hpFormula": "10d8 + 30", "speed": "12 m",
+    "abilities": { "str": 18, "dex": 11, "con": 16, "int": 7, "wis": 10, "cha": 11 },
+    "skills": "Perception +3",
+    "resistances": "feu, foudre, froid",
+    "immunities": "acide, poison ; empoisonné",
+    "senses": "vision aveugle 18 m, vision dans le noir 18 m ; Perception passive 13",
+    "languages": "abyssal, infernal ; télépathie 18 m",
+    "traits": [
+      { "name": "Résistance à la magie", "text": "Avantage aux jets de sauvegarde contre les sorts et effets magiques." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "Le mezzoloth effectue deux attaques de Griffes ou une attaque de Griffes et une de Trident." },
+      { "name": "Griffes", "text": "Jet d’attaque au corps à corps : +7, allonge 1,50 m. Touché : 9 (2d4 + 4) dégâts tranchants." },
+      { "name": "Trident", "text": "Jet d’attaque au corps à corps ou à distance : +7, allonge 1,50 m ou portée 6/18 m. Touché : 7 (1d6 + 4) dégâts perforants, ou 8 (1d8 + 4) à deux mains au corps à corps." },
+      { "name": "Incantation", "text": "Charisme, DD 11. 2/jour chacun : dissipation de la magie, ténèbres. 1/jour : nuage mortel." },
+      { "name": "Téléportation", "text": "Le mezzoloth se téléporte, avec l’équipement qu’il porte, jusqu’à 18 m vers un espace inoccupé qu’il voit." }
+    ],
+    "summary": {
+      "style": "Insecte mercenaire des plans inférieurs : dur, rapide, sans pitié.",
+      "intent": "Empêcher les intrus de piller le donjon (ordre d’Halaster). Commande les nothics par télépathie.",
+      "tactics": "Nuage mortel sur le groupe dès le premier tour (il y est immunisé), puis griffes ×2 sur la cible qui tousse. Ténèbres pour se couvrir, téléportation pour rejoindre un PJ isolé.",
+      "flee": "Se téléporte hors de vue sous 20 PV, revient plus tard avec d’autres nothics.",
+      "weakness": "Radiant, contondant : pas de résistance. Intelligence 7 : se laisse berner par une ruse simple."
+    }
+  },
+  {
+    "id": "champion",
+    "name": "Champion",
+    "nameEn": "Champion",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier",
+    "size": "M", "type": "Humanoïde", "alignment": "Neutre",
+    "cr": "9", "xp": 5000, "pb": 4,
+    "ac": 18, "acNote": "harnois", "hp": 143, "hpFormula": "22d8 + 44", "speed": "9 m",
+    "abilities": { "str": 20, "dex": 15, "con": 14, "int": 10, "wis": 14, "cha": 12 },
+    "saves": "For +9, Con +6",
+    "skills": "Athlétisme +9, Intimidation +5, Perception +6",
+    "senses": "Perception passive 16",
+    "languages": "commun + une langue",
+    "traits": [
+      { "name": "Indomptable (2/jour)", "text": "Le champion relance un jet de sauvegarde raté et doit garder le nouveau résultat." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "Le champion effectue trois attaques, avec Épée à deux mains ou Arc court dans n’importe quelle combinaison." },
+      { "name": "Épée à deux mains", "text": "Jet d’attaque au corps à corps : +9, allonge 1,50 m. Touché : 12 (2d6 + 5) dégâts tranchants plus 3 (1d6) dégâts de force." },
+      { "name": "Arc court", "text": "Jet d’attaque à distance : +6, portée 24/96 m. Touché : 5 (1d6 + 2) dégâts perforants plus 3 (1d6) dégâts de force." }
+    ],
+    "bonusActions": [
+      { "name": "Second souffle (2/jour)", "text": "Le champion récupère 20 points de vie." }
+    ],
+    "summary": {
+      "style": "Vétéran redoutable : trois coups d’épée à deux mains par tour.",
+      "intent": "Variable selon le PNJ (Rex : gloire, butin, dominer le groupe).",
+      "tactics": "Se jette sur le combattant le plus dangereux, trois attaques, Second souffle quand il passe sous la moitié. Indomptable contre les sorts de contrôle.",
+      "flee": "Rex n’a que 22 PV quand on le rencontre : il boit sa potion puis se montre courtois… tant qu’il est faible."
+    }
+  },
+  {
+    "id": "drow-mage",
+    "name": "Mage drow",
+    "nameEn": "Drow Mage",
+    "source": "MM 2014 (absent du MM 2024) — reconstitué de mémoire, à vérifier",
+    "size": "M", "type": "Humanoïde (elfe)", "alignment": "Neutre mauvais",
+    "cr": "7", "xp": 2900, "pb": 3,
+    "ac": 15, "acNote": "armure du mage", "hp": 45, "hpFormula": "10d8", "speed": "9 m",
+    "abilities": { "str": 9, "dex": 14, "con": 10, "int": 17, "wis": 13, "cha": 12 },
+    "skills": "Arcanes +6, Tromperie +5, Perception +4, Discrétion +5",
+    "senses": "vision dans le noir 36 m ; Perception passive 14",
+    "languages": "elfique, commun des profondeurs",
+    "traits": [
+      { "name": "Ascendance féerique", "text": "Avantage aux jets de sauvegarde contre l’état charmé ; la magie ne peut pas l’endormir." },
+      { "name": "Incantation innée", "text": "Charisme, DD 12. À volonté : lumières dansantes. 1/jour chacun : lumières féeriques, lévitation (soi uniquement), ténèbres." },
+      { "name": "Sensibilité à la lumière du soleil", "text": "Désavantage aux jets d’attaque et aux tests de Perception fondés sur la vue en plein soleil." }
+    ],
+    "actions": [
+      { "name": "Bâton", "text": "Jet d’attaque au corps à corps : +2, allonge 1,50 m. Touché : 2 (1d6 − 1) dégâts contondants, ou 3 (1d8 − 1) à deux mains." },
+      { "name": "Incantation", "text": "Intelligence, DD 14, +6 pour toucher. Sorts mineurs : main du mage, illusion mineure, rayon de givre, vaporisation de poison. Niveau 1 (4 empl.) : armure du mage, bouclier, projectile magique, trait ensorcelé. Niveau 2 (3) : modification d’apparence, pas brumeux, toile d’araignée. Niveau 3 (3) : éclair, vol. Niveau 4 (3) : invisibilité supérieure, tentacules noirs d’Evard. Niveau 5 (1) : nuage mortel." },
+      { "name": "Convocation de démon (1/jour)", "text": "Le drow convoque un quasit, qui apparaît dans un espace inoccupé à 18 m, agit comme son allié et reste 10 minutes ou jusqu’à sa mort." }
+    ],
+    "summary": {
+      "style": "Magicien de l’ombre : invisible, puis frappe fort et disparaît.",
+      "intent": "Rizzeryl : chasser la Guilde de Xanathar de la strate pour le Zhentarim (et la maison Auvryndar). Garder la clef de pierre.",
+      "tactics": "Invisibilité supérieure dès qu’on entre. Discute invisible pour jauger les intrus. Si ça tourne mal : quasit + rats-garous en première ligne, toile d’araignée sur le couloir, éclair sur les PJ alignés, nuage mortel s’il est acculé.",
+      "flee": "Pas brumeux puis vol ; propose la clef de pierre contre la vie sauve.",
+      "weakness": "45 PV, CA 15 : un groupe qui le trouve (voir l’invisible, lumières féeriques) le tue vite. Concentration."
+    }
+  },
+  {
+    "id": "quasit",
+    "name": "Quasit",
+    "nameEn": "Quasit",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier",
+    "size": "TP", "type": "Fiélon (démon)", "alignment": "Chaotique mauvais",
+    "cr": "1", "xp": 200, "pb": 2,
+    "ac": 13, "hp": 25, "hpFormula": "10d4", "speed": "12 m",
+    "abilities": { "str": 5, "dex": 17, "con": 10, "int": 7, "wis": 10, "cha": 10 },
+    "skills": "Discrétion +5",
+    "resistances": "feu, foudre, froid",
+    "immunities": "poison ; empoisonné",
+    "senses": "vision dans le noir 36 m ; Perception passive 10",
+    "languages": "abyssal, commun",
+    "traits": [
+      { "name": "Résistance à la magie", "text": "Avantage aux jets de sauvegarde contre les sorts et effets magiques." },
+      { "name": "Métamorphe", "text": "Par une action bonus, prend la forme d’une chauve-souris, d’un mille-pattes ou d’un crapaud (mêmes stats, vitesse adaptée) ou reprend sa vraie forme." }
+    ],
+    "actions": [
+      { "name": "Griffes", "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 5 (1d4 + 3) dégâts perforants, et la cible doit réussir un jet de sauvegarde de Constitution DD 10 ou subir 5 (2d4) dégâts de poison et être empoisonnée 1 minute (nouveau jet à la fin de chacun de ses tours)." },
+      { "name": "Effroi (1/jour)", "text": "Une créature à 6 m doit réussir un jet de sauvegarde de Sagesse DD 10 ou être terrorisée 1 minute (nouveau jet à la fin de chacun de ses tours, avec désavantage si le quasit est en vue)." },
+      { "name": "Invisibilité", "text": "Le quasit devient invisible jusqu’à ce qu’il attaque ou perde sa concentration." }
+    ],
+    "summary": {
+      "style": "Nuisible invisible qui griffe, empoisonne et terrorise.",
+      "intent": "Servir son invocateur, semer la pagaille.",
+      "tactics": "Effroi sur le guerrier, puis griffes empoisonnées sur le lanceur de sorts, en restant invisible entre deux attaques.",
+      "flee": "Invisible et hors de vue sous 10 PV."
+    }
+  },
+  {
+    "id": "wererat",
+    "name": "Rat-garou",
+    "nameEn": "Wererat",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier",
+    "size": "M", "type": "Monstruosité (lycanthrope)", "alignment": "Loyal mauvais",
+    "cr": "2", "xp": 450, "pb": 2,
+    "ac": 13, "hp": 60, "hpFormula": "11d8 + 11", "speed": "9 m (escalade 9 m sous forme de rat ou hybride)",
+    "abilities": { "str": 10, "dex": 15, "con": 12, "int": 11, "wis": 10, "cha": 8 },
+    "skills": "Perception +2, Discrétion +4",
+    "senses": "vision dans le noir 18 m (formes de rat et hybride) ; Perception passive 12",
+    "languages": "commun (ne parle pas sous forme de rat)",
+    "traits": [
+      { "name": "Métamorphe", "text": "Par une action bonus, le rat-garou prend une forme hybride rat-humanoïde, une forme de rat de taille P, ou reprend sa forme humanoïde. Ses stats sont identiques hors taille. Il reprend sa forme d’origine à la mort." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples (formes humanoïde ou hybride)", "text": "Le rat-garou effectue deux attaques, une seule pouvant être une Morsure." },
+      { "name": "Morsure (formes de rat ou hybride)", "text": "Jet d’attaque au corps à corps : +4, allonge 1,50 m. Touché : 8 (2d6 + 1) dégâts perforants. Si la cible est un humanoïde, elle doit réussir un jet de sauvegarde de Constitution DD 11 ou être maudite par la lycanthropie du rat-garou." },
+      { "name": "Épée courte (formes humanoïde ou hybride)", "text": "Jet d’attaque au corps à corps : +4, allonge 1,50 m. Touché : 5 (1d6 + 2) dégâts perforants." },
+      { "name": "Arbalète de poing (formes humanoïde ou hybride)", "text": "Jet d’attaque à distance : +4, portée 9/36 m. Touché : 5 (1d6 + 2) dégâts perforants." }
+    ],
+    "summary": {
+      "style": "Bande sournoise : embuscade, morsures, puis dispersion dans les fissures.",
+      "intent": "Chasser la Guilde de Xanathar pour le Zhentarim ; protéger Rizzeryl.",
+      "tactics": "Restent cachés jusqu’à l’appel du drow. Forme hybride, deux attaques, morsure sur la cible isolée (menace de lycanthropie !). Forme de rat pour fuir par les interstices.",
+      "flee": "Se dispersent sous forme de rat si Rizzeryl tombe ou fuit.",
+      "weakness": "Selon les règles 2024, plus d’immunité aux armes non magiques : les armes ordinaires les blessent."
+    }
+  },
+  {
+    "id": "rust-monster",
+    "name": "Oxydeur",
+    "nameEn": "Rust Monster",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier",
+    "size": "M", "type": "Monstruosité", "alignment": "Non aligné",
+    "cr": "1/2", "xp": 100, "pb": 2,
+    "ac": 14, "acNote": "armure naturelle", "hp": 33, "hpFormula": "6d8 + 6", "speed": "12 m",
+    "abilities": { "str": 13, "dex": 12, "con": 13, "int": 2, "wis": 13, "cha": 6 },
+    "senses": "vision dans le noir 18 m ; Perception passive 11",
+    "traits": [
+      { "name": "Odorat du fer", "text": "L’oxydeur localise le métal ferreux à 9 m." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "L’oxydeur effectue une attaque de Morsure et utilise deux fois Antennes." },
+      { "name": "Morsure", "text": "Jet d’attaque au corps à corps : +3, allonge 1,50 m. Touché : 5 (1d8 + 1) dégâts perforants." },
+      { "name": "Antennes", "text": "L’oxydeur cible un objet métallique non magique (armure ou arme) porté par une créature à 1,50 m. La créature doit réussir un jet de sauvegarde de Dextérité DD 11, sinon l’objet est corrodé : une armure ou un bouclier perd 1 à son bonus de CA (détruit à 0), une arme inflige un malus cumulatif de −1 aux dégâts (détruite à −5)." }
+    ],
+    "reactions": [
+      { "name": "Corrosion", "text": "Quand l’oxydeur est touché par une arme métallique non magique, cette arme subit l’effet d’Antennes (jet de sauvegarde de Dextérité DD 11 pour l’attaquant)." }
+    ],
+    "summary": {
+      "style": "Inoffensif pour la chair, dévastateur pour l’équipement.",
+      "intent": "Manger du fer. Rien d’autre.",
+      "tactics": "Fonce sur le PJ le plus **métallique** (harnois, bouclier). Deux coups d’antennes par tour = une armure ruinée en trois tours.",
+      "flee": "Se détourne pour n’importe quel morceau de fer jeté au sol (une applique de torche l’occupe 1d6 minutes).",
+      "weakness": "Armes en bois, en pierre, en argent, magiques, ou sorts. Ou simplement le nourrir."
+    }
+  },
+  {
+    "id": "giant-spider",
+    "name": "Araignée géante",
+    "nameEn": "Giant Spider",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier",
+    "size": "G", "type": "Bête", "alignment": "Non aligné",
+    "cr": "1", "xp": 200, "pb": 2,
+    "ac": 14, "acNote": "armure naturelle", "hp": 26, "hpFormula": "4d10 + 4", "speed": "9 m, escalade 9 m",
+    "abilities": { "str": 14, "dex": 16, "con": 12, "int": 2, "wis": 11, "cha": 4 },
+    "skills": "Perception +4, Discrétion +7",
+    "senses": "vision aveugle 3 m, vision dans le noir 18 m ; Perception passive 14",
+    "traits": [
+      { "name": "Pattes d’araignée", "text": "Escalade les surfaces difficiles, plafonds compris, sans test." },
+      { "name": "Marche sur les toiles", "text": "Ignore les entraves des toiles d’araignée." }
+    ],
+    "actions": [
+      { "name": "Morsure", "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 7 (1d8 + 3) dégâts perforants plus 7 (2d6) dégâts de poison. Si les dégâts de poison réduisent la cible à 0 PV, elle est stable mais empoisonnée 1 heure, et paralysée tant qu’elle est empoisonnée." },
+      { "name": "Toile (recharge 5-6)", "text": "Jet d’attaque à distance : +5, portée 9/18 m. Touché : la cible est entravée par la toile (DD 12 pour s’échapper ; la toile a CA 10, 5 PV, vulnérabilité au feu, immunité aux dégâts contondants, de poison et psychiques)." }
+    ],
+    "summary": {
+      "style": "Chasseuse silencieuse au plafond : toile, puis morsure.",
+      "intent": "Protéger le nid et le garde-manger.",
+      "tactics": "Cinq araignées : deux tissent (Toile) pour entraver, trois mordent les PJ entravés (avantage). Attaquent depuis le plafond et les toiles collantes.",
+      "flee": "Se replient dans les toiles sous 8 PV.",
+      "weakness": "Le **feu** brûle les toiles (et les alerte). Attaques de zone."
+    }
+  },
+  {
+    "id": "swarm-of-spiders",
+    "name": "Nuée d’araignées (insectes)",
+    "nameEn": "Swarm of Insects (spiders)",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier",
+    "size": "M", "type": "Nuée de Bêtes de taille TP", "alignment": "Non aligné",
+    "cr": "1/2", "xp": 100, "pb": 2,
+    "ac": 12, "hp": 19, "hpFormula": "3d8 + 6", "speed": "6 m, escalade 6 m",
+    "abilities": { "str": 3, "dex": 13, "con": 14, "int": 1, "wis": 7, "cha": 1 },
+    "resistances": "contondant, perforant, tranchant",
+    "immunities": "à terre, agrippé, charmé, entravé, étourdi, paralysé, pétrifié, terrorisé",
+    "senses": "vision aveugle 3 m ; Perception passive 8",
+    "traits": [
+      { "name": "Nuée", "text": "La nuée peut occuper l’espace d’une autre créature et passer par tout espace assez large pour une araignée. Elle ne peut pas récupérer de PV ni gagner de PV temporaires." },
+      { "name": "Pattes d’araignée", "text": "Escalade les surfaces difficiles, plafonds compris, sans test." }
+    ],
+    "actions": [
+      { "name": "Morsures", "text": "Jet d’attaque au corps à corps : +3, allonge 1,50 m. Touché : 6 (2d4 + 1) dégâts de poison (ou 3 (1d4 + 1) si la nuée a la moitié de ses PV ou moins)." }
+    ],
+    "summary": {
+      "style": "Tapis grouillant qui jaillit d’un cocon.",
+      "intent": "Mordre tout ce qui bouge.",
+      "tactics": "Couvre le PJ qui a éventré le cocon et reste sur lui.",
+      "weakness": "Attaques de zone, feu. Résiste aux armes."
+    }
+  },
+  {
+    "id": "beholder-zombie",
+    "name": "Zombi tyrannœil",
+    "nameEn": "Beholder Zombie",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier",
+    "size": "G", "type": "Mort-vivant", "alignment": "Neutre mauvais",
+    "cr": "5", "xp": 1800, "pb": 3,
+    "ac": 15, "acNote": "armure naturelle", "hp": 93, "hpFormula": "11d10 + 33", "speed": "0 m, vol 6 m (vol stationnaire)",
+    "abilities": { "str": 10, "dex": 8, "con": 16, "int": 3, "wis": 8, "cha": 5 },
+    "saves": "Sag +2",
+    "immunities": "poison ; à terre, charmé, empoisonné, épuisement",
+    "senses": "vision dans le noir 18 m ; Perception passive 9",
+    "languages": "comprend le profond et le commun des profondeurs, ne parle pas",
+    "traits": [
+      { "name": "Robustesse morte-vivante", "text": "Si des dégâts le réduisent à 0 PV, le zombi fait un jet de sauvegarde de Constitution (DD 5 + dégâts subis), sauf dégâts radiants ou coup critique. Réussite : il tombe à 1 PV." }
+    ],
+    "actions": [
+      { "name": "Morsure", "text": "Jet d’attaque au corps à corps : +6, allonge 1,50 m. Touché : 14 (4d6) dégâts perforants." },
+      { "name": "Rayon oculaire", "text": "Le zombi tire un rayon aléatoire (1d4) sur une créature qu’il voit à 36 m. 1 — Rayon paralysant : Constitution DD 14 ou paralysé 1 minute (nouveau jet à la fin de chaque tour). 2 — Rayon de terreur : Sagesse DD 14 ou terrorisé 1 minute. 3 — Rayon affaiblissant : Constitution DD 14, 36 (8d8) dégâts nécrotiques, moitié en cas de réussite. 4 — Rayon de désintégration : Dextérité DD 14, 45 (10d8) dégâts de force ; une créature réduite à 0 PV est désintégrée." }
+    ],
+    "summary": {
+      "style": "Sentinelle flottante et stupide qui tire un rayon au hasard.",
+      "intent": "Attaquer quiconque ne porte pas le symbole de Xanathar (20a) ou le dérange (22c).",
+      "tactics": "Reste au plafond (6 m) hors de portée des lames, un rayon par tour sur une cible aléatoire. Mord seulement ce qui vole jusqu’à lui.",
+      "flee": "Jamais.",
+      "weakness": "Intelligence 3 : le **symbole de Xanathar** (baguette de Rizzeryl, peinture) le calme. Attaques à distance ; radiant annule sa Robustesse."
+    }
+  },
+  {
+    "id": "berserker",
+    "name": "Berserker",
+    "nameEn": "Berserker",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier",
+    "size": "M", "type": "Humanoïde", "alignment": "Neutre",
+    "cr": "2", "xp": 450, "pb": 2,
+    "ac": 13, "acNote": "armure de peau", "hp": 67, "hpFormula": "9d8 + 27", "speed": "9 m",
+    "abilities": { "str": 16, "dex": 12, "con": 17, "int": 9, "wis": 11, "cha": 9 },
+    "senses": "Perception passive 10",
+    "languages": "commun",
+    "traits": [
+      { "name": "Frénésie sanglante", "text": "Tant qu’il est en dessous de la moitié de ses points de vie, le berserker a l’avantage aux jets d’attaque et aux jets de sauvegarde." }
+    ],
+    "actions": [
+      { "name": "Hache à deux mains", "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 9 (1d12 + 3) dégâts tranchants." }
+    ],
+    "summary": {
+      "style": "Brute joyeuse qui devient plus dangereuse en saignant.",
+      "intent": "Nadia : se battre, tuer, prouver qu’elle est la plus forte.",
+      "tactics": "Charge le premier PJ en vue, hache à deux mains. Sous 33 PV, avantage à tout : c’est là qu’elle est la plus dangereuse.",
+      "flee": "Jamais de son plein gré.",
+      "weakness": "CA 13, aucune attaque à distance : la tenir à distance ou la contrôler (elle sauvegarde mal avant d’être blessée)."
+    }
+  },
+  {
+    "id": "mimic",
+    "name": "Mimique",
+    "nameEn": "Mimic",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier",
+    "size": "M", "type": "Monstruosité", "alignment": "Neutre",
+    "cr": "2", "xp": 450, "pb": 2,
+    "ac": 12, "acNote": "armure naturelle", "hp": 58, "hpFormula": "9d8 + 18", "speed": "4,50 m",
+    "abilities": { "str": 17, "dex": 12, "con": 15, "int": 5, "wis": 13, "cha": 8 },
+    "skills": "Discrétion +5",
+    "immunities": "acide ; à terre",
+    "senses": "vision dans le noir 18 m ; Perception passive 11",
+    "traits": [
+      { "name": "Adhésif (forme d’objet)", "text": "La mimique adhère à tout ce qui la touche : une créature de taille G ou inférieure qui la touche est agrippée (DD 13 pour s’échapper)." },
+      { "name": "Apparence trompeuse", "text": "Immobile, la mimique est indiscernable d’un objet ordinaire." },
+      { "name": "Métamorphe", "text": "Par une action, prend la forme d’un objet ou reprend sa vraie forme amorphe." }
+    ],
+    "actions": [
+      { "name": "Morsure", "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 7 (1d8 + 3) dégâts perforants plus 4 (1d8) dégâts d’acide." },
+      { "name": "Pseudopode", "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 7 (1d8 + 3) dégâts contondants. Si la mimique est sous forme d’objet, la cible est agrippée (DD 13 pour s’échapper)." }
+    ],
+    "summary": {
+      "style": "Tonneau qui mord. Trois d’entre eux, à 3 m les uns des autres.",
+      "intent": "Manger ce qui la touche.",
+      "tactics": "Attend qu’un PJ touche un tonneau : agrippé (Adhésif), puis morsures. Les deux autres se révèlent pour encercler.",
+      "flee": "Jamais.",
+      "weakness": "Lente (4,50 m) : un PJ non agrippé peut reculer et tirer. Détectable : Perception DD 15 pour un tonneau un peu trop propre."
+    }
+  },
+  {
+    "id": "quadrone",
+    "name": "Quadrone",
+    "nameEn": "Quadrone",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier",
+    "size": "M", "type": "Créature artificielle (modron)", "alignment": "Loyal neutre",
+    "cr": "1", "xp": 200, "pb": 2,
+    "ac": 16, "acNote": "armure naturelle", "hp": 22, "hpFormula": "4d8 + 4", "speed": "9 m, vol 9 m",
+    "abilities": { "str": 12, "dex": 14, "con": 12, "int": 10, "wis": 10, "cha": 11 },
+    "skills": "Perception +2",
+    "senses": "vision lucide 36 m ; Perception passive 12",
+    "languages": "modron",
+    "traits": [
+      { "name": "Esprit axiomatique", "text": "Le quadrone ne peut pas être contraint d’agir contre sa nature ou les instructions de ses supérieurs." },
+      { "name": "Désintégration", "text": "S’il meurt, son corps se désintègre en poussière, ne laissant que son équipement." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "Le quadrone effectue deux attaques de Poing ou quatre attaques d’Arc court." },
+      { "name": "Poing", "text": "Jet d’attaque au corps à corps : +3, allonge 1,50 m. Touché : 3 (1d4 + 1) dégâts contondants." },
+      { "name": "Arc court", "text": "Jet d’attaque à distance : +4, portée 24/96 m. Touché : 5 (1d6 + 2) dégâts perforants." }
+    ],
+    "summary": {
+      "style": "Cube ailé et méthodique, quatre flèches par tour.",
+      "intent": "Halastron : se rappeler son nom, se défendre, protéger les cariatides, tourner en rond.",
+      "tactics": "Ne combat que si on l’attaque ou si l’on touche aux colonnes. Quatre tirs par tour sur l’agresseur, en volant hors d’atteinte.",
+      "flee": "Jamais : ses ordres priment.",
+      "roleplay": "Ne parle que modron : cliquetis, gestes géométriques. Sait la phrase de commande (« Magie elfe ! ») et peut la mimer."
+    }
+  },
+  {
+    "id": "owlbear",
+    "name": "Hibours",
+    "nameEn": "Owlbear",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier",
+    "size": "G", "type": "Monstruosité", "alignment": "Non aligné",
+    "cr": "3", "xp": 700, "pb": 2,
+    "ac": 13, "acNote": "armure naturelle", "hp": 59, "hpFormula": "7d10 + 21", "speed": "12 m, escalade 12 m",
+    "abilities": { "str": 20, "dex": 12, "con": 17, "int": 3, "wis": 12, "cha": 7 },
+    "skills": "Perception +5",
+    "senses": "vision dans le noir 18 m ; Perception passive 15",
+    "actions": [
+      { "name": "Attaques multiples", "text": "Le hibours effectue deux attaques de Lacération." },
+      { "name": "Lacération", "text": "Jet d’attaque au corps à corps : +7, allonge 1,50 m. Touché : 14 (2d8 + 5) dégâts tranchants." }
+    ],
+    "summary": {
+      "style": "Ours à tête de hibou, affamé et furieux.",
+      "intent": "Manger. Tout de suite.",
+      "tactics": "Charge la première créature entrée, deux lacérations (28 dégâts moyens par tour !). Deux hibours = concentrer sur un PJ.",
+      "flee": "Jamais tant qu’il a faim.",
+      "weakness": "Intelligence 3, CA 13. De la nourriture jetée peut le détourner un tour."
+    }
+  },
+  {
+    "id": "grick",
+    "name": "Grick",
+    "nameEn": "Grick",
+    "source": "MM 2024 — reconstitué de mémoire, à vérifier",
+    "size": "M", "type": "Aberration", "alignment": "Neutre",
+    "cr": "2", "xp": 450, "pb": 2,
+    "ac": 14, "acNote": "armure naturelle", "hp": 27, "hpFormula": "6d8", "speed": "9 m, escalade 9 m",
+    "abilities": { "str": 14, "dex": 14, "con": 11, "int": 3, "wis": 14, "cha": 5 },
+    "skills": "Discrétion +4",
+    "resistances": "contondant, perforant, tranchant",
+    "senses": "vision dans le noir 18 m ; Perception passive 12",
+    "traits": [
+      { "name": "Camouflage de pierre", "text": "Avantage aux tests de Dextérité (Discrétion) sur un terrain rocheux." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "Le grick effectue une attaque de Tentacules et, si elle touche, une attaque de Bec contre la même cible." },
+      { "name": "Tentacules", "text": "Jet d’attaque au corps à corps : +4, allonge 1,50 m. Touché : 9 (2d6 + 2) dégâts tranchants." },
+      { "name": "Bec", "text": "Jet d’attaque au corps à corps : +4, allonge 1,50 m. Touché : 5 (1d6 + 2) dégâts perforants." }
+    ],
+    "summary": {
+      "style": "Ver à tentacules camouflé dans la roche (monstre errant de la strate).",
+      "intent": "Manger ce qui passe.",
+      "tactics": "Embuscade depuis un plafond ou un éboulis. Tentacules puis bec sur la même cible.",
+      "weakness": "Résiste aux armes ordinaires : privilégier la magie ou les armes magiques."
+    }
+  }
+]

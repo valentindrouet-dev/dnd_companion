@@ -37,6 +37,7 @@ const SHELL = [
   './src/views/bestiary.js',
   './src/views/home.js',
   './src/views/room.js',
+  './src/views/roomlist.js',
   './src/views/settings.js',
   './src/views/shell.js',
   './src/views/sidebar.js',

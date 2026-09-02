@@ -5,6 +5,8 @@ pour être utilisée sur iPad pendant une partie (en parallèle de Fantasy Groun
 texte à lire, notes du MJ, créatures avec résumé tactique, PNJ et répliques, trésors,
 pièges et tests, liaisons vers les salles connectées, générateur de loot.
 
+- **Cocher les salles faites** (bouton « Faite » dans la salle, coches dans la liste) et suivre la
+  progression ; **vue en liste** de toutes les salles triée par numéro, avec recherche et filtre.
 - **Masquer ce qui a été lu / dit / vaincu / distribué** d'un appui ; réafficher d'un autre.
 - **Annoter et modifier à la volée** n'importe quel texte (l'original reste restaurable).
 - **Fenêtres** pour les fiches de monstres (résumé MJ + bloc de stats), les dialogues, le
@@ -42,10 +44,16 @@ npm run validate      # vérifie data/ et la liste hors-ligne du service worker
 L'état de partie (masquages, annotations, notes) reste sur l'iPad ; il s'exporte et
 s'importe en JSON depuis **Réglages**.
 
+## Aventures incluses
+
+- **Strate 2 : les Salles Arcaniques** (Waterdeep : le Donjon du Mage dément) — 70 zones,
+  transposées depuis l'édition française pour un usage personnel à la table. Le contenu du
+  livre lui-même n'est pas versionné : seules ces notes de jeu structurées le sont.
+- **La Crypte du Veilleur** — aventure d'exemple, contenu original, 7 salles.
+
 ## Ajouter une aventure
 
-Voir `docs/INGESTION.md` (PDF → JSON) et `docs/DATA_SCHEMA.md` (format). L'aventure
-d'exemple *La Crypte du Veilleur* (contenu original) montre toutes les possibilités.
+Voir `docs/INGESTION.md` (PDF → JSON) et `docs/DATA_SCHEMA.md` (format).
 
 ## Générateur de loot
 

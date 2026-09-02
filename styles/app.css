@@ -642,3 +642,53 @@ a.ref {
 .xp-total { color: var(--muted); font-size: 0.9em; }
 .kbd { font-family: ui-monospace, Menlo, monospace; background: var(--surface-2); padding: 1px 6px; border-radius: 5px; font-size: 0.85em; }
 hr.sep { border: 0; border-top: 1px solid var(--border); margin: 16px 0; }
+
+/* ---------- Salles faites ---------- */
+.btn.is-done { background: var(--ok-soft); border-color: var(--ok); color: var(--ok); }
+.room-tile.is-done .num { background: var(--ok); color: #fff; }
+.room-tile.is-done .name { color: var(--muted); }
+
+/* ---------- Vue en liste des salles ---------- */
+.list-row {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.list-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 60px;
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  text-align: left;
+}
+.list-main:active { background: var(--surface-2); }
+.list-main .num {
+  flex: 0 0 auto;
+  min-width: 52px;
+  height: 44px;
+  padding: 0 8px;
+  border-radius: 12px;
+  background: var(--surface-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.05em;
+}
+.list-main .text { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.list-main .name { font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.list-main .sec { color: var(--muted); font-size: 0.82em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.list-main .tags { display: flex; gap: 4px; flex: 0 0 auto; }
+.list-row .check { align-self: stretch; height: auto; min-height: 60px; width: 60px; color: var(--muted); }
+.list-row.is-done .num { background: var(--ok); color: #fff; }
+.list-row.is-done .name { color: var(--muted); text-decoration: line-through; }
+.list-row.is-done .check { color: var(--ok); }
+@media (max-width: 600px) { .list-main .tags { display: none; } }

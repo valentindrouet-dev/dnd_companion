@@ -24,7 +24,7 @@ export function shell({ title, subtitle, back, sidebar, main, actions = [] }) {
   }
 
   const topbar = h('div', { class: 'topbar' },
-    hasSidebar ? h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Liste des salles', onclick: toggle }, icon('list')) : null,
+    hasSidebar ? h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Panneau des salles', onclick: toggle }, icon('menu')) : null,
     back != null ? h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Retour', onclick: () => navigate(back) }, icon('back')) : null,
     h('div', { class: 'topbar-title' },
       h('div', { class: 't1' }, title),

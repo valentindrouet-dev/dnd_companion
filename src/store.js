@@ -12,6 +12,7 @@ const DEFAULT = {
   checks: {},     // clé élément -> 1        (cases cochées : dialogue dit, trésor distribué…)
   roomNotes: {},  // "adv/room" -> texte     (notes libres de séance)
   visited: {},    // adv -> { room -> timestamp }
+  done: {},       // adv -> { room -> timestamp }   (salles cochées « faites »)
   lastRoom: {},   // adv -> room
 };
 
@@ -116,6 +117,16 @@ export const store = {
   isVisited(advId, roomId) { return !!state.visited[advId]?.[roomId]; },
   lastRoom(advId) { return state.lastRoom[advId]; },
 
+  // --- Salles faites (cochées par le MJ) ---
+  isDone(advId, roomId) { return !!state.done[advId]?.[roomId]; },
+  setDone(advId, roomId, v) {
+    if (v) (state.done[advId] ||= {})[roomId] = Date.now();
+    else if (state.done[advId]) delete state.done[advId][roomId];
+    emit();
+  },
+  toggleDone(advId, roomId) { this.setDone(advId, roomId, !this.isDone(advId, roomId)); },
+  doneCount(advId) { return Object.keys(state.done[advId] || {}).length; },
+
   // --- Réglages ---
   get settings() { return state.settings; },
   setSetting(k, v) { state.settings[k] = v; emit(); },
@@ -125,6 +136,7 @@ export const store = {
     const p = `${advId}/${roomId}/`;
     for (const bucket of [state.hidden, state.overrides, state.notes, state.checks]) deleteByPrefix(bucket, p);
     delete state.roomNotes[`${advId}/${roomId}`];
+    if (state.done[advId]) delete state.done[advId][roomId];
     emit();
   },
   resetAdventure(advId) {
@@ -132,6 +144,7 @@ export const store = {
     for (const bucket of [state.hidden, state.overrides, state.notes, state.checks, state.roomNotes]) deleteByPrefix(bucket, p);
     delete state.visited[advId];
     delete state.lastRoom[advId];
+    delete state.done[advId];
     emit();
   },
   resetAll() {

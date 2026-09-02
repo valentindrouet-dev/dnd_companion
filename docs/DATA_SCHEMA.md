@@ -132,5 +132,8 @@ survivent à une réorganisation du fichier. Sans `id`, l'index dans le tableau 
 ## État MJ (localStorage, propre à l'appareil)
 
 Masquages (« Lu », « Dit », « Vaincu », « Distribué »…), textes modifiés, annotations, notes de
-séance et salles visitées sont stockés sur l'appareil, exportables en JSON depuis **Réglages**.
+séance, salles visitées et **salles cochées « faites »** sont stockés sur l'appareil, exportables
+en JSON depuis **Réglages**.
+
+Le champ `number` sert au tri de la vue en liste (tri naturel : 1, 1a, 1b, 2, 10, 13c–13d…).
 Les données d'aventure elles-mêmes ne sont jamais modifiées par l'app.

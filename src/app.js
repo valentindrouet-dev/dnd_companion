@@ -7,6 +7,7 @@ import { h } from './dom.js';
 import { homeView } from './views/home.js';
 import { adventureView } from './views/adventure.js';
 import { roomView } from './views/room.js';
+import { roomListView } from './views/roomlist.js';
 import { bestiaryView } from './views/bestiary.js';
 import { settingsView } from './views/settings.js';
 import { openMonsterPopup } from './components/monster.js';
@@ -28,6 +29,7 @@ async function buildView(route) {
   switch (route.name) {
     case 'adventure': return adventureView(route);
     case 'room': return roomView(route);
+    case 'roomlist': return roomListView(route);
     case 'bestiary': return bestiaryView(route);
     case 'settings': return settingsView(route);
     default: return homeView(route);

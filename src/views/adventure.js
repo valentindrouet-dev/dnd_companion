@@ -4,7 +4,7 @@ import { h, asTextItem, elemId } from '../dom.js';
 import { icon } from '../icons.js';
 import { loadAdventure } from '../data.js';
 import { store, key } from '../store.js';
-import { navigate, roomPath, advPath } from '../router.js';
+import { navigate, roomPath, advPath, listPath } from '../router.js';
 import { shell } from './shell.js';
 import { roomSidebar } from './sidebar.js';
 import { textBlock } from '../components/block.js';
@@ -24,11 +24,13 @@ export async function adventureView(route) {
       adv.subtitle ? h('p', null, adv.subtitle) : null,
       h('div', { class: 'room-meta' },
         adv.levels ? h('span', null, `Niveaux ${adv.levels}`) : null,
-        adv.source?.book ? h('span', null, `${adv.source.book}${adv.source.pages ? ', p. ' + adv.source.pages : ''}`) : null)),
+        adv.source?.book ? h('span', null, `${adv.source.book}${adv.source.pages ? ', p. ' + adv.source.pages : ''}`) : null,
+        h('span', { class: 'pill ' + (store.doneCount(adv.id) === adv.roomOrder.length ? 'ok' : '') }, `${store.doneCount(adv.id)} / ${adv.roomOrder.length} salles faites`))),
 
     h('div', { class: 'toolbar', style: { marginBottom: '22px' } },
       first ? h('button', { class: 'btn btn-primary', onclick: () => navigate(roomPath(adv.id, first.id)) }, icon('flag'), 'Commencer') : null,
-      last && last !== first?.id ? h('button', { class: 'btn', onclick: () => navigate(roomPath(adv.id, last)) }, icon('forward'), 'Reprendre') : null),
+      last && last !== first?.id ? h('button', { class: 'btn', onclick: () => navigate(roomPath(adv.id, last)) }, icon('forward'), 'Reprendre') : null,
+      h('button', { class: 'btn', onclick: () => navigate(listPath(adv.id)) }, icon('list'), 'Liste des salles')),
 
     adv.summary ? section('Synopsis', textBlock({ key: K('summary'), text: adv.summary, kindLabel: 'Synopsis', hideLabel: 'Vu' })) : null,
 
@@ -55,7 +57,8 @@ export async function adventureView(route) {
       orphans(adv).length ? h('div', { class: 'section-block' }, h('h3', null, 'Autres salles'), h('div', { class: 'room-grid' }, orphans(adv).map((r) => roomTile(adv, r)))) : null),
   );
 
-  return shell({ title: adv.title, subtitle: 'Vue d’ensemble', back: '', sidebar: roomSidebar(adv, null), main });
+  return shell({ title: adv.title, subtitle: 'Vue d’ensemble', back: '', sidebar: roomSidebar(adv, null), main,
+    actions: [h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Liste des salles', onclick: () => navigate(listPath(adv.id)) }, icon('list'))] });
 }
 
 function list(x) { return (Array.isArray(x) ? x : x ? [x] : []).map(asTextItem); }
@@ -66,8 +69,9 @@ function section(title, children) {
 }
 
 function roomTile(adv, r) {
-  return h('button', { class: 'room-tile' + (store.isVisited(adv.id, r.id) ? ' is-visited' : ''), onclick: () => navigate(roomPath(adv.id, r.id)) },
-    h('span', { class: 'num' }, r.number ?? '•'),
+  const done = store.isDone(adv.id, r.id);
+  return h('button', { class: 'room-tile' + (done ? ' is-done' : store.isVisited(adv.id, r.id) ? ' is-visited' : ''), onclick: () => navigate(roomPath(adv.id, r.id)) },
+    h('span', { class: 'num' }, done ? icon('check') : (r.number ?? '•')),
     h('span', { class: 'name' }, r.name),
     h('span', { class: 'tags' }, (r.tags || []).slice(0, 2).map((t) => h('span', { class: 'tag ' + slug(t) }, t))));
 }

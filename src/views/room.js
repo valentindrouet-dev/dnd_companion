@@ -6,7 +6,7 @@ import { icon } from '../icons.js';
 import { markup } from '../markup.js';
 import { loadAdventure, roomNeighbours, getMonster, encounterXP } from '../data.js';
 import { store, key } from '../store.js';
-import { navigate, roomPath, advPath } from '../router.js';
+import { navigate, roomPath, advPath, listPath } from '../router.js';
 import { openPopup, confirmPopup } from '../ui/popup.js';
 import { toast } from '../ui/toast.js';
 import { shell } from './shell.js';
@@ -55,7 +55,13 @@ export async function roomView(route) {
       h('div', { class: 'room-meta' },
         sectionMeta ? h('span', null, sectionMeta.title) : null,
         (room.tags || []).map((t) => h('span', { class: 'tag ' + slug(t) }, t)))),
-    h('div', { class: 'room-nav' }, navBtn(prev, 'back', 'Salle précédente'), navBtn(next, 'forward', 'Salle suivante')));
+    h('div', { class: 'room-nav' },
+      h('button', {
+        class: 'btn' + (store.isDone(adv.id, room.id) ? ' is-done' : ''),
+        'aria-label': 'Marquer la salle comme faite',
+        onclick: () => { store.toggleDone(adv.id, room.id); toast(store.isDone(adv.id, room.id) ? 'Salle cochée' : 'Salle décochée'); },
+      }, icon('check'), store.isDone(adv.id, room.id) ? 'Faite' : 'À faire'),
+      navBtn(prev, 'back', 'Salle précédente'), navBtn(next, 'forward', 'Salle suivante')));
 
   // ----- Créatures -----
   const enemies = (room.enemies || []).map((e, i) => ({ ...e, _id: elemId(e, i) }));
@@ -187,6 +193,7 @@ export async function roomView(route) {
     back: advPath(adv.id),
     sidebar: roomSidebar(adv, room.id),
     main,
+    actions: [h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Liste des salles', onclick: () => navigate(listPath(adv.id)) }, icon('list'))],
   });
 }
 

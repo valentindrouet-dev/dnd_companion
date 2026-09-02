@@ -1,6 +1,14 @@
 {
   "adventures": [
     {
+      "id": "mage-dement-strate-2",
+      "title": "Strate 2 : les Salles Arcaniques",
+      "levels": "6-7",
+      "source": "Waterdeep : le Donjon du Mage dément, p. 27-42",
+      "summary": "Le bazar des gobelins de Yek, deux avant-postes de la Guilde de Xanathar, le drow Rizzeryl et ses rats-garous, les apprentis mutants de la mine et les trois Fiers compagnons de Daggerford. 70 zones.",
+      "path": "adventures/mage-dement-strate-2.json"
+    },
+    {
       "id": "crypte-du-veilleur",
       "title": "La Crypte du Veilleur",
       "levels": "1-2",
@@ -10,6 +18,7 @@
     }
   ],
   "monsters": [
-    "monsters/srd-2024.json"
+    "monsters/srd-2024.json",
+    "monsters/mm-2024.json"
   ]
 }

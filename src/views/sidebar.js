@@ -3,7 +3,7 @@
 import { h } from '../dom.js';
 import { icon } from '../icons.js';
 import { store } from '../store.js';
-import { navigate, roomPath, advPath } from '../router.js';
+import { navigate, roomPath, advPath, listPath } from '../router.js';
 import { closeDrawer } from './shell.js';
 
 let filterText = '';
@@ -27,8 +27,11 @@ export function roomSidebar(adv, currentId) {
     const q = norm(filterText.trim());
     const match = (r) => !q || norm(r.number).startsWith(q) || norm(r.name).includes(q) || (r.tags || []).some((t) => norm(t).includes(q));
 
-    list.append(h('button', { class: 'side-room' + (currentId == null ? ' is-current' : ''), onclick: () => go(advPath(adv.id)) },
+    list.append(h('button', { class: 'side-room' + (currentId === null ? ' is-current' : ''), onclick: () => go(advPath(adv.id)) },
       h('span', { class: 'num' }, icon('map')), h('span', { class: 'name' }, 'Vue d’ensemble')));
+    list.append(h('button', { class: 'side-room' + (currentId === 'liste' ? ' is-current' : ''), onclick: () => go(listPath(adv.id)) },
+      h('span', { class: 'num' }, icon('list')), h('span', { class: 'name' }, 'Liste des salles'),
+      h('span', { class: 'muted small' }, `${store.doneCount(adv.id)}/${adv.roomOrder.length}`)));
 
     const orphans = adv.roomOrder.filter((r) => !adv.sectionById.has(r.section));
     const groups = [...adv.sections.map((s) => ({ title: s.title, rooms: (s.rooms || []).map((id) => adv.roomById.get(id)).filter(Boolean) }))];
@@ -42,7 +45,7 @@ export function roomSidebar(adv, currentId) {
         rooms.map((r) => h('button', { class: 'side-room' + (r.id === currentId ? ' is-current' : ''), onclick: () => go(roomPath(adv.id, r.id)) },
           h('span', { class: 'num' }, r.number ?? '•'),
           h('span', { class: 'name' }, r.name),
-          store.isVisited(adv.id, r.id) ? h('span', { class: 'visited' }, icon('check')) : null))));
+          store.isDone(adv.id, r.id) ? h('span', { class: 'visited' }, icon('check')) : null))));
     }
   }
   build();
