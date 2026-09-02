@@ -80,7 +80,15 @@ export async function adventureView(route) {
   );
 
   return shell({ title: adv.title, subtitle: 'Vue d’ensemble', back: '', sidebar: roomSidebar(adv, null), main,
-    actions: [h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Liste des salles', onclick: () => navigate(listPath(adv.id)) }, icon('list'))] });
+    actions: [
+      h('button', {
+        class: 'btn btn-icon btn-ghost' + (store.settings.condensed ? ' is-on' : ''),
+        'aria-label': store.settings.condensed ? 'Afficher les textes complets' : 'Résumer les textes',
+        onclick: () => store.setSetting('condensed', !store.settings.condensed),
+      }, icon(store.settings.condensed ? 'expand' : 'compress')),
+      h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Index', onclick: () => navigate('index') }, icon('book')),
+      h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Liste des salles', onclick: () => navigate(listPath(adv.id)) }, icon('list')),
+    ] });
 }
 
 function list(x) { return (Array.isArray(x) ? x : x ? [x] : []).map(asTextItem); }

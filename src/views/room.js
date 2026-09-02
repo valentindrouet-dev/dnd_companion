@@ -32,6 +32,7 @@ const notesOpen = new Map();   // notes de séance dépliées, par salle
 
 /** Liste de blocs réagençable par glisser-déposer ; l'ordre est mémorisé. */
 function blockList(scope, items, render) {
+  if (!items.length) return null;   // pas de bloc, pas de section
   const ordered = applyOrder(items, store.getOrder(scope));
   const box = h('div', { class: 'block-list' }, ordered.map(render));
   if (ordered.length > 1) makeSortable(box, { onEnd: (ids) => store.setOrder(scope, ids) });
@@ -83,7 +84,9 @@ export async function roomView(route) {
     h('div', { class: 'room-title' },
       h('h1', null, room.name),
       h('div', { class: 'room-meta' },
-        sectionMeta ? h('span', null, sectionMeta.title) : null,
+        // inutile de répéter : certaines sections portent le nom de leur unique salle
+        sectionMeta && !sectionMeta.title.toLowerCase().includes(room.name.toLowerCase())
+          ? h('span', null, sectionMeta.title) : null,
         (room.tags || []).map((t) => {
           const ico = tagIcon(t);
           return h('span', { class: 'tag ' + slug(t) }, ico ? icon(ico) : null, t);
@@ -217,7 +220,6 @@ export async function roomView(route) {
     ], {
       ico: 'gem',
       count: normalizeTreasure(room.treasure).length || null,
-      actions: h('button', { class: 'btn btn-sm btn-icon', 'aria-label': 'Loot aléatoire', onclick: () => openLootPopup({ adv, room }) }, icon('dice')),
     }),
 
     section('Pièges & tests', [traps, checks], { ico: 'trap', count: traps.length + checks.length }),
@@ -226,15 +228,12 @@ export async function roomView(route) {
 
     section('Notes de séance', sessionNotes, { ico: 'edit' }),
 
-    h('div', { class: 'toolbar', style: { marginTop: '10px', justifyContent: 'space-between' } },
-      h('div', { class: 'toolbar' },
-        prev ? h('button', { class: 'btn', onclick: () => navigate(roomPath(adv.id, prev.id)) }, icon('back'), `${prev.number ?? ''}`) : null,
-        next ? h('button', { class: 'btn btn-primary', onclick: () => navigate(roomPath(adv.id, next.id)) }, `${next.number ?? ''} ${next.name}`.trim(), icon('forward')) : null),
-      h('button', { class: 'btn btn-sm btn-danger', onclick: async () => {
+    h('div', { class: 'toolbar', style: { marginTop: '4px', justifyContent: 'flex-end' } },
+      h('button', { class: 'btn btn-sm btn-ghost', onclick: async () => {
         if (await confirmPopup({ title: 'Réinitialiser la salle', text: 'Réafficher tous les éléments masqués et supprimer les annotations et notes de cette salle ?', okLabel: 'Réinitialiser', danger: true })) {
           store.resetRoom(adv.id, room.id); toast('Salle réinitialisée');
         }
-      } }, icon('undo'))),
+      } }, icon('undo'), 'Réinitialiser la salle')),
   );
 
   return shell({
@@ -246,6 +245,7 @@ export async function roomView(route) {
     actions: [
       roomMap(adv.map, room.id) ? h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Carte', onclick: () => openMapPopup(adv, room) }, icon('map')) : null,
       h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Rencontre aléatoire', onclick: () => openEncounterPopup({ adv, room }) }, icon('dice')),
+      h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Loot aléatoire', onclick: () => openLootPopup({ adv, room }) }, icon('gem')),
       h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Index', onclick: () => navigate('index') }, icon('book')),
       h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Liste des salles', onclick: () => navigate(listPath(adv.id)) }, icon('list')),
     ],

@@ -6,7 +6,7 @@
 // pour la mettre à jour partout à la fois ; `npm run validate` vérifie la cohérence.
 // La liste SHELL est également vérifiée (tous les fichiers de src/ doivent y figurer).
 
-const APP_VERSION = '0.7.0';
+const APP_VERSION = '0.8.0';
 const CACHE = 'dnd-companion-' + APP_VERSION;
 
 const SHELL = [

@@ -37,7 +37,7 @@ export function doorPill(c) {
 export function connectionCards(adv, room) {
   const { declared, back } = roomLinks(adv, room);
   const all = [...declared.map((c) => ({ ...c, implicit: false })), ...back];
-  if (!all.length) return h('div', { class: 'empty' }, 'Aucune liaison déclarée.');
+  if (!all.length) return null;
   const from = roomSpot(adv.map, room.id);
 
   return h('div', { class: 'exits' }, all.map((c) => {
