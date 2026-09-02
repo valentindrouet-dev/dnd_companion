@@ -5,6 +5,7 @@
 //   #/a/:adv/liste          liste des salles triée par numéro
 //   #/bestiaire[/:id]       bestiaire
 //   #/index                 index alphabétique
+//   #/recoltes              tables de récolte
 //   #/reglages              réglages
 
 export function parseRoute() {
@@ -18,6 +19,7 @@ export function parseRoute() {
   }
   if (p[0] === 'bestiaire') return { name: 'bestiary', monster: p[1] || null };
   if (p[0] === 'index') return { name: 'glossary' };
+  if (p[0] === 'recoltes') return { name: 'loot' };
   if (p[0] === 'reglages') return { name: 'settings' };
   return { name: 'home' };
 }

@@ -39,7 +39,7 @@ if (!chromium) {
 const executablePath = CANDIDATE_BROWSERS.find((p) => existsSync(p));
 
 const index = JSON.parse(readFileSync(new URL('../data/index.json', import.meta.url), 'utf8'));
-const routes = [['accueil', ''], ['index', 'index'], ['bestiaire', 'bestiaire'], ['réglages', 'reglages']];
+const routes = [['accueil', ''], ['index', 'index'], ['bestiaire', 'bestiaire'], ['récoltes', 'recoltes'], ['réglages', 'reglages']];
 for (const a of index.adventures || []) {
   const adv = JSON.parse(readFileSync(new URL('../data/' + a.path, import.meta.url), 'utf8'));
   routes.push([`aventure ${a.id}`, `a/${a.id}`], [`liste ${a.id}`, `a/${a.id}/liste`]);

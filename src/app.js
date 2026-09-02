@@ -17,6 +17,7 @@ import { loadGlossary, linkGlossary, openGlossaryPopup } from './glossary.js';
 import { loadLoot } from './loot/generator.js';
 import { setTextDecorator } from './markup.js';
 import { glossaryView } from './views/glossary.js';
+import { lootView } from './views/loot.js';
 import { toast } from './ui/toast.js';
 import { registerServiceWorker } from './update.js';
 
@@ -38,6 +39,7 @@ async function buildView(route) {
     case 'roomlist': return roomListView(route);
     case 'bestiary': return bestiaryView(route);
     case 'glossary': return glossaryView(route);
+    case 'loot': return lootView(route);
     case 'settings': return settingsView(route);
     default: return homeView(route);
   }

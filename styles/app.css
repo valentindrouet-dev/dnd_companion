@@ -1140,16 +1140,24 @@ a.gref:active { color: var(--c-feature); }
   cursor: pointer;
 }
 .loot-chip:active { transform: scale(0.97); }
-/* Teinte par catégorie de créature, comme dans le générateur d'origine. */
-.lt-human, .lt-humanoid { background: color-mix(in srgb, var(--c-note) 18%, var(--surface-2)); border-color: color-mix(in srgb, var(--c-note) 45%, transparent); }
-.lt-aberration        { background: color-mix(in srgb, var(--c-feature) 18%, var(--surface-2)); border-color: color-mix(in srgb, var(--c-feature) 45%, transparent); }
-.lt-undead            { background: color-mix(in srgb, var(--muted) 22%, var(--surface-2)); border-color: color-mix(in srgb, var(--muted) 50%, transparent); }
-.lt-beast             { background: color-mix(in srgb, var(--c-read) 18%, var(--surface-2)); border-color: color-mix(in srgb, var(--c-read) 45%, transparent); }
-.lt-ooze, .lt-plant   { background: color-mix(in srgb, var(--c-dialogue) 18%, var(--surface-2)); border-color: color-mix(in srgb, var(--c-dialogue) 45%, transparent); }
-.lt-monstrosity       { background: color-mix(in srgb, var(--c-combat) 18%, var(--surface-2)); border-color: color-mix(in srgb, var(--c-combat) 45%, transparent); }
-.lt-construct         { background: color-mix(in srgb, var(--text-2) 16%, var(--surface-2)); border-color: color-mix(in srgb, var(--text-2) 40%, transparent); }
-.lt-elemental         { background: color-mix(in srgb, var(--c-portal) 18%, var(--surface-2)); border-color: color-mix(in srgb, var(--c-portal) 45%, transparent); }
-.lt-giant             { background: color-mix(in srgb, var(--c-layout) 18%, var(--surface-2)); border-color: color-mix(in srgb, var(--c-layout) 45%, transparent); }
+/* Teinte par catégorie de créature, comme dans le générateur d'origine.
+   Chaque catégorie ne définit qu'une couleur ; pastille et bouton s'en servent. */
+.lt-human, .lt-humanoid { --lt: var(--c-note); }
+.lt-aberration          { --lt: var(--c-feature); }
+.lt-undead              { --lt: var(--muted); }
+.lt-beast               { --lt: var(--c-read); }
+.lt-ooze, .lt-plant     { --lt: var(--c-dialogue); }
+.lt-monstrosity         { --lt: var(--c-combat); }
+.lt-construct           { --lt: var(--text-2); }
+.lt-elemental           { --lt: var(--c-portal); }
+.lt-giant               { --lt: var(--c-layout); }
+.lt-fiend               { --lt: var(--danger); }
+.lt-celestial           { --lt: var(--accent); }
+.lt-swarm               { --lt: var(--c-todo); }
+.loot-chip[class*="lt-"] {
+  background: color-mix(in srgb, var(--lt) 18%, var(--surface-2));
+  border-color: color-mix(in srgb, var(--lt) 48%, transparent);
+}
 
 .loot-list { display: flex; flex-direction: column; gap: 3px; }
 .loot-row {
@@ -1171,3 +1179,36 @@ a.gref:active { color: var(--c-feature); }
 .loot-list.proba .lp.hi { color: var(--ok); }
 .loot-list.proba .lp.mid { color: var(--accent); }
 .loot-list.proba .lp.lo { color: var(--c-todo); }
+
+/* ---------- Page des récoltes ---------- */
+.loot-card { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); margin-bottom: 5px; overflow: hidden; }
+.loot-card.is-open { border-color: color-mix(in srgb, var(--accent) 55%, transparent); }
+.loot-card-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-height: var(--tap);
+  padding: 6px 12px;
+  background: none;
+  border: 0;
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.loot-card.is-open .loot-card-head { background: var(--accent-soft); }
+.loot-card-head .lc-name { flex: 1; min-width: 0; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.loot-card-head .lc-caret { flex: 0 0 auto; color: var(--muted); }
+.loot-dot { flex: 0 0 auto; width: 11px; height: 11px; border-radius: 50%; background: var(--lt, var(--border)); }
+.loot-card-body { padding: 4px 12px 12px; }
+.loot-card-body .loot-row .lev { flex: 0 0 auto; min-width: 52px; text-align: right; font-variant-numeric: tabular-nums; }
+
+/* En portrait, les pastilles de la ligne repliée passent à la ligne plutôt que d'écraser le nom. */
+@media (max-width: 700px) {
+  .loot-card-head { flex-wrap: wrap; padding: 8px 12px; }
+  .loot-card-head .lc-name { flex: 1 0 100%; white-space: normal; }
+  .loot-card-head .lc-caret { margin-left: auto; }
+  .loot-row { flex-wrap: wrap; }
+  .loot-row .lname { flex: 1 0 100%; }
+}

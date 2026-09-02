@@ -1,6 +1,6 @@
 {
   "name": "dnd-companion",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "private": true,
   "description": "Compagnon de table pour MJ D&D 5e (2024), pensé pour iPad.",
   "type": "module",

@@ -16,6 +16,7 @@ export async function homeView() {
     h('div', { class: 'toolbar', style: { marginTop: '18px' } },
       h('button', { class: 'btn', onclick: () => navigate('index') }, icon('book'), 'Index'),
       h('button', { class: 'btn', onclick: () => navigate('bestiaire') }, icon('skull'), 'Bestiaire'),
+      h('button', { class: 'btn', onclick: () => navigate('recoltes') }, icon('gem'), 'Récoltes'),
       h('button', { class: 'btn', onclick: () => openEncounterPopup({}) }, icon('dice'), 'Rencontre'),
       h('button', { class: 'btn btn-icon', 'aria-label': 'Réglages', onclick: () => navigate('reglages') }, icon('settings'))));
 

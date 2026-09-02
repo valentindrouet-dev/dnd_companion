@@ -40,6 +40,35 @@ export function lootTableFor(monsterId) {
   return c && !c.hidden ? c : null;
 }
 
+/** Moyenne d'une notation de dés : « 2d6 » → 7. */
+export function averageRoll(notation) {
+  const m = String(notation ?? '').match(/(\d+)\s*d\s*(\d+)/i);
+  return m ? Number(m[1]) * (Number(m[2]) + 1) / 2 : Number(notation) || 1;
+}
+
+/** Valeur en po lisible dans « 25 po la fiole », « 1 500 po », « valeur négligeable ». */
+export function lineValue(line) {
+  if (line.coin) return 1;
+  const m = String(line.value ?? '').replace(/\s|\u202f|\u00a0/g, '').match(/([\d.]+)po/i);
+  return m ? Number(m[1]) : 0;
+}
+
+/**
+ * Espérance de gain d'une fouille, en po. Les objets magiques et les objets
+ * « à la discrétion du MJ » n'ont pas de prix : ils sont comptés à part.
+ */
+export function expectedValue(creature) {
+  let po = 0, magic = 0, unpriced = 0;
+  for (const l of creature.loot || []) {
+    const chance = l.p / 100;
+    if (l.magic) { magic += chance; continue; }
+    const unit = lineValue(l);
+    if (!unit) { if (!/négligeable|aucune valeur/i.test(l.value || '')) unpriced += chance; continue; }
+    po += chance * averageRoll(l.qty) * unit;
+  }
+  return { po: Math.round(po), magic: Math.round(magic * 100), unpriced: Math.round(unpriced * 100) };
+}
+
 export function lootLevels() {
   return [...new Set((data?.creatures || []).map((c) => c.level || 1))].sort((a, b) => a - b);
 }

@@ -26,9 +26,10 @@ pièges et tests, liaisons vers les salles connectées, générateur de loot.
   actions résumées (corps à corps ou distance, bonus, dégâts).
 - **Générateur de rencontres** basé sur le budget de PX par niveau. Consulter une fiche depuis
   une rencontre ne perd pas le tirage : la refermer y ramène.
-- **Récolte d'ennemis** : chaque créature a sa table de butin (test, durée, danger sur 1 naturel,
-  probabilité ligne par ligne). Le bouton **Récolte** de la fiche est pré-rempli avec le nombre de
-  créatures du groupe, et le résultat part dans les notes de séance.
+- **Récolte d'ennemis** : chaque créature du bestiaire a sa table de butin (test, durée, danger sur
+  1 naturel, probabilité ligne par ligne). Le bouton **Récolte** de la fiche est pré-rempli avec le
+  nombre de créatures du groupe, et le résultat part dans les notes de séance. La page **Récoltes**
+  affiche les 63 tables : recherche, filtre par catégorie, probabilités et gain moyen par cadavre.
 - **Mots-clés cliquables** : les noms de personnages, factions, lieux et objets ouvrent une fiche
   (qui, but, état en cours de partie, modifiable), et un **index alphabétique** les rassemble.
 - **Drapeau de fin de séance** : un seul par aventure, « Reprendre » y ramène.
@@ -113,6 +114,10 @@ sur 4, et les objets magiques tirent leur rareté puis leur type.
 Le champ `match` d'une table liste les créatures du bestiaire auxquelles elle s'applique :
 c'est ce qui fait apparaître le bouton **Récolte** sur leur fiche. Ajouter une créature
 revient à ajouter un objet au tableau `creatures` — voir `docs/DATA_SCHEMA.md`.
+
+63 tables couvrent les 60 créatures du bestiaire ; les 11 tables restantes viennent du
+générateur d'origine et attendent les créatures correspondantes. La page `#/recoltes` les
+affiche toutes, avec le gain moyen calculé par table.
 
 ## Licences
 
