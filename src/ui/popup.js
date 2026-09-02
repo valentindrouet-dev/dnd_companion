@@ -9,7 +9,9 @@ import { store } from '../store.js';
 const root = document.getElementById('popups');
 const stack = [];
 
-export function openPopup({ title, subtitle, render, size = 'md', onClose }) {
+export function openPopup({ title, subtitle, render, size = 'md', onClose, keepOpen = false }) {
+  // Une fenêtre à la fois : ouvrir en remplace une autre, plutôt que de les empiler.
+  if (!keepOpen) closeAllPopups();
   const body = h('div', { class: 'popup-body' });
   const entry = { body, render, onClose, unsub: null, backdrop: null };
 
@@ -61,6 +63,7 @@ export function confirmPopup({ title, text, okLabel = 'Confirmer', danger = fals
     let done = false;
     const api = openPopup({
       title,
+      keepOpen: true,
       onClose: () => { if (!done) resolve(false); },
       render: () => h('div', null,
         h('p', null, text),

@@ -12,7 +12,7 @@ import { openNpcPopup } from '../components/npc.js';
 import { statusPill } from '../components/npcstatus.js';
 import { condense, textBlock } from '../components/block.js';
 import { slug } from '../util.js';
-import { adventureProgress } from '../progress.js';
+import { adventureProgress, roomStatus, statusTally, ROOM_STATUSES } from '../progress.js';
 import { openMapPopup, fullMap } from '../components/map.js';
 import { openEncounterPopup } from '../encounters/ui.js';
 
@@ -32,7 +32,8 @@ export async function adventureView(route) {
       h('div', { class: 'room-meta' },
         adv.levels ? h('span', null, `Niveaux ${adv.levels}`) : null,
         adv.source?.book ? h('span', null, `${adv.source.book}${adv.source.pages ? ', p. ' + adv.source.pages : ''}`) : null,
-        h('span', { class: 'pill ' + (store.doneCount(adv.id) === adv.roomOrder.length ? 'ok' : '') }, icon('check'), `${store.doneCount(adv.id)} / ${adv.roomOrder.length} salles`),
+        h('span', { class: 'tallies' }, ROOM_STATUSES.map(([k, label, cls]) =>
+          h('span', { class: 'tally ' + cls, title: label }, String(statusTally(adv)[k])))),
         h('span', { class: 'pill' }, `${adventureProgress(adv).pct} % coché`))),
 
     h('div', { class: 'toolbar', style: { marginBottom: '22px' } },
@@ -105,9 +106,9 @@ function collectTodos(adv) {
 }
 
 function roomTile(adv, r) {
-  const done = store.isDone(adv.id, r.id);
-  return h('button', { class: 'room-tile' + (done ? ' is-done' : store.isVisited(adv.id, r.id) ? ' is-visited' : ''), onclick: () => navigate(roomPath(adv.id, r.id)) },
-    h('span', { class: 'num' }, done ? icon('check') : (r.number ?? '•')),
+  const st = roomStatus(adv.id, r);
+  return h('button', { class: 'room-tile ' + st.cls, onclick: () => navigate(roomPath(adv.id, r.id)) },
+    h('span', { class: 'num' }, r.number ?? '•'),
     h('span', { class: 'name' }, r.name),
     h('span', { class: 'tags' }, (r.tags || []).slice(0, 3).map((t) => {
       const ico = tagIcon(t);

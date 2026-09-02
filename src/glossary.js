@@ -61,9 +61,17 @@ export function kindMeta(kind) { return KINDS[KEY(kind)] || ['Autre', 'info', ''
  * Ne touche qu'aux nœuds texte : le balisage existant reste intact.
  * Une seule occurrence par terme et par élément, pour ne pas saturer la lecture.
  */
+// Entrée en cours d'affichage : ses propres mots-clés ne doivent pas être cliquables.
+let selfId = null;
+export function withoutSelfLinks(id, fn) {
+  const previous = selfId;
+  selfId = id;
+  try { return fn(); } finally { selfId = previous; }
+}
+
 export function linkGlossary(root) {
   if (!matcher || !root) return root;
-  const seen = new Set();
+  const seen = new Set(selfId ? [selfId] : []);
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
     acceptNode: (n) => (n.parentElement.closest('a, .grip, .pill, code') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT),
   });
@@ -101,7 +109,7 @@ export function openGlossaryPopup(id) {
   const api = openPopup({
     title: e.name,
     subtitle: kindLabel,
-    render: () => {
+    render: () => withoutSelfLinks(e.id, () => {
       const custom = store.getOverride(noteKey);
       const row = (label, value, cls) => (value ? h('div', { class: 'gline' },
         h('b', { class: cls || '' }, label), markup(value, 'div')) : null);
@@ -129,6 +137,6 @@ export function openGlossaryPopup(id) {
         e.goal && e.goal !== '—' ? row('But', e.goal) : null,
         state,
         row('Où', e.where));
-    },
+    }),
   });
 }

@@ -5,8 +5,11 @@ pour être utilisée sur iPad pendant une partie (en parallèle de Fantasy Groun
 texte à lire, notes du MJ, créatures avec résumé tactique, PNJ et répliques, trésors,
 pièges et tests, liaisons vers les salles connectées, générateur de loot.
 
+- **Statut par salle en trois états** — inexplorée (rouge), en cours (orange), faite (verte) —
+  déduit automatiquement de l'avancement, et forcé d'un appui (le bouton passe à l'état suivant).
+  Il se répercute dans la liste, la vue d'ensemble, le panneau latéral et les repères de la carte.
 - **Vue en liste sur deux colonnes**, triée par numéro, avec recherche, filtre et **pourcentage
-  d'avancement** par salle ; case « faite » sur chaque ligne et anneau de progression dans la salle.
+  d'avancement** par salle ; anneau de progression dans la salle.
 - **Mode Résumé** : un bouton réduit chaque bloc à une phrase ; l'appui rouvre le texte complet en
   fenêtre. Un bloc marqué « Vu » se réduit lui aussi à son résumé, grisé.
 - **Blocs réagençables** au glisser-déposer (poignée à trois barres), l'ordre est mémorisé.

@@ -755,10 +755,47 @@ a.ref {
 .kbd { font-family: ui-monospace, Menlo, monospace; background: var(--surface-2); padding: 1px 6px; border-radius: 5px; font-size: 0.85em; }
 hr.sep { border: 0; border-top: 1px solid var(--border); margin: 16px 0; }
 
-/* ---------- Salles faites ---------- */
-.btn.is-done { background: var(--ok-soft); border-color: var(--ok); color: var(--ok); }
-.room-tile.is-done .num { background: var(--ok); color: #fff; }
-.room-tile.is-done .name { color: var(--muted); }
+/* ---------- Statut des salles : inexplorée, en cours, faite ---------- */
+:root { --st-red: #e06560; --st-orange: #f0913f; --st-green: #67b97f; }
+[data-theme="light"] { --st-red: #c8443f; --st-orange: #c2691a; --st-green: #3f8f58; }
+
+.st-red { --st: var(--st-red); }
+.st-orange { --st: var(--st-orange); }
+.st-green { --st: var(--st-green); }
+
+/* bouton de l'en-tête de salle */
+.status-btn {
+  gap: 6px;
+  padding: 8px 12px;
+  color: var(--st);
+  border-color: var(--st);
+  background: color-mix(in srgb, var(--st) 14%, transparent);
+  font-size: 0.9em;
+}
+.status-btn .icon { width: 17px; height: 17px; }
+
+/* pastilles de décompte */
+.tallies { display: inline-flex; gap: 4px; align-items: center; }
+.tally {
+  min-width: 26px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  font-size: 0.78em;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+  color: var(--st);
+  background: color-mix(in srgb, var(--st) 16%, transparent);
+}
+.tallies.small .tally { font-size: 0.72em; min-width: 22px; padding: 0 5px; }
+
+/* tuiles de la vue d'ensemble */
+.room-tile { border-left: 4px solid var(--st, var(--border)); }
+.room-tile .num { background: color-mix(in srgb, var(--st) 20%, var(--surface-2)); color: var(--st); }
+.room-tile.st-green .name { color: var(--muted); }
+
+/* point de statut dans le panneau latéral */
+.side-room .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--st); flex: 0 0 auto; }
 
 /* ---------- Vue en liste des salles (2 colonnes, compacte) ---------- */
 .list-toolbar { margin-bottom: 10px; gap: 8px; }
@@ -818,11 +855,11 @@ hr.sep { border: 0; border-top: 1px solid var(--border); margin: 16px 0; }
   justify-content: center;
 }
 .lcheck:active { background: var(--surface-2); }
-.lrow.is-done .lrow-main { opacity: 0.55; }
-.lrow.is-done .num { background: var(--ok); color: #fff; }
-.lrow.is-done .name { text-decoration: line-through; }
-.lrow.is-done .lbar i { background: var(--ok); }
-.lcheck.is-done { background: var(--ok-soft); border-color: var(--ok); color: var(--ok); }
+.lrow .num { background: color-mix(in srgb, var(--st) 18%, var(--surface-2)); color: var(--st); }
+.lrow .lbar i { background: var(--st); }
+.lrow.st-green .lrow-main { opacity: 0.6; }
+.lrow.st-green .name { color: var(--muted); }
+.lcheck { color: var(--st); border-color: color-mix(in srgb, var(--st) 45%, var(--border)); background: color-mix(in srgb, var(--st) 12%, transparent); }
 @media (max-width: 620px) { .lrow-main .ltags { display: none; } }
 
 /* ---------- Anneau de progression (en-tête de salle) ---------- */
@@ -931,8 +968,8 @@ hr.sep { border: 0; border-top: 1px solid var(--border); margin: 16px 0; }
   justify-content: center;
 }
 .spot:active { background: var(--accent); }
-.spot.is-current { border-color: #fff; box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5); }
-.spot.is-done { background: rgba(103, 185, 127, 0.82); border-color: #3f8f58; }
+.spot { background: color-mix(in srgb, var(--st, var(--accent)) 80%, #fff); border-color: var(--st, var(--accent)); color: #14110a; }
+.spot.is-current { border-color: #fff; box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.55); }
 
 /* ---------- Statut des PNJ ---------- */
 .pill-btn { border: 1px solid transparent; cursor: pointer; }

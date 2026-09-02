@@ -4,6 +4,7 @@
 import { h } from '../dom.js';
 import { icon } from '../icons.js';
 import { store } from '../store.js';
+import { roomStatus } from '../progress.js';
 import { openPopup, closeAllPopups } from '../ui/popup.js';
 import { navigate, roomPath } from '../router.js';
 
@@ -48,7 +49,7 @@ export function openMapPopup(adv, room = null) {
           const s = roomSpot(adv.map, r.id);
           if (!s) return null;
           return h('button', {
-            class: 'spot' + (r.id === room?.id ? ' is-current' : '') + (store.isDone(adv.id, r.id) ? ' is-done' : ''),
+            class: 'spot ' + roomStatus(adv.id, r).cls + (r.id === room?.id ? ' is-current' : ''),
             style: { left: s[0] + '%', top: s[1] + '%' },
             'aria-label': `${r.number ?? ''} ${r.name}`,
             title: `${r.number ?? ''} — ${r.name}`,

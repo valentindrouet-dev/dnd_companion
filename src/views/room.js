@@ -21,10 +21,12 @@ import { connectionCards } from '../components/connections.js';
 import { mapThumb, openMapPopup, roomMap } from '../components/map.js';
 import { openLootPopup } from '../loot/ui.js';
 import { openEncounterPopup } from '../encounters/ui.js';
-import { roomProgress } from '../progress.js';
+import { roomProgress, roomStatus, cycleRoomStatus } from '../progress.js';
 import { slug } from '../util.js';
 
 function list(x) { return (Array.isArray(x) ? x : x ? [x] : []).map(asTextItem); }
+
+const ROOM_LABELS = { inexploree: 'Salle inexplorée', encours: 'Salle en cours', fait: 'Salle faite' };
 
 const notesOpen = new Map();   // notes de séance dépliées, par salle
 
@@ -67,7 +69,7 @@ export async function roomView(route) {
 
   const { prev, next } = roomNeighbours(adv, room);
   const sectionMeta = adv.sectionById.get(room.section);
-  const done = store.isDone(adv.id, room.id);
+  const status = roomStatus(adv.id, room);
   const flagged = store.isFlagged(adv.id, room.id);
   const prog = roomProgress(adv.id, room);
   const K = (...p) => key(adv.id, room.id, ...p);
@@ -99,9 +101,9 @@ export async function roomView(route) {
         onclick: () => { store.setFlag(adv.id, room.id); toast(store.isFlagged(adv.id, room.id) ? 'Drapeau posé ici' : 'Drapeau retiré'); },
       }, icon('flag')),
       h('button', {
-        class: 'btn btn-icon' + (done ? ' is-done' : ''), 'aria-label': done ? 'Salle faite' : 'Marquer la salle comme faite',
-        onclick: () => { store.toggleDone(adv.id, room.id); toast(store.isDone(adv.id, room.id) ? 'Salle cochée' : 'Salle décochée'); },
-      }, icon('check')),
+        class: 'btn status-btn ' + status.cls, 'aria-label': `Statut : ${status.label} — appuie pour changer`,
+        onclick: () => toast(ROOM_LABELS[cycleRoomStatus(adv.id, room)]),
+      }, icon(status.icon), status.label),
       navBtn(prev, 'back', 'Salle précédente'), navBtn(next, 'forward', 'Salle suivante')));
 
   const enemies = (room.enemies || []).map((e, i) => ({ ...e, _id: elemId(e, i) }));

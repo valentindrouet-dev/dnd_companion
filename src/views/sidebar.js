@@ -5,6 +5,7 @@ import { icon } from '../icons.js';
 import { store } from '../store.js';
 import { navigate, roomPath, advPath, listPath } from '../router.js';
 import { closeDrawer } from './shell.js';
+import { roomStatus, statusTally, ROOM_STATUSES } from '../progress.js';
 
 let filterText = '';
 let filterAdv = null;
@@ -31,7 +32,8 @@ export function roomSidebar(adv, currentId) {
       h('span', { class: 'num' }, icon('map')), h('span', { class: 'name' }, 'Vue d’ensemble')));
     list.append(h('button', { class: 'side-room' + (currentId === 'liste' ? ' is-current' : ''), onclick: () => go(listPath(adv.id)) },
       h('span', { class: 'num' }, icon('list')), h('span', { class: 'name' }, 'Liste des salles'),
-      h('span', { class: 'muted small' }, `${store.doneCount(adv.id)}/${adv.roomOrder.length}`)));
+      h('span', { class: 'tallies small' }, ROOM_STATUSES.map(([k, label, cls]) =>
+        h('span', { class: 'tally ' + cls, title: label }, String(statusTally(adv)[k]))))));
 
     const orphans = adv.roomOrder.filter((r) => !adv.sectionById.has(r.section));
     const groups = [...adv.sections.map((s) => ({ title: s.title, rooms: (s.rooms || []).map((id) => adv.roomById.get(id)).filter(Boolean) }))];
@@ -45,7 +47,7 @@ export function roomSidebar(adv, currentId) {
         rooms.map((r) => h('button', { class: 'side-room' + (r.id === currentId ? ' is-current' : ''), onclick: () => go(roomPath(adv.id, r.id)) },
           h('span', { class: 'num' }, r.number ?? '•'),
           h('span', { class: 'name' }, r.name),
-          store.isDone(adv.id, r.id) ? h('span', { class: 'visited' }, icon('check')) : null))));
+          h('span', { class: 'dot ' + roomStatus(adv.id, r).cls })))));
     }
   }
   build();

@@ -9,7 +9,7 @@ import { navigate, roomPath, advPath } from '../router.js';
 import { shell } from './shell.js';
 import { roomSidebar } from './sidebar.js';
 import { compareRoomNumbers, slug } from '../util.js';
-import { roomProgress } from '../progress.js';
+import { roomProgress, roomStatus, cycleRoomStatus, ROOM_STATUSES } from '../progress.js';
 
 let query = '';
 let hideDone = false;
@@ -31,17 +31,18 @@ export async function roomListView(route) {
     class: 'btn btn-sm' + (hideDone ? ' is-on' : ''),
     onclick: () => { hideDone = !hideDone; hideBtn.classList.toggle('is-on', hideDone); build(); },
   }, icon('eyeOff'), 'Masquer faites');
-  const counter = h('span', { class: 'pill' });
+  const counter = h('span', { class: 'tallies' });
 
   function build() {
     list.replaceChildren();
     const q = norm(query.trim());
     const match = (r) => !q || norm(r.number).startsWith(q) || norm(r.name).includes(q)
       || (r.tags || []).some((t) => norm(t).includes(q)) || norm(adv.sectionById.get(r.section)?.title).includes(q);
-    const shown = rooms.filter((r) => match(r) && !(hideDone && store.isDone(adv.id, r.id)));
-    const done = rooms.filter((r) => store.isDone(adv.id, r.id)).length;
-    counter.replaceChildren(document.createTextNode(`${done} / ${rooms.length}`));
-    counter.className = 'pill' + (done === rooms.length ? ' ok' : '');
+    const shown = rooms.filter((r) => match(r) && !(hideDone && roomStatus(adv.id, r).key === 'fait'));
+    const tally = { inexploree: 0, encours: 0, fait: 0 };
+    for (const r of rooms) tally[roomStatus(adv.id, r).key]++;
+    counter.replaceChildren(...ROOM_STATUSES.map(([k, label, cls]) =>
+      h('span', { class: 'tally ' + cls, title: label }, String(tally[k]))));
     if (!shown.length) { list.append(h('div', { class: 'empty' }, 'Aucune salle ne correspond.')); return; }
     for (const r of shown) list.append(row(adv, r));
   }
@@ -58,8 +59,8 @@ export async function roomListView(route) {
 
 function row(adv, r) {
   const p = roomProgress(adv.id, r);
-  const isDone = store.isDone(adv.id, r.id);
-  return h('div', { class: 'lrow' + (isDone ? ' is-done' : '') },
+  const st = roomStatus(adv.id, r);
+  return h('div', { class: 'lrow ' + st.cls },
     h('button', { class: 'lrow-main', onclick: () => navigate(roomPath(adv.id, r.id)) },
       h('span', { class: 'num' }, r.number ?? '•'),
       h('span', { class: 'name' }, r.name),
@@ -70,8 +71,8 @@ function row(adv, r) {
       h('span', { class: 'lpct' }, p.total ? `${p.pct}%` : '—'),
       h('span', { class: 'lbar' }, h('i', { style: { width: p.pct + '%' } }))),
     h('button', {
-      class: 'lcheck' + (isDone ? ' is-done' : ''),
-      'aria-label': isDone ? 'Décocher la salle' : 'Cocher la salle',
-      onclick: () => store.toggleDone(adv.id, r.id),
-    }, icon('check')));
+      class: 'lcheck ' + st.cls,
+      'aria-label': `Statut : ${st.label} — appuie pour changer`,
+      onclick: () => cycleRoomStatus(adv.id, r),
+    }, icon(st.icon)));
 }

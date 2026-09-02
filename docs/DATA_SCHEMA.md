@@ -137,8 +137,12 @@ survivent à une réorganisation du fichier. Sans `id`, l'index dans le tableau 
 ## État MJ (localStorage, propre à l'appareil)
 
 Masquages (« Lu », « Dit », « Vaincu », « Distribué »…), textes modifiés, annotations, notes de
-séance, salles visitées et **salles cochées « faites »** sont stockés sur l'appareil, exportables
-en JSON depuis **Réglages**.
+séance, salles visitées, statuts de salle, blocs « à faire », ordre des blocs, drapeau de fin de
+séance et statuts de PNJ sont stockés sur l'appareil, exportables en JSON depuis **Réglages**.
+
+Le **statut d'une salle** vaut `inexploree`, `encours` ou `fait`. Tant que le MJ ne l'a pas figé,
+il est déduit de l'avancement : aucun élément coché → inexplorée, quelques-uns → en cours, tous →
+faite. Un appui sur le bouton passe à l'état suivant et le fige.
 
 Le champ `number` sert au tri de la vue en liste (tri naturel : 1, 1a, 1b, 2, 10, 13c–13d…).
 Le pourcentage d'avancement d'une salle est le rapport entre les éléments masqués et le nombre

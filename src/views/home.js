@@ -25,12 +25,12 @@ export async function homeView() {
 function adventureCard(a) {
   const resume = store.flag(a.id) || store.lastRoom(a.id);
   const flagged = !!store.flag(a.id);
-  const done = store.doneCount(a.id);
+
   return h('div', { class: 'adv-card' },
     h('div', { class: 'adv-line' },
       h('h2', null, a.title),
       a.levels ? h('span', { class: 'pill accent' }, `Niv. ${a.levels}`) : null,
-      done ? h('span', { class: 'pill ok' }, icon('check'), `${done} faites`) : null),
+      ),
     h('div', { class: 'toolbar' },
       h('button', { class: 'btn btn-primary', onclick: () => navigate(advPath(a.id)) }, icon('map'), 'Ouvrir'),
       h('button', { class: 'btn', onclick: () => navigate(listPath(a.id)) }, icon('list'), 'Salles'),

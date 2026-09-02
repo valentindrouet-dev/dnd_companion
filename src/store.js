@@ -12,7 +12,7 @@ const DEFAULT = {
   checks: {},     // clé élément -> 1        (cases cochées : dialogue dit, trésor distribué…)
   roomNotes: {},  // "adv/room" -> texte     (notes libres de séance)
   visited: {},    // adv -> { room -> timestamp }
-  done: {},       // adv -> { room -> timestamp }   (salles cochées « faites »)
+  status: {},     // "adv/room" -> 'inexploree' | 'encours' | 'fait'  (forcé par le MJ)
   todo: {},       // clé bloc -> 1          (note du MJ à traiter, remontée sur la page d'aventure)
   order: {},      // "adv/room/type" -> [ids]  (ordre choisi par glisser-déposer)
   flag: {},       // adv -> room            (marque-page de fin de séance, un seul par aventure)
@@ -43,7 +43,18 @@ function load() {
   return clone(DEFAULT);
 }
 
-let state = load();
+let state = migrate(load());
+
+/** Les salles cochées « faites » avant la version 0.6 deviennent des salles au statut « fait ». */
+function migrate(st) {
+  if (st.done) {
+    for (const [advId, rooms] of Object.entries(st.done)) {
+      for (const roomId of Object.keys(rooms || {})) st.status[`${advId}/${roomId}`] ||= 'fait';
+    }
+    delete st.done;
+  }
+  return st;
+}
 const listeners = new Set();
 let saveTimer = null;
 
@@ -148,15 +159,21 @@ export const store = {
     emit();
   },
 
-  // --- Salles faites (cochées par le MJ) ---
-  isDone(advId, roomId) { return !!state.done[advId]?.[roomId]; },
-  setDone(advId, roomId, v) {
-    if (v) (state.done[advId] ||= {})[roomId] = Date.now();
-    else if (state.done[advId]) delete state.done[advId][roomId];
+  // --- Statut de salle forcé par le MJ (sinon il est déduit de l'avancement) ---
+  forcedStatus(advId, roomId) { return state.status[`${advId}/${roomId}`] || null; },
+  setStatus(advId, roomId, status) {
+    const k = `${advId}/${roomId}`;
+    if (!status) delete state.status[k]; else state.status[k] = status;
     emit();
   },
-  toggleDone(advId, roomId) { this.setDone(advId, roomId, !this.isDone(advId, roomId)); },
-  doneCount(advId) { return Object.keys(state.done[advId] || {}).length; },
+  /** Salles portant un statut donné, forcé ou non : la vue fournit les statuts déduits. */
+  statusCount(advId, wanted, derived = {}) {
+    let n = 0;
+    for (const [roomId, d] of Object.entries(derived)) {
+      if ((state.status[`${advId}/${roomId}`] || d) === wanted) n++;
+    }
+    return n;
+  },
 
   // --- Réglages ---
   get settings() { return state.settings; },
@@ -167,15 +184,14 @@ export const store = {
     const p = `${advId}/${roomId}/`;
     for (const bucket of [state.hidden, state.overrides, state.notes, state.checks, state.todo, state.order]) deleteByPrefix(bucket, p);
     delete state.roomNotes[`${advId}/${roomId}`];
-    if (state.done[advId]) delete state.done[advId][roomId];
+    delete state.status[`${advId}/${roomId}`];
     emit();
   },
   resetAdventure(advId) {
     const p = `${advId}/`;
-    for (const bucket of [state.hidden, state.overrides, state.notes, state.checks, state.roomNotes, state.todo, state.order, state.npcStatus]) deleteByPrefix(bucket, p);
+    for (const bucket of [state.hidden, state.overrides, state.notes, state.checks, state.roomNotes, state.todo, state.order, state.npcStatus, state.status]) deleteByPrefix(bucket, p);
     delete state.visited[advId];
     delete state.lastRoom[advId];
-    delete state.done[advId];
     delete state.flag[advId];
     emit();
   },

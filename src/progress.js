@@ -25,13 +25,51 @@ export function roomKeys(advId, room) {
   return out;
 }
 
-/** { done, total, pct } — pct vaut 100 si la salle est cochée « faite ». */
+/** { done, total, pct } — pct vaut 100 si la salle est marquée « fait ». */
 export function roomProgress(advId, room) {
   const keys = roomKeys(advId, room);
   const total = keys.length;
   const done = keys.reduce((n, k) => n + (store.isHidden(k) ? 1 : 0), 0);
-  const forced = store.isDone(advId, room.id);
+  const forced = store.forcedStatus(advId, room.id) === 'fait';
   return { done, total, pct: forced ? 100 : total ? Math.round((done / total) * 100) : 0, forced };
+}
+
+// --- Statut d'une salle : inexplorée → en cours → fait, en boucle ---
+export const ROOM_STATUSES = [
+  ['inexploree', 'Inexplorée', 'st-red', 'slash'],
+  ['encours', 'En cours', 'st-orange', 'flag'],
+  ['fait', 'Fait', 'st-green', 'check'],
+];
+
+/** Statut déduit de l'avancement, tant que le MJ n'en a pas forcé un. */
+export function derivedStatus(advId, room) {
+  const keys = roomKeys(advId, room);
+  if (!keys.length) return store.isVisited(advId, room.id) ? 'encours' : 'inexploree';
+  const done = keys.reduce((n, k) => n + (store.isHidden(k) ? 1 : 0), 0);
+  if (done === 0) return 'inexploree';
+  return done === keys.length ? 'fait' : 'encours';
+}
+
+/** Statut effectif : celui forcé par le MJ, sinon celui déduit. */
+export function roomStatus(advId, room) {
+  const key = store.forcedStatus(advId, room.id) || derivedStatus(advId, room);
+  const meta = ROOM_STATUSES.find(([k]) => k === key) || ROOM_STATUSES[0];
+  return { key, label: meta[1], cls: meta[2], icon: meta[3], forced: !!store.forcedStatus(advId, room.id) };
+}
+
+/** Passe au statut suivant et le fige. */
+export function cycleRoomStatus(advId, room) {
+  const i = ROOM_STATUSES.findIndex(([k]) => k === roomStatus(advId, room).key);
+  const next = ROOM_STATUSES[(i + 1) % ROOM_STATUSES.length][0];
+  store.setStatus(advId, room.id, next);
+  return next;
+}
+
+/** Répartition des salles d'une aventure par statut. */
+export function statusTally(adv) {
+  const tally = { inexploree: 0, encours: 0, fait: 0 };
+  for (const r of adv.rooms) tally[roomStatus(adv.id, r).key]++;
+  return tally;
 }
 
 /** Progression cumulée d'une aventure. */
@@ -41,7 +79,7 @@ export function adventureProgress(adv) {
     const p = roomProgress(adv.id, r);
     done += p.forced ? p.total : p.done;
     total += p.total;
-    if (p.forced) rooms++;
+    if (roomStatus(adv.id, r).key === 'fait') rooms++;
   }
   return { done, total, rooms, pct: total ? Math.round((done / total) * 100) : 0 };
 }
