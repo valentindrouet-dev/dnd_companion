@@ -215,6 +215,47 @@ for (const lp of index.loot || []) {
   });
 }
 
+// ---------- objets magiques ----------
+for (const mp of index.magicItems || []) {
+  const file = join(DATA, mp);
+  if (!existsSync(file)) { err(`index.json : table d'objets magiques manquante ${mp}`); continue; }
+  const magic = readJSON(file) || {};
+  const rarities = magic.rarities || [];
+  if (!rarities.length) err(`${mp} : rarities manquante`);
+  const typeNames = new Set((magic.types || []).map((t) => t.name));
+  // Le tirage se fait sur les libellés de creatures.json : les deux fichiers doivent s'accorder.
+  for (const lp of index.loot || []) {
+    const rules = (readJSON(join(DATA, lp)) || {}).rules || {};
+    for (const [label] of rules.itemType || []) {
+      if (!typeNames.has(label)) err(`${mp} : aucun type « ${label} » alors que ${lp} en tire`);
+    }
+    for (const [label] of rules.rarity || []) {
+      // Artefact est volontairement absent : le DMG n'en table aucun.
+      if (label !== 'Artefact' && !rarities.includes(label)) err(`${mp} : rareté « ${label} » absente alors que ${lp} en tire`);
+    }
+  }
+  const seen = new Set();
+  (magic.types || []).forEach((t, i) => {
+    if (!t.id) return err(`${mp}.types[${i}] : id manquant`);
+    if (seen.has(t.id)) err(`${mp} : type en double « ${t.id} »`);
+    seen.add(t.id);
+    for (const k of ['name', 'plural', 'emoji']) if (!t[k]) err(`${mp}/${t.id} : ${k} manquant`);
+    for (const r of rarities) {
+      const items = t.items?.[r];
+      if (!Array.isArray(items)) { err(`${mp}/${t.id} : rareté « ${r} » manquante`); continue; }
+      if (!items.length) warn(`${mp}/${t.id} : aucun objet « ${r} » (le tirage renverra au MJ)`);
+      for (const it of items) {
+        if (!it.n) err(`${mp}/${t.id}/${r} : nom manquant`);
+        if (!['minor', 'major'].includes(it.v)) err(`${mp}/${t.id}/${r}/${it.n} : variant « ${it.v} » inattendu`);
+      }
+    }
+    if (t.generic) {
+      const any = rarities.some((r) => (t.items?.[r] || []).some((i) => i.n.startsWith(t.generic)));
+      if (!any) err(`${mp}/${t.id} : aucun objet ne commence par « ${t.generic} »`);
+    }
+  });
+}
+
 // ---------- cartes ----------
 const mapsPath = join(DATA, 'maps.json');
 if (existsSync(mapsPath)) {

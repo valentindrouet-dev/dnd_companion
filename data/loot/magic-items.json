@@ -1,0 +1,1519 @@
+{
+  "name": "Objets magiques",
+  "source": "Générateur de Valentin (artefact « Magic Item Loot »)",
+  "rarities": [
+    "Commun",
+    "Peu commun",
+    "Rare",
+    "Très rare",
+    "Légendaire"
+  ],
+  "rules": {
+    "genericChance": 0.4
+  },
+  "types": [
+    {
+      "id": "merveilleux",
+      "name": "Objet merveilleux",
+      "plural": "Objets merveilleux",
+      "emoji": "✨",
+      "description": "Objets aux propriétés magiques diverses.",
+      "generic": null,
+      "items": {
+        "Commun": [
+          {
+            "n": "Bead of Nourishment",
+            "v": "minor"
+          },
+          {
+            "n": "Bead of Refreshment",
+            "v": "minor"
+          },
+          {
+            "n": "Boots of False Tracks",
+            "v": "minor"
+          },
+          {
+            "n": "Candle of the Deep",
+            "v": "minor"
+          },
+          {
+            "n": "Charlatan's Die",
+            "v": "minor"
+          },
+          {
+            "n": "Cloak of Billowing",
+            "v": "minor"
+          },
+          {
+            "n": "Cloak of Many Fashions",
+            "v": "minor"
+          },
+          {
+            "n": "Clockwork Amulet",
+            "v": "minor"
+          },
+          {
+            "n": "Clothes of Mending",
+            "v": "minor"
+          },
+          {
+            "n": "Dark Shard Amulet",
+            "v": "minor"
+          },
+          {
+            "n": "Dread Helm",
+            "v": "minor"
+          },
+          {
+            "n": "Ear Horn of Hearing",
+            "v": "minor"
+          },
+          {
+            "n": "Enduring Spellbook",
+            "v": "minor"
+          },
+          {
+            "n": "Ersatz Eye",
+            "v": "minor"
+          },
+          {
+            "n": "Hat of Vermin",
+            "v": "minor"
+          },
+          {
+            "n": "Hat of Wizardry",
+            "v": "minor"
+          },
+          {
+            "n": "Heward's Handy Spice Pouch",
+            "v": "minor"
+          },
+          {
+            "n": "Horn of Silent Alarm",
+            "v": "minor"
+          },
+          {
+            "n": "Instrument of Illusions",
+            "v": "minor"
+          },
+          {
+            "n": "Instrument of Scribing",
+            "v": "minor"
+          },
+          {
+            "n": "Lock of Trickery",
+            "v": "minor"
+          },
+          {
+            "n": "Mystery Key",
+            "v": "minor"
+          },
+          {
+            "n": "Orb of Direction",
+            "v": "minor"
+          },
+          {
+            "n": "Orb of Time",
+            "v": "minor"
+          },
+          {
+            "n": "Perfume of Bewitching",
+            "v": "minor"
+          },
+          {
+            "n": "Pipe of Smoke Monsters",
+            "v": "minor"
+          },
+          {
+            "n": "Pole of Angling",
+            "v": "minor"
+          },
+          {
+            "n": "Pole of Collapsing",
+            "v": "minor"
+          },
+          {
+            "n": "Pot of Awakening",
+            "v": "minor"
+          },
+          {
+            "n": "Rope of Mending",
+            "v": "minor"
+          },
+          {
+            "n": "Ruby of the War Mage",
+            "v": "minor"
+          },
+          {
+            "n": "Talking Doll",
+            "v": "minor"
+          },
+          {
+            "n": "Tankard of Sobriety",
+            "v": "minor"
+          },
+          {
+            "n": "Veteran's Cane",
+            "v": "minor"
+          }
+        ],
+        "Peu commun": [
+          {
+            "n": "Alchemy Jug",
+            "v": "minor"
+          },
+          {
+            "n": "Bag of Holding",
+            "v": "minor"
+          },
+          {
+            "n": "Cap of Water Breathing",
+            "v": "minor"
+          },
+          {
+            "n": "Cloak of the Manta Ray",
+            "v": "minor"
+          },
+          {
+            "n": "Decanter of Endless Water",
+            "v": "minor"
+          },
+          {
+            "n": "Driftglobe",
+            "v": "minor"
+          },
+          {
+            "n": "Dust of Disappearance",
+            "v": "minor"
+          },
+          {
+            "n": "Dust of Dryness",
+            "v": "minor"
+          },
+          {
+            "n": "Dust of Sneezing and Choking",
+            "v": "minor"
+          },
+          {
+            "n": "Elemental Gem",
+            "v": "minor"
+          },
+          {
+            "n": "Eyes of Minute Seeing",
+            "v": "minor"
+          },
+          {
+            "n": "Goggles of Night",
+            "v": "minor"
+          },
+          {
+            "n": "Helm of Comprehending Languages",
+            "v": "minor"
+          },
+          {
+            "n": "Keoghtom's Ointment",
+            "v": "minor"
+          },
+          {
+            "n": "Lantern of Revealing",
+            "v": "minor"
+          },
+          {
+            "n": "Periapt of Health",
+            "v": "minor"
+          },
+          {
+            "n": "Robe of Useful Items",
+            "v": "minor"
+          },
+          {
+            "n": "Rope of Climbing",
+            "v": "minor"
+          },
+          {
+            "n": "Saddle of the Cavalier",
+            "v": "minor"
+          },
+          {
+            "n": "Sending Stones",
+            "v": "minor"
+          },
+          {
+            "n": "Amulet of Proof against Detection and Location",
+            "v": "major"
+          },
+          {
+            "n": "Bag of Tricks",
+            "v": "major"
+          },
+          {
+            "n": "Boots of Elvenkind",
+            "v": "major"
+          },
+          {
+            "n": "Boots of Striding and Springing",
+            "v": "major"
+          },
+          {
+            "n": "Boots of the Winterlands",
+            "v": "major"
+          },
+          {
+            "n": "Bracers of Archery",
+            "v": "major"
+          },
+          {
+            "n": "Brooch of Shielding",
+            "v": "major"
+          },
+          {
+            "n": "Broom of Flying",
+            "v": "major"
+          },
+          {
+            "n": "Circlet of Blasting",
+            "v": "major"
+          },
+          {
+            "n": "Cloak of Elvenkind",
+            "v": "major"
+          },
+          {
+            "n": "Cloak of Protection",
+            "v": "major"
+          },
+          {
+            "n": "Deck of Illusions",
+            "v": "major"
+          },
+          {
+            "n": "Eversmoking Bottle",
+            "v": "major"
+          },
+          {
+            "n": "Eyes of Charming",
+            "v": "major"
+          },
+          {
+            "n": "Eyes of the Eagle",
+            "v": "major"
+          },
+          {
+            "n": "Figurine of Wondrous Power (Silver Raven)",
+            "v": "major"
+          },
+          {
+            "n": "Gauntlets of Ogre Power",
+            "v": "major"
+          },
+          {
+            "n": "Gem of Brightness",
+            "v": "major"
+          },
+          {
+            "n": "Gloves of Missile Snaring",
+            "v": "major"
+          },
+          {
+            "n": "Gloves of Swimming and Climbing",
+            "v": "major"
+          },
+          {
+            "n": "Gloves of Thievery",
+            "v": "major"
+          },
+          {
+            "n": "Hat of Disguise",
+            "v": "major"
+          },
+          {
+            "n": "Headband of Intellect",
+            "v": "major"
+          },
+          {
+            "n": "Helm of Telepathy",
+            "v": "major"
+          },
+          {
+            "n": "Instrument of the Bards (Doss Lute)",
+            "v": "major"
+          },
+          {
+            "n": "Instrument of the Bards (Fochlucan Bandore)",
+            "v": "major"
+          },
+          {
+            "n": "Instrument of the Bards (Mac-Fuirmidh Cittern)",
+            "v": "major"
+          },
+          {
+            "n": "Medallion of Thoughts",
+            "v": "major"
+          },
+          {
+            "n": "Necklace of Adaptation",
+            "v": "major"
+          },
+          {
+            "n": "Pearl of Power",
+            "v": "major"
+          },
+          {
+            "n": "Periapt of Wound Closure",
+            "v": "major"
+          },
+          {
+            "n": "Pipes of Haunting",
+            "v": "major"
+          },
+          {
+            "n": "Pipes of the Sewers",
+            "v": "major"
+          },
+          {
+            "n": "Quiver of Ehlonna",
+            "v": "major"
+          },
+          {
+            "n": "Slippers of Spider Climbing",
+            "v": "major"
+          },
+          {
+            "n": "Stone of Good Luck",
+            "v": "major"
+          },
+          {
+            "n": "Wind Fan",
+            "v": "major"
+          },
+          {
+            "n": "Winged Boots",
+            "v": "major"
+          }
+        ],
+        "Rare": [
+          {
+            "n": "Bag of Beans",
+            "v": "minor"
+          },
+          {
+            "n": "Bead of Force",
+            "v": "minor"
+          },
+          {
+            "n": "Chime of Opening",
+            "v": "minor"
+          },
+          {
+            "n": "Folding Boat",
+            "v": "minor"
+          },
+          {
+            "n": "Heward's Handy Haversack",
+            "v": "minor"
+          },
+          {
+            "n": "Horseshoes of Speed",
+            "v": "minor"
+          },
+          {
+            "n": "Necklace of Fireballs",
+            "v": "minor"
+          },
+          {
+            "n": "Portable Hole",
+            "v": "minor"
+          },
+          {
+            "n": "Quaal's Feather Token",
+            "v": "minor"
+          },
+          {
+            "n": "Amulet of Health",
+            "v": "major"
+          },
+          {
+            "n": "Belt of Dwarvenkind",
+            "v": "major"
+          },
+          {
+            "n": "Belt of Hill Giant Strength",
+            "v": "major"
+          },
+          {
+            "n": "Boots of Levitation",
+            "v": "major"
+          },
+          {
+            "n": "Boots of Speed",
+            "v": "major"
+          },
+          {
+            "n": "Bowl of Commanding Water Elementals",
+            "v": "major"
+          },
+          {
+            "n": "Bracers of Defense",
+            "v": "major"
+          },
+          {
+            "n": "Brazier of Commanding Fire Elementals",
+            "v": "major"
+          },
+          {
+            "n": "Cape of the Mountebank",
+            "v": "major"
+          },
+          {
+            "n": "Censer of Controlling Air Elementals",
+            "v": "major"
+          },
+          {
+            "n": "Cloak of Displacement",
+            "v": "major"
+          },
+          {
+            "n": "Cloak of the Bat",
+            "v": "major"
+          },
+          {
+            "n": "Cube of Force",
+            "v": "major"
+          },
+          {
+            "n": "Daern's Instant Fortress",
+            "v": "major"
+          },
+          {
+            "n": "Dimensional Shackles",
+            "v": "major"
+          },
+          {
+            "n": "Figurine of Wondrous Power (Bronze Griffon)",
+            "v": "major"
+          },
+          {
+            "n": "Figurine of Wondrous Power (Ebony Fly)",
+            "v": "major"
+          },
+          {
+            "n": "Figurine of Wondrous Power (Golden Lions)",
+            "v": "major"
+          },
+          {
+            "n": "Figurine of Wondrous Power (Ivory Goats)",
+            "v": "major"
+          },
+          {
+            "n": "Figurine of Wondrous Power (Marble Elephant)",
+            "v": "major"
+          },
+          {
+            "n": "Figurine of Wondrous Power (Onyx Dog)",
+            "v": "major"
+          },
+          {
+            "n": "Figurine of Wondrous Power (Serpentine Owl)",
+            "v": "major"
+          },
+          {
+            "n": "Gem of Seeing",
+            "v": "major"
+          },
+          {
+            "n": "Helm of Teleportation",
+            "v": "major"
+          },
+          {
+            "n": "Horn of Blasting",
+            "v": "major"
+          },
+          {
+            "n": "Horn of Valhalla (Silver or Brass)",
+            "v": "major"
+          },
+          {
+            "n": "Instrument of the Bards (Canaith Mandolin)",
+            "v": "major"
+          },
+          {
+            "n": "Instrument of the Bards (Cli Lyre)",
+            "v": "major"
+          },
+          {
+            "n": "Ioun Stone (Awareness)",
+            "v": "major"
+          },
+          {
+            "n": "Ioun Stone (Protection)",
+            "v": "major"
+          },
+          {
+            "n": "Ioun Stone (Reserve)",
+            "v": "major"
+          },
+          {
+            "n": "Ioun Stone (Sustenance)",
+            "v": "major"
+          },
+          {
+            "n": "Iron Bands of Bilarro",
+            "v": "major"
+          },
+          {
+            "n": "Mantle of Spell Resistance",
+            "v": "major"
+          },
+          {
+            "n": "Necklace of Prayer Beads",
+            "v": "major"
+          },
+          {
+            "n": "Periapt of Proof Against Poison",
+            "v": "major"
+          },
+          {
+            "n": "Robe of Eyes",
+            "v": "major"
+          },
+          {
+            "n": "Rope of Entanglement",
+            "v": "major"
+          },
+          {
+            "n": "Stone of Controlling Earth Elementals",
+            "v": "major"
+          },
+          {
+            "n": "Wings of Flying",
+            "v": "major"
+          }
+        ],
+        "Très rare": [
+          {
+            "n": "Bag of Devouring",
+            "v": "minor"
+          },
+          {
+            "n": "Horseshoes of a Zephyr",
+            "v": "minor"
+          },
+          {
+            "n": "Nolzur's Marvelous Pigments",
+            "v": "minor"
+          },
+          {
+            "n": "Amulet of the Planes",
+            "v": "major"
+          },
+          {
+            "n": "Belt of Fire Giant Strength",
+            "v": "major"
+          },
+          {
+            "n": "Belt of Frost Giant Strength",
+            "v": "major"
+          },
+          {
+            "n": "Belt of Stone Giant Strength",
+            "v": "major"
+          },
+          {
+            "n": "Candle of Invocation",
+            "v": "major"
+          },
+          {
+            "n": "Carpet of Flying",
+            "v": "major"
+          },
+          {
+            "n": "Cloak of Arachnida",
+            "v": "major"
+          },
+          {
+            "n": "Crystal Ball (Very Rare)",
+            "v": "major"
+          },
+          {
+            "n": "Efreeti Bottle",
+            "v": "major"
+          },
+          {
+            "n": "Figurine of Wondrous Power (Obsidian Steed)",
+            "v": "major"
+          },
+          {
+            "n": "Helm of Brilliance",
+            "v": "major"
+          },
+          {
+            "n": "Horn of Valhalla (Bronze)",
+            "v": "major"
+          },
+          {
+            "n": "Instrument of the Bards (Anstruth Harp)",
+            "v": "major"
+          },
+          {
+            "n": "Ioun Stone (Absorption)",
+            "v": "major"
+          },
+          {
+            "n": "Ioun Stone (Agility)",
+            "v": "major"
+          },
+          {
+            "n": "Ioun Stone (Fortitude)",
+            "v": "major"
+          },
+          {
+            "n": "Ioun Stone (Insight)",
+            "v": "major"
+          },
+          {
+            "n": "Ioun Stone (Intellect)",
+            "v": "major"
+          },
+          {
+            "n": "Ioun Stone (Leadership)",
+            "v": "major"
+          },
+          {
+            "n": "Ioun Stone (Strength)",
+            "v": "major"
+          },
+          {
+            "n": "Manual of Bodily Health",
+            "v": "major"
+          },
+          {
+            "n": "Manual of Gainful Exercise",
+            "v": "major"
+          },
+          {
+            "n": "Manual of Golems",
+            "v": "major"
+          },
+          {
+            "n": "Manual of Quickness of Action",
+            "v": "major"
+          },
+          {
+            "n": "Mirror of Life Trapping",
+            "v": "major"
+          },
+          {
+            "n": "Robe of Scintillating Colors",
+            "v": "major"
+          },
+          {
+            "n": "Robe of Stars",
+            "v": "major"
+          },
+          {
+            "n": "Tome of Clear Thought",
+            "v": "major"
+          },
+          {
+            "n": "Tome of Leadership and Influence",
+            "v": "major"
+          },
+          {
+            "n": "Tome of Understanding",
+            "v": "major"
+          }
+        ],
+        "Légendaire": [
+          {
+            "n": "Sovereign Glue",
+            "v": "minor"
+          },
+          {
+            "n": "Universal Solvent",
+            "v": "minor"
+          },
+          {
+            "n": "Apparatus of Kwalish",
+            "v": "major"
+          },
+          {
+            "n": "Belt of Cloud Giant Strength",
+            "v": "major"
+          },
+          {
+            "n": "Belt of Storm Giant Strength",
+            "v": "major"
+          },
+          {
+            "n": "Cloak of Invisibility",
+            "v": "major"
+          },
+          {
+            "n": "Crystal Ball (Legendary)",
+            "v": "major"
+          },
+          {
+            "n": "Cubic Gate",
+            "v": "major"
+          },
+          {
+            "n": "Deck of Many Things",
+            "v": "major"
+          },
+          {
+            "n": "Horn of Valhalla (Iron)",
+            "v": "major"
+          },
+          {
+            "n": "Instrument of the Bards (Ollamh Harp)",
+            "v": "major"
+          },
+          {
+            "n": "Ioun Stone (Greater Absorption)",
+            "v": "major"
+          },
+          {
+            "n": "Ioun Stone (Mastery)",
+            "v": "major"
+          },
+          {
+            "n": "Ioun Stone (Regeneration)",
+            "v": "major"
+          },
+          {
+            "n": "Iron Flask",
+            "v": "major"
+          },
+          {
+            "n": "Robe of the Archmagi",
+            "v": "major"
+          },
+          {
+            "n": "Scarab of Protection",
+            "v": "major"
+          },
+          {
+            "n": "Sphere of Annihilation",
+            "v": "major"
+          },
+          {
+            "n": "Talisman of Pure Good",
+            "v": "major"
+          },
+          {
+            "n": "Talisman of the Sphere",
+            "v": "major"
+          },
+          {
+            "n": "Talisman of Ultimate Evil",
+            "v": "major"
+          },
+          {
+            "n": "Tome of the Stilled Tongue",
+            "v": "major"
+          },
+          {
+            "n": "Well of Many Worlds",
+            "v": "major"
+          }
+        ]
+      }
+    },
+    {
+      "id": "arme",
+      "name": "Arme",
+      "plural": "Armes",
+      "emoji": "⚔️",
+      "description": "Armes enchantées conférant des pouvoirs.",
+      "generic": "Weapon +",
+      "items": {
+        "Commun": [
+          {
+            "n": "Moon-Touched Sword",
+            "v": "minor"
+          },
+          {
+            "n": "Unbreakable Arrow",
+            "v": "minor"
+          },
+          {
+            "n": "Walloping Ammunition",
+            "v": "minor"
+          }
+        ],
+        "Peu commun": [
+          {
+            "n": "Ammunition +1",
+            "v": "minor"
+          },
+          {
+            "n": "Javelin of Lightning",
+            "v": "major"
+          },
+          {
+            "n": "Sword of Vengeance",
+            "v": "major"
+          },
+          {
+            "n": "Trident of Fish Command",
+            "v": "major"
+          },
+          {
+            "n": "Weapon of Warning",
+            "v": "major"
+          },
+          {
+            "n": "Weapon +1",
+            "v": "major"
+          }
+        ],
+        "Rare": [
+          {
+            "n": "Ammunition +2",
+            "v": "minor"
+          },
+          {
+            "n": "Berserker Axe",
+            "v": "major"
+          },
+          {
+            "n": "Dagger of Venom",
+            "v": "major"
+          },
+          {
+            "n": "Dragon Slayer",
+            "v": "major"
+          },
+          {
+            "n": "Flame Tongue",
+            "v": "major"
+          },
+          {
+            "n": "Giant Slayer",
+            "v": "major"
+          },
+          {
+            "n": "Mace of Disruption",
+            "v": "major"
+          },
+          {
+            "n": "Mace of Smiting",
+            "v": "major"
+          },
+          {
+            "n": "Mace of Terror",
+            "v": "major"
+          },
+          {
+            "n": "Sun Blade",
+            "v": "major"
+          },
+          {
+            "n": "Sword of Life Stealing",
+            "v": "major"
+          },
+          {
+            "n": "Sword of Wounding",
+            "v": "major"
+          },
+          {
+            "n": "Vicious Weapon",
+            "v": "major"
+          },
+          {
+            "n": "Weapon +2",
+            "v": "major"
+          }
+        ],
+        "Très rare": [
+          {
+            "n": "Ammunition +3",
+            "v": "minor"
+          },
+          {
+            "n": "Arrow of Slaying",
+            "v": "minor"
+          },
+          {
+            "n": "Dancing Sword",
+            "v": "major"
+          },
+          {
+            "n": "Dwarven Thrower",
+            "v": "major"
+          },
+          {
+            "n": "Frost Brand",
+            "v": "major"
+          },
+          {
+            "n": "Nine Lives Stealer",
+            "v": "major"
+          },
+          {
+            "n": "Oathbow",
+            "v": "major"
+          },
+          {
+            "n": "Scimitar of Speed",
+            "v": "major"
+          },
+          {
+            "n": "Sword of Sharpness",
+            "v": "major"
+          },
+          {
+            "n": "Weapon +3",
+            "v": "major"
+          }
+        ],
+        "Légendaire": [
+          {
+            "n": "Defender",
+            "v": "major"
+          },
+          {
+            "n": "Hammer of Thunderbolts",
+            "v": "major"
+          },
+          {
+            "n": "Holy Avenger",
+            "v": "major"
+          },
+          {
+            "n": "Luck Blade",
+            "v": "major"
+          },
+          {
+            "n": "Sword of Answering",
+            "v": "major"
+          },
+          {
+            "n": "Vorpal Sword",
+            "v": "major"
+          }
+        ]
+      }
+    },
+    {
+      "id": "armure",
+      "name": "Armure",
+      "plural": "Armures",
+      "emoji": "🛡️",
+      "description": "Protections magiques offrant une défense accrue.",
+      "generic": "Armor +",
+      "items": {
+        "Commun": [
+          {
+            "n": "Armor of Gleaming",
+            "v": "minor"
+          },
+          {
+            "n": "Cast-Off Armor",
+            "v": "minor"
+          },
+          {
+            "n": "Shield of Expression",
+            "v": "minor"
+          },
+          {
+            "n": "Smoldering Armor",
+            "v": "minor"
+          }
+        ],
+        "Peu commun": [
+          {
+            "n": "Mariner's Armor",
+            "v": "minor"
+          },
+          {
+            "n": "Mithral Armor",
+            "v": "minor"
+          },
+          {
+            "n": "Adamantine Armor",
+            "v": "major"
+          },
+          {
+            "n": "Sentinel Shield",
+            "v": "major"
+          },
+          {
+            "n": "Shield +1",
+            "v": "major"
+          }
+        ],
+        "Rare": [
+          {
+            "n": "Armor of Resistance",
+            "v": "major"
+          },
+          {
+            "n": "Armor of Vulnerability",
+            "v": "major"
+          },
+          {
+            "n": "Armor +1",
+            "v": "major"
+          },
+          {
+            "n": "Arrow-Catching Shield",
+            "v": "major"
+          },
+          {
+            "n": "Elven Chain",
+            "v": "major"
+          },
+          {
+            "n": "Glamoured Studded Leather",
+            "v": "major"
+          },
+          {
+            "n": "Shield of Missile Attraction",
+            "v": "major"
+          },
+          {
+            "n": "Shield +2",
+            "v": "major"
+          }
+        ],
+        "Très rare": [
+          {
+            "n": "Animated Shield",
+            "v": "major"
+          },
+          {
+            "n": "Armor +2",
+            "v": "major"
+          },
+          {
+            "n": "Demon Armor",
+            "v": "major"
+          },
+          {
+            "n": "Dragon Scale Mail",
+            "v": "major"
+          },
+          {
+            "n": "Dwarven Plate",
+            "v": "major"
+          },
+          {
+            "n": "Shield +3",
+            "v": "major"
+          },
+          {
+            "n": "Spellguard Shield",
+            "v": "major"
+          }
+        ],
+        "Légendaire": [
+          {
+            "n": "Armor of Invulnerability",
+            "v": "major"
+          },
+          {
+            "n": "Armor +3",
+            "v": "major"
+          },
+          {
+            "n": "Efreeti Chain",
+            "v": "major"
+          },
+          {
+            "n": "Plate Armor of Etherealness",
+            "v": "major"
+          }
+        ]
+      }
+    },
+    {
+      "id": "anneau",
+      "name": "Anneau",
+      "plural": "Anneaux",
+      "emoji": "💍",
+      "description": "Anneaux magiques aux effets puissants.",
+      "generic": null,
+      "items": {
+        "Commun": [],
+        "Peu commun": [
+          {
+            "n": "Ring of Swimming",
+            "v": "minor"
+          },
+          {
+            "n": "Ring of Jumping",
+            "v": "major"
+          },
+          {
+            "n": "Ring of Mind Shielding",
+            "v": "major"
+          },
+          {
+            "n": "Ring of Warmth",
+            "v": "major"
+          },
+          {
+            "n": "Ring of Water Walking",
+            "v": "major"
+          }
+        ],
+        "Rare": [
+          {
+            "n": "Ring of Animal Influence",
+            "v": "major"
+          },
+          {
+            "n": "Ring of Evasion",
+            "v": "major"
+          },
+          {
+            "n": "Ring of Feather Falling",
+            "v": "major"
+          },
+          {
+            "n": "Ring of Free Action",
+            "v": "major"
+          },
+          {
+            "n": "Ring of Protection",
+            "v": "major"
+          },
+          {
+            "n": "Ring of Resistance",
+            "v": "major"
+          },
+          {
+            "n": "Ring of Spell Storing",
+            "v": "major"
+          },
+          {
+            "n": "Ring of the Ram",
+            "v": "major"
+          },
+          {
+            "n": "Ring of X-Ray Vision",
+            "v": "major"
+          }
+        ],
+        "Très rare": [
+          {
+            "n": "Ring of Regeneration",
+            "v": "major"
+          },
+          {
+            "n": "Ring of Shooting Stars",
+            "v": "major"
+          },
+          {
+            "n": "Ring of Telekinesis",
+            "v": "major"
+          }
+        ],
+        "Légendaire": [
+          {
+            "n": "Ring of Air Elemental Command",
+            "v": "major"
+          },
+          {
+            "n": "Ring of Djinni Summoning",
+            "v": "major"
+          },
+          {
+            "n": "Ring of Earth Elemental Command",
+            "v": "major"
+          },
+          {
+            "n": "Ring of Fire Elemental Command",
+            "v": "major"
+          },
+          {
+            "n": "Ring of Invisibility",
+            "v": "major"
+          },
+          {
+            "n": "Ring of Spell Turning",
+            "v": "major"
+          },
+          {
+            "n": "Ring of Three Wishes",
+            "v": "major"
+          },
+          {
+            "n": "Ring of Water Elemental Command",
+            "v": "major"
+          }
+        ]
+      }
+    },
+    {
+      "id": "parchemin",
+      "name": "Parchemin",
+      "plural": "Parchemins",
+      "emoji": "📜",
+      "description": "Parchemins contenant des sorts à lancer.",
+      "generic": null,
+      "items": {
+        "Commun": [
+          {
+            "n": "Spell Scroll (Cantrip)",
+            "v": "minor"
+          },
+          {
+            "n": "Spell Scroll (1st Level)",
+            "v": "minor"
+          }
+        ],
+        "Peu commun": [
+          {
+            "n": "Spell Scroll (2nd Level)",
+            "v": "minor"
+          },
+          {
+            "n": "Spell Scroll (3rd Level)",
+            "v": "minor"
+          }
+        ],
+        "Rare": [
+          {
+            "n": "Scroll of Protection",
+            "v": "minor"
+          },
+          {
+            "n": "Spell Scroll (4th Level)",
+            "v": "minor"
+          },
+          {
+            "n": "Spell Scroll (5th Level)",
+            "v": "minor"
+          }
+        ],
+        "Très rare": [
+          {
+            "n": "Spell Scroll (6th Level)",
+            "v": "minor"
+          },
+          {
+            "n": "Spell Scroll (7th Level)",
+            "v": "minor"
+          },
+          {
+            "n": "Spell Scroll (8th Level)",
+            "v": "minor"
+          }
+        ],
+        "Légendaire": [
+          {
+            "n": "Spell Scroll (9th Level)",
+            "v": "minor"
+          }
+        ]
+      }
+    },
+    {
+      "id": "baton",
+      "name": "Bâton",
+      "plural": "Bâtons",
+      "emoji": "🪄",
+      "description": "Bâtons, baguettes et sceptres : des focus magiques pour lancer des sorts.",
+      "generic": null,
+      "items": {
+        "Commun": [
+          {
+            "n": "Staff of Adornment",
+            "v": "minor"
+          },
+          {
+            "n": "Staff of Birdcalls",
+            "v": "minor"
+          },
+          {
+            "n": "Staff of Flowers",
+            "v": "minor"
+          },
+          {
+            "n": "Wand of Conducting",
+            "v": "minor"
+          },
+          {
+            "n": "Wand of Pyrotechnics",
+            "v": "minor"
+          },
+          {
+            "n": "Wand of Scowls",
+            "v": "minor"
+          },
+          {
+            "n": "Wand of Smiles",
+            "v": "minor"
+          }
+        ],
+        "Peu commun": [
+          {
+            "n": "Immovable Rod",
+            "v": "minor"
+          },
+          {
+            "n": "Wand of Magic Detection",
+            "v": "minor"
+          },
+          {
+            "n": "Wand of Secrets",
+            "v": "minor"
+          },
+          {
+            "n": "Rod of the Pact Keeper +1",
+            "v": "major"
+          },
+          {
+            "n": "Staff of the Adder",
+            "v": "major"
+          },
+          {
+            "n": "Staff of the Python",
+            "v": "major"
+          },
+          {
+            "n": "Wand of Magic Missiles",
+            "v": "major"
+          },
+          {
+            "n": "Wand of the War Mage +1",
+            "v": "major"
+          },
+          {
+            "n": "Wand of Web",
+            "v": "major"
+          }
+        ],
+        "Rare": [
+          {
+            "n": "Rod of Rulership",
+            "v": "major"
+          },
+          {
+            "n": "Rod of the Pact Keeper +2",
+            "v": "major"
+          },
+          {
+            "n": "Staff of Charming",
+            "v": "major"
+          },
+          {
+            "n": "Staff of Healing",
+            "v": "major"
+          },
+          {
+            "n": "Staff of Swarming Insects",
+            "v": "major"
+          },
+          {
+            "n": "Staff of the Woodlands",
+            "v": "major"
+          },
+          {
+            "n": "Staff of Withering",
+            "v": "major"
+          },
+          {
+            "n": "Tentacle Rod",
+            "v": "major"
+          },
+          {
+            "n": "Wand of Binding",
+            "v": "major"
+          },
+          {
+            "n": "Wand of Enemy Detection",
+            "v": "major"
+          },
+          {
+            "n": "Wand of Fear",
+            "v": "major"
+          },
+          {
+            "n": "Wand of Fireballs",
+            "v": "major"
+          },
+          {
+            "n": "Wand of Lightning Bolts",
+            "v": "major"
+          },
+          {
+            "n": "Wand of Paralysis",
+            "v": "major"
+          },
+          {
+            "n": "Wand of the War Mage +2",
+            "v": "major"
+          },
+          {
+            "n": "Wand of Wonder",
+            "v": "major"
+          }
+        ],
+        "Très rare": [
+          {
+            "n": "Rod of Absorption",
+            "v": "major"
+          },
+          {
+            "n": "Rod of Alertness",
+            "v": "major"
+          },
+          {
+            "n": "Rod of Security",
+            "v": "major"
+          },
+          {
+            "n": "Rod of the Pact Keeper +3",
+            "v": "major"
+          },
+          {
+            "n": "Staff of Fire",
+            "v": "major"
+          },
+          {
+            "n": "Staff of Frost",
+            "v": "major"
+          },
+          {
+            "n": "Staff of Power",
+            "v": "major"
+          },
+          {
+            "n": "Staff of Striking",
+            "v": "major"
+          },
+          {
+            "n": "Staff of Thunder and Lightning",
+            "v": "major"
+          },
+          {
+            "n": "Wand of Polymorph",
+            "v": "major"
+          },
+          {
+            "n": "Wand of the War Mage +3",
+            "v": "major"
+          }
+        ],
+        "Légendaire": [
+          {
+            "n": "Rod of Lordly Might",
+            "v": "major"
+          },
+          {
+            "n": "Rod of Resurrection",
+            "v": "major"
+          },
+          {
+            "n": "Staff of the Magi",
+            "v": "major"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -18,6 +18,7 @@ import { loadLoot } from './loot/generator.js';
 import { setTextDecorator } from './markup.js';
 import { glossaryView } from './views/glossary.js';
 import { lootView } from './views/loot.js';
+import { magicView } from './views/magic.js';
 import { toast } from './ui/toast.js';
 import { registerServiceWorker } from './update.js';
 
@@ -40,6 +41,7 @@ async function buildView(route) {
     case 'bestiary': return bestiaryView(route);
     case 'glossary': return glossaryView(route);
     case 'loot': return lootView(route);
+    case 'magic': return magicView(route);
     case 'settings': return settingsView(route);
     default: return homeView(route);
   }
@@ -85,7 +87,7 @@ async function boot() {
     await loadMonsters();
     await loadMaps();
     await loadGlossary(getIndex().glossary || []);
-    await loadLoot(getIndex().loot || []);
+    await loadLoot(getIndex().loot || [], getIndex().magicItems || []);
     setTextDecorator(linkGlossary);
   } catch (e) {
     app.replaceChildren(errorView(e));

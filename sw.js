@@ -6,7 +6,7 @@
 // pour la mettre à jour partout à la fois ; `npm run validate` vérifie la cohérence.
 // La liste SHELL est également vérifiée (tous les fichiers de src/ doivent y figurer).
 
-const APP_VERSION = '0.11.0';
+const APP_VERSION = '0.12.0';
 const CACHE = 'dnd-companion-' + APP_VERSION;
 
 const SHELL = [
@@ -41,6 +41,7 @@ const SHELL = [
   './src/components/connections.js',
   './src/components/map.js',
   './src/components/monster.js',
+  './src/components/band.js',
   './src/components/npc.js',
   './src/components/npcstatus.js',
   './src/components/treasure.js',
@@ -54,14 +55,17 @@ const SHELL = [
   './src/views/shell.js',
   './src/views/sidebar.js',
   './src/views/loot.js',
+  './src/views/magic.js',
   './src/loot/generator.js',
   './src/loot/ui.js',
+  './src/loot/magic.js',
   './src/encounters/generator.js',
   './src/encounters/ui.js',
   './data/maps.json',
   './data/monsters/enhanced.json',
   './data/glossary/undermountain.json',
   './data/loot/creatures.json',
+  './data/loot/magic-items.json',
 ];
 
 // Les images de carte sont listées dans data/maps.json : on les met aussi hors-ligne.

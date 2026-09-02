@@ -30,6 +30,8 @@ pièges et tests, liaisons vers les salles connectées, générateur de loot.
   1 naturel, probabilité ligne par ligne). Le bouton **Récolte** de la fiche est pré-rempli avec le
   nombre de créatures du groupe, et le résultat part dans les notes de séance. La page **Récoltes**
   affiche les 63 tables : recherche, filtre par catégorie, probabilités et gain moyen par cadavre.
+- **Objets magiques** : quand une récolte en produit un, il est nommé — 346 objets du DMG, par type
+  et par rareté. La page **Objets magiques** les parcourt et les tire à la main.
 - **Mots-clés cliquables** : les noms de personnages, factions, lieux et objets ouvrent une fiche
   (qui, but, état en cours de partie, modifiable), et un **index alphabétique** les rassemble.
 - **Drapeau de fin de séance** : un seul par aventure, « Reprendre » y ramène.
@@ -118,6 +120,12 @@ revient à ajouter un objet au tableau `creatures` — voir `docs/DATA_SCHEMA.md
 63 tables couvrent les 60 créatures du bestiaire ; les 11 tables restantes viennent du
 générateur d'origine et attendent les créatures correspondantes. La page `#/recoltes` les
 affiche toutes, avec le gain moyen calculé par table.
+
+Les objets magiques sont nommés depuis `data/loot/magic-items.json` : la ligne de butin
+tire une rareté et un type (poids définis dans `creatures.json`), puis un objet dans la
+liste correspondante. Les armes et armures génériques (« Weapon +X », « Armor +X ») ne
+sortent que 4 fois sur 10 quand la rareté propose aussi des objets nommés. La page
+`#/objets` parcourt le catalogue et permet de tirer à la main.
 
 ## Licences
 

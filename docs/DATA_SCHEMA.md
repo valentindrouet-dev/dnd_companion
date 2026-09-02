@@ -220,6 +220,35 @@ Le butin qu'on trouve sur un cadavre, créature par créature.
 Un monstre ne peut être réclamé que par une seule table ; le validateur le vérifie, comme
 il vérifie que `rarity` et `itemType` totalisent bien 100 %.
 
+## Objets magiques (`data/loot/magic-items.json`)
+
+Le catalogue qui nomme les objets tirés par les lignes `magic` des tables de récolte.
+
+```jsonc
+{
+  "rarities": ["Commun", "Peu commun", "Rare", "Très rare", "Légendaire"],
+  "rules": { "genericChance": 0.4 },
+  "types": [{
+    "id": "arme", "name": "Arme", "plural": "Armes", "emoji": "⚔️",
+    "description": "Armes enchantées conférant des pouvoirs.",
+    "generic": "Weapon +",                       // préfixe des objets génériques (facultatif)
+    "items": {
+      "Rare": [{ "n": "Flame Tongue", "v": "major" }, { "n": "Weapon +2", "v": "major" }]
+    }
+  }]
+}
+```
+
+- Le `name` d'un type doit correspondre exactement à un libellé de `rules.itemType` dans
+  `creatures.json`, et `rarities` à ses libellés de `rules.rarity` : c'est ce qui relie le
+  tirage au catalogue. Le validateur refuse toute divergence.
+- `v` vaut `minor` ou `major` (la moitié de table du DMG dont l'objet provient).
+- `generic` : quand une rareté contient à la fois des objets génériques (`Weapon +2`) et des
+  objets nommés, les génériques ne sortent que `genericChance` du temps.
+- Une rareté peut être vide (il n'existe aucun anneau commun) : le tirage renvoie alors la
+  rareté et le type, en laissant le choix de l'objet au MJ. `Artefact`, absent des tables du
+  DMG, se comporte de la même façon.
+
 ## Index (`data/glossary/*.json`)
 
 Personnages, factions, lieux, objets et divinités. Les `aliases` sont repérés automatiquement

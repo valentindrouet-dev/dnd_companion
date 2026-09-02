@@ -19,5 +19,8 @@
   ],
   "loot": [
     "loot/creatures.json"
+  ],
+  "magicItems": [
+    "loot/magic-items.json"
   ]
 }

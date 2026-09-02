@@ -14,17 +14,56 @@
 export const GENERATOR_NAME = 'Récolte d’ennemis';
 
 let data = null;
+let magic = null;
 const byMonster = new Map();
 
-export async function loadLoot(paths = []) {
+async function getJSON(path) {
+  const res = await fetch('./data/' + path, { cache: 'no-cache' });
+  if (!res.ok) throw new Error(`Impossible de charger ${path} (${res.status})`);
+  return res.json();
+}
+
+export async function loadLoot(paths = [], magicPaths = []) {
   for (const path of paths) {
-    const res = await fetch('./data/' + path, { cache: 'no-cache' });
-    if (!res.ok) throw new Error(`Impossible de charger ${path} (${res.status})`);
-    data = await res.json();
+    data = await getJSON(path);
     for (const c of data.creatures || []) {
       for (const id of c.match || []) byMonster.set(id, c);
     }
   }
+  for (const path of magicPaths) magic = await getJSON(path);
+}
+
+// ---------------------------------------------------------------- objets magiques
+
+export function magicTypes() { return magic?.types || []; }
+export function magicRarities() { return magic?.rarities || []; }
+export function magicType(id) { return (magic?.types || []).find((t) => t.id === id) || null; }
+/** Les libellés de rareté et de type utilisés par les tirages viennent de creatures.json. */
+export function magicTypeByName(name) { return (magic?.types || []).find((t) => t.name === name) || null; }
+export function magicItemCount() {
+  return (magic?.types || []).reduce((n, t) => n + Object.values(t.items).reduce((m, l) => m + l.length, 0), 0);
+}
+
+/**
+ * Nomme un objet d'un type et d'une rareté donnés.
+ * Les armes et armures génériques (« Weapon +X », « Armor +X ») ne sortent que
+ * 4 fois sur 10 quand la rareté propose aussi des objets nommés.
+ * @returns {{name, variant}|null} null si le DMG ne propose rien à cette rareté.
+ */
+export function pickMagicItem(typeName, rarity, rng = Math.random) {
+  const type = magicTypeByName(typeName);
+  const all = type?.items?.[rarity] || [];
+  if (!all.length) return null;
+  let pool = all;
+  if (type.generic) {
+    const generic = all.filter((i) => i.n.startsWith(type.generic));
+    const named = all.filter((i) => !i.n.startsWith(type.generic));
+    if (generic.length && named.length) {
+      pool = rng() < (magic?.rules?.genericChance ?? 0.4) ? generic : named;
+    }
+  }
+  const pick = pool[Math.floor(rng() * pool.length)];
+  return { name: pick.n, variant: pick.v };
 }
 
 /** Toutes les tables, hors celles masquées dans les données. */
@@ -94,11 +133,16 @@ function weighted(table, rng) {
   return table[table.length - 1][0];
 }
 
-function magicItem(tables, rng) {
+/** Un objet magique complet (rareté, type, nom), sans passer par une créature. */
+export function rollFreeMagicItem(rng = Math.random) {
+  return rollMagicItem(null, rng);
+}
+
+function rollMagicItem(tables, rng) {
   const rules = data?.rules || {};
   const rarity = weighted(rules.rarity || [['Commun', 100]], rng);
   const kind = weighted(rules.itemType || [['Objet merveilleux', 100]], rng);
-  return { rarity, kind, tables };
+  return { rarity, kind, tables, named: pickMagicItem(kind, rarity, rng) };
 }
 
 // ---------------------------------------------------------------- tirage
@@ -111,8 +155,15 @@ function rollOnce(creature, rng) {
     const qty = rollDice(line.qty, rng);
 
     if (line.magic) {
-      const { rarity, kind, tables } = magicItem(line.magic, rng);
-      found.push({ emoji: line.emoji, name: `Objet magique (${rarity})`, qty, magic: rarity, value: kind, use: `table ${tables}` });
+      const { rarity, kind, tables, named } = rollMagicItem(line.magic, rng);
+      found.push({
+        emoji: line.emoji,
+        // Le DMG ne propose rien à certaines combinaisons (un anneau commun, un artefact) : c'est au MJ de trancher.
+        name: named ? named.name : `Objet magique — à choisir`,
+        qty, magic: rarity, rarity, kind, tables,
+        value: `${kind} · ${rarity}`,
+        use: named ? named.variant : `aucun ${kind.toLowerCase()} ${rarity.toLowerCase()} au DMG`,
+      });
       continue;
     }
     if (line.coin) { found.push({ coin: line.coin, qty }); continue; }

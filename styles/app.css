@@ -1180,10 +1180,10 @@ a.gref:active { color: var(--c-feature); }
 .loot-list.proba .lp.mid { color: var(--accent); }
 .loot-list.proba .lp.lo { color: var(--c-todo); }
 
-/* ---------- Page des récoltes ---------- */
-.loot-card { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); margin-bottom: 5px; overflow: hidden; }
-.loot-card.is-open { border-color: color-mix(in srgb, var(--accent) 55%, transparent); }
-.loot-card-head {
+/* ---------- Bandeaux (récoltes, bestiaire, objets magiques) ---------- */
+.band { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); margin-bottom: 5px; overflow: hidden; }
+.band.is-open { border-color: color-mix(in srgb, var(--accent) 55%, transparent); }
+.band-head {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -1197,18 +1197,36 @@ a.gref:active { color: var(--c-feature); }
   text-align: left;
   cursor: pointer;
 }
-.loot-card.is-open .loot-card-head { background: var(--accent-soft); }
-.loot-card-head .lc-name { flex: 1; min-width: 0; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.loot-card-head .lc-caret { flex: 0 0 auto; color: var(--muted); }
-.loot-dot { flex: 0 0 auto; width: 11px; height: 11px; border-radius: 50%; background: var(--lt, var(--border)); }
-.loot-card-body { padding: 4px 12px 12px; }
-.loot-card-body .loot-row .lev { flex: 0 0 auto; min-width: 52px; text-align: right; font-variant-numeric: tabular-nums; }
+.band.is-open .band-head { background: var(--accent-soft); }
+.band-name { flex: 1; min-width: 0; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.band-meta { display: flex; align-items: center; gap: 6px; flex: 0 0 auto; color: var(--muted); font-size: 0.86em; }
+.band-caret { flex: 0 0 auto; color: var(--muted); }
+.band-dot { flex: 0 0 auto; width: 11px; height: 11px; border-radius: 50%; background: var(--lt, var(--border)); }
+.band-body { padding: 4px 12px 12px; }
+.band-body .loot-row .lev { flex: 0 0 auto; min-width: 52px; text-align: right; font-variant-numeric: tabular-nums; }
 
-/* En portrait, les pastilles de la ligne repliée passent à la ligne plutôt que d'écraser le nom. */
+/* En portrait, les pastilles passent à la ligne plutôt que d'écraser le nom. */
 @media (max-width: 700px) {
-  .loot-card-head { flex-wrap: wrap; padding: 8px 12px; }
-  .loot-card-head .lc-name { flex: 1 0 100%; white-space: normal; }
-  .loot-card-head .lc-caret { margin-left: auto; }
+  .band-head { flex-wrap: wrap; padding: 8px 12px; }
+  .band-name { flex: 1 0 100%; white-space: normal; }
+  .band-caret { margin-left: auto; }
   .loot-row { flex-wrap: wrap; }
   .loot-row .lname { flex: 1 0 100%; }
 }
+
+/* Objets magiques : une couleur par rareté. */
+.rar { font-weight: 700; }
+.rar-commun        { color: var(--muted); }
+.rar-peu-commun    { color: var(--ok); }
+.rar-rare          { color: var(--info); }
+.rar-tres-rare     { color: var(--c-feature); }
+.rar-legendaire    { color: var(--c-todo); }
+.rar-artefact      { color: var(--danger); }
+.band-dot.rar-commun { background: var(--muted); }
+.band-dot.rar-peu-commun { background: var(--ok); }
+.band-dot.rar-rare { background: var(--info); }
+.band-dot.rar-tres-rare { background: var(--c-feature); }
+.band-dot.rar-legendaire { background: var(--c-todo); }
+.mi-variant { font-size: 0.78em; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.band-type { max-width: 190px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+@media (max-width: 900px) { .band-type { display: none; } }

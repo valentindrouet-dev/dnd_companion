@@ -5,6 +5,7 @@ import { icon } from '../icons.js';
 import { markup } from '../markup.js';
 import { getMonster } from '../data.js';
 import { shell } from './shell.js';
+import { band, bandBar, expandAll } from '../components/band.js';
 import { openLootPopup } from '../loot/ui.js';
 import { openMonsterPopup } from '../components/monster.js';
 import { lootCreatures, expectedValue, averageRoll, lineValue } from '../loot/generator.js';
@@ -45,40 +46,35 @@ export async function lootView() {
     const items = lootCreatures().filter((c) => (!type || c.type === type) && matches(c, q));
     // replaceChildren est du DOM natif : il faut lui passer des nœuds, pas un tableau.
     list.replaceChildren(h('div', null,
-      h('div', { class: 'budget' },
-        h('span', null, h('b', null, items.length), ' table(s)'),
-        h('span', null, h('b', null, items.reduce((n, c) => n + c.loot.length, 0)), ' lignes de butin'),
-        h('span', null, h('b', null, items.reduce((n, c) => n + (c.match || []).length, 0)), ' créatures du bestiaire'),
-        (() => {
-          // Un état mixte doit tout ouvrir, pas s'inverser ligne par ligne.
-          const allOpen = items.length > 0 && items.every((c) => open.has(c.id));
-          return h('button', { class: 'btn btn-sm btn-ghost', onclick: () => { items.forEach((c) => allOpen ? open.delete(c.id) : open.add(c.id)); build(); } },
-            icon(allOpen ? 'compress' : 'expand'), allOpen ? 'Tout replier' : 'Tout déplier');
-        })()),
+      bandBar([
+        [items.length, 'table(s)'],
+        [items.reduce((n, c) => n + c.loot.length, 0), 'lignes de butin'],
+        [items.reduce((n, c) => n + (c.match || []).length, 0), 'créatures du bestiaire'],
+      ], expandAll(items.map((c) => c.id), open, build)),
       items.length ? items.map(row) : h('div', { class: 'empty' }, 'Aucune table ne correspond.')));
   }
 
   function row(c) {
     const isOpen = open.has(c.id);
     const ev = expectedValue(c);
-    const head = h('button', {
-      class: 'loot-card-head', 'aria-expanded': String(isOpen),
-      onclick: () => { isOpen ? open.delete(c.id) : open.add(c.id); build(); },
-    },
-      h('span', { class: `loot-dot lt-${c.type}` }),
-      h('span', { class: 'lc-name' }, c.name),
-      h('span', { class: 'pill info' }, `${c.check.skill} DD ${c.check.dc}`),
-      h('span', { class: 'pill' }, c.duration),
-      h('span', { class: 'pill accent' }, `≈ ${ev.po} po`),
-      h('span', { class: 'muted small' }, `${c.loot.length} lignes`),
-      icon(isOpen ? 'minus' : 'plus', 'lc-caret'));
-
-    return h('div', { class: 'loot-card' + (isOpen ? ' is-open' : '') }, head, isOpen ? details(c, ev) : null);
+    return band({
+      tone: c.type,
+      title: c.name,
+      open: isOpen,
+      onToggle: () => { isOpen ? open.delete(c.id) : open.add(c.id); build(); },
+      meta: [
+        h('span', { class: 'pill info' }, `${c.check.skill} DD ${c.check.dc}`),
+        h('span', { class: 'pill' }, c.duration),
+        h('span', { class: 'pill accent' }, `≈ ${ev.po} po`),
+        h('span', null, `${c.loot.length} lignes`),
+      ],
+      body: () => details(c, ev),
+    });
   }
 
   function details(c, ev) {
     const covered = (c.match || []).map(getMonster).filter(Boolean);
-    return h('div', { class: 'loot-card-body' },
+    return h('div', null,
       h('div', { class: 'block b-read' }, h('div', { class: 'block-body read' }, c.description)),
       h('div', { class: 'loot-list proba' }, c.loot.map(lootLine)),
       h('div', { class: 'block b-danger' },
