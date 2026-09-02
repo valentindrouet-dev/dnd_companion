@@ -61,7 +61,7 @@ def build(name, spec, index):
     files = [f'assets/maps/{name}/complete.jpg']
     print(f'  carte complète {full.width}×{full.height} ({size // 1024} Ko)')
 
-    rooms, total = {}, 0
+    rooms, spots, total = {}, {}, 0
     for room, val in spec['rooms'].items():
         cx, cy = val[0], val[1]
         w = val[2] if len(val) > 2 else DEFAULT_W
@@ -74,9 +74,11 @@ def build(name, spec, index):
         rel = f'assets/maps/{name}/{room}.jpg'
         total += save_jpeg(sub, os.path.join(ROOT, rel))
         rooms[room] = rel
+        # position relative sur la carte complète, en % — sert aux zones cliquables
+        spots[room] = [round((cx - clip.x0) / clip.width * 100, 2), round((cy - clip.y0) / clip.height * 100, 2)]
         files.append(rel)
     print(f'  {len(rooms)} cadrages de salle ({total // 1024} Ko au total)')
-    index[name] = {'complete': f'assets/maps/{name}/complete.jpg', 'rooms': rooms}
+    index[name] = {'complete': f'assets/maps/{name}/complete.jpg', 'rooms': rooms, 'spots': spots}
     return files
 
 

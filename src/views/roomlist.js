@@ -65,7 +65,7 @@ function row(adv, r) {
       h('span', { class: 'name' }, r.name),
       h('span', { class: 'ltags' }, (r.tags || []).slice(0, 3).map((t) => {
         const ico = tagIcon(t);
-        return ico ? h('span', { class: 'ltag', title: t }, icon(ico)) : null;
+        return ico ? h('span', { class: 'ltag ' + slug(t), title: t }, icon(ico)) : null;
       })),
       h('span', { class: 'lpct' }, p.total ? `${p.pct}%` : '—'),
       h('span', { class: 'lbar' }, h('i', { style: { width: p.pct + '%' } }))),

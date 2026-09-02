@@ -5,7 +5,7 @@
 const STORAGE_KEY = 'dnd-companion:v1';
 
 const DEFAULT = {
-  settings: { theme: 'dark', fontScale: 1, sidebar: true },
+  settings: { theme: 'dark', fontScale: 1, sidebar: true, condensed: false, mapClick: true },
   hidden: {},     // clé élément -> 1        (déjà lu / dit / vaincu / distribué)
   overrides: {},  // clé élément -> texte    (texte modifié à la volée)
   notes: {},      // clé élément -> texte    (annotation ajoutée)
@@ -13,6 +13,10 @@ const DEFAULT = {
   roomNotes: {},  // "adv/room" -> texte     (notes libres de séance)
   visited: {},    // adv -> { room -> timestamp }
   done: {},       // adv -> { room -> timestamp }   (salles cochées « faites »)
+  todo: {},       // clé bloc -> 1          (note du MJ à traiter, remontée sur la page d'aventure)
+  order: {},      // "adv/room/type" -> [ids]  (ordre choisi par glisser-déposer)
+  flag: {},       // adv -> room            (marque-page de fin de séance, un seul par aventure)
+  npcStatus: {},  // "adv/npc" -> statut
   lastRoom: {},   // adv -> room
 };
 
@@ -117,6 +121,33 @@ export const store = {
   isVisited(advId, roomId) { return !!state.visited[advId]?.[roomId]; },
   lastRoom(advId) { return state.lastRoom[advId]; },
 
+  // --- Blocs « à faire » ---
+  isTodo(key) { return !!state.todo[key]; },
+  toggleTodo(key) { if (state.todo[key]) delete state.todo[key]; else state.todo[key] = 1; emit(); },
+  todoKeys() { return Object.keys(state.todo); },
+
+  // --- Ordre des blocs (glisser-déposer) ---
+  getOrder(scope) { return state.order[scope] || null; },
+  setOrder(scope, ids) { state.order[scope] = ids; emit(); },
+  clearOrder(scope) { delete state.order[scope]; emit(); },
+
+  // --- Marque-page de fin de séance ---
+  flag(advId) { return state.flag[advId] || null; },
+  setFlag(advId, roomId) {
+    if (!roomId || state.flag[advId] === roomId) delete state.flag[advId];
+    else state.flag[advId] = roomId;
+    emit();
+  },
+  isFlagged(advId, roomId) { return state.flag[advId] === roomId; },
+
+  // --- Statut des PNJ ---
+  npcStatus(advId, npcId) { return state.npcStatus[`${advId}/${npcId}`] || null; },
+  setNpcStatus(advId, npcId, status) {
+    const k = `${advId}/${npcId}`;
+    if (!status) delete state.npcStatus[k]; else state.npcStatus[k] = status;
+    emit();
+  },
+
   // --- Salles faites (cochées par le MJ) ---
   isDone(advId, roomId) { return !!state.done[advId]?.[roomId]; },
   setDone(advId, roomId, v) {
@@ -134,17 +165,18 @@ export const store = {
   // --- Réinitialisations ---
   resetRoom(advId, roomId) {
     const p = `${advId}/${roomId}/`;
-    for (const bucket of [state.hidden, state.overrides, state.notes, state.checks]) deleteByPrefix(bucket, p);
+    for (const bucket of [state.hidden, state.overrides, state.notes, state.checks, state.todo, state.order]) deleteByPrefix(bucket, p);
     delete state.roomNotes[`${advId}/${roomId}`];
     if (state.done[advId]) delete state.done[advId][roomId];
     emit();
   },
   resetAdventure(advId) {
     const p = `${advId}/`;
-    for (const bucket of [state.hidden, state.overrides, state.notes, state.checks, state.roomNotes]) deleteByPrefix(bucket, p);
+    for (const bucket of [state.hidden, state.overrides, state.notes, state.checks, state.roomNotes, state.todo, state.order, state.npcStatus]) deleteByPrefix(bucket, p);
     delete state.visited[advId];
     delete state.lastRoom[advId];
     delete state.done[advId];
+    delete state.flag[advId];
     emit();
   },
   resetAll() {

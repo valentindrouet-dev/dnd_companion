@@ -145,6 +145,26 @@ function walkStrings(node, fn, path = '') {
   if (node && typeof node === 'object') for (const [k, v] of Object.entries(node)) walkStrings(v, fn, path ? `${path}.${k}` : k);
 }
 
+// ---------- glossaire ----------
+const gloss = new Map();
+for (const gp of index.glossary || []) {
+  const file = join(DATA, gp);
+  if (!existsSync(file)) { err(`index.json : glossaire manquant ${gp}`); continue; }
+  const list = readJSON(file);
+  if (!Array.isArray(list)) { err(`${gp} : doit être un tableau`); continue; }
+  const KINDS = ['personne', 'faction', 'lieu', 'objet', 'divinite', 'peuple'];
+  const noAccent = (s) => String(s ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  list.forEach((e, i) => {
+    if (!e.id) return err(`${gp}[${i}] : id manquant`);
+    if (gloss.has(e.id)) err(`${gp} : id en double « ${e.id} »`);
+    gloss.set(e.id, e);
+    if (!e.name) err(`${gp}/${e.id} : name manquant`);
+    if (!e.what) warn(`${gp}/${e.id} : pas de description (what)`);
+    if (e.kind && !KINDS.includes(noAccent(e.kind))) warn(`${gp}/${e.id} : kind « ${e.kind} » inconnu`);
+    if (e.monster && !monsters.has(e.monster)) err(`${gp}/${e.id} : monstre inconnu « ${e.monster} »`);
+  });
+}
+
 // ---------- cartes ----------
 const mapsPath = join(DATA, 'maps.json');
 if (existsSync(mapsPath)) {

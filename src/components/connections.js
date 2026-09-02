@@ -1,31 +1,59 @@
-// Sorties / liaisons entre salles.
+// Sorties : boutons compacts, flèche orientée selon la position réelle des salles,
+// et alerte quand la porte est fermée, verrouillée, piégée ou secrète.
 
 import { h } from '../dom.js';
 import { icon } from '../icons.js';
 import { roomLinks } from '../data.js';
 import { navigate, roomPath } from '../router.js';
-import { key } from '../store.js';
-import { card } from './card.js';
+import { roomSpot } from './map.js';
+import { direction } from '../util.js';
+
+// Type de porte -> [libellé, classe, icône]
+const DOORS = {
+  fermee: ['Fermée', 'info', 'door'],
+  verrouillee: ['Verrouillée', 'danger', 'lock'],
+  barricadee: ['Barricadée', 'danger', 'alert'],
+  piegee: ['Piégée', 'danger', 'trap'],
+  secrete: ['Secrète', 'accent', 'lock'],
+  hermetique: ['Hermétique', 'info', 'water'],
+  magique: ['Verrou magique', 'accent', 'wand'],
+  double: ['Double battant', '', 'door'],
+  effondre: ['Éboulis', '', 'layers'],
+  toboggan: ['Toboggan', 'info', 'forward'],
+};
+
+function doorKey(v) {
+  return String(v ?? '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z]/g, '');
+}
+
+export function doorPill(c) {
+  const k = doorKey(c.door || (c.secret ? 'secrete' : ''));
+  const d = DOORS[k];
+  if (!d) return null;
+  const [label, cls, ico] = d;
+  return h('span', { class: 'pill ' + cls }, icon(ico), label);
+}
 
 export function connectionCards(adv, room) {
   const { declared, back } = roomLinks(adv, room);
   const all = [...declared.map((c) => ({ ...c, implicit: false })), ...back];
   if (!all.length) return h('div', { class: 'empty' }, 'Aucune liaison déclarée.');
-  return h('div', { class: 'grid-2' }, all.map((c, i) => {
+  const from = roomSpot(adv.map, room.id);
+
+  return h('div', { class: 'exits' }, all.map((c) => {
     const target = adv.roomById.get(c.to);
-    if (!target) return card({ key: key(adv.id, room.id, 'link', c.to), badge: '?', title: `Salle inconnue : ${c.to}`, noNote: true });
-    return card({
-      key: key(adv.id, room.id, 'link', c.to),
-      badge: target.number ?? icon('door'),
-      badgeClass: c.secret ? 'accent' : (c.implicit ? '' : 'info'),
-      title: target.name,
-      pills: [
-        c.secret ? h('span', { class: 'pill accent' }, icon('lock'), 'secret') : null,
-        c.oneWay ? h('span', { class: 'pill' }, icon('forward'), 'sens unique') : null,
-        c.implicit ? h('span', { class: 'pill' }, icon('back'), 'accès depuis') : null,
-      ],
-      sub: [c.via, c.note].filter(Boolean).join(' — ') || null,
-      onOpen: () => navigate(roomPath(adv.id, target.id)),
-    });
+    if (!target) return h('div', { class: 'exit' }, h('span', { class: 'num' }, '?'), h('span', { class: 'name' }, `Salle inconnue : ${c.to}`));
+    const dir = direction(from, roomSpot(adv.map, c.to));
+    const pill = doorPill(c);
+    return h('button', {
+      class: 'exit' + (c.implicit ? ' is-back' : ''),
+      onclick: () => navigate(roomPath(adv.id, target.id)),
+      title: [c.via, c.note].filter(Boolean).join(' — '),
+    },
+      dir ? h('span', { class: 'dir', style: { '--a': (90 - dir.angle) + 'deg' }, title: `Vers le ${dir.long}` }, icon('forward'), h('i', null, dir.short)) : h('span', { class: 'dir none' }, icon('door')),
+      h('span', { class: 'num' }, target.number ?? '•'),
+      h('span', { class: 'name' }, target.name),
+      pill,
+      c.alert ? h('span', { class: 'pill danger', title: c.alert }, icon('alert')) : null);
   }));
 }

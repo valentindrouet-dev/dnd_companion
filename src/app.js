@@ -1,6 +1,6 @@
 // Point d'entrée : chargement des données, routeur, rendu des vues, liens internes, service worker.
 
-import { loadIndex, loadMonsters, prefetchAll } from './data.js';
+import { loadIndex, getIndex, loadMonsters, prefetchAll } from './data.js';
 import { parseRoute, onRoute, navigate, roomPath } from './router.js';
 import { store } from './store.js';
 import { h } from './dom.js';
@@ -13,6 +13,9 @@ import { settingsView } from './views/settings.js';
 import { openMonsterPopup } from './components/monster.js';
 import { closeAllPopups } from './ui/popup.js';
 import { loadMaps } from './components/map.js';
+import { loadGlossary, linkGlossary, openGlossaryPopup } from './glossary.js';
+import { setTextDecorator } from './markup.js';
+import { glossaryView } from './views/glossary.js';
 import { toast } from './ui/toast.js';
 
 const app = document.getElementById('app');
@@ -32,6 +35,7 @@ async function buildView(route) {
     case 'room': return roomView(route);
     case 'roomlist': return roomListView(route);
     case 'bestiary': return bestiaryView(route);
+    case 'glossary': return glossaryView(route);
     case 'settings': return settingsView(route);
     default: return homeView(route);
   }
@@ -58,11 +62,12 @@ async function render({ keepScroll = false } = {}) {
 
 // Liens internes du balisage : [[m:id]] ouvre la fiche, [[r:id]] navigue vers la salle.
 document.addEventListener('click', (e) => {
-  const a = e.target.closest?.('a.ref[data-ref]');
+  const a = e.target.closest?.('a.ref[data-ref], a.gref[data-ref]');
   if (!a) return;
   e.preventDefault();
   const [type, id] = a.dataset.ref.split(':');
   if (type === 'm') openMonsterPopup(id);
+  else if (type === 'g') openGlossaryPopup(id);
   else if (type === 'r') {
     const route = parseRoute();
     if (route.adv) { closeAllPopups(); navigate(roomPath(route.adv, id)); }
@@ -87,6 +92,8 @@ async function boot() {
     await loadIndex();
     await loadMonsters();
     await loadMaps();
+    await loadGlossary(getIndex().glossary || []);
+    setTextDecorator(linkGlossary);
   } catch (e) {
     app.replaceChildren(errorView(e));
     return;

@@ -12,6 +12,7 @@ import { toast } from '../ui/toast.js';
 import { shell } from './shell.js';
 import { roomSidebar } from './sidebar.js';
 import { textBlock } from '../components/block.js';
+import { makeSortable, applyOrder } from '../ui/sortable.js';
 import { card, pill } from '../components/card.js';
 import { openMonsterPopup, monsterSummary, monsterStatblock } from '../components/monster.js';
 import { attitudePill, openNpcPopup } from '../components/npc.js';
@@ -24,6 +25,16 @@ import { roomProgress } from '../progress.js';
 import { slug } from '../util.js';
 
 function list(x) { return (Array.isArray(x) ? x : x ? [x] : []).map(asTextItem); }
+
+const notesOpen = new Map();   // notes de séance dépliées, par salle
+
+/** Liste de blocs réagençable par glisser-déposer ; l'ordre est mémorisé. */
+function blockList(scope, items, render) {
+  const ordered = applyOrder(items, store.getOrder(scope));
+  const box = h('div', { class: 'block-list' }, ordered.map(render));
+  if (ordered.length > 1) makeSortable(box, { onEnd: (ids) => store.setOrder(scope, ids) });
+  return box;
+}
 
 function section(title, children, { count, actions, ico } = {}) {
   const kids = Array.isArray(children) ? children.flat().filter(Boolean) : [children].filter(Boolean);
@@ -57,6 +68,7 @@ export async function roomView(route) {
   const { prev, next } = roomNeighbours(adv, room);
   const sectionMeta = adv.sectionById.get(room.section);
   const done = store.isDone(adv.id, room.id);
+  const flagged = store.isFlagged(adv.id, room.id);
   const prog = roomProgress(adv.id, room);
   const K = (...p) => key(adv.id, room.id, ...p);
   const navBtn = (r, ico, label) => h('button', {
@@ -76,6 +88,16 @@ export async function roomView(route) {
         }))),
     progressRing(prog.pct),
     h('div', { class: 'room-nav' },
+      h('button', {
+        class: 'btn btn-icon' + (store.settings.condensed ? ' is-on' : ''),
+        'aria-label': store.settings.condensed ? 'Afficher les textes complets' : 'Résumer les textes',
+        onclick: () => { store.setSetting('condensed', !store.settings.condensed); toast(store.settings.condensed ? 'Textes résumés' : 'Textes complets'); },
+      }, icon(store.settings.condensed ? 'expand' : 'compress')),
+      h('button', {
+        class: 'btn btn-icon' + (flagged ? ' is-flag' : ''),
+        'aria-label': flagged ? 'Retirer le drapeau de fin de séance' : 'Poser le drapeau de fin de séance',
+        onclick: () => { store.setFlag(adv.id, room.id); toast(store.isFlagged(adv.id, room.id) ? 'Drapeau posé ici' : 'Drapeau retiré'); },
+      }, icon('flag')),
       h('button', {
         class: 'btn btn-icon' + (done ? ' is-done' : ''), 'aria-label': done ? 'Salle faite' : 'Marquer la salle comme faite',
         onclick: () => { store.toggleDone(adv.id, room.id); toast(store.isDone(adv.id, room.id) ? 'Salle cochée' : 'Salle décochée'); },
@@ -144,11 +166,19 @@ export async function roomView(route) {
     hideLabel: 'Fait',
   }));
 
-  const sessionNotes = h('textarea', {
-    class: 'textarea', placeholder: 'Notes de partie (PV restants, décisions des joueurs…)',
-    value: store.getRoomNote(adv.id, room.id),
-    oninput: (e) => store.setRoomNote(adv.id, room.id, e.target.value),
-  });
+  // Notes de séance : repliées tant qu'on ne les ouvre pas
+  const noteKey = `${adv.id}/${room.id}`;
+  const noteText = store.getRoomNote(adv.id, room.id);
+  const sessionNotes = notesOpen.get(noteKey) || noteText
+    ? h('textarea', {
+        class: 'textarea', placeholder: 'Notes de partie (PV restants, décisions des joueurs…)',
+        value: noteText,
+        oninput: (e) => store.setRoomNote(adv.id, room.id, e.target.value),
+      })
+    : h('button', { class: 'fold', onclick: (e) => { notesOpen.set(noteKey, true); e.currentTarget.replaceWith(h('textarea', {
+        class: 'textarea', placeholder: 'Notes de partie (PV restants, décisions des joueurs…)',
+        oninput: (ev) => store.setRoomNote(adv.id, room.id, ev.target.value),
+      })); } }, icon('plus'), 'Prendre des notes');
 
   const thumb = mapThumb(adv, room);
   const main = h('div', null,
@@ -157,17 +187,16 @@ export async function roomView(route) {
     (thumb || room.layout) ? h('div', { class: 'sec plan' },
       thumb ? h('div', { class: 'plan-map' }, thumb) : null,
       room.layout ? h('div', { class: 'plan-text' },
-        h('div', { class: 'sec-head' }, icon('layers'), h('h2', null, 'Topologie')),
-        markup(room.layout, 'div', 'block-body')) : null) : null,
+        textBlock({ key: K('layout'), text: room.layout, kind: 'layout', hideLabel: 'Vu' })) : null) : null,
 
-    section('À lire aux joueurs', list(room.readAloud).map((t) =>
-      textBlock({ key: K('read', t.id), text: t.text, title: t.title, kind: 'read', hideLabel: 'Lu', kindLabel: 'Lecture' })), { ico: 'book' }),
+    section('À lire aux joueurs', blockList(K('read'), list(room.readAloud), (t) =>
+      textBlock({ key: K('read', t.id), text: t.text, title: t.title, item: t, kind: 'read', hideLabel: 'Lu', sid: t.id })), { ico: 'book' }),
 
-    section('Notes du MJ', list(room.notes).map((t) =>
-      textBlock({ key: K('note', t.id), text: t.text, title: t.title, hideLabel: 'Vu', kindLabel: 'Note MJ' })), { ico: 'notes' }),
+    section('Notes du MJ', blockList(K('note'), list(room.notes), (t) =>
+      textBlock({ key: K('note', t.id), text: t.text, title: t.title, item: t, kind: 'note', hideLabel: 'Vu', todo: true, sid: t.id })), { ico: 'notes' }),
 
-    section('Éléments', list(room.features).map((t) =>
-      textBlock({ key: K('feature', t.id), text: t.text, title: t.title || 'Élément', hideLabel: 'Vu' })), { ico: 'search' }),
+    section('Éléments', blockList(K('feature'), list(room.features), (t) =>
+      textBlock({ key: K('feature', t.id), text: t.text, title: t.title || 'Élément', item: t, kind: 'feature', hideLabel: 'Vu', sid: t.id })), { ico: 'search' }),
 
     section('Créatures', enemyCards, {
       ico: 'skull',
@@ -215,6 +244,7 @@ export async function roomView(route) {
     actions: [
       roomMap(adv.map, room.id) ? h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Carte', onclick: () => openMapPopup(adv, room) }, icon('map')) : null,
       h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Rencontre aléatoire', onclick: () => openEncounterPopup({ adv, room }) }, icon('dice')),
+      h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Index', onclick: () => navigate('index') }, icon('book')),
       h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Liste des salles', onclick: () => navigate(listPath(adv.id)) }, icon('list')),
     ],
   });

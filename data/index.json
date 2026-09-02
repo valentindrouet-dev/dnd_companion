@@ -12,5 +12,8 @@
   "monsters": [
     "monsters/srd-2024.json",
     "monsters/mm-2024.json"
+  ],
+  "glossary": [
+    "glossary/undermountain.json"
   ]
 }

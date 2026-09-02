@@ -66,7 +66,8 @@ salles orphelines dans l'ordre de `rooms`.
   "tags": ["combat", "pnj"],           // combat, piège, trésor, social, pnj, énigme, boss, secret,
                                        // portail, danger, vide, extérieur — chacun a son icône
   "layout": "Salle de 12 × 9 m, plafond voûté à 6 m, murs de granit…",   // topologie, affichée en tête
-  "readAloud": [ "Texte lu aux joueurs…", { "id": "suite", "text": "…" } ],   // string ou tableau
+  "readAloud": [ "Texte lu aux joueurs…",
+                 { "id": "suite", "text": "…", "summary": "Une phrase pour le mode Résumé" } ],
   "notes": [ "Note MJ…" ],
   "features": [ { "id": "autel", "title": "L’autel", "text": "…" } ],
   "enemies": [
@@ -85,7 +86,9 @@ salles orphelines dans l'ordre de `rooms`.
   "traps": [ { "id": "dards", "name": "…", "trigger": "…", "effect": "…", "detect": "…", "disarm": "…", "dc": 13 } ],
   "checks": [ { "id": "…", "skill": "Perception", "dc": 13, "text": "Réussite : …", "failure": "…" } ],
   "connections": [
-    { "to": "r5", "via": "Porte nord", "note": "Verrouillée DD 15", "secret": true, "oneWay": false },
+    { "to": "r5", "via": "Porte nord", "note": "Verrouillée DD 15", "secret": true, "oneWay": false,
+      "door": "fermee|verrouillee|barricadee|piegee|secrete|hermetique|magique|double|effondre|toboggan",
+      "alert": "Message d'alerte affiché sur la sortie" },
     "r3"                                                   // forme courte
   ]
 }
@@ -141,10 +144,33 @@ Le champ `number` sert au tri de la vue en liste (tri naturel : 1, 1a, 1b, 2, 10
 Le pourcentage d'avancement d'une salle est le rapport entre les éléments masqués et le nombre
 total d'éléments cochables (lectures, notes, éléments, créatures, trésors, pièges, tests, répliques).
 
+Sans `summary`, le mode Résumé retombe sur la première phrase du texte, tronquée si besoin.
+
+## Index (`data/glossary/*.json`)
+
+Personnages, factions, lieux, objets et divinités. Les `aliases` sont repérés automatiquement
+dans tous les textes et rendus cliquables (une occurrence par bloc).
+
+```jsonc
+{
+  "id": "xanathar",
+  "name": "La Guilde de Xanathar",
+  "kind": "personne | faction | lieu | objet | divinite | peuple",
+  "aliases": ["Xanathar", "Guilde de Xanathar"],
+  "what": "Qui ou quoi.",
+  "goal": "Ce qu'il veut.",
+  "state": "Son état au début de l'aventure (le MJ peut le réécrire en partie).",
+  "where": "Où le croiser, avec des liens [[r:9b|9b]].",
+  "monster": "drow-mage"        // fiche de combat liée, facultatif
+}
+```
+
 ## Cartes (`assets/maps/`, `data/maps.json`)
 
 `tools/map-coords.json` donne, pour chaque carte, le PDF source, la page, le cadre de la carte et
 la position de chaque salle en points PDF. `npm run maps` produit `assets/maps/<carte>/complete.jpg`,
 un cadrage `<salle>.jpg` par salle (avec un repère doré) et `data/maps.json`, que le service worker
-précache pour l'usage hors-ligne. L'aventure est reliée à sa carte par le champ `map` de `index.json`.
+précache pour l'usage hors-ligne. Ce fichier contient aussi `spots` : la position de chaque salle en
+pourcentage de la carte, qui sert aux repères cliquables et au calcul de la direction des sorties.
+L'aventure est reliée à sa carte par le champ `map` de `index.json`.
 Les données d'aventure elles-mêmes ne sont jamais modifiées par l'app.

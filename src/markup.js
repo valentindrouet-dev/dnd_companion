@@ -7,6 +7,10 @@
 
 import { escapeHtml } from './dom.js';
 
+// Rattaché au chargement du glossaire ; sans lui, markup() rend le texte tel quel.
+let decorate = (el) => el;
+export function setTextDecorator(fn) { decorate = fn || ((el) => el); }
+
 export function markupToHtml(text) {
   let s = escapeHtml(text);
   s = s.replace(/\[\[(m|r|monstre|salle):([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, t, id, label) => {
@@ -23,12 +27,12 @@ export function markupToHtml(text) {
   return s;
 }
 
-/** Retourne un élément DOM contenant le texte balisé. */
+/** Retourne un élément DOM contenant le texte balisé, mots-clés du glossaire compris. */
 export function markup(text, tag = 'div', cls = '') {
   const el = document.createElement(tag);
   if (cls) el.className = cls;
   el.innerHTML = markupToHtml(text);
-  return el;
+  return decorate(el);
 }
 
 /** Texte brut (sans balises) — utile pour les aperçus. */

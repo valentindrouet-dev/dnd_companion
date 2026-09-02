@@ -12,6 +12,7 @@ export async function homeView() {
     h('div', { class: 'hero' }, h('h1', null, 'Compagnon D&D')),
     advs.length ? advs.map(adventureCard) : h('div', { class: 'empty' }, 'Aucune aventure dans data/index.json.'),
     h('div', { class: 'toolbar', style: { marginTop: '18px' } },
+      h('button', { class: 'btn', onclick: () => navigate('index') }, icon('book'), 'Index'),
       h('button', { class: 'btn', onclick: () => navigate('bestiaire') }, icon('skull'), 'Bestiaire'),
       h('button', { class: 'btn', onclick: () => openEncounterPopup({}) }, icon('dice'), 'Rencontre'),
       h('button', { class: 'btn btn-icon', 'aria-label': 'Réglages', onclick: () => navigate('reglages') }, icon('settings'))));
@@ -20,7 +21,8 @@ export async function homeView() {
 }
 
 function adventureCard(a) {
-  const last = store.lastRoom(a.id);
+  const resume = store.flag(a.id) || store.lastRoom(a.id);
+  const flagged = !!store.flag(a.id);
   const done = store.doneCount(a.id);
   return h('div', { class: 'adv-card' },
     h('div', { class: 'adv-line' },
@@ -30,5 +32,5 @@ function adventureCard(a) {
     h('div', { class: 'toolbar' },
       h('button', { class: 'btn btn-primary', onclick: () => navigate(advPath(a.id)) }, icon('map'), 'Ouvrir'),
       h('button', { class: 'btn', onclick: () => navigate(listPath(a.id)) }, icon('list'), 'Salles'),
-      last ? h('button', { class: 'btn', onclick: () => navigate(roomPath(a.id, last)) }, icon('flag'), 'Reprendre') : null));
+      resume ? h('button', { class: 'btn' + (flagged ? ' is-flag' : ''), onclick: () => navigate(roomPath(a.id, resume)) }, icon(flagged ? 'flag' : 'forward'), 'Reprendre') : null));
 }

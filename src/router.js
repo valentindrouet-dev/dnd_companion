@@ -4,6 +4,7 @@
 //   #/a/:adv/r/:room        page d'une salle
 //   #/a/:adv/liste          liste des salles triée par numéro
 //   #/bestiaire[/:id]       bestiaire
+//   #/index                 index alphabétique
 //   #/reglages              réglages
 
 export function parseRoute() {
@@ -16,6 +17,7 @@ export function parseRoute() {
     return { name: 'adventure', adv: p[1] };
   }
   if (p[0] === 'bestiaire') return { name: 'bestiary', monster: p[1] || null };
+  if (p[0] === 'index') return { name: 'glossary' };
   if (p[0] === 'reglages') return { name: 'settings' };
   return { name: 'home' };
 }

@@ -7,13 +7,26 @@ pièges et tests, liaisons vers les salles connectées, générateur de loot.
 
 - **Vue en liste sur deux colonnes**, triée par numéro, avec recherche, filtre et **pourcentage
   d'avancement** par salle ; case « faite » sur chaque ligne et anneau de progression dans la salle.
-- **Plan par salle** : vignette de la carte cadrée sur la pièce, carte complète zoomable, et une
-  description topologique (murs, plafond, sol, accès) en tête de chaque salle.
+- **Mode Résumé** : un bouton réduit chaque bloc à une phrase ; l'appui rouvre le texte complet en
+  fenêtre. Un bloc marqué « Vu » se réduit lui aussi à son résumé, grisé.
+- **Blocs réagençables** au glisser-déposer (poignée à trois barres), l'ordre est mémorisé.
+- **Blocs colorés par nature** (lecture, note MJ, élément, topologie, réplique) et **icônes de
+  couleur** sur les étiquettes et les pastilles.
+- **Plan par salle** : vignette cadrée sur la pièce et carte complète zoomable, avec des
+  **repères cliquables** pour ouvrir une salle depuis le plan (désactivables d'un appui).
+- **Topologie** de chaque salle (murs, plafond, volume, accès) dans son propre bloc.
+- **Sorties compactes** : numéro, nom, **flèche orientée** selon la position réelle des salles, et
+  **alerte de porte** (fermée, verrouillée, piégée, secrète, hermétique, verrou magique).
 - **Masquer ce qui a été lu / dit / vaincu / distribué** d'un appui ; réafficher d'un autre.
 - **Annoter et modifier à la volée** n'importe quel texte (l'original reste restaurable).
 - **Fiches de monstres compactes** : résumé pour le MJ, CA/PV/vitesse, défenses sur une ligne et
   actions résumées (corps à corps ou distance, bonus, dégâts).
 - **Générateur de rencontres** basé sur le budget de PX par niveau, et générateur de loot.
+- **Mots-clés cliquables** : les noms de personnages, factions, lieux et objets ouvrent une fiche
+  (qui, but, état en cours de partie, modifiable), et un **index alphabétique** les rassemble.
+- **Drapeau de fin de séance** : un seul par aventure, « Reprendre » y ramène.
+- **Notes du MJ marquables « à faire »**, remontées sur la page de l'aventure.
+- **Statut des PNJ récurrents** modifiable en partie (amical, allié, en fuite, mort…).
 - **Hors-ligne** : données embarquées, service worker ; installable sur l'écran d'accueil.
 - Zéro build, zéro dépendance : HTML/CSS/JS modernes, déployable tel quel sur GitHub Pages.
 
@@ -21,7 +34,7 @@ pièges et tests, liaisons vers les salles connectées, générateur de loot.
 
 ```
 index.html, styles/, src/        l'application
-data/                            aventures et monstres (JSON) — voir docs/DATA_SCHEMA.md
+data/                            aventures, monstres et index (JSON) — voir docs/DATA_SCHEMA.md
 assets/maps/                     images de carte découpées salle par salle
 tools/                           validateur, serveur local, icônes, extraction PDF, découpe des cartes
 docs/                            schéma des données, procédure d'ingestion

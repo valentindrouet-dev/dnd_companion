@@ -51,9 +51,18 @@ export function dialogueList(baseKey, dialogues) {
   if (!items.length) return h('div', { class: 'empty' }, 'Aucune réplique.');
   return h('div', null, items.map((d) => {
     const k = key(baseKey, 'line', d.id);
-    if (store.isHidden(k)) return hiddenRow({ key: k, label: 'Dit', preview: d.line.replace(/\s+/g, ' ').slice(0, 80) });
-    return h('div', { class: 'block' },
+    if (store.isHidden(k)) {
+      return h('div', { class: 'block b-dialogue is-seen' },
+        h('div', { class: 'block-head' },
+          icon('chat', 'kind-icon'),
+          h('div', { class: 'block-kind' }, d.trigger || 'Réplique'),
+          h('div', { class: 'block-tools' },
+            h('button', { class: 'btn btn-sm btn-ghost is-on', onclick: () => store.setHidden(k, false) }, icon('undo'), 'Revoir'))),
+        h('div', { class: 'block-body condensed' }, d.line.replace(/\s+/g, ' ').slice(0, 90)));
+    }
+    return h('div', { class: 'block b-dialogue' },
       h('div', { class: 'block-head' },
+        icon('chat', 'kind-icon'),
         h('div', { class: 'block-kind' }, d.trigger || 'Réplique'),
         h('div', { class: 'block-tools' },
           h('button', { class: 'btn btn-sm btn-ghost', onclick: () => store.setHidden(k, true) }, icon('check'), 'Dit'))),
