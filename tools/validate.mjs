@@ -145,6 +145,21 @@ function walkStrings(node, fn, path = '') {
   if (node && typeof node === 'object') for (const [k, v] of Object.entries(node)) walkStrings(v, fn, path ? `${path}.${k}` : k);
 }
 
+// ---------- cohérence des numéros de version ----------
+{
+  const read = (f, re) => (readFileSync(join(ROOT, f), 'utf8').match(re) || [])[1];
+  const versions = {
+    'version.js': read('version.js', /'(\d+\.\d+\.\d+)'/),
+    'version.json': read('version.json', /"version":\s*"(\d+\.\d+\.\d+)"/),
+    'sw.js': read('sw.js', /const APP_VERSION = '(\d+\.\d+\.\d+)'/),
+    'package.json': read('package.json', /"version":\s*"(\d+\.\d+\.\d+)"/),
+  };
+  const distinct = [...new Set(Object.values(versions))];
+  if (distinct.length !== 1 || !distinct[0]) {
+    err(`numéros de version désaccordés (${Object.entries(versions).map(([f, v]) => `${f} ${v}`).join(', ')}) — lance « npm run version <x.y.z> »`);
+  }
+}
+
 // ---------- glossaire ----------
 const gloss = new Map();
 for (const gp of index.glossary || []) {

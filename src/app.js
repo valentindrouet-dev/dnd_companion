@@ -17,6 +17,7 @@ import { loadGlossary, linkGlossary, openGlossaryPopup } from './glossary.js';
 import { setTextDecorator } from './markup.js';
 import { glossaryView } from './views/glossary.js';
 import { toast } from './ui/toast.js';
+import { registerServiceWorker } from './update.js';
 
 const app = document.getElementById('app');
 let renderToken = 0;
@@ -73,18 +74,6 @@ document.addEventListener('click', (e) => {
     if (route.adv) { closeAllPopups(); navigate(roomPath(route.adv, id)); }
   }
 });
-
-function registerServiceWorker() {
-  if (!('serviceWorker' in navigator)) return;
-  navigator.serviceWorker.register('./sw.js').then((reg) => {
-    reg.addEventListener('updatefound', () => {
-      const w = reg.installing;
-      w?.addEventListener('statechange', () => {
-        if (w.state === 'installed' && navigator.serviceWorker.controller) toast('Nouvelle version disponible — rouvre l’app pour l’appliquer', 4000);
-      });
-    });
-  }).catch((e) => console.warn('Service worker non enregistré', e));
-}
 
 async function boot() {
   applySettings();

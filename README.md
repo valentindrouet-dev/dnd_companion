@@ -59,8 +59,24 @@ npm run maps          # redécoupe les images de carte depuis le PDF (voir tools
    une branche).
 3. Sur l'iPad, ouvrir `https://valentindrouet-dev.github.io/dnd_companion/` dans Safari,
    puis **Partager → Sur l'écran d'accueil**. L'app fonctionne ensuite sans réseau.
-4. À chaque nouvelle version, incrémenter `APP_VERSION` dans `version.js` : l'iPad la
-   récupère à l'ouverture suivante (Réglages → « Vérifier les mises à jour »).
+4. À chaque nouvelle version : `npm run version 0.7.1`, puis pousser. La commande met à jour
+   d'un coup `version.js`, `version.json`, `sw.js` et `package.json` — ils doivent rester
+   d'accord, et `npm run validate` le vérifie.
+
+### Comment l'iPad reçoit les mises à jour
+
+iOS ne recharge pas une app de l'écran d'accueil quand on la referme et qu'on la rouvre : il la
+restaure telle quelle. L'app cherche donc elle-même les nouvelles versions, à l'ouverture et à
+chaque retour au premier plan, en comparant sa version à celle de `version.json`. Quand une
+version plus récente est publiée, une barre « Version X disponible » apparaît en bas : un appui
+sur **Mettre à jour** applique la nouvelle version et recharge. Les réglages proposent aussi
+« Vérifier les mises à jour » et « Forcer la mise à jour ».
+
+Le numéro de version est écrit en dur dans `sw.js` : un navigateur ne réinstalle le service
+worker que si ce fichier a changé, or il ne changeait pas quand la version était importée.
+
+**Une mise à jour ne touche jamais aux données du MJ** : notes, coches, annotations, statuts et
+drapeau vivent dans `localStorage`, que ni le cache ni le service worker n'effacent.
 
 L'état de partie (masquages, annotations, notes) reste sur l'iPad ; il s'exporte et
 s'importe en JSON depuis **Réglages**.

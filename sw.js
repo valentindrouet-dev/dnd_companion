@@ -1,16 +1,20 @@
 // Service worker : rend l'application utilisable hors-ligne sur l'iPad.
 // Stratégie : réseau d'abord (pour recevoir les mises à jour), cache en secours.
-// La liste SHELL est vérifiée par `npm run validate` (tous les fichiers de src/ doivent y figurer).
+//
+// APP_VERSION est écrit ici en dur, et non importé : un navigateur ne réinstalle le
+// service worker que si le fichier lui-même a changé. Utilise « npm run version 0.7.0 »
+// pour la mettre à jour partout à la fois ; `npm run validate` vérifie la cohérence.
+// La liste SHELL est également vérifiée (tous les fichiers de src/ doivent y figurer).
 
-importScripts('./version.js');
-
-const CACHE = 'dnd-companion-' + self.APP_VERSION;
+const APP_VERSION = '0.7.0';
+const CACHE = 'dnd-companion-' + APP_VERSION;
 
 const SHELL = [
   './',
   './index.html',
   './manifest.webmanifest',
   './version.js',
+  './version.json',
   './styles/app.css',
   './assets/icons/icon.svg',
   './assets/icons/icon-180.png',
@@ -26,6 +30,7 @@ const SHELL = [
   './src/progress.js',
   './src/router.js',
   './src/store.js',
+  './src/update.js',
   './src/util.js',
   './src/ui/popup.js',
   './src/ui/toast.js',
@@ -72,6 +77,11 @@ async function precache() {
 
 self.addEventListener('install', (event) => {
   event.waitUntil(precache().then(() => self.skipWaiting()));
+});
+
+// L'app demande à la nouvelle version de prendre la main tout de suite.
+self.addEventListener('message', (event) => {
+  if (event.data?.type === 'SKIP_WAITING') self.skipWaiting();
 });
 
 self.addEventListener('activate', (event) => {

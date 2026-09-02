@@ -6,6 +6,7 @@ import { store } from '../store.js';
 import { shell } from './shell.js';
 import { confirmPopup, openPopup } from '../ui/popup.js';
 import { toast } from '../ui/toast.js';
+import { checkForUpdate, applyUpdate } from '../update.js';
 
 export async function settingsView() {
   const s = store.settings;
@@ -38,19 +39,20 @@ export async function settingsView() {
     h('h2', { style: { margin: '28px 0 8px', fontSize: '1.1em' } }, 'Application'),
     h('p', { class: 'muted' }, `Version ${self.APP_VERSION}. `,
       'Les données (aventures, monstres) sont embarquées dans l’app ; les annotations restent sur cet appareil. ',
-      'Pour installer sur iPad : Safari → Partager → « Sur l’écran d’accueil ».'),
+      'Pour installer sur iPad : Safari → Partager → « Sur l’écran d’accueil ». ',
+      'L’app cherche une nouvelle version à chaque ouverture et à chaque retour au premier plan.'),
     h('div', { class: 'toolbar', style: { marginTop: '10px' } },
-      h('button', { class: 'btn', onclick: async () => {
-        const regs = await navigator.serviceWorker?.getRegistrations?.() || [];
-        for (const r of regs) await r.update();
-        toast('Recherche de mise à jour…');
+      h('button', { class: 'btn btn-primary', onclick: async () => {
+        toast('Recherche…');
+        const found = await checkForUpdate({ force: true });
+        if (found) toast('Nouvelle version trouvée');
+        else toast('Tu es déjà à jour');
       } }, icon('refresh'), 'Vérifier les mises à jour'),
-      h('button', { class: 'btn', onclick: async () => {
-        const keys = await caches.keys(); for (const k of keys) await caches.delete(k);
-        const regs = await navigator.serviceWorker?.getRegistrations?.() || [];
-        for (const r of regs) await r.unregister();
-        toast('Cache vidé, rechargement…'); setTimeout(() => location.reload(), 600);
-      } }, icon('trash'), 'Vider le cache hors-ligne')),
+      h('button', { class: 'btn', onclick: () => { toast('Mise à jour…'); applyUpdate(); } },
+        icon('forward'), 'Forcer la mise à jour')),
+    h('p', { class: 'muted small', style: { marginTop: '10px' } },
+      'Mettre à jour ne touche pas à tes notes, coches, annotations et statuts : ils sont ',
+      'enregistrés sur l’iPad, en dehors du cache.'),
   );
 
   return shell({ title: 'Réglages', back: '', main });
