@@ -3,25 +3,28 @@
 
 import { store, key } from './store.js';
 import { elemId, asTextItem } from './dom.js';
+import { visibleItems } from './variant.js';
 
-function items(x) { return Array.isArray(x) ? x : x ? [x] : []; }
+const textItems = (x) => visibleItems(x, (it, i) => asTextItem(it, i).id);
 
 /** Toutes les clés « cochables » d'une salle, dans l'ordre d'affichage. */
 export function roomKeys(advId, room) {
   const K = (...p) => key(advId, room.id, ...p);
   const out = [];
   for (const [field, kind] of [['readAloud', 'read'], ['notes', 'note'], ['features', 'feature']]) {
-    items(room[field]).map(asTextItem).forEach((t) => out.push(K(kind, t.id)));
+    for (const { id } of textItems(room[field])) out.push(K(kind, id));
   }
   for (const [field, kind] of [['enemies', 'enemy'], ['treasure', 'treasure'], ['traps', 'trap'], ['checks', 'check']]) {
-    (room[field] || []).forEach((it, i) => out.push(K(kind, elemId(it, i))));
+    for (const { id } of visibleItems(room[field], elemId)) out.push(K(kind, id));
   }
-  const npcs = [...(room.npcs || [])];
-  if ((room.dialogues || []).length) npcs.push({ id: '_room', dialogues: room.dialogues });
-  npcs.forEach((n, i) => {
-    const base = K('npc', n.id ?? String(i));
-    (n.dialogues || []).forEach((d, j) => out.push(key(base, 'line', typeof d === 'string' ? j : d.id ?? j)));
-  });
+  const npcs = visibleItems(room.npcs, elemId);
+  if ((room.dialogues || []).length) npcs.push({ item: { dialogues: room.dialogues }, id: '_room' });
+  for (const { item, id } of npcs) {
+    const base = K('npc', id);
+    for (const { id: lineId } of visibleItems(item.dialogues, (d, j) => (typeof d === 'string' ? String(j) : String(d.id ?? j)))) {
+      out.push(key(base, 'line', lineId));
+    }
+  }
   return out;
 }
 

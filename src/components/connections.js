@@ -7,6 +7,7 @@ import { roomLinks } from '../data.js';
 import { navigate, roomPath } from '../router.js';
 import { roomSpot } from './map.js';
 import { direction } from '../util.js';
+import { filterVariant, enhancedStar } from '../variant.js';
 
 // Type de porte -> [libellé, classe, icône]
 const DOORS = {
@@ -36,7 +37,7 @@ export function doorPill(c) {
 
 export function connectionCards(adv, room) {
   const { declared, back } = roomLinks(adv, room);
-  const all = [...declared.map((c) => ({ ...c, implicit: false })), ...back];
+  const all = [...filterVariant(declared).map((c) => ({ ...c, implicit: false })), ...filterVariant(back)];
   if (!all.length) return null;
   const from = roomSpot(adv.map, room.id);
 
@@ -54,6 +55,7 @@ export function connectionCards(adv, room) {
       h('span', { class: 'num' }, target.number ?? '•'),
       h('span', { class: 'name' }, target.name),
       pill,
+      enhancedStar(c),
       c.alert ? h('span', { class: 'pill danger', title: c.alert }, icon('alert')) : null);
   }));
 }

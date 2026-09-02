@@ -1,0 +1,480 @@
+[
+  {
+    "id": "barghest", "name": "Barghest", "nameEn": "Barghest",
+    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "G", "type": "Fiélon (gobelinoïde)", "alignment": "Neutre mauvais",
+    "cr": "4", "xp": 1100, "pb": 2,
+    "ac": 17, "acNote": "armure naturelle", "hp": 90, "speed": "9 m",
+    "abilities": { "str": 18, "dex": 15, "con": 16, "int": 13, "wis": 13, "cha": 16 },
+    "resistances": "armes non magiques ; feu, foudre, froid",
+    "immunities": "charmé",
+    "senses": "vision dans le noir 18 m ; détection des pensées passive 9 m",
+    "languages": "abyssal, commun, gobelin ; télépathie 18 m",
+    "traits": [
+      { "name": "Détection des pensées", "text": "Le barghest perçoit les pensées de surface de toute créature à 9 m, sans jet ni action." },
+      { "name": "Métamorphe", "text": "Il prend la forme d’un gobelin ou d’un grand loup ; ses statistiques ne changent pas." },
+      { "name": "Renvoi au plan d’origine", "text": "À sa mort, son corps est aspiré dans son plan : il ne laisse aucun butin, hormis les anneaux et bijoux qu’il portait." }
+    ],
+    "actions": [
+      { "name": "Peur (1er tour)", "text": "Chaque créature à 9 m qui voit le barghest effectue un jet de sauvegarde de Sagesse DD 13 ou est terrorisée 1 minute (nouveau jet à la fin de chacun de ses tours)." },
+      { "name": "Morsure", "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 10 (2d6 + 3) dégâts perforants." },
+      { "name": "Griffe", "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 6 (1d6 + 3) dégâts tranchants." }
+    ],
+    "summary": {
+      "style": "Prédateur extraplanaire déguisé en marchand gobelin, qui lit les intentions avant qu’on parle.",
+      "intent": "Surveiller le bazar pour le compte de l’Oni. Repérer les intrus dangereux.",
+      "tactics": "Premier tour : **Peur (Sag DD 13)** pour disperser le groupe. Ensuite morsure et griffe sur la cible terrorisée. Les armes ordinaires ne l’entament qu’à moitié.",
+      "flee": "Ne fuit pas : sa mort le renvoie chez lui.",
+      "weakness": "Armes magiques, dégâts radiants et psychiques. Sa détection des pensées ne perce pas *esprit impénétrable*.",
+      "roleplay": "Poli, sourit trop, répond à des questions qu’on n’a pas posées."
+    }
+  },
+  {
+    "id": "oni", "name": "Oni", "nameEn": "Oni",
+    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "G", "type": "Fiélon (géant)", "alignment": "Loyal mauvais",
+    "cr": "7", "xp": 2900, "pb": 3,
+    "ac": 16, "acNote": "cotte de mailles", "hp": 110, "speed": "9 m, vol 9 m",
+    "abilities": { "str": 19, "dex": 11, "con": 16, "int": 14, "wis": 12, "cha": 15 },
+    "saves": "Dex +3, Con +6, Sag +4, Cha +5",
+    "immunities": "charmé",
+    "senses": "vision dans le noir 18 m",
+    "languages": "commun, géant",
+    "traits": [
+      { "name": "Régénération", "text": "L’oni récupère 10 points de vie au début de son tour s’il lui en reste au moins 1." },
+      { "name": "Métamorphe", "text": "Il prend la forme d’un humanoïde de taille P ou M, ou reprend sa vraie forme. Ses statistiques ne changent pas, hormis sa taille." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "L’oni effectue deux attaques de Glaive ou deux Griffes." },
+      { "name": "Glaive", "text": "Jet d’attaque au corps à corps : +8, allonge 3 m. Touché : 16 (2d10 + 5) dégâts tranchants, ou 9 (1d10 + 5) sous forme humanoïde." },
+      { "name": "Griffe (forme d’oni)", "text": "Jet d’attaque au corps à corps : +8, allonge 1,50 m. Touché : 8 (1d8 + 5) dégâts tranchants." },
+      { "name": "Incantation", "text": "Charisme, DD 13. À volonté : ténèbres, invisibilité. 1/jour chacun : charme-personne (3/jour ici), cône de froid, sommeil (2/jour ici)." }
+    ],
+    "summary": {
+      "style": "Géant fiélon rusé qui vit déguisé, frappe à 3 m d’allonge et se régénère.",
+      "intent": "Tenir le bazar sans se faire démasquer. Se débarrasser de Shunn par personne interposée.",
+      "tactics": "Reste en forme humanoïde tant que possible : **charme-personne** sur le négociateur, **sommeil** sur les faibles. Démasqué : reprend sa taille G, glaive ×2 à 3 m, invisibilité pour rompre le contact et régénérer.",
+      "flee": "Devient invisible et s’envole s’il descend sous 30 PV, puis revient soigné.",
+      "weakness": "**Régénération 10/tour** : il faut le tuer vite ou l’empêcher de décrocher. Aucune résistance aux armes.",
+      "roleplay": "Voix profonde et musicale, courtoisie appuyée, six doigts à chaque main (Perspicacité DD 13)."
+    }
+  },
+  {
+    "id": "half-troll", "name": "Demi-troll", "nameEn": "Half-Troll",
+    "source": "Variante de troll (MM) — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "G", "type": "Géant", "alignment": "Chaotique mauvais",
+    "cr": "3", "xp": 700, "pb": 2,
+    "ac": 14, "acNote": "armure naturelle", "hp": 45, "speed": "9 m",
+    "abilities": { "str": 16, "dex": 13, "con": 16, "int": 7, "wis": 9, "cha": 7 },
+    "senses": "vision dans le noir 18 m",
+    "languages": "géant",
+    "traits": [
+      { "name": "Régénération", "text": "Le demi-troll récupère 5 points de vie au début de son tour. S’il subit des dégâts de feu ou d’acide, ce trait ne fonctionne pas au début de son prochain tour." },
+      { "name": "Insensible à la douleur", "text": "Blessé, il ignore la douleur : il ne se replie jamais avant 0 point de vie." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "Le demi-troll effectue deux attaques de Griffes." },
+      { "name": "Griffes", "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 6 (1d6 + 3) dégâts tranchants." }
+    ],
+    "summary": {
+      "style": "Tenancier d’étal bâti comme un mur, qui se recoud tout seul.",
+      "intent": "Tenir les étals du bazar, sur ordre de Yek.",
+      "tactics": "Deux griffes par tour, avance sans reculer. **Régénération 5/tour** : sans feu ni acide, ils reviennent sans cesse.",
+      "flee": "Jamais.",
+      "weakness": "**Feu ou acide** coupent la régénération. 45 PV seulement."
+    }
+  },
+  {
+    "id": "cave-troll", "name": "Troll de cave", "nameEn": "Cave Troll",
+    "source": "Variante de troll (MM) — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "G", "type": "Géant", "alignment": "Chaotique mauvais",
+    "cr": "5", "xp": 1800, "pb": 3,
+    "ac": 15, "acNote": "armure naturelle", "hp": 94, "speed": "9 m",
+    "abilities": { "str": 18, "dex": 13, "con": 20, "int": 7, "wis": 9, "cha": 7 },
+    "skills": "Perception +2",
+    "senses": "vision dans le noir 18 m",
+    "languages": "géant",
+    "traits": [
+      { "name": "Régénération", "text": "Le troll récupère 10 points de vie au début de son tour. Des dégâts de feu ou d’acide suspendent ce trait jusqu’au début de son prochain tour." },
+      { "name": "Enchaîné", "text": "Ceux du poste de Shunn sont retenus par des chaînes de 4,50 m scellées au mur : ils couvrent tout le couloir mais ne peuvent pas poursuivre au-delà." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "Le troll effectue une attaque de Morsure et deux attaques de Griffes." },
+      { "name": "Morsure", "text": "Jet d’attaque au corps à corps : +7, allonge 1,50 m. Touché : 11 (2d6 + 4) dégâts perforants." },
+      { "name": "Griffes", "text": "Jet d’attaque au corps à corps : +7, allonge 1,50 m. Touché : 7 (1d6 + 4) dégâts tranchants." }
+    ],
+    "summary": {
+      "style": "Tourelle vivante enchaînée au mur, à la peau grise.",
+      "intent": "Déchirer tout ce qui entre dans la portée de sa chaîne.",
+      "tactics": "Trois attaques par tour dans une zone de 4,50 m autour de son anneau. **Régénération 10/tour**. Shunn peut libérer les chaînes en action bonus : les quatre deviennent alors mobiles.",
+      "flee": "Jamais.",
+      "weakness": "**Feu ou acide**, impérativement. Enchaîné, on peut le contourner ou le tenir à distance."
+    }
+  },
+  {
+    "id": "gaunt-troll", "name": "Troll maigre", "nameEn": "Gaunt Troll",
+    "source": "MPMM — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "G", "type": "Géant", "alignment": "Chaotique mauvais",
+    "cr": "6", "xp": 2300, "pb": 3,
+    "ac": 15, "hp": 115, "speed": "9 m",
+    "abilities": { "str": 18, "dex": 14, "con": 18, "int": 7, "wis": 11, "cha": 8 },
+    "senses": "vision dans le noir 18 m",
+    "languages": "géant",
+    "traits": [
+      { "name": "Régénération", "text": "Récupère 10 points de vie au début de son tour, sauf s’il a subi des dégâts de feu ou d’acide depuis son dernier tour." },
+      { "name": "Allongement des membres", "text": "Ses bras démesurés lui donnent une allonge de 4,50 m." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "Le troll effectue trois attaques : une Morsure et deux Griffes." },
+      { "name": "Morsure", "text": "Jet d’attaque au corps à corps : +7, allonge 1,50 m. Touché : 12 (2d8 + 4) dégâts perforants." },
+      { "name": "Griffes", "text": "Jet d’attaque au corps à corps : +7, allonge 4,50 m. Touché : 9 (2d4 + 4) dégâts tranchants." }
+    ],
+    "summary": {
+      "style": "Troll étiré, tout en bras, qui frappe de trois mètres plus loin qu’on ne l’imagine.",
+      "intent": "Garder le poste de Nadia. Ne jamais laisser passer.",
+      "tactics": "**Allonge de 4,50 m** : il touche les lanceurs de sorts qui se croient à l’abri. Trois attaques par tour, régénération 10.",
+      "flee": "Jamais.",
+      "weakness": "Feu et acide. Difficile de le tenir à distance : il faut de la portée réelle ou du terrain."
+    }
+  },
+  {
+    "id": "star-spawn-mangler", "name": "Rejeton stellaire lacérateur", "nameEn": "Star Spawn Mangler",
+    "source": "MPMM — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "M", "type": "Aberration", "alignment": "Chaotique mauvais",
+    "cr": "5", "xp": 1800, "pb": 3,
+    "ac": 16, "hp": 71, "speed": "9 m, escalade 9 m",
+    "abilities": { "str": 12, "dex": 19, "con": 14, "int": 8, "wis": 10, "cha": 6 },
+    "skills": "Discrétion +8",
+    "immunities": "à terre",
+    "senses": "vision dans le noir 36 m",
+    "languages": "comprend le profond, ne parle pas",
+    "traits": [
+      { "name": "Camouflage dans l’ombre", "text": "Dans l’obscurité totale, il est effectivement invisible : avantage massif à ses tests de Discrétion. En lumière vive, il subit un désavantage à ses jets d’attaque." },
+      { "name": "Éclat mortel", "text": "À 0 point de vie, il explose : chaque créature à 3 m effectue un jet de sauvegarde d’Intelligence DD 13 ou subit 11 (2d10) dégâts psychiques." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "Il effectue quatre attaques de Griffes." },
+      { "name": "Griffes", "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 6 (1d6 + 3) dégâts perforants plus 3 (1d6) dégâts nécrotiques." },
+      { "name": "Coup rapide (1/tour)", "text": "Après avoir touché, il se déplace de la moitié de sa vitesse sans provoquer d’attaque d’opportunité." }
+    ],
+    "summary": {
+      "style": "Chose maigre tapie au plafond, qui tombe sur sa proie et repart aussitôt.",
+      "intent": "Chasser dans le noir. Elle ne visait pas les personnages : elle traquait autre chose.",
+      "tactics": "Surgit du plafond au premier tour, **quatre griffes**, puis se replonge dans l’obscurité. **Une source de lumière vive lui inflige un désavantage** : c’est la parade.",
+      "flee": "Se retire dans les murs à faible score, revient plus tard.",
+      "weakness": "Lumière vive. Attention à son **explosion psychique** à la mort (Int DD 13, 2d10).",
+      "roleplay": "Dans ses griffes, un fragment de robe violette : elle a déjà croisé Rizzeryl."
+    }
+  },
+  {
+    "id": "lightning-elemental", "name": "Élémentaire de foudre (Trenzia)", "nameEn": "Lightning Elemental",
+    "source": "Créature sur mesure — version Améliorée, à ajuster à ta table",
+    "size": "G", "type": "Élémentaire", "alignment": "Neutre",
+    "cr": "5", "xp": 1800, "pb": 3,
+    "ac": 15, "hp": 114, "speed": "0 m, vol 27 m (vol stationnaire)",
+    "abilities": { "str": 14, "dex": 20, "con": 16, "int": 6, "wis": 10, "cha": 6 },
+    "resistances": "armes non magiques",
+    "immunities": "foudre, tonnerre, poison ; à terre, agrippé, empoisonné, entravé, épuisement, inconscient, paralysé, pétrifié",
+    "senses": "vision dans le noir 18 m",
+    "languages": "aurique ; comprend le commun, répond en morse électrique",
+    "traits": [
+      { "name": "Forme de foudre", "text": "Elle peut traverser un espace large de 2,5 cm sans se comprimer. Une créature qui touche l’élémentaire ou l’atteint au corps à corps subit 5 (1d10) dégâts de foudre." },
+      { "name": "Réseau de cuivre", "text": "Tant qu’elle est reliée aux fils de cuivre du laboratoire, elle **électrifie le sol** en action bonus : 7 (2d6) dégâts de foudre à toute créature en contact avec les plaques. Une armure métallique impose un désavantage au jet de Constitution. Couper les fils (Investigation DD 15 puis Force DD 16, ou 30 dégâts) l’isole : elle ne récupère plus." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "Elle effectue deux attaques de Décharge." },
+      { "name": "Décharge", "text": "Jet d’attaque au corps à corps : +7, allonge 3 m. Touché : 14 (2d10 + 3) dégâts de foudre." },
+      { "name": "Arc jaillissant (recharge 5-6)", "text": "Une ligne de 9 m sur 1,50 m : jet de sauvegarde de Dextérité DD 15, 22 (4d10) dégâts de foudre, moitié en cas de réussite." }
+    ],
+    "summary": {
+      "style": "Tempête enfermée dans une salle de cuivre : elle électrifie le sol et frappe de loin.",
+      "intent": "Ce qui reste de Trenzia. Elle défend son laboratoire — et voudrait qu’on la libère.",
+      "tactics": "Action bonus : électrifier les plaques. Deux décharges à 3 m, arc jaillissant sur un groupe aligné. **Couper les fils** (Investigation DD 15, Force DD 16) l’empêche de se recharger ; les **trois fioles paralysantes** de l’atelier la figent un round chacune.",
+      "flee": "Jamais : elle est liée au réseau.",
+      "weakness": "Armure métallique = danger pour les personnages, pas pour elle. Fils coupés, elle devient ordinaire. Arcanes DD 16 : elle répond en morse — « coupez les fils, libération »."
+    }
+  },
+  {
+    "id": "banderhobb", "name": "Banderhobb", "nameEn": "Banderhobb",
+    "source": "MPMM — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "G", "type": "Aberration", "alignment": "Neutre mauvais",
+    "cr": "5", "xp": 1800, "pb": 3,
+    "ac": 15, "acNote": "armure naturelle", "hp": 84, "speed": "9 m",
+    "abilities": { "str": 18, "dex": 14, "con": 16, "int": 11, "wis": 14, "cha": 8 },
+    "skills": "Perception +5, Discrétion +8",
+    "resistances": "armes non magiques",
+    "immunities": "poison ; empoisonné",
+    "senses": "vision dans le noir 36 m",
+    "languages": "comprend le commun et le sylvestre, ne parle pas",
+    "traits": [
+      { "name": "Furtivité d’ombre", "text": "Dans la pénombre ou l’obscurité, il se cache en action bonus." }
+    ],
+    "actions": [
+      { "name": "Morsure", "text": "Jet d’attaque au corps à corps : +7, allonge 1,50 m. Touché : 15 (2d10 + 4) dégâts perforants." },
+      { "name": "Langue", "text": "Jet d’attaque au corps à corps : +7, allonge 9 m, une créature de taille M ou inférieure. Touché : la cible est tirée jusqu’à 7,50 m vers le banderhobb et agrippée (DD 14 pour s’échapper)." },
+      { "name": "Engloutir", "text": "Une créature agrippée de taille M ou inférieure est avalée (jet de sauvegarde de Force DD 12) : aveuglée, entravée, 7 (2d6) dégâts d’acide au début de chaque tour du banderhobb." }
+    ],
+    "bonusActions": [
+      { "name": "Pas d’ombre", "text": "Dans la pénombre ou l’obscurité, il se téléporte jusqu’à 18 m vers un autre endroit sombre." }
+    ],
+    "summary": {
+      "style": "Grenouille géante et gélatineuse qui avale les meubles — et les gens.",
+      "intent": "Nettoyer les traces. Quelqu’un l’a envoyé ici.",
+      "tactics": "Langue à 9 m pour tirer une cible isolée, puis engloutir. **Pas d’ombre** en action bonus : il disparaît d’un coin sombre à l’autre.",
+      "flee": "Se téléporte quand il a fini d’avaler ce qu’il voulait.",
+      "weakness": "Armes magiques, lumière vive (elle bloque ses téléportations). Force DD 14 pour ouvrir son estomac après sa mort : on y trouve un livre de comptes en gobelin."
+    }
+  },
+  {
+    "id": "werewolf", "name": "Loup-garou", "nameEn": "Werewolf",
+    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "M", "type": "Monstruosité (lycanthrope)", "alignment": "Chaotique mauvais",
+    "cr": "3", "xp": 700, "pb": 2,
+    "ac": 15, "hp": 58, "speed": "9 m (12 m sous forme de loup)",
+    "abilities": { "str": 15, "dex": 13, "con": 14, "int": 10, "wis": 11, "cha": 10 },
+    "skills": "Perception +4, Discrétion +3",
+    "senses": "odorat aiguisé ; Perception passive 14",
+    "languages": "commun (pas sous forme de loup)",
+    "traits": [
+      { "name": "Métamorphe", "text": "Par une action bonus, il prend une forme hybride, une forme de loup, ou reprend sa forme humanoïde." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples (formes humanoïde ou hybride)", "text": "Il effectue deux attaques, dont une seule peut être une Morsure." },
+      { "name": "Morsure (formes de loup ou hybride)", "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 8 (1d8 + 3) dégâts perforants. Un humanoïde touché doit réussir un jet de sauvegarde de Constitution DD 12 ou être maudit par la lycanthropie." },
+      { "name": "Griffes (forme hybride)", "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 6 (1d6 + 3) dégâts tranchants." }
+    ],
+    "summary": {
+      "style": "Lieutenant de Rizzeryl, rapide et mordant.",
+      "intent": "Protéger le drow et la clef de pierre.",
+      "tactics": "Forme hybride, deux attaques par tour, morsure sur les personnages isolés — **menace de lycanthropie (Con DD 12)**.",
+      "flee": "Reprend sa forme de loup et détale si Rizzeryl tombe.",
+      "weakness": "Armes en argent ou magiques."
+    }
+  },
+  {
+    "id": "werebear", "name": "Ours-garou", "nameEn": "Werebear",
+    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "M", "type": "Monstruosité (lycanthrope)", "alignment": "Neutre bon",
+    "cr": "5", "xp": 1800, "pb": 3,
+    "ac": 13, "hp": 135, "speed": "9 m (12 m et escalade 9 m sous forme d’ours)",
+    "abilities": { "str": 19, "dex": 10, "con": 17, "int": 11, "wis": 12, "cha": 12 },
+    "skills": "Perception +7",
+    "immunities": "armes non magiques et non argentées",
+    "senses": "odorat aiguisé ; Perception passive 17",
+    "languages": "commun (pas sous forme d’ours)",
+    "traits": [
+      { "name": "Métamorphe", "text": "Par une action bonus, il prend une forme hybride, une forme d’ours, ou reprend sa forme humanoïde." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples (formes humanoïde ou hybride)", "text": "Il effectue deux attaques, dont une seule peut être une Morsure." },
+      { "name": "Morsure (formes d’ours ou hybride)", "text": "Jet d’attaque au corps à corps : +7, allonge 1,50 m. Touché : 15 (2d10 + 4) dégâts perforants. Un humanoïde touché doit réussir un jet de sauvegarde de Constitution DD 14 ou être maudit par la lycanthropie." },
+      { "name": "Griffes (formes d’ours ou hybride)", "text": "Jet d’attaque au corps à corps : +7, allonge 1,50 m. Touché : 11 (2d6 + 4) dégâts tranchants." }
+    ],
+    "summary": {
+      "style": "Mur de fourrure de 135 points de vie, insensible à l’acier ordinaire.",
+      "intent": "Garde du corps de Rizzeryl. Il ne cherche pas le carnage.",
+      "tactics": "Se place entre le drow et les assaillants. Deux attaques par tour, morsure à 2d10.",
+      "flee": "Couvre la retraite de Rizzeryl plutôt que de mourir.",
+      "weakness": "**Argent ou magie, obligatoirement.** Sans arme adaptée, le combat est ingagnable — négociez."
+    }
+  },
+  {
+    "id": "giant-rust-monster", "name": "Oxydeur géant", "nameEn": "Giant Rust Monster",
+    "source": "Créature sur mesure — version Améliorée, à ajuster à ta table",
+    "size": "G", "type": "Monstruosité", "alignment": "Non aligné",
+    "cr": "4", "xp": 1100, "pb": 2,
+    "ac": 16, "acNote": "armure naturelle", "hp": 65, "speed": "12 m",
+    "abilities": { "str": 17, "dex": 12, "con": 15, "int": 2, "wis": 13, "cha": 6 },
+    "senses": "vision dans le noir 18 m",
+    "traits": [
+      { "name": "Odorat du fer", "text": "Il localise le métal ferreux à 18 m et le préfère à toute autre cible." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "Il effectue une attaque de Morsure et deux attaques d’Antennes." },
+      { "name": "Morsure", "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 10 (2d6 + 3) dégâts perforants." },
+      { "name": "Antennes", "text": "Jet d’attaque au corps à corps : +7, allonge 1,50 m, contre un objet en métal ferreux non magique. Jet de sauvegarde de Constitution DD 15 : l’objet est corrodé (armure : −1d4 à la CA ; arme : −1d4 aux dégâts). **Deux contacts suffisent à ruiner un harnois.**" }
+    ],
+    "summary": {
+      "style": "Le fléau des armures lourdes, en plus grand et plus rapide.",
+      "intent": "Manger tout le fer du couloir.",
+      "tactics": "Fonce sur la cible la plus métallique et frappe **deux fois par tour** aux antennes : une armure de plates est détruite en deux contacts, la CA tombe à 10.",
+      "flee": "Se détourne pour du fer jeté au sol — ou pour le **sac de sable magnétisé** caché sous une applique (Investigation DD 15), qui attire les trois oxydeurs pendant 2 rounds.",
+      "weakness": "Armes en bois, pierre, argent ou magiques. Ou simplement le nourrir."
+    }
+  },
+  {
+    "id": "beholder", "name": "Tyrannœil (blessé)", "nameEn": "Beholder",
+    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "G", "type": "Aberration", "alignment": "Loyal mauvais",
+    "cr": "13", "xp": 10000, "pb": 5,
+    "ac": 18, "acNote": "armure naturelle", "hp": 90, "hpFormula": "la moitié de ses 180 PV : il est blessé", "speed": "0 m, vol 6 m (vol stationnaire)",
+    "abilities": { "str": 10, "dex": 14, "con": 18, "int": 17, "wis": 15, "cha": 17 },
+    "saves": "Int +8, Sag +7, Cha +8",
+    "skills": "Perception +12",
+    "immunities": "à terre",
+    "senses": "vision dans le noir 36 m",
+    "languages": "profond, commun des profondeurs",
+    "traits": [
+      { "name": "Cône d’anti-magie", "text": "Son œil central projette un cône de 45 m devant lui, **toujours actif** ici. Dans cette zone, aucun sort ne fonctionne, aucun objet magique n’opère, aucun effet magique ne subsiste. Il choisit l’orientation du cône au début de son tour ; ses propres rayons ne fonctionnent pas dans le cône." },
+      { "name": "Blessé et furieux", "text": "Réduit de moitié par un sort de niveau 8 ou plus (Arcanes DD 16 pour le déduire). Il attaque quiconque approche à moins de 3 m sans porter le symbole de Xanathar." }
+    ],
+    "actions": [
+      { "name": "Morsure", "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 14 (4d6) dégâts perforants." },
+      { "name": "Rayons oculaires (3/tour)", "text": "Il tire trois rayons au hasard (1d4 ici, sur quatre pédoncules encore actifs) sur des cibles qu’il voit à 36 m. 1 — **Ralentissement** : Sagesse DD 16 ou ralenti 1 minute. 2 — **Pétrification** : Dextérité DD 16, la cible commence à se pétrifier (second jet, sinon pétrifiée). 3 — **Peur** : Sagesse DD 16 ou terrorisée 1 minute. 4 — **Désintégration** : Dextérité DD 16, 45 (10d8) dégâts de force ; réduite à 0 PV, la cible est désintégrée." }
+    ],
+    "summary": {
+      "style": "Le cauchemar de la strate : trois rayons par tour, et pas une once de magie ne l’atteint de face.",
+      "intent": "Survivre, se venger de qui l’a blessé, garder le poste de Nadia.",
+      "tactics": "**Son cône d’anti-magie couvre 180° devant lui.** Ni boule de feu, ni contresort, ni soins magiques de ce côté : le combat est purement physique, ou se mène **depuis ses angles morts**, derrière lui. Trois rayons par tour, tirés au hasard.",
+      "flee": "Il est déjà à moitié mort : il se replie au plafond hors de portée.",
+      "weakness": "**Le symbole de Xanathar** (la baguette de Rizzeryl) le fait ignorer les intrus — c’est la vraie solution. Sinon : archers et corps à corps par derrière. Sans préparation, l’anéantissement du groupe est probable."
+    }
+  },
+  {
+    "id": "stone-golem", "name": "Golem de pierre", "nameEn": "Stone Golem",
+    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "G", "type": "Créature artificielle", "alignment": "Non aligné",
+    "cr": "10", "xp": 5900, "pb": 4,
+    "ac": 17, "acNote": "armure naturelle", "hp": 178, "speed": "9 m",
+    "abilities": { "str": 22, "dex": 9, "con": 20, "int": 3, "wis": 11, "cha": 1 },
+    "immunities": "poison, psychique ; armes non magiques ; charmé, empoisonné, épuisement, paralysé, pétrifié, terrorisé",
+    "senses": "vision dans le noir 36 m",
+    "languages": "comprend les langues de son créateur, ne parle pas",
+    "traits": [
+      { "name": "Absorption magique", "text": "Il est **immunisé à tout sort de niveau 5 ou moins**. Une boule de feu ne lui fait rien. Il faut des sorts de niveau 6 ou plus, ou des attaques physiques." },
+      { "name": "Transmutation nourricière", "text": "Un sort de transmutation lancé sur lui (agrandissement, hâte…) lui accorde **30 points de vie temporaires** : ne le soignez pas par mégarde." },
+      { "name": "Forme immuable", "text": "Immunisé contre tout effet qui altérerait sa forme." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "Le golem effectue deux attaques de Coup de massue." },
+      { "name": "Coup de massue", "text": "Jet d’attaque au corps à corps : +10, allonge 1,50 m. Touché : 19 (3d8 + 6) dégâts contondants, et la cible doit réussir un jet de sauvegarde de Force DD 17 ou tomber à terre." },
+      { "name": "Hâte (recharge 5-6)", "text": "Jusqu’à la fin de son prochain tour, le golem gagne +2 à la CA, l’avantage aux jets de sauvegarde de Dextérité, et une attaque supplémentaire en action bonus." }
+    ],
+    "summary": {
+      "style": "Trois mètres de granit qui renverse et écrase, indifférent à la magie courante.",
+      "intent": "Garder le couloir de la brasserie. Payé en bière, il y a des siècles.",
+      "tactics": "Deux massues par tour à +10, DD 17 pour ne pas tomber à terre. **Les sorts de niveau 5 ou moins ne servent à rien**, ceux de transmutation le soignent.",
+      "flee": "Jamais.",
+      "weakness": "Attaques physiques magiques, sorts de niveau 6+. Astuce : **briser le cristal rouge le plus brillant du plafond** (un projectile, une action) l’aveugle 1d4 rounds — c’est son capteur."
+    }
+  },
+  {
+    "id": "couatl", "name": "Couatl", "nameEn": "Couatl",
+    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "M", "type": "Céleste", "alignment": "Loyal bon",
+    "cr": "4", "xp": 1100, "pb": 2,
+    "ac": 19, "acNote": "armure naturelle", "hp": 97, "speed": "9 m, vol 27 m",
+    "abilities": { "str": 16, "dex": 20, "con": 17, "int": 18, "wis": 20, "cha": 18 },
+    "saves": "Con +5, Sag +7, Cha +6",
+    "resistances": "radiant ; armes non magiques",
+    "immunities": "psychique",
+    "senses": "vision véritable 36 m",
+    "languages": "toutes ; télépathie 36 m",
+    "traits": [
+      { "name": "Sens de la vérité", "text": "Il sait automatiquement si une créature à 9 m ment. On ne le trompe pas." },
+      { "name": "Esprit protégé", "text": "Rien ne peut lire ses pensées ni percevoir ses émotions." }
+    ],
+    "actions": [
+      { "name": "Morsure", "text": "Jet d’attaque au corps à corps : +8, allonge 1,50 m. Touché : 6 (1d6 + 3) dégâts perforants, et la cible doit réussir un jet de sauvegarde de Constitution DD 13 ou subir 7 (2d6) dégâts de poison et être empoisonnée 24 heures." },
+      { "name": "Constriction", "text": "Jet d’attaque au corps à corps : +6, allonge 3 m, une créature de taille M ou inférieure. Touché : 10 (2d6 + 3) dégâts contondants, la cible est agrippée (DD 15) et entravée." },
+      { "name": "Incantation", "text": "Charisme, DD 14. À volonté : détection du mal et du bien, détection de la magie, détection des pensées. 3/jour chacun : bénédiction, création de nourriture et d’eau, restauration partielle, protection contre le poison, sanctuaire, injonction. 1/jour chacun : restauration supérieure, soins, esprit impénétrable, changement de forme." }
+    ],
+    "summary": {
+      "style": "Serpent à plumes bienveillant, gardien des tombes elfiques — et juge.",
+      "intent": "Éprouver ceux qui arrivent. Il n’attaque que si on l’attaque ou si l’on profane les tombes.",
+      "tactics": "Il pose **trois questions** et détecte chaque mensonge. Honnêteté récompensée : il révèle que la tombe de 26b est un leurre, indique le grimoire brûlé de 26e et offre une *restauration supérieure*.",
+      "flee": "Se téléporte plutôt que de tuer des égarés.",
+      "weakness": "Inutile de mentir, inutile de se cacher (vision véritable). C’est un allié, pas un obstacle.",
+      "roleplay": "Voix directement dans les esprits, calme et bienveillante. « J’attendais des gens qui méritent d’être jugés. »"
+    }
+  },
+  {
+    "id": "gynosphinx", "name": "Gynosphinx", "nameEn": "Gynosphinx",
+    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "G", "type": "Céleste", "alignment": "Loyal neutre",
+    "cr": "11", "xp": 7200, "pb": 4,
+    "ac": 17, "acNote": "armure naturelle", "hp": 136, "speed": "12 m, vol 18 m",
+    "abilities": { "str": 18, "dex": 15, "con": 16, "int": 18, "wis": 18, "cha": 18 },
+    "skills": "Arcanes +12, Histoire +12, Perception +8, Religion +8",
+    "resistances": "psychique ; armes non magiques",
+    "immunities": "charmé, terrorisé",
+    "senses": "vision véritable 36 m",
+    "languages": "commun, sphinx",
+    "traits": [
+      { "name": "Vision impénétrable", "text": "Elle est immunisée à toute divination et refuse d’être scrutée." },
+      { "name": "Armes magiques", "text": "Ses attaques comptent comme magiques." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "Elle effectue deux attaques de Griffes." },
+      { "name": "Griffes", "text": "Jet d’attaque au corps à corps : +9, allonge 1,50 m. Touché : 15 (2d8 + 6) dégâts tranchants." },
+      { "name": "Rugissement (3/jour)", "text": "Premier rugissement : chaque créature à 150 m doit réussir un jet de sauvegarde de Sagesse DD 15 ou être terrorisée 1 minute." },
+      { "name": "Incantation", "text": "Intelligence, DD 16. À volonté : détection de la magie, détection du mal et du bien, lecture de la magie. 3/jour chacun : dissipation de la magie, image majeure, immobilisation de monstre, contresort (niveau 5). 1/jour chacun : téléportation, communication avec les morts, cercle de téléportation." }
+    ],
+    "summary": {
+      "style": "Gardienne des caryatides. Elle ne veut pas se battre : elle veut trois bonnes réponses.",
+      "intent": "Filtrer l’accès aux colonnes de restauration. Halaster l’a placée là pour garder ses secrets.",
+      "tactics": "**Trois énigmes** avant de laisser passer. Attaquée : rugissement (Sag DD 15) puis deux griffes à +9, contresort sur les lanceurs de sorts.",
+      "flee": "Se téléporte si le combat tourne mal — et le groupe perd l’accès aux caryatides.",
+      "weakness": "Aucune, en pratique : à FP 11, elle surclasse le groupe. **Répondez aux énigmes.**",
+      "roleplay": "Patiente, un peu amusée. Sculpte la pierre entre deux visiteurs."
+    }
+  },
+  {
+    "id": "legendary-owlbear", "name": "Hibours légendaire", "nameEn": "Legendary Owlbear",
+    "source": "Créature sur mesure — version Améliorée, à ajuster à ta table",
+    "size": "G", "type": "Monstruosité", "alignment": "Non aligné",
+    "cr": "8", "xp": 3900, "pb": 3,
+    "ac": 14, "acNote": "armure naturelle", "hp": 170, "speed": "12 m, escalade 12 m",
+    "abilities": { "str": 22, "dex": 12, "con": 20, "int": 6, "wis": 14, "cha": 10 },
+    "skills": "Perception +8",
+    "resistances": "contondant, perforant, tranchant",
+    "senses": "vision dans le noir 18 m ; Perception passive 18",
+    "traits": [
+      { "name": "Regard tétanisant", "text": "Sur un 20 naturel à sa Morsure, la cible doit réussir un jet de sauvegarde de Constitution DD 15 ou être pétrifiée jusqu’à la fin de son prochain tour." },
+      { "name": "Ancienne bête d’Halaster", "text": "Amélioré par magie. Il ne combat pas pour tuer : apaisé (5 kg de viande, ou Sagesse (Dressage) DD 18), il lâche le coffret d’os qu’il tient dans la gueule." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "Il effectue une attaque de Morsure et deux attaques de Griffes." },
+      { "name": "Morsure", "text": "Jet d’attaque au corps à corps : +9, allonge 1,50 m. Touché : 22 (3d10 + 6) dégâts perforants." },
+      { "name": "Griffes", "text": "Jet d’attaque au corps à corps : +9, allonge 1,50 m. Touché : 15 (2d8 + 6) dégâts tranchants." }
+    ],
+    "legendary": [
+      { "name": "Bec (1 action)", "text": "Le hibours effectue une attaque de Morsure." },
+      { "name": "Coup de patte (2 actions)", "text": "Il effectue une attaque de Griffes et se déplace de 3 m sans provoquer d’attaque d’opportunité." },
+      { "name": "Coup cyclone (3 actions)", "text": "Il tournoie : chaque créature à 3 m effectue un jet de sauvegarde de Dextérité DD 16, subit 16 (3d10) dégâts tranchants et tombe à terre en cas d’échec, moitié moins et reste debout en cas de réussite." }
+    ],
+    "summary": {
+      "style": "Trois actions légendaires par round : il frappe même quand ce n’est pas son tour.",
+      "intent": "Garder son coffret d’os. Il ne cherche pas à tuer, il défend son jouet.",
+      "tactics": "Trois attaques par tour, plus les actions légendaires entre les tours des personnages. **Coup cyclone** punit ceux qui s’agglutinent. Il résiste aux armes ordinaires.",
+      "flee": "Non : il faut le vaincre ou l’apaiser.",
+      "weakness": "**La négociation** : 5 kg de viande ou Dressage DD 18 et il lâche le coffret (grimoire brûlé + poudre de disparition), sans un coup échangé. La sphère de pierre de 26c le percute aussi si elle passe par là."
+    }
+  },
+  {
+    "id": "gelatinous-cube-giant", "name": "Cube gélatineux gigantesque", "nameEn": "Gargantuan Gelatinous Cube",
+    "source": "Créature sur mesure — version Améliorée, à ajuster à ta table",
+    "size": "Gig", "type": "Vase", "alignment": "Non aligné",
+    "cr": "6", "xp": 2300, "pb": 3,
+    "ac": 6, "hp": 147, "speed": "4,50 m",
+    "abilities": { "str": 20, "dex": 3, "con": 22, "int": 1, "wis": 6, "cha": 1 },
+    "immunities": "acide, feu, foudre ; à terre, assourdi, aveuglé, charmé, épuisement, terrorisé",
+    "senses": "vision aveugle 18 m",
+    "traits": [
+      { "name": "Cube de 9 mètres", "text": "Agrandi par le crâne de duergar en suspension à l’intérieur. Il peut contenir jusqu’à trente-six créatures de taille M. Retirer le crâne (Dextérité DD 17, le bras dans l’acide) le ramène à sa taille normale et expulse les créatures en trop." },
+      { "name": "Transparent", "text": "Perception DD 15 pour repérer le cube immobile ; sans quoi on entre dedans sans le voir." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "Il effectue quatre attaques de Pseudopode." },
+      { "name": "Pseudopode", "text": "Jet d’attaque au corps à corps : +8, allonge 1,50 m. Touché : 17 (3d8 + 4) dégâts d’acide." },
+      { "name": "Engloutir", "text": "Il se déplace jusqu’à sa vitesse à travers les créatures de taille G ou inférieure. Chacune effectue un jet de sauvegarde de Dextérité DD 12 : réussite, elle est repoussée de 1,50 m ; échec, elle est aveuglée, entravée, ne peut plus respirer et subit 21 (6d6) dégâts d’acide au début de chaque tour du cube. Force DD 15 pour s’extraire." }
+    ],
+    "summary": {
+      "style": "Neuf mètres de gelée transparente qui remplissent la salle entière.",
+      "intent": "Digérer. Le crâne de duergar coincé à l’intérieur le maintient à cette taille.",
+      "tactics": "Quatre pseudopodes par tour et un engloutissement qui peut avaler tout le groupe. **Entrer dans la salle, c’est entrer dans le cube.**",
+      "flee": "Jamais.",
+      "weakness": "Lent : on le fuit à pied. **Retirer le crâne** (Dex DD 17) le réduit à un cube ordinaire — et donne une arme redoutable, capable d’agrandir n’importe quelle vase pendant une heure."
+    }
+  }
+]

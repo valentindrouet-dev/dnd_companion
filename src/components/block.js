@@ -7,6 +7,7 @@ import { icon } from '../icons.js';
 import { markup, plain } from '../markup.js';
 import { store } from '../store.js';
 import { openPopup } from '../ui/popup.js';
+import { enhancedStar } from '../variant.js';
 
 // type -> [classe, libellé, icône]
 export const BLOCK_TYPES = {
@@ -70,6 +71,7 @@ export function textBlock(o) {
     sid ? h('button', { class: 'grip', 'aria-label': 'Déplacer le bloc' }, icon('menu')) : null,
     icon(kindIcon, 'kind-icon'),
     title ? h('div', { class: 'block-title' }, title) : h('div', { class: 'block-kind' }, kindLabel),
+    enhancedStar(item),
     override != null ? h('span', { class: 'edited-flag' }, 'modifié') : null,
     tools);
 

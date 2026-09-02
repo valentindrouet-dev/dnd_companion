@@ -8,6 +8,7 @@ import { openPopup } from '../ui/popup.js';
 import { openMonsterPopup } from './monster.js';
 import { hiddenRow } from './block.js';
 import { asTextItem } from '../dom.js';
+import { visibleItems, enhancedStar } from '../variant.js';
 
 const ATTITUDE = {
   amical: ['Amical', 'ok', 'heart'],
@@ -47,7 +48,8 @@ export function openNpcPopup(advId, room, npc) {
 
 /** Liste de répliques masquables. */
 export function dialogueList(baseKey, dialogues) {
-  const items = (dialogues || []).map((d, i) => (typeof d === 'string' ? { id: String(i), line: d } : { id: d.id ?? String(i), ...d }));
+  const items = visibleItems(dialogues, (d, i) => (typeof d === 'string' ? String(i) : String(d.id ?? i)))
+    .map(({ item: d, id }) => (typeof d === 'string' ? { id, line: d } : { ...d, id }));
   if (!items.length) return h('div', { class: 'empty' }, 'Aucune réplique.');
   return h('div', null, items.map((d) => {
     const k = key(baseKey, 'line', d.id);
@@ -64,6 +66,7 @@ export function dialogueList(baseKey, dialogues) {
       h('div', { class: 'block-head' },
         icon('chat', 'kind-icon'),
         h('div', { class: 'block-kind' }, d.trigger || 'Réplique'),
+        enhancedStar(d),
         h('div', { class: 'block-tools' },
           h('button', { class: 'btn btn-sm btn-ghost', onclick: () => store.setHidden(k, true) }, icon('check'), 'Dit'))),
       markup(d.line, 'div', 'block-body read'));

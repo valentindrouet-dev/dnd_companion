@@ -1,263 +1,431 @@
 [
   {
-    "id": "halaster", "name": "Halaster Blackcloak", "kind": "personne",
-    "aliases": ["Halaster Blackcloak", "Halaster", "le Mage dément"],
+    "id": "halaster",
+    "name": "Halaster Blackcloak",
+    "kind": "personne",
+    "aliases": [
+      "Halaster Blackcloak",
+      "Halaster",
+      "le Mage dément"
+    ],
     "what": "Le Mage dément, archimage millénaire et maître d’Undermountain. Il a creusé et peuplé le donjon pendant des siècles ; sa folie a fait le reste.",
     "goal": "Se distraire. Éprouver les intrus, récompenser l’audace, punir la bêtise.",
     "state": "Il a cédé cette strate à ses apprentis et n’y apparaît qu’au gré de son humeur. Sa voix résonne encore dans certaines salles.",
     "where": "Partout et nulle part. Son pantin en [[r:3|3]], sa statue en [[r:25h|25h]], son portrait en [[r:11b|11b]]."
   },
   {
-    "id": "undermountain", "name": "Undermountain", "kind": "lieu",
-    "aliases": ["Undermountain"],
+    "id": "undermountain",
+    "name": "Undermountain",
+    "kind": "lieu",
+    "aliases": [
+      "Undermountain"
+    ],
     "what": "Le plus vaste donjon de Féerune, creusé sous Waterdeep par les nains Melairkyn puis accaparé par Halaster. Vingt-trois strates connues.",
     "goal": "—",
     "state": "La strate 2, les Salles Arcaniques, est disputée entre les gobelins, la Guilde de Xanathar et le Zhentarim.",
     "where": "On y entre par le Portail Béant, dans la taverne du même nom, à Waterdeep."
   },
   {
-    "id": "melairkyn", "name": "Clan Melairkyn", "kind": "peuple",
-    "aliases": ["Melairkyn", "clan Melairkyn", "nains d’écu"],
+    "id": "melairkyn",
+    "name": "Clan Melairkyn",
+    "kind": "peuple",
+    "aliases": [
+      "Melairkyn",
+      "clan Melairkyn",
+      "nains d’écu"
+    ],
     "what": "Les nains d’écu qui ont creusé ces salles bien avant Halaster : maçonnerie de granit ajusté, brasserie, mine de mithral et de cuivre.",
     "goal": "Exploiter le mithral de la montagne. Ils ont été chassés il y a des siècles.",
     "state": "Disparus. Restent leurs fresques ([[r:8|8]]), leur brasserie ([[r:22c|22]]), leur temple ([[r:23b|23]]) et leur bière, toujours buvable.",
     "where": "[[r:22e|22e]], [[r:22f|22f]], [[r:23a|23a]], [[r:13a|13a]]"
   },
   {
-    "id": "xanathar", "name": "La Guilde de Xanathar", "kind": "faction",
-    "aliases": ["Guilde de Xanathar", "Xanathar", "la Guilde"],
+    "id": "xanathar",
+    "name": "La Guilde de Xanathar",
+    "kind": "faction",
+    "aliases": [
+      "Guilde de Xanathar",
+      "Xanathar",
+      "la Guilde"
+    ],
     "what": "Le syndicat du crime de Waterdeep, dirigé par un tyrannœil. Son symbole : un cercle à dix rayons, comme un œil entouré de pédoncules.",
     "goal": "Piller la strate, fermer le bazar des gobelins et rapporter le butin à Skullport.",
-    "state": "Deux avant-postes : Shunn au nord ([[r:9b|9b]]), Nadia au sud ([[r:20b|20b]]). Harcelée par les rats-garous du Zhentarim, elle s’est fait voler une clef de pierre.",
+    "state": "Deux avant-postes : Shunn au nord ([[r:9b|9b]]), Nadia au sud ([[r:20b|20b]]). **Version Améliorée : des onis et des trolls de cave remplacent les gobelours, et un tyrannœil vivant garde le poste sud.**",
     "where": "[[r:9a|9]], [[r:20a|20]], et le zombi tyrannœil de [[r:20a|20a]]"
   },
   {
-    "id": "zhentarim", "name": "Le Zhentarim", "kind": "faction",
-    "aliases": ["Zhentarim", "Réseau noir"],
+    "id": "zhentarim",
+    "name": "Le Zhentarim",
+    "kind": "faction",
+    "aliases": [
+      "Zhentarim",
+      "Réseau noir"
+    ],
     "what": "Le Réseau noir : mercenaires, contrebandiers et espions, qui vendent leurs services à qui paie.",
     "goal": "Chasser la Guilde de Xanathar de la strate et de Skullport pour prendre sa place.",
-    "state": "Représenté ici par le mage drow Rizzeryl et ses huit rats-garous, terrés en [[r:14a|14a]].",
+    "state": "Représenté par Rizzeryl, terré en [[r:14a|14a]]. **Version Améliorée : deux loups-garous et un ours-garou remplacent les huit rats-garous** — l’ours est immunisé aux armes non argentées.",
     "where": "[[r:14a|14a]], [[r:14b|14b]] ; à Skullport, chercher Bosskyn Gorrb."
   },
   {
-    "id": "auvryndar", "name": "Maison Auvryndar", "kind": "faction",
-    "aliases": ["Auvryndar", "maison Auvryndar"],
+    "id": "auvryndar",
+    "name": "Maison Auvryndar",
+    "kind": "faction",
+    "aliases": [
+      "Auvryndar",
+      "maison Auvryndar"
+    ],
     "what": "Clan drow de Menzoberranzan qui consolide en secret son pouvoir dans les profondeurs d’Undermountain.",
     "goal": "Prendre le contrôle des strates inférieures sans se montrer.",
     "state": "Rizzeryl travaille pour elle en plus du Zhentarim — il ne l’avouera jamais.",
     "where": "Mentionnée seulement ; ses forces sont plus bas."
   },
   {
-    "id": "skullport", "name": "Skullport", "kind": "lieu",
-    "aliases": ["Skullport", "l’île du Crâne"],
+    "id": "skullport",
+    "name": "Skullport",
+    "kind": "lieu",
+    "aliases": [
+      "Skullport",
+      "l’île du Crâne"
+    ],
     "what": "Le port souterrain de la strate 3 : marché d’esclaves, contrebande, et fief de la Guilde de Xanathar.",
     "goal": "—",
     "state": "Shunn y envoie ses prisonniers, remis au commandant Sundeth sur l’île du Crâne.",
     "where": "Strate 3, par l’escalier au bout du couloir [[r:21|21]]."
   },
   {
-    "id": "fiers-compagnons", "name": "Les Fiers compagnons de Daggerford", "kind": "faction",
-    "aliases": ["Fiers compagnons de Daggerford", "Fiers compagnons"],
+    "id": "fiers-compagnons",
+    "name": "Les Fiers compagnons de Daggerford",
+    "kind": "faction",
+    "aliases": [
+      "Fiers compagnons de Daggerford",
+      "Fiers compagnons"
+    ],
     "what": "Un groupe d’aventuriers malveillants venus piller Undermountain, aujourd’hui dispersé.",
     "goal": "S’enrichir. Rex voulait la gloire, Cuivre l’or, Midna la tranquillité.",
     "state": "Halleth est mort (revenant, strate 1) ; Cuivre est prisonnier en [[r:1e|1e]], Midna terrée en [[r:11b|11b]], Rex acculé en [[r:13g|13g]].",
     "where": "[[r:1e|1e]], [[r:11b|11b]], [[r:13g|13g]]"
   },
   {
-    "id": "yek", "name": "Yek le Grand", "kind": "personne",
-    "aliases": ["Yek le Grand", "Yek"],
+    "id": "yek",
+    "name": "Yek le Grand",
+    "kind": "personne",
+    "aliases": [
+      "Yek le Grand",
+      "Yek"
+    ],
     "what": "Le boss gobelin de la tribu Os-de-Rouille, transformé en bel humain par un diadème magique trouvé dans le donjon.",
     "goal": "Être flatté, garder son diadème et faire prospérer son bazar.",
-    "state": "Trône en [[r:1e|1e]], entouré de quatre gobelours payés et de dix lèche-bottes qui complotent contre lui.",
-    "where": "[[r:1e|1e]]", "monster": "goblin-boss"
+    "state": "Trône en [[r:1e|1e]]. **Version Améliorée : c’est un oni sous polymorphie**, prisonnier de son propre diadème depuis qu’il a tué le précédent porteur. Détruire le diadème le libère et en fait un allié majeur.",
+    "where": "[[r:1e|1e]]",
+    "monster": "goblin-boss"
   },
   {
-    "id": "os-de-rouille", "name": "Tribu Os-de-Rouille", "kind": "faction",
-    "aliases": ["Os-de-Rouille", "tribu Os-de-Rouille"],
+    "id": "os-de-rouille",
+    "name": "Tribu Os-de-Rouille",
+    "kind": "faction",
+    "aliases": [
+      "Os-de-Rouille",
+      "tribu Os-de-Rouille"
+    ],
     "what": "Une quarantaine de gobelins qui ont transformé l’ancienne salle du trône naine en bazar : moitié gardes, moitié marchands.",
     "goal": "Vendre, acheter, revendre. Survivre entre Xanathar et les apprentis d’Halaster.",
     "state": "Prospère mais fragile : les gobelins détestent obéir à un chef à figure humaine.",
     "where": "[[r:1a|1]] à [[r:1f|1f]]"
   },
   {
-    "id": "glom", "name": "Glom", "kind": "personne",
-    "aliases": ["Glom"],
+    "id": "glom",
+    "name": "Glom",
+    "kind": "personne",
+    "aliases": [
+      "Glom"
+    ],
     "what": "Gobeline maigre enfermée dans une cage suspendue pour avoir volé la nourriture de Yek.",
     "goal": "Manger. Sortir de là. Ne jamais revoir Yek.",
     "state": "Affamée depuis deux jours. Excellente guide — et prête à trahir pour un meilleur repas.",
     "where": "[[r:1c|1c]]"
   },
   {
-    "id": "cuivre", "name": "Cuivre Forgeorage", "kind": "personne",
-    "aliases": ["Cuivre Forgeorage", "Cuivre"],
+    "id": "cuivre",
+    "name": "Cuivre Forgeorage",
+    "kind": "personne",
+    "aliases": [
+      "Cuivre Forgeorage",
+      "Cuivre"
+    ],
     "what": "Voleur nain d’écu des Fiers compagnons, capturé par les gobelins qui lui ont rasé la barbe.",
     "goal": "Massacrer les gobelins, récupérer sa dignité, se faire payer.",
     "state": "Enchaîné et bâillonné en [[r:1e|1e]]. Libéré, il attaque les gobelins même à mains nues.",
-    "where": "[[r:1e|1e]]", "monster": "cuivre"
+    "where": "[[r:1e|1e]]",
+    "monster": "cuivre"
   },
   {
-    "id": "kalabash", "name": "Kalabash", "kind": "personne",
-    "aliases": ["Kalabash"],
+    "id": "kalabash",
+    "name": "Kalabash",
+    "kind": "personne",
+    "aliases": [
+      "Kalabash"
+    ],
     "what": "Ancien apprenti d’Halaster, mage calishite enfermé depuis des siècles dans une dimension de poche.",
     "goal": "Frapper Halaster. À défaut, n’importe qui.",
     "state": "Invoqué seulement si l’on répare le cercle de [[r:2d|2d]]. Ivre, donc empoisonné : désavantage à ses attaques.",
-    "where": "[[r:2d|2d]]", "monster": "mage"
+    "where": "[[r:2d|2d]]",
+    "monster": "mage"
   },
   {
-    "id": "trenzia", "name": "Trenzia", "kind": "personne",
-    "aliases": ["Trenzia"],
+    "id": "trenzia",
+    "name": "Trenzia",
+    "kind": "personne",
+    "aliases": [
+      "Trenzia"
+    ],
     "what": "Apprentie demi-elfe d’Halaster, obsédée par l’électricité et la nécromancie. Elle s’est fait transformer en crânefeu.",
     "goal": "Prouver à « Hal » que la foudre peut tout faire.",
-    "state": "Son crâne métallisé garde le laboratoire [[r:7c|7c]] ; son corps a été donné aux blêmes de [[r:7d|7d]].",
-    "where": "[[r:7c|7c]]", "monster": "trenzia"
+    "state": "**Version Améliorée : elle n’est pas devenue un crânefeu mais un élémentaire de foudre**, liée au réseau de cuivre de [[r:7c|7c]]. Couper les fils la libère ; elle répond en morse électrique.",
+    "where": "[[r:7c|7c]]",
+    "monster": "trenzia"
   },
   {
-    "id": "shunn", "name": "Shunn « Yeux d’araignée » Shurreth", "kind": "personne",
-    "aliases": ["Shunn « Yeux d’araignée » Shurreth", "Shunn Shurreth", "Shunn", "Yeux d’araignée"],
+    "id": "shunn",
+    "name": "Shunn « Yeux d’araignée » Shurreth",
+    "kind": "personne",
+    "aliases": [
+      "Shunn « Yeux d’araignée » Shurreth",
+      "Shunn Shurreth",
+      "Shunn",
+      "Yeux d’araignée"
+    ],
     "what": "Drow exilé et maudit par une prêtresse de Lolth : huit yeux rouges, crocs, poils noirs. Il commande le poste de garde nord de la Guilde.",
     "goal": "Récupérer la clef de pierre volée (50 po de prime) et ramener des trophées vivants à Skullport.",
     "state": "En [[r:9b|9b]] avec sept malfrats, deux dévoreurs d’intellect et dix gobelours en renfort. Préfère négocier. Refuse d’être guéri : sa laideur fait son prestige.",
-    "where": "[[r:9b|9b]]", "monster": "shunn"
+    "where": "[[r:9b|9b]]",
+    "monster": "shunn"
   },
   {
-    "id": "nadia", "name": "Nadia l’Inflexible", "kind": "personne",
-    "aliases": ["Nadia l’Inflexible", "Nadia"],
+    "id": "nadia",
+    "name": "Nadia l’Inflexible",
+    "kind": "personne",
+    "aliases": [
+      "Nadia l’Inflexible",
+      "Nadia"
+    ],
     "what": "Berserker illuskienne de 2,10 m qui commande le poste de garde sud de la Guilde de Xanathar.",
     "goal": "Se battre. Tuer. Retrouver les « rats » qui lui ont volé une clef sous le nez.",
     "state": "En [[r:20b|20b]], avec cinq malfrats et cinq gobelours ; trois autres fouillent [[r:20d|20d]].",
-    "where": "[[r:20b|20b]]", "monster": "berserker"
+    "where": "[[r:20b|20b]]",
+    "monster": "berserker"
   },
   {
-    "id": "rizzeryl", "name": "Rizzeryl", "kind": "personne",
-    "aliases": ["Rizzeryl"],
+    "id": "rizzeryl",
+    "name": "Rizzeryl",
+    "kind": "personne",
+    "aliases": [
+      "Rizzeryl"
+    ],
     "what": "Mage drow à la peau violette, agent du Zhentarim — et, en secret, de la maison Auvryndar.",
     "goal": "Chasser la Guilde de Xanathar de la strate et de Skullport.",
     "state": "Terré en [[r:14a|14a]] avec huit rats-garous. Détient la clef de pierre et la troque contre les têtes de Shunn et de Nadia.",
-    "where": "[[r:14a|14a]]", "monster": "drow-mage"
+    "where": "[[r:14a|14a]]",
+    "monster": "drow-mage"
   },
   {
-    "id": "zilitsa", "name": "Zilitsa Ilvarren", "kind": "personne",
-    "aliases": ["Zilitsa Ilvarren", "Zilitsa"],
+    "id": "zilitsa",
+    "name": "Zilitsa Ilvarren",
+    "kind": "personne",
+    "aliases": [
+      "Zilitsa Ilvarren",
+      "Zilitsa"
+    ],
     "what": "Cheffe des huit rats-garous au service de Rizzeryl. Rustre, mesquine, elle admire l’intelligence du drow.",
     "goal": "Grignoter la Guilde de Xanathar poste par poste, pour le Zhentarim.",
     "state": "En [[r:14b|14b]]. C’est elle qui a volé la clef de pierre à Nadia.",
-    "where": "[[r:14b|14b]]", "monster": "wererat"
+    "where": "[[r:14b|14b]]",
+    "monster": "wererat"
   },
   {
-    "id": "midna", "name": "Midna Tauberth", "kind": "personne",
-    "aliases": ["Midna Tauberth", "Midna"],
+    "id": "midna",
+    "name": "Midna Tauberth",
+    "kind": "personne",
+    "aliases": [
+      "Midna Tauberth",
+      "Midna"
+    ],
     "what": "Ecclésiastique de Shar des Fiers compagnons, persuadée de pouvoir tout faire seule.",
     "goal": "Qu’on la laisse tranquille. Survivre, quitte à s’excuser.",
     "state": "Installée en [[r:11b|11b]], servie par neuf serviteurs invisibles. Porte le symbole de Waukyne volé sur le cadavre d’Halleth.",
-    "where": "[[r:11b|11b]]", "monster": "priest"
+    "where": "[[r:11b|11b]]",
+    "monster": "priest"
   },
   {
-    "id": "rex", "name": "Rex le Marteau", "kind": "personne",
-    "aliases": ["Rex le Marteau", "Rex"],
+    "id": "rex",
+    "name": "Rex le Marteau",
+    "kind": "personne",
+    "aliases": [
+      "Rex le Marteau",
+      "Rex"
+    ],
     "what": "Guerrier illuskien, fondateur des Fiers compagnons. Courtois quand il est faible, tyrannique dès qu’il va mieux.",
     "goal": "Gloire, butin, et un groupe qui lui obéit.",
     "state": "Acculé en [[r:13g|13g]] avec **22 PV**, face au mezzoloth et à deux nothics.",
-    "where": "[[r:13g|13g]]", "monster": "champion"
+    "where": "[[r:13g|13g]]",
+    "monster": "champion"
   },
   {
-    "id": "halastron", "name": "Halastron", "kind": "personne",
-    "aliases": ["Halastron"],
+    "id": "halastron",
+    "name": "Halastron",
+    "kind": "personne",
+    "aliases": [
+      "Halastron"
+    ],
     "what": "Quadrone renégat, adopté et nommé par Halaster. Ne parle que modron.",
     "goal": "Se rappeler son nom, se défendre, protéger les cariatides.",
     "state": "Tourne sans fin autour des colonnes de [[r:25a|25a]], dans le sens des aiguilles d’une montre.",
-    "where": "[[r:25a|25a]]", "monster": "quadrone"
+    "where": "[[r:25a|25a]]",
+    "monster": "quadrone"
   },
   {
-    "id": "savir", "name": "Savir", "kind": "personne",
-    "aliases": ["Savir"],
+    "id": "savir",
+    "name": "Savir",
+    "kind": "personne",
+    "aliases": [
+      "Savir"
+    ],
     "what": "Moine tieffelin mort depuis des lustres, tué par un manteleur.",
     "goal": "Savoir ce que sont devenus ses compagnons.",
     "state": "Squelette en [[r:24|24]]. Ne répond qu’à *communication avec les morts*. Parle d’une tombe elfe voisine.",
     "where": "[[r:24|24]]"
   },
   {
-    "id": "clef-de-pierre", "name": "La clef de pierre", "kind": "objet",
-    "aliases": ["clef de pierre"],
+    "id": "clef-de-pierre",
+    "name": "La clef de pierre",
+    "kind": "objet",
+    "aliases": [
+      "clef de pierre"
+    ],
     "what": "Une clef naine de 30 cm et 5 kg, gravée en nain : « Rencontrez-moi dans la strate Perdue. Trouvez mon jumeau dans Rampe-Marais. »",
     "goal": "—",
     "state": "Volée à Nadia par les rats-garous, cachée sous le siège de Rizzeryl en [[r:14a|14a]]. Shunn offre 50 po pour la récupérer.",
     "where": "[[r:14a|14a]] — elle ouvre en réalité un portail entre les strates 6 et 8, ce que Rizzeryl ignore."
   },
   {
-    "id": "diademe", "name": "Le diadème de perfection humaine", "kind": "objet",
-    "aliases": ["diadème de perfection humaine", "diadème"],
+    "id": "diademe",
+    "name": "Le diadème de perfection humaine",
+    "kind": "objet",
+    "aliases": [
+      "diadème de perfection humaine",
+      "diadème"
+    ],
     "what": "Objet merveilleux peu courant, harmonisation requise : il transforme son porteur en un humain séduisant de taille et de poids moyens.",
     "goal": "—",
     "state": "Porté par Yek en [[r:1e|1e]]. Ses gobelins veulent qu’on le lui vole et l’offrent en récompense.",
     "where": "[[r:1e|1e]]"
   },
   {
-    "id": "amulette", "name": "Les portails-voûtes", "kind": "objet",
-    "aliases": ["portail-voûte", "portails-voûtes"],
+    "id": "amulette",
+    "name": "Les portails-voûtes",
+    "kind": "objet",
+    "aliases": [
+      "portail-voûte",
+      "portails-voûtes"
+    ],
     "what": "Trois portails d’Halaster, chacun ouvert par un geste précis et réservé aux personnages d’un certain niveau.",
     "goal": "—",
     "state": "[[r:5|5]] → strate 4 (une pièce d’or, niveau 8) · [[r:12|12]] → strate 5 (une branche morte, niveau 8) · [[r:20c|20c]] → strate 6 (un objet en fer, niveau 9).",
     "where": "[[r:5|5]], [[r:12|12]], [[r:20c|20c]] — la première créature qui passe déclenche une rune ancienne."
   },
   {
-    "id": "lolth", "name": "Lolth", "kind": "divinité",
-    "aliases": ["Lolth"],
+    "id": "lolth",
+    "name": "Lolth",
+    "kind": "divinité",
+    "aliases": [
+      "Lolth"
+    ],
     "what": "La Reine araignée, déesse des drows, patronne des trahisons et des toiles.",
     "goal": "—",
     "state": "Une de ses prêtresses a maudit Shunn et l’a exilé, lui donnant huit yeux « pour mieux la regarder ».",
     "where": "Mentionnée en [[r:9b|9b]]."
   },
   {
-    "id": "juiblex", "name": "Juiblex", "kind": "divinité",
-    "aliases": ["Juiblex"],
+    "id": "juiblex",
+    "name": "Juiblex",
+    "kind": "divinité",
+    "aliases": [
+      "Juiblex"
+    ],
     "what": "Le seigneur démon des vases et des moisissures, qui dévore tout.",
     "goal": "—",
     "state": "Un autel lui est consacré en [[r:10c|10c]] : « La chair donnée de bon gré peut alimenter notre faim éternelle. »",
     "where": "[[r:10c|10c]]"
   },
   {
-    "id": "dumathoin", "name": "Dumathoin", "kind": "divinité",
-    "aliases": ["Dumathoin"],
+    "id": "dumathoin",
+    "name": "Dumathoin",
+    "kind": "divinité",
+    "aliases": [
+      "Dumathoin"
+    ],
     "what": "Le Gardien des secrets sous la Montagne, dieu nain des richesses enfouies.",
     "goal": "—",
     "state": "Son autel en [[r:13a|13a]] est profané par des mains crasseuses. Le nettoyer révèle **toutes les portes secrètes pendant 24 h**.",
     "where": "[[r:13a|13a]], et son temple en ruine en [[r:23b|23b]]."
   },
   {
-    "id": "shar", "name": "Shar", "kind": "divinité",
-    "aliases": ["Shar"],
+    "id": "shar",
+    "name": "Shar",
+    "kind": "divinité",
+    "aliases": [
+      "Shar"
+    ],
     "what": "Déesse des ténèbres, de la perte et des secrets gardés.",
     "goal": "—",
     "state": "Midna porte son symbole : un disque noir cerclé de violet.",
     "where": "[[r:11b|11b]]"
   },
   {
-    "id": "waukyne", "name": "Waukyne", "kind": "divinité",
-    "aliases": ["Waukyne"],
+    "id": "waukyne",
+    "name": "Waukyne",
+    "kind": "divinité",
+    "aliases": [
+      "Waukyne"
+    ],
     "what": "Déesse du commerce et de la richesse ; son symbole est une pièce d’or à son effigie.",
     "goal": "—",
     "state": "Son symbole a été volé sur le cadavre d’Halleth par Midna. Le revenant le réclame.",
     "where": "[[r:11b|11b]]"
   },
   {
-    "id": "halleth", "name": "Halleth le revenant", "kind": "personne",
-    "aliases": ["Halleth le revenant", "Halleth"],
+    "id": "halleth",
+    "name": "Halleth le revenant",
+    "kind": "personne",
+    "aliases": [
+      "Halleth le revenant",
+      "Halleth"
+    ],
     "what": "Ancien membre des Fiers compagnons, revenu d’entre les morts pour se venger des siens.",
     "goal": "Reprendre son symbole de Waukyne et punir ceux qui l’ont dépouillé.",
     "state": "Rencontré à la strate 1 (zone 37). S’il suit le groupe, il traque Midna en [[r:11b|11b]] et les autres Fiers compagnons.",
     "where": "Strate 1, zone 37 — puis [[r:11b|11b]]."
   },
   {
-    "id": "mezzoloth", "name": "Le mezzoloth", "kind": "personne",
-    "aliases": ["mezzoloth"],
+    "id": "mezzoloth",
+    "name": "Le mezzoloth",
+    "kind": "personne",
+    "aliases": [
+      "mezzoloth"
+    ],
     "what": "Fiélon insectoïde à quatre bras, convoqué et lié par Halaster.",
     "goal": "Empêcher les intrus de piller le donjon.",
     "state": "Règne sur les nothics de la mine par télépathie ; acculé Rex en [[r:13g|13g]].",
-    "where": "[[r:13g|13g]]", "monster": "mezzoloth"
+    "where": "[[r:13g|13g]]",
+    "monster": "mezzoloth"
   },
   {
-    "id": "apprentis", "name": "Les apprentis mutants", "kind": "faction",
-    "aliases": ["apprentis mutants", "apprentis d’Halaster"],
+    "id": "apprentis",
+    "name": "Les apprentis mutants",
+    "kind": "faction",
+    "aliases": [
+      "apprentis mutants",
+      "apprentis d’Halaster"
+    ],
     "what": "Les élèves qu’Halaster a laissés gouverner la strate. La Toile les a rongés : la plupart sont devenus babéliens ou nothics.",
     "goal": "Survivre, fouiller, obéir au mezzoloth par peur.",
     "state": "Ils infestent l’ancienne mine [[r:13a|13]]. Trenzia et Kalabash sont les deux exceptions notables.",

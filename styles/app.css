@@ -1104,3 +1104,15 @@ a.gref:active { color: var(--c-feature); }
 }
 .update-bar > .icon { color: var(--accent); flex: 0 0 auto; }
 .update-bar > span { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* ---------- Version Améliorée ---------- */
+.star {
+  display: inline-flex;
+  align-items: center;
+  color: var(--accent);
+  flex: 0 0 auto;
+  line-height: 0;
+}
+.star .icon { width: 14px; height: 14px; fill: currentColor; stroke-width: 1.5; }
+.block .star { margin-left: 2px; }
+.star-inline { width: 15px; height: 15px; fill: var(--accent); color: var(--accent); vertical-align: -2px; }

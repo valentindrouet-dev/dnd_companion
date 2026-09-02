@@ -5,7 +5,7 @@
 const STORAGE_KEY = 'dnd-companion:v1';
 
 const DEFAULT = {
-  settings: { theme: 'dark', fontScale: 1, sidebar: true, condensed: false, mapClick: true },
+  settings: { theme: 'dark', fontScale: 1, sidebar: true, condensed: false, mapClick: true, enhanced: true },
   hidden: {},     // clé élément -> 1        (déjà lu / dit / vaincu / distribué)
   overrides: {},  // clé élément -> texte    (texte modifié à la volée)
   notes: {},      // clé élément -> texte    (annotation ajoutée)

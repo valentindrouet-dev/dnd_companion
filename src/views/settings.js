@@ -7,6 +7,8 @@ import { shell } from './shell.js';
 import { confirmPopup, openPopup } from '../ui/popup.js';
 import { toast } from '../ui/toast.js';
 import { checkForUpdate, applyUpdate } from '../update.js';
+import { enhancedOn } from '../variant.js';
+import { icon as ic } from '../icons.js';
 
 export async function settingsView() {
   const s = store.settings;
@@ -24,6 +26,10 @@ export async function settingsView() {
       seg([[0.9, 'A−'], [1, 'A'], [1.15, 'A+'], [1.3, 'A++']], s.fontScale, (v) => store.setSetting('fontScale', v))),
     row('Panneau des salles', 'Affiché en permanence sur iPad en paysage.',
       seg([[true, 'Oui'], [false, 'Non']], s.sidebar !== false, (v) => store.setSetting('sidebar', v))),
+
+    row(h('span', null, icon('star', 'star-inline'), ' Version Améliorée'),
+      'Créatures épiques, enquêtes et clés narratives, signalées par une étoile. Désactivée, l’aventure revient à sa version d’origine ; les pourcentages suivent.',
+      seg([[true, 'Oui'], [false, 'Non']], enhancedOn(), (v) => store.setSetting('enhanced', v))),
 
     h('h2', { style: { margin: '28px 0 8px', fontSize: '1.1em' } }, 'État de la partie sur cet appareil'),
     h('p', { class: 'muted' }, `${counts.hidden} éléments masqués · ${counts.overrides} textes modifiés · ${counts.notes} annotations et notes.`),

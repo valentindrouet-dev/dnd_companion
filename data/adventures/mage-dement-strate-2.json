@@ -11,6 +11,27 @@
   "intro": [],
   "notes": [
     {
+      "id": "e-version",
+      "only": "enhanced",
+      "title": "Version Améliorée",
+      "summary": "Faune refondue, créatures épiques et couche d’enquête : prévue pour des niveaux 5 à 7, nettement plus dure.",
+      "text": "Cette version **remplace la faune** de la strate et ajoute une couche d’enquête. Les gobelins du bazar deviennent des **barghests**, des **demi-trolls** et un **oni** ; les gobelours de Xanathar deviennent des **onis** et des **trolls**. Cinq créatures épiques apparaissent : un **tyrannœil vivant** ([[r:20a|20a]]), un **golem de pierre** ([[r:21|21]]), une **gynosphinx** ([[r:25a|25a]]), un **hibours légendaire** ([[r:26a|26a]]) et un **couatl** ([[r:23b|23b]]).\n\nTout ce qui vient de cette version porte une **étoile**. Le bouton des réglages la désactive : l’aventure revient alors à sa version d’origine, et les pourcentages suivent.\n\nPrévue pour des personnages de **niveau 5 à 7**. Total estimé : 65 000 à 85 000 PX."
+    },
+    {
+      "id": "e-cles",
+      "only": "enhanced",
+      "title": "Les clés narratives",
+      "summary": "Treize informations à trouver ; chacune désamorce un piège ou un combat, et leur absence se paie cher.",
+      "text": "Chaque clé trouvée désamorce une difficulté plus loin. Les manquer ne bloque rien, mais coûte cher.\n\n**[[r:1e|1e]] · Mot de passe de Yek** → ouvre [[r:9a|9a]]. Les onis désactivent les trois trappes. Sans : 3d8 de feu grégeois par trappe.\n**[[r:4|4]] · Parchemin du camp** → même mot de passe, sans passer par Yek, et l’avantage face à Shunn. Sans : une chance sur six de deviner.\n**[[r:7a|7a]] · Journal de Trenzia 1** → révèle le danger du sol de cuivre pour les armures et les trois fioles paralysantes.\n**[[r:7e|7e]] · Journal de Trenzia 2** → révèle le levier caché de [[r:9a|9a]]. Sans : l’élémentaire est intouchable.\n**[[r:6|6]] · Partition gravée** → le parchemin de *rappel à la vie*. Sans : DD 20 et 4d10 nécrotiques.\n**[[r:14a|14a]] · Carte de pierres** → tout le niveau sauf les salles secrètes. Sans : exploration à l’aveugle, et l’on tombe sur [[r:20a|20]] sans préparation.\n**[[r:14a|14a]] · Clef de pierre** → le portail entre les strates 6 et 8.\n**[[r:13e|13e]] · Révélations des nothics** → Rizzeryl, la porte verrouillée, la carte. Sans : porte forcée, drow prévenu.\n**[[r:2d|2d]] · Cercle de convocation** → Kalabash, son grimoire, Juiblex et le levier de [[r:9a|9a]].\n**[[r:11b|11b]] · Alliance de Midna** → table magique pour douze et chemin vers Skullport. Hostile : neuf serviteurs et ténèbres.\n**[[r:13a|13a]] · Autel de Dumathoin nettoyé** → les **sept portes secrètes** visibles 24 h. Ignoré : un jet par porte, DD 15 à 20.\n**[[r:25a|25a]] · « Magie elfique »** → les caryatides soignent aveuglement, surdité, pétrification, poison. Quatre fois par jour.\n**[[r:22e|22e]] · 140 tonneaux de bière** → 5 600 po à Waterdeep, ou dix tonneaux vendus à Yek pour en faire un allié permanent."
+    },
+    {
+      "id": "e-factions",
+      "only": "enhanced",
+      "title": "Chaque allié change les combats finaux",
+      "summary": "Yek libéré, Rizzeryl allié ou Midna gagnée : trois leviers qui rendent les postes de Xanathar abordables.",
+      "text": "Les trois grandes alliances se cumulent et changent radicalement les affrontements de fin :\n\n**Yek** — détruire son diadème libère l’oni : allié majeur, accès à [[r:1f|1f]].\n**Rizzeryl** — il veut les têtes de Shunn et de Nadia ; en échange, la clef de pierre et la baguette au symbole de Xanathar, qui fait passer le groupe devant le **tyrannœil** de [[r:20a|20a]] sans combat.\n**Midna** — alliée, elle nourrit le groupe et ouvre la route de Skullport.\n\nSans aucune de ces alliances, le poste sud ([[r:20a|20]] et [[r:20b|20b]]) — tyrannœil, Nadia et trois trolls maigres — est un anéantissement quasi certain."
+    },
+    {
       "id": "gobelins",
       "title": "Les gobelins",
       "text": "La tribu Os-de-Rouille tient le bazar de la zone 1. L’accès est gratuit mais les non-gobelinoïdes sont surveillés. **Yek**, le boss gobelin, a trouvé un diadème magique qui l’a transformé en humain ([[r:1e|1e]]) et il commence à y prendre goût. Ses gobelins, eux, détestent obéir à un humain : ils pourraient comploter avec les aventuriers pour lui voler le diadème, offert en récompense s’ils lèvent la « malédiction »."
@@ -408,6 +429,7 @@
       "number": "1a",
       "name": "L’entrée latérale du bazar",
       "tags": [
+        "pnj",
         "social"
       ],
       "layout": "Salle carrée de 6 × 6 m, plafond à 4,50 m. Bas-reliefs de nains porteurs, visages remplacés par des têtes de gobelin au charbon. Ouverture est vers le marché, couloir nord, couloir ouest vers l’escalier de la strate 1.",
@@ -415,6 +437,12 @@
         {
           "id": "0",
           "text": "Ordures et débris au sol. Sur les murs, des bas-reliefs de nains porteurs : on a buriné leurs visages pour les remplacer par des têtes de gobelin dessinées au charbon. Un vacarme de marteaux et de cris vient du nord."
+        },
+        {
+          "id": "e1",
+          "only": "enhanced",
+          "summary": "Un marchand humain a monté son étal dans l’entrée ; il vous détaille de haut en bas.",
+          "text": "Un marchand humain, large d’épaules, a monté son étal contre le mur est — au calme, à l’écart du vacarme. Il vous regarde arriver sans surprise, comme s’il vous attendait, et repousse du pied une caisse pour vous faire de la place."
         }
       ],
       "features": [
@@ -450,6 +478,34 @@
           "to": "2a",
           "via": "Couloir ouest puis sud"
         }
+      ],
+      "enemies": [
+        {
+          "id": "oni-marchand",
+          "only": "enhanced",
+          "monster": "oni",
+          "name": "L’Oni marchand",
+          "count": 1,
+          "where": "Derrière un étal monté à l’entrée du bazar, déguisé en marchand humain.",
+          "tactics": "Négocie d’abord. Il veut que quelqu’un élimine Shunn. Démasqué : forme de géant, glaive à 3 m."
+        }
+      ],
+      "checks": [
+        {
+          "id": "e-nego",
+          "only": "enhanced",
+          "skill": "Charisme (négociation avec l’Oni)",
+          "dc": 12,
+          "text": "Il lâche des informations sur la Guilde de Xanathar — et souhaite ouvertement que quelqu’un se charge de Shunn."
+        }
+      ],
+      "notes": [
+        {
+          "id": "e-oni",
+          "only": "enhanced",
+          "summary": "Le marchand est un oni : il négocie d’abord et veut faire éliminer Shunn.",
+          "text": "Le « marchand » est un **oni** sous forme humaine. Il préfère de loin négocier : il paie pour des informations et veut discrètement voir [[r:9b|Shunn]] disparaître. Démasqué ou attaqué, il reprend sa forme de géant (CA 16, 110 pv, glaive à 3 m) et use d’**invisibilité**, de **charme-personne** et de **sommeil**."
+        }
       ]
     },
     {
@@ -464,6 +520,12 @@
         {
           "id": "0",
           "text": "Contre le mur nord, des gobelins assemblent une scène de bois dépareillé à coups de marteau de pierre. Quatre autres se disputent au milieu de la salle un parchemin où quelqu’un a griffonné le plan d’une estrade. Débris de meubles dans l’angle nord-ouest."
+        },
+        {
+          "id": "e1",
+          "only": "enhanced",
+          "summary": "Deux colosses cuirassés à la peau verdâtre gardent une estrade d’enchères en construction.",
+          "text": "Les gardiens ne sont pas des gobelins : deux silhouettes massives, cuirassées, à la peau verdâtre, portant des hallebardes disproportionnées. Leurs yeux luisent d’une intelligence surnaturelle. Au fond, sur l’estrade, quelqu’un construit ce qui ressemble à un podium d’enchères."
         }
       ],
       "notes": [
@@ -479,7 +541,16 @@
           "monster": "goblin-warrior",
           "count": 7,
           "where": "Autour de la scène en construction.",
-          "tactics": "Ne cherchent pas le combat : fuient vers 1d et alertent les gardes."
+          "tactics": "Ne cherchent pas le combat : fuient vers 1d et alertent les gardes.",
+          "only": "base"
+        },
+        {
+          "id": "barghests",
+          "only": "enhanced",
+          "monster": "barghest",
+          "count": 2,
+          "where": "En faction devant l’estrade, sous forme de grands gobelinoïdes.",
+          "tactics": "Lisent les pensées à 9 m : ils savent ce que vous venez faire. Peur (Sag DD 13) au premier tour, puis morsure et griffe."
         }
       ],
       "treasure": [
@@ -497,6 +568,38 @@
         {
           "to": "1d",
           "via": "Passage vers la grande salle"
+        }
+      ],
+      "checks": [
+        {
+          "id": "e-barghest",
+          "only": "enhanced",
+          "skill": "Sagesse (Perspicacité)",
+          "dc": 14,
+          "text": "Ces gardiens dégagent une aura extraplanaire.",
+          "failure": "Ils passent pour de gros gobelinoïdes."
+        },
+        {
+          "id": "e-arcanes",
+          "only": "enhanced",
+          "skill": "Intelligence (Arcanes)",
+          "dc": 12,
+          "text": "Ce ne sont pas des gobelins : ce sont des barghests, des fiélons."
+        },
+        {
+          "id": "e-estrade",
+          "only": "enhanced",
+          "skill": "Intelligence (Investigation)",
+          "dc": 15,
+          "text": "Le plan posé sur l’estrade détaille une vente aux enchères d’esclaves. Premier lot annoncé : un nain tailleur de pierre."
+        }
+      ],
+      "dialogues": [
+        {
+          "id": "e-barghest",
+          "only": "enhanced",
+          "trigger": "L’un des barghests, en vous détaillant",
+          "line": "« Vous n’avez pas l’air de marchands. » *(un temps)* « Tant mieux. »"
         }
       ]
     },
@@ -520,6 +623,18 @@
           "id": "0",
           "text": "**Glom** a volé la nourriture de Yek et jeûne depuis deux jours. Elle connaît le **diadème**, la **cachette** de Yek ([[r:1f|1f]]), les **avant-postes de Xanathar** ([[r:9b|9]], [[r:20b|20]]) et l’**escalier vers la strate 3** (au bout de [[r:21|21]]). Elle trahit ses sauveurs pour mieux manger.",
           "summary": "Glom, affamée, échange tout ce qu’elle sait contre un repas — et trahira pour mieux."
+        },
+        {
+          "id": "e-etoiles",
+          "only": "enhanced",
+          "summary": "Cuivre se souvient du mot « étoiles » : avec le parchemin de la salle 4, le mot de passe est complet.",
+          "text": "**Cuivre** se souvient d’un mot entendu chez les gobelins : « étoiles ». Complété par le parchemin de [[r:4|4]], il donne la phrase entière et fait traverser [[r:9a|9a]] sans déclencher les trappes."
+        },
+        {
+          "id": "e-libere",
+          "only": "enhanced",
+          "summary": "Libéré sans surveillance, Cuivre attaque les barghests et met tout le bazar à feu et à sang.",
+          "text": "Libéré et laissé sans surveillance, **Cuivre attaque les barghests** : l’Oni intervient et tout le bazar se retourne contre le groupe. Si **Halleth** accompagne les personnages, il s’approche longuement de Cuivre : « Toi. Je te retrouverai même si tu cours. »"
         }
       ],
       "npcs": [
@@ -569,6 +684,13 @@
           "skill": "Force (Athlétisme)",
           "dc": 20,
           "text": "Briser le verrou à mains nues. On peut aussi le frapper violemment avec une arme."
+        },
+        {
+          "id": "e-cuivre",
+          "only": "enhanced",
+          "skill": "Intelligence (Investigation)",
+          "dc": 14,
+          "text": "Sous la cage du nain, des pépites de cuivre disposées en flèche indiquent une direction : la [[r:9a|zone 9]]."
         }
       ],
       "connections": [
@@ -600,6 +722,12 @@
         {
           "id": "0",
           "text": "Huit étals de fortune au centre ; une vingtaine de gobelins marchandent, crient, comptent des pièces et vous dévisagent. Au nord, sur une estrade, un trône de granit couvert de peaux, orné de crânes de monstres et de babioles enfilées sur du fil de fer."
+        },
+        {
+          "id": "e1",
+          "only": "enhanced",
+          "summary": "Des trolls réduits tiennent les étals ; sur le trône, un seigneur au front ceint d’or vous observe.",
+          "text": "Des trolls réduits tiennent les étals avec une efficacité militaire. Et sur le trône de granit, au fond, un homme en tenue de seigneur, le front ceint d’or, vous observe sans ciller."
         }
       ],
       "features": [
@@ -619,6 +747,12 @@
           "id": "0",
           "text": "Les gardes maintiennent la paix. En cas de bagarre, ils **assomment** les visiteurs problématiques : les vaincus sont traînés en [[r:8|8]] sans armes ni trésors (confisqués, ils partent en [[r:1f|1f]]).",
           "summary": "Les gardes assomment les fauteurs de trouble et les jettent en 8, sans armes ni trésors."
+        },
+        {
+          "id": "e-circlet",
+          "only": "enhanced",
+          "summary": "Détruire le diadème libère l’oni : Yek devient un allié majeur et ouvre sa réserve.",
+          "text": "**Détruire le diadème** libère l’oni de sa polymorphie : Yek devient un **allié majeur** et ouvre [[r:1f|1f]]. Alliance Yek + [[r:14a|Rizzeryl]] = les deux postes de Xanathar tombent."
         }
       ],
       "checks": [
@@ -627,6 +761,36 @@
           "skill": "Charisme (Intimidation ou Persuasion)",
           "dc": 12,
           "text": "Marchander avec un marchand pour réduire de moitié le prix de vente d’un objet."
+        },
+        {
+          "id": "e-doigts",
+          "only": "enhanced",
+          "skill": "Sagesse (Perspicacité)",
+          "dc": 13,
+          "text": "Six doigts à chaque main de Yek.",
+          "failure": "On ne voit qu’un humain trop beau."
+        },
+        {
+          "id": "e-oni",
+          "only": "enhanced",
+          "skill": "Intelligence (Arcanes)",
+          "dc": 12,
+          "text": "Yek est un **oni sous polymorphie**, et le diadème est la cause."
+        },
+        {
+          "id": "e-yek-nego",
+          "only": "enhanced",
+          "skill": "Charisme (négociation avec Yek)",
+          "dc": 12,
+          "text": "Autorisation de circuler librement et informations sur Xanathar.",
+          "failure": "−2 au test si les demi-trolls ont été blessés."
+        },
+        {
+          "id": "e-toadies",
+          "only": "enhanced",
+          "skill": "Intelligence (Investigation)",
+          "dc": 15,
+          "text": "En interrogeant les lèche-bottes à part : le diadème est une **prison**, depuis que Yek a tué son précédent propriétaire."
         }
       ],
       "enemies": [
@@ -636,7 +800,8 @@
           "count": 6,
           "name": "Gardes gobelins",
           "where": "En duo près des sorties vers 1c, 1f et 8.",
-          "tactics": "Assomment les fauteurs de trouble (dégâts non létaux), puis les jettent en 8 sans leurs affaires."
+          "tactics": "Assomment les fauteurs de trouble (dégâts non létaux), puis les jettent en 8 sans leurs affaires.",
+          "only": "base"
         },
         {
           "id": "marchands",
@@ -644,7 +809,26 @@
           "count": 16,
           "name": "Marchands gobelins",
           "where": "Derrière les huit étals.",
-          "tactics": "Ne combattent pas : se cachent sous les étals et appellent les gardes."
+          "tactics": "Ne combattent pas : se cachent sous les étals et appellent les gardes.",
+          "only": "base"
+        },
+        {
+          "id": "demi-trolls",
+          "only": "enhanced",
+          "monster": "half-troll",
+          "count": 4,
+          "where": "Un derrière chaque groupe d’étals.",
+          "tactics": "Deux griffes par tour, régénération 5 : sans feu ni acide, ils se relèvent. Ne reculent jamais."
+        },
+        {
+          "id": "trolls-reserve",
+          "only": "enhanced",
+          "monster": "gaunt-troll",
+          "name": "Trolls maigres en réserve",
+          "count": 4,
+          "hidden": true,
+          "where": "Derrière le rideau nord ; n’entrent que si Yek appelle.",
+          "tactics": "Allonge de 4,50 m dans une salle bondée : ils atteignent les lanceurs de sorts par-dessus la foule."
         }
       ],
       "treasure": [
@@ -690,6 +874,14 @@
           "via": "Porte au sud",
           "note": "Gardée par deux gobelins",
           "door": "fermee"
+        }
+      ],
+      "dialogues": [
+        {
+          "id": "e-yek",
+          "only": "enhanced",
+          "trigger": "Yek, à propos du couloir nord",
+          "line": "« Le couloir nord ? Des apprentis du vieux mage. Je ne les touche pas. Vous non plus, si vous êtes sages. »"
         }
       ]
     },
@@ -742,14 +934,16 @@
           "name": "Yek le Grand",
           "count": 1,
           "where": "Sur les coussins, au nord.",
-          "tactics": "Ne se bat que pour se défendre. Sous forme humaine (taille M) grâce au diadème ; mêmes stats. Ordonne, puis se cache derrière ses gobelours."
+          "tactics": "Ne se bat que pour se défendre. Sous forme humaine (taille M) grâce au diadème ; mêmes stats. Ordonne, puis se cache derrière ses gobelours.",
+          "only": "base"
         },
         {
           "id": "gobelours",
           "monster": "bugbear",
           "count": 4,
           "where": "Un dans chaque angle.",
-          "tactics": "Gardes du corps payés : se battent bien, mais 5 po les font partir."
+          "tactics": "Gardes du corps payés : se battent bien, mais 5 po les font partir.",
+          "only": "base"
         },
         {
           "id": "leche-bottes",
@@ -757,7 +951,26 @@
           "count": 10,
           "name": "Lèche-bottes de Yek",
           "where": "Allongés sur les coussins autour de Yek.",
-          "tactics": "Combattent à contrecœur ; fuient si la moitié tombent ou si Yek meurt."
+          "tactics": "Combattent à contrecœur ; fuient si la moitié tombent ou si Yek meurt.",
+          "only": "base"
+        },
+        {
+          "id": "yek-oni",
+          "only": "enhanced",
+          "monster": "oni",
+          "name": "Yek le Grand (oni)",
+          "count": 1,
+          "where": "Sur les coussins, sous sa forme humaine.",
+          "tactics": "Ne se bat que s’il est volé ou humilié. Charme-personne sur le négociateur, sommeil sur les plus faibles ; démasqué, il reprend sa taille de géant et frappe au glaive à 3 m. Régénération 10."
+        },
+        {
+          "id": "trolls-1e",
+          "only": "enhanced",
+          "monster": "half-troll",
+          "name": "Demi-trolls de garde",
+          "count": 4,
+          "where": "Un dans chaque angle.",
+          "tactics": "Gardes du corps : ils encaissent pendant que Yek décide s’il négocie ou s’il tue."
         }
       ],
       "npcs": [
@@ -878,6 +1091,15 @@
           "to": "1d",
           "via": "Ouverture à l’ouest"
         }
+      ],
+      "checks": [
+        {
+          "id": "e-portrait",
+          "only": "enhanced",
+          "skill": "Intelligence (Investigation)",
+          "dc": 14,
+          "text": "Le portrait montre, à l’arrière-plan, un paysage de montagne violet : le plan d’origine de Yek."
+        }
       ]
     },
     {
@@ -916,6 +1138,13 @@
           "item": "Portrait de Yek (2,70 m × 1 m)",
           "value": "0 po — ou 50 po",
           "note": "Ne vaut rien, sauf à persuader un acheteur crédule qu’il représente une personnalité historique : Charisme (Supercherie) DD 13."
+        },
+        {
+          "id": "e-lettre",
+          "only": "enhanced",
+          "item": "Lettre en gnoll signée « N. »",
+          "where": "Au fond du coffre (Perception DD 15)",
+          "note": "De **Nadia** ([[r:20b|20b]]) : trafic d’esclaves. Présentée en 20, elle ouvre un marché — le silence contre l’accès au portail de [[r:20c|20c]]."
         }
       ],
       "connections": [
@@ -924,6 +1153,16 @@
           "via": "Porte au sud-ouest",
           "note": "Gardée par deux gobelins côté marché",
           "door": "fermee"
+        }
+      ],
+      "checks": [
+        {
+          "id": "e-coffre",
+          "only": "enhanced",
+          "skill": "Sagesse (Perception)",
+          "dc": 15,
+          "text": "Une lettre glissée sous la doublure du coffre.",
+          "failure": "Le coffre forcé sans l’accord de Yek appelle les trolls de réserve, et Yek reprend sa vraie forme."
         }
       ]
     },
@@ -944,6 +1183,12 @@
           "id": "0",
           "text": "La pompe puise à une source entre les strates. Une action : **1d4 + 1 gallons** (4 l chacun) d’eau potable dans la cuvette.",
           "summary": "Une action à la pompe tire 1d4 + 1 gallons d’eau potable."
+        },
+        {
+          "id": "e-eau",
+          "only": "enhanced",
+          "summary": "Eau potable illimitée : de quoi monnayer un accord commercial avec Yek.",
+          "text": "La pompe fournit de l’eau potable sans limite. Le signaler à Yek vaut un accord commercial (50 po par semaine)."
         }
       ],
       "connections": [
@@ -982,6 +1227,12 @@
         {
           "id": "0",
           "text": "Tables et chaudrons poussiéreux, âtre de pierre froid. Sur les tables, des outils d’alchimiste si anciens qu’ils tombent en poussière dès qu’on les touche."
+        },
+        {
+          "id": "e1",
+          "only": "enhanced",
+          "summary": "Quelqu’un a cuisiné ici récemment : l’air sent la soupe chaude.",
+          "text": "L’air sent quelque chose d’incongru dans ce laboratoire mort : de la soupe. Quelqu’un a utilisé cette cuisine récemment."
         }
       ],
       "notes": [
@@ -989,6 +1240,12 @@
           "id": "0",
           "text": "Rien n’est utilisable. **Toucher à quoi que ce soit** alerte le spectre de [[r:2c|2c]].",
           "summary": "Rien d’utilisable, et toucher quoi que ce soit réveille le spectre de 2c."
+        },
+        {
+          "id": "e-robe",
+          "only": "enhanced",
+          "summary": "La créature ne chassait pas les PJ : elle tient un fragment de robe violette.",
+          "text": "La chose des murs ne chassait pas les personnages. Dans ses griffes mortes : un **fragment de robe violette** — celle de [[r:14a|Rizzeryl]]."
         }
       ],
       "connections": [
@@ -999,6 +1256,26 @@
         {
           "to": "2c",
           "via": "Ouverture au sud"
+        }
+      ],
+      "enemies": [
+        {
+          "id": "e-mangler",
+          "only": "enhanced",
+          "monster": "star-spawn-mangler",
+          "count": 1,
+          "hidden": true,
+          "where": "Dans les murs et le plafond, invisible dans le noir.",
+          "tactics": "Surgit du plafond au premier tour : quatre griffes, puis se replie. **Une lumière vive lui impose un désavantage.** Explose (Int DD 13, 2d10 psychiques) à sa mort."
+        }
+      ],
+      "checks": [
+        {
+          "id": "e-soupe",
+          "only": "enhanced",
+          "skill": "Intelligence (Investigation)",
+          "dc": 13,
+          "text": "La soupe a moins d’une heure. Des traces de petites sandales partent vers le couloir nord — vers [[r:11b|Midna]], qui vient cuisiner ici par serviteurs interposés."
         }
       ]
     },
@@ -1103,6 +1380,21 @@
           "skill": "Intelligence (Arcanes ou Investigation)",
           "dc": 15,
           "text": "Recomposer le cercle d’invocation (1d10 minutes, sang ou peinture)."
+        },
+        {
+          "id": "e-grimoires",
+          "only": "enhanced",
+          "skill": "Intelligence (Investigation)",
+          "dc": 17,
+          "text": "Sur le bureau, des pages collées à la cire cachent un **plan du niveau avec les sept portes secrètes**.",
+          "failure": "Vingt grimoires vierges, rien d’autre."
+        },
+        {
+          "id": "e-kalabash",
+          "only": "enhanced",
+          "skill": "Charisme (interroger Kalabash)",
+          "dc": 16,
+          "text": "Il révèle Juiblex en [[r:10c|10c]], le levier caché de [[r:9a|9a]] et une formule de stase qu’il ne retrouve jamais."
         }
       ],
       "enemies": [
@@ -1187,6 +1479,12 @@
           "id": "0",
           "text": "Il réagit à tout mouvement à **6 m**. Ses menaces sont creuses. Arcanes DD 10 : il ne mélange que des substances inoffensives. Rien de précieux ni de dangereux sur la table.",
           "summary": "Le pantin est inoffensif : ses menaces sont creuses, il veut juste continuer son « travail »."
+        },
+        {
+          "id": "e-choix",
+          "only": "enhanced",
+          "summary": "L’œil découvert : détruire le pantin (Halaster boude 1d6 jours) ou le laisser (il observe tout).",
+          "text": "Une fois l’œil découvert, deux options : **détruire le pantin** — Halaster se désintéresse du groupe pendant 1d6 jours — ou **le laisser** et accepter qu’il observe tout."
         }
       ],
       "checks": [
@@ -1201,6 +1499,20 @@
           "skill": "Intelligence (Arcanes)",
           "dc": 10,
           "text": "Comprendre que le pantin ne fait rien de dangereux."
+        },
+        {
+          "id": "e-oeil",
+          "only": "enhanced",
+          "skill": "Intelligence (Investigation)",
+          "dc": 16,
+          "text": "Parmi les dizaines d’yeux cousus sur la cape, **l’un est réel** : un œil de tyrannœil conservé, et actif. Halaster voit à travers."
+        },
+        {
+          "id": "e-griffures",
+          "only": "enhanced",
+          "skill": "Sagesse (Perception)",
+          "dc": 14,
+          "text": "Sur le mur est, des griffures de fuite : la chose de [[r:2b|2b]] est passée par là."
         }
       ],
       "enemies": [
@@ -1272,6 +1584,14 @@
           "note": "Passe devant l’escalier de la strate 1",
           "door": "fermee"
         }
+      ],
+      "dialogues": [
+        {
+          "id": "e-philo",
+          "only": "enhanced",
+          "trigger": "Si on lui pose une vraie question",
+          "line": "« Les apprentis ? Tous morts. De leur propre faute. La magie veut être libre. » *(puis il reprend ses menaces habituelles)*"
+        }
       ]
     },
     {
@@ -1286,6 +1606,12 @@
         {
           "id": "0",
           "text": "Provisions pourries et cendres d’un feu au sol. Dans le coin nord-est, trois cadavres de gobelours empilés sur celui d’une petite créature à quatre pattes qui ressemble à un cerveau."
+        },
+        {
+          "id": "e1",
+          "only": "enhanced",
+          "summary": "Les cadavres ne sont pas des gobelours : ce sont des trolls de caverne décapités proprement.",
+          "text": "Ces cadavres ne sont pas des gobelours : ce sont des **trolls de caverne**, la tête arrachée proprement. Et dans un coin, une dévoreuse d’intellect morte, le crâne éclaté."
         }
       ],
       "notes": [
@@ -1303,6 +1629,12 @@
           "id": "2",
           "text": "Le couloir en boucle au nord mène à un **tunnel vers une extension du donjon** et dissimule la porte secrète de [[r:5|5]].",
           "summary": "Le couloir en boucle au nord cache la porte secrète de la salle 5."
+        },
+        {
+          "id": "e-note-service",
+          "only": "enhanced",
+          "summary": "Note de service en gobelin : les trolls de caverne servent de gardiens permanents.",
+          "text": "Note de service de la Guilde, en gobelin : « Trolls de caverne comme gardiens permanents — ils ne dorment pas et ne peuvent pas être corrompus. »"
         }
       ],
       "treasure": [
@@ -1330,6 +1662,26 @@
           "note": "Mur simple en apparence",
           "secret": true,
           "door": "secrete"
+        }
+      ],
+      "enemies": [
+        {
+          "id": "e-devoreuses",
+          "only": "enhanced",
+          "monster": "intellect-devourer",
+          "count": 2,
+          "hidden": true,
+          "where": "Tapies sous les cadavres.",
+          "tactics": "Détection des consciences à 9 m : elles savent que vous arrivez. Dévorer l’intellect au premier tour, invasion corporelle au second si une cible tombe."
+        }
+      ],
+      "checks": [
+        {
+          "id": "e-blessures",
+          "only": "enhanced",
+          "skill": "Intelligence (Investigation)",
+          "dc": 12,
+          "text": "Les têtes ont été arrachées puis cautérisées à l’acide. Les Fiers compagnons connaissaient l’existence de ces trolls."
         }
       ]
     },
@@ -1409,6 +1761,20 @@
           "skill": "Intelligence (Représentation)",
           "dc": 20,
           "text": "Jouer la mélodie gravée (automatique avec la maîtrise d’un instrument)."
+        },
+        {
+          "id": "e-empreintes",
+          "only": "enhanced",
+          "skill": "Sagesse (Perception)",
+          "dc": 13,
+          "text": "Sur les notes du mur nord, des empreintes à **six doigts** : Yek a essayé de jouer. Il sait qu’un parchemin précieux dort là."
+        },
+        {
+          "id": "e-dedicace",
+          "only": "enhanced",
+          "skill": "Intelligence (Investigation)",
+          "dc": 16,
+          "text": "Gravé sur le socle : « En mémoire de Valastra, dont la musique faisait pleurer les pierres. — H. B. »"
         }
       ],
       "treasure": [
@@ -1459,6 +1825,25 @@
           "to": "2a",
           "via": "Porte sud-ouest, puis couloir vers l’ouest",
           "door": "fermee"
+        }
+      ],
+      "treasure": [
+        {
+          "id": "e-fioles",
+          "only": "enhanced",
+          "item": "Fioles de liquide bleuâtre",
+          "qty": 3,
+          "where": "Sur l’établi (Investigation DD 15)",
+          "note": "Jetée sur l’élémentaire, chaque fiole le **paralyse 1 round**. Le journal précise : viser la nuque, pas les veines."
+        }
+      ],
+      "checks": [
+        {
+          "id": "e-fioles",
+          "only": "enhanced",
+          "skill": "Intelligence (Investigation)",
+          "dc": 15,
+          "text": "Trois fioles de liquide bleuâtre : de quoi paralyser l’élémentaire un round chacune."
         }
       ]
     },
@@ -1535,6 +1920,16 @@
           "via": "Couloir au nord",
           "note": "Rejoint le couloir sous la grande salle du marché"
         }
+      ],
+      "checks": [
+        {
+          "id": "e-tonneaux",
+          "only": "enhanced",
+          "skill": "Intelligence (Arcanes)",
+          "dc": 13,
+          "text": "La poussière de cuivre s’accroche différemment sur six des douze tonneaux : ce sont ceux qui abritent les goules.",
+          "failure": "Les douze tonneaux se ressemblent tous."
+        }
       ]
     },
     {
@@ -1551,6 +1946,12 @@
         {
           "id": "0",
           "text": "Un crâne de demi-elfe métallisé flotte au milieu de la pièce en crépitant ; des arcs de foudre courent de ses orbites vers les plaques de cuivre du sol. Parmi les tables brisées, une masse de chair cousue de cicatrices se redresse lentement. Au sud-est, l’ouverture d’un toboggan s’enfonce dans l’obscurité."
+        },
+        {
+          "id": "e1",
+          "only": "enhanced",
+          "summary": "Quelque chose d’immense et de vert électrique tourne au milieu de la salle de cuivre.",
+          "text": "L’odeur d’ozone vous frappe dès le couloir. Dans la salle, quelque chose tourne — quelque chose d’immense, et de vert électrique, qui fait chanter les plaques de cuivre du sol."
         }
       ],
       "features": [
@@ -1579,14 +1980,25 @@
           "name": "Trenzia (crânefeu modifié)",
           "count": 1,
           "where": "Flotte au milieu de la salle.",
-          "tactics": "Chaque tour : électrifie le sol (action). Ne tire ses rayons de foudre que si le sol ne sert à rien. Éclair sur un groupe aligné."
+          "tactics": "Chaque tour : électrifie le sol (action). Ne tire ses rayons de foudre que si le sol ne sert à rien. Éclair sur un groupe aligné.",
+          "only": "base"
         },
         {
           "id": "golem",
           "monster": "flesh-golem",
           "count": 1,
           "where": "Au milieu des tables brisées.",
-          "tactics": "Deux coups par tour sur la cible la plus proche. Se soigne de 10 PV par tour sur le sol électrifié. Ne quitte jamais la salle."
+          "tactics": "Deux coups par tour sur la cible la plus proche. Se soigne de 10 PV par tour sur le sol électrifié. Ne quitte jamais la salle.",
+          "only": "base"
+        },
+        {
+          "id": "e-elementaire",
+          "only": "enhanced",
+          "monster": "lightning-elemental",
+          "name": "L’élémentaire de foudre (Trenzia)",
+          "count": 1,
+          "where": "Au centre, reliée au réseau de cuivre.",
+          "tactics": "Action bonus : électrifier le sol (2d6, désavantage en armure métallique). Deux décharges à 3 m, arc jaillissant sur un groupe aligné. **Couper les fils** (Investigation DD 15 puis Force DD 16) l’isole définitivement."
         }
       ],
       "connections": [
@@ -1607,6 +2019,22 @@
           "note": "Descente de 6 m, sens unique",
           "oneWay": true,
           "door": "toboggan"
+        }
+      ],
+      "checks": [
+        {
+          "id": "e-fils",
+          "only": "enhanced",
+          "skill": "Intelligence (Investigation)",
+          "dc": 15,
+          "text": "Le réseau de fils de cuivre l’alimente. Les couper (Force DD 16 ou 30 dégâts) l’empêche de se recharger."
+        },
+        {
+          "id": "e-morse",
+          "only": "enhanced",
+          "skill": "Intelligence (Arcanes)",
+          "dc": 16,
+          "text": "Les crépitements sont un code : « coupez les fils — libération ». **L’élémentaire est Trenzia.**"
         }
       ]
     },
@@ -1657,7 +2085,9 @@
       "id": "7e",
       "number": "7e",
       "name": "Le filon de cuivre",
-      "tags": [],
+      "tags": [
+        "secret"
+      ],
       "layout": "Cul-de-sac de 6 × 6 m : la maçonnerie s’arrête, le fond est de la roche vive où affleure le cuivre. Plafond à 2,70 m, sol en pente. Une ouverture, à l’ouest.",
       "readAloud": [
         {
@@ -1676,6 +2106,14 @@
         {
           "to": "7d",
           "via": "Ouverture à l’ouest"
+        }
+      ],
+      "notes": [
+        {
+          "id": "e-levier",
+          "only": "enhanced",
+          "summary": "Au dos du carnet : le levier caché de 9a et l’usage des fioles paralysantes.",
+          "text": "Au dos de la page, d’une écriture pressée : l’emplacement du **levier caché de [[r:9a|9a]]** (« sous la troisième paume gravée ») et la confirmation de l’usage des **fioles bleuâtres** de [[r:7a|7a]] — « sur la nuque, jamais dans les veines ». **Trouver ce carnet avant d’attaquer le poste de garde change complètement le combat.**"
         }
       ]
     },
@@ -1743,6 +2181,12 @@
         {
           "id": "0",
           "text": "Un long couloir qui se rétrécit à trois mètres vers l’est. Deux gobelours y montent la garde. Le premier crie : « Halte ! » Le second demande, l’air bête : « Combien d’yeux a Xanathar ? »"
+        },
+        {
+          "id": "e1",
+          "only": "enhanced",
+          "summary": "Deux onis gardent le couloir et réclament le mot de passe d’une voix musicale.",
+          "text": "Deux silhouettes massives montent la garde, la peau verte, les yeux brillants d’une intelligence démoniaque. Des onis. « Le mot de passe », dit l’un d’eux, d’une voix profonde et musicale."
         }
       ],
       "features": [
@@ -1771,6 +2215,16 @@
           "detect": "Sagesse (Perception) DD 15 en fouillant : la plaque la plus proche et les trous du mur nord.",
           "disarm": "Le levier dissimulé (Perception DD 15). Ou enjamber les plaques.",
           "dc": 15
+        },
+        {
+          "id": "e-gregeois",
+          "only": "enhanced",
+          "name": "Trappes à feu grégeois (×3)",
+          "dc": 13,
+          "trigger": "Franchir le couloir sans que les onis aient désarmé le dispositif.",
+          "effect": "Jet d’attaque +6 puis zone de 3 m : **3d8 dégâts de feu**, jet de sauvegarde de Dextérité DD 13 pour la moitié. Trois déclenchements par trappe, soit jusqu’à 9d8 sur l’ensemble du groupe.",
+          "detect": "Sagesse (Perception) DD 15 : les buses noircies au plafond.",
+          "disarm": "Donner le mot de passe, ou trouver le **levier caché** derrière une fausse pierre (Perception DD 15, indiqué par le journal de [[r:7e|7e]])."
         }
       ],
       "enemies": [
@@ -1780,7 +2234,17 @@
           "count": 2,
           "name": "Bolgus et Bulkar",
           "where": "À l’extrémité est, là où le couloir se rétrécit.",
-          "tactics": "Laissent les pièges faire le travail, puis frappent les survivants à 3 m d’allonge."
+          "tactics": "Laissent les pièges faire le travail, puis frappent les survivants à 3 m d’allonge.",
+          "only": "base"
+        },
+        {
+          "id": "e-onis",
+          "only": "enhanced",
+          "monster": "oni",
+          "name": "Onis gardiens de Shunn",
+          "count": 2,
+          "where": "À l’extrémité est du couloir.",
+          "tactics": "Mot de passe correct : ils désactivent les trois trappes et laissent passer. Sinon, ils laissent le couloir faire le travail, puis frappent au glaive à 3 m. Régénération 10 chacun."
         }
       ],
       "npcs": [
@@ -1821,6 +2285,23 @@
           "door": "piegee",
           "alert": "Cinq pièges à fléchettes empoisonnées dans le couloir : levier caché près des gardes."
         }
+      ],
+      "checks": [
+        {
+          "id": "e-paume",
+          "only": "enhanced",
+          "skill": "Sagesse (Perception)",
+          "dc": 15,
+          "text": "Sur la paume de l’oni de droite, une marque de Xanathar brûlée au fer : un **contrat démoniaque**. Ils ne peuvent pas trahir Shunn."
+        }
+      ],
+      "dialogues": [
+        {
+          "id": "e-oni",
+          "only": "enhanced",
+          "trigger": "L’oni de gauche, très bas, quand son collègue regarde ailleurs",
+          "line": "« Tuez Shunn. Quand il mourra, notre contrat se dissout. » *(un battement)* « Faites vite. »"
+        }
       ]
     },
     {
@@ -1837,6 +2318,12 @@
         {
           "id": "0",
           "text": "Des lanternes usées éclairent la salle. Caisses, tonneaux et sept lits de camp le long des murs. Autour d’un feu, sept humains en armes et, au centre, un elfe noir dont le visage n’a plus rien d’elfique : huit yeux rouges, une gueule de crocs, des touffes de poils noirs sur des membres trop longs. Il se lève et sourit."
+        },
+        {
+          "id": "e1",
+          "only": "enhanced",
+          "summary": "Quatre trolls de cave enchaînés au mur comme des tourelles vivantes, et Shunn derrière eux.",
+          "text": "Au centre du couloir effondré : quatre **trolls de cave** à la peau grise, enchaînés à des anneaux scellés dans le mur — pas prisonniers, mais disposés comme des tourelles vivantes. Derrière eux, un drow mince aux huit yeux rouges. « Vous n’êtes pas les marchands que j’attendais. »"
         }
       ],
       "notes": [
@@ -1844,6 +2331,12 @@
           "id": "0",
           "text": "Deux **dévoreurs d’intellect** occupent le crâne de deux malfrats et détectent par télépathie les créatures intelligentes. **Shunn et ses hommes ne peuvent pas être surpris.** Un dévoreur cherche un autre hôte si le sien meurt.",
           "summary": "Deux dévoreurs d’intellect logés dans des malfrats détectent les intrus : pas de surprise possible."
+        },
+        {
+          "id": "e-liberation",
+          "only": "enhanced",
+          "summary": "Sous 50 % de ses PV, Shunn libère les quatre trolls : régénération 10 chacun, quasi inarrêtables sans feu ni acide.",
+          "text": "Sous la moitié de ses points de vie, **Shunn libère les chaînes** (action bonus) : quatre trolls mobiles dans un couloir étroit, régénération 10 chacun. Sans feu ni acide, ils sont quasiment inarrêtables."
         }
       ],
       "enemies": [
@@ -1861,7 +2354,8 @@
           "count": 7,
           "name": "Malfrats de la Guilde",
           "where": "Autour du feu.",
-          "tactics": "Tactique de groupe à deux sur une cible. Deux d’entre eux abritent un dévoreur d’intellect."
+          "tactics": "Tactique de groupe à deux sur une cible. Deux d’entre eux abritent un dévoreur d’intellect.",
+          "only": "base"
         },
         {
           "id": "devoreurs",
@@ -1869,7 +2363,16 @@
           "count": 2,
           "hidden": true,
           "where": "Dans le crâne de deux malfrats.",
-          "tactics": "Révélés à la mort de l’hôte : Voleur de corps sur le PJ neutralisé le plus proche."
+          "tactics": "Révélés à la mort de l’hôte : Voleur de corps sur le PJ neutralisé le plus proche.",
+          "only": "base"
+        },
+        {
+          "id": "e-trolls",
+          "only": "enhanced",
+          "monster": "cave-troll",
+          "count": 4,
+          "where": "Enchaînés aux anneaux du mur, chaînes de 4,50 m.",
+          "tactics": "Leurs chaînes couvrent tout le couloir transversal : une zone de mort. Trois attaques chacun, régénération 10. **Shunn peut les libérer en action bonus sous 50 % de ses PV.**"
         }
       ],
       "npcs": [
@@ -1957,6 +2460,15 @@
           "to": "11a",
           "via": "Couloir à l’est, puis vers le sud"
         }
+      ],
+      "checks": [
+        {
+          "id": "e-chaines",
+          "only": "enhanced",
+          "skill": "Sagesse (Perspicacité)",
+          "dc": 13,
+          "text": "Les chaînes sont calibrées pour créer une zone de mort. Les libérer — ou les couper — change radicalement le combat."
+        }
       ]
     },
     {
@@ -2019,13 +2531,22 @@
           "monster": "bugbear",
           "count": 10,
           "where": "Endormis sur le sol.",
-          "tactics": "Se réveillent et partent vers 9b dès qu’ils entendent de l’agitation là-bas. Surpris s’ils sont attaqués ici en silence."
+          "tactics": "Se réveillent et partent vers 9b dès qu’ils entendent de l’agitation là-bas. Surpris s’ils sont attaqués ici en silence.",
+          "only": "base"
         }
       ],
       "connections": [
         {
           "to": "9b",
           "via": "Couloir"
+        }
+      ],
+      "notes": [
+        {
+          "id": "e-tunnel",
+          "only": "enhanced",
+          "summary": "Une trappe sous les barils relie 9d à la brasserie 22 : couper ce passage empêche les renforts.",
+          "text": "Sous les barils, une trappe ouvre un **tunnel secret vers la brasserie [[r:22c|22]]**. Le couper avant d’attaquer un poste prive la Guilde de renforts : sinon, ils arrivent en trois rounds."
         }
       ]
     },
@@ -2062,6 +2583,12 @@
           "id": "0",
           "text": "Le cube est dans le **coin nord-est** à la première visite. La salle entière est son espace : entrer, c’est presque entrer *dans* le cube.",
           "summary": "Le cube occupe le coin nord-est ; entrer dans la salle, c’est presque entrer dedans."
+        },
+        {
+          "id": "e-crane",
+          "only": "enhanced",
+          "summary": "Récupéré, le crâne de duergar agrandit n’importe quelle vase pendant une heure.",
+          "text": "Le **crâne de duergar** récupéré peut agrandir n’importe quelle vase à taille gigantesque pendant 1 heure. Combiné à la gelée ocre de [[r:10c|10c]], il devient une arme : lâchée dans le couloir du golem de [[r:21|21]], la gelée occupe le gardien quatre rounds — de quoi passer."
         }
       ],
       "checks": [
@@ -2080,7 +2607,18 @@
           "count": 1,
           "hidden": true,
           "where": "Coin nord-est, transparent.",
-          "tactics": "Gigantesque : 4 pseudopodes, engouffre plusieurs PJ. Avantage aux tests de Force. Rétrécit si l’on retire le crâne."
+          "tactics": "Gigantesque : 4 pseudopodes, engouffre plusieurs PJ. Avantage aux tests de Force. Rétrécit si l’on retire le crâne.",
+          "only": "base"
+        },
+        {
+          "id": "e-cube",
+          "only": "enhanced",
+          "monster": "gelatinous-cube-giant",
+          "name": "Le cube de neuf mètres",
+          "count": 1,
+          "hidden": true,
+          "where": "Coin nord-est : il occupe presque toute la salle.",
+          "tactics": "**Quatre pseudopodes par tour** et un engloutissement qui peut avaler le groupe entier. Retirer le crâne (Dex DD 17, le bras dans l’acide) le ramène à sa taille normale."
         }
       ],
       "treasure": [
@@ -2168,6 +2706,13 @@
           "item": "Baguette de verre (focaliseur arcanique)",
           "value": "25 po",
           "where": "Parmi les tables renversées et les livres détruits"
+        },
+        {
+          "id": "e-page",
+          "only": "enhanced",
+          "item": "Page scellée dans une fiole de cire",
+          "where": "Flottant parmi les livres détruits",
+          "note": "« L’anti-sort contre les métamorphoses du boss est dans sa cage aux créatures ([[r:25b|25]]). Il appelle ça **Magie elfique**. »"
         }
       ],
       "connections": [
@@ -2369,6 +2914,18 @@
           "id": "1",
           "text": "Si **Halleth le revenant** (strate 1, zone 37) est présent, il tente de tuer Midna pour reprendre son symbole de Waukyne, volé sur son cadavre. S’il le récupère, sa vengeance est assouvie : lui et le symbole tombent en poussière.",
           "summary": "Si Halleth le revenant accompagne le groupe, il tente de tuer Midna et de reprendre son symbole."
+        },
+        {
+          "id": "e-dilemme",
+          "only": "enhanced",
+          "summary": "Dilemme Halleth : défendre Midna garde la table magique, la laisser mourir apaise le revenant.",
+          "text": "**Dilemme** : défendre Midna, c’est conserver la table magique (12 personnes par jour) et le chemin vers Skullport ; laisser Halleth la tuer, c’est apaiser le revenant mais perdre la table."
+        },
+        {
+          "id": "e-portrait",
+          "only": "enhanced",
+          "summary": "Le portrait d’Halaster cligne de l’œil si on le fixe trente secondes.",
+          "text": "Le portrait d’Halaster : si quelqu’un le fixe trente secondes, **il cligne de l’œil**. Lentement. Délibérément. Puis continue de sourire."
         }
       ],
       "enemies": [
@@ -2456,6 +3013,15 @@
           "to": "11a",
           "via": "Couloir au sud-ouest"
         }
+      ],
+      "checks": [
+        {
+          "id": "e-symboles",
+          "only": "enhanced",
+          "skill": "Sagesse (Perspicacité)",
+          "dc": 13,
+          "text": "Elle porte Shar **et** Waukyne, deux divinités opposées. Conflit intérieur : appuyer sur Waukyne la rend nettement moins hostile."
+        }
       ]
     },
     {
@@ -2504,6 +3070,12 @@
         {
           "id": "0",
           "text": "Chariots renversés et matériel abandonné au sol. Dans une alcôve au nord, un autel de pierre rouge sombre, maculé de petites empreintes de mains crasseuses. Quelque part dans la galerie, un charabia de dizaines de voix monte, descend et se rapproche."
+        },
+        {
+          "id": "e1",
+          "only": "enhanced",
+          "summary": "Une créature gélatineuse en forme de grenouille géante avale une chaise en bois.",
+          "text": "Dans l’alcôve nord, un **banderhobb** — créature gélatineuse à l’aspect de grenouille géante — avale posément quelque chose qui ressemble à une chaise en bois."
         }
       ],
       "features": [
@@ -2529,7 +3101,16 @@
           "monster": "gibbering-mouther",
           "count": 1,
           "where": "Rôde dans la galerie.",
-          "tactics": "Attaque tout ce qu’il voit. Son babil à 6 m fait perdre des actions : le tuer à distance."
+          "tactics": "Attaque tout ce qu’il voit. Son babil à 6 m fait perdre des actions : le tuer à distance.",
+          "only": "base"
+        },
+        {
+          "id": "e-banderhobb",
+          "only": "enhanced",
+          "monster": "banderhobb",
+          "count": 1,
+          "where": "Alcôve nord, occupé à avaler du mobilier.",
+          "tactics": "Langue à 9 m pour tirer une cible isolée, puis engloutir (2d6 acide par round). Pas d’ombre en action bonus : il disparaît d’un coin sombre à l’autre."
         }
       ],
       "treasure": [
@@ -2563,6 +3144,30 @@
         {
           "to": "20a",
           "via": "Long couloir vers le sud-est"
+        }
+      ],
+      "checks": [
+        {
+          "id": "e-bander",
+          "only": "enhanced",
+          "skill": "Sagesse (Perspicacité) ou Intelligence (Nature)",
+          "dc": 13,
+          "text": "Il est occupé à manger et ne cherche pas la bagarre. Éboueur magique, envoyé ici par quelqu’un."
+        },
+        {
+          "id": "e-estomac",
+          "only": "enhanced",
+          "skill": "Force",
+          "dc": 14,
+          "text": "Ouvrir l’estomac du banderhobb vaincu : un **livre de comptes en gobelin** à l’intérieur."
+        }
+      ],
+      "notes": [
+        {
+          "id": "e-traces",
+          "only": "enhanced",
+          "summary": "Quelqu’un a envoyé le banderhobb effacer des traces — il a raté les empreintes gobelines sur l’autel.",
+          "text": "Quelqu’un — Yek ? — a envoyé le banderhobb **effacer des traces** ici. Il a raté les empreintes grasses sur l’autel de Dumathoin."
         }
       ]
     },
@@ -2666,6 +3271,12 @@
           "id": "0",
           "text": "Fous, ils attaquent presque tout le monde — mais **un peu de magie visible les intimide** : devant un lanceur de sorts, ils coopèrent. Ils savent que « des rats qui marchent sur deux pattes » sont terrés derrière la porte ouest, et que leur maître est « un magicien elfe à la peau violette, aux yeux rouges ».",
           "summary": "Les nothics attaquent, mais un peu de magie visible les rend coopératifs."
+        },
+        {
+          "id": "e-regard",
+          "only": "enhanced",
+          "summary": "Le Regard tordu révèle à voix haute les secrets des PJ — sans malveillance.",
+          "text": "**Regard tordu (passif)** : quand un nothic perçoit le secret d’un personnage, il le dit à voix haute devant tout le monde. Ce n’est pas de la malveillance, c’est leur façon de parler."
         }
       ],
       "enemies": [
@@ -2719,6 +3330,23 @@
           "note": "Vers le repaire des rats-garous",
           "door": "magique",
           "alert": "Verrou magique : Rizzeryl seul l’ouvre, sinon Force DD 25."
+        }
+      ],
+      "checks": [
+        {
+          "id": "e-nothics",
+          "only": "enhanced",
+          "skill": "Charisme (en compagnie d’un lanceur de sorts)",
+          "dc": 13,
+          "text": "Ils parlent : « créatures-rats », « maître peau-violette », « pierre spéciale que tout le monde veut ». De quoi aborder [[r:14a|Rizzeryl]] en position de force."
+        }
+      ],
+      "dialogues": [
+        {
+          "id": "e-tissage",
+          "only": "enhanced",
+          "trigger": "Si on leur demande ce qu’ils étaient",
+          "line": "« Nous étions des hommes. Nous cherchions les secrets du Tissage. Nous les avons trouvés. » *(long silence)* « Ne cherchez pas les secrets du Tissage. »"
         }
       ]
     },
@@ -3055,6 +3683,12 @@
         {
           "id": "0",
           "text": "Huit lits de camp crasseux. Des humains maigres et débraillés y dorment, agités de tics jusque dans le sommeil ; l’odeur est celle d’un égout. Contre le mur sud, un coffre de bois."
+        },
+        {
+          "id": "e1",
+          "only": "enhanced",
+          "summary": "Cinq silhouettes maigres aux yeux trop brillants dans le noir.",
+          "text": "Autour de la table de pierres, cinq personnes maigres et nerveuses, aux yeux un peu trop brillants dans l’obscurité."
         }
       ],
       "notes": [
@@ -3062,6 +3696,12 @@
           "id": "0",
           "text": "Huit rats-garous sous forme humaine, loyaux au **Zhentarim**, menés par **Zilitsa Ilvarren**, femme rustre et mesquine qui admire Rizzeryl. Les hommes : Frek, Henk, Kozrik. Les femmes : Arreth, Elabbor, Kreena, Sybilee. Une bande perverse qui fuit la lumière.",
           "summary": "Huit rats-garous du Zhentarim, menés par Zilitsa Ilvarren."
+        },
+        {
+          "id": "e-argent",
+          "only": "enhanced",
+          "summary": "Sans arme d’argent ou magique, l’ours-garou est intuable : négociez.",
+          "text": "Sans arme en argent ni arme magique, l’**ours-garou est intuable**. Attaquer Rizzeryl sans négocier, c’est perdre la clef de pierre définitivement."
         }
       ],
       "enemies": [
@@ -3071,7 +3711,24 @@
           "count": 8,
           "name": "Rats-garous (Zilitsa et sa bande)",
           "where": "Endormis sur les lits de camp.",
-          "tactics": "Restent cachés jusqu’à l’appel de Rizzeryl. Forme hybride, deux attaques, morsure sur les isolés. Se dispersent en rats si le drow tombe."
+          "tactics": "Restent cachés jusqu’à l’appel de Rizzeryl. Forme hybride, deux attaques, morsure sur les isolés. Se dispersent en rats si le drow tombe.",
+          "only": "base"
+        },
+        {
+          "id": "e-loups",
+          "only": "enhanced",
+          "monster": "werewolf",
+          "count": 2,
+          "where": "Lieutenants de Rizzeryl, forme humaine au repos.",
+          "tactics": "Forme hybride dès l’appel du drow. Deux attaques, morsure sur les isolés : **lycanthropie, Con DD 12**."
+        },
+        {
+          "id": "e-ours",
+          "only": "enhanced",
+          "monster": "werebear",
+          "count": 1,
+          "where": "Le plus massif de la bande, jamais loin de Rizzeryl.",
+          "tactics": "135 PV et **immunité aux armes non argentées et non magiques**. Il se place entre le drow et les assaillants."
         }
       ],
       "npcs": [
@@ -3205,6 +3862,20 @@
           "skill": "Force (Athlétisme)",
           "dc": 15,
           "text": "Arracher une applique de torche (une action)."
+        },
+        {
+          "id": "e-heaume",
+          "only": "enhanced",
+          "skill": "Intelligence (Investigation)",
+          "dc": 12,
+          "text": "Le heaume disputé porte une marque : « Melairkyn, clan du Marteau de Pierre ». Récupéré et nettoyé, il confère une résistance au poison."
+        },
+        {
+          "id": "e-sable",
+          "only": "enhanced",
+          "skill": "Intelligence (Investigation)",
+          "dc": 15,
+          "text": "Sous une applique de torche, un **sac de sable magnétisé**. Jeté au loin, il attire les trois oxydeurs pendant 2 rounds."
         }
       ],
       "enemies": [
@@ -3214,6 +3885,14 @@
           "count": 2,
           "where": "Au milieu de la salle, autour du casque.",
           "tactics": "Foncent sur le PJ le plus métallique. Deux antennes par tour. Se détournent pour du fer jeté au sol."
+        },
+        {
+          "id": "e-geant",
+          "only": "enhanced",
+          "monster": "giant-rust-monster",
+          "count": 1,
+          "where": "Derrière les deux autres, plus grand, plus calme : il observe.",
+          "tactics": "Deux coups d’antennes par tour à +7 : **deux contacts suffisent à détruire un harnois**. Il vise toujours le plus métallique."
         }
       ],
       "connections": [
@@ -3502,6 +4181,12 @@
         {
           "id": "0",
           "text": "Près du plafond flotte un globe de chair putréfiée hérissé de pédoncules oculaires. Autour de son œil central, un cercle blanc à dix rayons a été peint. Du tunnel ouest montent des cris et des chocs d’armes : on s’entraîne au combat."
+        },
+        {
+          "id": "e1",
+          "only": "enhanced",
+          "summary": "Ses yeux ne sont pas révulsés : ils bougent. Ce n’est pas un zombie, c’est un vrai tyrannœil.",
+          "text": "Au plafond flotte une masse de chair à l’œil central et aux dix pédoncules. Mais ses yeux ne sont pas révulsés. Ils bougent. Ils cherchent. **Ce n’est pas un zombie.** C’est un tyrannœil vivant — blessé, réduit de moitié, et furieux."
         }
       ],
       "notes": [
@@ -3509,6 +4194,18 @@
           "id": "0",
           "text": "Le zombi attaque quiconque entre **sans brandir le symbole de Xanathar** (cercle à dix rayons — voir la baguette de [[r:14a|14a]]). Les créatures de [[r:20b|20b]] arrivent en renfort si un combat éclate.",
           "summary": "Il attaque quiconque n’exhibe pas le symbole de Xanathar ; 20b vient en renfort."
+        },
+        {
+          "id": "e-antimagie",
+          "only": "enhanced",
+          "summary": "Le cône d’anti-magie rend le combat purement physique : il faut passer par ses angles morts.",
+          "text": "**Le cône couvre 180° devant lui.** Ni boule de feu, ni contresort, ni soins magiques dans cette zone : le combat est purement physique, ou se mène **depuis ses angles morts**, derrière lui."
+        },
+        {
+          "id": "e-symbole",
+          "only": "enhanced",
+          "summary": "La baguette au symbole de Xanathar (salle 14a) fait passer le groupe sans un coup.",
+          "text": "La **baguette au symbole de Xanathar**, prise en [[r:14a|14a]], fait ignorer le groupe par le tyrannœil et tolérer son entrée par Nadia. Sans elle, ni la lettre de [[r:1f|1f]], l’anéantissement du groupe est probable."
         }
       ],
       "enemies": [
@@ -3517,7 +4214,18 @@
           "monster": "beholder-zombie",
           "count": 1,
           "where": "Au plafond, hors de portée des lames.",
-          "tactics": "Un rayon aléatoire par tour. Laisse passer le symbole de Xanathar."
+          "tactics": "Un rayon aléatoire par tour. Laisse passer le symbole de Xanathar.",
+          "only": "base"
+        },
+        {
+          "id": "e-beholder",
+          "only": "enhanced",
+          "monster": "beholder",
+          "name": "Le tyrannœil blessé",
+          "count": 1,
+          "hp": 90,
+          "where": "Au plafond, hors de portée du corps à corps.",
+          "tactics": "**Cône d’anti-magie permanent sur 180° devant lui** : aucun sort, aucun soin magique, aucun contresort de ce côté. Trois rayons par tour tirés au hasard. Il ignore quiconque porte le symbole de Xanathar."
         }
       ],
       "connections": [
@@ -3534,6 +4242,22 @@
         {
           "to": "13a",
           "via": "Long couloir au nord"
+        }
+      ],
+      "checks": [
+        {
+          "id": "e-beholder",
+          "only": "enhanced",
+          "skill": "Sagesse (Perspicacité)",
+          "dc": 14,
+          "text": "Blessé et épuisé, mais parfaitement lucide."
+        },
+        {
+          "id": "e-coque",
+          "only": "enhanced",
+          "skill": "Intelligence (Arcanes)",
+          "dc": 16,
+          "text": "Sa coque porte les traces d’un sort de niveau 8 ou plus. Qui a bien pu presque tuer un tyrannœil ?"
         }
       ]
     },
@@ -3570,6 +4294,12 @@
           "id": "0",
           "text": "**Nadia** se précipite au moindre prétexte, avec ses sous-fifres. Trois autres gobelours fouillent [[r:20d|20d]].",
           "summary": "Nadia saute sur la moindre occasion de se battre ; trois gobelours fouillent 20d."
+        },
+        {
+          "id": "e-lettre",
+          "only": "enhanced",
+          "summary": "La lettre de Nadia (salle 1f) ouvre un marché : son silence contre l’accès au portail 20c.",
+          "text": "Présenter la **lettre trouvée en [[r:1f|1f]]** ouvre un marché : le silence des personnages contre l’accès au portail de [[r:20c|20c]]. Nadia déteste Shunn : ce levier fonctionne bien."
         }
       ],
       "enemies": [
@@ -3587,14 +4317,24 @@
           "count": 5,
           "name": "Malfrats (trois femmes, deux hommes)",
           "where": "Autour du cercle.",
-          "tactics": "Tactique de groupe par paires."
+          "tactics": "Tactique de groupe par paires.",
+          "only": "base"
         },
         {
           "id": "gobelours",
           "monster": "bugbear",
           "count": 5,
           "where": "Autour du cercle.",
-          "tactics": "Saisissent et martèlent."
+          "tactics": "Saisissent et martèlent.",
+          "only": "base"
+        },
+        {
+          "id": "e-trolls",
+          "only": "enhanced",
+          "monster": "gaunt-troll",
+          "count": 3,
+          "where": "Autour du cercle de sang, avec Nadia.",
+          "tactics": "**Allonge de 4,50 m** : ils atteignent les lanceurs de sorts qui se croient hors de portée. Régénération 10, feu ou acide obligatoires."
         }
       ],
       "npcs": [
@@ -3732,6 +4472,12 @@
         {
           "id": "0",
           "text": "Un long couloir voûté ; des cristaux rouges au plafond diffusent une lumière faible. À l’ouest, devant une porte, deux machines de bois et de fer montées sur des pattes articulées pivotent lentement vers vous."
+        },
+        {
+          "id": "e1",
+          "only": "enhanced",
+          "summary": "Une silhouette de trois mètres taillée dans la pierre tourne lentement la tête vers vous.",
+          "text": "Au fond du couloir, immobile comme la roche elle-même, une silhouette de trois mètres taillée dans la pierre, les bras pendant comme des massues. Ses yeux s’illuminent lentement. Elle tourne la tête vers vous."
         }
       ],
       "features": [
@@ -3751,6 +4497,12 @@
           "id": "0",
           "text": "Les balistes **ne perçoivent pas** les créatures restées dans la section est (18 m). Sans cible, elles regagnent leur position devant la porte de [[r:22a|22a]]. Elles ne peuvent pas tirer sur une créature juste au-dessus d’elles.",
           "summary": "Les balistes ne voient pas la section est du couloir et ne tirent pas au-dessus d’elles."
+        },
+        {
+          "id": "e-cristaux",
+          "only": "enhanced",
+          "summary": "Briser le cristal rouge le plus brillant aveugle le golem 1d4 rounds : c’est son capteur.",
+          "text": "Les cristaux rouges du plafond sont son **capteur sensoriel**. Briser le plus brillant (un projectile, une action) l’aveugle **1d4 rounds**."
         }
       ],
       "enemies": [
@@ -3759,7 +4511,16 @@
           "monster": "baliste-animee",
           "count": 2,
           "where": "Devant la porte de 22a, à l’ouest.",
-          "tactics": "Un carreau de feu chacune par tour (+6, 16 dégâts). Grimper dessus les rend inoffensives."
+          "tactics": "Un carreau de feu chacune par tour (+6, 16 dégâts). Grimper dessus les rend inoffensives.",
+          "only": "base"
+        },
+        {
+          "id": "e-golem",
+          "only": "enhanced",
+          "monster": "stone-golem",
+          "count": 1,
+          "where": "Au fond du couloir, devant la porte de la brasserie.",
+          "tactics": "**Immunisé aux sorts de niveau 5 ou moins** ; les sorts de transmutation lui donnent 30 PV temporaires. Deux massues à +10, Force DD 17 ou à terre. Hâte sur 5-6."
         }
       ],
       "connections": [
@@ -3777,6 +4538,22 @@
           "to": "23a",
           "via": "Porte à l’est, puis couloir de la descente vers la strate 3",
           "door": "fermee"
+        }
+      ],
+      "checks": [
+        {
+          "id": "e-plaque",
+          "only": "enhanced",
+          "skill": "Intelligence (Investigation)",
+          "dc": 12,
+          "text": "Une plaque d’étain dans son dos : « Garrux Copperaxe. Commande au Mage fou : 1 gardien automatique. Payé en ale. Valeur : 1 000 po d’ale. »"
+        },
+        {
+          "id": "e-plaque-verso",
+          "only": "enhanced",
+          "skill": "Intelligence (Investigation)",
+          "dc": 15,
+          "text": "Au verso : « Si tu lis ceci, le golem t’a laissé passer. Ou tu es mort. Dans les deux cas, l’ale est dans la salle secrète. Elle est meilleure que ta vie ne le mérite. »"
         }
       ]
     },
@@ -3908,6 +4685,14 @@
           "door": "piegee",
           "alert": "Trois fosses cachées dans la pente (Perception DD 15, chute de 6 m)."
         }
+      ],
+      "notes": [
+        {
+          "id": "e-medaille",
+          "only": "enhanced",
+          "summary": "Au fond de la cuve sud-ouest, sous le zombi : une médaille d’or de maître brasseur.",
+          "text": "Au fond de la cuve sud-ouest, sous le zombi tyrannœil : une **médaille en or**. « Meilleur Maître de Brasserie, Clan Melairkyn, An 892 Nain. »"
+        }
       ]
     },
     {
@@ -3983,6 +4768,12 @@
           "id": "0",
           "text": "**140 tonneaux** de bois de zurkh. Chaque glyphe (abjuration) conserve **180 l de bière naine** par magie, consommable depuis des siècles. Retirer le couvercle ou casser le tonneau met fin à la conservation.",
           "summary": "140 tonneaux : chaque glyphe conserve 180 l de bière naine, buvable depuis des siècles."
+        },
+        {
+          "id": "e-commerce",
+          "only": "enhanced",
+          "summary": "Dix tonneaux vendus 20 po à Yek en font un allié permanent et un informateur.",
+          "text": "Vendre **dix tonneaux à 20 po** à Yek rapporte 200 po et en fait un **allié permanent** et un informateur. À Waterdeep, les 140 tonneaux valent 5 600 po."
         }
       ],
       "treasure": [
@@ -4051,6 +4842,16 @@
           "secret": true,
           "door": "secrete"
         }
+      ],
+      "checks": [
+        {
+          "id": "e-mimiques",
+          "only": "enhanced",
+          "skill": "Intelligence (Investigation)",
+          "dc": 17,
+          "text": "Trois tonneaux n’ont ni cerclage ni bonde à la bonne place. *Détection de la magie* les désigne aussi sûrement.",
+          "failure": "Rien à signaler — la première main posée dessus est agrippée."
+        }
       ]
     },
     {
@@ -4106,6 +4907,12 @@
         {
           "id": "0",
           "text": "Une galerie voûtée soutenue par d’épaisses arches. Quatre squelettes de dragons, os tenus par du fil de fer et du ciment, se dressent dans des poses figées ; des morceaux sont tombés au sol. Un cinquième occupe une alcôve au sud."
+        },
+        {
+          "id": "e1",
+          "only": "enhanced",
+          "summary": "Lovée autour du dragon d’or, une créature serpentine aux plumes multicolores vous parle dans la tête.",
+          "text": "Dans l’alcôve sud, lovée autour du squelette de dragon d’or, une créature serpentine aux plumes multicolores : un **couatl**. Sa voix résonne directement dans vos esprits. « Enfin. J’attendais des gens qui méritent d’être jugés. »"
         }
       ],
       "features": [
@@ -4128,6 +4935,41 @@
         {
           "to": "26a",
           "via": "Couloir au sud"
+        }
+      ],
+      "enemies": [
+        {
+          "id": "e-couatl",
+          "only": "enhanced",
+          "monster": "couatl",
+          "count": 1,
+          "where": "Alcôve sud, autour du dragon d’or.",
+          "tactics": "**N’attaque que si on l’attaque ou si l’on profane les tombes.** Il pose trois questions et détecte automatiquement chaque mensonge."
+        }
+      ],
+      "checks": [
+        {
+          "id": "e-griffe",
+          "only": "enhanced",
+          "skill": "Intelligence (Investigation)",
+          "dc": 15,
+          "text": "Au squelette d’or, une griffe manque : composant de divination, prise par Rizzeryl. Arcanes DD 13 : son grimoire contient des sorts de divination à composants rares."
+        }
+      ],
+      "notes": [
+        {
+          "id": "e-test",
+          "only": "enhanced",
+          "summary": "Trois questions honnêtement répondues : il révèle que la tombe 26b est un leurre et soigne un PJ.",
+          "text": "Le couatl **teste** les personnages avec trois questions. Honnêtes : il révèle que [[r:26b|26b]] est un leurre — un bloc plein —, indique le vrai grimoire brûlé en [[r:26e|26e]] et offre une *restauration supérieure*."
+        }
+      ],
+      "dialogues": [
+        {
+          "id": "e-adieu",
+          "only": "enhanced",
+          "trigger": "Avant de repartir",
+          "line": "« Le portrait d’Halaster, dans cette aile. Il ne cligne pas de l’œil par hasard. Il choisit qui observer. »"
         }
       ]
     },
@@ -4202,6 +5044,12 @@
         {
           "id": "0",
           "text": "Quatre colonnes de marbre blanc, sculptées en elfes stoïques serrant une branche fleurie, regardent le centre de la pièce. Sur les murs, des licornes et des arbres nus. Autour des colonnes, une créature cubique munie d’ailes et d’un arc marche en cliquetant, toujours dans le sens des aiguilles d’une montre."
+        },
+        {
+          "id": "e1",
+          "only": "enhanced",
+          "summary": "Une sphinge aux ailes dorées sculpte la pierre et barre l’accès aux colonnes.",
+          "text": "Bloquant l’accès aux colonnes : une sphinge aux ailes dorées repliées, qui sculpte quelque chose dans la pierre avec une patience infinie."
         }
       ],
       "features": [
@@ -4224,6 +5072,14 @@
           "count": 1,
           "where": "Tourne autour des colonnes.",
           "tactics": "N’attaque que si on l’attaque ou si l’on touche aux cariatides. Quatre flèches par tour."
+        },
+        {
+          "id": "e-sphinge",
+          "only": "enhanced",
+          "monster": "gynosphinx",
+          "count": 1,
+          "where": "Devant les quatre colonnes de marbre.",
+          "tactics": "**Non hostile** : elle pose trois énigmes avant de laisser passer. Attaquée : rugissement (Sag DD 15), deux griffes à +9, contresort de niveau 5 sur les lanceurs de sorts."
         }
       ],
       "npcs": [
@@ -4268,6 +5124,40 @@
           "to": "26a",
           "via": "Porte à l’ouest, puis couloir",
           "door": "fermee"
+        }
+      ],
+      "checks": [
+        {
+          "id": "e-enigme1",
+          "only": "enhanced",
+          "skill": "Énigme 1",
+          "text": "« Je suis toujours devant vous mais ne peux jamais être vu. » — *l’avenir*."
+        },
+        {
+          "id": "e-enigme2",
+          "only": "enhanced",
+          "skill": "Énigme 2",
+          "text": "« Plus je sèche, plus je suis mouillée. » — *une serviette*."
+        },
+        {
+          "id": "e-enigme3",
+          "only": "enhanced",
+          "skill": "Énigme 3",
+          "text": "« Halaster m’a créée pour garder ses secrets. Qui suis-je ? » — *elle-même*."
+        }
+      ],
+      "notes": [
+        {
+          "id": "e-secret",
+          "only": "enhanced",
+          "summary": "Trois bonnes réponses : elle révèle le piège de la statue 25h.",
+          "text": "Trois bonnes réponses et elle lâche un secret : « La statue de [[r:25h|25h]]. Si vos amis elfiques la restaurent, un mot magique se déclenche. » *(une bouche magique hurle « IMBÉCILES ! »)*"
+        },
+        {
+          "id": "e-halastron",
+          "only": "enhanced",
+          "summary": "Halastron dessine dans la poussière le symbole de Juiblex superposé à celui d’Halaster.",
+          "text": "**Halastron** dessine dans la poussière : le symbole de Juiblex superposé à celui d’Halaster. Il pointe le dessin et fait un geste d’interrogation."
         }
       ]
     },
@@ -4383,6 +5273,12 @@
         {
           "id": "0",
           "text": "Une douzaine de sarcophages elfes réduits en miettes. Les bas-reliefs — des elfes montés sur des élans dans une forêt aux saisons changeantes — sont presque effacés. Deux masses de plumes et de fourrure se dressent en hurlant, becs grands ouverts."
+        },
+        {
+          "id": "e1",
+          "only": "enhanced",
+          "summary": "Un seul hibours de trois mètres, aux yeux trop intelligents, un coffret d’os dans la gueule.",
+          "text": "Une tête de hibou vous regarde depuis un corps d’ours de trois mètres. Un seul hibours, mais il n’a rien de normal : ses yeux luisent d’une intelligence inhabituelle. Il tient dans sa gueule un **coffret d’os**."
         }
       ],
       "features": [
@@ -4403,7 +5299,16 @@
           "monster": "owlbear",
           "count": 2,
           "where": "Au milieu des sarcophages brisés.",
-          "tactics": "Affamés, placés ici par Halaster : attaquent quiconque entre. Deux lacérations chacun."
+          "tactics": "Affamés, placés ici par Halaster : attaquent quiconque entre. Deux lacérations chacun.",
+          "only": "base"
+        },
+        {
+          "id": "e-owlbear",
+          "only": "enhanced",
+          "monster": "legendary-owlbear",
+          "count": 1,
+          "where": "Au milieu des sarcophages brisés.",
+          "tactics": "Trois attaques par tour **plus trois actions légendaires** entre les tours des personnages. Coup cyclone si le groupe se masse. **Apaisable** : 5 kg de viande ou Dressage DD 18, et il lâche le coffret."
         }
       ],
       "treasure": [
@@ -4412,6 +5317,14 @@
           "item": "Pot d’éveil",
           "magic": true,
           "where": "Dans les débris près du mur sud"
+        },
+        {
+          "id": "e-coffret",
+          "only": "enhanced",
+          "item": "Coffret d’os",
+          "magic": true,
+          "where": "Dans la gueule du hibours",
+          "note": "Le **grimoire brûlé** de [[r:26e|26e]] (huit sorts, Arcanes DD 15 chacun) et la **poudre de disparition**."
         }
       ],
       "connections": [
@@ -4433,6 +5346,15 @@
         {
           "to": "26c",
           "via": "Ouverture à l’ouest"
+        }
+      ],
+      "checks": [
+        {
+          "id": "e-sarco",
+          "only": "enhanced",
+          "skill": "Intelligence (Investigation)",
+          "dc": 14,
+          "text": "Une gravure intacte, identique à celle du sarcophage « plein » de [[r:26b|26b]] : **c’est ce sarcophage-ci qui était le vrai**. Celui de 26b est le leurre."
         }
       ]
     },
@@ -4494,6 +5416,12 @@
           "id": "0",
           "text": "Les hibours de [[r:26a|26a]] ont brisé les urnes. Le couloir en pente vers [[r:26d|26d]] cache le **piège de la sphère roulante**.",
           "summary": "Les hibours ont brisé les urnes ; la pente cache le piège de la sphère."
+        },
+        {
+          "id": "e-sphere",
+          "only": "enhanced",
+          "summary": "La sphère percute aussi le hibours si elle passe par sa salle.",
+          "text": "La plaque se déclenche dès **9 kg** — une armure lourde suffit. La sphère roule à l’initiative +8 et **percute aussi le hibours** de [[r:26a|26a]] si elle traverse sa salle."
         }
       ],
       "traps": [

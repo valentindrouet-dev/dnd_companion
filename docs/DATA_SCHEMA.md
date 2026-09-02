@@ -103,6 +103,29 @@ Les `id` servent à construire les clés de l'état MJ (`aventure/salle/type/id`
 à chaque élément (bloc de lecture, créature, trésor…) garantit que les masquages et annotations
 survivent à une réorganisation du fichier. Sans `id`, l'index dans le tableau est utilisé.
 
+### Variantes : `only`
+
+N'importe quel élément d'une salle ou de l'aventure (bloc de lecture, note, élément, créature,
+PNJ, réplique, trésor, piège, test, liaison, section) accepte un champ `only` :
+
+```jsonc
+{ "id": "e-trolls", "only": "enhanced", "monster": "cave-troll", "count": 4 }
+{ "id": "malfrats", "only": "base",     "monster": "tough",      "count": 7 }
+```
+
+- `"enhanced"` — l'élément n'existe que dans la **version Améliorée** ; il est affiché avec une
+  **étoile** et disparaît quand le MJ coupe l'interrupteur des Réglages.
+- `"base"` — l'élément appartient à l'aventure d'origine et est **remplacé** dans la version
+  Améliorée ; il réapparaît dès que l'interrupteur est coupé.
+- absent — l'élément est commun aux deux versions.
+
+Une créature renforcée s'écrit donc comme deux entrées (`only: "base"` / `only: "enhanced"`)
+plutôt qu'en modifiant l'originale : les deux versions gardent alors leurs propres coches.
+
+Les éléments masqués par une variante **ne comptent pas** dans le pourcentage d'avancement ni
+dans le statut de la salle, et leurs `id` restent stables (les clés de l'état MJ sont calculées
+sur la position d'origine, pas sur la liste filtrée).
+
 ## Monstre (`monsters/*.json` ou `adventure.monsters`)
 
 ```jsonc
@@ -146,7 +169,11 @@ faite. Un appui sur le bouton passe à l'état suivant et le fige.
 
 Le champ `number` sert au tri de la vue en liste (tri naturel : 1, 1a, 1b, 2, 10, 13c–13d…).
 Le pourcentage d'avancement d'une salle est le rapport entre les éléments masqués et le nombre
-total d'éléments cochables (lectures, notes, éléments, créatures, trésors, pièges, tests, répliques).
+total d'éléments cochables **visibles** (lectures, notes, éléments, créatures, trésors, pièges,
+tests, répliques) : basculer la version Améliorée recalcule aussitôt les pourcentages et les statuts.
+
+Le réglage de version est lui-même dans l'état MJ (`settings.enhanced`, activé par défaut) : les
+coches et les notes des éléments masqués sont conservées, jamais effacées.
 
 Sans `summary`, le mode Résumé retombe sur la première phrase du texte, tronquée si besoin.
 

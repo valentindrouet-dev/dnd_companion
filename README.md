@@ -30,6 +30,9 @@ pièges et tests, liaisons vers les salles connectées, générateur de loot.
 - **Drapeau de fin de séance** : un seul par aventure, « Reprendre » y ramène.
 - **Notes du MJ marquables « à faire »**, remontées sur la page de l'aventure.
 - **Statut des PNJ récurrents** modifiable en partie (amical, allié, en fuite, mort…).
+- **Version Améliorée** : les ajouts d'une variante plus difficile (créatures, tests, énigmes,
+  répliques, trésors) sont marqués d'une **étoile** et se coupent d'un interrupteur dans les
+  Réglages ; les pourcentages et les statuts se recalculent sur ce qui est affiché.
 - **Hors-ligne** : données embarquées, service worker ; installable sur l'écran d'accueil.
 - Zéro build, zéro dépendance : HTML/CSS/JS modernes, déployable tel quel sur GitHub Pages.
 
@@ -86,6 +89,11 @@ s'importe en JSON depuis **Réglages**.
 **Strate 2 : les Salles Arcaniques** (Waterdeep : le Donjon du Mage dément) — 70 zones,
 transposées depuis l'édition française pour un usage personnel à la table, avec les cadrages
 de carte correspondants. Le PDF source lui-même n'est pas versionné.
+
+Elle embarque les deux variantes : l'aventure d'origine et une **version Améliorée** (niveau 5-7,
+rencontres renforcées, énigmes et clefs narratives supplémentaires). L'interrupteur des Réglages
+bascule de l'une à l'autre sans rien perdre : les éléments propres à une variante sont simplement
+masqués, avec leurs coches et leurs notes.
 
 ## Ajouter une aventure
 

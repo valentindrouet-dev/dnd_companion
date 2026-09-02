@@ -11,6 +11,7 @@ import { card } from '../components/card.js';
 import { openNpcPopup } from '../components/npc.js';
 import { statusPill } from '../components/npcstatus.js';
 import { condense, textBlock } from '../components/block.js';
+import { visibleItems, enhancedStar } from '../variant.js';
 import { slug } from '../util.js';
 import { adventureProgress, roomStatus, statusTally, ROOM_STATUSES } from '../progress.js';
 import { openMapPopup, fullMap } from '../components/map.js';
@@ -57,14 +58,14 @@ export async function adventureView(route) {
     list(adv.notes).length ? section('Notes MJ', list(adv.notes).map((t) =>
       textBlock({ key: K('notes', t.id), text: t.text, title: t.title, item: t, kind: 'note', hideLabel: 'Vu', todo: true }))) : null,
 
-    (adv.npcs || []).length ? section('PNJ récurrents', (adv.npcs || []).map((n, i) => {
-      const npc = { ...n, id: elemId(n, i) };
+    visibleItems(adv.npcs, elemId).length ? section('PNJ récurrents', visibleItems(adv.npcs, elemId).map(({ item: n, id }) => {
+      const npc = { ...n, id };
       return card({
         key: K('npc', npc.id),
         badge: icon('users'),
         badgeClass: '',
         title: n.name,
-        pills: [statusPill(adv.id, npc)],
+        pills: [enhancedStar(n), statusPill(adv.id, npc)],
         sub: n.role,
         onOpen: () => openNpcPopup(adv.id, { id: '_adv', name: adv.title }, npc),
       });
@@ -91,7 +92,9 @@ export async function adventureView(route) {
     ] });
 }
 
-function list(x) { return (Array.isArray(x) ? x : x ? [x] : []).map(asTextItem); }
+function list(x) {
+  return visibleItems(x, (it, i) => asTextItem(it, i).id).map(({ item, id }) => ({ ...asTextItem(item, id), id }));
+}
 function orphans(adv) { return adv.roomOrder.filter((r) => !adv.sectionById.has(r.section)); }
 
 function section(title, children, opts) {

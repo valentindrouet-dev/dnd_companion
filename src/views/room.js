@@ -22,9 +22,13 @@ import { mapThumb, openMapPopup, roomMap } from '../components/map.js';
 import { openLootPopup } from '../loot/ui.js';
 import { openEncounterPopup } from '../encounters/ui.js';
 import { roomProgress, roomStatus, cycleRoomStatus } from '../progress.js';
+import { visibleItems, filterVariant, enhancedStar, isVisible } from '../variant.js';
 import { slug } from '../util.js';
 
-function list(x) { return (Array.isArray(x) ? x : x ? [x] : []).map(asTextItem); }
+/** Blocs de texte visibles dans la version en cours, identifiants d'origine conservés. */
+function list(x) {
+  return visibleItems(x, (it, i) => asTextItem(it, i).id).map(({ item, id }) => ({ ...asTextItem(item, id), id }));
+}
 
 const ROOM_LABELS = { inexploree: 'Salle inexplorée', encours: 'Salle en cours', fait: 'Salle faite' };
 
@@ -109,7 +113,7 @@ export async function roomView(route) {
       }, icon(status.icon), status.label),
       navBtn(prev, 'back', 'Salle précédente'), navBtn(next, 'forward', 'Salle suivante')));
 
-  const enemies = (room.enemies || []).map((e, i) => ({ ...e, _id: elemId(e, i) }));
+  const enemies = visibleItems(room.enemies, elemId).map(({ item, id }) => ({ ...item, _id: id }));
   const xp = encounterXP(enemies);
   const enemyCards = enemies.map((e) => {
     const m = getMonster(e.monster);
@@ -120,6 +124,7 @@ export async function roomView(route) {
       badgeClass: 'danger',
       title: name,
       pills: [
+        enhancedStar(e),
         e.hidden ? pill('caché', 'info', 'eyeOff') : null,
         m?.cr != null ? pill(`FP ${m.cr}`, '', 'skull') : null,
         e.hp ? pill(`${e.hp} PV`, 'danger', 'heart') : null,
@@ -132,40 +137,42 @@ export async function roomView(route) {
     });
   });
 
-  const npcs = [...(room.npcs || [])];
+  const npcs = visibleItems(room.npcs, elemId).map(({ item, id }) => ({ ...item, id }));
   if ((room.dialogues || []).length) npcs.push({ id: '_room', name: 'Répliques de la salle', dialogues: room.dialogues });
-  const npcCards = npcs.map((n, i) => {
-    const id = n.id ?? String(i);
-    const total = (n.dialogues || []).length;
-    const said = (n.dialogues || []).filter((d, j) => store.isHidden(key(K('npc', id), 'line', (typeof d === 'string' ? j : d.id ?? j)))).length;
+  const npcCards = npcs.map((n) => {
+    const id = n.id;
+    const lines = filterVariant(n.dialogues);
+    const total = lines.length;
+    const said = lines.filter((d, j) => store.isHidden(key(K('npc', id), 'line', (typeof d === 'string' ? j : d.id ?? j)))).length;
     return card({
       key: K('npc', id),
       badge: icon(n.attitude === 'hostile' ? 'sword' : 'users'),
       badgeClass: n.attitude === 'hostile' ? 'danger' : n.attitude === 'amical' ? 'ok' : '',
       title: n.name,
-      pills: [attitudePill(n.attitude), total ? pill(`${said}/${total}`, said === total ? 'ok' : '', 'chat') : null],
+      pills: [enhancedStar(n), attitudePill(n.attitude), total ? pill(`${said}/${total}`, said === total ? 'ok' : '', 'chat') : null],
       sub: n.role,
       sub2: n.wants ? `Veut : ${n.wants}` : null,
       onOpen: () => openNpcPopup(adv.id, room, { ...n, id }),
     });
   });
 
-  const traps = (room.traps || []).map((t, i) => card({
-    key: K('trap', elemId(t, i)),
+  const traps = visibleItems(room.traps, elemId).map(({ item: t, id }) => card({
+    key: K('trap', id),
     badge: t.dc != null ? `DD ${t.dc}` : icon('trap'),
     badgeClass: 'info',
     title: t.name,
-    pills: [pill('piège', 'info', 'trap')],
+    pills: [enhancedStar(t), pill('piège', 'info', 'trap')],
     sub: t.trigger,
     sub2: t.effect,
     hideLabel: 'Fait',
     onOpen: () => openTrapPopup(t),
   }));
-  const checks = (room.checks || []).map((c, i) => card({
-    key: K('check', elemId(c, i)),
+  const checks = visibleItems(room.checks, elemId).map(({ item: c, id }) => card({
+    key: K('check', id),
     badge: c.dc != null ? `DD ${c.dc}` : '?',
     badgeClass: 'accent',
     title: c.skill || c.name,
+    pills: [enhancedStar(c)],
     sub: c.text,
     sub2: c.failure ? `Échec : ${c.failure}` : null,
     hideLabel: 'Fait',
