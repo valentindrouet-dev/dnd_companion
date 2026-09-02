@@ -58,6 +58,77 @@
   },
   "creatures": [
     {
+      "id": "aboleth",
+      "name": "Aboleth",
+      "en": "Aboleth",
+      "level": 1,
+      "type": "aberration",
+      "match": [
+        "aboleth"
+      ],
+      "description": "Trois mètres de chose ancienne, et le mucus qu’elle sécrète ronge les gants avant qu’on ait fini. Les trois yeux restent ouverts, et l’on jurerait qu’ils suivent les mains qui découpent.",
+      "check": {
+        "skill": "Arcanes",
+        "dc": 17
+      },
+      "duration": "45 min",
+      "danger": "Le nuage de mucus se libère d’un coup. **4d10 dégâts** et jet de sauvegarde de Constitution DD 14 ou le PJ ne peut plus respirer l’air pendant 1 heure.",
+      "loot": [
+        {
+          "emoji": "🧠",
+          "name": "Lobe mnésique",
+          "en": "Memory Lobe",
+          "p": 30,
+          "qty": "1",
+          "value": "800 po",
+          "use": "il contient des souvenirs qui ne sont à personne"
+        },
+        {
+          "emoji": "👁️",
+          "name": "Œil d’aboleth",
+          "en": "Aboleth Eye",
+          "p": 35,
+          "qty": "1d3",
+          "value": "200 po chacun",
+          "use": "composante (télépathie)"
+        },
+        {
+          "emoji": "🧪",
+          "name": "Mucus transformateur",
+          "en": "Transformative Mucus",
+          "p": 40,
+          "qty": "1d3",
+          "value": "150 po la fiole",
+          "use": "composante (potion)"
+        },
+        {
+          "emoji": "🛡️",
+          "name": "Peau dorsale",
+          "en": "Dorsal Hide",
+          "p": 30,
+          "qty": "1",
+          "value": "250 po",
+          "use": "composante (armure)"
+        },
+        {
+          "emoji": "💰",
+          "name": "Pièces (au fond de la fosse)",
+          "en": "Coins (from the pit)",
+          "p": 45,
+          "qty": "6d10",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 20,
+          "qty": "1",
+          "magic": "C"
+        }
+      ]
+    },
+    {
       "id": "giant-spider",
       "name": "Araignée géante",
       "en": "Giant Spider",
@@ -259,7 +330,8 @@
       "level": 1,
       "type": "human",
       "match": [
-        "cultist"
+        "cultist",
+        "drow"
       ],
       "description": "Les cadavres sont retournés un à un. Sous les vêtements imbibés de sueur et de poussière, on récupère armes émoussées et bourses poisseuses. Le cuir colle aux doigts.",
       "check": {
@@ -518,7 +590,8 @@
       "type": "human",
       "match": [
         "drow-elite-warrior",
-        "champion"
+        "champion",
+        "drow-priestess"
       ],
       "description": "L’équipement est de meilleure facture, mais le corps reste lourd et déjà froid. Les objets récupérés sont imprégnés de sueur, de sang et de poussière.",
       "check": {
@@ -584,7 +657,9 @@
       "en": "Carrion Crawler",
       "level": 1,
       "type": "monstrosity",
-      "match": [],
+      "match": [
+        "phase-spider"
+      ],
       "description": "La bête pue la charogne. Les tentacules suintent une bave jaunâtre ; en les sectionnant, le liquide colle aux doigts et donne la nausée.",
       "check": {
         "skill": "Survie",
@@ -644,6 +719,77 @@
           "p": 5,
           "qty": "1",
           "magic": "A"
+        }
+      ]
+    },
+    {
+      "id": "chuul",
+      "name": "Chuul",
+      "en": "Chuul",
+      "level": 1,
+      "type": "aberration",
+      "match": [
+        "chuul"
+      ],
+      "description": "L’exosquelette se sépare en plaques nettes, comme une armure qu’on démonte. Les tentacules autour de la bouche continuent de chercher quelque chose, longtemps après.",
+      "check": {
+        "skill": "Arcanes",
+        "dc": 14
+      },
+      "duration": "25 min",
+      "danger": "Une pince se referme en réflexe. **2d10 dégâts** contondants et le PJ est agrippé par une créature morte.",
+      "loot": [
+        {
+          "emoji": "🦞",
+          "name": "Pinces de chuul",
+          "en": "Chuul Pincers",
+          "p": 40,
+          "qty": "1d2",
+          "value": "45 po chacune",
+          "use": "composante (arme)"
+        },
+        {
+          "emoji": "🛡️",
+          "name": "Plaques d’exosquelette",
+          "en": "Exoskeleton Plates",
+          "p": 35,
+          "qty": "1d3",
+          "value": "30 po chacune",
+          "use": "composante (armure)"
+        },
+        {
+          "emoji": "🧪",
+          "name": "Tentacules paralysants",
+          "en": "Paralytic Tentacles",
+          "p": 30,
+          "qty": "1d2",
+          "value": "60 po la fiole",
+          "use": "composante (poison)"
+        },
+        {
+          "emoji": "✨",
+          "name": "Organe sensible à la magie",
+          "en": "Magic-Sensing Organ",
+          "p": 20,
+          "qty": "1",
+          "value": "120 po",
+          "use": "composante (détection)"
+        },
+        {
+          "emoji": "💰",
+          "name": "Pièces (de ses proies)",
+          "en": "Coins (from its prey)",
+          "p": 40,
+          "qty": "3d10",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 10,
+          "qty": "1",
+          "magic": "B"
         }
       ]
     },
@@ -780,7 +926,8 @@
       "type": "ooze",
       "match": [
         "gelatinous-cube",
-        "gelatinous-cube-giant"
+        "gelatinous-cube-giant",
+        "swarm-of-quippers"
       ],
       "description": "La masse translucide ondule encore lentement. Pour récupérer quoi que ce soit, il faut plonger les bras dans une substance froide, brûlante et collante à la fois.",
       "check": {
@@ -832,7 +979,9 @@
       "en": "Duergar",
       "level": 1,
       "type": "humanoid",
-      "match": [],
+      "match": [
+        "duergar"
+      ],
       "description": "Le nain gris a la peau froide et dure. Son équipement est compact, militaire, et fouiller ses poches revient à dégager des objets lourds, gras de suie et de sueur.",
       "check": {
         "skill": "Survie",
@@ -953,7 +1102,8 @@
       "level": 1,
       "type": "human",
       "match": [
-        "scout"
+        "scout",
+        "grimlock"
       ],
       "description": "Le corps est léger, soigneusement équipé. Les aventuriers fouillent rapidement des vêtements discrets, des coutures dissimulant parfois de petites poches cousues à la hâte.",
       "check": {
@@ -1014,7 +1164,9 @@
       "en": "Ettin",
       "level": 1,
       "type": "giant",
-      "match": [],
+      "match": [
+        "barlgura"
+      ],
       "description": "Les deux têtes pendent lourdement. La chair épaisse est marquée de coups, et l’odeur de sueur rance rend la manipulation pénible quand on dégage peau, dents et os.",
       "check": {
         "skill": "Survie",
@@ -1069,6 +1221,77 @@
       ]
     },
     {
+      "id": "mind-flayer",
+      "name": "Flagelleur mental",
+      "en": "Mind Flayer",
+      "level": 1,
+      "type": "aberration",
+      "match": [
+        "mind-flayer"
+      ],
+      "description": "La tête est molle sous les doigts et les quatre tentacules bougent encore par réflexe pendant plusieurs minutes. Personne dans le groupe ne veut s’en charger, et quelqu’un doit le faire.",
+      "check": {
+        "skill": "Arcanes",
+        "dc": 15
+      },
+      "duration": "30 min",
+      "danger": "Un dernier écho de l’explosion mentale. **3d8 dégâts** psychiques et le PJ est étourdi jusqu’à la fin de son prochain tour.",
+      "loot": [
+        {
+          "emoji": "🦑",
+          "name": "Tentacules de flagelleur",
+          "en": "Illithid Tentacles",
+          "p": 40,
+          "qty": "1d4",
+          "value": "60 po chacun",
+          "use": "composante (psionique)"
+        },
+        {
+          "emoji": "🧠",
+          "name": "Cervelle d’illithid",
+          "en": "Illithid Brain",
+          "p": 30,
+          "qty": "1",
+          "value": "250 po",
+          "use": "composante (télépathie)"
+        },
+        {
+          "emoji": "💎",
+          "name": "Cristal résonant",
+          "en": "Resonant Crystal",
+          "p": 25,
+          "qty": "1d2",
+          "value": "75 po chacun",
+          "use": "composante (baguette)"
+        },
+        {
+          "emoji": "♟️",
+          "name": "Jeu d’échecs draconique",
+          "en": "Draconic Chess Set",
+          "p": 20,
+          "qty": "1",
+          "value": "90 po",
+          "use": "assemblé de pièces dépareillées"
+        },
+        {
+          "emoji": "💰",
+          "name": "Coffre de pots-de-vin",
+          "en": "Bribe Chest",
+          "p": 55,
+          "qty": "5d10",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 15,
+          "qty": "1",
+          "magic": "B"
+        }
+      ]
+    },
+    {
       "id": "goblin",
       "name": "Gobelin",
       "en": "Goblin",
@@ -1076,7 +1299,8 @@
       "type": "humanoid",
       "match": [
         "goblin-warrior",
-        "goblin-boss"
+        "goblin-boss",
+        "worg"
       ],
       "description": "Après le combat, les aventuriers fouillent les corps des gobelins. C’est sale et expéditif : dents arrachées, flèches récupérées, armes tordues et armures poisseuses sont mises de côté.",
       "check": {
@@ -1163,7 +1387,8 @@
       "level": 1,
       "type": "humanoid",
       "match": [
-        "bugbear"
+        "bugbear",
+        "troglodyte"
       ],
       "description": "La fourrure est épaisse, humide, imprégnée d’une odeur animale tenace. Il faut couper et arracher pour récupérer quoi que ce soit, laissant une masse de chair et de poils ensanglantés.",
       "check": {
@@ -1435,7 +1660,9 @@
       "en": "Grell",
       "level": 1,
       "type": "aberration",
-      "match": [],
+      "match": [
+        "gas-spore"
+      ],
       "description": "Les tentacules pendent, humides, parcourus de spasmes. Les sectionner libère un liquide sombre et visqueux à l’odeur marine rance.",
       "check": {
         "skill": "Arcanes",
@@ -1493,7 +1720,8 @@
       "level": 1,
       "type": "aberration",
       "match": [
-        "grick"
+        "grick",
+        "xorn-huge"
       ],
       "description": "La chair coriace est striée de tentacules visqueux. Les couper libère un liquide épais et froid qui colle aux doigts et dégage une odeur minérale désagréable.",
       "check": {
@@ -1543,7 +1771,9 @@
       "en": "Grick Alpha",
       "level": 1,
       "type": "aberration",
-      "match": [],
+      "match": [
+        "drider"
+      ],
       "description": "La carcasse est massive et résistante. Les tentacules épais sont encore luisants d’un mucus froid ; les sectionner libère un fluide visqueux à l’odeur minérale. La peau dure et striée oppose une forte résistance, et le bec, solidement ancré dans le crâne, doit être extrait en forçant, au prix d’efforts peu ragoûtants.",
       "check": {
         "skill": "Arcanes",
@@ -1610,6 +1840,76 @@
           "name": "Objet magique",
           "en": "Magic Item",
           "p": 15,
+          "qty": "1",
+          "magic": "B"
+        }
+      ]
+    },
+    {
+      "id": "sea-hag",
+      "name": "Guenaude aquatique",
+      "en": "Sea Hag",
+      "level": 1,
+      "type": "celestial",
+      "match": [
+        "sea-hag"
+      ],
+      "description": "Les cheveux sont des algues et ils ne lâchent pas prise. La peau verte pèle en larges plaques et, dessous, ce n’est pas de la chair : c’est encore de la peau, et encore.",
+      "check": {
+        "skill": "Religion",
+        "dc": 13
+      },
+      "duration": "20 min",
+      "danger": "Son regard mortel n’était pas tout à fait dépensé. **2d10 dégâts** psychiques et le PJ est terrorisé 1 minute.",
+      "loot": [
+        {
+          "emoji": "🌿",
+          "name": "Chevelure d’algues",
+          "en": "Kelp Hair",
+          "p": 45,
+          "qty": "1d4",
+          "value": "15 po la mèche",
+          "use": "composante (corde)"
+        },
+        {
+          "emoji": "👁️",
+          "name": "Œil de guenaude",
+          "en": "Hag Eye",
+          "p": 25,
+          "qty": "1",
+          "value": "150 po",
+          "use": "composante (scrutation)"
+        },
+        {
+          "emoji": "🧪",
+          "name": "Fiel de guenaude",
+          "en": "Hag Bile",
+          "p": 35,
+          "qty": "1d2",
+          "value": "50 po la fiole",
+          "use": "composante (poison)"
+        },
+        {
+          "emoji": "🐚",
+          "name": "Coquillages enchâssés",
+          "en": "Set Shells",
+          "p": 40,
+          "qty": "1d6",
+          "value": "5 po chacun"
+        },
+        {
+          "emoji": "💰",
+          "name": "Pièces (du nid de pie)",
+          "en": "Coins (from the crow’s nest)",
+          "p": 35,
+          "qty": "3d10",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 10,
           "qty": "1",
           "magic": "B"
         }
@@ -1840,12 +2140,96 @@
       ]
     },
     {
+      "id": "hobgoblin",
+      "name": "Hobgobelin",
+      "en": "Hobgoblin",
+      "level": 1,
+      "type": "humanoid",
+      "match": [
+        "hobgoblin",
+        "hobgoblin-captain",
+        "hobgoblin-warlord"
+      ],
+      "description": "L’équipement est entretenu, ajusté, réparé proprement. On dépouille un soldat, pas une brute : chaque sangle est à sa place et chaque lame est affûtée.",
+      "check": {
+        "skill": "Survie",
+        "dc": 11
+      },
+      "duration": "10 min",
+      "danger": "Une lame parfaitement entretenue entaille profondément. **1d8 dégâts** tranchants.",
+      "loot": [
+        {
+          "emoji": "⚔️",
+          "name": "Épée longue",
+          "en": "Longsword",
+          "p": 40,
+          "qty": "1",
+          "value": "15 po",
+          "use": "arme"
+        },
+        {
+          "emoji": "🏹",
+          "name": "Arc long et flèches",
+          "en": "Longbow and Arrows",
+          "p": 30,
+          "qty": "1",
+          "value": "50 po",
+          "use": "arme"
+        },
+        {
+          "emoji": "🛡️",
+          "name": "Chemise de mailles et bouclier",
+          "en": "Chain Shirt and Shield",
+          "p": 35,
+          "qty": "1",
+          "value": "60 po",
+          "use": "équipement"
+        },
+        {
+          "emoji": "🎗️",
+          "name": "Insigne de la Légion",
+          "en": "Legion Badge",
+          "p": 45,
+          "qty": "1",
+          "value": "2 po",
+          "use": "une main ensanglantée dans un triangle rouge"
+        },
+        {
+          "emoji": "📄",
+          "name": "Papiers d’identification",
+          "en": "Identification Papers",
+          "p": 30,
+          "qty": "1",
+          "value": "à la discrétion du MJ",
+          "use": "ils ouvrent des portes à l’Emprise"
+        },
+        {
+          "emoji": "💰",
+          "name": "Solde",
+          "en": "Pay",
+          "p": 50,
+          "qty": "2d10",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 5,
+          "qty": "1",
+          "magic": "A"
+        }
+      ]
+    },
+    {
       "id": "shrieker",
       "name": "Hurleur",
       "en": "Shrieker",
       "level": 1,
       "type": "plant",
-      "match": [],
+      "match": [
+        "shrieker"
+      ],
       "description": "Le champignon vibre encore. Au moindre contact, il libère une odeur humide et une poussière fine qui colle au palais et fait pleurer les yeux.",
       "check": {
         "skill": "Survie",
@@ -1880,6 +2264,87 @@
           "qty": "1d4",
           "value": "1 po chacune",
           "use": "composante (corde)"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 5,
+          "qty": "1",
+          "magic": "A"
+        }
+      ]
+    },
+    {
+      "id": "kuo-toa",
+      "name": "Kuo-toa",
+      "en": "Kuo-toa",
+      "level": 1,
+      "type": "humanoid",
+      "match": [
+        "kuo-toa",
+        "kuo-toa-whip",
+        "kuo-toa-monitor"
+      ],
+      "description": "La peau glisse entre les doigts et sent la vase de fleuve. Sous les écailles, une couche de mucus se reforme à mesure qu’on l’essuie, et les grands yeux ronds ne se ferment pas.",
+      "check": {
+        "skill": "Survie",
+        "dc": 12
+      },
+      "duration": "15 min",
+      "danger": "Le mucus adhérent colle les outils aux mains. **1d6 dégâts** perforants en s’arrachant, et le PJ lâche ce qu’il tenait.",
+      "loot": [
+        {
+          "emoji": "🐟",
+          "name": "Mucus adhérent",
+          "en": "Adhesive Slime",
+          "p": 45,
+          "qty": "1d3",
+          "value": "20 po la fiole",
+          "use": "composante (colle)"
+        },
+        {
+          "emoji": "👁️",
+          "name": "Œil de kuo-toa",
+          "en": "Kuo-toa Eye",
+          "p": 35,
+          "qty": "1d2",
+          "value": "30 po chacun",
+          "use": "composante (voir l’invisible)"
+        },
+        {
+          "emoji": "🕸️",
+          "name": "Filet de pêche",
+          "en": "Fishing Net",
+          "p": 40,
+          "qty": "1",
+          "value": "1 po",
+          "use": "équipement"
+        },
+        {
+          "emoji": "🔱",
+          "name": "Lance à trois dents",
+          "en": "Three-Pronged Spear",
+          "p": 35,
+          "qty": "1",
+          "value": "5 po",
+          "use": "arme"
+        },
+        {
+          "emoji": "🐚",
+          "name": "Offrande de coquillages",
+          "en": "Shell Offering",
+          "p": 30,
+          "qty": "1d4",
+          "value": "3 po chacune"
+        },
+        {
+          "emoji": "💰",
+          "name": "Pièces (au fond du filet)",
+          "en": "Coins (in the net)",
+          "p": 35,
+          "qty": "2d10",
+          "coin": "po"
         },
         {
           "emoji": "✨",
@@ -2197,7 +2662,9 @@
       "en": "Manticore",
       "level": 1,
       "type": "monstrosity",
-      "match": [],
+      "match": [
+        "chimera"
+      ],
       "description": "La peau est épaisse et poisseuse de sang séché. Extraire les pointes de la queue demande de la force, chaque retrait s’accompagnant d’un bruit humide peu engageant.",
       "check": {
         "skill": "Survie",
@@ -2329,7 +2796,8 @@
       "level": 1,
       "type": "monstrosity",
       "match": [
-        "mimic"
+        "mimic",
+        "merrow"
       ],
       "description": "La « matière » colle aux lames et aux doigts. En décollant la peau caoutchouteuse, une glaire épaisse file en longs rubans, et l’odeur sucrée-rance devient vite insupportable.",
       "check": {
@@ -2399,7 +2867,9 @@
       "en": "Doppelganger",
       "level": 1,
       "type": "aberration",
-      "match": [],
+      "match": [
+        "broodmother"
+      ],
       "description": "La chair refuse toute stabilité. Sous les outils, elle se ramollit, se dédouble puis s’affaisse en une matière tiède et indécise, se décomposant à vue d’œil.",
       "check": {
         "skill": "Arcanes",
@@ -2583,6 +3053,68 @@
       ]
     },
     {
+      "id": "drowned",
+      "name": "Noyé",
+      "en": "Drowned One",
+      "level": 1,
+      "type": "undead",
+      "match": [
+        "drowned"
+      ],
+      "description": "L’eau sort du corps dès qu’on le retourne, et elle sort longtemps. La chair est gonflée, froide, et se détache par plaques. Ce qu’il tenait au moment de mourir, il le tient encore.",
+      "check": {
+        "skill": "Religion",
+        "dc": 12
+      },
+      "duration": "15 min",
+      "danger": "Les poumons se vident d’un coup dans la figure du PJ. **2d6 dégâts** nécrotiques et il ne peut pas parler jusqu’à la fin de son prochain tour.",
+      "loot": [
+        {
+          "emoji": "💧",
+          "name": "Eau des poumons",
+          "en": "Lung Water",
+          "p": 40,
+          "qty": "1d3",
+          "value": "20 po la fiole",
+          "use": "composante (nécromancie)"
+        },
+        {
+          "emoji": "🩸",
+          "name": "Chair gonflée",
+          "en": "Bloated Flesh",
+          "p": 30,
+          "qty": "1d4",
+          "value": "8 po chacune",
+          "use": "composante (organique)"
+        },
+        {
+          "emoji": "📦",
+          "name": "Ce qu’il tenait en mourant",
+          "en": "What It Died Holding",
+          "p": 45,
+          "qty": "1",
+          "value": "à la discrétion du MJ",
+          "use": "équipement"
+        },
+        {
+          "emoji": "💰",
+          "name": "Pièces (dans les poches)",
+          "en": "Coins (in the pockets)",
+          "p": 40,
+          "qty": "2d10",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 10,
+          "qty": "1",
+          "magic": "B"
+        }
+      ]
+    },
+    {
       "id": "swarm-of-spiders",
       "name": "Nuée d’araignées",
       "en": "Swarm of Spiders",
@@ -2642,7 +3174,10 @@
       "level": 1,
       "type": "undead",
       "match": [
-        "specter"
+        "specter",
+        "shadow",
+        "will-o-wisp",
+        "ghost"
       ],
       "description": "La forme se dissipe à peine touchée. Il ne reste qu’un froid intense et des traces d’ombre figées sur les surfaces proches.",
       "check": {
@@ -2728,6 +3263,76 @@
           "name": "Bourse (butin de ses victimes)",
           "en": "Coin Pouch (victims)",
           "p": 55,
+          "qty": "4d10",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 10,
+          "qty": "1",
+          "magic": "B"
+        }
+      ]
+    },
+    {
+      "id": "otyugh",
+      "name": "Otyugh",
+      "en": "Otyugh",
+      "level": 1,
+      "type": "aberration",
+      "match": [
+        "otyugh"
+      ],
+      "description": "On récolte dans le tas d’ordures, pas sur la bête — et le tas contient tout ce qu’elle a mangé depuis des années. C’est le travail le plus rentable et le plus infect de la strate.",
+      "check": {
+        "skill": "Survie",
+        "dc": 13
+      },
+      "duration": "30 min",
+      "danger": "La morsure d’un otyugh transmet une maladie même après sa mort. **2d8 dégâts** perforants et jet de sauvegarde de Constitution DD 15 ou le PJ perd 1d10 PV maximum par repos long jusqu’à guérison.",
+      "loot": [
+        {
+          "emoji": "🦑",
+          "name": "Tentacules d’otyugh",
+          "en": "Otyugh Tentacles",
+          "p": 45,
+          "qty": "1d2",
+          "value": "40 po chacun",
+          "use": "composante (fouet)"
+        },
+        {
+          "emoji": "🦷",
+          "name": "Dents de la panse",
+          "en": "Gullet Teeth",
+          "p": 40,
+          "qty": "1d6",
+          "value": "8 po chacune",
+          "use": "composante (arme)"
+        },
+        {
+          "emoji": "📦",
+          "name": "Ce que le tas a gardé",
+          "en": "What the Heap Kept",
+          "p": 55,
+          "qty": "1d4",
+          "value": "à la discrétion du MJ",
+          "use": "équipement"
+        },
+        {
+          "emoji": "💍",
+          "name": "Bijou digéré",
+          "en": "Digested Jewellery",
+          "p": 30,
+          "qty": "1d2",
+          "value": "35 po chacun"
+        },
+        {
+          "emoji": "💰",
+          "name": "Pièces (dans les ordures)",
+          "en": "Coins (in the refuse)",
+          "p": 50,
           "qty": "4d10",
           "coin": "po"
         },
@@ -3133,6 +3738,70 @@
       ]
     },
     {
+      "id": "quaggoth",
+      "name": "Quaggoth",
+      "en": "Quaggoth",
+      "level": 1,
+      "type": "humanoid",
+      "match": [
+        "quaggoth",
+        "quaggoth-thonot"
+      ],
+      "description": "La fourrure blanche est épaisse et poisseuse d’un sang qui n’est pas le sien. Il faut deux personnes pour retourner le corps, et il sent le fauve à trois mètres.",
+      "check": {
+        "skill": "Survie",
+        "dc": 13
+      },
+      "duration": "20 min",
+      "danger": "Un dernier spasme de furie referme les griffes. **2d8 dégâts** tranchants et la récolte est interrompue.",
+      "loot": [
+        {
+          "emoji": "🧶",
+          "name": "Fourrure blanche",
+          "en": "White Pelt",
+          "p": 40,
+          "qty": "1",
+          "value": "35 po",
+          "use": "composante (cape)"
+        },
+        {
+          "emoji": "🦴",
+          "name": "Griffes de quaggoth",
+          "en": "Quaggoth Claws",
+          "p": 45,
+          "qty": "1d4",
+          "value": "10 po chacune",
+          "use": "composante (arme)"
+        },
+        {
+          "emoji": "💎",
+          "name": "Cristal psionique",
+          "en": "Psionic Crystal",
+          "p": 15,
+          "qty": "1",
+          "value": "80 po",
+          "use": "seulement sur un thonot"
+        },
+        {
+          "emoji": "🍖",
+          "name": "Viande",
+          "en": "Meat",
+          "p": 40,
+          "qty": "2d6",
+          "value": "valeur négligeable",
+          "use": "consommable"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 5,
+          "qty": "1",
+          "magic": "A"
+        }
+      ]
+    },
+    {
       "id": "quasit",
       "name": "Quasit",
       "en": "Quasit",
@@ -3377,7 +4046,9 @@
       "en": "Revenant",
       "level": 1,
       "type": "undead",
-      "match": [],
+      "match": [
+        "minotaur-skeleton"
+      ],
       "description": "Le corps est dense, chargé d’une haine persistante. La chair est dure, presque rigide, et se détache difficilement des os.",
       "check": {
         "skill": "Religion",
@@ -3597,7 +4268,9 @@
       "en": "Stirge",
       "level": 1,
       "type": "beast",
-      "match": [],
+      "match": [
+        "giant-crab"
+      ],
       "description": "Le corps éclate presque sous la pression. Du sang coagulé s’écoule du thorax gonflé, attirant immédiatement les insectes.",
       "check": {
         "skill": "Survie",
@@ -3704,7 +4377,8 @@
       "match": [
         "half-troll",
         "cave-troll",
-        "gaunt-troll"
+        "gaunt-troll",
+        "scrag"
       ],
       "description": "Même mort, la chair semble « vivre ». En la tranchant, ça saigne chaud et abondant, et certains morceaux se contractent encore avant de se relâcher, luisants et écœurants.",
       "check": {
@@ -3845,7 +4519,9 @@
       "en": "Grey Ooze",
       "level": 1,
       "type": "ooze",
-      "match": [],
+      "match": [
+        "water-weird"
+      ],
       "description": "La masse visqueuse se contracte encore. Des bulles acides éclatent tandis que la matière gluante brûle lentement les outils et la peau.",
       "check": {
         "skill": "Arcanes",
@@ -3885,6 +4561,60 @@
           "p": 5,
           "qty": "1",
           "magic": "A"
+        }
+      ]
+    },
+    {
+      "id": "yochlol",
+      "name": "Yochlol",
+      "en": "Yochlol",
+      "level": 1,
+      "type": "fiend",
+      "match": [
+        "yochlol"
+      ],
+      "description": "Il n’y a pas de corps à fouiller. Il reste une flaque visqueuse qui refuse de sécher, un œil rouge encore intact au milieu, et une odeur de toile brûlée.",
+      "check": {
+        "skill": "Religion",
+        "dc": 16
+      },
+      "duration": "10 min",
+      "danger": "L’œil vous regarde au moment où vous le ramassez. **3d10 dégâts** psychiques et jet de sauvegarde de Sagesse DD 15 ou le PJ obéit au prochain ordre qu’on lui donne.",
+      "loot": [
+        {
+          "emoji": "👁️",
+          "name": "Œil de yochlol",
+          "en": "Yochlol Eye",
+          "p": 30,
+          "qty": "1",
+          "value": "300 po",
+          "use": "composante (domination)"
+        },
+        {
+          "emoji": "🧪",
+          "name": "Substance de servante",
+          "en": "Handmaid Ichor",
+          "p": 40,
+          "qty": "1d2",
+          "value": "120 po la fiole",
+          "use": "composante (potion)"
+        },
+        {
+          "emoji": "🕸️",
+          "name": "Toile abyssale",
+          "en": "Abyssal Web",
+          "p": 35,
+          "qty": "1d3",
+          "value": "60 po chacune",
+          "use": "composante (cape)"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 15,
+          "qty": "1",
+          "magic": "C"
         }
       ]
     },
@@ -4036,7 +4766,8 @@
       "level": 1,
       "type": "elemental",
       "match": [
-        "lightning-elemental"
+        "lightning-elemental",
+        "water-elemental"
       ],
       "description": "Le tourbillon se défait en souffles glacés. On tente de « capturer » l’air chargé d’énergie dans des contenants improvisés, tandis que la statique hérisse les poils et pique la peau.",
       "check": {

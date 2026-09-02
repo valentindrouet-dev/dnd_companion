@@ -356,6 +356,438 @@
           87.59
         ]
       }
+    },
+    "strate-3": {
+      "complete": "assets/maps/strate-3/complete.jpg",
+      "rooms": {
+        "3": "assets/maps/strate-3/3.jpg",
+        "2": "assets/maps/strate-3/2.jpg",
+        "1": "assets/maps/strate-3/1.jpg",
+        "4": "assets/maps/strate-3/4.jpg",
+        "4a": "assets/maps/strate-3/4a.jpg",
+        "4c": "assets/maps/strate-3/4c.jpg",
+        "4b": "assets/maps/strate-3/4b.jpg",
+        "5a": "assets/maps/strate-3/5a.jpg",
+        "5b": "assets/maps/strate-3/5b.jpg",
+        "5d": "assets/maps/strate-3/5d.jpg",
+        "5c": "assets/maps/strate-3/5c.jpg",
+        "6": "assets/maps/strate-3/6.jpg",
+        "7a": "assets/maps/strate-3/7a.jpg",
+        "7b": "assets/maps/strate-3/7b.jpg",
+        "7c": "assets/maps/strate-3/7c.jpg",
+        "7d": "assets/maps/strate-3/7d.jpg",
+        "7e": "assets/maps/strate-3/7e.jpg",
+        "8a": "assets/maps/strate-3/8a.jpg",
+        "8b": "assets/maps/strate-3/8b.jpg",
+        "8c": "assets/maps/strate-3/8c.jpg",
+        "9a": "assets/maps/strate-3/9a.jpg",
+        "9b": "assets/maps/strate-3/9b.jpg",
+        "10a": "assets/maps/strate-3/10a.jpg",
+        "10b": "assets/maps/strate-3/10b.jpg",
+        "10c": "assets/maps/strate-3/10c.jpg",
+        "10d": "assets/maps/strate-3/10d.jpg",
+        "10e": "assets/maps/strate-3/10e.jpg",
+        "10f": "assets/maps/strate-3/10f.jpg",
+        "10g": "assets/maps/strate-3/10g.jpg",
+        "10h": "assets/maps/strate-3/10h.jpg",
+        "11a": "assets/maps/strate-3/11a.jpg",
+        "11b": "assets/maps/strate-3/11b.jpg",
+        "12": "assets/maps/strate-3/12.jpg",
+        "13a": "assets/maps/strate-3/13a.jpg",
+        "13b": "assets/maps/strate-3/13b.jpg",
+        "14a": "assets/maps/strate-3/14a.jpg",
+        "14b": "assets/maps/strate-3/14b.jpg",
+        "14c": "assets/maps/strate-3/14c.jpg",
+        "15a": "assets/maps/strate-3/15a.jpg",
+        "15b": "assets/maps/strate-3/15b.jpg",
+        "16a": "assets/maps/strate-3/16a.jpg",
+        "16b": "assets/maps/strate-3/16b.jpg",
+        "17a": "assets/maps/strate-3/17a.jpg",
+        "17b": "assets/maps/strate-3/17b.jpg",
+        "17c": "assets/maps/strate-3/17c.jpg",
+        "17d": "assets/maps/strate-3/17d.jpg",
+        "17e": "assets/maps/strate-3/17e.jpg",
+        "18": "assets/maps/strate-3/18.jpg",
+        "19": "assets/maps/strate-3/19.jpg",
+        "20": "assets/maps/strate-3/20.jpg",
+        "20a": "assets/maps/strate-3/20a.jpg",
+        "20b": "assets/maps/strate-3/20b.jpg",
+        "20c": "assets/maps/strate-3/20c.jpg",
+        "20d": "assets/maps/strate-3/20d.jpg",
+        "20e": "assets/maps/strate-3/20e.jpg",
+        "20f": "assets/maps/strate-3/20f.jpg",
+        "20g": "assets/maps/strate-3/20g.jpg",
+        "20h": "assets/maps/strate-3/20h.jpg",
+        "20i": "assets/maps/strate-3/20i.jpg",
+        "20j": "assets/maps/strate-3/20j.jpg",
+        "20k": "assets/maps/strate-3/20k.jpg",
+        "21": "assets/maps/strate-3/21.jpg",
+        "21a": "assets/maps/strate-3/21a.jpg",
+        "21b": "assets/maps/strate-3/21b.jpg",
+        "21c": "assets/maps/strate-3/21c.jpg",
+        "21d": "assets/maps/strate-3/21d.jpg",
+        "21e": "assets/maps/strate-3/21e.jpg",
+        "21f": "assets/maps/strate-3/21f.jpg",
+        "21g": "assets/maps/strate-3/21g.jpg",
+        "21h": "assets/maps/strate-3/21h.jpg",
+        "21i": "assets/maps/strate-3/21i.jpg",
+        "21j": "assets/maps/strate-3/21j.jpg",
+        "21k": "assets/maps/strate-3/21k.jpg",
+        "21l": "assets/maps/strate-3/21l.jpg",
+        "21m": "assets/maps/strate-3/21m.jpg",
+        "21n": "assets/maps/strate-3/21n.jpg",
+        "21o": "assets/maps/strate-3/21o.jpg",
+        "21p": "assets/maps/strate-3/21p.jpg",
+        "21q": "assets/maps/strate-3/21q.jpg",
+        "21r": "assets/maps/strate-3/21r.jpg",
+        "21s": "assets/maps/strate-3/21s.jpg",
+        "21t": "assets/maps/strate-3/21t.jpg",
+        "22": "assets/maps/strate-3/22.jpg",
+        "23a": "assets/maps/strate-3/23a.jpg",
+        "23b": "assets/maps/strate-3/23b.jpg"
+      },
+      "spots": {
+        "3": [
+          43.8,
+          15.27
+        ],
+        "2": [
+          56.39,
+          10.92
+        ],
+        "1": [
+          55.29,
+          18.21
+        ],
+        "4": [
+          73.72,
+          17.09
+        ],
+        "4a": [
+          69.34,
+          12.46
+        ],
+        "4c": [
+          73.72,
+          15.41
+        ],
+        "4b": [
+          79.01,
+          20.73
+        ],
+        "5a": [
+          63.32,
+          20.87
+        ],
+        "5b": [
+          61.13,
+          22.13
+        ],
+        "5d": [
+          62.77,
+          23.81
+        ],
+        "5c": [
+          62.77,
+          25.91
+        ],
+        "6": [
+          56.75,
+          22.27
+        ],
+        "7a": [
+          63.32,
+          30.95
+        ],
+        "7b": [
+          57.85,
+          30.95
+        ],
+        "7c": [
+          60.58,
+          32.49
+        ],
+        "7d": [
+          57.85,
+          33.05
+        ],
+        "7e": [
+          63.32,
+          33.05
+        ],
+        "8a": [
+          70.44,
+          35.85
+        ],
+        "8b": [
+          75.55,
+          30.39
+        ],
+        "8c": [
+          72.63,
+          47.62
+        ],
+        "9a": [
+          89.23,
+          28.43
+        ],
+        "9b": [
+          91.61,
+          14.15
+        ],
+        "10a": [
+          73.36,
+          57.28
+        ],
+        "10b": [
+          79.2,
+          61.34
+        ],
+        "10c": [
+          67.15,
+          61.34
+        ],
+        "10d": [
+          72.26,
+          67.51
+        ],
+        "10e": [
+          78.83,
+          67.51
+        ],
+        "10f": [
+          71.35,
+          71.71
+        ],
+        "10g": [
+          86.13,
+          57.7
+        ],
+        "10h": [
+          88.14,
+          49.44
+        ],
+        "11a": [
+          50.73,
+          82.77
+        ],
+        "11b": [
+          53.28,
+          87.11
+        ],
+        "12": [
+          40.88,
+          94.68
+        ],
+        "13a": [
+          49.09,
+          64.43
+        ],
+        "13b": [
+          43.07,
+          77.59
+        ],
+        "14a": [
+          37.77,
+          78.01
+        ],
+        "14b": [
+          35.95,
+          66.95
+        ],
+        "14c": [
+          37.59,
+          72.13
+        ],
+        "15a": [
+          32.48,
+          84.31
+        ],
+        "15b": [
+          33.39,
+          89.5
+        ],
+        "16a": [
+          23.36,
+          85.15
+        ],
+        "16b": [
+          19.71,
+          90.2
+        ],
+        "17a": [
+          18.98,
+          76.19
+        ],
+        "17b": [
+          16.24,
+          69.75
+        ],
+        "17c": [
+          18.25,
+          62.75
+        ],
+        "17d": [
+          20.44,
+          67.79
+        ],
+        "17e": [
+          17.88,
+          54.9
+        ],
+        "18": [
+          48.18,
+          31.93
+        ],
+        "19": [
+          57.66,
+          39.22
+        ],
+        "20": [
+          58.03,
+          50.7
+        ],
+        "20a": [
+          54.01,
+          47.62
+        ],
+        "20b": [
+          59.12,
+          44.68
+        ],
+        "20c": [
+          58.03,
+          50.56
+        ],
+        "20d": [
+          60.58,
+          47.9
+        ],
+        "20e": [
+          64.6,
+          51.4
+        ],
+        "20f": [
+          57.66,
+          54.06
+        ],
+        "20g": [
+          51.82,
+          57.0
+        ],
+        "20h": [
+          51.46,
+          51.4
+        ],
+        "20i": [
+          52.55,
+          53.5
+        ],
+        "20j": [
+          45.44,
+          47.62
+        ],
+        "20k": [
+          45.26,
+          52.38
+        ],
+        "21": [
+          21.53,
+          39.5
+        ],
+        "21a": [
+          32.12,
+          58.82
+        ],
+        "21b": [
+          28.28,
+          39.22
+        ],
+        "21c": [
+          16.79,
+          45.94
+        ],
+        "21d": [
+          13.14,
+          42.86
+        ],
+        "21e": [
+          16.06,
+          37.96
+        ],
+        "21f": [
+          16.97,
+          35.01
+        ],
+        "21g": [
+          19.34,
+          30.25
+        ],
+        "21h": [
+          10.58,
+          32.63
+        ],
+        "21i": [
+          12.77,
+          26.89
+        ],
+        "21j": [
+          21.17,
+          27.03
+        ],
+        "21k": [
+          14.23,
+          24.09
+        ],
+        "21l": [
+          13.5,
+          21.29
+        ],
+        "21m": [
+          33.21,
+          28.01
+        ],
+        "21n": [
+          21.35,
+          22.13
+        ],
+        "21o": [
+          25.55,
+          21.29
+        ],
+        "21p": [
+          21.53,
+          18.91
+        ],
+        "21q": [
+          26.28,
+          17.23
+        ],
+        "21r": [
+          17.15,
+          16.25
+        ],
+        "21s": [
+          17.88,
+          12.75
+        ],
+        "21t": [
+          12.59,
+          15.27
+        ],
+        "22": [
+          5.47,
+          11.48
+        ],
+        "23a": [
+          4.01,
+          26.89
+        ],
+        "23b": [
+          6.93,
+          35.85
+        ]
+      }
     }
   },
   "files": [
@@ -429,6 +861,92 @@
     "assets/maps/strate-2/9b.jpg",
     "assets/maps/strate-2/9c.jpg",
     "assets/maps/strate-2/9d.jpg",
-    "assets/maps/strate-2/complete.jpg"
+    "assets/maps/strate-2/complete.jpg",
+    "assets/maps/strate-3/1.jpg",
+    "assets/maps/strate-3/10a.jpg",
+    "assets/maps/strate-3/10b.jpg",
+    "assets/maps/strate-3/10c.jpg",
+    "assets/maps/strate-3/10d.jpg",
+    "assets/maps/strate-3/10e.jpg",
+    "assets/maps/strate-3/10f.jpg",
+    "assets/maps/strate-3/10g.jpg",
+    "assets/maps/strate-3/10h.jpg",
+    "assets/maps/strate-3/11a.jpg",
+    "assets/maps/strate-3/11b.jpg",
+    "assets/maps/strate-3/12.jpg",
+    "assets/maps/strate-3/13a.jpg",
+    "assets/maps/strate-3/13b.jpg",
+    "assets/maps/strate-3/14a.jpg",
+    "assets/maps/strate-3/14b.jpg",
+    "assets/maps/strate-3/14c.jpg",
+    "assets/maps/strate-3/15a.jpg",
+    "assets/maps/strate-3/15b.jpg",
+    "assets/maps/strate-3/16a.jpg",
+    "assets/maps/strate-3/16b.jpg",
+    "assets/maps/strate-3/17a.jpg",
+    "assets/maps/strate-3/17b.jpg",
+    "assets/maps/strate-3/17c.jpg",
+    "assets/maps/strate-3/17d.jpg",
+    "assets/maps/strate-3/17e.jpg",
+    "assets/maps/strate-3/18.jpg",
+    "assets/maps/strate-3/19.jpg",
+    "assets/maps/strate-3/2.jpg",
+    "assets/maps/strate-3/20.jpg",
+    "assets/maps/strate-3/20a.jpg",
+    "assets/maps/strate-3/20b.jpg",
+    "assets/maps/strate-3/20c.jpg",
+    "assets/maps/strate-3/20d.jpg",
+    "assets/maps/strate-3/20e.jpg",
+    "assets/maps/strate-3/20f.jpg",
+    "assets/maps/strate-3/20g.jpg",
+    "assets/maps/strate-3/20h.jpg",
+    "assets/maps/strate-3/20i.jpg",
+    "assets/maps/strate-3/20j.jpg",
+    "assets/maps/strate-3/20k.jpg",
+    "assets/maps/strate-3/21.jpg",
+    "assets/maps/strate-3/21a.jpg",
+    "assets/maps/strate-3/21b.jpg",
+    "assets/maps/strate-3/21c.jpg",
+    "assets/maps/strate-3/21d.jpg",
+    "assets/maps/strate-3/21e.jpg",
+    "assets/maps/strate-3/21f.jpg",
+    "assets/maps/strate-3/21g.jpg",
+    "assets/maps/strate-3/21h.jpg",
+    "assets/maps/strate-3/21i.jpg",
+    "assets/maps/strate-3/21j.jpg",
+    "assets/maps/strate-3/21k.jpg",
+    "assets/maps/strate-3/21l.jpg",
+    "assets/maps/strate-3/21m.jpg",
+    "assets/maps/strate-3/21n.jpg",
+    "assets/maps/strate-3/21o.jpg",
+    "assets/maps/strate-3/21p.jpg",
+    "assets/maps/strate-3/21q.jpg",
+    "assets/maps/strate-3/21r.jpg",
+    "assets/maps/strate-3/21s.jpg",
+    "assets/maps/strate-3/21t.jpg",
+    "assets/maps/strate-3/22.jpg",
+    "assets/maps/strate-3/23a.jpg",
+    "assets/maps/strate-3/23b.jpg",
+    "assets/maps/strate-3/3.jpg",
+    "assets/maps/strate-3/4.jpg",
+    "assets/maps/strate-3/4a.jpg",
+    "assets/maps/strate-3/4b.jpg",
+    "assets/maps/strate-3/4c.jpg",
+    "assets/maps/strate-3/5a.jpg",
+    "assets/maps/strate-3/5b.jpg",
+    "assets/maps/strate-3/5c.jpg",
+    "assets/maps/strate-3/5d.jpg",
+    "assets/maps/strate-3/6.jpg",
+    "assets/maps/strate-3/7a.jpg",
+    "assets/maps/strate-3/7b.jpg",
+    "assets/maps/strate-3/7c.jpg",
+    "assets/maps/strate-3/7d.jpg",
+    "assets/maps/strate-3/7e.jpg",
+    "assets/maps/strate-3/8a.jpg",
+    "assets/maps/strate-3/8b.jpg",
+    "assets/maps/strate-3/8c.jpg",
+    "assets/maps/strate-3/9a.jpg",
+    "assets/maps/strate-3/9b.jpg",
+    "assets/maps/strate-3/complete.jpg"
   ]
 }

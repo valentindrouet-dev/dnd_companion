@@ -36,8 +36,8 @@
     ],
     "what": "Les nains d’écu qui ont creusé ces salles bien avant Halaster : maçonnerie de granit ajusté, brasserie, mine de mithral et de cuivre.",
     "goal": "Exploiter le mithral de la montagne. Ils ont été chassés il y a des siècles.",
-    "state": "Disparus. Restent leurs fresques ([[r:8|8]]), leur brasserie ([[r:22c|22]]), leur temple ([[r:23b|23]]) et leur bière, toujours buvable.",
-    "where": "[[r:22e|22e]], [[r:22f|22f]], [[r:23a|23a]], [[r:13a|13a]]"
+    "state": "Disparus. Restent leurs fresques ([[r:8|8]]), leur brasserie ([[r:22c|22]]), leur temple ([[r:23b|23]]) et leur bière, toujours buvable.\n\n**Strate 3 :** Stromkuhldur était l’une de leurs villes. Il reste leurs catacombes ([[r:1|1]]), leur hall de taille ([[r:14c|14c]]), leur salle à manger intacte ([[r:20h|20h]]) et leurs portes de pierre, qui n’obéissent qu’aux nains.",
+    "where": "[[r:22e|22e]], [[r:22f|22f]], [[r:23a|23a]], [[r:13a|13a]] Strate 3 : [[r:1|1]], [[r:14a|14]], [[r:20h|20h]], [[r:21s|21s]]."
   },
   {
     "id": "xanathar",
@@ -76,8 +76,8 @@
     ],
     "what": "Clan drow de Menzoberranzan qui consolide en secret son pouvoir dans les profondeurs d’Undermountain.",
     "goal": "Prendre le contrôle des strates inférieures sans se montrer.",
-    "state": "Rizzeryl travaille pour elle en plus du Zhentarim — il ne l’avouera jamais.",
-    "where": "Mentionnée seulement ; ses forces sont plus bas."
+    "state": "Rizzeryl travaille pour elle en plus du Zhentarim — il ne l’avouera jamais.\n\n**Strate 3 :** **T’rissa** tient la strate depuis le temple profané ([[r:6|6]]) et la ville des drows ([[r:20|20]]). Sa sœur **Melith** ouvre un front dans les cavernes Biscornues (strate 4), et leur mère **Vlonwelv** commande depuis le Défi de Muiral (strate 10).",
+    "where": "Mentionnée seulement ; ses forces sont plus bas. Strate 3 : [[r:5a|5]] à [[r:7e|7]], [[r:16a|16]], [[r:20|20]]."
   },
   {
     "id": "skullport",
@@ -89,8 +89,8 @@
     ],
     "what": "Le port souterrain de la strate 3 : marché d’esclaves, contrebande, et fief de la Guilde de Xanathar.",
     "goal": "—",
-    "state": "Shunn y envoie ses prisonniers, remis au commandant Sundeth sur l’île du Crâne.",
-    "where": "Strate 3, par l’escalier au bout du couloir [[r:21|21]]."
+    "state": "Shunn y envoie ses prisonniers, remis au commandant Sundeth sur l’île du Crâne.\n\n**Strate 3 :** on y descend en suivant la Sargauth vers l’aval. Xanathar y règne, les drows l’ont infiltrée et la savent mal gardée. On y trouve la **Chope Noire**, taverne du duergar Droune Sombrepierre, où les voleurs de la dague ont bu avant de descendre.",
+    "where": "Strate 3, par l’escalier au bout du couloir [[r:21|21]]. Strate 3 : en aval de la Sargauth, au sud-ouest."
   },
   {
     "id": "fiers-compagnons",
@@ -341,8 +341,8 @@
     ],
     "what": "La Reine araignée, déesse des drows, patronne des trahisons et des toiles.",
     "goal": "—",
-    "state": "Une de ses prêtresses a maudit Shunn et l’a exilé, lui donnant huit yeux « pour mieux la regarder ».",
-    "where": "Mentionnée en [[r:9b|9b]]."
+    "state": "Une de ses prêtresses a maudit Shunn et l’a exilé, lui donnant huit yeux « pour mieux la regarder ».\n\n**Strate 3 :** l’**Épreuve de Lolth** se pratique dans le cercle abyssal de [[r:7c|7c]]. Qui échoue revient **drider** et est banni dans les tunnels des lamentations ([[r:8a|8]]) sous peine de mort.",
+    "where": "Mentionnée en [[r:9b|9b]]. Strate 3 : [[r:6|6]], [[r:7c|7c]], [[r:8b|8b]]."
   },
   {
     "id": "juiblex",
@@ -365,8 +365,8 @@
     ],
     "what": "Le Gardien des secrets sous la Montagne, dieu nain des richesses enfouies.",
     "goal": "—",
-    "state": "Son autel en [[r:13a|13a]] est profané par des mains crasseuses. Le nettoyer révèle **toutes les portes secrètes pendant 24 h**.",
-    "where": "[[r:13a|13a]], et son temple en ruine en [[r:23b|23b]]."
+    "state": "Son autel en [[r:13a|13a]] est profané par des mains crasseuses. Le nettoyer révèle **toutes les portes secrètes pendant 24 h**.\n\n**Strate 3 :** son temple ([[r:6|6]]) a été transformé en couveuse à araignées par T’rissa Auvryndar. Ses catacombes ([[r:1|1]]) sont intactes, et le relief de bronze de [[r:5b|5b]] porte son symbole, la gemme en moins.",
+    "where": "[[r:13a|13a]], et son temple en ruine en [[r:23b|23b]]. Strate 3 : [[r:1|1]], [[r:5b|5b]], [[r:6|6]]."
   },
   {
     "id": "shar",

@@ -6,7 +6,7 @@
 // pour la mettre à jour partout à la fois ; `npm run validate` vérifie la cohérence.
 // La liste SHELL est également vérifiée (tous les fichiers de src/ doivent y figurer).
 
-const APP_VERSION = '0.12.0';
+const APP_VERSION = '0.13.0';
 const CACHE = 'dnd-companion-' + APP_VERSION;
 
 const SHELL = [
@@ -63,7 +63,10 @@ const SHELL = [
   './src/encounters/ui.js',
   './data/maps.json',
   './data/monsters/enhanced.json',
+  './data/monsters/sargauth.json',
+  './data/monsters/sargauth-enhanced.json',
   './data/glossary/undermountain.json',
+  './data/glossary/sargauth.json',
   './data/loot/creatures.json',
   './data/loot/magic-items.json',
 ];

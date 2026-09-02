@@ -1,0 +1,1202 @@
+[
+  {
+    "id": "drow",
+    "name": "Drow",
+    "nameEn": "Drow",
+    "source": "MM 2024 ; reconstitué de mémoire, à vérifier",
+    "size": "M",
+    "type": "Humanoïde (elfe)",
+    "alignment": "Neutre mauvais",
+    "cr": "1/4",
+    "xp": 50,
+    "pb": 2,
+    "ac": 15,
+    "hp": 13,
+    "speed": "9 m",
+    "abilities": {
+      "str": 10,
+      "dex": 14,
+      "con": 10,
+      "int": 11,
+      "wis": 11,
+      "cha": 12
+    },
+    "acNote": "chemise de mailles",
+    "skills": "Perception +2, Discrétion +4",
+    "senses": "vision dans le noir 36 m ; Perception passive 12",
+    "languages": "elfique, commun des profondeurs",
+    "traits": [
+      {
+        "name": "Sensibilité au soleil",
+        "text": "Désavantage aux attaques et à la Perception à la lumière du soleil."
+      },
+      {
+        "name": "Magie drow",
+        "text": "À volonté : *lumières dansantes*. 1/jour : *ténèbres*, *lueurs féeriques*."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Épée courte",
+        "text": "Jet d’attaque au corps à corps : +4, allonge 1,50 m. Touché : 5 (1d6 + 2) dégâts perforants."
+      },
+      {
+        "name": "Arbalète de poing",
+        "text": "Jet d’attaque à distance : +4, portée 9/36 m. Touché : 5 (1d6 + 2) dégâts perforants, et jet de sauvegarde de Constitution DD 13 ou empoisonné 1 heure — et inconscient si le jet échoue de 5 ou plus."
+      }
+    ],
+    "summary": {
+      "style": "Tire au carreau empoisonné depuis le noir, puis charge à l’épée courte.",
+      "intent": "Tenir la position et donner l’alerte.",
+      "tactics": "Ténèbres sur le groupe, puis tir : les drows voient dedans, pas les autres. Vise les lanceurs de sorts.",
+      "flee": "Recule vers la zone 20 pour ameuter la garnison plutôt que de mourir seul.",
+      "weakness": "13 PV. La lumière du soleil ou une lumière du jour magique le paralyse tactiquement."
+    }
+  },
+  {
+    "id": "quaggoth",
+    "name": "Quaggoth",
+    "nameEn": "Quaggoth",
+    "source": "MM 2024 ; reconstitué de mémoire, à vérifier",
+    "size": "M",
+    "type": "Humanoïde (quaggoth)",
+    "alignment": "Chaotique neutre",
+    "cr": "2",
+    "xp": 450,
+    "pb": 2,
+    "ac": 13,
+    "hp": 45,
+    "speed": "9 m, escalade 9 m",
+    "abilities": {
+      "str": 17,
+      "dex": 12,
+      "con": 16,
+      "int": 6,
+      "wis": 12,
+      "cha": 7
+    },
+    "acNote": "armure naturelle",
+    "skills": "Athlétisme +5",
+    "resistances": "poison",
+    "immunities": "empoisonné",
+    "senses": "vision dans le noir 36 m ; Perception passive 11",
+    "languages": "commun des profondeurs",
+    "traits": [
+      {
+        "name": "Furie du désespoir",
+        "text": "Sous la moitié de ses PV, il a l’avantage à ses jets d’attaque."
+      },
+      {
+        "name": "Escalade sans effort",
+        "text": "Grimpe les parois sans test."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Griffes (×2)",
+        "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 7 (1d6 + 3) dégâts tranchants."
+      }
+    ],
+    "summary": {
+      "style": "Une brute blanche et velue qui grimpe aux murs et frappe à deux griffes.",
+      "intent": "Obéir aux drows : donner l’alerte, puis tuer.",
+      "tactics": "Grimpe hors de portée, saute sur les arrières. Enragé sous 22 PV.",
+      "flee": "Jamais : la furie du désespoir le rend plus dangereux à mesure qu’il meurt.",
+      "weakness": "Bête et lent d’esprit (INT 6) : facile à leurrer ou à isoler."
+    }
+  },
+  {
+    "id": "quaggoth-thonot",
+    "name": "Quaggoth thonot",
+    "nameEn": "Quaggoth Thonot",
+    "source": "MM 2024 ; reconstitué de mémoire, à vérifier",
+    "size": "M",
+    "type": "Humanoïde (quaggoth)",
+    "alignment": "Chaotique neutre",
+    "cr": "3",
+    "xp": 700,
+    "pb": 2,
+    "ac": 13,
+    "hp": 45,
+    "speed": "9 m, escalade 9 m",
+    "abilities": {
+      "str": 17,
+      "dex": 12,
+      "con": 16,
+      "int": 6,
+      "wis": 12,
+      "cha": 7
+    },
+    "acNote": "armure naturelle",
+    "skills": "Athlétisme +5",
+    "resistances": "poison",
+    "immunities": "empoisonné",
+    "senses": "vision dans le noir 36 m ; Perception passive 11",
+    "languages": "commun des profondeurs",
+    "traits": [
+      {
+        "name": "Furie du désespoir",
+        "text": "Sous la moitié de ses PV, il a l’avantage à ses jets d’attaque."
+      },
+      {
+        "name": "Psionique brut",
+        "text": "À volonté : *rayon empoisonné*, *projectile magique*. 1/jour chacun : *soins*, *bouclier de la foi*."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Griffes (×2)",
+        "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 7 (1d6 + 3) dégâts tranchants."
+      }
+    ],
+    "summary": {
+      "style": "Le chaman de la meute : griffes et éclairs psioniques.",
+      "intent": "Protéger les siens, soigner, punir.",
+      "tactics": "Projectile magique sur les cibles blessées, soins sur le quaggoth le plus proche.",
+      "weakness": "Aucune protection à distance : il tombe vite si on le prend pour cible en premier."
+    }
+  },
+  {
+    "id": "phase-spider",
+    "name": "Araignée de phase",
+    "nameEn": "Phase Spider",
+    "source": "MM 2024 ; reconstitué de mémoire, à vérifier",
+    "size": "G",
+    "type": "Monstruosité",
+    "alignment": "Non alignée",
+    "cr": "3",
+    "xp": 700,
+    "pb": 2,
+    "ac": 13,
+    "hp": 32,
+    "speed": "9 m, escalade 9 m",
+    "abilities": {
+      "str": 15,
+      "dex": 15,
+      "con": 12,
+      "int": 6,
+      "wis": 10,
+      "cha": 6
+    },
+    "skills": "Discrétion +6",
+    "senses": "vision dans le noir 18 m ; Perception passive 10",
+    "languages": "—",
+    "traits": [
+      {
+        "name": "Déplacement éthéré",
+        "text": "Elle passe du plan Matériel au plan Éthéré et retour par une action bonus : hors de portée, invisible, intouchable."
+      },
+      {
+        "name": "Araignée",
+        "text": "Grimpe et se déplace sur les toiles sans test ni entrave."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Morsure",
+        "text": "Jet d’attaque au corps à corps : +4, allonge 1,50 m. Touché : 7 (1d10 + 2) dégâts perforants, et jet de sauvegarde de Constitution DD 11 ou 18 (4d8) dégâts de poison, moitié en cas de réussite. Un mort réduit à 0 PV se transforme en araignée de phase."
+      }
+    ],
+    "summary": {
+      "style": "Apparaît, mord, disparaît dans l’Éthéré avant qu’on ait pu riposter.",
+      "intent": "Manger. Les drows la nourrissent, elle ne les attaque pas.",
+      "tactics": "Phase, se place derrière la ligne, mord un lanceur de sorts, re-phase. Ne reste jamais deux tours au même endroit.",
+      "weakness": "32 PV seulement. Un *cercle magique*, une *forme éthérée* ou un guetteur qui prépare son action l’attrapent au moment où elle réapparaît."
+    }
+  },
+  {
+    "id": "drider",
+    "name": "Drider",
+    "nameEn": "Drider",
+    "source": "MM 2024 ; reconstitué de mémoire, à vérifier",
+    "size": "G",
+    "type": "Monstruosité",
+    "alignment": "Chaotique mauvais",
+    "cr": "6",
+    "xp": 2300,
+    "pb": 3,
+    "ac": 19,
+    "hp": 123,
+    "speed": "9 m, escalade 9 m",
+    "abilities": {
+      "str": 16,
+      "dex": 16,
+      "con": 18,
+      "int": 13,
+      "wis": 16,
+      "cha": 12
+    },
+    "acNote": "armure naturelle",
+    "skills": "Perception +6, Discrétion +9",
+    "senses": "vision dans le noir 36 m ; Perception passive 16",
+    "languages": "elfique, commun des profondeurs",
+    "traits": [
+      {
+        "name": "Sensibilité au soleil",
+        "text": "Désavantage aux attaques et à la Perception à la lumière du soleil."
+      },
+      {
+        "name": "Magie innée",
+        "text": "À volonté : *lumières dansantes*. 1/jour : *ténèbres*, *lueurs féeriques*."
+      },
+      {
+        "name": "Araignée",
+        "text": "Grimpe les surfaces, plafonds compris, sans test."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Morsure",
+        "text": "Jet d’attaque au corps à corps : +6, allonge 1,50 m. Touché : 2 (1d4) dégâts perforants et 9 (2d8) dégâts de poison."
+      },
+      {
+        "name": "Épée longue (×2)",
+        "text": "Jet d’attaque au corps à corps : +6, allonge 1,50 m. Touché : 7 (1d8 + 3) dégâts tranchants."
+      },
+      {
+        "name": "Arc long (×2)",
+        "text": "Jet d’attaque à distance : +6, portée 45/180 m. Touché : 7 (1d8 + 3) dégâts perforants et 4 (1d8) dégâts de poison."
+      }
+    ],
+    "summary": {
+      "style": "Un drow raté par Lolth : torse d’elfe sur corps d’araignée, exilé et furieux.",
+      "intent": "Faire cesser les vents. Ou faire souffrir quelqu’un d’autre.",
+      "tactics": "Reste au plafond, hors de portée du corps à corps, et tire deux flèches par tour. Descend sur un ennemi isolé.",
+      "flee": "Il ne fuit pas : il n’a nulle part où aller.",
+      "weakness": "Un sort de *silence* le calme instantanément — il laisse alors passer.",
+      "roleplay": "Répète en elfique : « La reine est folle de rage… folle de rage contre moi. »"
+    }
+  },
+  {
+    "id": "troglodyte",
+    "name": "Troglodyte",
+    "nameEn": "Troglodyte",
+    "source": "MM 2024 ; reconstitué de mémoire, à vérifier",
+    "size": "M",
+    "type": "Humanoïde (troglodyte)",
+    "alignment": "Chaotique mauvais",
+    "cr": "1/4",
+    "xp": 50,
+    "pb": 2,
+    "ac": 11,
+    "hp": 13,
+    "speed": "9 m",
+    "abilities": {
+      "str": 14,
+      "dex": 10,
+      "con": 14,
+      "int": 6,
+      "wis": 10,
+      "cha": 6
+    },
+    "acNote": "armure naturelle",
+    "skills": "Discrétion +2",
+    "senses": "vision dans le noir 18 m ; Perception passive 10",
+    "languages": "troglodyte",
+    "traits": [
+      {
+        "name": "Puanteur",
+        "text": "Toute créature autre qu’un troglodyte qui commence son tour à 1,50 m de lui doit réussir un jet de sauvegarde de Constitution DD 12 ou être empoisonnée jusqu’au début de son prochain tour. Une réussite immunise pour 1 heure."
+      },
+      {
+        "name": "Caméléon",
+        "text": "Avantage aux tests de Discrétion en terrain naturel."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Morsure",
+        "text": "Jet d’attaque au corps à corps : +4, allonge 1,50 m. Touché : 4 (1d4 + 2) dégâts perforants."
+      },
+      {
+        "name": "Griffes (×2)",
+        "text": "Jet d’attaque au corps à corps : +4, allonge 1,50 m. Touché : 3 (1d4 + 1) dégâts tranchants."
+      }
+    ],
+    "summary": {
+      "style": "Faible seul, insupportable en nombre : sa puanteur handicape tout le groupe.",
+      "intent": "Survivre. Esclave des drows, il fuit dès que le rapport de force tourne.",
+      "tactics": "Encercle pour empiler les jets contre la puanteur.",
+      "flee": "Dès qu’un tiers du groupe tombe.",
+      "weakness": "13 PV, CA 11. Une seule réussite au jet de Constitution immunise pour une heure."
+    }
+  },
+  {
+    "id": "grimlock",
+    "name": "Torve",
+    "nameEn": "Grimlock",
+    "source": "MM 2024 ; reconstitué de mémoire, à vérifier",
+    "size": "M",
+    "type": "Humanoïde (torve)",
+    "alignment": "Neutre mauvais",
+    "cr": "1/4",
+    "xp": 50,
+    "pb": 2,
+    "ac": 11,
+    "hp": 11,
+    "speed": "9 m",
+    "abilities": {
+      "str": 16,
+      "dex": 12,
+      "con": 12,
+      "int": 9,
+      "wis": 8,
+      "cha": 6
+    },
+    "skills": "Athlétisme +5, Perception +3, Discrétion +3",
+    "senses": "vision aveugle 9 m (aveugle au-delà) ; Perception passive 13",
+    "languages": "commun des profondeurs",
+    "traits": [
+      {
+        "name": "Sens aiguisés",
+        "text": "Avantage aux tests de Perception basés sur l’ouïe ou l’odorat."
+      },
+      {
+        "name": "Camouflage rocheux",
+        "text": "Avantage aux tests de Discrétion en terrain rocheux."
+      },
+      {
+        "name": "Cécité",
+        "text": "Aveugle au-delà de 9 m. **Un sort de *silence* le rend inoffensif.**"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Gourdin clouté",
+        "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 5 (1d4 + 3) dégâts contondants et 2 (1d4) dégâts perforants."
+      }
+    ],
+    "summary": {
+      "style": "Aveugle, il chasse à l’oreille et au nez, en meute.",
+      "intent": "Manger, et servir qui le nourrit.",
+      "tactics": "Se rue au bruit. Onze torves dans un couloir, c’est un mur.",
+      "weakness": "**Silence, ou terrain bruyant** : il perd sa vision aveugle et frappe au hasard."
+    }
+  },
+  {
+    "id": "sea-hag",
+    "name": "Guenaude aquatique",
+    "nameEn": "Sea Hag",
+    "source": "MM 2024 ; reconstitué de mémoire, à vérifier",
+    "size": "M",
+    "type": "Fée",
+    "alignment": "Chaotique mauvais",
+    "cr": "2",
+    "xp": 450,
+    "pb": 2,
+    "ac": 14,
+    "hp": 52,
+    "speed": "9 m, nage 12 m",
+    "abilities": {
+      "str": 16,
+      "dex": 13,
+      "con": 16,
+      "int": 12,
+      "wis": 12,
+      "cha": 13
+    },
+    "acNote": "armure naturelle",
+    "senses": "vision dans le noir 18 m ; Perception passive 11",
+    "languages": "aquatique, commun, géant",
+    "traits": [
+      {
+        "name": "Amphibie",
+        "text": "Respire l’air et l’eau."
+      },
+      {
+        "name": "Assemblée",
+        "text": "**Tant que trois guenaudes sont vivantes et à 9 m les unes des autres**, elles lancent en commun : *identification*, *scrutation*, *contrôle de l’eau*, *fléau d’insectes*, *rayon affaiblissant*, *œil du mage*, *polymorphe*."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Griffes",
+        "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 10 (2d6 + 3) dégâts tranchants."
+      },
+      {
+        "name": "Apparence hideuse",
+        "text": "Une créature qui commence son tour à 9 m et la voit doit réussir un jet de sauvegarde de Sagesse DD 11 ou être terrorisée 1 minute."
+      },
+      {
+        "name": "Regard mortel",
+        "text": "Contre une créature terrorisée à 9 m : jet de sauvegarde de Sagesse DD 11 ou tomber à 0 PV. 1/jour."
+      }
+    ],
+    "summary": {
+      "style": "Laide à en tuer, et trois fois plus dangereuse en assemblée.",
+      "intent": "Halaster leur a commandé une seule chose : débarrasser la strate des drows.",
+      "tactics": "Elles négocient d’abord. En combat, la scrutation et le polymorphe communs comptent plus que les griffes.",
+      "weakness": "**Tuer une seule des trois brise l’assemblée** et leur retire tous les sorts communs.",
+      "roleplay": "Polies, curieuses, gourmandes de bière. Elles se disent collectionneuses de coquillages."
+    }
+  },
+  {
+    "id": "giant-crab",
+    "name": "Crabe géant",
+    "nameEn": "Giant Crab",
+    "source": "MM 2024 ; reconstitué de mémoire, à vérifier",
+    "size": "M",
+    "type": "Bête",
+    "alignment": "Non alignée",
+    "cr": "1/8",
+    "xp": 25,
+    "pb": 2,
+    "ac": 15,
+    "hp": 13,
+    "speed": "9 m, nage 9 m",
+    "abilities": {
+      "str": 13,
+      "dex": 15,
+      "con": 11,
+      "int": 1,
+      "wis": 9,
+      "cha": 3
+    },
+    "acNote": "carapace",
+    "skills": "Discrétion +4",
+    "senses": "vision aveugle 9 m ; Perception passive 9",
+    "languages": "—",
+    "traits": [
+      {
+        "name": "Amphibie",
+        "text": "Respire l’air et l’eau."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Pince",
+        "text": "Jet d’attaque au corps à corps : +3, allonge 1,50 m. Touché : 4 (1d6 + 1) dégâts contondants, et la cible est agrippée (évasion DD 11). Le crabe a deux pinces."
+      }
+    ],
+    "summary": {
+      "style": "Agrippe et ne lâche pas.",
+      "intent": "Suivre sa guenaude.",
+      "tactics": "Immobilise une cible pendant que la guenaude s’en occupe."
+    }
+  },
+  {
+    "id": "ghost",
+    "name": "Fantôme",
+    "nameEn": "Ghost",
+    "source": "MM 2024 ; reconstitué de mémoire, à vérifier",
+    "size": "M",
+    "type": "Mort-vivant",
+    "alignment": "Toute tendance",
+    "cr": "4",
+    "xp": 1100,
+    "pb": 2,
+    "ac": 11,
+    "hp": 45,
+    "speed": "0 m, vol 12 m (vol stationnaire)",
+    "abilities": {
+      "str": 7,
+      "dex": 13,
+      "con": 10,
+      "int": 10,
+      "wis": 12,
+      "cha": 17
+    },
+    "resistances": "acide, feu, foudre, tonnerre ; armes non magiques",
+    "immunities": "froid, nécrotique, poison ; charmé, épuisement, terrorisé, à terre, entravé, empoisonné",
+    "senses": "vision dans le noir 18 m ; Perception passive 11",
+    "languages": "celles qu’il parlait de son vivant",
+    "traits": [
+      {
+        "name": "Déplacement éthéré",
+        "text": "Passe sur le plan Éthéré et revient par une action bonus : il devient intouchable."
+      },
+      {
+        "name": "Traversée des objets",
+        "text": "Traverse murs et créatures ; 5 (1d10) dégâts de force s’il finit son tour dans un objet."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Attouchement affaiblissant",
+        "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 17 (4d6 + 3) dégâts nécrotiques."
+      },
+      {
+        "name": "Vision d’horreur",
+        "text": "Une créature à 18 m : jet de sauvegarde de Sagesse DD 13 ou terrorisée 1 minute, et elle vieillit de 1d4 × 10 ans en cas d’échec de 5 ou plus."
+      },
+      {
+        "name": "Possession",
+        "text": "Un humanoïde à 1,50 m : jet de sauvegarde de Charisme DD 13 ou le fantôme prend le contrôle de son corps.",
+        "recharge": "6"
+      }
+    ],
+    "summary": {
+      "style": "Trois pirates qui creusent la roche à la recherche d’un trésor qu’ils ne retrouveront jamais.",
+      "intent": "Trouver le butin enterré. Rien d’autre.",
+      "tactics": "Ils n’attaquent que ce qu’ils prennent pour des concurrents. La possession sert à faire creuser un vivant.",
+      "weakness": "**On peut les libérer sans combattre** : les mener à un trésor caché leur donne le repos — et les mêmes PX.",
+      "roleplay": "Algarr Âpremarée, Liddie « langue de vipère » Kant et Jim Arête. Ils gloussent, se disputent, comptent des parts."
+    }
+  },
+  {
+    "id": "minotaur-skeleton",
+    "name": "Squelette de minotaure",
+    "nameEn": "Minotaur Skeleton",
+    "source": "MM 2024 ; reconstitué de mémoire, à vérifier",
+    "size": "G",
+    "type": "Mort-vivant",
+    "alignment": "Loyal mauvais",
+    "cr": "2",
+    "xp": 450,
+    "pb": 2,
+    "ac": 12,
+    "hp": 67,
+    "speed": "12 m",
+    "abilities": {
+      "str": 18,
+      "dex": 11,
+      "con": 15,
+      "int": 6,
+      "wis": 8,
+      "cha": 5
+    },
+    "acNote": "fragments d’armure",
+    "vulnerabilities": "contondant",
+    "immunities": "poison ; épuisement, empoisonné",
+    "senses": "vision dans le noir 18 m ; Perception passive 9",
+    "languages": "comprend l’abyssal, ne parle pas",
+    "traits": [
+      {
+        "name": "Charge",
+        "text": "S’il se déplace de 3 m en ligne droite avant d’encorner, +9 (2d8) dégâts perforants et jet de sauvegarde de Force DD 14 ou repoussé de 3 m et à terre."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Hache à deux mains",
+        "text": "Jet d’attaque au corps à corps : +6, allonge 1,50 m. Touché : 17 (2d12 + 4) dégâts tranchants."
+      },
+      {
+        "name": "Corne",
+        "text": "Jet d’attaque au corps à corps : +6, allonge 1,50 m. Touché : 13 (2d8 + 4) dégâts perforants."
+      }
+    ],
+    "summary": {
+      "style": "Surgit du fond de la rivière et charge le bateau.",
+      "tactics": "Charge dès qu’il a 3 m de recul. Sur une embarcation, la poussée fait tomber à l’eau.",
+      "weakness": "**Vulnérable au contondant** : marteaux et gourdins le brisent en deux fois moins de coups."
+    }
+  },
+  {
+    "id": "shadow",
+    "name": "Ombre",
+    "nameEn": "Shadow",
+    "source": "MM 2024 ; reconstitué de mémoire, à vérifier",
+    "size": "M",
+    "type": "Mort-vivant",
+    "alignment": "Chaotique mauvais",
+    "cr": "1/2",
+    "xp": 100,
+    "pb": 2,
+    "ac": 12,
+    "hp": 16,
+    "speed": "12 m",
+    "abilities": {
+      "str": 6,
+      "dex": 14,
+      "con": 13,
+      "int": 6,
+      "wis": 10,
+      "cha": 8
+    },
+    "skills": "Discrétion +4 (+6 dans la pénombre)",
+    "vulnerabilities": "radiant",
+    "resistances": "acide, froid, feu, nécrotique, tonnerre ; armes non magiques",
+    "immunities": "poison ; épuisement, terrorisé, agrippé, paralysé, pétrifié, à terre, entravé, empoisonné",
+    "senses": "vision dans le noir 18 m ; Perception passive 10",
+    "languages": "—",
+    "traits": [
+      {
+        "name": "Amorphe",
+        "text": "Se glisse par un espace de 2,5 cm sans se ralentir."
+      },
+      {
+        "name": "Faiblesse à la lumière",
+        "text": "Désavantage aux attaques et à la Perception en pleine lumière."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Vol de force",
+        "text": "Jet d’attaque au corps à corps : +4, allonge 1,50 m. Touché : 9 (2d6 + 2) dégâts nécrotiques et **la Force de la cible baisse de 1d4** (jusqu’au repos long). À 0 de Force, elle meurt et une nouvelle ombre se lève 1d4 heures plus tard."
+      }
+    ],
+    "summary": {
+      "style": "Rampe le long du bateau et vide un personnage de sa force, point par point.",
+      "tactics": "Sept ombres sur une embarcation : elles se glissent partout, la fuite est impossible.",
+      "weakness": "**Vulnérable au radiant**, et gênée par toute lumière vive : une torche brandie vaut un sort."
+    }
+  },
+  {
+    "id": "will-o-wisp",
+    "name": "Feu follet",
+    "nameEn": "Will-o’-Wisp",
+    "source": "MM 2024 ; reconstitué de mémoire, à vérifier",
+    "size": "TP",
+    "type": "Mort-vivant",
+    "alignment": "Chaotique mauvais",
+    "cr": "2",
+    "xp": 450,
+    "pb": 2,
+    "ac": 19,
+    "hp": 22,
+    "speed": "0 m, vol 15 m (vol stationnaire)",
+    "abilities": {
+      "str": 1,
+      "dex": 28,
+      "con": 10,
+      "int": 13,
+      "wis": 14,
+      "cha": 11
+    },
+    "resistances": "acide, froid, feu, nécrotique, perforant, tranchant et contondant des armes non magiques",
+    "immunities": "foudre, poison ; à terre, agrippé, épuisement, paralysé, empoisonné, inconscient, entravé",
+    "senses": "vision dans le noir 36 m ; Perception passive 12",
+    "languages": "comprend le commun et le sylvestre",
+    "traits": [
+      {
+        "name": "Consommation de vie",
+        "text": "Si une créature meurt à 1,50 m, le feu follet regagne 10 PV."
+      },
+      {
+        "name": "Éphémère",
+        "text": "Ne peut ni porter ni transporter quoi que ce soit."
+      },
+      {
+        "name": "Lumière variable",
+        "text": "Il éclaire de 1,50 à 6 m et peut s’éteindre par une action bonus — il devient alors invisible."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Choc",
+        "text": "Jet d’attaque au corps à corps : +4, allonge 1,50 m. Touché : 9 (2d8) dégâts de foudre."
+      },
+      {
+        "name": "Invisibilité",
+        "text": "Par une action bonus, il s’éteint et devient invisible."
+      }
+    ],
+    "summary": {
+      "style": "Une lumière amicale au-dessus de l’eau, qui vous mène à la noyade.",
+      "intent": "Faire mourir quelqu’un à portée : chaque mort le régénère.",
+      "tactics": "Reste invisible, frappe, se rallume ailleurs pour attirer les poursuivants dans la rivière.",
+      "weakness": "**CA 19 mais 22 PV** : le toucher est difficile, le tuer non. Les dégâts de force et radiants passent."
+    }
+  },
+  {
+    "id": "hobgoblin",
+    "name": "Hobgobelin",
+    "nameEn": "Hobgoblin",
+    "source": "MM 2024 ; reconstitué de mémoire, à vérifier",
+    "size": "M",
+    "type": "Fée (gobelinoïde)",
+    "alignment": "Loyal mauvais",
+    "cr": "1/2",
+    "xp": 100,
+    "pb": 2,
+    "ac": 18,
+    "hp": 11,
+    "speed": "9 m",
+    "abilities": {
+      "str": 13,
+      "dex": 12,
+      "con": 12,
+      "int": 10,
+      "wis": 10,
+      "cha": 9
+    },
+    "acNote": "chemise de mailles et bouclier",
+    "senses": "vision dans le noir 18 m ; Perception passive 10",
+    "languages": "commun, gobelin",
+    "traits": [
+      {
+        "name": "Tactique martiale",
+        "text": "**+2d6 dégâts** quand un allié du hobgobelin se trouve à 1,50 m de la cible."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Épée longue",
+        "text": "Jet d’attaque au corps à corps : +3, allonge 1,50 m. Touché : 5 (1d8 + 1) dégâts tranchants, 6 (1d10 + 1) à deux mains."
+      },
+      {
+        "name": "Arc long",
+        "text": "Jet d’attaque à distance : +3, portée 45/180 m. Touché : 5 (1d8 + 1) dégâts perforants."
+      }
+    ],
+    "summary": {
+      "style": "Soldat discipliné : il ne combat jamais seul, et c’est là tout le problème.",
+      "intent": "Tenir la ligne et faire respecter les ordres d’Azrok.",
+      "tactics": "**Toujours par paires** : la tactique martiale ajoute 2d6 dès qu’un camarade touche la même cible. Onze hobgobelins, c’est onze fois +2d6.",
+      "flee": "Ne fuit pas. Recule en ordre vers un capitaine.",
+      "weakness": "11 PV. **Les isoler annule leur tactique martiale** et divise leurs dégâts par deux."
+    }
+  },
+  {
+    "id": "hobgoblin-captain",
+    "name": "Capitaine hobgobelin",
+    "nameEn": "Hobgoblin Captain",
+    "source": "MM 2024 ; reconstitué de mémoire, à vérifier",
+    "size": "M",
+    "type": "Fée (gobelinoïde)",
+    "alignment": "Loyal mauvais",
+    "cr": "3",
+    "xp": 700,
+    "pb": 2,
+    "ac": 17,
+    "hp": 39,
+    "speed": "9 m",
+    "abilities": {
+      "str": 15,
+      "dex": 14,
+      "con": 14,
+      "int": 12,
+      "wis": 10,
+      "cha": 13
+    },
+    "acNote": "harnois",
+    "senses": "vision dans le noir 18 m ; Perception passive 10",
+    "languages": "commun, gobelin",
+    "traits": [
+      {
+        "name": "Tactique martiale",
+        "text": "**+2d6 dégâts** quand un allié se trouve à 1,50 m de la cible."
+      },
+      {
+        "name": "Chef",
+        "text": "Par une action bonus, un allié qui le voit et l’entend ajoute 1d4 à un jet d’attaque ou de sauvegarde."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Épée à deux mains (×2)",
+        "text": "Jet d’attaque au corps à corps : +4, allonge 1,50 m. Touché : 9 (2d6 + 2) dégâts tranchants."
+      }
+    ],
+    "summary": {
+      "style": "Deux coups d’épée à deux mains par tour, et il fait frapper les autres plus fort.",
+      "intent": "Contrôler le passage, vérifier les papiers, escorter — ou massacrer.",
+      "tactics": "Reste au centre pour que son aura de chef couvre le plus de soldats. Cible qui donne les ordres en face.",
+      "weakness": "**Abattre le capitaine effondre le groupe** : plus de bonus de chef, et le moral des hobgobelins tombe."
+    }
+  },
+  {
+    "id": "worg",
+    "name": "Worg",
+    "nameEn": "Worg",
+    "source": "MM 2024 ; reconstitué de mémoire, à vérifier",
+    "size": "G",
+    "type": "Fée",
+    "alignment": "Neutre mauvais",
+    "cr": "1/2",
+    "xp": 100,
+    "pb": 2,
+    "ac": 13,
+    "hp": 26,
+    "speed": "15 m",
+    "abilities": {
+      "str": 16,
+      "dex": 13,
+      "con": 13,
+      "int": 7,
+      "wis": 11,
+      "cha": 8
+    },
+    "acNote": "armure naturelle",
+    "skills": "Perception +4",
+    "senses": "vision dans le noir 18 m ; Perception passive 14",
+    "languages": "gobelin, worg",
+    "actions": [
+      {
+        "name": "Morsure",
+        "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 10 (2d6 + 3) dégâts perforants, et jet de sauvegarde de Force DD 13 ou à terre."
+      }
+    ],
+    "summary": {
+      "style": "Un loup intelligent et cruel, plus rapide que tout le monde.",
+      "intent": "Fidèle à Azrok et Lurkana, et à personne d’autre.",
+      "tactics": "15 m de déplacement : il contourne la ligne et met un lanceur de sorts à terre.",
+      "weakness": "26 PV. Il parle : on peut le menacer, l’insulter, le retourner contre un maître affaibli."
+    }
+  },
+  {
+    "id": "otyugh",
+    "name": "Otyugh",
+    "nameEn": "Otyugh",
+    "source": "MM 2024 ; reconstitué de mémoire, à vérifier",
+    "size": "G",
+    "type": "Aberration",
+    "alignment": "Neutre",
+    "cr": "5",
+    "xp": 1800,
+    "pb": 3,
+    "ac": 14,
+    "hp": 114,
+    "speed": "9 m",
+    "abilities": {
+      "str": 16,
+      "dex": 11,
+      "con": 19,
+      "int": 6,
+      "wis": 13,
+      "cha": 6
+    },
+    "acNote": "armure naturelle",
+    "saves": "Con +7",
+    "senses": "vision dans le noir 36 m ; Perception passive 11",
+    "languages": "otyugh ; télépathie limitée 36 m",
+    "traits": [
+      {
+        "name": "Télépathie limitée",
+        "text": "Il projette des images simples et des émotions, et imite grossièrement des appels à l’aide."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Morsure",
+        "text": "Jet d’attaque au corps à corps : +6, allonge 1,50 m. Touché : 12 (2d8 + 3) dégâts perforants, et jet de sauvegarde de Constitution DD 15 ou contracter une maladie : au terme de chaque repos long, la cible perd 5 (1d10) PV maximum jusqu’à guérison."
+      },
+      {
+        "name": "Tentacules (×2)",
+        "text": "Jet d’attaque au corps à corps : +6, allonge 3 m. Touché : 7 (1d8 + 3) dégâts contondants et la cible est agrippée (évasion DD 13) et entravée."
+      },
+      {
+        "name": "Coup de tentacule",
+        "text": "Deux créatures agrippées s’entrechoquent : jet de sauvegarde de Dextérité DD 14 ou 10 (2d6 + 3) dégâts contondants et étourdi jusqu’à la fin du prochain tour du monstre."
+      }
+    ],
+    "summary": {
+      "style": "Une panse à trois pattes tapie sous un tas d’ordures, deux tentacules de 3 m.",
+      "intent": "Manger les charognes qu’on lui apporte. **Il ne s’en prend pas aux gobelinoïdes ni à leurs escortes.**",
+      "tactics": "Agrippe deux personnages et les fait s’entrechoquer. Sa morsure transmet une maladie qui ronge les PV maximum.",
+      "weakness": "**On peut ne pas le combattre du tout** : il n’attaque que si l’on fouille son tas."
+    }
+  },
+  {
+    "id": "chimera",
+    "name": "Chimère",
+    "nameEn": "Chimera",
+    "source": "MM 2024 ; reconstitué de mémoire, à vérifier",
+    "size": "G",
+    "type": "Monstruosité",
+    "alignment": "Chaotique mauvais",
+    "cr": "6",
+    "xp": 2300,
+    "pb": 3,
+    "ac": 14,
+    "hp": 114,
+    "speed": "9 m, vol 18 m",
+    "abilities": {
+      "str": 19,
+      "dex": 11,
+      "con": 19,
+      "int": 3,
+      "wis": 14,
+      "cha": 10
+    },
+    "acNote": "armure naturelle",
+    "skills": "Perception +8",
+    "senses": "vision dans le noir 18 m ; Perception passive 18",
+    "languages": "comprend le draconique, ne parle pas",
+    "actions": [
+      {
+        "name": "Morsure",
+        "text": "Jet d’attaque au corps à corps : +7, allonge 1,50 m. Touché : 11 (2d6 + 4) dégâts perforants."
+      },
+      {
+        "name": "Cornes",
+        "text": "Jet d’attaque au corps à corps : +7, allonge 1,50 m. Touché : 10 (1d12 + 4) dégâts contondants."
+      },
+      {
+        "name": "Griffes",
+        "text": "Jet d’attaque au corps à corps : +7, allonge 1,50 m. Touché : 11 (2d6 + 4) dégâts tranchants."
+      },
+      {
+        "name": "Souffle de feu",
+        "text": "Cône de 4,50 m : jet de sauvegarde de Dextérité DD 15, 31 (7d8) dégâts de feu, moitié en cas de réussite.",
+        "recharge": "5-6"
+      }
+    ],
+    "summary": {
+      "style": "Trois têtes, trois attaques par tour, et un souffle de feu qui touche toute la ligne.",
+      "intent": "Défendre son tas de pièces. Elle a été dressée par T’rissa.",
+      "tactics": "Souffle d’entrée si le groupe est serré, puis morsure-cornes-griffes sur la cible la plus proche du magot.",
+      "flee": "Vole hors de portée si elle tombe sous 30 PV, puis revient au souffle rechargé.",
+      "weakness": "**Elle peut être apaisée** avec de la nourriture et des babioles brillantes : le combat est évitable."
+    }
+  },
+  {
+    "id": "gas-spore",
+    "name": "Spore gazeuse",
+    "nameEn": "Gas Spore",
+    "source": "MM 2024 ; reconstitué de mémoire, à vérifier",
+    "size": "G",
+    "type": "Plante",
+    "alignment": "Non alignée",
+    "cr": "1/2",
+    "xp": 100,
+    "pb": 2,
+    "ac": 5,
+    "hp": 1,
+    "speed": "0 m, vol 3 m (vol stationnaire)",
+    "abilities": {
+      "str": 5,
+      "dex": 1,
+      "con": 10,
+      "int": 1,
+      "wis": 2,
+      "cha": 1
+    },
+    "immunities": "poison ; aveuglé, charmé, assourdi, terrorisé, à terre, empoisonné",
+    "senses": "vision aveugle 9 m (aveugle au-delà) ; Perception passive 6",
+    "languages": "—",
+    "traits": [
+      {
+        "name": "Explosion de mort",
+        "text": "Elle explose à 0 PV : jet de sauvegarde de Constitution DD 15 dans un rayon de 6 m ou 10 (3d6) dégâts de poison et contamination par les spores."
+      },
+      {
+        "name": "Ressemblance",
+        "text": "Immobile, **elle est impossible à distinguer d’un tyrannœil** sans un test d’Intelligence (Nature) DD 15."
+      },
+      {
+        "name": "Spores",
+        "text": "Une créature contaminée subit 1 dégât de poison par heure ; à 0 PV elle meurt et 2d4 nouvelles spores gazeuses poussent sur son corps en 12 heures."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Attouchement",
+        "text": "Jet d’attaque au corps à corps : +0, allonge 1,50 m. Touché : 1 dégât de poison, et jet de sauvegarde de Constitution DD 10 ou contamination par les spores."
+      }
+    ],
+    "summary": {
+      "style": "Un faux tyrannœil. Un seul point de vie, et une explosion empoisonnée à sa mort.",
+      "intent": "Rien : c’est un champignon flottant.",
+      "tactics": "**Le piège est de tirer dessus.** À distance, l’explosion ne touche personne ; au corps à corps, elle contamine tout le groupe.",
+      "weakness": "**1 PV, CA 5.** Un test d’Intelligence (Nature) DD 15 la démasque avant qu’on ne s’en approche."
+    }
+  },
+  {
+    "id": "mind-flayer",
+    "name": "Flagelleur mental",
+    "nameEn": "Mind Flayer",
+    "source": "MM 2024 ; reconstitué de mémoire, à vérifier",
+    "size": "M",
+    "type": "Aberration",
+    "alignment": "Loyal mauvais",
+    "cr": "7",
+    "xp": 2900,
+    "pb": 3,
+    "ac": 15,
+    "hp": 71,
+    "speed": "9 m",
+    "abilities": {
+      "str": 11,
+      "dex": 12,
+      "con": 12,
+      "int": 19,
+      "wis": 17,
+      "cha": 17
+    },
+    "acNote": "armure de plaques improvisée",
+    "saves": "Int +7, Sag +6, Cha +6",
+    "skills": "Arcanes +7, Perspicacité +6, Perception +6, Discrétion +4, Tromperie +6",
+    "senses": "vision dans le noir 36 m ; Perception passive 16",
+    "languages": "commun des profondeurs, télépathie 36 m",
+    "traits": [
+      {
+        "name": "Magie innée",
+        "text": "À volonté : *détection des pensées*, *lévitation*. 1/jour chacun : *domination de monstre*, *projection d’image*, *suggestion de masse*, *impulsion de plan*."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Tentacules",
+        "text": "Jet d’attaque au corps à corps : +7, allonge 1,50 m. Touché : 15 (2d10 + 4) dégâts psychiques, et la cible est agrippée (évasion DD 15). Une cible agrippée est **neutralisée** et automatiquement touchée par Extraction du cerveau."
+      },
+      {
+        "name": "Extraction du cerveau",
+        "text": "Contre un humanoïde neutralisé et agrippé : 55 (10d10) dégâts perforants. **La cible meurt si les dégâts la réduisent à 0 PV** : le flagelleur dévore son cerveau."
+      },
+      {
+        "name": "Explosion mentale",
+        "text": "Cône de 18 m : jet de sauvegarde d’Intelligence DD 15, 22 (4d8 + 4) dégâts psychiques et étourdi 1 minute, moitié et pas d’étourdissement en cas de réussite.",
+        "recharge": "5-6"
+      }
+    ],
+    "summary": {
+      "style": "Il ne se bat pas : il neutralise, agrippe, et mange le cerveau.",
+      "intent": "Ambassadeur de Skullport. Il implante des dévoreurs d’intellect dans les crânes gobelinoïdes pour Xanathar.",
+      "tactics": "Explosion mentale d’ouverture pour étourdir, puis tentacules sur la cible étourdie. **Une cible agrippée est morte en deux tours.**",
+      "flee": "Il préfère parler : le tuer déclenche un incident diplomatique avec Skullport.",
+      "weakness": "71 PV et aucune résistance : **la question est de survivre à l’explosion mentale**, pas de le tuer.",
+      "roleplay": "Ulquess. Poli, patient, assis dans un fauteuil devant un jeu d’échecs. Il vous déconseille poliment Skullport."
+    }
+  },
+  {
+    "id": "xorn-huge",
+    "name": "Xorn massif",
+    "nameEn": "Huge Xorn",
+    "source": "MM 2024 ; reconstitué de mémoire, à vérifier",
+    "size": "G",
+    "type": "Élémentaire",
+    "alignment": "Neutre",
+    "cr": "8",
+    "xp": 3900,
+    "pb": 3,
+    "ac": 19,
+    "hp": 103,
+    "speed": "6 m, creusement 6 m",
+    "abilities": {
+      "str": 20,
+      "dex": 10,
+      "con": 22,
+      "int": 11,
+      "wis": 10,
+      "cha": 11
+    },
+    "acNote": "armure naturelle",
+    "skills": "Perception +6, Discrétion +6",
+    "resistances": "perforant et tranchant des armes non magiques et non adamantines",
+    "senses": "vision dans le noir 18 m, perception des pierres précieuses 9 m ; Perception passive 16",
+    "languages": "terreux",
+    "traits": [
+      {
+        "name": "Glissement terrestre",
+        "text": "**Traverse la pierre comme de l’eau**, sans la déranger."
+      },
+      {
+        "name": "Odorat du trésor",
+        "text": "Il sent les métaux et pierres précieuses à 9 m, même endormi."
+      },
+      {
+        "name": "Sommeil",
+        "text": "Il dort. **Discrétion DD 16 pour traverser la salle** — avec désavantage si l’on transporte des pièces ou des gemmes."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Griffes (×3)",
+        "text": "Jet d’attaque au corps à corps : +8, allonge 3 m. Touché : 9 (1d8 + 5) dégâts tranchants."
+      },
+      {
+        "name": "Morsure",
+        "text": "Jet d’attaque au corps à corps : +8, allonge 1,50 m. Touché : 22 (5d6 + 5) dégâts perforants."
+      }
+    ],
+    "summary": {
+      "style": "Trois mètres de roche vivante, engraissée par Halaster aux gemmes magiques.",
+      "intent": "Dormir tranquille. Il ne veut ni vous tuer ni vous manger — il veut vos gemmes.",
+      "tactics": "S’il se réveille : trois griffes à 3 m et une morsure à 5d6. Il traverse les murs, la fuite ne marche pas.",
+      "flee": "**On peut l’acheter** : lui jeter des gemmes le calme aussi sûrement qu’un combat le déclenche.",
+      "weakness": "Endormi. Discrétion DD 16 — et laisser bourse et gemmes de l’autre côté de la porte."
+    }
+  },
+  {
+    "id": "shrieker",
+    "name": "Criard",
+    "nameEn": "Shrieker",
+    "source": "MM 2024 ; reconstitué de mémoire, à vérifier",
+    "size": "M",
+    "type": "Plante",
+    "alignment": "Non alignée",
+    "cr": "0",
+    "xp": 10,
+    "pb": 2,
+    "ac": 5,
+    "hp": 13,
+    "speed": "0 m",
+    "abilities": {
+      "str": 1,
+      "dex": 1,
+      "con": 10,
+      "int": 1,
+      "wis": 3,
+      "cha": 1
+    },
+    "immunities": "aveuglé, charmé, assourdi, terrorisé",
+    "senses": "vision aveugle 9 m (aveugle au-delà) ; Perception passive 6",
+    "languages": "—",
+    "traits": [
+      {
+        "name": "Faux-semblant",
+        "text": "Immobile, impossible à distinguer d’un champignon ordinaire."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Cri",
+        "text": "Quand une lumière vive ou une créature approche à 9 m, il hurle pendant 1d4 tours. **Le bruit s’entend à 90 m.**"
+      }
+    ],
+    "summary": {
+      "style": "Il ne blesse personne. Il prévient tout le monde.",
+      "intent": "Aucun : c’est un champignon.",
+      "tactics": "Il crie, la garde arrive. Le vrai danger est ce qui répond au cri.",
+      "weakness": "13 PV, mais le tuer ne suffit pas : il aura déjà crié. **Éteindre les lumières et contourner à plus de 9 m.**"
+    }
+  },
+  {
+    "id": "barlgura",
+    "name": "Barlgura",
+    "nameEn": "Barlgura",
+    "source": "MM 2024 ; reconstitué de mémoire, à vérifier",
+    "size": "G",
+    "type": "Fiélon (démon)",
+    "alignment": "Chaotique mauvais",
+    "cr": "5",
+    "xp": 1800,
+    "pb": 3,
+    "ac": 15,
+    "hp": 68,
+    "speed": "12 m, escalade 12 m",
+    "abilities": {
+      "str": 18,
+      "dex": 15,
+      "con": 16,
+      "int": 7,
+      "wis": 14,
+      "cha": 9
+    },
+    "acNote": "armure naturelle",
+    "saves": "Dex +5, Con +6",
+    "skills": "Perception +5, Discrétion +5",
+    "resistances": "froid, feu, foudre ; armes non magiques",
+    "immunities": "poison ; empoisonné",
+    "senses": "vision aveugle 9 m, vision dans le noir 36 m ; Perception passive 15",
+    "languages": "abyssal ; télépathie 36 m",
+    "traits": [
+      {
+        "name": "Magie innée",
+        "text": "1/jour chacun : *déguisement*, *invisibilité*. 2/jour : *enchevêtrement*, *bond*."
+      },
+      {
+        "name": "Bond",
+        "text": "Sans élan : 12 m en longueur, 6 m en hauteur."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Morsure",
+        "text": "Jet d’attaque au corps à corps : +7, allonge 1,50 m. Touché : 11 (2d6 + 4) dégâts perforants."
+      },
+      {
+        "name": "Poing (×2)",
+        "text": "Jet d’attaque au corps à corps : +7, allonge 1,50 m. Touché : 9 (1d10 + 4) dégâts contondants."
+      }
+    ],
+    "summary": {
+      "style": "Un singe-démon de deux mètres qui attend, invisible, au plafond.",
+      "intent": "Défendre sa tanière et le trésor qu’elle contient.",
+      "tactics": "**Invisibilité puis embuscade** dès qu’une lumière approche : deux poings et une morsure au premier tour, avec l’avantage.",
+      "weakness": "68 PV et l’invisibilité n’est utilisable qu’une fois par jour : une fois révélé, il ne peut plus se cacher."
+    }
+  }
+]

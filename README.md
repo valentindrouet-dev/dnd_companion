@@ -93,6 +93,12 @@ s'importe en JSON depuis **Réglages**.
 
 ## Aventure incluse
 
+**Strate 3 : la Sargauth** — 85 zones, une rivière souterraine, les ruines naines de Stromkuhldur
+et trois factions au bord de la guerre. Sa **version Améliorée est originale** : elle n'existe dans
+aucun livre. Elle ajoute une crue qui monte par paliers (« la Marée d'Halaster »), une enquête en
+cinq maillons qui ramène la dague volée d'Azrok sur la strate au lieu de la renvoyer plus bas, un
+banc de kuo-toas qui a pris trois fantômes pour son dieu, et un aboleth au fond du fleuve.
+
 **Strate 2 : les Salles Arcaniques** (Waterdeep : le Donjon du Mage dément) — 70 zones,
 transposées depuis l'édition française pour un usage personnel à la table, avec les cadrages
 de carte correspondants. Le PDF source lui-même n'est pas versionné.

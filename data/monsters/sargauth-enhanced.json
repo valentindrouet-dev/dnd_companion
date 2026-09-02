@@ -1,0 +1,937 @@
+[
+  {
+    "id": "kuo-toa",
+    "name": "Kuo-toa",
+    "nameEn": "Kuo-toa",
+    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "M",
+    "type": "Humanoïde (kuo-toa)",
+    "alignment": "Neutre mauvais",
+    "cr": "1/4",
+    "xp": 50,
+    "pb": 2,
+    "ac": 13,
+    "hp": 18,
+    "speed": "9 m, nage 9 m",
+    "abilities": {
+      "str": 13,
+      "dex": 10,
+      "con": 11,
+      "int": 11,
+      "wis": 10,
+      "cha": 8
+    },
+    "acNote": "armure naturelle et bouclier",
+    "skills": "Perception +4",
+    "senses": "vision dans le noir 36 m ; Perception passive 14",
+    "languages": "commun des profondeurs",
+    "traits": [
+      {
+        "name": "Amphibie",
+        "text": "Respire l’air et l’eau."
+      },
+      {
+        "name": "Perception aveugle",
+        "text": "**Il perçoit les créatures invisibles à 9 m** — et il est le seul de la strate à le pouvoir."
+      },
+      {
+        "name": "Sensibilité au soleil",
+        "text": "Désavantage aux attaques et à la Perception à la lumière du soleil."
+      },
+      {
+        "name": "Adhérence gluante",
+        "text": "Toute arme qui le touche est collée à lui : jet de Force DD 11 pour la reprendre."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Lance",
+        "text": "Jet d’attaque au corps à corps ou à distance : +3, allonge 1,50 m ou portée 6/18 m. Touché : 5 (1d6 + 2) dégâts perforants."
+      },
+      {
+        "name": "Filet",
+        "text": "Jet d’attaque à distance : +3, portée 1,50/4,50 m. Touché : la cible est **entravée** ; Force DD 10 ou 5 dégâts tranchants pour se libérer."
+      }
+    ],
+    "summary": {
+      "style": "Remonte le fleuve depuis Skullport, en bancs, avec des filets.",
+      "intent": "Prendre pied sur les berges et bâtir un temple à son dieu.",
+      "tactics": "**Les filets d’abord.** Un personnage entravé sur une berge glissante finit dans l’eau, où le kuo-toa nage deux fois mieux que lui.",
+      "weakness": "La lumière vive l’aveugle. **Mais il voit les invisibles** : inutile de compter là-dessus."
+    }
+  },
+  {
+    "id": "kuo-toa-whip",
+    "name": "Fouet kuo-toa",
+    "nameEn": "Kuo-toa Whip",
+    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "M",
+    "type": "Humanoïde (kuo-toa)",
+    "alignment": "Neutre mauvais",
+    "cr": "1",
+    "xp": 200,
+    "pb": 2,
+    "ac": 11,
+    "hp": 65,
+    "speed": "9 m, nage 9 m",
+    "abilities": {
+      "str": 14,
+      "dex": 10,
+      "con": 12,
+      "int": 12,
+      "wis": 14,
+      "cha": 14
+    },
+    "acNote": "armure naturelle",
+    "skills": "Perception +4, Religion +3",
+    "senses": "vision dans le noir 36 m ; Perception passive 14",
+    "languages": "commun des profondeurs",
+    "traits": [
+      {
+        "name": "Amphibie",
+        "text": "Respire l’air et l’eau."
+      },
+      {
+        "name": "Perception aveugle",
+        "text": "Il perçoit les créatures invisibles à 9 m."
+      },
+      {
+        "name": "Incantation",
+        "text": "Sagesse, DD 12. À volonté : *bénédiction d’eau*, *thaumaturgie*. 1/jour : *ténèbres*, *blessure*, *bouclier de la foi*."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bâton-pince (×2)",
+        "text": "Jet d’attaque au corps à corps : +4, allonge 1,50 m. Touché : 5 (1d6 + 2) dégâts contondants, et si la cible est de taille M ou moins elle est **agrippée** (évasion DD 14). Le fouet a l’avantage à ses attaques contre une créature agrippée."
+      },
+      {
+        "name": "Injonction sacrée",
+        "text": "Une créature à 18 m : jet de sauvegarde de Sagesse DD 12 ou elle ne peut pas s’éloigner du fouet jusqu’à la fin de son prochain tour."
+      }
+    ],
+    "summary": {
+      "style": "Prêtre-guerrier du banc : il agrippe et il prêche.",
+      "intent": "Convertir, ou noyer. Les deux conviennent.",
+      "tactics": "Agrippe avec le bâton-pince et frappe avec l’avantage. **Un personnage agrippé au bord de l’eau est un personnage noyé.**",
+      "roleplay": "Il parle du dieu avec une conviction absolue, et il vient de l’inventer."
+    }
+  },
+  {
+    "id": "kuo-toa-monitor",
+    "name": "Moniteur kuo-toa",
+    "nameEn": "Kuo-toa Monitor",
+    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "M",
+    "type": "Humanoïde (kuo-toa)",
+    "alignment": "Neutre mauvais",
+    "cr": "6",
+    "xp": 2300,
+    "pb": 3,
+    "ac": 13,
+    "hp": 65,
+    "speed": "12 m, nage 12 m",
+    "abilities": {
+      "str": 18,
+      "dex": 14,
+      "con": 16,
+      "int": 12,
+      "wis": 16,
+      "cha": 13
+    },
+    "acNote": "armure naturelle",
+    "saves": "Sag +6",
+    "skills": "Perception +9, Religion +4",
+    "senses": "vision dans le noir 36 m ; Perception passive 19",
+    "languages": "commun des profondeurs",
+    "traits": [
+      {
+        "name": "Amphibie",
+        "text": "Respire l’air et l’eau."
+      },
+      {
+        "name": "Perception aveugle",
+        "text": "Il perçoit les créatures invisibles à 9 m."
+      },
+      {
+        "name": "Incantation",
+        "text": "Sagesse, DD 14. À volonté : *bénédiction d’eau*, *thaumaturgie*. 3/jour : *blessure*. 1/jour : *ténèbres*, *pilier de flamme*."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Frappe à mains nues (×3)",
+        "text": "Jet d’attaque au corps à corps : +7, allonge 1,50 m. Touché : 11 (2d6 + 4) dégâts contondants et **jet de sauvegarde de Constitution DD 14 ou étourdi jusqu’à la fin de son prochain tour**."
+      }
+    ],
+    "summary": {
+      "style": "Trois frappes par tour, chacune capable d’étourdir. C’est le champion du banc.",
+      "intent": "Protéger la prophétesse et son dieu naissant.",
+      "tactics": "**Il vise le lanceur de sorts et l’étourdit.** Trois DD 14 par tour finissent par passer.",
+      "weakness": "65 PV et CA 13 : il tombe vite si on encaisse le premier tour.",
+      "roleplay": "Il ne parle presque pas. Il se place entre Nhessa et vous, et il attend."
+    }
+  },
+  {
+    "id": "chuul",
+    "name": "Chuul",
+    "nameEn": "Chuul",
+    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "G",
+    "type": "Aberration",
+    "alignment": "Chaotique mauvais",
+    "cr": "4",
+    "xp": 1100,
+    "pb": 2,
+    "ac": 16,
+    "hp": 93,
+    "speed": "9 m, nage 9 m",
+    "abilities": {
+      "str": 19,
+      "dex": 10,
+      "con": 16,
+      "int": 5,
+      "wis": 11,
+      "cha": 5
+    },
+    "acNote": "exosquelette",
+    "skills": "Perception +4",
+    "immunities": "poison ; empoisonné",
+    "senses": "vision aveugle 9 m, vision dans le noir 18 m ; Perception passive 14",
+    "languages": "comprend le profond mais ne parle pas",
+    "traits": [
+      {
+        "name": "Amphibie",
+        "text": "Respire l’air et l’eau."
+      },
+      {
+        "name": "Sens de la magie",
+        "text": "**Il perçoit toute magie à 36 m**, à volonté, et sait dans quelle direction elle se trouve — il attaque en priorité qui en porte."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Pinces (×2)",
+        "text": "Jet d’attaque au corps à corps : +6, allonge 3 m. Touché : 11 (2d6 + 4) dégâts contondants, et la cible est **agrippée** (évasion DD 14). Il peut agripper deux créatures."
+      },
+      {
+        "name": "Tentacules",
+        "text": "Une créature agrippée : jet de sauvegarde de Constitution DD 13 ou **empoisonnée 1 minute et paralysée** tant qu’elle est empoisonnée (nouveau jet à la fin de chacun de ses tours)."
+      }
+    ],
+    "summary": {
+      "style": "Un crustacé de deux mètres qui agrippe, paralyse, et emporte sous l’eau.",
+      "intent": "Garder le fleuve pour ce qui l’a créé.",
+      "tactics": "**Deux pinces, deux cibles agrippées, puis les tentacules.** Un personnage paralysé au bord de l’eau est perdu au tour suivant.",
+      "weakness": "Il vise la magie en priorité : **un leurre magique jeté au loin le détourne** de la vraie cible."
+    }
+  },
+  {
+    "id": "merrow",
+    "name": "Merrow",
+    "nameEn": "Merrow",
+    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "G",
+    "type": "Monstruosité",
+    "alignment": "Chaotique mauvais",
+    "cr": "2",
+    "xp": 450,
+    "pb": 2,
+    "ac": 13,
+    "hp": 45,
+    "speed": "3 m, nage 12 m",
+    "abilities": {
+      "str": 18,
+      "dex": 10,
+      "con": 15,
+      "int": 8,
+      "wis": 10,
+      "cha": 9
+    },
+    "acNote": "armure naturelle",
+    "senses": "vision dans le noir 18 m ; Perception passive 10",
+    "languages": "abyssal, aquatique",
+    "traits": [
+      {
+        "name": "Amphibie",
+        "text": "Respire l’air et l’eau — mais **au sec, sa vitesse tombe à 3 m** : c’est une créature de l’eau."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Morsure",
+        "text": "Jet d’attaque au corps à corps : +6, allonge 1,50 m. Touché : 8 (1d8 + 4) dégâts perforants."
+      },
+      {
+        "name": "Griffes",
+        "text": "Jet d’attaque au corps à corps : +6, allonge 1,50 m. Touché : 9 (2d4 + 4) dégâts tranchants."
+      },
+      {
+        "name": "Harpon",
+        "text": "Jet d’attaque au corps à corps ou à distance : +6, allonge 1,50 m ou portée 6/18 m. Touché : 11 (2d6 + 4) dégâts perforants, et **si la cible est de taille G ou moins, elle est tirée de 6 m vers le merrow** — dans l’eau, si le merrow y est."
+      }
+    ],
+    "summary": {
+      "style": "Un ogre marin difforme qui harponne et tire dans l’eau.",
+      "intent": "Manger. Il en faut beaucoup.",
+      "tactics": "**Le harpon est toute la rencontre** : il arrache un personnage de la berge et le met à l’eau, où il ne peut plus rien faire.",
+      "weakness": "**Au sec il se traîne à 3 m.** Le combattre à dix mètres de la rive, c’est le combattre à moitié."
+    }
+  },
+  {
+    "id": "swarm-of-quippers",
+    "name": "Nuée de quippers",
+    "nameEn": "Swarm of Quippers",
+    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "M",
+    "type": "Nuée de Bêtes de taille TP",
+    "alignment": "Non alignée",
+    "cr": "1",
+    "xp": 200,
+    "pb": 2,
+    "ac": 13,
+    "hp": 28,
+    "speed": "0 m, nage 12 m",
+    "abilities": {
+      "str": 13,
+      "dex": 16,
+      "con": 9,
+      "int": 1,
+      "wis": 7,
+      "cha": 2
+    },
+    "resistances": "contondant, perforant, tranchant",
+    "immunities": "charmé, terrorisé, agrippé, paralysé, pétrifié, à terre, entravé, étourdi",
+    "senses": "vision dans le noir 18 m ; Perception passive 8",
+    "languages": "—",
+    "traits": [
+      {
+        "name": "Frénésie sanguinaire",
+        "text": "**Avantage aux attaques contre toute créature qui n’a pas tous ses points de vie.**"
+      },
+      {
+        "name": "Respiration aquatique",
+        "text": "Elle ne respire que sous l’eau."
+      },
+      {
+        "name": "Nuée",
+        "text": "Elle occupe l’espace d’une autre créature, se glisse par un espace de 2,5 cm, et ne peut pas regagner de PV."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Morsures",
+        "text": "Jet d’attaque au corps à corps : +5, allonge 0 m, une créature dans l’espace de la nuée. Touché : 14 (4d6) dégâts perforants, ou 7 (2d6) si la nuée a la moitié de ses PV ou moins."
+      }
+    ],
+    "summary": {
+      "style": "L’eau bout autour du blessé, et le blessé n’en ressort pas.",
+      "intent": "Le sang. Rien d’autre.",
+      "tactics": "**Elle vise systématiquement qui saigne déjà.** Tomber à l’eau blessé, c’est 4d6 par tour.",
+      "weakness": "Elle ne peut pas sortir de l’eau. **Remonter sur la berge met fin au combat.**"
+    }
+  },
+  {
+    "id": "water-weird",
+    "name": "Ondin",
+    "nameEn": "Water Weird",
+    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "G",
+    "type": "Élémentaire",
+    "alignment": "Neutre",
+    "cr": "3",
+    "xp": 700,
+    "pb": 2,
+    "ac": 13,
+    "hp": 58,
+    "speed": "0 m, nage 18 m",
+    "abilities": {
+      "str": 17,
+      "dex": 16,
+      "con": 13,
+      "int": 11,
+      "wis": 10,
+      "cha": 10
+    },
+    "resistances": "feu ; armes non magiques",
+    "immunities": "poison ; charmé, épuisement, agrippé, paralysé, pétrifié, à terre, entravé, empoisonné, inconscient",
+    "senses": "vision aveugle 9 m ; Perception passive 10",
+    "languages": "comprend l’aquatique mais ne parle pas",
+    "traits": [
+      {
+        "name": "Invisible dans l’eau",
+        "text": "**Il est indiscernable de l'eau ordinaire tant qu'il n'a pas attaqué.**"
+      },
+      {
+        "name": "Lié à l’eau",
+        "text": "Il meurt s’il s’éloigne de plus de 36 m de son plan d’eau."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Constriction",
+        "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 13 (3d6 + 3) dégâts contondants, et **la cible est agrippée** (évasion DD 13). Tant qu’elle est agrippée, elle est **entravée et ne peut pas respirer** — le serpent d’eau la maintient sous la surface."
+      }
+    ],
+    "summary": {
+      "style": "Un serpent d’eau invisible dans l’eau, qui vous tient sous la surface.",
+      "intent": "Garder le bassin qu’on lui a confié.",
+      "tactics": "**Il n’attaque que ce qui entre dans son eau.** Une fois agrippé, on ne respire plus : c’est un compte à rebours, pas un combat.",
+      "weakness": "Il ne peut pas quitter son eau. **On peut simplement ne pas y entrer.**"
+    }
+  },
+  {
+    "id": "scrag",
+    "name": "Troll des eaux",
+    "nameEn": "Scrag",
+    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "G",
+    "type": "Géant",
+    "alignment": "Chaotique mauvais",
+    "cr": "5",
+    "xp": 1800,
+    "pb": 3,
+    "ac": 15,
+    "hp": 84,
+    "speed": "9 m, nage 12 m",
+    "abilities": {
+      "str": 18,
+      "dex": 13,
+      "con": 20,
+      "int": 7,
+      "wis": 9,
+      "cha": 7
+    },
+    "acNote": "peau visqueuse",
+    "skills": "Perception +2",
+    "senses": "vision dans le noir 18 m ; Perception passive 12",
+    "languages": "géant",
+    "traits": [
+      {
+        "name": "Amphibie",
+        "text": "Respire l’air et l’eau."
+      },
+      {
+        "name": "Régénération aquatique",
+        "text": "**Il regagne 10 PV au début de son tour s’il est immergé, ou seulement 5 s’il est au sec.** Le feu et l’acide suppriment ce trait jusqu’au début de son prochain tour. À 0 PV il ne meurt que si un point de vie ne lui est pas rendu."
+      },
+      {
+        "name": "Odorat aiguisé",
+        "text": "Avantage aux tests de Perception basés sur l’odorat — **il sent le sang dans l’eau à 90 m**."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Morsure",
+        "text": "Jet d’attaque au corps à corps : +7, allonge 1,50 m. Touché : 7 (1d6 + 4) dégâts perforants."
+      },
+      {
+        "name": "Griffes (×2)",
+        "text": "Jet d’attaque au corps à corps : +7, allonge 1,50 m. Touché : 11 (2d6 + 4) dégâts tranchants."
+      }
+    ],
+    "summary": {
+      "style": "Un troll qui a passé trop de temps dans l’eau : plus lent au sec, presque immortel dedans.",
+      "intent": "Manger ce que la rivière apporte.",
+      "tactics": "**Il combat dans l’eau ou il ne combat pas.** Il tire ses proies à la rivière et attend d’y régénérer.",
+      "weakness": "**Feu ou acide, comme tous les trolls** — mais l’eau les éteint. Le sortir de l’eau divise sa régénération par deux."
+    }
+  },
+  {
+    "id": "drowned",
+    "name": "Noyé de la Sargauth",
+    "nameEn": "Drowned One",
+    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "M",
+    "type": "Mort-vivant",
+    "alignment": "Chaotique mauvais",
+    "cr": "3",
+    "xp": 700,
+    "pb": 2,
+    "ac": 13,
+    "hp": 60,
+    "speed": "9 m, nage 12 m",
+    "abilities": {
+      "str": 16,
+      "dex": 12,
+      "con": 16,
+      "int": 6,
+      "wis": 10,
+      "cha": 8
+    },
+    "acNote": "chair gonflée",
+    "resistances": "froid, nécrotique ; armes non magiques",
+    "immunities": "poison ; empoisonné, épuisement",
+    "senses": "vision dans le noir 18 m ; Perception passive 10",
+    "languages": "comprend ce qu’il parlait de son vivant",
+    "traits": [
+      {
+        "name": "Amphibie",
+        "text": "Il n’a pas besoin de respirer."
+      },
+      {
+        "name": "Poumons pleins",
+        "text": "**Une créature qui commence son tour agrippée par un noyé recrache de l’eau de rivière** : elle ne peut pas parler ni lancer de sort à composante verbale jusqu’à la fin de son tour."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Étreinte",
+        "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 9 (2d4 + 4) dégâts contondants, et la cible est **agrippée** (évasion DD 13)."
+      },
+      {
+        "name": "Noyade",
+        "text": "Contre une cible agrippée : jet de sauvegarde de Constitution DD 13 ou **10 (3d6) dégâts et la cible commence à suffoquer** jusqu’à ce qu’elle se libère."
+      }
+    ],
+    "summary": {
+      "style": "Ceux que la Sargauth a pris et n’a pas rendus. Ils remontent le courant.",
+      "intent": "Que quelqu’un d’autre boive aussi.",
+      "tactics": "**Ils agrippent et noient.** En nombre, ils prennent une personne chacun et il n’y a plus personne pour aider.",
+      "weakness": "Ils ne s’éloignent jamais loin de l’eau. **Une berge sèche à trente mètres et ils renoncent.**"
+    }
+  },
+  {
+    "id": "water-elemental",
+    "name": "Élémentaire d’eau",
+    "nameEn": "Water Elemental",
+    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "G",
+    "type": "Élémentaire",
+    "alignment": "Neutre",
+    "cr": "5",
+    "xp": 1800,
+    "pb": 3,
+    "ac": 14,
+    "hp": 114,
+    "speed": "9 m, nage 27 m",
+    "abilities": {
+      "str": 18,
+      "dex": 14,
+      "con": 18,
+      "int": 5,
+      "wis": 10,
+      "cha": 8
+    },
+    "resistances": "acide ; armes non magiques",
+    "immunities": "poison ; épuisement, agrippé, paralysé, pétrifié, à terre, entravé, empoisonné, inconscient",
+    "senses": "vision dans le noir 18 m ; Perception passive 10",
+    "languages": "aquatique",
+    "traits": [
+      {
+        "name": "Forme d’eau",
+        "text": "Il traverse l’espace d’une créature hostile et passe par un espace de 2,5 cm sans se ralentir."
+      },
+      {
+        "name": "Gel",
+        "text": "**Les dégâts de froid le figent** : sa vitesse tombe à 0 jusqu'à la fin de son prochain tour."
+      },
+      {
+        "name": "Submersion",
+        "text": "**Il ne peut submerger qu’une créature à la fois.**"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Coup (×2)",
+        "text": "Jet d’attaque au corps à corps : +7, allonge 1,50 m. Touché : 13 (2d8 + 4) dégâts contondants."
+      },
+      {
+        "name": "Vague déferlante",
+        "text": "Chaque créature dans l’espace de l’élémentaire : jet de sauvegarde de Force DD 15, **14 (4d8) dégâts contondants et submergée** en cas d’échec (elle est entravée et ne peut pas respirer), moitié et repoussée hors de son espace en cas de réussite.",
+        "recharge": "4-6"
+      }
+    ],
+    "summary": {
+      "style": "La rivière elle-même, debout, qui vous avale.",
+      "intent": "Ce pour quoi on l’a réveillée.",
+      "tactics": "**Il traverse la formation** et déferle sur ceux qu’il englobe : submergé, on ne respire plus.",
+      "weakness": "**Le froid le fige** sur place — c’est la seule chose qui l’arrête vraiment."
+    }
+  },
+  {
+    "id": "aboleth",
+    "name": "Aboleth de la Sargauth",
+    "nameEn": "Aboleth",
+    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "G",
+    "type": "Aberration",
+    "alignment": "Loyal mauvais",
+    "cr": "10",
+    "xp": 5900,
+    "pb": 4,
+    "ac": 17,
+    "hp": 135,
+    "speed": "3 m, nage 12 m",
+    "abilities": {
+      "str": 21,
+      "dex": 9,
+      "con": 15,
+      "int": 18,
+      "wis": 15,
+      "cha": 18
+    },
+    "acNote": "armure naturelle",
+    "saves": "Con +6, Int +8, Sag +6",
+    "skills": "Histoire +12, Perception +10",
+    "senses": "vision dans le noir 36 m ; Perception passive 20",
+    "languages": "profond, télépathie 36 m",
+    "traits": [
+      {
+        "name": "Amphibie",
+        "text": "Respire l’air et l’eau."
+      },
+      {
+        "name": "Nuage de mucus",
+        "text": "**Toute créature qui touche l’aboleth ou le frappe au corps à corps à 1,50 m** : jet de sauvegarde de Constitution DD 14 ou maladie — pendant 1 minute, elle ne peut plus respirer l’air et doit rester immergée, sinon elle suffoque. *Restauration inférieure* y met fin."
+      },
+      {
+        "name": "Sondage",
+        "text": "**Il connaît tout ce que connaît une créature qu’il a asservie**, et il vous parle de vos propres souvenirs."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Tentacule (×2)",
+        "text": "Jet d’attaque au corps à corps : +9, allonge 3 m. Touché : 12 (2d6 + 5) dégâts contondants, et **jet de sauvegarde de Constitution DD 14 ou maladie** : la cible ne peut plus respirer l’air, et sa peau vire au translucide et au visqueux."
+      },
+      {
+        "name": "Queue",
+        "text": "Jet d’attaque au corps à corps : +9, allonge 3 m. Touché : 15 (3d6 + 5) dégâts contondants."
+      },
+      {
+        "name": "Asservissement",
+        "text": "Une créature à 9 m : **jet de sauvegarde de Sagesse DD 14 ou charmée par l’aboleth** jusqu’à ce qu’il meure ou soit sur un autre plan. La cible charmée obéit à ses ordres télépathiques ; nouveau jet à chaque fois qu’elle subit des dégâts, et à chaque fois qu’elle reçoit un ordre contraire à sa nature. 3/jour."
+      }
+    ],
+    "legendary": [
+      {
+        "name": "Détection",
+        "text": "L’aboleth fait un test de Sagesse (Perception)."
+      },
+      {
+        "name": "Coup de queue",
+        "text": "L’aboleth attaque une fois avec sa queue."
+      },
+      {
+        "name": "Ravage psychique (coûte 2 actions)",
+        "text": "Une créature charmée par l’aboleth, à 30 m : jet de sauvegarde de Sagesse DD 14 ou 10 (3d6) dégâts psychiques."
+      }
+    ],
+    "summary": {
+      "style": "Trois mètres de mémoire ancienne au fond de la Sargauth. Il ne se bat pas d’abord : il asservit.",
+      "intent": "Il était là avant les nains, avant Halaster. **Il veut que le fleuve remonte** — et il a soufflé aux guenaudes l’idée du chaudron.",
+      "tactics": "**Asservissement dès le premier tour**, sur le personnage le plus utile. Puis il se laisse couler et parle depuis le fond pendant que sa victime combat ses amis.",
+      "flee": "Il ne fuit pas : il descend. Le fleuve est profond et il n’a pas besoin de respirer.",
+      "weakness": "**Trois asservissements par jour, pas plus.** Le nuage de mucus punit le corps à corps : le combattre à distance change tout.",
+      "roleplay": "Il vous appelle par un nom que vous n’avez dit à personne. Il connaît vos souvenirs par ceux qu’il a déjà bus."
+    }
+  },
+  {
+    "id": "drow-priestess",
+    "name": "Prêtresse drow de Lolth",
+    "nameEn": "Drow Priestess of Lolth",
+    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "M",
+    "type": "Humanoïde (elfe)",
+    "alignment": "Neutre mauvais",
+    "cr": "8",
+    "xp": 3900,
+    "pb": 3,
+    "ac": 16,
+    "hp": 71,
+    "speed": "9 m",
+    "abilities": {
+      "str": 10,
+      "dex": 14,
+      "con": 12,
+      "int": 13,
+      "wis": 17,
+      "cha": 18
+    },
+    "acNote": "chemise de mailles drow",
+    "saves": "Con +4, Sag +6, Cha +7",
+    "skills": "Perception +6, Religion +4, Discrétion +5",
+    "senses": "vision dans le noir 36 m ; Perception passive 16",
+    "languages": "elfique, commun des profondeurs",
+    "traits": [
+      {
+        "name": "Sensibilité au soleil",
+        "text": "Désavantage aux attaques et à la Perception à la lumière du soleil."
+      },
+      {
+        "name": "Magie drow",
+        "text": "À volonté : *lumières dansantes*. 1/jour : *ténèbres*, *lueurs féeriques*, *lévitation*."
+      },
+      {
+        "name": "Incantation",
+        "text": "Sagesse, DD 14. Sorts préparés : *blessure*, *contagion*, *convocation d’animaux* (araignées), *dissipation de la magie*, *immobilisation de personne*, *invocation céleste* (**une yochlol**), *nuée d’insectes*, *sanctuaire*, *toile*."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Fouet à serpents (×3)",
+        "text": "Jet d’attaque au corps à corps : +6, allonge 3 m. Touché : 7 (1d8 + 3) dégâts perforants et **7 (3d4) dégâts de poison**."
+      },
+      {
+        "name": "Faveur de Lolth",
+        "text": "Par une action bonus, un allié à 18 m ajoute 1d10 à son prochain jet d’attaque ou de sauvegarde. 3/jour."
+      }
+    ],
+    "summary": {
+      "style": "Trois attaques de fouet à serpents par tour, et une déesse démoniaque au bout du fil.",
+      "intent": "Faire de cette strate un tremplin vers Skullport. Et donner à Lolth de quoi être fière.",
+      "tactics": "**Toile sur la ligne, nuée d’insectes sur les lanceurs de sorts**, puis fouet. **Sous 30 PV, elle invoque une yochlol.**",
+      "flee": "Jamais devant des non-drows. C’est une question de principe, et cela finira par la tuer.",
+      "weakness": "71 PV pour un CR 8 : **elle est fragile pour ce qu’elle fait.** La concentration sur *toile* se brise.",
+      "roleplay": "Elle ne vous adresse pas la parole. Elle donne des ordres à ses gens à votre sujet, devant vous, comme si vous étiez du mobilier."
+    }
+  },
+  {
+    "id": "broodmother",
+    "name": "Mère-couveuse",
+    "nameEn": "Broodmother",
+    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "TG",
+    "type": "Monstruosité",
+    "alignment": "Non alignée",
+    "cr": "8",
+    "xp": 3900,
+    "pb": 3,
+    "ac": 16,
+    "hp": 152,
+    "speed": "12 m, escalade 12 m",
+    "abilities": {
+      "str": 21,
+      "dex": 14,
+      "con": 18,
+      "int": 3,
+      "wis": 12,
+      "cha": 4
+    },
+    "acNote": "carapace",
+    "saves": "Dex +5, Con +7",
+    "skills": "Discrétion +5, Perception +5",
+    "senses": "vision aveugle 3 m, vision dans le noir 36 m ; Perception passive 15",
+    "languages": "—",
+    "traits": [
+      {
+        "name": "Araignée",
+        "text": "Grimpe les surfaces, plafonds compris, sans test, et se déplace sur les toiles sans être gênée."
+      },
+      {
+        "name": "Portée",
+        "text": "**Au début de chacun de ses tours, elle expulse une araignée géante** (au plus 4 sur le combat) qui agit au compte d’initiative de la couveuse."
+      },
+      {
+        "name": "Sens des toiles",
+        "text": "Elle sait où se trouve toute créature en contact avec la même toile."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Morsure",
+        "text": "Jet d’attaque au corps à corps : +8, allonge 3 m. Touché : 15 (2d8 + 6) dégâts perforants, et jet de sauvegarde de Constitution DD 15 : **26 (4d12) dégâts de poison**, moitié en cas de réussite. Réduite à 0 PV par ces dégâts, la cible est **stable mais paralysée 1 heure** — et couvée."
+      },
+      {
+        "name": "Toile",
+        "text": "Jet d’attaque à distance : +5, portée 9/18 m. Touché : la cible est **entravée**. Force DD 15 ou 20 dégâts (CA 12) pour se libérer.",
+        "recharge": "5-6"
+      }
+    ],
+    "summary": {
+      "style": "Ce que T’rissa cherchait à obtenir. Elle y est arrivée.",
+      "intent": "Pondre. Ce qui l’entoure est un incubateur potentiel.",
+      "tactics": "**Une nouvelle araignée géante par tour**, jusqu’à quatre. Le combat empire tant qu’on ne la tue pas elle.",
+      "flee": "Elle ne fuit pas : elle remonte au plafond, ce qui revient au même pour qui n’a pas de distance.",
+      "weakness": "**Tuer la couveuse arrête la ponte.** Ignorer les petites et frapper la grosse est la seule stratégie qui converge."
+    }
+  },
+  {
+    "id": "yochlol",
+    "name": "Yochlol",
+    "nameEn": "Yochlol",
+    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "M",
+    "type": "Fiélon (démon)",
+    "alignment": "Chaotique mauvais",
+    "cr": "10",
+    "xp": 5900,
+    "pb": 4,
+    "ac": 15,
+    "hp": 136,
+    "speed": "9 m, escalade 9 m",
+    "abilities": {
+      "str": 15,
+      "dex": 14,
+      "con": 18,
+      "int": 13,
+      "wis": 15,
+      "cha": 15
+    },
+    "acNote": "armure naturelle",
+    "saves": "Dex +6, Int +5, Sag +6, Cha +6",
+    "skills": "Tromperie +10, Perspicacité +6",
+    "resistances": "froid, feu, foudre ; armes non magiques",
+    "immunities": "poison ; charmé, terrorisé, empoisonné",
+    "senses": "vision aveugle 36 m ; Perception passive 12",
+    "languages": "abyssal, elfique, commun des profondeurs ; télépathie 36 m",
+    "traits": [
+      {
+        "name": "Métamorphe",
+        "text": "Elle prend l’apparence d’une **drow séduisante**, d’une **araignée géante**, ou de sa forme visqueuse à œil unique. Ses statistiques ne changent pas."
+      },
+      {
+        "name": "Magie innée",
+        "text": "À volonté : *détection de la magie*, *toile*. 1/jour chacun : *domination de personne*, *nuage mortel*."
+      },
+      {
+        "name": "Forme gazeuse (au repos)",
+        "text": "Sous forme visqueuse, elle peut se réduire en vapeur : **elle passe par une serrure**."
+      },
+      {
+        "name": "Résistance à la magie",
+        "text": "Avantage aux jets de sauvegarde contre les sorts et effets magiques."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Coup (×2)",
+        "text": "Jet d’attaque au corps à corps : +6, allonge 1,50 m. Touché : 12 (2d8 + 3) dégâts contondants."
+      },
+      {
+        "name": "Vapeurs abrutissantes",
+        "text": "Nuage de 6 m de rayon pendant 1 minute. **Toute créature qui y commence son tour : jet de sauvegarde de Constitution DD 14 ou empoisonnée**, et une créature empoisonnée ainsi est **neutralisée**.",
+        "recharge": "6"
+      }
+    ],
+    "summary": {
+      "style": "La servante de Lolth. Elle vous parle avec un visage que vous aimez bien, jusqu’à ce que ce ne soit plus la peine.",
+      "intent": "Rapporter à Vlonwelv, et punir qui a dupé le miroir.",
+      "tactics": "**Elle arrive sous la forme d’une drow que le groupe connaît.** Domination de personne sur le plus fort, puis vapeurs abrutissantes sur les autres.",
+      "weakness": "**Résistance à la magie et 136 PV** : c’est un combat long. Un *cercle magique* contre les fiélons la tient à distance.",
+      "roleplay": "Un seul œil rouge sous la fumée, quand elle cesse de faire semblant."
+    }
+  },
+  {
+    "id": "hobgoblin-warlord",
+    "name": "Seigneur de guerre hobgobelin",
+    "nameEn": "Hobgoblin Warlord",
+    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "M",
+    "type": "Fée (gobelinoïde)",
+    "alignment": "Loyal mauvais",
+    "cr": "6",
+    "xp": 2300,
+    "pb": 3,
+    "ac": 17,
+    "hp": 97,
+    "speed": "9 m",
+    "abilities": {
+      "str": 16,
+      "dex": 14,
+      "con": 16,
+      "int": 14,
+      "wis": 11,
+      "cha": 15
+    },
+    "acNote": "harnois et bouclier",
+    "saves": "Con +6, Sag +3, Cha +5",
+    "senses": "vision dans le noir 18 m ; Perception passive 10",
+    "languages": "commun, gobelin",
+    "traits": [
+      {
+        "name": "Tactique martiale",
+        "text": "**+2d6 dégâts** quand un allié se trouve à 1,50 m de la cible."
+      },
+      {
+        "name": "Commandement",
+        "text": "Par une action bonus, **jusqu’à trois alliés qui le voient et l’entendent** peuvent utiliser leur réaction pour effectuer une attaque d’arme."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Épée longue (×3)",
+        "text": "Jet d’attaque au corps à corps : +6, allonge 1,50 m. Touché : 7 (1d8 + 3) dégâts tranchants, ou 8 (1d10 + 3) à deux mains."
+      },
+      {
+        "name": "Javeline (×3)",
+        "text": "Jet d’attaque au corps à corps ou à distance : +6, allonge 1,50 m ou portée 9/36 m. Touché : 6 (1d6 + 3) dégâts perforants."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Parade",
+        "text": "**+3 à sa CA** contre une attaque au corps à corps qui le toucherait. Il doit voir l’attaquant et tenir une arme de mêlée."
+      }
+    ],
+    "summary": {
+      "style": "Trois attaques par tour, et trois alliés qui frappent en même temps que lui.",
+      "intent": "Tenir Stromkuhldur. C’est son domaine, et il l’a payé.",
+      "tactics": "**Son commandement transforme quatre soldats en douze attaques.** Isoler ses alliés vaut mieux que le frapper lui.",
+      "weakness": "**Il est aveugle** sans sa dague : il ne peut pas cibler ce qui ne fait pas de bruit. Un adversaire silencieux le prend à revers.",
+      "roleplay": "Il ne regarde jamais personne directement. On croit à de l’arrogance."
+    }
+  },
+  {
+    "id": "duergar",
+    "name": "Duergar",
+    "nameEn": "Duergar",
+    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "M",
+    "type": "Humanoïde (nain)",
+    "alignment": "Loyal mauvais",
+    "cr": "1",
+    "xp": 200,
+    "pb": 2,
+    "ac": 16,
+    "hp": 26,
+    "speed": "7,50 m",
+    "abilities": {
+      "str": 14,
+      "dex": 11,
+      "con": 14,
+      "int": 11,
+      "wis": 10,
+      "cha": 9
+    },
+    "acNote": "chemise de mailles et bouclier",
+    "resistances": "poison",
+    "senses": "vision dans le noir 36 m ; Perception passive 10",
+    "languages": "nain, commun des profondeurs",
+    "traits": [
+      {
+        "name": "Résilience naine",
+        "text": "Avantage aux jets de sauvegarde contre le poison."
+      },
+      {
+        "name": "Sensibilité au soleil",
+        "text": "Désavantage aux attaques et à la Perception à la lumière du soleil."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Agrandissement",
+        "text": "Par une action bonus, pendant 1 minute : **taille G, avantage aux tests de Force, +1d4 dégâts en mêlée**. 1/jour."
+      },
+      {
+        "name": "Invisibilité",
+        "text": "Par une action bonus, il devient **invisible 1 heure** ou jusqu’à ce qu’il attaque, lance un sort ou s’agrandisse. 1/jour."
+      },
+      {
+        "name": "Pic de guerre",
+        "text": "Jet d’attaque au corps à corps : +4, allonge 1,50 m. Touché : 6 (1d8 + 2) dégâts perforants, ou 11 (2d8 + 2) agrandi."
+      },
+      {
+        "name": "Javeline",
+        "text": "Jet d’attaque au corps à corps ou à distance : +4, allonge 1,50 m ou portée 9/36 m. Touché : 5 (1d6 + 2) dégâts perforants, ou 9 (2d6 + 2) agrandi."
+      }
+    ],
+    "summary": {
+      "style": "Un nain gris qui grandit, ou disparaît. Souvent les deux dans le même combat.",
+      "intent": "Le clan de l’Œil de fer travaille pour lui-même, et se fait payer par tout le monde.",
+      "tactics": "**Invisibilité pour approcher, agrandissement pour frapper.** C’est ainsi qu’ils ont volé la dague d’Azrok sans qu’aucun garde ne les voie.",
+      "weakness": "**Les kuo-toas voient les invisibles.** C’est la seule chose de la strate qui puisse les prendre en défaut."
+    }
+  }
+]
