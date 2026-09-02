@@ -1,0 +1,30 @@
+// Routeur par fragment (#/…) — fonctionne sans configuration serveur (GitHub Pages).
+//   #/                      accueil
+//   #/a/:adv                vue d'ensemble d'une aventure
+//   #/a/:adv/r/:room        page d'une salle
+//   #/bestiaire[/:id]       bestiaire
+//   #/reglages              réglages
+
+export function parseRoute() {
+  const raw = location.hash.replace(/^#\/?/, '');
+  const p = raw.split('/').filter(Boolean).map(decodeURIComponent);
+  if (p.length === 0) return { name: 'home' };
+  if (p[0] === 'a' && p[1]) {
+    if (p[2] === 'r' && p[3]) return { name: 'room', adv: p[1], room: p[3] };
+    return { name: 'adventure', adv: p[1] };
+  }
+  if (p[0] === 'bestiaire') return { name: 'bestiary', monster: p[1] || null };
+  if (p[0] === 'reglages') return { name: 'settings' };
+  return { name: 'home' };
+}
+
+export function navigate(path) {
+  const target = '#/' + String(path).replace(/^#?\/?/, '');
+  if (location.hash === target) return;
+  location.hash = target;
+}
+
+export function roomPath(advId, roomId) { return `a/${encodeURIComponent(advId)}/r/${encodeURIComponent(roomId)}`; }
+export function advPath(advId) { return `a/${encodeURIComponent(advId)}`; }
+
+export function onRoute(fn) { addEventListener('hashchange', fn); }

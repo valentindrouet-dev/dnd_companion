@@ -1,0 +1,237 @@
+[
+  {
+    "id": "goblin-warrior",
+    "name": "Guerrier gobelin",
+    "nameEn": "Goblin Warrior",
+    "source": "SRD 5.2 (règles 2024) — vérifier MM 2024",
+    "size": "P",
+    "type": "Fée (gobelinoïde)",
+    "alignment": "Neutre",
+    "cr": "1/4",
+    "xp": 50,
+    "pb": 2,
+    "ac": 15,
+    "hp": 10,
+    "hpFormula": "3d6",
+    "speed": "9 m",
+    "abilities": { "str": 8, "dex": 15, "con": 10, "int": 10, "wis": 8, "cha": 8 },
+    "skills": "Discrétion +6",
+    "senses": "vision dans le noir 18 m ; Perception passive 9",
+    "languages": "commun, gobelin",
+    "actions": [
+      { "name": "Cimeterre", "text": "Jet d’attaque au corps à corps : +4, allonge 1,50 m. Touché : 5 (1d6 + 2) dégâts tranchants, plus 2 (1d4) dégâts tranchants si le jet d’attaque avait l’avantage." },
+      { "name": "Arc court", "text": "Jet d’attaque à distance : +4, portée 24/96 m. Touché : 5 (1d6 + 2) dégâts perforants, plus 2 (1d4) dégâts perforants si le jet d’attaque avait l’avantage." }
+    ],
+    "bonusActions": [
+      { "name": "Fuite agile", "text": "Le gobelin effectue l’action Se désengager ou Se cacher." }
+    ],
+    "summary": {
+      "style": "Harceleur lâche : embuscade, tir depuis un couvert, puis disparition.",
+      "intent": "Protéger le butin et le chef. Ne cherche jamais un combat loyal.",
+      "tactics": "Ouvre par une volée de flèches à couvert, puis **Fuite agile** pour se cacher : la prochaine attaque avec avantage inflige +1d4. Concentre les attaques sur une cible isolée ou blessée.",
+      "flee": "Fuit ou se rend dès que la moitié de la bande est tombée ou que le chef meurt.",
+      "weakness": "Moral fragile : Intimidation DD 10 pour les faire hésiter un tour.",
+      "roleplay": "Voix aiguë, insultes, prêt à vendre n’importe quelle information contre sa vie."
+    }
+  },
+  {
+    "id": "goblin-boss",
+    "name": "Chef gobelin",
+    "nameEn": "Goblin Boss",
+    "source": "SRD 5.2 (règles 2024) — vérifier MM 2024",
+    "size": "P",
+    "type": "Fée (gobelinoïde)",
+    "alignment": "Neutre",
+    "cr": "1",
+    "xp": 200,
+    "pb": 2,
+    "ac": 17,
+    "hp": 21,
+    "hpFormula": "6d6",
+    "speed": "9 m",
+    "abilities": { "str": 10, "dex": 15, "con": 10, "int": 10, "wis": 8, "cha": 10 },
+    "skills": "Discrétion +6",
+    "senses": "vision dans le noir 18 m ; Perception passive 9",
+    "languages": "commun, gobelin",
+    "actions": [
+      { "name": "Attaques multiples", "text": "Le gobelin effectue deux attaques de Cimeterre." },
+      { "name": "Cimeterre", "text": "Jet d’attaque au corps à corps : +4, allonge 1,50 m. Touché : 5 (1d6 + 2) dégâts tranchants, plus 2 (1d4) dégâts tranchants si le jet d’attaque avait l’avantage." },
+      { "name": "Arc court", "text": "Jet d’attaque à distance : +4, portée 24/96 m. Touché : 5 (1d6 + 2) dégâts perforants, plus 2 (1d4) dégâts perforants si le jet d’attaque avait l’avantage." }
+    ],
+    "bonusActions": [
+      { "name": "Fuite agile", "text": "Le gobelin effectue l’action Se désengager ou Se cacher." }
+    ],
+    "reactions": [
+      { "name": "Redirection d’attaque", "text": "Déclencheur : une créature que le gobelin peut voir effectue un jet d’attaque contre lui. Réponse : le gobelin choisit un allié de taille P ou M situé à 1,50 m de lui. Le gobelin et cet allié échangent leurs places, et l’allié devient la cible de l’attaque." }
+    ],
+    "summary": {
+      "style": "Tyran de bande : frappe deux fois, se protège derrière ses sbires.",
+      "intent": "Garder son statut de chef. Préfère négocier plutôt que mourir.",
+      "tactics": "Reste au contact d’au moins un guerrier pour utiliser **Redirection d’attaque**. Deux attaques de cimeterre par tour sur la cible la plus faible, puis Fuite agile s’il est isolé.",
+      "flee": "Sous 8 PV, propose un marché (butin, informations) ou fuit par la sortie la plus proche.",
+      "weakness": "Vaniteux : un défi ou une flatterie (Persuasion DD 12) peut lui faire baisser sa garde."
+    }
+  },
+  {
+    "id": "skeleton",
+    "name": "Squelette",
+    "nameEn": "Skeleton",
+    "source": "SRD 5.2 (règles 2024) — vérifier MM 2024",
+    "size": "M",
+    "type": "Mort-vivant",
+    "alignment": "Loyal mauvais",
+    "cr": "1/4",
+    "xp": 50,
+    "pb": 2,
+    "ac": 14,
+    "hp": 13,
+    "hpFormula": "2d8 + 4",
+    "speed": "9 m",
+    "abilities": { "str": 10, "dex": 16, "con": 15, "int": 6, "wis": 8, "cha": 5 },
+    "vulnerabilities": "contondant",
+    "immunities": "poison ; épuisement, empoisonné",
+    "senses": "vision dans le noir 18 m ; Perception passive 9",
+    "languages": "comprend les langues qu’il connaissait de son vivant mais ne peut pas parler",
+    "actions": [
+      { "name": "Épée courte", "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 6 (1d6 + 3) dégâts perforants." },
+      { "name": "Arc court", "text": "Jet d’attaque à distance : +5, portée 24/96 m. Touché : 6 (1d6 + 3) dégâts perforants." }
+    ],
+    "summary": {
+      "style": "Automate obéissant : avance et frappe sans peur ni ruse.",
+      "intent": "Exécuter le dernier ordre reçu (garder un lieu, tuer les intrus).",
+      "tactics": "Se met en ligne et attaque la créature vivante la plus proche. Utilise l’arc si une cible est hors de portée. Ne poursuit pas au-delà de sa zone de garde.",
+      "flee": "Jamais. Combat jusqu’à la destruction.",
+      "weakness": "**Vulnérable aux dégâts contondants** (masses, marteaux, bâtons)."
+    }
+  },
+  {
+    "id": "zombie",
+    "name": "Zombie",
+    "nameEn": "Zombie",
+    "source": "SRD 5.2 (règles 2024) — vérifier MM 2024",
+    "size": "M",
+    "type": "Mort-vivant",
+    "alignment": "Neutre mauvais",
+    "cr": "1/4",
+    "xp": 50,
+    "pb": 2,
+    "ac": 8,
+    "hp": 15,
+    "hpFormula": "2d8 + 6",
+    "speed": "6 m",
+    "abilities": { "str": 13, "dex": 6, "con": 16, "int": 3, "wis": 6, "cha": 5 },
+    "saves": "Sag +0",
+    "immunities": "poison ; épuisement, empoisonné",
+    "senses": "vision dans le noir 18 m ; Perception passive 8",
+    "languages": "comprend le commun et une autre langue connue de son vivant mais ne peut pas parler",
+    "traits": [
+      { "name": "Robustesse morte-vivante", "text": "Si des dégâts réduisent le zombie à 0 point de vie, il effectue un jet de sauvegarde de Constitution (DD 5 + dégâts subis), sauf si les dégâts sont radiants ou proviennent d’un coup critique. En cas de réussite, le zombie tombe à 1 point de vie au lieu de 0." }
+    ],
+    "actions": [
+      { "name": "Coup", "text": "Jet d’attaque au corps à corps : +3, allonge 1,50 m. Touché : 5 (1d8 + 1) dégâts contondants." }
+    ],
+    "summary": {
+      "style": "Lent, brutal, increvable.",
+      "intent": "Dévorer ou détruire tout ce qui bouge dans sa zone.",
+      "tactics": "Marche droit sur la créature vivante la plus proche et frappe. Ignore les blessures. Se relève souvent grâce à **Robustesse morte-vivante** : rappelle le jet aux joueurs.",
+      "flee": "Jamais.",
+      "weakness": "Vitesse 6 m : facile à distancer. Dégâts radiants et coups critiques annulent Robustesse morte-vivante."
+    }
+  },
+  {
+    "id": "giant-rat",
+    "name": "Rat géant",
+    "nameEn": "Giant Rat",
+    "source": "SRD 5.2 (règles 2024) — vérifier MM 2024",
+    "size": "P",
+    "type": "Bête",
+    "alignment": "Non aligné",
+    "cr": "1/8",
+    "xp": 25,
+    "pb": 2,
+    "ac": 13,
+    "hp": 7,
+    "hpFormula": "2d6",
+    "speed": "9 m, escalade 9 m",
+    "abilities": { "str": 7, "dex": 16, "con": 11, "int": 2, "wis": 10, "cha": 4 },
+    "skills": "Perception +2, Discrétion +5",
+    "senses": "vision dans le noir 18 m ; Perception passive 12",
+    "traits": [
+      { "name": "Tactique de meute", "text": "Le rat a l’avantage à ses jets d’attaque contre une créature si au moins un de ses alliés se trouve à 1,50 m de la créature et n’est pas neutralisé." }
+    ],
+    "actions": [
+      { "name": "Morsure", "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 5 (1d4 + 3) dégâts perforants." }
+    ],
+    "summary": {
+      "style": "Meute opportuniste.",
+      "intent": "Protéger le nid et grignoter tout ce qui saigne.",
+      "tactics": "Se jettent à plusieurs sur la même cible pour profiter de **Tactique de meute**. Grimpent aux murs pour contourner.",
+      "flee": "Se dispersent dès qu’il n’en reste qu’un ou que du feu apparaît.",
+      "weakness": "7 PV : tombent à la moindre attaque de zone."
+    }
+  },
+  {
+    "id": "cultist",
+    "name": "Cultiste",
+    "nameEn": "Cultist",
+    "source": "SRD 5.2 (règles 2024) — vérifier MM 2024",
+    "size": "M",
+    "type": "Humanoïde",
+    "alignment": "Neutre",
+    "cr": "1/8",
+    "xp": 25,
+    "pb": 2,
+    "ac": 12,
+    "acNote": "armure de cuir",
+    "hp": 9,
+    "hpFormula": "2d8",
+    "speed": "9 m",
+    "abilities": { "str": 11, "dex": 12, "con": 10, "int": 10, "wis": 11, "cha": 10 },
+    "saves": "Sag +2",
+    "skills": "Tromperie +2, Religion +2",
+    "senses": "Perception passive 10",
+    "languages": "commun",
+    "actions": [
+      { "name": "Serpe rituelle", "text": "Jet d’attaque au corps à corps : +3, allonge 1,50 m. Touché : 3 (1d4 + 1) dégâts tranchants plus 1 dégât nécrotique." }
+    ],
+    "summary": {
+      "style": "Fanatique fragile : hurle des prières, frappe sans technique.",
+      "intent": "Servir son maître, gagner sa faveur, mourir s’il le faut.",
+      "tactics": "Se met entre les intrus et son chef. Attaque toujours la cible que le chef désigne.",
+      "flee": "Se rend si le chef meurt ou tombe ; sinon combat jusqu’au bout.",
+      "roleplay": "Regard vide, phrases apprises par cœur, terrifié par toute question sur le culte."
+    }
+  },
+  {
+    "id": "ghoul",
+    "name": "Goule",
+    "nameEn": "Ghoul",
+    "source": "SRD 5.2 (règles 2024) — vérifier MM 2024",
+    "size": "M",
+    "type": "Mort-vivant",
+    "alignment": "Chaotique mauvais",
+    "cr": "1",
+    "xp": 200,
+    "pb": 2,
+    "ac": 12,
+    "hp": 22,
+    "hpFormula": "5d8",
+    "speed": "9 m",
+    "abilities": { "str": 13, "dex": 15, "con": 10, "int": 7, "wis": 10, "cha": 6 },
+    "immunities": "poison ; charmé, épuisement, empoisonné",
+    "senses": "vision dans le noir 18 m ; Perception passive 10",
+    "languages": "commun",
+    "actions": [
+      { "name": "Attaques multiples", "text": "La goule effectue une attaque de Morsure et une attaque de Griffe." },
+      { "name": "Morsure", "text": "Jet d’attaque au corps à corps : +4, allonge 1,50 m. Touché : 9 (2d8) dégâts perforants." },
+      { "name": "Griffe", "text": "Jet d’attaque au corps à corps : +4, allonge 1,50 m. Touché : 4 (1d6 + 1) dégâts tranchants. Si la cible est une créature autre qu’un mort-vivant ou un elfe, elle subit l’effet suivant. Jet de sauvegarde de Constitution : DD 10. Échec : la cible est paralysée jusqu’à la fin de son prochain tour." }
+    ],
+    "summary": {
+      "style": "Prédateur affamé : bondit, griffe, paralyse, dévore.",
+      "intent": "Manger de la chair fraîche. Rien d’autre.",
+      "tactics": "Griffe d’abord pour tenter la **paralysie (Con DD 10)**, puis morsure sur la cible paralysée (touche automatique, critique à 1,50 m). Change de cible si l’une est déjà paralysée et entourée d’alliés.",
+      "flee": "Se replie sous 6 PV pour revenir plus tard sur un blessé isolé.",
+      "weakness": "Les elfes sont immunisés à sa paralysie. Pas de résistance aux dégâts."
+    }
+  }
+]

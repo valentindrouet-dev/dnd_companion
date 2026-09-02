@@ -1,0 +1,16 @@
+{
+  "name": "Compagnon D&D — Table du MJ",
+  "short_name": "Compagnon",
+  "description": "Salles, monstres, dialogues et trésors pour mener une aventure D&D 5e (2024) sur iPad.",
+  "lang": "fr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#15171b",
+  "theme_color": "#15171b",
+  "icons": [
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

@@ -1,0 +1,11 @@
+# Livres / PDF sous copyright : jamais dans le dépôt (public)
+sources/pdf/
+sources/txt/
+*.pdf
+
+# Divers
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+.env

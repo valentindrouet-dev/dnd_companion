@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+  <title>Compagnon D&D</title>
+  <meta name="description" content="Compagnon de table pour MJ D&D 5e (2024), pensé pour iPad.">
+  <meta name="theme-color" content="#15171b">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Compagnon">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./assets/icons/icon-180.png">
+  <link rel="icon" href="./assets/icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles/app.css">
+  <script src="./version.js"></script>
+</head>
+<body>
+  <div id="app" class="app">
+    <div class="boot">
+      <div class="boot-dice">⚄</div>
+      <div>Chargement du compagnon…</div>
+    </div>
+  </div>
+  <div id="popups"></div>
+  <div id="toasts"></div>
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>

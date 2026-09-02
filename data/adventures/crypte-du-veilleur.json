@@ -1,0 +1,353 @@
+{
+  "id": "crypte-du-veilleur",
+  "title": "La Crypte du Veilleur",
+  "subtitle": "Une courte aventure d’exemple pour tester le compagnon — contenu original.",
+  "levels": "1-2",
+  "source": { "book": "Exemple intégré", "pages": "" },
+  "summary": "À Val-Corbeau, des moutons disparaissent près d’une colline coiffée de ruines. Sous les pierres, **Frère Ormond**, prêtre déchu, réveille les morts pour mettre la main sur l’amulette du Veilleur. Une bande de gobelins squatte l’entrée de la crypte et vend son silence.",
+  "intro": [
+    {
+      "id": "accroche",
+      "title": "Accroche (à lire à la taverne)",
+      "text": "Le bourgmestre de Val-Corbeau fait glisser une bourse sur la table. « Trois moutons la semaine dernière, cinq celle-ci. Et hier, le vieux Tobin n’est pas rentré. Tout vient de la colline aux corbeaux. Allez voir, ramenez-moi une réponse, et cette bourse est à vous. » Il y a 25 po dedans, et le regard de tous les clients de l’auberge est posé sur vous."
+    }
+  ],
+  "notes": [
+    {
+      "id": "resume-mj",
+      "title": "Ce qui se passe vraiment",
+      "text": "Frère Ormond a découvert que la crypte abrite l’**amulette du Veilleur**, une relique qui protège du sommeil des morts. Il fouille la chapelle depuis trois semaines avec deux cultistes, en levant des morts pour faire le sale travail. Les moutons nourrissent la goule qu’il n’arrive pas à contrôler. Les gobelins de [[m:goblin-boss|Griffe-Rouge]] gardent l’entrée en échange de la moitié des « trouvailles »… qu’Ormond ne leur donnera jamais."
+    },
+    {
+      "id": "rythme",
+      "title": "Rythme conseillé",
+      "text": "Une séance de 3 à 4 h. Salles 1 à 3 : ambiance et enquête (30 min). Salle 4 : le combat ou la négociation avec les gobelins est le pivot. Salles 5 et 6 : montée en tension, révélation d’Ormond. Salle 7 : récompense. Laisse les joueurs négocier avec Griffe-Rouge : les gobelins connaissent le passage secret de la salle 3."
+    }
+  ],
+  "npcs": [
+    {
+      "id": "maelle",
+      "name": "Maëlle",
+      "role": "Bergère de Val-Corbeau",
+      "attitude": "amical",
+      "description": "Seize ans, cape rapiécée, un chien nommé Bouton. Elle a vu des « petites silhouettes » sur la colline et n’ose plus y monter. Elle connaît le sentier qui contourne le porche.",
+      "wants": "Retrouver le vieux Tobin, qui lui apprenait à lire.",
+      "dialogues": [
+        { "trigger": "Première rencontre", "line": "« Vous montez là-haut ? Alors emmenez Bouton, il sent les choses mortes avant qu’elles ne vous sentent. »" },
+        { "trigger": "Si on lui demande ce qu’elle a vu", "line": "« Des petits, avec des yeux qui brillent. Ils riaient. Et une fois, une lumière verte, en bas, sous les pierres. Comme une bougie qui aurait mal tourné. »" },
+        { "trigger": "Si on lui parle de Tobin", "line": "« Il est monté avec sa lanterne et son bâton, pour “remettre de l’ordre”. Il n’est pas redescendu. Ramenez-le. Ou ramenez sa lanterne, au moins. »" }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "approche",
+      "title": "I. L’approche",
+      "intro": "Extérieur, enquête et première embûche. Ambiance : brume, corbeaux, silence.",
+      "rooms": ["r1", "r2", "r3"]
+    },
+    {
+      "id": "crypte",
+      "title": "II. La crypte",
+      "intro": "Sous terre. Les gobelins, puis les morts, puis Ormond.",
+      "rooms": ["r4", "r5", "r6", "r7"]
+    }
+  ],
+  "rooms": [
+    {
+      "id": "r1",
+      "number": "1",
+      "name": "La colline aux corbeaux",
+      "tags": ["extérieur", "social"],
+      "readAloud": [
+        "La colline se dresse au bout des pâtures, chauve et grise, coiffée de blocs de pierre effondrés. Des dizaines de corbeaux s’y disputent quelque chose que vous ne distinguez pas d’ici. Le vent porte une odeur douceâtre, comme un cellier ouvert trop tard.",
+        "Une fille en cape rapiécée vous regarde approcher, la main sur la tête d’un chien noir. Elle ne fuit pas, mais elle ne s’approche pas non plus."
+      ],
+      "notes": [
+        "Maëlle (voir PNJ) peut indiquer le **sentier des bergers** qui contourne le porche effondré (salle 2) et mène directement au vestibule (salle 3) par une fissure. Le sentier évite le piège et les rats, mais il faut une heure de plus.",
+        "Les corbeaux se disputent la carcasse d’un mouton, à mi-pente. Survie DD 10 : la bête a été traînée depuis le haut de la colline, pas tuée ici. Les traces sont petites, chaussées : des gobelins."
+      ],
+      "npcs": [
+        {
+          "id": "maelle",
+          "name": "Maëlle",
+          "role": "Bergère, guide possible",
+          "attitude": "amical",
+          "description": "Voir la fiche PNJ dans la vue d’ensemble. Elle accepte de guider jusqu’à la fissure, pas plus loin.",
+          "wants": "Retrouver le vieux Tobin.",
+          "dialogues": [
+            { "trigger": "Accueil", "line": "« Vous montez là-haut ? Alors emmenez Bouton, il sent les choses mortes avant qu’elles ne vous sentent. »" },
+            { "trigger": "Si on lui propose de venir", "line": "« Jusqu’à la fissure. Pas un pas de plus. Là-dessous, ça respire mal. »" }
+          ]
+        }
+      ],
+      "checks": [
+        { "skill": "Survie", "dc": 10, "text": "Traces de bottes de petite taille autour de la carcasse : trois ou quatre gobelins, il y a moins d’un jour." },
+        { "skill": "Perception", "dc": 13, "text": "Une lueur verdâtre filtre par intermittence entre les blocs du sommet. Elle vient de sous terre." }
+      ],
+      "connections": [
+        { "to": "r2", "via": "Sentier principal jusqu’au porche", "note": "10 minutes de montée" },
+        { "to": "r3", "via": "Sentier des bergers puis fissure", "note": "Avec Maëlle uniquement — 1 h, évite le porche", "secret": true }
+      ]
+    },
+    {
+      "id": "r2",
+      "number": "2",
+      "name": "Le porche effondré",
+      "tags": ["piège", "combat"],
+      "readAloud": [
+        "Deux colonnes brisées encadrent un escalier qui s’enfonce dans la colline. Un linteau de pierre, fendu en son milieu, pend au-dessus des premières marches. Sur la deuxième marche, une lanterne éteinte, le verre cassé. Plus bas, dans le noir, quelque chose gratte."
+      ],
+      "notes": [
+        "La lanterne est celle de **Tobin**. Son bâton est en bas des marches, dans la salle 3. Tobin lui-même est en salle 6, transformé en zombie.",
+        "Le linteau tient par miracle : les gobelins l’ont calé avec un coin de bois qu’ils retirent quand ils entendent des pas lourds. Ici, personne ne le surveille ce soir : c’est un piège « passif »."
+      ],
+      "traps": [
+        {
+          "id": "linteau",
+          "name": "Linteau descellé",
+          "trigger": "Une créature de taille M ou plus pose le pied sur la 3e marche sans précaution.",
+          "effect": "Le linteau s’écrase : Jet de sauvegarde de Dextérité DD 12, 2d6 dégâts contondants en cas d’échec (moitié en cas de réussite). Le bruit alerte les rats.",
+          "detect": "Perception DD 12 pour voir le coin de bois et la fissure ; Investigation DD 10 pour comprendre le mécanisme.",
+          "disarm": "Retirer le coin de bois depuis le côté (Dextérité DD 10 avec des outils de voleur, ou simplement pousser le linteau à distance avec une perche).",
+          "dc": 12
+        }
+      ],
+      "enemies": [
+        {
+          "id": "rats",
+          "monster": "giant-rat",
+          "count": 3,
+          "hidden": true,
+          "where": "Dans un nid de chiffons sous l’escalier, à droite.",
+          "tactics": "Attaquent seulement si le linteau tombe ou si on fouille le nid. Sinon, ils suivent le groupe à distance en couinant."
+        }
+      ],
+      "treasure": [
+        { "id": "bourse", "item": "Bourse de cuir moisie", "value": "12 pa", "where": "Dans le nid des rats", "note": "Appartenait à un voyageur mort il y a des années." },
+        { "id": "bague", "item": "Bague d’argent gravée d’un corbeau", "value": "25 po", "where": "Dans le nid des rats", "note": "Le bourgmestre reconnaîtrait le sceau de l’ancienne famille des Veilleurs." }
+      ],
+      "connections": [
+        { "to": "r3", "via": "Escalier de pierre, 20 marches", "note": "Obscurité totale en bas" }
+      ]
+    },
+    {
+      "id": "r3",
+      "number": "3",
+      "name": "Vestibule des statues",
+      "tags": ["énigme"],
+      "readAloud": [
+        "Le bas de l’escalier s’ouvre sur une salle carrée aux murs suintants. Deux statues de pierre se font face : un homme en armure tenant une lanterne, une femme voilée l’index sur les lèvres. Entre eux, une porte de bronze verdie, sans poignée. Au sol, un bâton de marche brisé en deux."
+      ],
+      "notes": [
+        "La porte de bronze s’ouvre en **tirant la lanterne de la statue** (elle pivote vers le bas). Les gobelins passent par là dix fois par jour ; leurs traces de pas boueuses mènent droit à la statue.",
+        "La statue voilée cache le **passage dérobé** vers la chapelle (salle 6) : appuyer sur son index fait coulisser un panneau derrière elle. Griffe-Rouge le connaît et pourra le monnayer."
+      ],
+      "features": [
+        { "id": "statues", "title": "Les deux statues", "text": "Religion DD 10 : ce sont les symboles du **Veilleur**, un saint local oublié — la lanterne pour veiller, le silence pour les morts. L’inscription au socle dit : « Éclaire, et tais-toi. »" },
+        { "id": "baton", "title": "Le bâton brisé", "text": "C’est celui de Tobin. Du sang séché sur l’extrémité : il s’est défendu. Des traces de traînée continuent vers la porte de bronze." }
+      ],
+      "checks": [
+        { "skill": "Investigation", "dc": 12, "text": "La lanterne de la statue est polie par l’usage : elle bouge. La tirer ouvre la porte de bronze." },
+        { "skill": "Perception", "dc": 15, "text": "Un courant d’air froid vient de derrière la statue voilée. Son index est plus propre que le reste." }
+      ],
+      "connections": [
+        { "to": "r4", "via": "Porte de bronze", "note": "S’ouvre en tirant la lanterne de la statue" },
+        { "to": "r6", "via": "Passage dérobé derrière la statue voilée", "note": "Index de la statue — 30 m de boyau étroit", "secret": true }
+      ]
+    },
+    {
+      "id": "r4",
+      "number": "4",
+      "name": "Salle des gardes",
+      "tags": ["combat", "pnj"],
+      "readAloud": [
+        "La porte grince sur une salle enfumée. Un feu de camp fume au centre, entouré de caisses éventrées et d’une carcasse de mouton à moitié dépecée. Quatre paires d’yeux jaunes se tournent vers vous. Le plus grand des gobelins, un cimeterre dans chaque main et une écharpe rouge autour du cou, ne bouge pas. Il sourit.",
+        "« Encore des invités. Ormond va être content. Ou pas. Entrez, entrez — la porte se referme derrière vous de toute façon. »"
+      ],
+      "notes": [
+        "**Griffe-Rouge** préfère parler d’abord. Il n’a aucune loyauté envers Ormond et sent bien qu’il va se faire rouler. S’il obtient une bonne offre (la moitié du trésor de la salle 7, ou simplement la vie sauve et le droit de partir avec les caisses), il révèle le passage secret de la salle 3 et le fait que « le prêtre a un monstre dans une boîte ».",
+        "Si le combat éclate : les guerriers tirent depuis les caisses puis se cachent (Fuite agile). Griffe-Rouge se colle à un guerrier pour utiliser Redirection d’attaque. Voir les résumés des fiches.",
+        "La porte de bronze se referme seule après 1 minute (contrepoids). Elle se rouvre depuis l’intérieur par un levier à côté."
+      ],
+      "enemies": [
+        { "id": "guerriers", "monster": "goblin-warrior", "count": 3, "where": "Derrière les caisses, arcs prêts.", "tactics": "Une volée de flèches, puis Fuite agile derrière les caisses. Visent le personnage le moins armuré." },
+        { "id": "griffe-rouge", "monster": "goblin-boss", "name": "Griffe-Rouge", "count": 1, "where": "Debout près du feu, entre les PJ et la porte du fond.", "tactics": "Parle d’abord. En combat : reste collé à un guerrier pour Redirection d’attaque, deux cimeterres sur la cible la plus faible." }
+      ],
+      "npcs": [
+        {
+          "id": "griffe-rouge",
+          "name": "Griffe-Rouge",
+          "role": "Chef des gobelins",
+          "attitude": "méfiant",
+          "monster": "goblin-boss",
+          "description": "Écharpe rouge, dents limées, un œil laiteux. Beaucoup plus malin que sa bande. Se sait floué par Ormond.",
+          "wants": "Partir vivant avec les caisses, et si possible une part du trésor du Veilleur.",
+          "dialogues": [
+            { "trigger": "Ouverture", "line": "« Vous tuez, on meurt, vous descendez, le prêtre vous tue. Tout le monde perd. Ou bien… on cause. »" },
+            { "trigger": "Si on lui demande qui est Ormond", "line": "« Un humain en robe qui pue l’encens et qui parle aux cadavres. Il nous a promis la moitié de ce qu’il trouve. Il trouve rien depuis trois semaines. Ou alors il ment. »" },
+            { "trigger": "Si on lui propose un marché", "line": "« Les caisses sont à nous. Le prêtre est à vous. Et je vous montre une porte que même lui connaît pas. Marché ? »" },
+            { "trigger": "Si on l’intimide (Intimidation DD 12)", "line": "« D’accord ! D’accord. La statue, en haut, celle qui fait chut : appuie sur son doigt. Et le monstre dans la boîte, c’est pas nous, c’est lui. »" },
+            { "trigger": "S’il tombe sous 8 PV", "line": "« Assez ! Assez… prenez les caisses. Prenez tout. Laissez-moi ramper dehors. »" }
+          ],
+          "secrets": [
+            "Il sait qu’Ormond garde une **goule enfermée dans un sarcophage** de la chapelle, nourrie avec les moutons.",
+            "Il a volé la clé de la cachette du Veilleur (salle 7) sur le corps de Tobin avant qu’Ormond ne le relève. Elle est dans sa botte gauche."
+          ]
+        }
+      ],
+      "treasure": [
+        { "id": "caisses", "item": "Caisses de marchandises volées (étoffes, sel, outils)", "value": "60 po au total", "where": "Autour du feu", "note": "Encombrant : il faut une charrette." },
+        { "id": "cle", "item": "Clé de fer ornée d’un corbeau", "where": "Botte gauche de Griffe-Rouge", "note": "Ouvre la cachette du Veilleur (salle 7)." },
+        { "id": "potion", "item": "Potion de soins", "qty": 1, "magic": true, "where": "Dans la sacoche de Griffe-Rouge" }
+      ],
+      "connections": [
+        { "to": "r5", "via": "Porte du fond, ouverte", "note": "Odeur de poussière et de vieux os" }
+      ]
+    },
+    {
+      "id": "r5",
+      "number": "5",
+      "name": "Couloir des ossuaires",
+      "tags": ["combat", "piège"],
+      "readAloud": [
+        "Un long couloir voûté. De chaque côté, des niches creusées dans la roche, chacune abritant un squelette assis, mains sur les genoux, comme s’il attendait. Il y en a des dizaines. Au fond, une lumière verte tremblote sous une porte."
+      ],
+      "notes": [
+        "Seuls **trois squelettes** sont animés (marqués d’un signe à la craie sur le crâne — Perception DD 14 pour le remarquer). Ils se lèvent quand une créature vivante dépasse le milieu du couloir, ou dès que le piège se déclenche.",
+        "Le sol au milieu du couloir cache une dalle à dards. Les gobelins sautent par-dessus : la dalle est couverte de traces de pas… tout autour, jamais dessus."
+      ],
+      "enemies": [
+        { "id": "squelettes", "monster": "skeleton", "count": 3, "hidden": true, "where": "Assis dans les niches, 2 à gauche, 1 à droite, à mi-couloir.", "tactics": "Se lèvent et bloquent le couloir. Frappent la créature la plus proche. Ne poursuivent pas au-delà de la porte verte." }
+      ],
+      "traps": [
+        {
+          "id": "dards",
+          "name": "Dalle à dards",
+          "trigger": "Pression sur la dalle centrale (Perception DD 13 pour remarquer l’absence de traces dessus).",
+          "effect": "Jet d’attaque +5 contre chaque créature à 1,50 m de la dalle : 1d4 dégâts perforants et Jet de sauvegarde de Constitution DD 11 ou empoisonné 1 h. Réveille les squelettes.",
+          "disarm": "Coincer le mécanisme dans la niche voisine (outils de voleur DD 12) ou simplement enjamber la dalle.",
+          "dc": 13
+        }
+      ],
+      "checks": [
+        { "skill": "Perception", "dc": 14, "text": "Trois crânes portent un signe à la craie : un œil fermé. Ce sont ceux qui bougeront." }
+      ],
+      "connections": [
+        { "to": "r6", "via": "Porte de bois sous laquelle filtre la lumière verte", "note": "Non verrouillée. Bruit de psalmodie derrière." }
+      ]
+    },
+    {
+      "id": "r6",
+      "number": "6",
+      "name": "Chapelle du Veilleur",
+      "tags": ["combat", "pnj", "boss"],
+      "readAloud": [
+        "La chapelle est ronde, haute, et brille d’une lumière verte malade qui vient de trois braseros. Au centre, un sarcophage de pierre au couvercle entrouvert, retenu par une chaîne. Devant, un homme en robe grise, le crâne rasé, lit un grimoire à voix haute. Deux silhouettes se tiennent derrière lui, immobiles — l’une porte encore la veste de laine d’un vieux berger.",
+        "L’homme lève les yeux. « Ah. Les gobelins ont failli. Peu importe. Tobin, mon ami, occupe-toi de nos invités. »"
+      ],
+      "notes": [
+        "**Frère Ormond** ne se bat pas au premier round : il ordonne aux zombies d’attaquer et recule vers l’autel. Il commence à **détacher la chaîne du sarcophage** (2 actions) pour libérer la goule s’il se sent perdre.",
+        "La **goule** est affamée : une fois libre, elle attaque la créature la plus proche… y compris Ormond s’il est à portée. Un joueur malin peut s’en servir.",
+        "Tobin-zombie a encore sa lanterne accrochée à la ceinture. La lui rendre après le combat est le petit moment émotion à offrir à Maëlle.",
+        "Ormond cherche l’**amulette du Veilleur** depuis trois semaines. Elle n’est pas ici : elle est dans la cachette (salle 7), derrière l’autel. Il ne le sait pas."
+      ],
+      "features": [
+        { "id": "autel", "title": "L’autel", "text": "Une dalle de pierre gravée d’une lanterne. Le panneau derrière l’autel porte une serrure en forme de corbeau : la **clé de Griffe-Rouge** l’ouvre. Sinon, outils de voleur DD 15." },
+        { "id": "grimoire", "title": "Le grimoire d’Ormond", "text": "Un rituel d’animation des morts recopié de travers. Arcanes ou Religion DD 12 : il fonctionne mal, ce qui explique les morts qui obéissent à peine. Vaut 50 po chez un collectionneur peu regardant." }
+      ],
+      "enemies": [
+        { "id": "ormond", "monster": "ormond", "name": "Frère Ormond", "count": 1, "where": "Devant le sarcophage, puis recule vers l’autel.", "tactics": "Round 1 : Injonction (« Fuis ! ») sur le guerrier le plus dangereux. Ensuite : Toucher glacial en restant derrière les zombies. Libère la goule s’il tombe sous 12 PV." },
+        { "id": "zombies", "monster": "zombie", "name": "Zombies (dont Tobin)", "count": 2, "where": "Derrière Ormond.", "tactics": "Avancent droit devant. Rappelle la Robustesse morte-vivante." },
+        { "id": "goule", "monster": "ghoul", "count": 1, "hidden": true, "where": "Enchaînée dans le sarcophage.", "tactics": "Libérée par Ormond (2 actions) ou si le sarcophage est ouvert par les PJ. Attaque la créature la plus proche, Ormond compris." }
+      ],
+      "npcs": [
+        {
+          "id": "ormond",
+          "name": "Frère Ormond",
+          "role": "Prêtre déchu",
+          "attitude": "hostile",
+          "monster": "ormond",
+          "description": "La cinquantaine, crâne rasé, mains tremblantes. Ancien acolyte du temple de Val-Corbeau, chassé pour avoir volé des reliques. Se croit un élu.",
+          "wants": "L’amulette du Veilleur, qu’il croit capable de le rendre maître des morts.",
+          "dialogues": [
+            { "trigger": "Ouverture", "line": "« Ah. Les gobelins ont failli. Peu importe. Tobin, mon ami, occupe-toi de nos invités. »" },
+            { "trigger": "Si on lui demande pourquoi", "line": "« Parce que le temple m’a jeté dehors comme un chien, et que les chiens finissent par mordre. L’amulette est ici. Je le sais. Je la SENS. »" },
+            { "trigger": "S’il perd", "line": "« Vous ne comprenez pas… Sans elle, ils ne dorment jamais. Aucun d’eux. Et moi non plus. »" }
+          ]
+        }
+      ],
+      "treasure": [
+        { "id": "grimoire", "item": "Grimoire de nécromancie bâclé", "value": "50 po", "where": "Dans les mains d’Ormond" },
+        { "id": "lanterne", "item": "Lanterne de Tobin", "where": "À la ceinture du zombie-Tobin", "note": "Sans valeur… sauf pour Maëlle." },
+        { "id": "bourse-ormond", "item": "Bourse d’Ormond", "value": "18 po, 30 pa", "where": "Sous sa robe" }
+      ],
+      "connections": [
+        { "to": "r7", "via": "Panneau derrière l’autel", "note": "Serrure corbeau — clé de Griffe-Rouge ou outils de voleur DD 15", "secret": true }
+      ]
+    },
+    {
+      "id": "r7",
+      "number": "7",
+      "name": "Cachette du Veilleur",
+      "tags": ["trésor"],
+      "readAloud": [
+        "Un réduit à peine assez grand pour deux personnes. Sur une étagère de pierre, une lanterne éteinte, un livre relié de cuir, et un coffret de bois noir. Il ne fait pas froid ici. C’est la première pièce de la crypte où l’on n’entend rien."
+      ],
+      "notes": [
+        "Le coffret contient l’**amulette du Veilleur**. Tant qu’elle est portée dans un rayon de 30 m, aucun mort-vivant ne peut être *animé* (les morts-vivants existants ne sont pas affectés). C’est une excellente accroche pour une suite : quelqu’un d’autre la voudra.",
+        "Le livre est le journal du dernier Veilleur : il mentionne « la chose sous le lac » — un crochet pour ta prochaine aventure."
+      ],
+      "treasure": [
+        { "id": "amulette", "item": "Amulette du Veilleur", "magic": true, "where": "Dans le coffret noir", "note": "Objet merveilleux, peu courant. Voir notes MJ." },
+        { "id": "journal", "item": "Journal du dernier Veilleur", "where": "Sur l’étagère", "note": "Crochet pour la suite." },
+        { "id": "lanterne-veilleur", "item": "Lanterne du Veilleur", "value": "5 po", "where": "Sur l’étagère", "note": "Brûle sans huile pendant 1 h par jour, lumière vive 6 m." },
+        { "id": "pieces", "item": "Pièces anciennes", "value": "40 po, 3 pierres précieuses (10 po chacune)", "where": "Au fond du coffret" }
+      ],
+      "checks": [
+        { "skill": "Histoire", "dc": 12, "text": "Les Veilleurs étaient une confrérie locale qui gardait les cryptes de la vallée. Le dernier est mort il y a soixante ans, sans successeur." }
+      ],
+      "connections": []
+    }
+  ],
+  "monsters": [
+    {
+      "id": "ormond",
+      "name": "Frère Ormond",
+      "nameEn": "Brother Ormond (PNJ original)",
+      "source": "Aventure d’exemple — profil original",
+      "size": "M",
+      "type": "Humanoïde (humain)",
+      "alignment": "Neutre mauvais",
+      "cr": "1",
+      "xp": 200,
+      "pb": 2,
+      "ac": 13,
+      "acNote": "armure de cuir clouté",
+      "hp": 27,
+      "hpFormula": "6d8",
+      "speed": "9 m",
+      "abilities": { "str": 10, "dex": 12, "con": 11, "int": 12, "wis": 15, "cha": 13 },
+      "saves": "Sag +4",
+      "skills": "Religion +3, Tromperie +3",
+      "senses": "Perception passive 12",
+      "languages": "commun",
+      "traits": [
+        { "name": "Maître des morts (bancal)", "text": "Par une action bonus, Ormond ordonne à un mort-vivant qu’il a animé et qu’il peut voir de se déplacer de la moitié de sa vitesse. Si Ormond tombe à 0 PV, les zombies continuent d’attaquer la créature la plus proche." }
+      ],
+      "actions": [
+        { "name": "Serpe rituelle", "text": "Jet d’attaque au corps à corps : +3, allonge 1,50 m. Touché : 3 (1d4 + 1) dégâts tranchants plus 3 (1d6) dégâts nécrotiques." },
+        { "name": "Toucher glacial (tour de magie)", "text": "Jet d’attaque à distance : +4, portée 36 m. Touché : 5 (1d10) dégâts nécrotiques et la cible ne peut pas récupérer de points de vie jusqu’au début du prochain tour d’Ormond." },
+        { "name": "Injonction (1/jour, sort de niveau 1)", "text": "Une créature qu’il peut voir à 18 m effectue un jet de sauvegarde de Sagesse DD 12. Échec : elle obéit à un ordre d’un mot (« Fuis », « Lâche », « Approche »…) à son prochain tour." }
+      ],
+      "summary": {
+        "style": "Nécromant amateur : se cache derrière ses morts et parle trop.",
+        "intent": "Trouver l’amulette. Survivre pour recommencer ailleurs.",
+        "tactics": "Round 1 : **Injonction** sur le combattant le plus menaçant. Puis Toucher glacial depuis l’arrière. Sous 12 PV, libère la goule (2 actions) en espérant qu’elle s’occupe des PJ.",
+        "flee": "Sous 6 PV, se rend en pleurant et propose de « tout expliquer ». Il tentera de fuir à la première occasion.",
+        "weakness": "Aucune défense contre les attaques à distance. Ses morts-vivants l’ignorent s’il tombe.",
+        "roleplay": "Voix douce et blessée, cite des versets, appelle les zombies par leur prénom."
+      }
+    }
+  ]
+}

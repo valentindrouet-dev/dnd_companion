@@ -1,0 +1,15 @@
+{
+  "adventures": [
+    {
+      "id": "crypte-du-veilleur",
+      "title": "La Crypte du Veilleur",
+      "levels": "1-2",
+      "source": "Aventure d’exemple (contenu original)",
+      "summary": "Des moutons disparaissent près d’une colline aux corbeaux. Sous les ruines, un prêtre déchu réveille les morts pour retrouver l’amulette du Veilleur.",
+      "path": "adventures/crypte-du-veilleur.json"
+    }
+  ],
+  "monsters": [
+    "monsters/srd-2024.json"
+  ]
+}
