@@ -17,6 +17,11 @@ let reloading = false;
 
 export function currentVersion() { return self.APP_VERSION; }
 
+/** Version affichée : « 0.12 » plutôt que « 0.12.0 », mais « 0.12.1 » sur un correctif. */
+export function shortVersion(v = self.APP_VERSION) {
+  return String(v ?? '').replace(/^(\d+\.\d+)\.0$/, '$1');
+}
+
 /** Version publiée, lue sans passer par le moindre cache. */
 async function publishedVersion() {
   try {

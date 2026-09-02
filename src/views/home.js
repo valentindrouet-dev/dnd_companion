@@ -5,13 +5,14 @@ import { store } from '../store.js';
 import { navigate, advPath, roomPath, listPath } from '../router.js';
 import { shell } from './shell.js';
 import { openEncounterPopup } from '../encounters/ui.js';
+import { shortVersion } from '../update.js';
 
 export async function homeView() {
   const advs = getIndex().adventures || [];
   const main = h('div', null,
     h('div', { class: 'hero' },
       h('h1', null, 'Compagnon D&D'),
-      h('div', { class: 'version' }, 'v' + self.APP_VERSION)),
+      h('div', { class: 'version' }, 'v' + shortVersion())),
     advs.length ? advs.map(adventureCard) : h('div', { class: 'empty' }, 'Aucune aventure dans data/index.json.'),
     h('div', { class: 'toolbar', style: { marginTop: '18px' } },
       h('button', { class: 'btn', onclick: () => navigate('index') }, icon('book'), 'Index'),

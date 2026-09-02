@@ -6,7 +6,7 @@ import { store } from '../store.js';
 import { shell } from './shell.js';
 import { confirmPopup, openPopup } from '../ui/popup.js';
 import { toast } from '../ui/toast.js';
-import { checkForUpdate, applyUpdate } from '../update.js';
+import { checkForUpdate, applyUpdate, shortVersion } from '../update.js';
 import { enhancedOn } from '../variant.js';
 import { icon as ic } from '../icons.js';
 
@@ -43,7 +43,7 @@ export async function settingsView() {
       } }, icon('trash'), 'Tout réinitialiser')),
 
     h('h2', { style: { margin: '28px 0 8px', fontSize: '1.1em' } }, 'Application'),
-    h('p', { class: 'muted' }, `Version ${self.APP_VERSION}. `,
+    h('p', { class: 'muted' }, `Version ${shortVersion()}. `,
       'Les données (aventures, monstres) sont embarquées dans l’app ; les annotations restent sur cet appareil. ',
       'Pour installer sur iPad : Safari → Partager → « Sur l’écran d’accueil ». ',
       'L’app cherche une nouvelle version à chaque ouverture et à chaque retour au premier plan.'),
