@@ -9,7 +9,9 @@ import { openEncounterPopup } from '../encounters/ui.js';
 export async function homeView() {
   const advs = getIndex().adventures || [];
   const main = h('div', null,
-    h('div', { class: 'hero' }, h('h1', null, 'Compagnon D&D')),
+    h('div', { class: 'hero' },
+      h('h1', null, 'Compagnon D&D'),
+      h('div', { class: 'version' }, 'v' + self.APP_VERSION)),
     advs.length ? advs.map(adventureCard) : h('div', { class: 'empty' }, 'Aucune aventure dans data/index.json.'),
     h('div', { class: 'toolbar', style: { marginTop: '18px' } },
       h('button', { class: 'btn', onclick: () => navigate('index') }, icon('book'), 'Index'),

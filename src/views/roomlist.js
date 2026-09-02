@@ -8,7 +8,7 @@ import { store } from '../store.js';
 import { navigate, roomPath, advPath } from '../router.js';
 import { shell } from './shell.js';
 import { roomSidebar } from './sidebar.js';
-import { compareRoomNumbers } from '../util.js';
+import { compareRoomNumbers, slug } from '../util.js';
 import { roomProgress } from '../progress.js';
 
 let query = '';
