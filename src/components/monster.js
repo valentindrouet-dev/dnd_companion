@@ -101,14 +101,33 @@ function inlineLine(pairs) {
   return h('div', { class: 'mline' }, kept.map(([k, v]) => h('span', null, h('b', null, k), markup(String(v), 'span'))));
 }
 
+const ABIL = [['FOR', 'str'], ['DEX', 'dex'], ['CON', 'con'], ['INT', 'int'], ['SAG', 'wis'], ['CHA', 'cha']];
+
+const mod = (score) => Math.floor((score - 10) / 2);
+const signed = (n) => (n >= 0 ? '+' : '−') + Math.abs(n);
+
+/** Grille des six caractéristiques : le score et son modificateur, prêt pour les jets. */
+function abilitiesGrid(a) {
+  if (!a) return null;
+  return h('div', { class: 'abilities' }, ABIL.map(([label, key]) => h('div', { class: 'ability' },
+    h('div', { class: 'k' }, label),
+    h('div', { class: 'v' }, a[key] ?? '—'),
+    h('div', { class: 'm' }, a[key] == null ? '' : signed(mod(a[key]))))));
+}
+
 export function monsterStatblock(m) {
   return h('div', { class: 'statblock' },
     h('div', { class: 'sb-vitals' },
       h('div', { class: 'sb-vital' }, h('div', { class: 'v' }, m.ac ?? '—'), h('div', { class: 'k' }, 'CA')),
-      h('div', { class: 'sb-vital' }, h('div', { class: 'v' }, m.hp ?? '—'), h('div', { class: 'k' }, 'Points de vie')),
+      h('div', { class: 'sb-vital' },
+        h('div', { class: 'v' }, m.hp ?? '—'),
+        m.hpFormula ? h('div', { class: 'f' }, m.hpFormula) : null,
+        h('div', { class: 'k' }, 'Points de vie')),
       h('div', { class: 'sb-vital' }, h('div', { class: 'v', style: { fontSize: '1.05em' } }, m.speed ?? '—'), h('div', { class: 'k' }, 'Vitesse'))),
+    abilitiesGrid(m.abilities),
     inlineLine([['Vuln.', m.vulnerabilities], ['Rés.', m.resistances], ['Imm.', m.immunities]]),
-    inlineLine([['Sauv.', m.saves], ['Langues', m.languages]]),
+    inlineLine([['Sauv.', m.saves], ['Comp.', m.skills]]),
+    inlineLine([['Sens', m.senses], ['Langues', m.languages]]),
     group('Traits', m.traits),
     group('Actions', m.actions),
     group('Actions bonus', m.bonusActions),

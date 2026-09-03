@@ -3,7 +3,7 @@
     "id": "kuo-toa",
     "name": "Kuo-toa",
     "nameEn": "Kuo-toa",
-    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "source": "Monster Manual 2024, p. 189",
     "size": "M",
     "type": "Humanoïde (kuo-toa)",
     "alignment": "Neutre mauvais",
@@ -12,6 +12,7 @@
     "pb": 2,
     "ac": 13,
     "hp": 18,
+    "hpFormula": "4d8",
     "speed": "9 m, nage 9 m",
     "abilities": {
       "str": 13,
@@ -23,7 +24,7 @@
     },
     "acNote": "armure naturelle et bouclier",
     "skills": "Perception +4",
-    "senses": "vision dans le noir 36 m ; Perception passive 14",
+    "senses": "vision dans le noir 36 m ; vision véritable 9 m ; Perception passive 14",
     "languages": "commun des profondeurs",
     "traits": [
       {
@@ -64,7 +65,7 @@
     "id": "kuo-toa-whip",
     "name": "Fouet kuo-toa",
     "nameEn": "Kuo-toa Whip",
-    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "source": "Monster Manual 2024, p. 190",
     "size": "M",
     "type": "Humanoïde (kuo-toa)",
     "alignment": "Neutre mauvais",
@@ -72,19 +73,20 @@
     "xp": 200,
     "pb": 2,
     "ac": 11,
-    "hp": 65,
+    "hp": 45,
+    "hpFormula": "7d8 + 14",
     "speed": "9 m, nage 9 m",
     "abilities": {
       "str": 14,
       "dex": 10,
-      "con": 12,
+      "con": 14,
       "int": 12,
       "wis": 14,
-      "cha": 14
+      "cha": 11
     },
     "acNote": "armure naturelle",
-    "skills": "Perception +4, Religion +3",
-    "senses": "vision dans le noir 36 m ; Perception passive 14",
+    "skills": "Perception +6, Religion +3",
+    "senses": "vision dans le noir 36 m ; vision véritable 9 m ; Perception passive 16",
     "languages": "commun des profondeurs",
     "traits": [
       {
@@ -176,7 +178,7 @@
     "id": "chuul",
     "name": "Chuul",
     "nameEn": "Chuul",
-    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "source": "Monster Manual 2024, p. 71",
     "size": "G",
     "type": "Aberration",
     "alignment": "Chaotique mauvais",
@@ -184,7 +186,8 @@
     "xp": 1100,
     "pb": 2,
     "ac": 16,
-    "hp": 93,
+    "hp": 76,
+    "hpFormula": "9d10 + 27",
     "speed": "9 m, nage 9 m",
     "abilities": {
       "str": 19,
@@ -197,7 +200,7 @@
     "acNote": "exosquelette",
     "skills": "Perception +4",
     "immunities": "poison ; empoisonné",
-    "senses": "vision aveugle 9 m, vision dans le noir 18 m ; Perception passive 14",
+    "senses": "vision dans le noir 18 m ; Perception passive 14",
     "languages": "comprend le profond mais ne parle pas",
     "traits": [
       {
@@ -230,7 +233,7 @@
     "id": "merrow",
     "name": "Merrow",
     "nameEn": "Merrow",
-    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "source": "Monster Manual 2024, p. 210",
     "size": "G",
     "type": "Monstruosité",
     "alignment": "Chaotique mauvais",
@@ -239,6 +242,7 @@
     "pb": 2,
     "ac": 13,
     "hp": 45,
+    "hpFormula": "6d10 + 12",
     "speed": "3 m, nage 12 m",
     "abilities": {
       "str": 18,
@@ -250,7 +254,7 @@
     },
     "acNote": "armure naturelle",
     "senses": "vision dans le noir 18 m ; Perception passive 10",
-    "languages": "abyssal, aquatique",
+    "languages": "abyssal, primordial (aquatique)",
     "traits": [
       {
         "name": "Amphibie",
@@ -495,7 +499,7 @@
     "id": "water-elemental",
     "name": "Élémentaire d’eau",
     "nameEn": "Water Elemental",
-    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "source": "Monster Manual 2024, p. 322",
     "size": "G",
     "type": "Élémentaire",
     "alignment": "Neutre",
@@ -504,6 +508,7 @@
     "pb": 3,
     "ac": 14,
     "hp": 114,
+    "hpFormula": "12d10 + 48",
     "speed": "9 m, nage 27 m",
     "abilities": {
       "str": 18,
@@ -513,10 +518,10 @@
       "wis": 10,
       "cha": 8
     },
-    "resistances": "acide ; armes non magiques",
-    "immunities": "poison ; épuisement, agrippé, paralysé, pétrifié, à terre, entravé, empoisonné, inconscient",
+    "resistances": "acide, feu",
+    "immunities": "poison ; épuisement, agrippé, paralysé, pétrifié, empoisonné, à terre, entravé, inconscient",
     "senses": "vision dans le noir 18 m ; Perception passive 10",
-    "languages": "aquatique",
+    "languages": "primordial (aquatique)",
     "traits": [
       {
         "name": "Forme d’eau",
@@ -553,7 +558,7 @@
     "id": "aboleth",
     "name": "Aboleth de la Sargauth",
     "nameEn": "Aboleth",
-    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "source": "Monster Manual 2024, p. 12",
     "size": "G",
     "type": "Aberration",
     "alignment": "Loyal mauvais",
@@ -561,7 +566,8 @@
     "xp": 5900,
     "pb": 4,
     "ac": 17,
-    "hp": 135,
+    "hp": 150,
+    "hpFormula": "20d10 + 40",
     "speed": "3 m, nage 12 m",
     "abilities": {
       "str": 21,
@@ -575,7 +581,7 @@
     "saves": "Con +6, Int +8, Sag +6",
     "skills": "Histoire +12, Perception +10",
     "senses": "vision dans le noir 36 m ; Perception passive 20",
-    "languages": "profond, télépathie 36 m",
+    "languages": "profond ; télépathie 36 m",
     "traits": [
       {
         "name": "Amphibie",
@@ -751,7 +757,7 @@
     "id": "yochlol",
     "name": "Yochlol",
     "nameEn": "Yochlol",
-    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "source": "Monster Manual 2024, p. 341",
     "size": "M",
     "type": "Fiélon (démon)",
     "alignment": "Chaotique mauvais",
@@ -759,23 +765,24 @@
     "xp": 5900,
     "pb": 4,
     "ac": 15,
-    "hp": 136,
+    "hp": 153,
+    "hpFormula": "18d8 + 72",
     "speed": "9 m, escalade 9 m",
     "abilities": {
       "str": 15,
-      "dex": 14,
+      "dex": 19,
       "con": 18,
       "int": 13,
       "wis": 15,
-      "cha": 15
+      "cha": 17
     },
     "acNote": "armure naturelle",
     "saves": "Dex +6, Int +5, Sag +6, Cha +6",
-    "skills": "Tromperie +10, Perspicacité +6",
-    "resistances": "froid, feu, foudre ; armes non magiques",
-    "immunities": "poison ; charmé, terrorisé, empoisonné",
-    "senses": "vision aveugle 36 m ; Perception passive 12",
-    "languages": "abyssal, elfique, commun des profondeurs ; télépathie 36 m",
+    "skills": "Tromperie +11, Perspicacité +6",
+    "resistances": "froid, feu, foudre",
+    "immunities": "poison ; empoisonné",
+    "senses": "vision dans le noir 36 m ; Perception passive 12",
+    "languages": "abyssal, elfique, commun des profondeurs",
     "traits": [
       {
         "name": "Métamorphe",

@@ -658,6 +658,7 @@ a.ref {
 .sb-vitals { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 10px 0; }
 .sb-vital { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 10px; text-align: center; }
 .sb-vital .v { font-size: 1.3em; font-weight: 800; }
+.sb-vital .f { font-size: 0.78em; color: var(--text-2); margin-top: -2px; }
 .sb-vital .k { font-size: 0.75em; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
 .abilities { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; margin: 10px 0; }
 .ability { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 6px 4px; text-align: center; }
