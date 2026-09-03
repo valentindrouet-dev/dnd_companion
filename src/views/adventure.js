@@ -4,7 +4,7 @@ import { h, asTextItem, elemId } from '../dom.js';
 import { icon, tagIcon } from '../icons.js';
 import { loadAdventure } from '../data.js';
 import { store, key } from '../store.js';
-import { navigate, roomPath, advPath, listPath } from '../router.js';
+import { navigate, roomPath, advPath, listPath, indexPath } from '../router.js';
 import { shell } from './shell.js';
 import { trackersOf, trackerButton } from '../components/tracker.js';
 import { roomSidebar } from './sidebar.js';
@@ -89,7 +89,7 @@ export async function adventureView(route) {
         'aria-label': store.settings.condensed ? 'Afficher les textes complets' : 'Résumer les textes',
         onclick: () => store.setSetting('condensed', !store.settings.condensed),
       }, icon(store.settings.condensed ? 'expand' : 'compress')),
-      h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Index', onclick: () => navigate('index') }, icon('book')),
+      h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Index', onclick: () => navigate(indexPath(adv.id)) }, icon('book')),
       h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Liste des salles', onclick: () => navigate(listPath(adv.id)) }, icon('list')),
     ] });
 }

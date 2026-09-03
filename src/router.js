@@ -3,6 +3,7 @@
 //   #/a/:adv                vue d'ensemble d'une aventure
 //   #/a/:adv/r/:room        page d'une salle
 //   #/a/:adv/liste          liste des salles triée par numéro
+//   #/a/:adv/index          index du donjon
 //   #/bestiaire[/:id]       bestiaire
 //   #/index                 index alphabétique
 //   #/recoltes              tables de récolte
@@ -16,6 +17,7 @@ export function parseRoute() {
   if (p[0] === 'a' && p[1]) {
     if (p[2] === 'r' && p[3]) return { name: 'room', adv: p[1], room: p[3] };
     if (p[2] === 'liste') return { name: 'roomlist', adv: p[1] };
+    if (p[2] === 'index') return { name: 'glossary', adv: p[1] };
     return { name: 'adventure', adv: p[1] };
   }
   if (p[0] === 'bestiaire') return { name: 'bestiary', monster: p[1] || null };
@@ -35,5 +37,6 @@ export function navigate(path) {
 export function roomPath(advId, roomId) { return `a/${encodeURIComponent(advId)}/r/${encodeURIComponent(roomId)}`; }
 export function advPath(advId) { return `a/${encodeURIComponent(advId)}`; }
 export function listPath(advId) { return `a/${encodeURIComponent(advId)}/liste`; }
+export function indexPath(advId) { return advId ? `a/${encodeURIComponent(advId)}/index` : 'index'; }
 
 export function onRoute(fn) { addEventListener('hashchange', fn); }

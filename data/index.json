@@ -6,7 +6,11 @@
       "levels": "6-7",
       "source": "Le Donjon du Mage dément, p. 27-42",
       "path": "adventures/mage-dement-strate-2.json",
-      "map": "strate-2"
+      "map": "strate-2",
+      "glossary": [
+        "glossary/commun.json",
+        "glossary/strate-2.json"
+      ]
     },
     {
       "id": "mage-dement-strate-3",
@@ -14,7 +18,11 @@
       "levels": "7-8",
       "source": "Le Donjon du Mage dément, p. 43-58",
       "path": "adventures/mage-dement-strate-3.json",
-      "map": "strate-3"
+      "map": "strate-3",
+      "glossary": [
+        "glossary/commun.json",
+        "glossary/strate-3.json"
+      ]
     }
   ],
   "monsters": [
@@ -25,8 +33,9 @@
     "monsters/sargauth-enhanced.json"
   ],
   "glossary": [
-    "glossary/undermountain.json",
-    "glossary/sargauth.json"
+    "glossary/commun.json",
+    "glossary/strate-2.json",
+    "glossary/strate-3.json"
   ],
   "loot": [
     "loot/creatures.json"

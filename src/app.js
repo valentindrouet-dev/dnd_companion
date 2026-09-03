@@ -13,7 +13,7 @@ import { settingsView } from './views/settings.js';
 import { openMonsterPopup } from './components/monster.js';
 import { closeAllPopups } from './ui/popup.js';
 import { loadMaps } from './components/map.js';
-import { loadGlossary, linkGlossary, openGlossaryPopup } from './glossary.js';
+import { loadGlossary, setGlossaryScope, linkGlossary, openGlossaryPopup } from './glossary.js';
 import { loadLoot } from './loot/generator.js';
 import { setTextDecorator } from './markup.js';
 import { glossaryView } from './views/glossary.js';
@@ -25,6 +25,14 @@ import { registerServiceWorker } from './update.js';
 const app = document.getElementById('app');
 let renderToken = 0;
 
+/** Portées du glossaire : une par aventure, plus la portée globale sous la clé ''. */
+function glossaryScopes() {
+  const idx = getIndex();
+  const scopes = new Map([['', idx.glossary || []]]);
+  for (const a of idx.adventures || []) if (a.glossary) scopes.set(a.id, a.glossary);
+  return scopes;
+}
+
 function applySettings() {
   const s = store.settings;
   document.documentElement.dataset.theme = s.theme || 'dark';
@@ -34,6 +42,8 @@ function applySettings() {
 }
 
 async function buildView(route) {
+  // chaque donjon a son propre index : on bascule dessus avant de rendre quoi que ce soit
+  setGlossaryScope(route.adv || null);
   switch (route.name) {
     case 'adventure': return adventureView(route);
     case 'room': return roomView(route);
@@ -73,7 +83,7 @@ document.addEventListener('click', (e) => {
   e.preventDefault();
   const [type, id] = a.dataset.ref.split(':');
   if (type === 'm') openMonsterPopup(id);
-  else if (type === 'g') openGlossaryPopup(id);
+  else if (type === 'g') openGlossaryPopup(id, { adv: parseRoute().adv || null });
   else if (type === 'r') {
     const route = parseRoute();
     if (route.adv) { closeAllPopups(); navigate(roomPath(route.adv, id)); }
@@ -86,7 +96,7 @@ async function boot() {
     await loadIndex();
     await loadMonsters();
     await loadMaps();
-    await loadGlossary(getIndex().glossary || []);
+    await loadGlossary(glossaryScopes());
     await loadLoot(getIndex().loot || [], getIndex().magicItems || []);
     setTextDecorator(linkGlossary);
   } catch (e) {

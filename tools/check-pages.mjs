@@ -42,7 +42,7 @@ const index = JSON.parse(readFileSync(new URL('../data/index.json', import.meta.
 const routes = [['accueil', ''], ['index', 'index'], ['bestiaire', 'bestiaire'], ['récoltes', 'recoltes'], ['objets', 'objets'], ['réglages', 'reglages']];
 for (const a of index.adventures || []) {
   const adv = JSON.parse(readFileSync(new URL('../data/' + a.path, import.meta.url), 'utf8'));
-  routes.push([`aventure ${a.id}`, `a/${a.id}`], [`liste ${a.id}`, `a/${a.id}/liste`]);
+  routes.push([`aventure ${a.id}`, `a/${a.id}`], [`liste ${a.id}`, `a/${a.id}/liste`], [`index ${a.id}`, `a/${a.id}/index`]);
   for (const r of adv.rooms) routes.push([`salle ${r.number ?? r.id}`, `a/${a.id}/r/${r.id}`]);
 }
 

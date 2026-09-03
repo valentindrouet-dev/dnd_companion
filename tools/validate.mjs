@@ -47,6 +47,7 @@ function checkMonster(m, where) {
 
 // ---------- aventures ----------
 const advIds = new Set();
+const advRooms = new Map();   // id d'aventure -> ids de salles, pour vérifier les liens du glossaire
 for (const meta of index.adventures || []) {
   if (!meta.id || !meta.title || !meta.path) { err(`index.json : aventure incomplète ${JSON.stringify(meta)}`); continue; }
   if (advIds.has(meta.id)) err(`index.json : id d'aventure en double « ${meta.id} »`);
@@ -69,6 +70,7 @@ function checkAdventure(adv, meta) {
 
   const rooms = adv.rooms || [];
   const roomIds = new Set();
+  advRooms.set(meta.id, roomIds);
   for (const r of rooms) {
     if (!r.id) { err(`${where} : salle sans id (${r.name || '?'})`); continue; }
     if (roomIds.has(r.id)) err(`${where} : id de salle en double « ${r.id} »`);
@@ -172,24 +174,61 @@ function walkStrings(node, fn, path = '') {
 }
 
 // ---------- glossaire ----------
+// Le glossaire est composé par portée : un socle commun, puis un fichier par donjon
+// qui le complète. On valide chaque portée telle que l'app la verra.
 const gloss = new Map();
 const lootByMonster = new Map();
-for (const gp of index.glossary || []) {
-  const file = join(DATA, gp);
-  if (!existsSync(file)) { err(`index.json : glossaire manquant ${gp}`); continue; }
-  const list = readJSON(file);
-  if (!Array.isArray(list)) { err(`${gp} : doit être un tableau`); continue; }
+{
   const KINDS = ['personne', 'faction', 'lieu', 'objet', 'divinite', 'peuple'];
   const noAccent = (s) => String(s ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-  list.forEach((e, i) => {
-    if (!e.id) return err(`${gp}[${i}] : id manquant`);
-    if (gloss.has(e.id)) err(`${gp} : id en double « ${e.id} »`);
-    gloss.set(e.id, e);
-    if (!e.name) err(`${gp}/${e.id} : name manquant`);
-    if (!e.what) warn(`${gp}/${e.id} : pas de description (what)`);
-    if (e.kind && !KINDS.includes(noAccent(e.kind))) warn(`${gp}/${e.id} : kind « ${e.kind} » inconnu`);
-    if (e.monster && !monsters.has(e.monster)) err(`${gp}/${e.id} : monstre inconnu « ${e.monster} »`);
-  });
+  const fichiers = new Map();
+  const lire = (gp) => {
+    if (fichiers.has(gp)) return fichiers.get(gp);
+    const file = join(DATA, gp);
+    if (!existsSync(file)) { err(`index.json : glossaire manquant ${gp}`); fichiers.set(gp, []); return []; }
+    const list = readJSON(file);
+    if (!Array.isArray(list)) { err(`${gp} : doit être un tableau`); fichiers.set(gp, []); return []; }
+    const vus = new Set();
+    list.forEach((e, i) => {
+      if (!e.id) return err(`${gp}[${i}] : id manquant`);
+      if (vus.has(e.id)) err(`${gp} : id en double « ${e.id} »`);
+      vus.add(e.id);
+      if (e.monster && !monsters.has(e.monster)) err(`${gp}/${e.id} : monstre inconnu « ${e.monster} »`);
+    });
+    fichiers.set(gp, list);
+    return list;
+  };
+
+  const composer = (paths) => {
+    const m = new Map();
+    for (const gp of paths) for (const e of lire(gp)) m.set(e.id, { ...(m.get(e.id) || {}), ...e, _f: gp });
+    return m;
+  };
+
+  const portees = [['index global', index.glossary || [], null]];
+  for (const a of index.adventures || []) if (a.glossary) portees.push([a.id, a.glossary, a.id]);
+
+  for (const [nom, paths, advId] of portees) {
+    const merged = composer(paths);
+    for (const e of merged.values()) {
+      if (!e.name) err(`${nom} : « ${e.id} » n'a pas de name — aucun fichier de la portée ne le définit`);
+      if (!e.what) warn(`${nom}/${e.id} : pas de description (what)`);
+      if (e.kind && !KINDS.includes(noAccent(e.kind))) warn(`${nom}/${e.id} : kind « ${e.kind} » inconnu`);
+      if (advId && !e.state) warn(`${nom}/${e.id} : pas d'état pour ce donjon`);
+      gloss.set(e.id, e);
+      // Un lien de salle doit désigner une salle DE CE DONJON : c'est tout l'intérêt
+      // d'avoir séparé les index.
+      if (advId) {
+        const rooms = advRooms.get(advId);
+        for (const champ of ['what', 'goal', 'state', 'where']) {
+          for (const m2 of String(e[champ] ?? '').matchAll(/\[\[(?:r|salle):([^\]|]+)(?:\|[^\]]*)?\]\]/g)) {
+            const rid = m2[1].trim();
+            if (rooms && !rooms.has(rid)) err(`${e._f}/${e.id}.${champ} : [[r:${rid}]] n'existe pas dans « ${advId} »`);
+          }
+        }
+      }
+    }
+  }
 }
 
 // ---------- tables de récolte ----------

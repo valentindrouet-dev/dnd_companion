@@ -912,6 +912,14 @@ hr.sep { border: 0; border-top: 1px solid var(--border); margin: 16px 0; }
   border-top: 1px solid var(--border);
   font-size: 0.92em;
 }
+.gsection + .gsection { margin-top: 6px; }
+.gsection-title {
+  display: flex; align-items: center; gap: 6px;
+  margin: 14px 0 2px;
+  font-size: 0.82em; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--accent);
+}
+.pill.tiny { font-size: 0.68em; padding: 1px 6px; margin-left: 6px; vertical-align: middle; }
 .mline b { color: var(--muted); font-weight: 700; text-transform: uppercase; font-size: 0.82em; letter-spacing: 0.04em; margin-right: 4px; }
 .mline span { display: inline; }
 .act { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; padding: 5px 0; }

@@ -6,7 +6,7 @@ import { icon, tagIcon } from '../icons.js';
 import { markup } from '../markup.js';
 import { loadAdventure, roomNeighbours, getMonster, encounterXP } from '../data.js';
 import { store, key } from '../store.js';
-import { navigate, roomPath, advPath, listPath } from '../router.js';
+import { navigate, roomPath, advPath, listPath, indexPath } from '../router.js';
 import { openPopup, confirmPopup } from '../ui/popup.js';
 import { toast } from '../ui/toast.js';
 import { shell } from './shell.js';
@@ -255,7 +255,7 @@ export async function roomView(route) {
       roomMap(adv.map, room.id) ? h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Carte', onclick: () => openMapPopup(adv, room) }, icon('map')) : null,
       h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Rencontre aléatoire', onclick: () => openEncounterPopup({ adv, room }) }, icon('dice')),
       h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Récolte d’ennemis', onclick: () => openLootPopup({ adv, room }) }, icon('gem')),
-      h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Index', onclick: () => navigate('index') }, icon('book')),
+      h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Index', onclick: () => navigate(indexPath(adv.id)) }, icon('book')),
       h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Liste des salles', onclick: () => navigate(listPath(adv.id)) }, icon('list')),
     ],
   });

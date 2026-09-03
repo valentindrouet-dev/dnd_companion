@@ -1,0 +1,109 @@
+[
+  {
+    "id": "amulette",
+    "name": "Les portails-voûtes",
+    "kind": "objet",
+    "aliases": [
+      "portail-voûte",
+      "portails-voûtes"
+    ],
+    "what": "Trois portails d’Halaster, chacun ouvert par un geste précis et réservé aux personnages d’un certain niveau.",
+    "goal": "—"
+  },
+  {
+    "id": "auvryndar",
+    "name": "Maison Auvryndar",
+    "kind": "faction",
+    "aliases": [
+      "Auvryndar",
+      "maison Auvryndar"
+    ],
+    "what": "Clan drow de Menzoberranzan qui consolide en secret son pouvoir dans les profondeurs d’Undermountain."
+  },
+  {
+    "id": "dumathoin",
+    "name": "Dumathoin",
+    "kind": "divinité",
+    "aliases": [
+      "Dumathoin"
+    ],
+    "what": "Le Gardien des secrets sous la Montagne, dieu nain des richesses enfouies.",
+    "goal": "—"
+  },
+  {
+    "id": "halaster",
+    "name": "Halaster Blackcloak",
+    "kind": "personne",
+    "aliases": [
+      "Halaster Blackcloak",
+      "Halaster",
+      "le Mage dément"
+    ],
+    "what": "Le Mage dément, archimage millénaire et maître d’Undermountain. Il a creusé et peuplé le donjon pendant des siècles ; sa folie a fait le reste.",
+    "goal": "Se distraire. Éprouver les intrus, récompenser l’audace, punir la bêtise."
+  },
+  {
+    "id": "lolth",
+    "name": "Lolth",
+    "kind": "divinité",
+    "aliases": [
+      "Lolth"
+    ],
+    "what": "La Reine araignée, déesse des drows, patronne des trahisons et des toiles.",
+    "goal": "—"
+  },
+  {
+    "id": "melairkyn",
+    "name": "Clan Melairkyn",
+    "kind": "peuple",
+    "aliases": [
+      "Melairkyn",
+      "clan Melairkyn",
+      "nains d’écu"
+    ],
+    "what": "Les nains d’écu qui ont creusé ces salles bien avant Halaster : maçonnerie de granit ajusté, brasserie, mine de mithral et de cuivre.",
+    "goal": "Exploiter le mithral de la montagne. Ils ont été chassés il y a des siècles."
+  },
+  {
+    "id": "sargauth",
+    "name": "La Sargauth",
+    "kind": "lieu",
+    "aliases": [
+      "Sargauth",
+      "la Sargauth"
+    ],
+    "what": "La rivière souterraine qui traverse la strate 3 du nord-est au sud-ouest. Eaux lentes, sombres et froides, saumâtres près des cavernes de l’assemblée."
+  },
+  {
+    "id": "skullport",
+    "name": "Skullport",
+    "kind": "lieu",
+    "aliases": [
+      "Skullport",
+      "l’île du Crâne"
+    ],
+    "what": "Le port souterrain de la strate 3 : marché d’esclaves, contrebande, et fief de la Guilde de Xanathar.",
+    "goal": "—"
+  },
+  {
+    "id": "undermountain",
+    "name": "Undermountain",
+    "kind": "lieu",
+    "aliases": [
+      "Undermountain"
+    ],
+    "what": "Le plus vaste donjon de Féerune, creusé sous Waterdeep par les nains Melairkyn puis accaparé par Halaster. Vingt-trois strates connues.",
+    "goal": "—"
+  },
+  {
+    "id": "xanathar",
+    "name": "La Guilde de Xanathar",
+    "kind": "faction",
+    "aliases": [
+      "Guilde de Xanathar",
+      "Xanathar",
+      "la Guilde"
+    ],
+    "what": "Le syndicat du crime de Waterdeep, dirigé par un tyrannœil. Son symbole : un cercle à dix rayons, comme un œil entouré de pédoncules."
+  }
+]
