@@ -439,7 +439,7 @@
     "id": "giant-crab",
     "name": "Crabe géant",
     "nameEn": "Giant Crab",
-    "source": "MM 2024 ; reconstitué de mémoire, à vérifier",
+    "source": "Monster Manual 2024, p. 356",
     "size": "M",
     "type": "Bête",
     "alignment": "Non alignée",
@@ -448,6 +448,7 @@
     "pb": 2,
     "ac": 15,
     "hp": 13,
+    "hpFormula": "3d8",
     "speed": "9 m, nage 9 m",
     "abilities": {
       "str": 13,
@@ -458,7 +459,7 @@
       "cha": 3
     },
     "acNote": "carapace",
-    "skills": "Discrétion +4",
+    "skills": "Discrétion +3",
     "senses": "vision aveugle 9 m ; Perception passive 9",
     "languages": "—",
     "traits": [
