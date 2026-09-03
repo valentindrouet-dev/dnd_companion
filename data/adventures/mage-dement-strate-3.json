@@ -295,8 +295,9 @@
       "connections": [
         {
           "to": "3",
-          "via": "Escalier au nord-est",
-          "note": "Montée vers la strate 2"
+          "via": "Tunnel au nord-est",
+          "note": "L’embuscade — et l’escalier qui remonte vers la strate 2",
+          "alert": "Le fond du tunnel est dans l’ombre."
         },
         {
           "to": "2",
@@ -376,29 +377,112 @@
     {
       "id": "3",
       "number": "3",
-      "name": "La montée vers la strate 2",
+      "name": "L’embuscade des gricks",
       "tags": [
-        "exploration"
+        "combat",
+        "exploration",
+        "secret",
+        "énigme"
       ],
-      "layout": "Cage d’escalier taillée dans la roche, marches larges d’un pas de nain. Elle monte hors de la strate.",
+      "layout": "Tunnel naturel étroit et coudé, **plafond bas et irrégulier**, sol de roche humide. Il s’élargit à peine à son extrémité nord-est. **L’escalier qui remonte vers la strate 2 débouche à son entrée** ; à l’autre bout, le tunnel rejoint les catacombes.",
       "readAloud": [
         {
           "id": "0",
-          "text": "Un escalier de pierre monte dans le noir. L’air y est plus sec qu’ici.",
-          "summary": "Un escalier monte vers la strate supérieure."
+          "text": "Le tunnel descend en tournant et le plafond vous force à baisser la tête. La roche suinte. À l’extrémité, le passage s’élargit un peu, et le faisceau de votre lumière n’atteint pas tout à fait le fond.",
+          "summary": "Un tunnel bas et coudé ; la lumière n’atteint pas le fond."
+        },
+        {
+          "id": "e1",
+          "only": "enhanced",
+          "text": "Quelque chose crisse au-dessus de vous, très légèrement, comme une pierre qu’on frotte contre une autre. Puis le même bruit, plus loin. Puis derrière vous.",
+          "summary": "Un crissement de pierre au-dessus de vous. Puis plus loin. Puis derrière vous."
         }
       ],
       "notes": [
         {
           "id": "0",
-          "text": "Cet escalier remonte vers la **strate 2, les Salles Arcaniques**. C’est par là que le groupe est arrivé.",
-          "summary": "Sortie vers la strate 2."
+          "text": "**C’est la première salle de la strate.** Le groupe descend de la strate 2 et tombe sur une embuscade avant d’avoir vu quoi que ce soit du niveau. Sans le test de Perception, les gricks ont l’avantage et la surprise.",
+          "summary": "Première salle du niveau : une embuscade avant même d’avoir vu la strate."
+        },
+        {
+          "id": "e-porte",
+          "only": "enhanced",
+          "text": "**La porte d’entrée annonce la strate.** Six gricks et une mère au lieu de trois gricks : environ **5 600 PX** dans un boyau où le groupe ne peut pas se déployer, avant même d’avoir vu la rivière.\n\nEt le nid plante l’enquête dès la première salle : **la boucle à six rayons est le sceau du clan de l’Œil de fer**. Le groupe la trouve des heures avant d’apprendre ce qu’elle veut dire.",
+          "summary": "≈ 5 600 PX dans un boyau étroit — et le nid plante le sceau de l’Œil de fer dès la première salle."
         }
       ],
       "connections": [
         {
           "to": "1",
-          "via": "Escalier descendant"
+          "via": "Tunnel au sud-ouest",
+          "note": "Les catacombes"
+        }
+      ],
+      "enemies": [
+        {
+          "id": "gricks",
+          "monster": "grick",
+          "count": 3,
+          "where": "**À l’extrémité du tunnel**, collés à la roche du plafond et des parois.",
+          "tactics": "**Ils tendent une embuscade.** Leur peau grise se confond avec la pierre : ils attaquent au moment où le groupe passe dessous, quatre tentacules puis un bec.",
+          "hidden": true
+        },
+        {
+          "id": "e-gricks",
+          "only": "enhanced",
+          "monster": "grick",
+          "count": 3,
+          "where": "Trois de plus, plus haut dans le tunnel — **derrière le groupe** une fois qu’il est engagé.",
+          "tactics": "Elles referment le tunnel. Le groupe est pris entre deux paquets de tentacules dans un boyau où l’on ne peut pas se déployer."
+        },
+        {
+          "id": "e-alpha",
+          "only": "enhanced",
+          "monster": "grick-alpha",
+          "count": 1,
+          "name": "La mère",
+          "where": "**Au plafond de l’élargissement du fond**, immobile depuis des heures.",
+          "tactics": "**Elle ne bouge pas au premier round.** Elle laisse ses trois petits engager, puis tombe au milieu de la formation : quatre tentacules à +6 et un bec à 2d6+3, avec l’avantage.",
+          "hidden": true
+        }
+      ],
+      "features": [
+        {
+          "id": "escalier",
+          "title": "La montée vers la strate 2",
+          "text": "L’escalier de pierre débouche à l’entrée du tunnel : **c’est par là que le groupe est arrivé**, et par là qu’il repartira. L’air y est plus sec qu’ici."
+        },
+        {
+          "id": "e-nid",
+          "only": "enhanced",
+          "title": "Le nid, au fond",
+          "text": "Un amas d’os nettoyés, de tissu et de métal tordu, collé à la paroi. En le fouillant, on trouve, mêlée aux restes : **une sangle de cuir arrachée, avec une boucle de fer gravée d’une roue à six rayons**. Elle est récente. Il y a quelques semaines, quelqu’un est passé par ici avec un équipement nain, et n’est pas ressorti par cet escalier."
+        }
+      ],
+      "checks": [
+        {
+          "id": "embuscade",
+          "skill": "Sagesse (Perception)",
+          "dc": 15,
+          "text": "Trois masses grises **plaquées contre la roche** au fond du tunnel, immobiles. Elles ne sont pas de la roche.",
+          "failure": "Le fond du tunnel est dans l’ombre, et l’ombre ne bouge pas."
+        },
+        {
+          "id": "e-mere",
+          "only": "enhanced",
+          "skill": "Intelligence (Nature)",
+          "dc": 16,
+          "text": "**Il y en a une quatrième, et elle est beaucoup plus grosse.** Les trois autres sont disposées autour d’elle, pas au hasard : c’est une meute, et elle a une mère.",
+          "failure": "Trois gricks. Trois, c’est déjà beaucoup."
+        }
+      ],
+      "treasure": [
+        {
+          "id": "e-sangle",
+          "only": "enhanced",
+          "item": "Sangle de cuir à boucle gravée",
+          "value": "—",
+          "note": "**Une roue à six rayons : le sceau du clan de l’Œil de fer.** Arrachée à un équipement nain il y a quelques semaines."
         }
       ]
     },

@@ -933,5 +933,60 @@
       "tactics": "**Invisibilité pour approcher, agrandissement pour frapper.** C’est ainsi qu’ils ont volé la dague d’Azrok sans qu’aucun garde ne les voie.",
       "weakness": "**Les kuo-toas voient les invisibles.** C’est la seule chose de la strate qui puisse les prendre en défaut."
     }
+  },
+  {
+    "id": "grick-alpha",
+    "name": "Grick alpha",
+    "nameEn": "Grick Alpha",
+    "source": "MM 2024 — version Améliorée ; reconstitué de mémoire, à vérifier",
+    "size": "G",
+    "type": "Aberration",
+    "alignment": "Neutre",
+    "cr": "7",
+    "xp": 2900,
+    "pb": 3,
+    "ac": 18,
+    "hp": 75,
+    "speed": "9 m, escalade 9 m",
+    "abilities": {
+      "str": 18,
+      "dex": 16,
+      "con": 16,
+      "int": 4,
+      "wis": 14,
+      "cha": 9
+    },
+    "acNote": "peau coriace",
+    "skills": "Discrétion +6",
+    "resistances": "contondant, perforant et tranchant des armes non magiques",
+    "senses": "vision dans le noir 18 m ; Perception passive 12",
+    "languages": "—",
+    "traits": [
+      {
+        "name": "Camouflage rocheux",
+        "text": "**Avantage aux tests de Discrétion en terrain rocheux.** Immobile contre la pierre, elle est indiscernable de la paroi."
+      },
+      {
+        "name": "Araignée de roche",
+        "text": "Elle grimpe les parois et les plafonds sans test, et attaque de préférence par le haut."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Tentacules (×4)",
+        "text": "Jet d’attaque au corps à corps : +6, allonge 3 m. Touché : 9 (2d6 + 2) dégâts tranchants. **Si elle touche avec au moins deux tentacules, elle peut mordre par une action bonus.**"
+      },
+      {
+        "name": "Bec",
+        "text": "Jet d’attaque au corps à corps : +6, allonge 1,50 m. Touché : 10 (2d6 + 3) dégâts perforants."
+      }
+    ],
+    "summary": {
+      "style": "Quatre tentacules à trois mètres, depuis un plafond où elle était de la roche il y a une seconde.",
+      "intent": "Nourrir sa portée. Le tunnel est son garde-manger, et l’escalier lui apporte des repas.",
+      "tactics": "**Elle laisse ses petits engager et tombe au deuxième round**, au milieu de la formation. Dans un boyau bas, ses 3 m d’allonge touchent la moitié du groupe.",
+      "flee": "Jamais tant qu’il reste un grick vivant.",
+      "weakness": "**75 PV seulement pour un CR 7.** Le problème n’est pas de la tuer, c’est de la voir avant qu’elle ne tombe — Nature DD 16, ou Perception DD 15 dans le noir."
+    }
   }
 ]

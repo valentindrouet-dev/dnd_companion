@@ -974,6 +974,86 @@
       ]
     },
     {
+      "id": "drider",
+      "name": "Drider",
+      "en": "Drider",
+      "level": 1,
+      "type": "monstrosity",
+      "match": [
+        "drider"
+      ],
+      "description": "Le torse d’elfe est intact et il faut le regarder pendant qu’on découpe le reste. Sous l’abdomen, les glandes à soie sont encore pleines et tièdes, et la soie sort toute seule quand on appuie.",
+      "check": {
+        "skill": "Survie",
+        "dc": 14
+      },
+      "duration": "25 min",
+      "danger": "Une glande à venin cède sous la lame. **2d10 dégâts** de poison et jet de sauvegarde de Constitution DD 14 ou empoisonné 1 heure.",
+      "loot": [
+        {
+          "emoji": "🕸️",
+          "name": "Glandes à soie",
+          "en": "Silk Glands",
+          "p": 45,
+          "qty": "1d3",
+          "value": "35 po chacune",
+          "use": "composante (corde)"
+        },
+        {
+          "emoji": "☠️",
+          "name": "Venin de drider",
+          "en": "Drider Venom",
+          "p": 35,
+          "qty": "1d2",
+          "value": "80 po la dose",
+          "use": "consommable"
+        },
+        {
+          "emoji": "🏹",
+          "name": "Arc long drow",
+          "en": "Drow Longbow",
+          "p": 30,
+          "qty": "1",
+          "value": "50 po",
+          "use": "arme"
+        },
+        {
+          "emoji": "🦴",
+          "name": "Pattes chitineuses",
+          "en": "Chitinous Legs",
+          "p": 40,
+          "qty": "1d4",
+          "value": "15 po chacune",
+          "use": "composante (armure)"
+        },
+        {
+          "emoji": "💠",
+          "name": "Insigne de sa maison",
+          "en": "House Insignia",
+          "p": 25,
+          "qty": "1",
+          "value": "25 po",
+          "use": "il était quelqu’un, avant l’Épreuve"
+        },
+        {
+          "emoji": "💰",
+          "name": "Pièces (de son exil)",
+          "en": "Coins (from its exile)",
+          "p": 30,
+          "qty": "2d10",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 10,
+          "qty": "1",
+          "magic": "B"
+        }
+      ]
+    },
+    {
       "id": "duergar",
       "name": "Duergar",
       "en": "Duergar",
@@ -1772,7 +1852,7 @@
       "level": 1,
       "type": "aberration",
       "match": [
-        "drider"
+        "grick-alpha"
       ],
       "description": "La carcasse est massive et résistante. Les tentacules épais sont encore luisants d’un mucus froid ; les sectionner libère un fluide visqueux à l’odeur minérale. La peau dure et striée oppose une forte résistance, et le bec, solidement ancré dans le crâne, doit être extrait en forçant, au prix d’efforts peu ragoûtants.",
       "check": {
