@@ -56,6 +56,32 @@ Tous les champs texte acceptent un mini-balisage :
 L'ordre des salles (boutons précédent / suivant) est celui des `sections`, puis des
 salles orphelines dans l'ordre de `rooms`.
 
+### Compteurs de progression (`trackers`)
+
+Un mécanisme qui avance par paliers pendant la partie (une crue, un compte à rebours, une alerte
+qui monte). Déclaré au niveau de l'aventure, il apparaît **dans la barre du haut** de sa vue
+d'ensemble, de ses salles et de sa liste — donc visible en permanence pendant une séance.
+
+```jsonc
+"trackers": [{
+  "id": "maree",
+  "name": "La Marée d'Halaster",
+  "icon": "water",                     // nom d'icône de src/icons.js
+  "only": "enhanced",                  // comme partout : réservé à une variante
+  "text": "Rappel affiché en tête du détail (accepte le balisage).",
+  "steps": [
+    { "label": "Rivière basse", "text": "L'état de départ — le palier 0 vaut « rien n'a commencé »." },
+    { "label": "Le clapotis",   "text": "Ce qui change dans la strate à ce palier." }
+  ]
+}]
+```
+
+- **Le palier 0 est l'état de repos** : le bouton affiche « — » et la teinte neutre.
+- Un appui sur le bouton avance d'un palier et **repasse à 0 après le dernier** ; un appui long
+  (ou un clic droit) ouvre le détail, où l'on saute directement à n'importe quel palier.
+- La teinte va du calme au danger sur cinq crans, quel que soit le nombre de paliers.
+- Le palier courant est dans l'état MJ (`trackers`, clé `aventure/id`) et survit au rechargement.
+
 ### Salle
 
 ```jsonc

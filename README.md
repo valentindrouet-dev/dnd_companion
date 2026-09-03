@@ -34,6 +34,9 @@ pièges et tests, liaisons vers les salles connectées, générateur de loot.
   et par rareté. La page **Objets magiques** les parcourt et les tire à la main.
 - **Mots-clés cliquables** : les noms de personnages, factions, lieux et objets ouvrent une fiche
   (qui, but, état en cours de partie, modifiable), et un **index alphabétique** les rassemble.
+- **Compteur de progression** déclaré par l'aventure et posé dans la barre du haut, visible depuis
+  n'importe laquelle de ses pages : un appui avance d'un palier, un appui long ouvre le détail.
+  La strate 3 s'en sert pour la Marée d'Halaster.
 - **Drapeau de fin de séance** : un seul par aventure, « Reprendre » y ramène.
 - **Notes du MJ marquables « à faire »**, remontées sur la page de l'aventure.
 - **Statut des PNJ récurrents** modifiable en partie (amical, allié, en fuite, mort…).

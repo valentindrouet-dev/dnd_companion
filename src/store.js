@@ -18,6 +18,7 @@ const DEFAULT = {
   flag: {},       // adv -> room            (marque-page de fin de séance, un seul par aventure)
   npcStatus: {},  // "adv/npc" -> statut
   lastRoom: {},   // adv -> room
+  trackers: {},   // "adv/tracker" -> palier courant (compteur de progression, ex. la Marée)
 };
 
 function clone(o) { return JSON.parse(JSON.stringify(o)); }
@@ -151,6 +152,14 @@ export const store = {
   },
   isFlagged(advId, roomId) { return state.flag[advId] === roomId; },
 
+  // --- Compteurs de progression déclarés par l'aventure (la Marée, et ce qui suivra) ---
+  tracker(advId, trackerId) { return state.trackers[`${advId}/${trackerId}`] || 0; },
+  setTracker(advId, trackerId, step) {
+    const k = `${advId}/${trackerId}`;
+    if (!step) delete state.trackers[k]; else state.trackers[k] = step;
+    emit();
+  },
+
   // --- Statut des PNJ ---
   npcStatus(advId, npcId) { return state.npcStatus[`${advId}/${npcId}`] || null; },
   setNpcStatus(advId, npcId, status) {
@@ -189,7 +198,7 @@ export const store = {
   },
   resetAdventure(advId) {
     const p = `${advId}/`;
-    for (const bucket of [state.hidden, state.overrides, state.notes, state.checks, state.roomNotes, state.todo, state.order, state.npcStatus, state.status]) deleteByPrefix(bucket, p);
+    for (const bucket of [state.hidden, state.overrides, state.notes, state.checks, state.roomNotes, state.todo, state.order, state.npcStatus, state.status, state.trackers]) deleteByPrefix(bucket, p);
     delete state.visited[advId];
     delete state.lastRoom[advId];
     delete state.flag[advId];

@@ -6,6 +6,7 @@ import { loadAdventure } from '../data.js';
 import { store, key } from '../store.js';
 import { navigate, roomPath, advPath, listPath } from '../router.js';
 import { shell } from './shell.js';
+import { trackersOf, trackerButton } from '../components/tracker.js';
 import { roomSidebar } from './sidebar.js';
 import { card } from '../components/card.js';
 import { openNpcPopup } from '../components/npc.js';
@@ -82,6 +83,7 @@ export async function adventureView(route) {
 
   return shell({ title: adv.title, subtitle: 'Vue d’ensemble', back: '', sidebar: roomSidebar(adv, null), main,
     actions: [
+      ...trackersOf(adv).map((t) => trackerButton(adv, t)),
       h('button', {
         class: 'btn btn-icon btn-ghost' + (store.settings.condensed ? ' is-on' : ''),
         'aria-label': store.settings.condensed ? 'Afficher les textes complets' : 'Résumer les textes',

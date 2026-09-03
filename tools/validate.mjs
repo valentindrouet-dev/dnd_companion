@@ -86,6 +86,17 @@ function checkAdventure(adv, meta) {
       inSection.add(rid);
     }
   }
+  // compteurs de progression déclarés par l'aventure
+  for (const [i, t] of (adv.trackers || []).entries()) {
+    const w = `${where}/trackers[${i}]`;
+    if (!t.id) err(`${w} : id manquant`);
+    if (!t.name) err(`${w} : name manquant`);
+    if (!Array.isArray(t.steps) || t.steps.length < 2) { err(`${w} : il faut au moins deux paliers`); continue; }
+    t.steps.forEach((s, j) => {
+      if (!s.label) err(`${w}/steps[${j}] : label manquant`);
+      if (!s.text) warn(`${w}/steps[${j}] : pas de description`);
+    });
+  }
   for (const id of roomIds) if (!inSection.has(id)) warn(`${where} : salle « ${id} » dans aucune section (affichée dans « Autres salles »)`);
 
   for (const r of rooms) {

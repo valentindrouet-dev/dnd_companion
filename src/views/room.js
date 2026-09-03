@@ -10,6 +10,7 @@ import { navigate, roomPath, advPath, listPath } from '../router.js';
 import { openPopup, confirmPopup } from '../ui/popup.js';
 import { toast } from '../ui/toast.js';
 import { shell } from './shell.js';
+import { trackersOf, trackerButton } from '../components/tracker.js';
 import { roomSidebar } from './sidebar.js';
 import { textBlock } from '../components/block.js';
 import { makeSortable, applyOrder } from '../ui/sortable.js';
@@ -109,7 +110,7 @@ export async function roomView(route) {
       }, icon('flag')),
       h('button', {
         class: 'btn status-btn ' + status.cls, 'aria-label': `Statut : ${status.label} — appuie pour changer`,
-        onclick: () => toast(ROOM_LABELS[cycleRoomStatus(adv.id, room)]),
+        onclick: () => toast(ROOM_LABELS[cycleRoomStatus(adv.id, room)], { key: 'status' }),
       }, icon(status.icon), status.label),
       navBtn(prev, 'back', 'Salle précédente'), navBtn(next, 'forward', 'Salle suivante')));
 
@@ -250,6 +251,7 @@ export async function roomView(route) {
     sidebar: roomSidebar(adv, room.id),
     main,
     actions: [
+      ...trackersOf(adv).map((t) => trackerButton(adv, t)),
       roomMap(adv.map, room.id) ? h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Carte', onclick: () => openMapPopup(adv, room) }, icon('map')) : null,
       h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Rencontre aléatoire', onclick: () => openEncounterPopup({ adv, room }) }, icon('dice')),
       h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Récolte d’ennemis', onclick: () => openLootPopup({ adv, room }) }, icon('gem')),

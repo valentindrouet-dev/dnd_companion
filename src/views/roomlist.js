@@ -7,6 +7,7 @@ import { loadAdventure } from '../data.js';
 import { store } from '../store.js';
 import { navigate, roomPath, advPath } from '../router.js';
 import { shell } from './shell.js';
+import { trackersOf, trackerButton } from '../components/tracker.js';
 import { roomSidebar } from './sidebar.js';
 import { compareRoomNumbers, slug } from '../util.js';
 import { roomProgress, roomStatus, cycleRoomStatus, ROOM_STATUSES } from '../progress.js';
@@ -54,7 +55,8 @@ export async function roomListView(route) {
       counter, hideBtn),
     list);
 
-  return shell({ title: adv.title, subtitle: 'Salles', back: advPath(adv.id), sidebar: roomSidebar(adv, 'liste'), main });
+  return shell({ title: adv.title, subtitle: 'Salles', back: advPath(adv.id), sidebar: roomSidebar(adv, 'liste'), main,
+    actions: trackersOf(adv).map((t) => trackerButton(adv, t)) });
 }
 
 function row(adv, r) {

@@ -41,7 +41,7 @@
       "id": "e-maree",
       "title": "La Marée d’Halaster",
       "only": "enhanced",
-      "text": "**LA MARÉE D’HALASTER — l’horloge de la strate.**\n\nLes trois guenaudes ne collectionnent pas les coquillages : elles travaillent le **chaudron de [[r:10e|10e]]** pour faire monter la Sargauth et noyer la ville des drows. Halaster a demandé qu’on débarrasse la strate des elfes noirs ; elles ont trouvé plus simple que de se battre.\n\n**Six paliers.** Fais monter l’eau d’un palier toutes les **2 heures de jeu**, ou à chaque fois que le groupe termine un repos court. Annonce-le toujours par le bruit : l’eau se fait entendre avant de se voir.\n\n1. *Le clapotis.* La rivière déborde à peine. [[r:9a|9a]], [[r:8c|8c]] et [[r:13a|13a]] ont 30 cm d’eau — terrain difficile.\n2. *Les berges.* [[r:10a|10a]], [[r:12|12]], [[r:16a|16a]] et [[r:16b|16b]] sont noyées jusqu’à la taille. **Les créatures aquatiques y gagnent l’avantage.**\n3. *Les basses cavernes.* [[r:10g|10g]] et [[r:10f|10f]] sont sous l’eau. **Les prisonniers enchaînés de 10g se noient** si personne ne les a libérés.\n4. *Le fleuve entre.* [[r:11a|11a]], [[r:11b|11b]], [[r:15b|15b]] et [[r:13b|13b]] : il faut nager. Le portail de 15b est sous la surface.\n5. *La ville.* L’eau atteint [[r:20|la ville des drows]] par le sud. Les allées deviennent des canaux ; **la garnison drow se replie vers le nord dans le désordre**.\n6. *La noyade.* La moitié de la zone 20 est sous trois mètres d’eau. **Les kuo-toas y entrent.** L’Emprise d’Azrok, plus haute, tient encore.\n\n**Comment l’arrêter :** détruire le chaudron (CA 17, 60 PV), tuer les trois guenaudes, ou **rouvrir les écluses naines** ([[r:14c|14c]]). **Comment l’accélérer :** aider les guenaudes — elles paient bien.",
+      "text": "**LA MARÉE D’HALASTER — l’horloge de la strate.**\n\nLes trois guenaudes ne collectionnent pas les coquillages : elles travaillent le **chaudron de [[r:10e|10e]]** pour faire monter la Sargauth et noyer la ville des drows. Halaster a demandé qu’on débarrasse la strate des elfes noirs ; elles ont trouvé plus simple que de se battre.\n\n**Six paliers.** Fais monter l’eau d’un palier toutes les **2 heures de jeu**, ou à chaque fois que le groupe termine un repos court. Annonce-le toujours par le bruit : l’eau se fait entendre avant de se voir.\n\n**Le compteur est dans la barre du haut**, sur toutes les pages de la strate : un appui avance d’un palier, un appui long ouvre le détail.\n\n1. *Le clapotis.* La rivière déborde à peine. [[r:9a|9a]], [[r:8c|8c]] et [[r:13a|13a]] ont 30 cm d’eau — terrain difficile.\n2. *Les berges.* [[r:10a|10a]], [[r:12|12]], [[r:16a|16a]] et [[r:16b|16b]] sont noyées jusqu’à la taille. **Les créatures aquatiques y gagnent l’avantage.**\n3. *Les basses cavernes.* [[r:10g|10g]] et [[r:10f|10f]] sont sous l’eau. **Les prisonniers enchaînés de 10g se noient** si personne ne les a libérés.\n4. *Le fleuve entre.* [[r:11a|11a]], [[r:11b|11b]], [[r:15b|15b]] et [[r:13b|13b]] : il faut nager. Le portail de 15b est sous la surface.\n5. *La ville.* L’eau atteint [[r:20|la ville des drows]] par le sud. Les allées deviennent des canaux ; **la garnison drow se replie vers le nord dans le désordre**.\n6. *La noyade.* La moitié de la zone 20 est sous trois mètres d’eau. **Les kuo-toas y entrent.** L’Emprise d’Azrok, plus haute, tient encore.\n\n**Comment l’arrêter :** détruire le chaudron (CA 17, 60 PV), tuer les trois guenaudes, ou **rouvrir les écluses naines** ([[r:14c|14c]]). **Comment l’accélérer :** aider les guenaudes — elles paient bien.",
       "summary": "Six paliers de crue toutes les 2 heures. On l’arrête au chaudron, aux guenaudes ou aux écluses."
     },
     {
@@ -6072,5 +6072,44 @@
       ]
     }
   ],
-  "monsters": []
+  "monsters": [],
+  "trackers": [
+    {
+      "id": "maree",
+      "name": "La Marée d’Halaster",
+      "icon": "water",
+      "only": "enhanced",
+      "text": "Les guenaudes travaillent le chaudron de [[r:10e|10e]] pour noyer la ville des drows. **Un palier toutes les 2 heures de jeu**, ou à chaque repos court. Annonce-le toujours par le bruit : l’eau se fait entendre avant de se voir.",
+      "steps": [
+        {
+          "label": "Rivière basse",
+          "text": "La Sargauth est encore dans son lit. **Rien n’a commencé** — ou le groupe a arrêté la crue."
+        },
+        {
+          "label": "Le clapotis",
+          "text": "La rivière déborde à peine. **[[r:9a|9a]], [[r:8c|8c]] et [[r:13a|13a]] ont 30 cm d’eau** : terrain difficile."
+        },
+        {
+          "label": "Les berges",
+          "text": "**[[r:10a|10a]], [[r:12|12]], [[r:16a|16a]] et [[r:16b|16b]] sont noyées jusqu’à la taille.** Les créatures aquatiques y gagnent l’avantage. Les noyés remontent vers [[r:8b|8b]]."
+        },
+        {
+          "label": "Les basses cavernes",
+          "text": "**[[r:10g|10g]] et [[r:10f|10f]] sont sous l’eau.** Delvin et Lerk, enchaînés en 10g, **se noient** si personne ne les a libérés. Les noyés atteignent [[r:1|les catacombes]]."
+        },
+        {
+          "label": "Le fleuve entre",
+          "text": "**[[r:11a|11a]], [[r:11b|11b]], [[r:15b|15b]] et [[r:13b|13b]] : il faut nager.** Le portail de 15b est sous la surface. **L’aboleth remonte** sous l’embarcadère."
+        },
+        {
+          "label": "La ville",
+          "text": "**L’eau atteint [[r:20|la ville des drows]] par le sud.** Les allées deviennent des canaux et la garnison se replie vers le nord dans le désordre. Les kuo-toas entrent."
+        },
+        {
+          "label": "La noyade",
+          "text": "**La moitié de la zone 20 est sous trois mètres d’eau.** L’Emprise d’Azrok, plus haute, tient encore. Tout ce qui n’a pas été fait en bas ne se fera plus."
+        }
+      ]
+    }
+  ]
 }
