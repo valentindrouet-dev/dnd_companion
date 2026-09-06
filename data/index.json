@@ -25,14 +25,14 @@
       ]
     },
     {
-      "id": "sarah-yellowcrest",
-      "title": "Sarah du manoir Yellowcrest",
+      "id": "wenna-duvessar",
+      "title": "Wenna du manoir Duvessar",
       "levels": "7",
-      "source": "Candlekeep Mysteries, p. 106-113",
-      "path": "adventures/sarah-yellowcrest.json",
-      "map": "yellowcrest-temple",
+      "source": "Module officiel adapté — référence en notes du MJ",
+      "path": "adventures/wenna-duvessar.json",
+      "map": "duvessar-temple",
       "glossary": [
-        "glossary/yellowcrest.json"
+        "glossary/duvessar.json"
       ]
     }
   ],
@@ -42,14 +42,14 @@
     "monsters/enhanced.json",
     "monsters/sargauth.json",
     "monsters/sargauth-enhanced.json",
-    "monsters/yellowcrest.json",
-    "monsters/yellowcrest-enhanced.json"
+    "monsters/duvessar.json",
+    "monsters/duvessar-enhanced.json"
   ],
   "glossary": [
     "glossary/commun.json",
     "glossary/strate-2.json",
     "glossary/strate-3.json",
-    "glossary/yellowcrest.json"
+    "glossary/duvessar.json"
   ],
   "loot": [
     "loot/creatures.json"

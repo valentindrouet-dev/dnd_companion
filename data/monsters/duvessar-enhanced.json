@@ -1,13 +1,13 @@
 [
   {
-    "id": "viallis-eveille",
-    "name": "Lord Viallis, l’Œil ouvert",
-    "nameEn": "Lord Viallis Awakened",
+    "id": "ostrian-eveille",
+    "name": "Lord Ostrian, l’Œil ouvert",
+    "nameEn": "Lord Ostrian Awakened",
     "source": "Version Améliorée — d’après le mage (MM 2024, p. 199)",
     "only": "enhanced",
     "size": "M", "type": "Humanoïde (mage)", "alignment": "Chaotique mauvais",
     "cr": "9", "xp": 5000, "pb": 4,
-    "ac": 17, "acNote": "armure du mage + don de Gaernoo", "hp": 130, "hpFormula": "20d8 + 40", "speed": "9 m",
+    "ac": 17, "acNote": "armure du mage + don de Grethuum", "hp": 130, "hpFormula": "20d8 + 40", "speed": "9 m",
     "abilities": { "str": 9, "dex": 14, "con": 15, "int": 19, "wis": 12, "cha": 11 },
     "saves": "Int +8, Sag +5",
     "skills": "Arcanes +8, Histoire +8, Perception +5",
@@ -16,14 +16,14 @@
     "languages": "commun, elfique, profond",
     "traits": [
       { "name": "Robe des couleurs chatoyantes", "text": "Action, 1/jour : Sagesse DD 16 ou **étourdi jusqu’à la fin de son prochain tour**, pour toutes les créatures à 9 m qui le voient." },
-      { "name": "Troisième œil", "text": "Gaernoo lui a ouvert un œil au milieu du front. Il **voit les créatures invisibles à 9 m** et ne peut pas être surpris." },
-      { "name": "Le puits appelle", "text": "Tant que **Durnan est vivant sur l’autel**, Viallis a l’avantage à tous ses jets de sauvegarde. Libérer le tavernier lui retire ce bonus **immédiatement** : dis-le à voix haute quand cela arrive." }
+      { "name": "Troisième œil", "text": "Grethuum lui a ouvert un œil au milieu du front. Il **voit les créatures invisibles à 9 m** et ne peut pas être surpris." },
+      { "name": "Le puits appelle", "text": "Tant que **Durnan est vivant sur l’autel**, Ostrian a l’avantage à tous ses jets de sauvegarde. Libérer le tavernier lui retire ce bonus **immédiatement** : dis-le à voix haute quand cela arrive." }
     ],
     "actions": [
       { "name": "Attaques multiples", "text": "Trois attaques de *Décharge arcanique*." },
       { "name": "Décharge arcanique", "text": "Jet d’attaque au corps à corps ou à distance : +8, allonge 1,50 m ou portée 36 m. Touché : 18 (3d8 + 5) dégâts de force." },
       { "name": "Incantation", "text": "Intelligence, DD 16, +8 pour toucher. **À volonté :** *armure du mage*, *détection de la magie*, *lumière*. **2/jour chacun :** *boule de feu* (niveau 5), *invisibilité supérieure*, *vol*, *rayon empoisonné*. **1/jour :** *cône de froid*, *tempête de grêle*." },
-      { "name": "Souffle de Gaernoo (recharge 5-6)", "text": "Cône de 9 m. Jet de sauvegarde d’Intelligence DD 16 : **échec**, 27 (6d8) dégâts psychiques et la cible ne peut plus lancer de sort à composante verbale jusqu’à la fin de son prochain tour — sa langue lui brûle la bouche. **Réussite**, moitié des dégâts." },
+      { "name": "Souffle de Grethuum (recharge 5-6)", "text": "Cône de 9 m. Jet de sauvegarde d’Intelligence DD 16 : **échec**, 27 (6d8) dégâts psychiques et la cible ne peut plus lancer de sort à composante verbale jusqu’à la fin de son prochain tour — sa langue lui brûle la bouche. **Réussite**, moitié des dégâts." },
       { "name": "Parchemin de téléportation", "text": "Comme la version de base. **Il ne l’utilise pas tant que Durnan est sur l’autel** : il ne partira pas sans ce qu’il est venu chercher." }
     ],
     "bonusActions": [
@@ -36,7 +36,7 @@
     "summary": {
       "style": "Le même notable affable qu’à Waterdeep, et un œil de trop. Il continue de vouvoyer le groupe pendant qu’il les brûle.",
       "intent": "Ouvrir le puits du Portail Béant. Durnan est la clef, pas la cible.",
-      "tactics": "Round 1 il achève le rituel. Round 2, **Souffle de Gaernoo** sur le paquet le plus dense. Ensuite *contresort* sur le premier sort de niveau 3, décharges sur le lanceur.",
+      "tactics": "Round 1 il achève le rituel. Round 2, **Souffle de Grethuum** sur le paquet le plus dense. Ensuite *contresort* sur le premier sort de niveau 3, décharges sur le lanceur.",
       "flee": "Sous 40 PV **et** Durnan perdu : parchemin, il disparaît. Sinon il tient jusqu’au bout.",
       "weakness": "**Libérer Durnan lui coûte son avantage aux sauvegardes et sa raison de rester.** C’est la manœuvre gagnante, et elle demande qu’on renonce à frapper pendant un tour."
     }
@@ -73,9 +73,9 @@
     }
   },
   {
-    "id": "elu-langue-brulee",
-    "name": "Élu de la Langue Brûlée",
-    "nameEn": "Burnt Tongue Chosen",
+    "id": "elu-verbe-eteint",
+    "name": "Élu du Verbe Éteint",
+    "nameEn": "Silenced Word Chosen",
     "source": "Version Améliorée — d’après le fanatique de secte (MM 2024, p. 85)",
     "only": "enhanced",
     "size": "M", "type": "Humanoïde", "alignment": "Neutre mauvais",
@@ -88,7 +88,7 @@
     "senses": "Perception passive 14",
     "languages": "commun, profond",
     "traits": [
-      { "name": "Langue offerte", "text": "Il s’est brûlé la langue pour entrer dans le culte. **Il ne parle pas** et lance tous ses sorts sans composante verbale — *silence* ne l’arrête pas." }
+      { "name": "Verbe repris", "text": "Il s’est fait fendre la langue pour entrer dans le culte. **Il ne parle pas** et lance tous ses sorts sans composante verbale — *silence* ne l’arrête pas." }
     ],
     "actions": [
       { "name": "Attaques multiples", "text": "Trois attaques de *Dague brûlante*." },

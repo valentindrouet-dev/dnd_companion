@@ -25,7 +25,7 @@ export function fullMap(mapId) { return maps?.[mapId]?.complete || null; }
 export function roomSpot(mapId, roomId) { return maps?.[mapId]?.spots?.[roomId] || null; }
 
 /** Vignette de la salle ; l'appui ouvre la carte complète. */
-const TITRES = { 'yellowcrest-greenfast': 'Le hameau de Greenfast', 'yellowcrest-temple': 'Le temple de la Langue Brûlée' };
+const TITRES = { 'duvessar-fauverive': 'Le hameau de Fauverive', 'duvessar-temple': 'Le temple du Verbe Éteint' };
 function mapTitle(mapId) { return TITRES[mapId] || 'Carte de la strate'; }
 
 /** Carte d'une salle : la sienne si elle en déclare une, sinon celle de l'aventure. */

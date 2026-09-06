@@ -678,8 +678,8 @@
       ]
     }
   },
-  "yellowcrest-greenfast": {
-    "pdf": "sources/pdf/yellowcrest.pdf",
+  "duvessar-fauverive": {
+    "pdf": "sources/pdf/duvessar.pdf",
     "page": 8,
     "clip": [
       24,
@@ -708,10 +708,22 @@
         56,
         122
       ]
-    }
+    },
+    "masks": [
+      {
+        "box": [
+          42,
+          334,
+          140,
+          364
+        ],
+        "text": "FAUVERIVE",
+        "size": 19
+      }
+    ]
   },
-  "yellowcrest-temple": {
-    "pdf": "sources/pdf/yellowcrest.pdf",
+  "duvessar-temple": {
+    "pdf": "sources/pdf/duvessar.pdf",
     "page": 10,
     "clip": [
       30,
@@ -780,6 +792,19 @@
         210,
         120
       ]
-    }
+    },
+    "masks": [
+      {
+        "box": [
+          188,
+          56,
+          376,
+          112
+        ],
+        "text": "LE TEMPLE DU\nVERBE ÉTEINT",
+        "size": 21,
+        "align": 1
+      }
+    ]
   }
 }

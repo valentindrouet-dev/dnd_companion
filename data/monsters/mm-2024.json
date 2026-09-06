@@ -972,7 +972,7 @@
       "style": "Soldat de métier : 65 PV, CA 17, deux coups à 10 dégâts par tour.",
       "intent": "Faire son travail de garde du corps, puis rentrer.",
       "tactics": "Se place entre l’attaquant et son protégé. Parade la première grosse attaque de chaque tour.",
-      "flee": "**Mercenaire sous contrat** : se rend quand plus de la moitié de l’escorte est à terre. Il ne meurt pas pour Faerl.",
+      "flee": "**Mercenaire sous contrat** : se rend quand plus de la moitié de l’escorte est à terre. Il ne meurt pas pour Thaevil.",
       "weakness": "Aucune résistance, aucune riposte à distance rapide. Le contourner pour atteindre son protégé fonctionne : il n’a qu’une réaction."
     }
   },

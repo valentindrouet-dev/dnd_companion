@@ -789,14 +789,14 @@
         ]
       }
     },
-    "yellowcrest-greenfast": {
-      "complete": "assets/maps/yellowcrest-greenfast/complete.jpg",
+    "duvessar-fauverive": {
+      "complete": "assets/maps/duvessar-fauverive/complete.jpg",
       "rooms": {
-        "g1": "assets/maps/yellowcrest-greenfast/g1.jpg",
-        "g2": "assets/maps/yellowcrest-greenfast/g2.jpg",
-        "g3": "assets/maps/yellowcrest-greenfast/g3.jpg",
-        "g4": "assets/maps/yellowcrest-greenfast/g4.jpg",
-        "g5": "assets/maps/yellowcrest-greenfast/g5.jpg"
+        "g1": "assets/maps/duvessar-fauverive/g1.jpg",
+        "g2": "assets/maps/duvessar-fauverive/g2.jpg",
+        "g3": "assets/maps/duvessar-fauverive/g3.jpg",
+        "g4": "assets/maps/duvessar-fauverive/g4.jpg",
+        "g5": "assets/maps/duvessar-fauverive/g5.jpg"
       },
       "spots": {
         "g1": [
@@ -821,22 +821,22 @@
         ]
       }
     },
-    "yellowcrest-temple": {
-      "complete": "assets/maps/yellowcrest-temple/complete.jpg",
+    "duvessar-temple": {
+      "complete": "assets/maps/duvessar-temple/complete.jpg",
       "rooms": {
-        "b1": "assets/maps/yellowcrest-temple/b1.jpg",
-        "b2": "assets/maps/yellowcrest-temple/b2.jpg",
-        "b3": "assets/maps/yellowcrest-temple/b3.jpg",
-        "b4": "assets/maps/yellowcrest-temple/b4.jpg",
-        "b5": "assets/maps/yellowcrest-temple/b5.jpg",
-        "b6": "assets/maps/yellowcrest-temple/b6.jpg",
-        "b7": "assets/maps/yellowcrest-temple/b7.jpg",
-        "b8": "assets/maps/yellowcrest-temple/b8.jpg",
-        "b9": "assets/maps/yellowcrest-temple/b9.jpg",
-        "b10": "assets/maps/yellowcrest-temple/b10.jpg",
-        "b11": "assets/maps/yellowcrest-temple/b11.jpg",
-        "b12": "assets/maps/yellowcrest-temple/b12.jpg",
-        "b13": "assets/maps/yellowcrest-temple/b13.jpg"
+        "b1": "assets/maps/duvessar-temple/b1.jpg",
+        "b2": "assets/maps/duvessar-temple/b2.jpg",
+        "b3": "assets/maps/duvessar-temple/b3.jpg",
+        "b4": "assets/maps/duvessar-temple/b4.jpg",
+        "b5": "assets/maps/duvessar-temple/b5.jpg",
+        "b6": "assets/maps/duvessar-temple/b6.jpg",
+        "b7": "assets/maps/duvessar-temple/b7.jpg",
+        "b8": "assets/maps/duvessar-temple/b8.jpg",
+        "b9": "assets/maps/duvessar-temple/b9.jpg",
+        "b10": "assets/maps/duvessar-temple/b10.jpg",
+        "b11": "assets/maps/duvessar-temple/b11.jpg",
+        "b12": "assets/maps/duvessar-temple/b12.jpg",
+        "b13": "assets/maps/duvessar-temple/b13.jpg"
       },
       "spots": {
         "b1": [
@@ -895,6 +895,26 @@
     }
   },
   "files": [
+    "assets/maps/duvessar-fauverive/complete.jpg",
+    "assets/maps/duvessar-fauverive/g1.jpg",
+    "assets/maps/duvessar-fauverive/g2.jpg",
+    "assets/maps/duvessar-fauverive/g3.jpg",
+    "assets/maps/duvessar-fauverive/g4.jpg",
+    "assets/maps/duvessar-fauverive/g5.jpg",
+    "assets/maps/duvessar-temple/b1.jpg",
+    "assets/maps/duvessar-temple/b10.jpg",
+    "assets/maps/duvessar-temple/b11.jpg",
+    "assets/maps/duvessar-temple/b12.jpg",
+    "assets/maps/duvessar-temple/b13.jpg",
+    "assets/maps/duvessar-temple/b2.jpg",
+    "assets/maps/duvessar-temple/b3.jpg",
+    "assets/maps/duvessar-temple/b4.jpg",
+    "assets/maps/duvessar-temple/b5.jpg",
+    "assets/maps/duvessar-temple/b6.jpg",
+    "assets/maps/duvessar-temple/b7.jpg",
+    "assets/maps/duvessar-temple/b8.jpg",
+    "assets/maps/duvessar-temple/b9.jpg",
+    "assets/maps/duvessar-temple/complete.jpg",
     "assets/maps/strate-2/10a.jpg",
     "assets/maps/strate-2/10b.jpg",
     "assets/maps/strate-2/10c.jpg",
@@ -1051,26 +1071,6 @@
     "assets/maps/strate-3/8c.jpg",
     "assets/maps/strate-3/9a.jpg",
     "assets/maps/strate-3/9b.jpg",
-    "assets/maps/strate-3/complete.jpg",
-    "assets/maps/yellowcrest-greenfast/complete.jpg",
-    "assets/maps/yellowcrest-greenfast/g1.jpg",
-    "assets/maps/yellowcrest-greenfast/g2.jpg",
-    "assets/maps/yellowcrest-greenfast/g3.jpg",
-    "assets/maps/yellowcrest-greenfast/g4.jpg",
-    "assets/maps/yellowcrest-greenfast/g5.jpg",
-    "assets/maps/yellowcrest-temple/b1.jpg",
-    "assets/maps/yellowcrest-temple/b10.jpg",
-    "assets/maps/yellowcrest-temple/b11.jpg",
-    "assets/maps/yellowcrest-temple/b12.jpg",
-    "assets/maps/yellowcrest-temple/b13.jpg",
-    "assets/maps/yellowcrest-temple/b2.jpg",
-    "assets/maps/yellowcrest-temple/b3.jpg",
-    "assets/maps/yellowcrest-temple/b4.jpg",
-    "assets/maps/yellowcrest-temple/b5.jpg",
-    "assets/maps/yellowcrest-temple/b6.jpg",
-    "assets/maps/yellowcrest-temple/b7.jpg",
-    "assets/maps/yellowcrest-temple/b8.jpg",
-    "assets/maps/yellowcrest-temple/b9.jpg",
-    "assets/maps/yellowcrest-temple/complete.jpg"
+    "assets/maps/strate-3/complete.jpg"
   ]
 }

@@ -317,7 +317,7 @@ if (existsSync(mapsPath)) {
     if (!m) { err(`index.json : carte « ${meta.map} » absente de data/maps.json`); continue; }
     const adv = readJSON(join(DATA, meta.path));
     // Une salle peut déclarer sa propre carte (« map »), ou n'en avoir aucune —
-    // les lieux urbains de Sarah du manoir Yellowcrest n'ont pas de plan.
+    // les lieux urbains de Wenna du manoir Duvessar n'ont pas de plan.
     for (const r of adv?.rooms || []) {
       const mid = r.map || meta.map;
       const mm = r.map ? maps.maps?.[r.map] : m;

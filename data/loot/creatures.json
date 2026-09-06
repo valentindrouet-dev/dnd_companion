@@ -596,7 +596,7 @@
         "champion",
         "drow-priestess",
         "knight",
-        "vecken",
+        "corvan",
         "durnan"
       ],
       "description": "L’équipement est de meilleure facture, mais le corps reste lourd et déjà froid. Les objets récupérés sont imprégnés de sueur, de sang et de poussière.",
@@ -2523,8 +2523,8 @@
       "type": "human",
       "match": [
         "mage",
-        "viallis",
-        "viallis-eveille"
+        "ostrian",
+        "ostrian-eveille"
       ],
       "description": "La robe est de bonne facture et les poches sont cousues à l’intérieur. Fouiller un lanceur de sorts, c’est surtout éviter ce qu’il a laissé sous tension dans ses affaires.",
       "check": {
@@ -3269,7 +3269,7 @@
         "shadow",
         "will-o-wisp",
         "ghost",
-        "sarah"
+        "wenna"
       ],
       "description": "La forme se dissipe à peine touchée. Il ne reste qu’un froid intense et des traces d’ombre figées sur les surfaces proches.",
       "check": {
@@ -4907,14 +4907,14 @@
       ]
     },
     {
-      "id": "langue-brulee",
-      "name": "Fanatique de la Langue Brûlée",
-      "en": "Burnt Tongue Fanatic",
+      "id": "verbe-eteint",
+      "name": "Fanatique du Verbe Éteint",
+      "en": "Silenced Word Fanatic",
       "level": 2,
       "type": "human",
       "match": [
         "cult-fanatic",
-        "elu-langue-brulee"
+        "elu-verbe-eteint"
       ],
       "description": "On ouvre la robe et l’on trouve d’abord le symbole de bois, cousu à même la doublure. Puis la bouche : la langue a été brûlée volontairement, et la cicatrice est ancienne. Ceux-là ont payé leur entrée.",
       "check": {
@@ -4926,7 +4926,7 @@
       "loot": [
         {
           "emoji": "👅",
-          "name": "Symbole de langue arrachée",
+          "name": "Symbole de bouche cousue",
           "en": "Torn Tongue Symbol",
           "p": 60,
           "qty": "1",
@@ -4986,7 +4986,7 @@
       "type": "human",
       "match": [
         "noble",
-        "faerl"
+        "thaevil"
       ],
       "description": "Fouiller un notable prend plus de temps qu’un bandit : tout est cousu, doublé, dissimulé. Les poches intérieures valent mieux que la bourse, et la chevalière vaut mieux que tout le reste — à condition de savoir à qui la montrer.",
       "check": {

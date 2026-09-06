@@ -47,6 +47,31 @@ def frame(pix, x0, y0, x1, y1, width=3):
             pix.set_rect(r, MARK)
 
 
+def repaint(page, spec):
+    """Recouvre les titres imprimés sur la carte et les remplace.
+
+    Les cartes des modules officiels portent leur titre en anglais : lisible à
+    l'écran, il trahit l'aventure d'origine. On peint par-dessus la couleur du
+    papier, échantillonnée juste à côté, puis on réécrit le titre voulu.
+    """
+    for m in spec.get('masks', []):
+        rect = pymupdf.Rect(*m['box'])
+        probe = page.get_pixmap(matrix=pymupdf.Matrix(1, 1),
+                                clip=pymupdf.Rect(rect.x0 - 6, rect.y0 - 3, rect.x0 - 2, rect.y0 + 1))
+        r, g, b = probe.pixel(0, 0)[:3] if probe.width and probe.height else (240, 238, 230)
+        page.draw_rect(rect, color=None, fill=(r / 255, g / 255, b / 255), overlay=True)
+        if not m.get('text'):
+            continue
+        # insert_textbox ne dessine rien si le texte déborde et renvoie un reste négatif :
+        # on réduit jusqu'à ce qu'il tienne, plutôt que d'écrire un titre invisible.
+        for size in range(int(m.get('size', 16)), 5, -1):
+            if page.insert_textbox(rect, m['text'], fontname=m.get('font', 'tibo'), fontsize=size,
+                                   color=(0.29, 0.22, 0.16), align=m.get('align', 0), overlay=True) >= 0:
+                break
+        else:
+            print(f'  ! titre « {m["text"]} » trop long pour son cadre')
+
+
 def build(name, spec, index):
     pdf = os.path.join(ROOT, spec['pdf'])
     if not os.path.exists(pdf):
@@ -54,6 +79,7 @@ def build(name, spec, index):
         return
     doc = pymupdf.open(pdf)
     page = doc[spec['page'] - 1]
+    repaint(page, spec)
     clip = pymupdf.Rect(*spec['clip'])
 
     full = page.get_pixmap(matrix=pymupdf.Matrix(ZOOM_FULL, ZOOM_FULL), clip=clip)

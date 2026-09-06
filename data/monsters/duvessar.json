@@ -1,9 +1,9 @@
 [
   {
-    "id": "viallis",
-    "name": "Lord Viallis Yellowcrest",
-    "nameEn": "Lord Viallis Yellowcrest",
-    "source": "Candlekeep Mysteries : Sarah of Yellowcrest Manor, p. 106-113 — mage (MM 2024, p. 199)",
+    "id": "ostrian",
+    "name": "Lord Ostrian Duvessar",
+    "nameEn": "Lord Ostrian Duvessar",
+    "source": "Module officiel adapté — référence en notes du MJ — mage (MM 2024, p. 199)",
     "size": "M", "type": "Humanoïde (mage)", "alignment": "Chaotique mauvais",
     "cr": "6", "xp": 2300, "pb": 3,
     "ac": 15, "acNote": "armure du mage, déjà lancée", "hp": 81, "hpFormula": "18d8", "speed": "9 m",
@@ -37,10 +37,10 @@
     }
   },
   {
-    "id": "faerl",
-    "name": "Faerl",
-    "nameEn": "Faerl",
-    "source": "Candlekeep Mysteries : Sarah of Yellowcrest Manor, p. 106-113 — noble (MM 2024, p. 227)",
+    "id": "thaevil",
+    "name": "Thaevil",
+    "nameEn": "Thaevil",
+    "source": "Module officiel adapté — référence en notes du MJ — noble (MM 2024, p. 227)",
     "size": "M", "type": "Humanoïde (elfe des bois)", "alignment": "Neutre mauvais",
     "cr": "1/8", "xp": 25, "pb": 2,
     "ac": 15, "acNote": "cuirasse sous la soie", "hp": 9, "hpFormula": "2d8", "speed": "9 m",
@@ -66,10 +66,10 @@
     }
   },
   {
-    "id": "vecken",
-    "name": "Sir Vecken de la Corne Brisée",
-    "nameEn": "Sir Vecken",
-    "source": "Candlekeep Mysteries : Sarah of Yellowcrest Manor, p. 106-113 — chevalier (MM 2024, p. 184)",
+    "id": "corvan",
+    "name": "Sir Corvan du Heaume Fendu",
+    "nameEn": "Sir Corvan",
+    "source": "Module officiel adapté — référence en notes du MJ — chevalier (MM 2024, p. 184)",
     "size": "M", "type": "Humanoïde", "alignment": "Loyal bon",
     "cr": "3", "xp": 700, "pb": 2,
     "ac": 18, "acNote": "harnois", "hp": 52, "hpFormula": "8d8 + 16", "speed": "9 m",
@@ -86,7 +86,7 @@
       { "name": "Parade", "text": "Quand il est touché au corps à corps : +2 à sa CA contre cette attaque." }
     ],
     "summary": {
-      "style": "Colosse balafré au sourire facile, casque à la corne fendue au-dessus de la cheminée.",
+      "style": "Colosse balafré au sourire facile, heaume fendu en deux au-dessus de la cheminée.",
       "intent": "Il a rangé les armes pour son père. Une seule nouvelle suffit à les ressortir.",
       "tactics": "Charge le porteur du symbole de la secte et ne le lâche pas. *« Quand la colère et le chagrin me prennent, je ne me contrôle plus. »*",
       "flee": "Jamais.",
@@ -94,10 +94,10 @@
     }
   },
   {
-    "id": "sarah",
-    "name": "Sarah",
-    "nameEn": "Sarah",
-    "source": "Candlekeep Mysteries : Sarah of Yellowcrest Manor, p. 106-113 — fantôme (MM 2024, p. 131)",
+    "id": "wenna",
+    "name": "Wenna",
+    "nameEn": "Wenna",
+    "source": "Module officiel adapté — référence en notes du MJ — fantôme (MM 2024, p. 131)",
     "size": "M", "type": "Mort-vivant", "alignment": "Loyal bon",
     "cr": "4", "xp": 1100, "pb": 2,
     "ac": 11, "hp": 45, "hpFormula": "10d8", "speed": "1,50 m, vol 12 m (vol stationnaire)",
@@ -109,7 +109,7 @@
     "traits": [
       { "name": "Déplacement éthéré", "text": "Elle traverse murs, sols et objets comme un terrain difficile. Elle subit 5 (1d10) dégâts de force si elle finit son tour dans un objet." },
       { "name": "Liée au journal", "text": "**Elle ne peut pas s’éloigner de plus de 9 m du journal.** Détruire le livre la libère : elle redouble alors d’efforts pour obtenir justice." },
-      { "name": "Sans langue", "text": "Viallis lui a coupé la langue avant de la tuer. Elle ne peut ni parler, ni chuchoter, ni crier — **seulement gémir, montrer du doigt, écrire, ou posséder**." }
+      { "name": "Sans langue", "text": "Ostrian lui a coupé la langue avant de la tuer. Elle ne peut ni parler, ni chuchoter, ni crier — **seulement gémir, montrer du doigt, écrire, ou posséder**." }
     ],
     "actions": [
       { "name": "Ce qu’elle veut", "text": "**Elle n’attaque pas.** Elle a toutes les capacités d’un fantôme et n’en emploie aucune contre les vivants. Si rien d’autre ne passe, elle emploie la **Possession** pour dire par une bouche empruntée ce qu’elle ne peut plus dire par la sienne." },
@@ -117,10 +117,10 @@
     ],
     "summary": {
       "style": "Une jeune servante en larmes, en uniforme, l’arbre au soleil levant à l’épaule. Elle ouvre la bouche : il n’y a plus de langue.",
-      "intent": "Que Lady Maria et les trois enfants reposent en terre consacrée. Rien de plus.",
+      "intent": "Que Lady Ysolde et les trois enfants reposent en terre consacrée. Rien de plus.",
       "tactics": "Aucune. Elle n’a jamais voulu de mal à personne, même morte.",
       "flee": "Elle se dissipe quand elle a épuisé le peu qu’elle peut transmettre. On la rappelle en **prononçant son nom près du journal**.",
-      "weakness": "**Chaque canal de communication est lent, et c’est voulu.** Ne raccourcis pas ces scènes : la frustration de Sarah est le cœur de l’aventure."
+      "weakness": "**Chaque canal de communication est lent, et c’est voulu.** Ne raccourcis pas ces scènes : la frustration de Wenna est le cœur de l’aventure."
     }
   }
 ]
