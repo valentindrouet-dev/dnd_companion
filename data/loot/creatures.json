@@ -331,7 +331,10 @@
       "type": "human",
       "match": [
         "cultist",
-        "drow"
+        "drow",
+        "commoner",
+        "guard",
+        "acolyte"
       ],
       "description": "Les cadavres sont retournés un à un. Sous les vêtements imbibés de sueur et de poussière, on récupère armes émoussées et bourses poisseuses. Le cuir colle aux doigts.",
       "check": {
@@ -591,7 +594,10 @@
       "match": [
         "drow-elite-warrior",
         "champion",
-        "drow-priestess"
+        "drow-priestess",
+        "knight",
+        "vecken",
+        "durnan"
       ],
       "description": "L’équipement est de meilleure facture, mais le corps reste lourd et déjà froid. Les objets récupérés sont imprégnés de sueur, de sang et de poussière.",
       "check": {
@@ -1741,7 +1747,9 @@
       "level": 1,
       "type": "aberration",
       "match": [
-        "gas-spore"
+        "gas-spore",
+        "grell",
+        "grell-ancien"
       ],
       "description": "Les tentacules pendent, humides, parcourus de spasmes. Les sectionner libère un liquide sombre et visqueux à l’odeur marine rance.",
       "check": {
@@ -2514,7 +2522,9 @@
       "level": 1,
       "type": "human",
       "match": [
-        "mage"
+        "mage",
+        "viallis",
+        "viallis-eveille"
       ],
       "description": "La robe est de bonne facture et les poches sont cousues à l’intérieur. Fouiller un lanceur de sorts, c’est surtout éviter ce qu’il a laissé sous tension dans ses affaires.",
       "check": {
@@ -2673,7 +2683,8 @@
       "type": "human",
       "match": [
         "tough",
-        "berserker"
+        "berserker",
+        "warrior-veteran"
       ],
       "description": "Le corps est lourd à manipuler. Les sangles enfoncées dans la chair doivent être arrachées pour libérer des armes cabossées, accompagnées de craquements sourds.",
       "check": {
@@ -3257,7 +3268,8 @@
         "specter",
         "shadow",
         "will-o-wisp",
-        "ghost"
+        "ghost",
+        "sarah"
       ],
       "description": "La forme se dissipe à peine touchée. Il ne reste qu’un froid intense et des traces d’ombre figées sur les surfaces proches.",
       "check": {
@@ -4891,6 +4903,157 @@
           "p": 10,
           "qty": "1",
           "magic": "B"
+        }
+      ]
+    },
+    {
+      "id": "langue-brulee",
+      "name": "Fanatique de la Langue Brûlée",
+      "en": "Burnt Tongue Fanatic",
+      "level": 2,
+      "type": "human",
+      "match": [
+        "cult-fanatic",
+        "elu-langue-brulee"
+      ],
+      "description": "On ouvre la robe et l’on trouve d’abord le symbole de bois, cousu à même la doublure. Puis la bouche : la langue a été brûlée volontairement, et la cicatrice est ancienne. Ceux-là ont payé leur entrée.",
+      "check": {
+        "skill": "Religion",
+        "dc": 13
+      },
+      "duration": "10 min",
+      "danger": "La dague brûlante n’est pas éteinte. **2d6 dégâts nécrotiques** au premier qui la saisit sans gant, et **+1d4 minutes**.",
+      "loot": [
+        {
+          "emoji": "👅",
+          "name": "Symbole de langue arrachée",
+          "en": "Torn Tongue Symbol",
+          "p": 60,
+          "qty": "1",
+          "value": "sans valeur marchande",
+          "use": "un cultiste croisé en chemin salue celui qui le porte au lieu de crier — une fois"
+        },
+        {
+          "emoji": "🗡️",
+          "name": "Dague brûlante",
+          "en": "Searing Dagger",
+          "p": 35,
+          "qty": "1",
+          "value": "25 po",
+          "brokenName": "Dague ébréchée"
+        },
+        {
+          "emoji": "📜",
+          "name": "Feuillet de liturgie",
+          "en": "Liturgy Sheet",
+          "p": 40,
+          "qty": "1d3",
+          "value": "5 po la pièce",
+          "use": "à Castel-Suif ou au Guet, chaque feuillet vaut une faveur"
+        },
+        {
+          "emoji": "🕯️",
+          "name": "Chandelle d’os",
+          "en": "Bone Candle",
+          "p": 30,
+          "qty": "1d4",
+          "value": "2 po",
+          "use": "brûle 1 heure d’une flamme turquoise qui ne fait pas d’ombre"
+        },
+        {
+          "emoji": "💰",
+          "name": "Bourse",
+          "en": "Coin Pouch",
+          "p": 45,
+          "qty": "1d8",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 6,
+          "qty": "1",
+          "magic": "A"
+        }
+      ]
+    },
+    {
+      "id": "notable",
+      "name": "Notable",
+      "en": "Noble",
+      "level": 1,
+      "type": "human",
+      "match": [
+        "noble",
+        "faerl"
+      ],
+      "description": "Fouiller un notable prend plus de temps qu’un bandit : tout est cousu, doublé, dissimulé. Les poches intérieures valent mieux que la bourse, et la chevalière vaut mieux que tout le reste — à condition de savoir à qui la montrer.",
+      "check": {
+        "skill": "Investigation",
+        "dc": 12
+      },
+      "duration": "10 min",
+      "danger": "Un témoin. **Le Guet est prévenu** : quiconque porte encore ces vêtements dans les deux jours est arrêté sur description.",
+      "loot": [
+        {
+          "emoji": "💍",
+          "name": "Chevalière",
+          "en": "Signet Ring",
+          "p": 45,
+          "qty": "1",
+          "value": "25 po",
+          "use": "ouvre une porte de service ou un livre de comptes, une fois, avant qu’on ne comprenne"
+        },
+        {
+          "emoji": "💎",
+          "name": "Bijoux",
+          "en": "Jewelry",
+          "p": 40,
+          "qty": "1d3",
+          "value": "20 po la pièce"
+        },
+        {
+          "emoji": "🎩",
+          "name": "Vêtements de qualité",
+          "en": "Fine Clothes",
+          "p": 50,
+          "qty": "1",
+          "value": "15 po",
+          "brokenName": "Vêtements déchirés"
+        },
+        {
+          "emoji": "📖",
+          "name": "Carnet de comptes",
+          "en": "Ledger",
+          "p": 35,
+          "qty": "1",
+          "value": "—",
+          "use": "des noms, des dates et des sommes ; un test d’Investigation DD 13 en tire une adresse"
+        },
+        {
+          "emoji": "🧪",
+          "name": "Potion de soins supérieure",
+          "en": "Potion of Healing (Superior)",
+          "p": 15,
+          "qty": "1",
+          "value": "450 po"
+        },
+        {
+          "emoji": "💰",
+          "name": "Bourse de cuir",
+          "en": "Leather Pouch",
+          "p": 55,
+          "qty": "2d10",
+          "coin": "po"
+        },
+        {
+          "emoji": "✨",
+          "name": "Objet magique",
+          "en": "Magic Item",
+          "p": 4,
+          "qty": "1",
+          "magic": "A"
         }
       ]
     }

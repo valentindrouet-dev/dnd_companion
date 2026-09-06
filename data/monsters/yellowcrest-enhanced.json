@@ -1,0 +1,138 @@
+[
+  {
+    "id": "viallis-eveille",
+    "name": "Lord Viallis, l’Œil ouvert",
+    "nameEn": "Lord Viallis Awakened",
+    "source": "Version Améliorée — d’après le mage (MM 2024, p. 199)",
+    "only": "enhanced",
+    "size": "M", "type": "Humanoïde (mage)", "alignment": "Chaotique mauvais",
+    "cr": "9", "xp": 5000, "pb": 4,
+    "ac": 17, "acNote": "armure du mage + don de Gaernoo", "hp": 130, "hpFormula": "20d8 + 40", "speed": "9 m",
+    "abilities": { "str": 9, "dex": 14, "con": 15, "int": 19, "wis": 12, "cha": 11 },
+    "saves": "Int +8, Sag +5",
+    "skills": "Arcanes +8, Histoire +8, Perception +5",
+    "resistances": "psychique",
+    "senses": "vision aveugle 9 m ; Perception passive 15",
+    "languages": "commun, elfique, profond",
+    "traits": [
+      { "name": "Robe des couleurs chatoyantes", "text": "Action, 1/jour : Sagesse DD 16 ou **étourdi jusqu’à la fin de son prochain tour**, pour toutes les créatures à 9 m qui le voient." },
+      { "name": "Troisième œil", "text": "Gaernoo lui a ouvert un œil au milieu du front. Il **voit les créatures invisibles à 9 m** et ne peut pas être surpris." },
+      { "name": "Le puits appelle", "text": "Tant que **Durnan est vivant sur l’autel**, Viallis a l’avantage à tous ses jets de sauvegarde. Libérer le tavernier lui retire ce bonus **immédiatement** : dis-le à voix haute quand cela arrive." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "Trois attaques de *Décharge arcanique*." },
+      { "name": "Décharge arcanique", "text": "Jet d’attaque au corps à corps ou à distance : +8, allonge 1,50 m ou portée 36 m. Touché : 18 (3d8 + 5) dégâts de force." },
+      { "name": "Incantation", "text": "Intelligence, DD 16, +8 pour toucher. **À volonté :** *armure du mage*, *détection de la magie*, *lumière*. **2/jour chacun :** *boule de feu* (niveau 5), *invisibilité supérieure*, *vol*, *rayon empoisonné*. **1/jour :** *cône de froid*, *tempête de grêle*." },
+      { "name": "Souffle de Gaernoo (recharge 5-6)", "text": "Cône de 9 m. Jet de sauvegarde d’Intelligence DD 16 : **échec**, 27 (6d8) dégâts psychiques et la cible ne peut plus lancer de sort à composante verbale jusqu’à la fin de son prochain tour — sa langue lui brûle la bouche. **Réussite**, moitié des dégâts." },
+      { "name": "Parchemin de téléportation", "text": "Comme la version de base. **Il ne l’utilise pas tant que Durnan est sur l’autel** : il ne partira pas sans ce qu’il est venu chercher." }
+    ],
+    "bonusActions": [
+      { "name": "Pas brumeux (3/jour)", "text": "Il lance *pas brumeux*." }
+    ],
+    "reactions": [
+      { "name": "Magie protectrice (3/jour)", "text": "Il lance *bouclier*." },
+      { "name": "Contresort (2/jour)", "text": "Il lance *contresort* contre un sort de niveau 3 ou moins lancé à 18 m." }
+    ],
+    "summary": {
+      "style": "Le même notable affable qu’à Waterdeep, et un œil de trop. Il continue de vouvoyer le groupe pendant qu’il les brûle.",
+      "intent": "Ouvrir le puits du Portail Béant. Durnan est la clef, pas la cible.",
+      "tactics": "Round 1 il achève le rituel. Round 2, **Souffle de Gaernoo** sur le paquet le plus dense. Ensuite *contresort* sur le premier sort de niveau 3, décharges sur le lanceur.",
+      "flee": "Sous 40 PV **et** Durnan perdu : parchemin, il disparaît. Sinon il tient jusqu’au bout.",
+      "weakness": "**Libérer Durnan lui coûte son avantage aux sauvegardes et sa raison de rester.** C’est la manœuvre gagnante, et elle demande qu’on renonce à frapper pendant un tour."
+    }
+  },
+  {
+    "id": "grell-ancien",
+    "name": "Grell ancien",
+    "nameEn": "Elder Grell",
+    "source": "Version Améliorée — d’après le grell (MM 2024, p. 157)",
+    "only": "enhanced",
+    "size": "G", "type": "Aberration", "alignment": "Neutre mauvais",
+    "cr": "6", "xp": 2300, "pb": 3,
+    "ac": 14, "hp": 105, "hpFormula": "14d10 + 28", "speed": "3 m, vol 12 m (vol stationnaire)",
+    "abilities": { "str": 18, "dex": 15, "con": 15, "int": 13, "wis": 12, "cha": 10 },
+    "skills": "Perception +6, Discrétion +8",
+    "immunities": "foudre ; aveuglé, à terre",
+    "senses": "vision aveugle 27 m (aveugle au-delà) ; Perception passive 16",
+    "languages": "profond",
+    "traits": [
+      { "name": "Enlèvement", "text": "Aucun mouvement supplémentaire pour emporter une créature agrippée. Il peut en agripper **deux à la fois**." },
+      { "name": "Silence de plafond", "text": "Tant qu’il ne s’est pas révélé, la Discrétion du grell est **passive 18** contre quiconque ne regarde pas en l’air." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "Une attaque de *Bec* et deux de *Tentacules paralysants*." },
+      { "name": "Bec", "text": "Jet d’attaque au corps à corps : +7, allonge 1,50 m. Touché : 17 (3d8 + 4) dégâts perforants." },
+      { "name": "Tentacules paralysants", "text": "Jet d’attaque au corps à corps : +7, allonge 4,50 m. Touché : 11 (2d6 + 4) dégâts perforants, cible agrippée (DD 15). Constitution DD 15 : échec, **empoisonnée 1 minute et paralysée** tant qu’elle l’est." }
+    ],
+    "summary": {
+      "style": "Le grell qui a mangé les autres. Il a la taille d’un cheval et le même silence.",
+      "intent": "Emporter deux corps d’un coup, et remonter les manger dans le noir.",
+      "tactics": "Paralyse, agrippe deux personnages, **s’envole à 12 m** et les lâche. Une chute de 12 m coûte 6d6 : c’est sa vraie attaque.",
+      "flee": "Ne fuit pas. Remonte hors de portée et redescend quand il a faim.",
+      "weakness": "Aveugle au-delà de 27 m, et **le vol stationnaire cesse s’il tombe à 0 de vitesse** : *toile d’araignée*, *ralentissement* ou une lance d’hast le clouent au sol."
+    }
+  },
+  {
+    "id": "elu-langue-brulee",
+    "name": "Élu de la Langue Brûlée",
+    "nameEn": "Burnt Tongue Chosen",
+    "source": "Version Améliorée — d’après le fanatique de secte (MM 2024, p. 85)",
+    "only": "enhanced",
+    "size": "M", "type": "Humanoïde", "alignment": "Neutre mauvais",
+    "cr": "5", "xp": 1800, "pb": 3,
+    "ac": 15, "acNote": "cuir clouté", "hp": 85, "hpFormula": "13d8 + 26", "speed": "9 m",
+    "abilities": { "str": 12, "dex": 16, "con": 14, "int": 13, "wis": 18, "cha": 14 },
+    "saves": "Con +5, Sag +7",
+    "skills": "Tromperie +5, Religion +4",
+    "resistances": "psychique",
+    "senses": "Perception passive 14",
+    "languages": "commun, profond",
+    "traits": [
+      { "name": "Langue offerte", "text": "Il s’est brûlé la langue pour entrer dans le culte. **Il ne parle pas** et lance tous ses sorts sans composante verbale — *silence* ne l’arrête pas." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "Trois attaques de *Dague brûlante*." },
+      { "name": "Dague brûlante", "text": "Jet d’attaque au corps à corps ou à distance : +6, allonge 1,50 m ou portée 6/18 m. Touché : 6 (1d4 + 4) dégâts perforants, plus 10 (3d6) dégâts nécrotiques." },
+      { "name": "Incantation", "text": "Sagesse, DD 15. **À volonté :** *lumière*, *thaumaturgie*. **3/jour :** *immobilisation de personne*. **2/jour :** *injonction*, *cécité/surdité*. **1/jour :** *contagion*." }
+    ],
+    "reactions": [
+      { "name": "Cri qu’il ne peut pas pousser", "text": "Quand il tombe à 0 PV, toutes les créatures à 4,50 m subissent 9 (2d8) dégâts psychiques — Intelligence DD 15 pour moitié." }
+    ],
+    "summary": {
+      "style": "Le culte a des officiers, maintenant. Celui-ci ne dira pas un mot de tout le combat.",
+      "intent": "Tenir la chapelle assez longtemps pour que le maître finisse.",
+      "tactics": "*Immobilisation* sur le corps à corps, *cécité* sur le lanceur, puis trois dagues sur celui qui est immobilisé — **critique automatique à 1,50 m**.",
+      "flee": "Jamais. Sa mort blesse encore.",
+      "weakness": "**Le faire tomber en mêlée coûte 2d8 à ceux qui l’entourent** : l’achever à distance vaut mieux. Sag +7 : les sorts d’esprit passent mal."
+    }
+  },
+  {
+    "id": "durnan",
+    "name": "Durnan",
+    "nameEn": "Durnan",
+    "source": "Version Améliorée — d’après le capitaine de la garde (MM 2024, p. 162)",
+    "only": "enhanced",
+    "size": "M", "type": "Humanoïde", "alignment": "Loyal neutre",
+    "cr": "4", "xp": 1100, "pb": 2,
+    "ac": 18, "acNote": "cuirasse et bouclier +1 — s’il récupère son barda", "hp": 75, "hpFormula": "10d8 + 30", "speed": "9 m",
+    "abilities": { "str": 18, "dex": 14, "con": 16, "int": 12, "wis": 14, "cha": 13 },
+    "skills": "Athlétisme +6, Perception +4",
+    "senses": "Perception passive 14",
+    "languages": "commun, nain",
+    "traits": [
+      { "name": "Il en a vu d’autres", "text": "Avantage aux jets de sauvegarde contre l’état **terrorisé**. Quarante ans sous la ville : rien de ce que fait le culte ne l’impressionne." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "Deux attaques d’*Épée longue*." },
+      { "name": "Épée longue", "text": "Jet d’attaque au corps à corps : +6, allonge 1,50 m. Touché : 8 (1d8 + 4) dégâts tranchants, ou 9 (1d10 + 4) à deux mains." }
+    ],
+    "summary": {
+      "style": "Le tavernier du Portail Béant. Sobre, taciturne, et beaucoup plus dangereux qu’il n’en a l’air.",
+      "intent": "Rentrer, rouvrir, et ne jamais raconter ce qui s’est passé.",
+      "tactics": "**Retrouvé, il est à 20 PV et sans arme.** Rendu à son épée, il tient la porte pendant que le groupe fait le reste.",
+      "flee": "Il ne part pas sans les autres prisonniers.",
+      "weakness": "**Ne le fais pas résoudre l’aventure.** Il encaisse, il frappe, il ne déduit rien : il a passé la captivité inconscient et n’a vu aucun visage.",
+      "roleplay": "Il remercie une fois, en trois mots, et ne le refait pas. Sur le chemin du retour, il dit une seule chose utile : où il a déjà vu ce symbole, en bas."
+    }
+  }
+]

@@ -34,6 +34,12 @@ export function visibleItems(list, idOf) {
     .filter(({ item }) => isVisible(item));
 }
 
+/** Salles visibles dans la version courante. Une salle propre à une mouture
+ *  disparaît des listes, des cartes et des pourcentages — mais reste joignable
+ *  par son adresse, comme n'importe quel élément masqué. */
+export function visibleRooms(adv) { return (adv?.rooms || []).filter(isVisible); }
+export function visibleOrder(adv) { return (adv?.roomOrder || []).filter(isVisible); }
+
 /** Étoile signalant un élément venu de la version Améliorée. */
 export function enhancedStar(item) {
   return item?.only === 'enhanced' ? h('span', { class: 'star', title: 'Version Améliorée' }, icon('star')) : null;

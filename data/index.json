@@ -23,6 +23,17 @@
         "glossary/commun.json",
         "glossary/strate-3.json"
       ]
+    },
+    {
+      "id": "sarah-yellowcrest",
+      "title": "Sarah du manoir Yellowcrest",
+      "levels": "7",
+      "source": "Candlekeep Mysteries, p. 106-113",
+      "path": "adventures/sarah-yellowcrest.json",
+      "map": "yellowcrest-temple",
+      "glossary": [
+        "glossary/yellowcrest.json"
+      ]
     }
   ],
   "monsters": [
@@ -30,12 +41,15 @@
     "monsters/mm-2024.json",
     "monsters/enhanced.json",
     "monsters/sargauth.json",
-    "monsters/sargauth-enhanced.json"
+    "monsters/sargauth-enhanced.json",
+    "monsters/yellowcrest.json",
+    "monsters/yellowcrest-enhanced.json"
   ],
   "glossary": [
     "glossary/commun.json",
     "glossary/strate-2.json",
-    "glossary/strate-3.json"
+    "glossary/strate-3.json",
+    "glossary/yellowcrest.json"
   ],
   "loot": [
     "loot/creatures.json"

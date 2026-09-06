@@ -316,7 +316,14 @@ if (existsSync(mapsPath)) {
     const m = maps.maps?.[meta.map];
     if (!m) { err(`index.json : carte « ${meta.map} » absente de data/maps.json`); continue; }
     const adv = readJSON(join(DATA, meta.path));
-    for (const r of adv?.rooms || []) if (!m.rooms?.[r.id]) warn(`carte « ${meta.map} » : pas de cadrage pour la salle « ${r.id} »`);
+    // Une salle peut déclarer sa propre carte (« map »), ou n'en avoir aucune —
+    // les lieux urbains de Sarah du manoir Yellowcrest n'ont pas de plan.
+    for (const r of adv?.rooms || []) {
+      const mid = r.map || meta.map;
+      const mm = r.map ? maps.maps?.[r.map] : m;
+      if (r.map && !mm) { err(`${meta.id}/${r.id} : carte « ${r.map} » absente de data/maps.json`); continue; }
+      if (!mm.rooms?.[r.id] && !r.noMap) warn(`carte « ${mid} » : pas de cadrage pour la salle « ${r.id} »`);
+    }
   }
 } else if ((index.adventures || []).some((a) => a.map)) {
   warn('data/maps.json absent : lance « npm run maps » pour générer les cartes.');

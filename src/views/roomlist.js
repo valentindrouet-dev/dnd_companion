@@ -11,6 +11,7 @@ import { trackersOf, trackerButton } from '../components/tracker.js';
 import { roomSidebar } from './sidebar.js';
 import { compareRoomNumbers, slug } from '../util.js';
 import { roomProgress, roomStatus, cycleRoomStatus, ROOM_STATUSES } from '../progress.js';
+import { visibleRooms } from '../variant.js';
 
 let query = '';
 let hideDone = false;
@@ -22,7 +23,7 @@ export async function roomListView(route) {
   const adv = await loadAdventure(route.adv);
   if (queryAdv !== adv.id) { queryAdv = adv.id; query = ''; hideDone = false; }
 
-  const rooms = [...adv.rooms].sort((a, b) => compareRoomNumbers(a.number, b.number));
+  const rooms = visibleRooms(adv).sort((a, b) => compareRoomNumbers(a.number, b.number));
   const list = h('div', { class: 'room-list' });
   const input = h('input', {
     class: 'input', type: 'search', placeholder: 'N°, nom, étiquette…', value: query,

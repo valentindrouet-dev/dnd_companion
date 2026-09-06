@@ -7,6 +7,7 @@ import { markup } from '../markup.js';
 import { openPopup } from '../ui/popup.js';
 import { toast } from '../ui/toast.js';
 import { generateLoot, lootCreatures, lootCreature, lootTableFor, GENERATOR_NAME } from './generator.js';
+import { visibleRooms } from '../variant.js';
 
 let selectedId = null;
 let count = 1;
@@ -46,7 +47,7 @@ export function openLootPopup({ adv, room, creatureId, count: n, back } = {}) {
 function adventureTables(adv) {
   const seen = new Set();
   const out = [];
-  for (const r of adv?.rooms || []) {
+  for (const r of visibleRooms(adv)) {
     for (const e of [...(r.enemies || []), ...(r.npcs || [])]) {
       const t = e.monster && lootTableFor(e.monster);
       if (t && !seen.has(t.id)) { seen.add(t.id); out.push(t); }

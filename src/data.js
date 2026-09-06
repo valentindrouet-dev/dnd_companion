@@ -1,5 +1,7 @@
 // Chargement des données embarquées (data/index.json → aventures, monstres).
 
+import { visibleOrder } from './variant.js';
+
 const BASE = './data/';
 
 let index = null;
@@ -97,8 +99,10 @@ export function roomLinks(adv, room) {
 }
 
 export function roomNeighbours(adv, room) {
-  const i = adv.roomOrder.indexOf(room);
-  return { prev: i > 0 ? adv.roomOrder[i - 1] : null, next: i >= 0 && i < adv.roomOrder.length - 1 ? adv.roomOrder[i + 1] : null };
+  const order = visibleOrder(adv);
+  const i = order.indexOf(room);
+  if (i < 0) return { prev: null, next: null };   // salle masquée : on ne l'enchaîne pas
+  return { prev: i > 0 ? order[i - 1] : null, next: i < order.length - 1 ? order[i + 1] : null };
 }
 
 /** Calcule l'XP d'une rencontre à partir des créatures référencées. */

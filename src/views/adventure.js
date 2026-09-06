@@ -12,7 +12,7 @@ import { card } from '../components/card.js';
 import { openNpcPopup } from '../components/npc.js';
 import { statusPill } from '../components/npcstatus.js';
 import { condense, textBlock } from '../components/block.js';
-import { visibleItems, enhancedStar } from '../variant.js';
+import { visibleItems, enhancedStar, visibleRooms, visibleOrder } from '../variant.js';
 import { slug } from '../util.js';
 import { adventureProgress, roomStatus, statusTally, ROOM_STATUSES } from '../progress.js';
 import { openMapPopup, fullMap } from '../components/map.js';
@@ -21,7 +21,7 @@ import { openEncounterPopup } from '../encounters/ui.js';
 export async function adventureView(route) {
   const adv = await loadAdventure(route.adv);
   const K = (...p) => key(adv.id, '_adv', ...p);
-  const first = adv.roomOrder[0];
+  const first = visibleOrder(adv)[0];
   const flag = store.flag(adv.id);
   const resume = flag || store.lastRoom(adv.id);
   const resumeRoom = resume ? adv.roomById.get(resume) : null;
@@ -97,7 +97,7 @@ export async function adventureView(route) {
 function list(x) {
   return visibleItems(x, (it, i) => asTextItem(it, i).id).map(({ item, id }) => ({ ...asTextItem(item, id), id }));
 }
-function orphans(adv) { return adv.roomOrder.filter((r) => !adv.sectionById.has(r.section)); }
+function orphans(adv) { return visibleOrder(adv).filter((r) => !adv.sectionById.has(r.section)); }
 
 function section(title, children, opts) {
   const count = opts?.count;
@@ -109,7 +109,7 @@ function section(title, children, opts) {
 /** Blocs de notes marqués « à faire », toutes salles confondues. */
 function collectTodos(adv) {
   const out = [];
-  for (const r of adv.rooms) {
+  for (const r of visibleRooms(adv)) {
     for (const t of list(r.notes)) {
       const k = key(adv.id, r.id, 'note', t.id);
       if (store.isTodo(k)) out.push({ room: r, title: t.title, preview: condense(t, store.getOverride(k) ?? t.text) });

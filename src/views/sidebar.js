@@ -6,6 +6,7 @@ import { store } from '../store.js';
 import { navigate, roomPath, advPath, listPath } from '../router.js';
 import { closeDrawer } from './shell.js';
 import { roomStatus, statusTally, ROOM_STATUSES } from '../progress.js';
+import { visibleOrder, isVisible } from '../variant.js';
 
 let filterText = '';
 let filterAdv = null;
@@ -35,8 +36,8 @@ export function roomSidebar(adv, currentId) {
       h('span', { class: 'tallies small' }, ROOM_STATUSES.map(([k, label, cls]) =>
         h('span', { class: 'tally ' + cls, title: label }, String(statusTally(adv)[k]))))));
 
-    const orphans = adv.roomOrder.filter((r) => !adv.sectionById.has(r.section));
-    const groups = [...adv.sections.map((s) => ({ title: s.title, rooms: (s.rooms || []).map((id) => adv.roomById.get(id)).filter(Boolean) }))];
+    const orphans = visibleOrder(adv).filter((r) => !adv.sectionById.has(r.section));
+    const groups = [...adv.sections.map((s) => ({ title: s.title, rooms: (s.rooms || []).map((id) => adv.roomById.get(id)).filter((r) => r && isVisible(r)) }))];
     if (orphans.length) groups.push({ title: 'Autres salles', rooms: orphans });
 
     for (const g of groups) {

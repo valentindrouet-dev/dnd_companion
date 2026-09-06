@@ -1,0 +1,2326 @@
+{
+  "id": "sarah-yellowcrest",
+  "title": "Sarah du manoir Yellowcrest",
+  "subtitle": "Waterdeep : un intermède urbain entre deux strates — Version Améliorée : la disparition de Durnan.",
+  "levels": "7",
+  "source": {
+    "book": "Candlekeep Mysteries — Sarah of Yellowcrest Manor (Derek Ruiz)",
+    "pages": "106-113"
+  },
+  "summary": "Conçue pour **quatre personnages de niveau 7**, à jouer entre la strate 2 et la strate 3, quand le groupe remonte pour un repos long. Une enquête urbaine dense, **peu de combats jusqu’au dernier acte**, beaucoup de décisions.\n\n**Version de base :** le fantôme d’une servante sans langue apparaît à Castel-Suif ([[r:c1|C]]) et réclame justice pour un massacre vieux de cinq ans. La piste mène au **manoir Yellowcrest** ([[r:w4|W4]]), puis au hameau de **Greenfast** et au **temple de la Langue Brûlée**, où **Lord Viallis** — seul survivant apparent, meurtrier réel — sert une entité nommée **Gaernoo**.\n\n**Version Améliorée :** le Portail Béant est fermé, la salle commune saccagée, **Durnan a disparu** ([[r:w1|W1]]). Tant qu’on ne le retrouve pas, Undermountain reste inaccessible. La piste des ravisseurs mène au même manoir, où le fantôme attend — et l’affaire froide se révèle être la même que l’affaire chaude.",
+  "intro": [
+    {
+      "id": "accroche",
+      "only": "base",
+      "text": "Le groupe est à **Castel-Suif**, entre deux expéditions. Sarah se manifeste pour la première fois en cinq ans, et le MJ choisit pourquoi : un personnage attaché à la loi ou au bien, un passé de tragédie semblable, une jeunesse pauvre comme la sienne — ou simplement quelqu’un qui lisait son journal.",
+      "summary": "À Castel-Suif, le fantôme se manifeste pour la première fois en cinq ans."
+    },
+    {
+      "id": "e-accroche",
+      "only": "enhanced",
+      "text": "**Le groupe remonte des Salles Arcaniques pour un repos long.** Il connaît le Portail Béant : c’est par là qu’il descend et remonte depuis des semaines.\n\nCe soir, la salle commune est vide, le feu est mort, et **le puits est enchaîné par le haut**. Durnan n’est nulle part.\n\n**Tant qu’il n’est pas retrouvé, la strate 3 attendra.**",
+      "summary": "Le Portail Béant est vide, le puits scellé, Durnan a disparu — et Undermountain avec lui."
+    },
+    {
+      "id": "e-mobile",
+      "only": "enhanced",
+      "text": "**Pourquoi lui.** Durnan a passé quarante ans sous la ville. Il a reconnu le symbole de la Langue Brûlée : **il l’a déjà vu gravé quelque part, en bas**. Il a commencé à poser des questions aux mauvaises personnes.\n\nLe culte l’a fait enlever pour deux raisons à la fois : **le faire taire**, et **récupérer ce qui verrouille le puits**. Il leur faut un accès libre aux profondeurs pour atteindre un lieu précis, très loin sous Waterdeep ([[r:b10|B10]]).",
+      "summary": "Durnan a reconnu le symbole du culte et posé des questions. Il fallait le faire taire et prendre sa clef."
+    }
+  ],
+  "notes": [
+    {
+      "id": "cles",
+      "text": "**Les clés narratives — ce que chaque indice débloque, et ce qu’on perd à le manquer.**\n\n| Indice | Où | Débloque | Si on le manque |\n|---|---|---|---|\n| Le journal de Sarah | [[r:c1|C]] / [[r:w4|W4]] | Le nom de Viallis, l’existence du rituel, le croquis de Gaernoo | Rien n’avance : c’est le seul indice **obligatoire** |\n| Le croquis de la créature | le journal | Le titre du grimoire, et la statue de [[r:b7|B7]] reconnue à l’avance | On entre dans la chapelle sans comprendre ce qu’on voit |\n| Le témoignage d’Arnulf | [[r:w4|W4]] | Les langues coupées, les commerces du Quartier des Artisans | Les commerces se trouvent quand même, en une demi-journée de plus |\n| Faerl | [[r:w5|W5]] | **Greenfast**, et un adversaire qui sait qu’on le suit | On trouve Greenfast par les contremaîtres ; Faerl attendra au temple |\n| Vecken | [[r:w6|W6]] | Le sort des restes, les disparitions sur la route | On ignore que les corps ont été emportés — et Vecken part quand même |\n| Kara ou le Vieux Fargo | [[r:g1|G1]] / [[r:g2|G2]] | **La direction de la tour** | Bloquant si l’on rate **les deux**. Les cultistes de [[r:g5|G5]] la donnent aussi, sous la contrainte |\n| Les aveux de la grange | [[r:g5|G5]] | Le nom du culte, Gaernoo, l’existence du niveau souterrain | On descend à l’aveugle, ce qui est plus effrayant et plus dangereux |\n| L’urne d’or | [[r:b9|B9]] | **L’objectif de Sarah**. Sans elle, l’aventure n’a pas de fin | Il faut trouver la porte secrète de la chapelle : **DD 15, deux chances** |\n| Les runes de l’ossuaire | [[r:b10|B10]] | L’échelle réelle du projet du culte | On croit avoir fini. On n’a pas fini. |"
+    },
+    {
+      "id": "e-cles",
+      "text": "**Clés propres à la Version Améliorée.**\n\n| Indice | Où | Débloque | Si on le manque |\n|---|---|---|---|\n| Le symbole de bois | [[r:w1|W1]] | Le lien avec le culte, et la piste Sirok | Deux autres pistes mènent au manoir |\n| Bonnie | [[r:w2|W2]] | Le signalement de **Faerl** : on peut le cueillir au lieu de l’écouter | On l’interroge poliment, et il repart |\n| Sirok | [[r:w3|W3]] | **L’adresse du manoir**, et le lien avec le vieux dossier | L’Investigation ou l’Histoire du Portail Béant y mènent aussi |\n| Le plan du treuil | [[r:g3|G3]] | **La seule preuve matérielle** utilisable devant le Guet | Viallis abattu sans preuve : le Guet aura des questions |\n| Durnan libéré | [[r:b7|B7]] | Retire à Viallis son avantage aux sauvegardes **et** sa raison de rester | Le combat reste gagnable, mais il dure |",
+      "only": "enhanced"
+    },
+    {
+      "id": "calibrage",
+      "text": "**Calibrage.** L’aventure source vise le **niveau 7**. Si le groupe remonte encore niveau 6, fais-le passer niveau 7 à la remontée — la strate 2 le justifie. Sinon : retire les **deux gricks optionnels** de [[r:b12|B12]] et **un fanatique** de la chapelle.\n\n**Budget de rencontres :** version de base **13 435 PX** (3 358 par personnage) ; Version Améliorée **26 135 PX** (6 533 par personnage). Aucune des deux ne fait monter de niveau : c’est un intermède, pas une strate."
+    },
+    {
+      "id": "clerc",
+      "text": "**Si le MJ joue un clerc dans le groupe :** **Bergil soigne et encaisse, il ne déduit pas.** Ne lui fais pas résoudre les énigmes à la place des joueurs, et ne lui fais pas reconnaître le cercle de craie ni les runes de l’ossuaire."
+    },
+    {
+      "id": "ton",
+      "text": "**Ton et rythme.** Enquête urbaine dense. **Pas de rencontres aléatoires en ville** — jamais. Le premier vrai combat est celui de [[r:w5|W5]] ou de [[r:g5|G5]], et il peut être évité. Tout se paie au dernier acte.\n\n**Le fantôme est muet et frustré.** Il en sait plus qu’il ne peut transmettre, et chaque canal — le doigt sur la page, l’écriture, la possession — est lent. **Ne raccourcis pas ces scènes** : c’est là que réside le dépaysement, pour des joueurs qui sortent de deux strates de couloirs."
+    },
+    {
+      "id": "viallis",
+      "text": "**Jouer Viallis.** Affable, mesuré, parfaitement crédible en victime. **Il ne se trahit jamais par excès de zèle.** Si les joueurs le soupçonnent tôt, il coopère et les envoie sur une fausse piste — il ne nie pas.\n\n*« Je dois réfléchir, puis réfléchir encore. Les décisions ne se prennent pas vite. »* C’est son défaut, et c’est exploitable : le presser le fait jouer mal.\n\n**Sirok** est bavard et vaniteux, il ne mesure pas ce qu’il a eu entre les mains. **Bonnie** est terrorisée et donne les détails inutiles avant les utiles."
+    },
+    {
+      "id": "e-halaster",
+      "text": "**Interdit : Halaster.** Cette affaire est humaine et sordide. Ne l’implique pas, ne suggère pas une manipulation du Mage dément, ne confirme jamais cette théorie si un joueur l’avance. **Le donjon garde ses propres mystères.**",
+      "only": "enhanced"
+    },
+    {
+      "id": "e-route",
+      "text": "**Greenfast est à deux heures de cheval**, pas à une journée : l’horloge d’un enlèvement ne supporte pas deux jours de voyage. Si tu tiens au trajet long, il faut alors **poser explicitement que Durnan n’est pas en danger de mort immédiat** — sinon les joueurs auront raison de se sentir floués.",
+      "only": "enhanced"
+    },
+    {
+      "id": "fin",
+      "text": "**Le dernier repos.** Les cendres de Lady Maria, Malik, Janus et Tianna doivent être répandues en **terre consacrée** — n’importe quel mausolée de la Cité des Morts convient.\n\nÀ l’instant où on les inhume, les quatre spectres se matérialisent. Lady Maria serre ses trois enfants contre elle et croise le regard de chaque personnage. **Sarah apparaît**, son lien au journal rompu. Puis les cinq esprits se dispersent comme des pétales.\n\nSi Vecken est là, il pleure en la revoyant, puis remercie le groupe une fois tous les esprits passés."
+    }
+  ],
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Acte I — L’accroche",
+      "intro": "Version de base : le fantôme se manifeste à Castel-Suif. **Version Améliorée : la taverne est vide et Durnan a disparu.** Trois pistes, dont deux suffisent.",
+      "rooms": [
+        "c1",
+        "w1",
+        "w2",
+        "w3"
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "Acte II — Waterdeep",
+      "intro": "Le manoir, les commerces du Quartier des Artisans, et l’ancien fiancé de Sarah. C’est ici que l’affaire froide et l’affaire chaude se rejoignent.",
+      "rooms": [
+        "w4",
+        "w5",
+        "w6"
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "Acte III — Greenfast",
+      "intro": "Un hameau agricole prospère, à deux heures de cheval au sud-est (**une journée en version de base**). Tout le monde sait quelque chose et personne ne veut le dire.",
+      "rooms": [
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5"
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "Le temple — niveau supérieur",
+      "intro": "Une heure au nord du hameau. **Le bruit décide de tout** : l’alerte se propage de [[r:b1|B1]] à [[r:b3|B3]] puis à la chapelle.",
+      "rooms": [
+        "b0",
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6",
+        "b7"
+      ]
+    },
+    {
+      "id": "s5",
+      "title": "Le temple — niveau inférieur",
+      "intro": "Les tunnels sous la chapelle : les cellules, l’ossuaire, et ce que le culte garde derrière les portes secrètes.",
+      "rooms": [
+        "b8",
+        "b9",
+        "b10",
+        "b11",
+        "b12",
+        "b13"
+      ]
+    }
+  ],
+  "rooms": [
+    {
+      "id": "c1",
+      "noMap": true,
+      "number": "C",
+      "name": "Castel-Suif : les rayonnages oubliés",
+      "only": "base",
+      "tags": [
+        "social",
+        "pnj",
+        "énigme"
+      ],
+      "layout": "Un couloir d’archives où l’on range ce que personne ne demande. Étagères de chêne noirci, deux lampes à huile, et l’odeur de colle de reliure.",
+      "readAloud": [
+        {
+          "id": "0",
+          "text": "L’air se refroidit d’un coup. Une buée se met à briller le long des rayons, plus épaisse autour d’un livre de cuir sans titre. La brume prend la forme d’une jeune femme — un esprit translucide en tenue de servante, un arbre au soleil levant brodé à l’épaule.\n\nElle pleure. Elle ouvre la bouche pour parler : **il n’y a plus de langue**. Elle gémit, tend la main vers vous, puis la brume s’effiloche et l’esprit s’efface.",
+          "summary": "Le fantôme d’une servante sans langue apparaît près d’un livre de cuir, tend la main, disparaît."
+        }
+      ],
+      "features": [
+        {
+          "id": "livre",
+          "title": "Le livre : *Sarah du manoir Yellowcrest*",
+          "text": "Reliure de cuir, coins de laiton, fermoir ouvragé. Sur le plat, le même symbole qu’à l’épaule du fantôme : **un citronnier devant un soleil levant**. Les premières pages ne sont que le prénom « Sarah » répété. Puis l’écriture s’assouplit : c’est un journal."
+        },
+        {
+          "id": "rappel",
+          "title": "Rappeler Sarah",
+          "text": "Elle réapparaît **chaque fois qu’on prononce son nom près du livre**. Elle ne peut pas s’éloigner de plus de 9 m de celui-ci."
+        },
+        {
+          "id": "sortir",
+          "title": "Le livre ne sort pas",
+          "text": "Comme tout ouvrage de Castel-Suif, il reste à la bibliothèque. On peut le faire **copier au tarif habituel** — ou simplement considérer que le groupe retient ce qu’il faut."
+        }
+      ],
+      "checks": [
+        {
+          "id": "sceau",
+          "skill": "Intelligence (Histoire)",
+          "dc": 14,
+          "text": "Le citronnier au soleil levant est le **sceau de la famille Yellowcrest**, de Waterdeep. Automatique pour un personnage de haute naissance ou qui connaît bien la ville.",
+          "failure": "Un blason de marchand, sans plus."
+        },
+        {
+          "id": "cercle",
+          "skill": "Intelligence (Arcanes)",
+          "dc": 15,
+          "text": "Le croquis maladroit du cercle de runes est un **rituel de *contact extraplanaire***, et les runes désignent une entité des Plans Extérieurs. Maîtrise d’Arcanes requise ; sinon, un Avoué de Castel-Suif peut le dire.",
+          "failure": "Un gribouillis de runes. Un Avoué saura."
+        },
+        {
+          "id": "insight",
+          "skill": "Sagesse (Perspicacité)",
+          "dc": 12,
+          "text": "On finit par comprendre les gémissements de Sarah. **Un bon jeu de rôle remplace le jet.**"
+        }
+      ],
+      "notes": [
+        {
+          "id": "contenu",
+          "text": "**Ce que le journal raconte.** Sarah était servante au manoir de **Lord Viallis** et **Lady Maria Yellowcrest**. Maria, née pauvre, lui a appris à écrire et lui a offert ce livre. Les dernières entrées, datées d’il y a cinq ans, changent de ton : Viallis passe ses nuits sur de vieux livres.",
+          "summary": "Journal d’une servante ; les dernières pages s’inquiètent du maître de maison."
+        },
+        {
+          "id": "derniere",
+          "text": "**La dernière page**, à lire à voix haute :\n\n« *Je me suis approchée de Lord Viallis aujourd’hui, et j’ai vu qu’il avait tracé à la craie un cercle marqué de runes étranges sur le sol de son cabinet. Une flaque s’étendait à l’intérieur, et elle m’a paru être du sang qui bouillonnait. Lord Viallis se tenait à côté, immobile, un de ses livres immondes à la main, et murmurait quelque chose que je n’entendais pas. Je me suis éclipsée vite, mais je crains qu’il m’ait entendue cette fois. Je n’ai jamais eu aussi peur, mais je dois dire à Lady Maria ce que j’ai vu. Je le dois !* »"
+        },
+        {
+          "id": "croquis",
+          "text": "**Le croquis.** Sarah a tenté de dessiner la couverture du livre que lisait Viallis : une créature à **grosse tête bulbeuse, longs bras, tentacules en guise de jambes, yeux à facettes**. C’est la statue de la chapelle ([[r:b7|B7]]). Deux jours de recherche à Castel-Suif donnent son titre : ***Rétribution des Anciens***."
+        },
+        {
+          "id": "savoir",
+          "text": "**Ce que Sarah peut transmettre** — par gémissements, en montrant des pages, ou en possédant quelqu’un :\n• **Viallis a tué** sa femme, ses enfants, elle-même et trois autres domestiques, dans un rituel.\n• Le livre qu’il lisait en était la source.\n• Les âmes de **Maria, Malik, Janus et Tianna** sont retenues ici tant que leurs restes ne reposent pas en terre consacrée.\n• **Ces restes ont disparu.** Elle ignore où. Elle sait que Viallis y est pour quelque chose.\n\nAu-delà, elle ne sait rien : le traumatisme a effacé le reste, y compris sa propre mort."
+        },
+        {
+          "id": "public",
+          "text": "**Ce que tout le monde sait à Waterdeep** (quelques heures de recherche, ou n’importe quel érudit) : Lord Yellowcrest était en voyage d’affaires ; il est rentré et a trouvé sa femme, ses trois enfants et quatre domestiques assassinés. Anéanti, il a tout vendu et quitté la ville. Le Guet a laissé filtrer des rumeurs de **culte**, sans jamais rien révéler. Aucun suspect. Personne n’a jamais soupçonné le veuf."
+        }
+      ],
+      "npcs": [
+        {
+          "id": "sarah",
+          "name": "Sarah",
+          "role": "Fantôme lié au journal",
+          "attitude": "suppliante",
+          "monster": "sarah",
+          "description": "Une servante d’une vingtaine d’années, en larmes, l’arbre au soleil levant à l’épaule. **Elle n’a plus de langue.**",
+          "wants": "Que Lady Maria et les trois enfants reposent en terre consacrée.",
+          "secrets": [
+            "Elle **ne se souvient pas** de sa propre mort : le traumatisme l’a effacée.",
+            "Détruire le journal la libère de ses 9 m — elle n’en devient que plus acharnée."
+          ],
+          "dialogues": [
+            {
+              "id": "muet",
+              "trigger": "À chaque tentative de parler",
+              "line": "*(Elle ouvre la bouche. Un souffle rauque sort, rien d’autre. Elle referme la bouche et détourne les yeux — elle a honte.)*"
+            },
+            {
+              "id": "page",
+              "trigger": "Quand on lui pose une question précise",
+              "line": "*(Elle traverse la table, ouvre le journal d’un coup de main qui ne déplace pas d’air, et pose l’index sur une ligne. Elle attend qu’on lise.)*"
+            }
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "to": "w4",
+          "via": "Cap sur Waterdeep : la piste commence au manoir"
+        }
+      ]
+    },
+    {
+      "id": "w1",
+      "noMap": true,
+      "number": "W1",
+      "name": "Le Portail Béant",
+      "only": "enhanced",
+      "tags": [
+        "énigme",
+        "social",
+        "pnj"
+      ],
+      "layout": "La grande salle commune de la taverne du Portail Béant, à Waterdeep. Au centre, le **puits** de trois mètres de diamètre qui descend dans Undermountain, entouré de sa margelle de pierre. Long comptoir à l’est, deux âtres, une trentaine de tables.",
+      "readAloud": [
+        {
+          "id": "0",
+          "text": "Vous remontez les derniers barreaux et vous vous hissez sur la margelle. Vous vous attendiez au bruit.\n\nIl n’y a rien. Pas un client, pas un feu, pas une chandelle. Trois tables sont renversées, une quatrième est fendue en deux dans le sens de la longueur. Le comptoir a été arraché de ses fixations sur deux mètres. Et le **treuil du puits a été verrouillé — depuis le haut, avec une chaîne qui n’appartient pas à la maison.**\n\nDurnan n’est pas là.",
+          "summary": "La salle commune est vide et saccagée. Le puits est enchaîné par le haut. Durnan a disparu."
+        }
+      ],
+      "features": [
+        {
+          "id": "lutte",
+          "title": "Les traces de lutte",
+          "text": "Trop de dégâts pour un homme seul, **et pas assez de sang**. Le comptoir a été arraché par-dessous. Aucune trace de pas dans la poussière, alors qu’il y en a partout ailleurs."
+        },
+        {
+          "id": "chaine",
+          "title": "La chaîne du treuil",
+          "text": "Acier neuf, maillons soudés, **cadenassée du côté salle**. Personne n’est remonté après. Celui qui a fermé le puits est reparti par la porte."
+        },
+        {
+          "id": "objet",
+          "title": "L’objet abandonné",
+          "text": "Sous une table renversée : **un symbole de bois, une langue arrachée à la racine**, taillé récemment. Il n’appartient à personne de la maison."
+        },
+        {
+          "id": "consequence",
+          "title": "Ce que cela coûte",
+          "text": "**Tant que Durnan n’est pas retrouvé, Undermountain est fermé.** Il est le seul à avoir la clef du treuil, et le Guet a scellé la taverne. La strate 3 attendra."
+        }
+      ],
+      "checks": [
+        {
+          "id": "invest",
+          "skill": "Intelligence (Investigation)",
+          "dc": 13,
+          "text": "**Piste 1.** Le comptoir a été arraché **par en dessous** : la chose qui a fait ça était au sol, ou volait au ras. Et les tables sont tombées **vers le puits**, pas vers la porte : on a repoussé Durnan vers le trou avant de l’emmener.",
+          "failure": "Une bagarre de taverne comme une autre, en plus violent."
+        },
+        {
+          "id": "histoire",
+          "skill": "Intelligence (Histoire)",
+          "dc": 14,
+          "text": "**Piste 1 bis.** Le symbole de bois n’est pas un ex-voto connu du Guet ni d’aucun temple de la ville. Mais un érudit a déjà vu cette forme — dans un livre. *(Renvoie vers [[r:w3|Sirok]].)*",
+          "failure": "Une amulette de secte, il y en a cent à Waterdeep."
+        },
+        {
+          "id": "medecine",
+          "skill": "Sagesse (Médecine)",
+          "dc": 12,
+          "text": "Le peu de sang au sol est **du sang de Durnan**, et il y en a très peu pour un tel désordre. Il n’a pas été maîtrisé de force : il a arrêté de se battre."
+        }
+      ],
+      "notes": [
+        {
+          "id": "trois",
+          "text": "**Trois pistes, deux suffisent.** [[r:w2|Bonnie]] (le témoignage), l’indice matériel ci-dessus (Investigation **ou** Histoire), et [[r:w3|Sirok]] (le symbole). **Aucune ne doit être unique** : un mauvais jet ne ferme jamais l’aventure. Si le groupe patine, le Guet vient les chercher — quelqu’un a parlé d’aventuriers qui remontaient du puits."
+        },
+        {
+          "id": "comment",
+          "text": "**Comment ils l’ont eu — à trancher avant la séance.** Poison dans son propre fût · entrave magique posée par un lanceur sérieux · **reddition volontaire pour épargner Bonnie et les clients**. Ne laisse jamais entendre qu’une bande d’hommes de main ordinaires a maîtrisé Durnan de force : ce serait faux, et le groupe le sentirait."
+        },
+        {
+          "id": "halaster",
+          "text": "**Halaster n’y est pour rien.** Cette affaire est humaine et sordide ; le donjon garde ses propres mystères. Si un joueur avance cette théorie, laisse-le enquêter et se tromper — mais ne la confirme jamais."
+        },
+        {
+          "id": "guet",
+          "text": "**Le Guet est déjà passé** et n’a rien trouvé. Il a scellé la porte, pris trois dépositions et classé l’affaire « disparition ». Les gardes ([[m:guard|garde]]) sont polis et parfaitement inutiles."
+        }
+      ],
+      "connections": [
+        {
+          "to": "w2",
+          "via": "Chez la voisine, deux portes plus loin"
+        },
+        {
+          "to": "w3",
+          "via": "Vers l’échoppe de Sirok, quartier de la Mer"
+        },
+        {
+          "to": "w4",
+          "via": "Quartier Nord, rue Delzorin"
+        }
+      ]
+    },
+    {
+      "id": "w2",
+      "noMap": true,
+      "number": "W2",
+      "name": "Bonnie, chez la voisine",
+      "only": "enhanced",
+      "tags": [
+        "social",
+        "pnj"
+      ],
+      "layout": "Un arrière-cuisine de maison mitoyenne, deux portes plus loin que la taverne. Bonnie est assise près du fourneau depuis la nuit dernière et n’a pas dormi.",
+      "readAloud": [
+        {
+          "id": "0",
+          "text": "La serveuse du Portail Béant est là, une couverture sur les épaules, une tasse froide entre les mains. Elle vous reconnaît et se lève trop vite.\n\n« Vous êtes redescendus quand ? Non — attendez. Je vais tout dire. Je vais tout dire, mais laissez-moi commencer par le début, sinon je vais m’embrouiller. »\n\nElle commence par le début. Le début, c’est quatre heures avant.",
+          "summary": "Bonnie est terrorisée et veut tout raconter — en commençant beaucoup trop tôt."
+        }
+      ],
+      "npcs": [
+        {
+          "id": "bonnie",
+          "name": "Bonnie",
+          "role": "Serveuse du Portail Béant",
+          "attitude": "terrorisée",
+          "monster": "commoner",
+          "description": "Jeune, vive d’ordinaire, méconnaissable ce matin. Elle parle vite et ne s’arrête pas.",
+          "wants": "Que quelqu’un lui dise que ce n’est pas sa faute.",
+          "secrets": [
+            "**Elle donne les détails inutiles avant les utiles.** Laisse-la parler : le bon détail arrive au bout, et il arrive tout seul si personne ne la coupe."
+          ],
+          "dialogues": [
+            {
+              "id": "inutile",
+              "trigger": "Ce qu’elle raconte en premier",
+              "line": "« Il avait changé le fût de brune l’après-midi, et il avait râlé parce que la bonde était fendue, et moi j’avais dit qu’il fallait en commander d’autres, et il avait dit que non, que ça tiendrait encore l’hiver… »"
+            },
+            {
+              "id": "utile1",
+              "trigger": "Si on la laisse aller au bout",
+              "line": "« …et l’homme au chapeau, il est resté trois soirs. Il buvait rien. Il regardait le puits. Le troisième soir, Durnan est allé lui parler, et là il a changé de tête, Durnan. J’avais jamais vu ça. »"
+            },
+            {
+              "id": "utile2",
+              "trigger": "Sur l’homme au chapeau",
+              "line": "« Un elfe. Bien mis. Un chapeau rouge, trop grand pour lui. Il parlait tellement bas qu’il fallait se pencher. Ça m’a mise mal à l’aise, cette façon d’obliger les gens à se pencher. »"
+            },
+            {
+              "id": "utile3",
+              "trigger": "Sur la nuit même",
+              "line": "« Durnan m’a dit de sortir par la cave. Il m’a pas demandé, il m’a dit. Et il souriait. C’est ça qui me fait peur, en fait. **Il souriait.** »"
+            },
+            {
+              "id": "faute",
+              "trigger": "Si on la rassure",
+              "line": "« Vous croyez ? … Non, vous dites ça. » *(Un temps.)* « Il aurait pas dû sourire. »"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "id": "gain",
+          "text": "**Ce que Bonnie débloque :** le signalement de **Faerl** — elfe, chapeau rouge trop grand, voix très basse. Le groupe le reconnaîtra en [[r:w5|W5]] sans avoir à le chercher, et pourra le prendre de vitesse."
+        },
+        {
+          "id": "rate",
+          "text": "**S’ils ratent Bonnie :** ils croiseront quand même Faerl aux commerces, mais **sans savoir qui il est**. La rencontre passe alors de « on le tient » à « on l’interroge poliment » — et il repart."
+        },
+        {
+          "id": "sourire",
+          "text": "**Le sourire.** C’est l’indice qui compte et personne ne le comprendra sur le moment : Durnan s’est rendu. Il a fait sortir la petite et il est parti avec eux. Laisse le groupe y revenir tout seul, plus tard."
+        }
+      ],
+      "connections": [
+        {
+          "to": "w1",
+          "via": "Retour à la taverne"
+        },
+        {
+          "to": "w5",
+          "via": "Vers le Quartier des Artisans"
+        }
+      ]
+    },
+    {
+      "id": "w3",
+      "noMap": true,
+      "number": "W3",
+      "name": "L’échoppe de Sirok",
+      "only": "enhanced",
+      "tags": [
+        "social",
+        "pnj",
+        "énigme"
+      ],
+      "layout": "Deux pièces au-dessus d’un chandelier, quartier de la Mer. Une table couverte de plumes, de bocaux et de choses qui fument doucement. Sirok n’a jamais rangé de sa vie.",
+      "readAloud": [
+        {
+          "id": "0",
+          "text": "« Un symbole ? Montrez. » Il vous l’arrache presque des mains, le tient à bout de bras, l’approche, l’éloigne.\n\n« Ha ! **Ha.** Oui. Je l’ai vu. Pas ce bois-là, gravé — sur un plat de reliure. J’avais quinze ans, j’ai acheté un lot de livres à une brocante de la rue Delzorin, une famille qui liquidait tout après un drame. J’ai revendu le lot, sauf un que j’ai donné à Castel-Suif pour payer mon entrée. » *(Il sourit, très content de lui.)* « Le journal d’une servante. Je ne l’ai jamais lu, remarquez. »",
+          "summary": "Sirok reconnaît le symbole : il l’a vu sur un livre acheté rue Delzorin, il y a des années."
+        }
+      ],
+      "npcs": [
+        {
+          "id": "sirok",
+          "name": "Sirok",
+          "role": "Apprenti mage",
+          "attitude": "bavard",
+          "monster": "mage",
+          "description": "La quarantaine, apprenti depuis vingt-cinq ans et fier de l’être. Il parle en faisant des gestes qui renversent des choses.",
+          "wants": "Qu’on l’écoute, et qu’on trouve qu’il a eu du flair.",
+          "secrets": [
+            "**Il ne mesure pas ce qu’il a eu entre les mains.** Il a revendu un lot qui contenait *Rétribution des Anciens* et il ne le sait toujours pas.",
+            "Il a gardé l’adresse de la brocante : **rue Delzorin, le manoir Yellowcrest**."
+          ],
+          "dialogues": [
+            {
+              "id": "adresse",
+              "trigger": "Où il a acheté le lot",
+              "line": "« Rue Delzorin, Quartier Nord. La grande bâtisse au portail de fer. On liquidait tout, le veuf partait. Personne n’osait acheter — moi je trouvais ça idiot, un livre n’a pas de mémoire. » *(Un temps.)* « Enfin. C’est ce que je croyais. »"
+            },
+            {
+              "id": "autres",
+              "trigger": "Sur le reste du lot",
+              "line": "« Sept ou huit volumes. Un traité d’élevage, deux romans, et un gros, très laid, avec une bête sur le plat — des tentacules, une tête comme une outre. Celui-là je l’ai revendu tout de suite, il sentait mauvais. »"
+            },
+            {
+              "id": "acheteur",
+              "trigger": "À qui il l’a revendu",
+              "line": "« Un intermédiaire. Un elfe. » *(Il fronce les sourcils.)* « Grand chapeau. Voix basse. Je m’en souviens parce qu’il a payé le prix demandé sans discuter, et ça, ça ne se fait pas. »"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "id": "gain",
+          "text": "**Ce que Sirok débloque :** l’adresse du **manoir Yellowcrest** ([[r:w4|W4]]) et le lien entre le symbole et le drame d’il y a cinq ans. C’est la piste la plus rapide vers l’acte II."
+        },
+        {
+          "id": "rate",
+          "text": "**S’ils ratent Sirok :** l’Investigation ou l’Histoire au [[r:w1|Portail Béant]], ou Bonnie et le chapeau rouge, mènent au même endroit — plus lentement, et **sans le lien avec le vieux dossier**. Le groupe découvrira alors le massacre au manoir sans y être préparé, ce qui n’est pas plus mal."
+        },
+        {
+          "id": "ton",
+          "text": "**Ton.** Sirok est vaniteux et inoffensif. Il ne cache rien, il ne comprend rien, et il sera enchanté d’apprendre plus tard qu’il a vendu un grimoire de rituels à un meurtrier."
+        }
+      ],
+      "connections": [
+        {
+          "to": "w4",
+          "via": "Rue Delzorin, Quartier Nord"
+        },
+        {
+          "to": "w1",
+          "via": "Retour au Portail Béant"
+        }
+      ]
+    },
+    {
+      "id": "w4",
+      "noMap": true,
+      "number": "W4",
+      "name": "Le manoir Yellowcrest",
+      "tags": [
+        "social",
+        "pnj",
+        "énigme"
+      ],
+      "layout": "Rue Delzorin, Quartier Nord. Grande bâtisse à portail de fer, jardin d’agrément, quatre étages. Le cabinet du maître est au troisième, plein est.",
+      "readAloud": [
+        {
+          "id": "0",
+          "only": "base",
+          "text": "La porte s’ouvre sur un majordome court sur pattes, chauve, moustache soignée, sourire chaleureux — et une haleine qui sent le vin de midi.\n\n« Yellowcrest ! Ha. Vous n’êtes pas les premiers. » Il jette un œil derrière lui, puis baisse la voix comme s’il partageait une friandise. « Entrez donc. C’est une bien vilaine histoire. »",
+          "summary": "Arnulf, majordome de la famille Falgarst, accueille le groupe avec un plaisir mal dissimulé."
+        },
+        {
+          "id": "e0",
+          "only": "enhanced",
+          "text": "Le portail de fer n’est pas fermé : il n’a plus de chaîne depuis longtemps. Le jardin est retourné à l’herbe haute. Toutes les fenêtres sont volées, sauf une, au troisième, plein est.\n\nÀ l’intérieur, la poussière est épaisse et régulière — **sauf une bande, du vestibule à l’escalier**, où quelqu’un est passé récemment. Plusieurs fois.",
+          "summary": "Le manoir est abandonné. Des traces récentes mènent du vestibule à l’escalier."
+        },
+        {
+          "id": "e1",
+          "only": "enhanced",
+          "text": "Le cabinet du troisième est vide, sauf une chose : au centre du plancher, **un cercle tracé à la craie**, marqué de runes, si vieux que la craie s’est incrustée dans le bois. Il n’a jamais été effacé.\n\nL’air se refroidit d’un coup. Une buée se met à briller le long des lambris. Elle prend la forme d’une jeune femme en tenue de servante, un arbre au soleil levant brodé à l’épaule. Elle pleure. Elle ouvre la bouche : **il n’y a plus de langue**.",
+          "summary": "Dans le cabinet, le cercle de craie intact — et Sarah apparaît."
+        }
+      ],
+      "features": [
+        {
+          "id": "e-journal",
+          "only": "enhanced",
+          "title": "Le journal, resté sur place",
+          "text": "Sous une latte descellée du cabinet : un livre de cuir à coins de laiton, fermoir ouvragé, le **citronnier au soleil levant** sur le plat. Sirok n’a jamais fouillé cette pièce. *(Contenu complet : voir les notes ci-dessous.)*"
+        },
+        {
+          "id": "e-cercle",
+          "only": "enhanced",
+          "title": "Le cercle de craie",
+          "text": "Il est **authentique et intact** — la pièce a été condamnée, pas nettoyée. C’est là que tout a commencé."
+        },
+        {
+          "id": "e-passage",
+          "only": "enhanced",
+          "title": "Les traces récentes",
+          "text": "Quelqu’un vient ici régulièrement, monte au troisième, reste, et repart. Les traces sont d’une seule paire de bottes fines. **Lord Viallis revient sur les lieux.**"
+        },
+        {
+          "id": "business",
+          "title": "Les affaires Yellowcrest",
+          "text": "Trois cordonneries, deux ateliers de maroquinerie et deux tanneries du **Quartier des Artisans** appartiennent toujours à Viallis. *(Voir [[r:w5|W5]].)*"
+        }
+      ],
+      "checks": [
+        {
+          "id": "insight",
+          "only": "base",
+          "skill": "Sagesse (Perspicacité)",
+          "dc": 10,
+          "text": "Arnulf est sincèrement peiné pour les Yellowcrest — **et ravi** de la réputation sinistre que le drame donne à la maison."
+        },
+        {
+          "id": "persu",
+          "only": "base",
+          "skill": "Charisme (Persuasion)",
+          "dc": 14,
+          "text": "Il raconte tout ce qu’il sait. **Un verre d’alcool donne l’avantage** ; *charme-personne* est une réussite automatique. Un bon jeu de rôle suffit aussi, à condition de le rassurer sur les Falgarst.",
+          "failure": "Il se referme poliment et parle du temps."
+        },
+        {
+          "id": "e-arcanes",
+          "only": "enhanced",
+          "skill": "Intelligence (Arcanes)",
+          "dc": 15,
+          "text": "Le cercle est un rituel de ***contact extraplanaire***, et les runes désignent une entité des Plans Extérieurs. **Il a servi une fois, et il a fonctionné.**",
+          "failure": "Un cercle d’invocation, ancien. Un Avoué de Castel-Suif saurait le lire."
+        },
+        {
+          "id": "e-invest",
+          "only": "enhanced",
+          "skill": "Intelligence (Investigation)",
+          "dc": 13,
+          "text": "La latte du plancher a été **descellée puis remise** — pas par le poseur, par quelqu’un de pressé. Le journal est dessous.",
+          "failure": "La pièce est vide. Sarah le montrera elle-même, si on la laisse faire."
+        }
+      ],
+      "notes": [
+        {
+          "id": "arnulf",
+          "text": "**Ce qu’Arnulf révèle :**\n• Le manoir appartenait aux Yellowcrest, tués en une nuit.\n• La rumeur veut que Lady Maria, les trois enfants et les quatre domestiques aient été **poignardés puis privés de leur langue**.\n• Seul survivant : **Lord Viallis**, absent de la ville ce jour-là.\n• Il a tout vendu et s’est retiré dans un village de campagne.\n• Quelques tanneries et cordonneries du Quartier des Artisans **lui appartiennent encore**.",
+          "only": "base"
+        },
+        {
+          "id": "contenu",
+          "text": "**Ce que le journal raconte.** Sarah était servante ici. **Lady Maria**, née pauvre, lui a appris à écrire et lui a offert ce livre. Les dernières entrées, cinq ans plus tôt, s’inquiètent des nuits que Viallis passe sur de vieux livres. La dernière : *« …il avait tracé à la craie un cercle marqué de runes étranges sur le sol de son cabinet. Une flaque s’étendait à l’intérieur, et elle m’a paru être du sang qui bouillonnait. […] Je dois dire à Lady Maria ce que j’ai vu. Je le dois ! »*",
+          "only": "enhanced"
+        },
+        {
+          "id": "croquis",
+          "text": "**Le croquis.** Sarah a dessiné la couverture du livre de Viallis : **grosse tête bulbeuse, longs bras, tentacules en guise de jambes, yeux à facettes**. C’est la statue de la chapelle ([[r:b7|B7]]). Le titre — ***Rétribution des Anciens*** — se trouve en deux jours de recherche à Castel-Suif, ou auprès de n’importe quel bibliothécaire sérieux de Waterdeep."
+        },
+        {
+          "id": "savoir",
+          "text": "**Ce que Sarah peut transmettre** — gémissements, doigt sur une page, ou possession :\n• **Viallis a tué** sa femme, ses trois enfants, elle-même et trois autres domestiques, dans un rituel.\n• Le livre qu’il lisait en était la source.\n• Les âmes de **Maria, Malik, Janus et Tianna** sont retenues tant que leurs restes ne reposent pas en terre consacrée.\n• **Ces restes ont disparu.**\n\nElle ne sait rien de plus, pas même comment elle est morte."
+        },
+        {
+          "id": "lore",
+          "text": "**Détails du journal, si on le lit en entier :** le manoir est rue Delzorin ; Viallis et Maria avaient deux fils, **Malik** et **Janus**, et une fille, **Tianna** ; la fortune venait du côté de Maria ; l’associé de Viallis était **un elfe nommé Faerl**, qui venait deux fois par décade ; Sarah aimait **un jeune écuyer, Vecken**, qui habitait rue Immar."
+        },
+        {
+          "id": "e-lien",
+          "text": "**Le moment de bascule.** C’est ici que les joueurs comprennent que l’enlèvement d’hier soir et le massacre d’il y a cinq ans sont la même affaire. **Ne l’annonce pas** : laisse le symbole de bois du [[r:w1|Portail Béant]] et le croquis du journal se rencontrer sur la table, et attends.",
+          "only": "enhanced"
+        }
+      ],
+      "npcs": [
+        {
+          "id": "arnulf",
+          "only": "base",
+          "name": "Arnulf",
+          "role": "Majordome des Falgarst",
+          "attitude": "jovial",
+          "monster": "commoner",
+          "description": "Petit, chauve, moustache soignée, une odeur de vin qui n’est pas celle du soir.",
+          "wants": "Raconter la belle histoire horrible de la maison qu’il sert.",
+          "dialogues": [
+            {
+              "id": "accueil",
+              "trigger": "À la porte",
+              "line": "« Les Falgarst sont sortis. Mais si c’est pour l’histoire, c’est moi qu’il faut voir — j’ai fait ma petite inspection de la cave ce matin, je suis en verve. »"
+            },
+            {
+              "id": "langues",
+              "trigger": "Sur les meurtres",
+              "line": "« Poignardés, tous les huit. Et — vous allez me trouver morbide — on leur avait **ôté la langue**. Le Guet n’a jamais confirmé. Mais tout le monde le sait. »"
+            }
+          ]
+        },
+        {
+          "id": "sarah",
+          "only": "enhanced",
+          "name": "Sarah",
+          "role": "Fantôme lié au journal",
+          "attitude": "suppliante",
+          "monster": "sarah",
+          "description": "Une servante d’une vingtaine d’années, en larmes. **Elle n’a plus de langue.** Elle ne peut pas s’éloigner de plus de 9 m du journal.",
+          "wants": "Que Lady Maria et les trois enfants reposent en terre consacrée.",
+          "secrets": [
+            "**Elle s’accroche au groupe** dès qu’il entre : elle attend depuis cinq ans que quelqu’un monte au troisième.",
+            "Elle ignore tout de Durnan. Le rapprochement, c’est aux joueurs de le faire."
+          ],
+          "dialogues": [
+            {
+              "id": "muet",
+              "trigger": "À chaque tentative de parler",
+              "line": "*(Elle ouvre la bouche. Un souffle rauque, rien d’autre. Elle referme la bouche et détourne les yeux.)*"
+            },
+            {
+              "id": "latte",
+              "trigger": "Si le groupe ne trouve pas le journal",
+              "line": "*(Elle s’agenouille au milieu du cercle de craie, pose la paume sur une latte, et lève les yeux. Elle recommence. Elle recommencera aussi longtemps qu’il le faudra.)*"
+            },
+            {
+              "id": "symbole",
+              "trigger": "Si on lui montre le symbole de bois du Portail Béant",
+              "line": "*(Elle recule d’un mètre. Elle secoue la tête, très vite, et montre sa propre bouche.)*"
+            }
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "to": "w5",
+          "via": "Quartier des Artisans : les commerces"
+        },
+        {
+          "to": "w6",
+          "via": "Rue Immar, à trois rues"
+        }
+      ]
+    },
+    {
+      "id": "w5",
+      "noMap": true,
+      "number": "W5",
+      "name": "Les commerces du Quartier des Artisans",
+      "tags": [
+        "combat",
+        "social",
+        "pnj"
+      ],
+      "layout": "Trois cordonneries, deux maroquineries, deux tanneries, dans des ruelles où une calèche passe tout juste. Odeur de tan et de colle.",
+      "readAloud": [
+        {
+          "id": "0",
+          "text": "Peu après midi, une calèche privée s’engage dans la ruelle et s’y trouve trop large de deux doigts. Sept cavaliers l’escortent — beaucoup, pour un homme qui vient relever des comptes.\n\nLa portière s’ouvre. Un elfe en descend : soie sombre, **grand chapeau rouge**. Il vous regarde, sourit, et dit quelque chose. Vous n’entendez pas. Il faut s’avancer pour l’entendre.",
+          "summary": "Faerl arrive en calèche avec sept gardes du corps. Il parle si bas qu’il faut s’approcher."
+        }
+      ],
+      "enemies": [
+        {
+          "id": "fanatiques",
+          "monster": "cult-fanatic",
+          "count": 2,
+          "where": "À cheval, de part et d’autre de la calèche.",
+          "tactics": "*Immobilisation de personne* ou *injonction* sur les combattants au corps à corps, pour que les vétérans et les malfrats les achèvent."
+        },
+        {
+          "id": "malfrats",
+          "monster": "tough",
+          "count": 3,
+          "where": "Derrière la calèche.",
+          "tactics": "**Concentrent leurs coups sur une seule cible** pour profiter de leurs tactiques de meute."
+        },
+        {
+          "id": "veterans",
+          "monster": "warrior-veteran",
+          "count": 2,
+          "where": "Devant, entre Faerl et le groupe.",
+          "tactics": "Couvrent la retraite de la calèche, puis frappent sans retenue."
+        },
+        {
+          "id": "cocher",
+          "monster": "commoner",
+          "count": 1,
+          "name": "Le cocher",
+          "where": "Sur le siège.",
+          "tactics": "Désarmé. Il fouette les chevaux et part dès que Faerl est remonté."
+        },
+        {
+          "id": "faerl",
+          "monster": "faerl",
+          "count": 1,
+          "name": "Faerl",
+          "where": "Il remonte en calèche au premier round.",
+          "tactics": "Ne combat pas. **9 PV.** Tout l’enjeu du combat est de l’atteindre avant qu’il ne parte."
+        },
+        {
+          "id": "e-elu",
+          "only": "enhanced",
+          "monster": "elu-langue-brulee",
+          "count": 1,
+          "name": "L’Élu du chapeau",
+          "where": "À pied, à côté de la portière. On l’a pris pour un valet.",
+          "hidden": true,
+          "tactics": "Il ne parle pas et ne parlera pas. *Cécité* sur le lanceur de sorts, *immobilisation* sur le plus lourd, puis trois dagues sur la cible immobilisée."
+        }
+      ],
+      "npcs": [
+        {
+          "id": "faerl",
+          "name": "Faerl",
+          "role": "Intendant de Lord Viallis",
+          "attitude": "courtois et glacial",
+          "monster": "faerl",
+          "description": "Elfe des bois, soie et grand chapeau rouge. Il parle si bas qu’on doit se pencher — **c’est délibéré**.",
+          "wants": "Que rien ne lui arrive. Sa place dans le culte est tout ce qu’il a.",
+          "secrets": [
+            "**Fanatique de la Langue Brûlée.** Ni l’argent ni la menace ne l’entament ; *charme-personne* ne lui fera pas nommer le culte, même envers un ami.",
+            "Il appelle **le Guet** si on le bouscule — et il a raison de le faire, il est dans son bon droit à Waterdeep.",
+            "S’il s’échappe, il rentre à Greenfast et on le retrouve **avachi sur un banc de la chapelle** ([[r:b7|B7]])."
+          ],
+          "dialogues": [
+            {
+              "id": "injustice",
+              "trigger": "Si on parle des meurtres Yellowcrest",
+              "line": "« Une terrible injustice. Cinq ans, et personne n’a été inquiété. » *(Il hoche la tête lentement.)* « Vous enquêtez ? À titre privé ? Comme c’est… charitable. »"
+            },
+            {
+              "id": "viallis",
+              "trigger": "Sur Lord Viallis",
+              "line": "« Brisé. Le mot n’est pas trop fort. Il a tout vendu, il est parti, et il ne parle plus de rien. Je gère ses affaires pour qu’il n’ait pas à y penser. »"
+            },
+            {
+              "id": "accusation",
+              "trigger": "Si on suggère que Viallis est coupable",
+              "line": "*(Le sourire ne bouge pas.)* « Vous venez d’accuser un homme qui a enterré ses trois enfants. Je vous conseille de ne le répéter à personne d’autre que moi. »"
+            },
+            {
+              "id": "menace",
+              "trigger": "Si le groupe annonce qu’il va aller interroger Viallis",
+              "line": "« Ah. » *(À l’escorte, du même ton bas.)* « Tuez-les. »"
+            },
+            {
+              "id": "e-durnan",
+              "only": "enhanced",
+              "trigger": "Si on prononce le nom de Durnan",
+              "line": "*(Le sourire disparaît une demi-seconde, et revient.)* « Le tavernier ? On m’a dit, oui. Quelle époque. » *(Il remonte en calèche sans finir sa phrase.)*"
+            }
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "id": "renseigner",
+          "skill": "Charisme (Persuasion)",
+          "dc": 15,
+          "text": "Un cordonnier ou un contremaître se déride — **ou 10 po de pot-de-vin**. Lord Viallis a un intendant qui passe toutes les deux décades relever les comptes : **un elfe nommé Faerl**, qui vit à **Greenfast**, au sud-est. Il est attendu en ville dans deux jours.",
+          "failure": "Personne ne connaît Lord Viallis. « Il vit à la campagne, quelque part. »"
+        },
+        {
+          "id": "coffre",
+          "skill": "Dextérité (outils de voleur)",
+          "dc": 15,
+          "text": "Le coffret de fer de la calèche. **Force (Athlétisme) DD 18** pour le forcer. Faerl porte la clef."
+        }
+      ],
+      "treasure": [
+        {
+          "id": "coffret",
+          "item": "Coffret de fer verrouillé",
+          "value": "35 po et 400 pa",
+          "note": "La recette des établissements visités dans la journée."
+        },
+        {
+          "id": "faerl",
+          "item": "Sur Faerl",
+          "value": "20 po + bijoux (20 po)",
+          "note": "Et une **potion de soins supérieure** à la ceinture."
+        }
+      ],
+      "notes": [
+        {
+          "id": "reddition",
+          "text": "**Les gardes du corps se rendent** quand plus de la moitié sont à terre. Ce sont des mercenaires de Waterdeep sous contrat, ils ne connaissent pas Viallis et ignorent tout du culte. Ils savent seulement : Faerl vit à **Greenfast**, Viallis aussi, et l’escorte devait rentrer là-bas le soir même avec la recette."
+        },
+        {
+          "id": "guet",
+          "text": "**Attention à la ville.** Une bagarre de sept cavaliers en plein Quartier des Artisans fait venir le Guet en 1d4 rounds. Attaquer les premiers, c’est un problème pour tout le reste de l’aventure — et Faerl le sait très bien."
+        },
+        {
+          "id": "sauter",
+          "text": "**On peut sauter cette scène.** Rien n’oblige à attendre Faerl : le groupe peut partir directement pour Greenfast et le trouver chez lui ([[r:g4|G4]])."
+        },
+        {
+          "id": "e-avance",
+          "text": "**Version Améliorée — l’horloge tourne.** Attendre deux jours l’arrivée de Faerl coûte **deux paliers du rituel**. Si le groupe hésite, rappelle-le : le puits est fermé et Durnan est quelque part. Bonnie a donné le signalement du chapeau rouge — ils peuvent le cueillir dès son arrivée au lieu de le laisser parler.",
+          "only": "enhanced"
+        }
+      ],
+      "connections": [
+        {
+          "to": "w6",
+          "via": "Rue Immar"
+        },
+        {
+          "to": "g1",
+          "via": "Route du sud-est, vers Greenfast"
+        }
+      ]
+    },
+    {
+      "id": "w6",
+      "noMap": true,
+      "number": "W6",
+      "name": "Rue Immar : Sir Vecken de la Corne Brisée",
+      "tags": [
+        "social",
+        "pnj"
+      ],
+      "layout": "Une maison étroite à trois rues du manoir. Salon au rez-de-chaussée, cheminée, et **un vieux casque à la corne fendue** accroché au-dessus du foyer.",
+      "readAloud": [
+        {
+          "id": "0",
+          "text": "L’homme qui ouvre est bâti comme une porte et couvert de cicatrices, et il vous sourit comme à de vieux camarades.\n\n« Entrez, entrez — pardon, je ne remets pas les noms, c’est l’âge. » Puis il vous écoute, et le sourire s’en va, lentement, comme une marée. Il regarde le casque au-dessus de la cheminée.\n\n« Sarah. » *(Il se rassoit.)* « Vous voulez du thé. »",
+          "summary": "Vecken accueille chaleureusement, puis s’effondre au nom de Sarah."
+        }
+      ],
+      "npcs": [
+        {
+          "id": "vecken",
+          "name": "Sir Vecken de la Corne Brisée",
+          "role": "Aventurier retiré, ancien fiancé de Sarah",
+          "attitude": "chaleureux puis dévasté",
+          "monster": "vecken",
+          "description": "Colosse balafré, d’humeur douce. Il a pris les armes après la mort de Sarah, s’est fait un nom au sud de Padhiver, puis est rentré s’occuper de son père.",
+          "wants": "Que le passé reste passé. Il n’y arrive pas.",
+          "secrets": [
+            "**Il refuse de les accompagner et part seul.** Dès que le groupe a le dos tourné, il enfile son harnois et prend la route de Greenfast à cheval.",
+            "S’il a au moins **un jour d’avance**, il arrive avant eux, affronte les cultistes sur la route et **se fait prendre** : on le retrouve prisonnier en [[r:b11|B11]], à 25 PV."
+          ],
+          "dialogues": [
+            {
+              "id": "fantome",
+              "trigger": "Si on lui dit qu’on a parlé au fantôme de Sarah",
+              "line": "*(Il ne dit rien pendant longtemps. Puis :)* « Elle a l’air… ? Non. Ne me dites pas. » *(Il pleure sans se cacher, sans bruit, et se ressert du thé.)*"
+            },
+            {
+              "id": "restes",
+              "trigger": "Ce qu’il sait",
+              "line": "« Sarah et les trois autres domestiques ont été mis en terre à la Cité des Morts. Pas Lady Maria, pas les petits. Le veuf a dit qu’il voulait les avoir près de lui, là où il allait. Pour ne plus jamais avoir à revenir ici. »"
+            },
+            {
+              "id": "routes",
+              "trigger": "Si on lui apprend que Viallis vit à Greenfast",
+              "line": "*(Il se redresse.)* « Greenfast. » *(Un temps.)* « On me parle depuis des mois de voyageurs détroussés sur cette route. Des reliques, des bijoux. Et des gens qui ne réapparaissent pas. »"
+            },
+            {
+              "id": "refus",
+              "trigger": "Si on lui propose de venir",
+              "line": "« Non. J’ai un père à nourrir et j’ai passé l’âge. » *(Il ment, et il ment mal, mais personne ne le relève.)*"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "id": "consequence",
+          "text": "**Conséquence directe.** Si au moins un jour s’écoule entre cette visite et l’arrivée du groupe à Greenfast, **Vecken est capturé** et se trouve dans la cellule sud ([[r:b11|B11]]) à 25 PV. C’est le prix de la lenteur, et il est juste : dis-le après coup, pas avant."
+        },
+        {
+          "id": "emmener",
+          "text": "**S’ils insistent pour l’emmener,** laisse-le refuser une fois de plus, puis céder si un joueur trouve le bon argument. Un [[m:knight|chevalier]] de FP 3 dans le groupe change l’équilibre : retire alors un vétéran de la [[r:g5|grange]] et un fanatique de la [[r:b7|chapelle]]."
+        },
+        {
+          "id": "e-vitesse",
+          "text": "**Version Améliorée.** Greenfast est à **deux heures de cheval**, pas à une journée. Vecken part quand même en avance, mais il faut que le groupe **traîne une nuit entière** pour qu’il se fasse prendre. À eux de choisir entre dormir et le retrouver entier.",
+          "only": "enhanced"
+        }
+      ],
+      "connections": [
+        {
+          "to": "g1",
+          "via": "Route de Greenfast"
+        },
+        {
+          "to": "w4",
+          "via": "Retour au manoir"
+        }
+      ]
+    },
+    {
+      "id": "g1",
+      "map": "yellowcrest-greenfast",
+      "number": "G1",
+      "name": "La maison de la mairesse",
+      "tags": [
+        "social",
+        "pnj"
+      ],
+      "layout": "La plus grande bâtisse du hameau, au nord-est, de l’autre côté du ruisseau. Un jardin potager tenu au cordeau, et une femme dedans qui ne lève pas la tête.",
+      "readAloud": [
+        {
+          "id": "0",
+          "text": "Kara Firenni est à genoux dans son potager. Elle vous répond sans se retourner, poliment, avec une brusquerie qui ne lui ressemble pas — vous le voyez à la façon dont elle s’excuse aussitôt, puis recommence.\n\n« Lord Viallis ? Il vit ici. Il ne parle à personne. Je ne le connais pas. » *(Elle arrache une mauvaise herbe qui n’en était pas une.)* « Voilà. »",
+          "summary": "La mairesse répond trop vite et trop court. Elle cache quelque chose."
+        }
+      ],
+      "npcs": [
+        {
+          "id": "kara",
+          "name": "Kara Firenni",
+          "role": "Mairesse de Greenfast",
+          "attitude": "sur ses gardes",
+          "monster": "commoner",
+          "description": "La cinquantaine, queue-de-cheval courte, bonne administratrice. Elle dort mal depuis deux mois.",
+          "wants": "Récupérer sa sœur sans détruire le hameau.",
+          "secrets": [
+            "**Sa sœur Yaeda est prisonnière** en [[r:b11|B11]] depuis deux mois. Kara la croit amoureuse de Viallis.",
+            "Elle sait que Viallis s’est constitué **une suite d’admirateurs**. Elle ignore tout des enlèvements sur la Voie Marchande.",
+            "Elle n’est **jamais** allée au « nouveau domaine ». Elle en donne pourtant la direction."
+          ],
+          "dialogues": [
+            {
+              "id": "ferme",
+              "trigger": "Premières questions",
+              "line": "« Je vous l’ai dit. Il est discret. C’est tout ce qu’on demande à un voisin, non ? »"
+            },
+            {
+              "id": "ouvre",
+              "trigger": "Après un DD 14 de Persuasion, ou du bon jeu de rôle",
+              "line": "*(Elle pose son transplantoir.)* « Ma sœur. Yaeda. Il y a deux mois elle est montée là-haut et elle n’est pas redescendue. Elle m’écrit — enfin, on m’apporte des mots signés d’elle. » *(Un temps.)* « Elle n’écrit pas comme ça. »"
+            },
+            {
+              "id": "marche",
+              "trigger": "Si on promet de ramener Yaeda",
+              "line": "« Alors je vous dis où c’est. Une heure au nord, la vieille tour. Et si vous me la ramenez, je vous jure que ce hameau vous devra quelque chose. »"
+            }
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "id": "insight",
+          "skill": "Sagesse (Perspicacité)",
+          "dc": 15,
+          "text": "Elle cache quelque chose, et ce n’est pas de la complicité : c’est de la peur."
+        },
+        {
+          "id": "persu",
+          "skill": "Charisme (Persuasion)",
+          "dc": 14,
+          "text": "Elle parle. Un bon jeu de rôle suffit sans jet.",
+          "failure": "Elle se referme, mais [[r:g2|le Vieux Fargo]] dira la même chose autrement."
+        }
+      ],
+      "notes": [
+        {
+          "id": "redondance",
+          "text": "**Deux sources pour la même direction.** Kara et [[r:g2|le Vieux Fargo]] mènent tous deux à la tour. Rater l’une ne ferme rien."
+        }
+      ],
+      "connections": [
+        {
+          "to": "g2",
+          "via": "Passerelle sud, vers la taverne"
+        },
+        {
+          "to": "g3",
+          "via": "À travers le ruisseau, vers l’ouest"
+        }
+      ]
+    },
+    {
+      "id": "g2",
+      "map": "yellowcrest-greenfast",
+      "number": "G2",
+      "name": "Le Chaudron Bombé",
+      "tags": [
+        "social",
+        "pnj"
+      ],
+      "layout": "La taverne du hameau, au bord de l’eau, à l’est. Chaleureuse, pleine aux repas. Deux chambres à louer à l’étage.",
+      "readAloud": [
+        {
+          "id": "0",
+          "text": "Vieille chemise de flanelle, chapeau de cavalier qu’il ne quitte jamais : le Vieux Fargo vous sert sans qu’on lui demande et s’accoude en face.\n\n« Vous montez au domaine, c’est ça ? » Il essuie un verre déjà sec. « Tout le monde monte au domaine, ces temps-ci. Presque tout le monde redescend. »",
+          "summary": "Le Vieux Fargo devine où va le groupe et le dit sans y être invité."
+        }
+      ],
+      "npcs": [
+        {
+          "id": "fargo",
+          "name": "Le Vieux Fargo",
+          "role": "Tavernier du Chaudron Bombé",
+          "attitude": "méfiant envers Viallis, franc avec le groupe",
+          "monster": "commoner",
+          "description": "Chapeau de cavalier, flanelle usée, l’œil de quelqu’un qui a servi trente ans de clients et sait les lire.",
+          "wants": "Récupérer son fils.",
+          "secrets": [
+            "**Son fils, le Jeune Fargo, a rejoint le culte il y a un mois** et n’est pas revenu. On le retrouve en [[r:b12|B12]].",
+            "Il n’a aucune preuve contre Viallis, juste trente ans de métier. Il a raison."
+          ],
+          "dialogues": [
+            {
+              "id": "viallis",
+              "trigger": "Sur Lord Viallis (DD 13 de Persuasion, ou simplement l’écouter)",
+              "line": "« Un collectionneur de flatteurs. Il achète des gens avec de l’argent et il appelle ça de l’amitié. J’ai rien contre les riches, notez. J’ai contre celui-là. »"
+            },
+            {
+              "id": "fils",
+              "trigger": "Sur son fils",
+              "line": "*(Il arrête d’essuyer.)* « Un mois. Il est monté un matin et il m’a dit qu’il rentrerait pour la moisson. » *(Il repose le verre.)* « La moisson est passée. »"
+            },
+            {
+              "id": "supplique",
+              "trigger": "Si le groupe partage ses soupçons sur le culte",
+              "line": "« Alors ramenez-le. Je vous paierai pas, j’ai rien. Mais ramenez-le. »"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "id": "chambres",
+          "text": "**Deux chambres à louer.** Le seul repos long possible avant le temple. Chaque nuit passée ici coûte un palier du rituel en Version Améliorée."
+        },
+        {
+          "id": "recompense",
+          "text": "Si le **[[r:b12|Jeune Fargo]]** est épargné et ramené, la maison est ouverte au groupe **à vie**, gratuitement, à chaque passage."
+        }
+      ],
+      "connections": [
+        {
+          "to": "g1",
+          "via": "Passerelle nord"
+        },
+        {
+          "to": "g5",
+          "via": "Chemin de l’ouest, vers la grange"
+        }
+      ]
+    },
+    {
+      "id": "g3",
+      "map": "yellowcrest-greenfast",
+      "number": "G3",
+      "name": "La maison de Lord Viallis",
+      "tags": [
+        "exploration"
+      ],
+      "layout": "Une maison confortable au centre-ouest du hameau, sur la butte. Portes closes, volets tirés, rideaux fermés.",
+      "readAloud": [
+        {
+          "id": "0",
+          "text": "La maison est confortable, bien tenue, et vide de toute vie. La cuisine et la pièce principale ont servi récemment ; le reste est sous des draps.\n\nIl n’y a rien ici. Pas un papier, pas un portrait, pas un souvenir. **Quelqu’un a déménagé tout ce qui comptait, et il l’a fait sans se presser.**",
+          "summary": "Maison presque vide : tout ce qui compte a été emporté ailleurs, méthodiquement."
+        }
+      ],
+      "checks": [
+        {
+          "id": "crochet",
+          "skill": "Dextérité (outils de voleur)",
+          "dc": 14,
+          "text": "Une porte ou un volet. **Force (Athlétisme) DD 15** pour forcer."
+        }
+      ],
+      "notes": [
+        {
+          "id": "rien",
+          "text": "**Il n’y a réellement rien.** C’est une information : Viallis ne vit plus ici depuis un an, il vit au temple. Ne récompense pas la fouille par une trouvaille de consolation — le vide est la trouvaille."
+        },
+        {
+          "id": "e-preuve",
+          "text": "**Version Améliorée.** Une seule chose traîne, dans l’âtre de la cuisine, à moitié brûlée : **un plan du puits du Portail Béant**, avec le mécanisme du treuil dessiné en coupe et une annotation dans une écriture soignée — *« la chaîne ne suffira pas, il faut l’homme »*.",
+          "only": "enhanced"
+        }
+      ],
+      "treasure": [
+        {
+          "id": "e-plan",
+          "only": "enhanced",
+          "item": "Plan du treuil du Portail Béant, à demi brûlé",
+          "value": "—",
+          "note": "Preuve matérielle utilisable devant le Guet de Waterdeep. **La seule de toute l’aventure.**"
+        }
+      ],
+      "connections": [
+        {
+          "to": "g4",
+          "via": "Chemin de l’ouest"
+        },
+        {
+          "to": "g1",
+          "via": "Vers le nord-est"
+        }
+      ]
+    },
+    {
+      "id": "g4",
+      "map": "yellowcrest-greenfast",
+      "number": "G4",
+      "name": "La maison de Faerl",
+      "tags": [
+        "social",
+        "exploration",
+        "piège"
+      ],
+      "layout": "Un cottage à l’ouest, dont la pièce principale sert de bureau. Registres, correspondance, plumes bien rangées. Une fenêtre donne sur le chemin de la grange.",
+      "readAloud": [
+        {
+          "id": "0",
+          "text": "Le bureau est celui d’un homme méticuleux. Des registres alignés par année, une correspondance classée, pas un grain de poussière sur l’encrier.\n\nTout concerne les affaires de Lord Viallis. Tout est parfaitement en ordre. **Tout est parfaitement inintéressant.**",
+          "summary": "Bureau impeccable, registres commerciaux ordinaires, rien de compromettant."
+        }
+      ],
+      "features": [
+        {
+          "id": "fenetre",
+          "title": "La fenêtre",
+          "text": "**Si Faerl est là et se sent menacé**, il s’excuse et va « prendre un peu d’air » : c’est le signal convenu. Les quatre cultistes de la [[r:g5|grange]] arrivent en 1d4 rounds, prêts à en découdre."
+        }
+      ],
+      "checks": [
+        {
+          "id": "perception",
+          "skill": "Sagesse (Perception)",
+          "dc": 13,
+          "text": "Le geste de la fenêtre n’est pas naturel : il l’ouvre en grand par temps froid, et il regarde vers l’ouest en le faisant.",
+          "failure": "Un homme qui a chaud."
+        }
+      ],
+      "notes": [
+        {
+          "id": "presence",
+          "text": "**Faerl est ici** si le groupe n’est pas passé par [[r:w5|le Quartier des Artisans]], ou s’il s’est échappé de Waterdeep. Même personnage, mêmes répliques, même refus de nommer le culte."
+        },
+        {
+          "id": "ordre",
+          "text": "**L’ordre parfait est l’indice.** Personne ne tient des registres aussi propres sans en tenir de sales ailleurs. Un test d’Investigation DD 15 le fait remarquer à voix haute."
+        }
+      ],
+      "connections": [
+        {
+          "to": "g5",
+          "via": "Chemin de la grange, plein ouest"
+        },
+        {
+          "to": "g3",
+          "via": "Vers l’est"
+        }
+      ]
+    },
+    {
+      "id": "g5",
+      "map": "yellowcrest-greenfast",
+      "number": "G5",
+      "name": "La grange",
+      "tags": [
+        "combat",
+        "pnj"
+      ],
+      "layout": "Une grange à l’écart, au nord-ouest du hameau, sur la route de Waterdeep. Quatre hommes y travaillent le jour et n’ont jamais rien récolté.",
+      "readAloud": [
+        {
+          "id": "0",
+          "text": "Quatre hommes travaillent dans la grange. Ils s’arrêtent tous les quatre en même temps quand votre ombre passe la porte, et aucun ne repose son outil.\n\n« On peut vous aider ? » Celui qui parle a une fourche. Les trois autres se sont déplacés sans en avoir l’air : vous avez maintenant un homme de chaque côté.",
+          "summary": "Quatre cultistes déguisés en ouvriers agricoles encerclent lentement le groupe."
+        }
+      ],
+      "enemies": [
+        {
+          "id": "fanatiques",
+          "monster": "cult-fanatic",
+          "count": 2,
+          "where": "Au fond, près des outils.",
+          "tactics": "*Immobilisation de personne* d’entrée sur le combattant le plus lourd."
+        },
+        {
+          "id": "veterans",
+          "monster": "warrior-veteran",
+          "count": 2,
+          "where": "De part et d’autre de la porte, déjà en position.",
+          "tactics": "Bloquent la sortie. **Ceux-là ne se rendent pas** : ce ne sont pas des mercenaires."
+        },
+        {
+          "id": "e-elu",
+          "only": "enhanced",
+          "monster": "elu-langue-brulee",
+          "count": 1,
+          "name": "Le contremaître",
+          "where": "Dans le fenil, au-dessus. On ne le voit pas entrer.",
+          "hidden": true,
+          "tactics": "Descend au round 2. Il ouvre par *cécité* sur celui qui a une source de lumière."
+        },
+        {
+          "id": "e-grell",
+          "only": "enhanced",
+          "monster": "grell",
+          "count": 1,
+          "where": "Sous une bâche, au fond. **Ce n’est pas du foin sous cette toile.**",
+          "hidden": true,
+          "tactics": "Sort au round 3 si le combat dure. Paralyse et emporte le plus léger vers le fenil."
+        }
+      ],
+      "notes": [
+        {
+          "id": "aveux",
+          "text": "**Ceux-là savent tout**, contrairement aux mercenaires de Waterdeep. Vaincus et pressés, ils lâchent :\n• **Lord Viallis dirige le culte de la Langue Brûlée**, dont Greenfast est le centre.\n• Il vénère **Gaernoo** et canalise sa puissance en sacrifiant des prisonniers. Ce patron lui fournit **des créatures aberrantes**.\n• La vieille ruine au nord est un prétexte : les vraies salles sont **en dessous**, et le temple est terminé.\n\nIls ignorent où sont les restes de Lady Maria et des enfants. **Viallis ne parle jamais de sa vie d’avant.**"
+        },
+        {
+          "id": "signal",
+          "text": "Ils surveillent [[r:g4|la maison de Faerl]] et tout étranger dans le hameau. **Une question sur Viallis suffit à déclencher l’attaque.**"
+        },
+        {
+          "id": "e-durnan",
+          "text": "**Version Améliorée.** Ajoute un aveu : *« Le tavernier est en bas. Le maître le garde pour le prochain. »* C’est la première confirmation que Durnan est vivant — et la première fois que le groupe apprend qu’il y a un compte à rebours.",
+          "only": "enhanced"
+        }
+      ],
+      "connections": [
+        {
+          "to": "g4",
+          "via": "Retour au cottage"
+        },
+        {
+          "to": "b0",
+          "via": "Une heure au nord : la vieille tour"
+        }
+      ]
+    },
+    {
+      "id": "b0",
+      "noMap": true,
+      "number": "B0",
+      "name": "La tour en ruine",
+      "tags": [
+        "exploration"
+      ],
+      "layout": "Une heure au nord de Greenfast. Un bosquet d’arbustes tordus, une tour de pierre à moitié effondrée, et un chantier qui n’a jamais avancé.",
+      "readAloud": [
+        {
+          "id": "0",
+          "text": "Au milieu d’un bosquet d’arbustes noueux se dresse une tour de pierre à demi écroulée. Des tentes d’ouvriers, des tas de madriers, des outils épars : le site paraît en reconstruction, mais l’on n’a visiblement pas beaucoup progressé.",
+          "summary": "Une tour effondrée, un chantier à l’abandon, des tentes."
+        },
+        {
+          "id": "1",
+          "text": "De plus près, la mise en scène s’effondre. **Les madriers ont des années et commencent à pourrir. Les outils sont rouillés.** Les tentes, elles, ont servi récemment — mais elles ne contiennent aucun effet personnel.\n\nÀ l’intérieur de la tour, un escalier de pierre descend dans le noir. **Personne ne le garde.**",
+          "summary": "Le chantier est un décor. L’escalier descend, sans la moindre sentinelle."
+        }
+      ],
+      "notes": [
+        {
+          "id": "garde",
+          "text": "**Aucune sentinelle, et c’est voulu.** Cinq ans que personne ne s’intéresse à eux : le culte est devenu négligent. C’est le seul cadeau que l’aventure fait au groupe, et il est mérité."
+        },
+        {
+          "id": "bruit",
+          "text": "**Le bruit décide de tout ce qui suit.** Descendre en parlant, en armure lourde ou avec une lumière visible met [[r:b1|B1]] en alerte, ce qui met [[r:b3|B3]] en alerte, ce qui met **[[r:b7|Viallis]]** en alerte. Note-le maintenant : la discrétion vaut ici plus que n’importe quel jet d’attaque."
+        }
+      ],
+      "connections": [
+        {
+          "to": "b1",
+          "via": "L’escalier, neuf mètres plus bas"
+        },
+        {
+          "to": "g5",
+          "via": "Retour vers Greenfast"
+        }
+      ]
+    },
+    {
+      "id": "b1",
+      "number": "B1",
+      "name": "L’antichambre",
+      "tags": [
+        "combat",
+        "exploration"
+      ],
+      "layout": "Salle de pierre taillée, **plafond plat à 3 m**. Deux rangées de piliers sculptés de visages non humains. Deux braseros à l’entrée, une fontaine au fond. Trois issues : double porte au sud, porte à l’ouest, et un mur effondré à l’est qui ouvre sur un boyau.",
+      "readAloud": [
+        {
+          "id": "0",
+          "text": "L’escalier descend une dizaine de mètres avant de déboucher dans une salle de pierre taillée. Deux braseros encadrent l’entrée et brûlent d’une lumière **turquoise** qui n’est pas naturelle. Des piliers se dressent en deux rangées, chacun sculpté de visages de créatures d’ailleurs. Au fond, une fontaine coule doucement devant une double porte. Une autre porte s’ouvre dans le mur ouest, et le mur d’en face s’est effondré, révélant un boyau grossier.",
+          "summary": "Salle à piliers, braseros turquoise, fontaine au fond, trois issues."
+        }
+      ],
+      "enemies": [
+        {
+          "id": "grells",
+          "monster": "grell",
+          "count": 2,
+          "where": "En l’air, entre les piliers.",
+          "tactics": "Si le groupe est descendu **bruyamment**, ils se cachent contre les murs près de l’escalier, en l’air, et frappent les derniers de la file. Sinon, ils flottent au milieu et sont vus."
+        },
+        {
+          "id": "cultistes",
+          "monster": "cultist",
+          "count": 4,
+          "where": "Au sol, derrière les braseros.",
+          "tactics": "Retiennent, et surtout **crient**. Leur vraie fonction est d’alerter [[r:b3|B3]]."
+        },
+        {
+          "id": "e-grells",
+          "only": "enhanced",
+          "monster": "grell",
+          "count": 1,
+          "where": "Un troisième, au plafond, au-dessus de la fontaine.",
+          "hidden": true,
+          "tactics": "N’intervient qu’au round 3, sur le personnage resté à l’arrière."
+        }
+      ],
+      "features": [
+        {
+          "id": "fontaine",
+          "title": "La fontaine",
+          "text": "Eau limpide, gobelet d’argent posé sur la margelle. *Détection de la magie* révèle une aura de **divination**. **Une gorgée confère l’effet du sortilège *assistance*** ; une créature ne peut en bénéficier qu’une fois par jour. L’eau emportée perd sa magie en 10 minutes."
+        },
+        {
+          "id": "ouest",
+          "title": "La porte ouest ([[r:b2|B2]])",
+          "text": "**Verrouillée.** Lord Viallis porte la clef. Outils de voleur DD 14, ou Force (Athlétisme) DD 17."
+        },
+        {
+          "id": "sud",
+          "title": "La double porte sud",
+          "text": "Non verrouillée. Elle mène à [[r:b4|B4]] et [[r:b5|B5]], puis à l’escalier de la chapelle."
+        }
+      ],
+      "notes": [
+        {
+          "id": "alerte",
+          "text": "**Un combat ici alerte [[r:b3|B3]].** Le fanatique posté à l’escalier file prévenir Viallis en passant par le niveau inférieur et [[r:b8|B8]]. Toute la suite du temple change alors de posture."
+        }
+      ],
+      "connections": [
+        {
+          "to": "b2",
+          "via": "Porte ouest (verrouillée)"
+        },
+        {
+          "to": "b3",
+          "via": "Mur effondré à l’est"
+        },
+        {
+          "to": "b4",
+          "via": "Double porte sud"
+        },
+        {
+          "to": "b0",
+          "via": "L’escalier, vers la surface"
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "number": "B2",
+      "name": "Le cabinet arcanique",
+      "tags": [
+        "trésor",
+        "piège",
+        "secret"
+      ],
+      "layout": "Petite pièce à l’ouest, éclairée par deux sphères de cristal posées sur une étagère du mur nord. Un bureau, et du papier partout au sol.",
+      "readAloud": [
+        {
+          "id": "0",
+          "text": "Des liasses de papiers, des diagrammes, des parchemins et des livres jonchent un bureau et le sol de cette pièce, éclairée par deux sphères de cristal qui luisent sur une étagère, au nord.",
+          "summary": "Cabinet de travail encombré, éclairé par deux sphères de cristal."
+        }
+      ],
+      "features": [
+        {
+          "id": "livre",
+          "title": "***Rétribution des Anciens***",
+          "text": "Posé sur la table. **C’est le grimoire de Viallis** autant qu’un recueil de rituels. Sorts contenus : *cône de froid*, *contact extraplanaire*, *contresort*, *ténèbres*, *détection de la magie*, *frayeur*, *boule de feu*, *invisibilité supérieure*, *vol*, *tempête de grêle*, *armure du mage*, *projectile magique*, *pas brumeux*, *métamorphose*, *rayon empoisonné*, *bouclier*, *suggestion*.\n\nLe prendre maintenant **prive Viallis de rien** — il connaît ses sorts. Mais c’est la pièce à conviction, et c’est un titre d’entrée à Castel-Suif."
+        },
+        {
+          "id": "secret",
+          "title": "Porte secrète (mur sud)",
+          "text": "Sagesse (Perception) DD 15. Elle coulisse et donne sur un court passage terminé par **une seconde porte secrète, évidente depuis le couloir**, vers [[r:b5|B5]]."
+        }
+      ],
+      "traps": [
+        {
+          "id": "fosse",
+          "name": "La trappe de l’étagère",
+          "trigger": "**Retirer l’une des deux sphères de l’étagère.** Ce sont des *globes de lumière* fêlés, incapables de léviter ou d’éclairer le jour : de simples appâts.",
+          "effect": "Le sol s’ouvre. La créature devant l’étagère tombe de **6 m**, atterrit **à terre dans la cellule nord de [[r:b11|B11]]** et subit 7 (2d6) dégâts contondants. Le piège est magique, mais **le plancher doit être remis en place à la main** pour être réarmé.",
+          "disarm": "Sagesse (Perception) DD 16 pour repérer un léger enfoncement du sol devant l’étagère. Ensuite, il suffit de ne pas y poser le pied — ou d’attraper les sphères de loin."
+        }
+      ],
+      "treasure": [
+        {
+          "id": "medaillons",
+          "item": "Deux médaillons d’or",
+          "value": "125 po chacun",
+          "note": "Dans le tiroir du bureau."
+        },
+        {
+          "id": "carillon",
+          "item": "**Carillon d’ouverture**",
+          "value": "objet magique",
+          "note": "Dans une boîte de bois, sur la table."
+        },
+        {
+          "id": "grimoire",
+          "item": "***Rétribution des Anciens***",
+          "value": "unique",
+          "note": "Titre d’entrée à Castel-Suif, ou une faveur des Avoués si on le leur remet."
+        }
+      ],
+      "notes": [
+        {
+          "id": "remonter",
+          "text": "Depuis la cellule nord de [[r:b11|B11]], on peut **remonter ici** par le trou : Force (Athlétisme) DD 20, tant que le plancher n’a pas été remis."
+        },
+        {
+          "id": "raccourci",
+          "text": "**Cette pièce est un raccourci.** La porte secrète mène à [[r:b5|B5]], donc à la chapelle, sans passer par [[r:b4|B4]] où l’on est en vue. Un groupe discret qui crochète la porte ouest de [[r:b1|B1]] peut atteindre Viallis sans avoir alerté personne."
+        }
+      ],
+      "connections": [
+        {
+          "to": "b1",
+          "via": "Porte est (verrouillée)"
+        },
+        {
+          "to": "b5",
+          "via": "Porte secrète, mur sud"
+        },
+        {
+          "to": "b11",
+          "via": "La trappe, 6 m plus bas"
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "number": "B3",
+      "name": "L’accès au donjon",
+      "tags": [
+        "combat",
+        "exploration"
+      ],
+      "layout": "Le boyau ouvert dans le mur effondré de [[r:b1|B1]], éclairé par un unique brasero. Au bout, un escalier de pierre incurvé descend vers le niveau inférieur.",
+      "readAloud": [
+        {
+          "id": "0",
+          "text": "Le tunnel ouvert dans le mur écroulé de l’antichambre est éclairé par un seul brasero. Au bout du passage, un escalier de pierre incurvé s’enfonce dans le noir.",
+          "summary": "Un boyau, un brasero, un escalier qui descend."
+        }
+      ],
+      "enemies": [
+        {
+          "id": "fanatique",
+          "monster": "cult-fanatic",
+          "count": 1,
+          "where": "Assis en haut de l’escalier.",
+          "tactics": "**Il ne se bat que s’il est surpris.** Alerté par un bruit venu de [[r:b1|B1]], il **fuit** : il descend, traverse les tunnels du niveau inférieur, remonte par [[r:b8|B8]] et franchit la porte secrète de [[r:b7|B7]] pour prévenir Viallis."
+        }
+      ],
+      "notes": [
+        {
+          "id": "course",
+          "text": "**C’est une course, pas un combat.** S’il part, tout le temple sait. Le rattraper demande d’avoir plus de 9 m de vitesse ou un sort — c’est le bon moment pour un *rayon de givre*, une flèche, ou une porte fermée au bon endroit."
+        },
+        {
+          "id": "consequence",
+          "text": "**Ce qui change s’il passe :** trois fanatiques attendent en embuscade au bas de l’escalier nord de [[r:b7|la chapelle]] au lieu d’être derrière la statue ; et les occupants de [[r:b12|B12]] sont prêts à se battre au lieu d’être distraits."
+        }
+      ],
+      "connections": [
+        {
+          "to": "b1",
+          "via": "Le boyau, vers l’antichambre"
+        },
+        {
+          "to": "b11",
+          "via": "L’escalier incurvé, vers le niveau inférieur"
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "number": "B4",
+      "name": "Le bureau",
+      "tags": [
+        "exploration",
+        "piège"
+      ],
+      "layout": "Alcôve au sud de l’antichambre, éclairée par un brasero. Un bureau de bois. **Pas de porte** entre cette pièce et l’escalier qui descend à la chapelle.",
+      "readAloud": [
+        {
+          "id": "0",
+          "text": "Des livres et des babioles s’étalent sur un bureau de bois installé dans cette alcôve, qu’éclaire un brasero.",
+          "summary": "Un bureau couvert de livres et de bibelots."
+        }
+      ],
+      "features": [
+        {
+          "id": "vue",
+          "title": "**Aucune porte**",
+          "text": "Rien ne sépare cette alcôve de l’escalier de la chapelle. Entrer ici ou dans [[r:b5|B5]] peut **attirer l’attention des cultistes de [[r:b7|B7]]** — ou se faire sous leurs yeux, s’ils ont déjà été prévenus par [[r:b3|B3]]."
+        }
+      ],
+      "traps": [
+        {
+          "id": "appat",
+          "name": "Le piège à espions",
+          "trigger": "**Emporter l’un des livres ou l’une des babioles.**",
+          "effect": "Aucun effet immédiat. Mais Viallis vérifie ces objets : **s’il en manque un, il sait que le temple a été infiltré** et prend ses dispositions. À la table, cela veut dire qu’il aura filé avant le combat final.",
+          "disarm": "Sagesse (Perspicacité) DD 15 après **10 minutes** d’examen : les registres sont l’œuvre de Faerl, ils concernent des achats parfaitement licites, et ils n’ont rien à faire ici. Ce sont des appâts."
+        }
+      ],
+      "notes": [
+        {
+          "id": "ton",
+          "text": "**Le piège le plus cruel de l’aventure est celui qui ne fait aucun dégât.** Ne préviens pas. Laisse le joueur empocher la babiole, note-le, et fais-en la raison pour laquelle Viallis n’est pas là à la fin."
+        }
+      ],
+      "connections": [
+        {
+          "to": "b1",
+          "via": "Double porte nord"
+        },
+        {
+          "to": "b5",
+          "via": "Couloir ouest"
+        },
+        {
+          "to": "b7",
+          "via": "L’escalier sud, vers la chapelle"
+        }
+      ]
+    },
+    {
+      "id": "b5",
+      "number": "B5",
+      "name": "L’atelier des symboles",
+      "tags": [
+        "exploration",
+        "secret"
+      ],
+      "layout": "Deux tables, une lampe à huile de bronze, des outils à bois. Une porte secrète dans le mur nord.",
+      "readAloud": [
+        {
+          "id": "0",
+          "text": "Une lampe de bronze brûle sur l’une des deux tables. Toutes deux portent des outils de sculpture sur bois et d’étranges objets de bois.\n\nCe sont des langues. **Cinquante langues de bois arrachées à la racine**, fraîchement taillées, alignées et prêtes à être distribuées.",
+          "summary": "Cinquante symboles du culte fraîchement taillés : une langue arrachée."
+        }
+      ],
+      "features": [
+        {
+          "id": "secret",
+          "title": "Porte secrète (mur nord)",
+          "text": "Identique à celle de [[r:b2|B2]] : Sagesse (Perception) DD 15, et évidente une fois dans le couloir."
+        },
+        {
+          "id": "echelle",
+          "title": "**Cinquante**",
+          "text": "Le culte compte une vingtaine de membres. **Cinquante symboles, c’est un plan d’expansion**, pas un stock. Fais-le remarquer."
+        }
+      ],
+      "notes": [
+        {
+          "id": "e-lien",
+          "text": "**Version Améliorée.** C’est le même bois, la même taille et la même main que le symbole ramassé au [[r:w1|Portail Béant]]. Un personnage qui l’a gardé le vérifie sans jet.",
+          "only": "enhanced"
+        }
+      ],
+      "connections": [
+        {
+          "to": "b4",
+          "via": "Couloir est"
+        },
+        {
+          "to": "b2",
+          "via": "Porte secrète, mur nord"
+        }
+      ]
+    },
+    {
+      "id": "b6",
+      "number": "B6",
+      "name": "Le cabinet de lecture",
+      "tags": [
+        "trésor",
+        "exploration"
+      ],
+      "layout": "Une pièce à plancher de bois, aménagée **à l’intérieur du volume de la chapelle** ([[r:b7|B7]]). Un divan, une haute bibliothèque, une sphère de cristal lumineuse. Porte non verrouillée.",
+      "readAloud": [
+        {
+          "id": "0",
+          "text": "Une sphère de cristal éclaire cette chambre au plancher de bois, meublée d’un divan et d’une haute bibliothèque.",
+          "summary": "Petit salon de lecture : divan, bibliothèque, lumière de cristal."
+        }
+      ],
+      "treasure": [
+        {
+          "id": "biblio",
+          "item": "La bibliothèque du culte",
+          "value": "300 po",
+          "note": "Littérature avilie, mythologies noires, études de magie aberrante, traités déments sur les dieux anciens. Viallis la constitue depuis des années **pour ses fidèles**. Vendable à un acheteur averti — ou **donnée à Castel-Suif** contre des faveurs."
+        }
+      ],
+      "notes": [
+        {
+          "id": "position",
+          "text": "**Cette pièce est dans la chapelle.** Sa porte donne sur [[r:b7|B7]]. On ne peut ni y entrer ni en sortir sans être vu de ceux qui s’y trouvent."
+        },
+        {
+          "id": "lecture",
+          "text": "C’est ici que Viallis **fabrique ses fidèles** : on ne recrute pas des fanatiques, on les cultive, un livre à la fois. Le divan est usé à une seule place."
+        }
+      ],
+      "connections": [
+        {
+          "to": "b7",
+          "via": "La porte, sur la chapelle"
+        }
+      ]
+    },
+    {
+      "id": "b7",
+      "number": "B7",
+      "name": "La chapelle sombre",
+      "tags": [
+        "boss",
+        "combat",
+        "trésor",
+        "secret"
+      ],
+      "layout": "Immense salle en ogive, murs sculptés d’images contre nature, deux rangées de bancs. Alcôve au sud avec la statue et l’autel. **Quatre puits** dans des alcôves latérales. Deux escaliers, nord et est. Portes secrètes de part et d’autre de l’autel.",
+      "readAloud": [
+        {
+          "id": "0",
+          "text": "Cet espace immense a l’allure d’une chapelle, ses murs sculptés d’images contre nature. Une vaste alcôve, au sud, abrite une **énorme statue de pierre violette** : une créature d’ailleurs à grosse tête bulbeuse, longs bras, tentacules en guise de jambes, et des yeux à facettes qui luisent d’une lumière turquoise.",
+          "summary": "La statue de Gaernoo domine l’alcôve sud, les yeux luisants de turquoise."
+        },
+        {
+          "id": "1",
+          "only": "base",
+          "text": "Deux corps sont étendus sur un autel devant la statue. Debout au-dessus d’eux, un homme grand et chauve tient un couteau ensanglanté. Deux cultistes en robe l’encadrent, et non loin flotte une chose hideuse : **un cerveau géant couvert de tentacules**.",
+          "summary": "Deux corps sur l’autel, Viallis un couteau à la main, deux cultistes et un grell."
+        },
+        {
+          "id": "2",
+          "only": "base",
+          "text": "**Au début du round 2 :** les deux corps sont consumés par un feu turquoise et réduits à l’os et à la cendre. **De cette cendre émerge un second grell.**",
+          "summary": "Round 2 : les corps brûlent et un second grell naît des cendres."
+        },
+        {
+          "id": "e0",
+          "only": "enhanced",
+          "text": "Ce n’est pas un inconnu qui est sur l’autel.\n\nDurnan est vivant, torse nu, les poignets liés à la pierre, et il tourne la tête vers vous sans hâte, comme un homme qu’on dérange. Il ne dit rien. Il regarde le couteau, puis vous, puis le couteau.\n\nAu-dessus de lui, le notable affable qui vous a offert son aide à Waterdeep lève les yeux. **Un troisième œil s’ouvre au milieu de son front.**\n\n« Ah. » *(Il sourit, réellement content.)* « Vous êtes venus. J’avais dit à Faerl que vous viendriez. »",
+          "summary": "Durnan vivant sur l’autel. Viallis lève les yeux — un troisième œil s’ouvre sur son front."
+        },
+        {
+          "id": "e1",
+          "only": "enhanced",
+          "text": "Deux tas de cendres fument encore au pied de l’autel : les deux compagnons de caravane, sacrifiés il y a une heure. **Au début du round 2, un grell s’extrait de l’un d’eux.**\n\nDurnan regarde la chose se déplier et ne dit toujours rien. Puis, à personne en particulier : « Il en sort un à chaque fois. »",
+          "summary": "Round 2 : un grell naît des cendres des deux victimes précédentes."
+        }
+      ],
+      "enemies": [
+        {
+          "id": "viallis",
+          "only": "base",
+          "monster": "viallis",
+          "count": 1,
+          "name": "Lord Viallis Yellowcrest",
+          "where": "À l’autel, dos à la statue.",
+          "tactics": "**Il finit son rituel** pendant que les autres retiennent le groupe : il n’entre en jeu qu’au **round 3**. *Armure du mage* est déjà active et son emplacement de niveau 5 est dépensé."
+        },
+        {
+          "id": "e-viallis",
+          "only": "enhanced",
+          "monster": "viallis-eveille",
+          "count": 1,
+          "name": "Lord Viallis, l’Œil ouvert",
+          "where": "À l’autel, au-dessus de Durnan.",
+          "tactics": "Round 1 : il achève le rituel. Round 2 : **Souffle de Gaernoo** sur le groupe le plus dense. Tant que Durnan est lié à l’autel, il a l’avantage à toutes ses sauvegardes."
+        },
+        {
+          "id": "grell1",
+          "monster": "grell",
+          "count": 1,
+          "where": "Flotte près de l’autel.",
+          "tactics": "Se détache du rituel dès l’entrée du groupe. Paralyse et emporte."
+        },
+        {
+          "id": "cultistes",
+          "monster": "cultist",
+          "count": 2,
+          "where": "De part et d’autre de Viallis.",
+          "tactics": "Interposent leurs corps. Ils ne valent rien et le savent."
+        },
+        {
+          "id": "grell2",
+          "monster": "grell",
+          "count": 1,
+          "name": "Le grell né des cendres",
+          "where": "**Round 2**, de la cendre de l’autel.",
+          "tactics": "Entre en jeu au round 3 avec Viallis."
+        },
+        {
+          "id": "fanatiques",
+          "monster": "cult-fanatic",
+          "count": 3,
+          "where": "**Derrière la statue** si le groupe est arrivé sans bruit. **En embuscade au bas de l’escalier nord** si [[r:b3|B3]] a donné l’alerte.",
+          "tactics": "Trois *immobilisations de personne* coordonnées sur les combattants au corps à corps. **C’est la vraie menace de la salle.**"
+        },
+        {
+          "id": "faerl",
+          "monster": "faerl",
+          "count": 1,
+          "name": "Faerl",
+          "where": "Sur un banc, **s’il a pu fuir Waterdeep** et qu’on ne l’a pas trouvé chez lui.",
+          "tactics": "Sans ses gardes du corps, il tente de fuir la salle — et le temple — dès le premier round.",
+          "hidden": true
+        },
+        {
+          "id": "e-elu",
+          "only": "enhanced",
+          "monster": "elu-langue-brulee",
+          "count": 1,
+          "name": "L’Élu de l’autel",
+          "where": "Agenouillé au pied de la statue, immobile depuis le début.",
+          "tactics": "Se lève au round 2. Sa mission est de **protéger l’autel**, pas Viallis : il ne s’éloigne jamais de plus de 3 m de Durnan."
+        },
+        {
+          "id": "e-grell",
+          "only": "enhanced",
+          "monster": "grell-ancien",
+          "count": 1,
+          "name": "Le grell ancien",
+          "where": "Dans l’ombre de la voûte, hors de portée des lumières.",
+          "hidden": true,
+          "tactics": "Descend au round 3. Agrippe deux personnages, **monte à 12 m et les lâche** (6d6 de chute)."
+        }
+      ],
+      "features": [
+        {
+          "id": "puits",
+          "title": "Les quatre puits",
+          "text": "Dans des alcôves latérales. Après chaque sacrifice, on y jette cendres et ossements : ils débouchent en [[r:b13|B13]], au niveau inférieur. **Une créature peut y être poussée** — 9 m de chute."
+        },
+        {
+          "id": "secretes",
+          "title": "Portes secrètes",
+          "text": "Sagesse (Perception) DD 15 : deux panneaux coulissants **de part et d’autre de l’autel**, vers [[r:b8|B8]] et [[r:b9|B9]]. Ils s’ouvrent sans effort une fois trouvés."
+        },
+        {
+          "id": "e-autel",
+          "only": "enhanced",
+          "title": "Libérer Durnan",
+          "text": "Les liens sont **du cuir et de la chaîne, pas de la magie**. Une action et un test de Force (Athlétisme) DD 15, ou 12 dégâts tranchants sur la chaîne, ou la clef que porte Viallis. **Le libérer retire immédiatement à Viallis son avantage aux jets de sauvegarde**, et lui retire sa raison de rester."
+        }
+      ],
+      "treasure": [
+        {
+          "id": "bracelets",
+          "item": "Cinq bracelets d’or",
+          "value": "150 po chacun",
+          "note": "Disposés en offrandes autour de l’autel, parmi des babioles sans valeur."
+        },
+        {
+          "id": "robe",
+          "item": "**Robe des couleurs chatoyantes**",
+          "value": "objet magique",
+          "note": "Portée par Viallis."
+        },
+        {
+          "id": "parchemin",
+          "item": "**Parchemin de téléportation**",
+          "value": "objet magique",
+          "note": "Dans une poche de la robe. **Il s’en sert pour fuir** — ne le trouve dans son butin que s’il meurt vite."
+        },
+        {
+          "id": "clefs",
+          "item": "Les clefs de Viallis",
+          "value": "—",
+          "note": "Ouvrent [[r:b2|B2]] et les cellules de [[r:b11|B11]]."
+        }
+      ],
+      "notes": [
+        {
+          "id": "fuite",
+          "text": "**Viallis fuit par parchemin** dès que la bataille lui paraît perdue. Ce n’est pas un échec du groupe : c’est une fin, et elle laisse une dette. Sans le corps ni les aveux, **le Guet de Waterdeep n’a rien** — et Viallis, lui, a tout à refaire mais garde Gaernoo."
+        },
+        {
+          "id": "e-fuite",
+          "text": "**Version Améliorée : il ne fuit pas tant que Durnan est sur l’autel.** Il est venu chercher la clef du puits, il ne repartira pas sans. C’est ce qui rend le combat gagnable — et ce qui punit le groupe qui libère le tavernier trop tôt sans avoir affaibli le mage.",
+          "only": "enhanced"
+        },
+        {
+          "id": "deux-fins",
+          "text": "**Deux fins, à annoncer clairement au groupe s’il hésite :**\n• **Viallis vivant, livré à Waterdeep** — il avoue tout devant l’échafaud, l’affaire Yellowcrest se referme, la ville a sa justice.\n• **Viallis abattu sans preuve** — le culte meurt avec lui, mais il reste un notable assassiné chez lui par des aventuriers. **Le Guet aura des questions**, et c’est une dette pour plus tard."
+        }
+      ],
+      "connections": [
+        {
+          "to": "b4",
+          "via": "Escalier nord"
+        },
+        {
+          "to": "b6",
+          "via": "La porte du cabinet"
+        },
+        {
+          "to": "b8",
+          "via": "Porte secrète, à l’est de l’autel"
+        },
+        {
+          "to": "b9",
+          "via": "Porte secrète, à l’ouest de l’autel"
+        },
+        {
+          "to": "b13",
+          "via": "Les quatre puits, 9 m plus bas"
+        }
+      ]
+    },
+    {
+      "id": "b8",
+      "number": "B8",
+      "name": "Le caveau secret",
+      "tags": [
+        "trésor",
+        "secret"
+      ],
+      "layout": "Un court couloir depuis la porte secrète est de la chapelle, puis un escalier qui descend. Pièce obscure, deux coffres, et un second escalier vers les tunnels du niveau inférieur.",
+      "readAloud": [
+        {
+          "id": "0",
+          "text": "Deux coffres de bois sont les seuls objets visibles dans cette pièce obscure, d’où part un escalier vers le bas.",
+          "summary": "Deux coffres, et un escalier qui descend encore."
+        }
+      ],
+      "treasure": [
+        {
+          "id": "coffres",
+          "item": "Les affaires des prisonniers",
+          "value": "115 po + boucles d’oreilles serties (150 po)",
+          "note": "Les deux coffres ne sont pas verrouillés. Aussi : **une épée longue et deux dagues**. Si le groupe se fait capturer, ses propres affaires atterrissent ici."
+        }
+      ],
+      "notes": [
+        {
+          "id": "capture",
+          "text": "**Le plan de secours du MJ.** Si le groupe est capturé, il se réveille en [[r:b11|B11]] et son matériel est ici, à deux salles. Ce n’est pas une fin, c’est un détour — et un très bon."
+        },
+        {
+          "id": "e-durnan",
+          "text": "**Version Améliorée.** L’épée longue du coffre est celle de Durnan : lame simple, garde usée, sans marque. Lui rendre son arme le fait passer de figurant à combattant ([[m:durnan|fiche]]).",
+          "only": "enhanced"
+        }
+      ],
+      "connections": [
+        {
+          "to": "b7",
+          "via": "Porte secrète, vers la chapelle"
+        },
+        {
+          "to": "b13",
+          "via": "Escalier vers les tunnels"
+        }
+      ]
+    },
+    {
+      "id": "b9",
+      "number": "B9",
+      "name": "La bibliothèque secrète",
+      "tags": [
+        "trésor",
+        "secret",
+        "énigme"
+      ],
+      "layout": "Petite chambre obscure derrière la porte secrète ouest de la chapelle. Une table basse, **une urne d’or**, et une bibliothèque pleine de livres et de parchemins usés.",
+      "readAloud": [
+        {
+          "id": "0",
+          "text": "Cette petite chambre obscure abrite une **urne d’or** posée sur une table basse, et une bibliothèque bourrée de livres et de parchemins, dont beaucoup sont anciens et abîmés.",
+          "summary": "Une urne d’or sur une table, une bibliothèque de vieux ouvrages."
+        }
+      ],
+      "features": [
+        {
+          "id": "urne",
+          "title": "**L’urne d’or**",
+          "text": "Gravée de sigles arcaniques liés aux Plans Extérieurs. *Détection de la magie* : aura de **nécromancie**. Elle contient des cendres.\n\n**Ce sont Lady Maria, Malik, Janus et Tianna.** Viallis a emporté ses morts avec lui pour s’en servir comme focalisateur de ses rituels. C’est l’objet que Sarah cherche depuis cinq ans."
+        },
+        {
+          "id": "journaux",
+          "title": "Les journaux de Viallis",
+          "text": "Parmi les vieux ouvrages, plusieurs cahiers récents de sa main. **Quelques minutes de lecture donnent tout ce que le groupe aurait pu manquer** sur les meurtres du manoir — et désignent l’urne."
+        },
+        {
+          "id": "fonds",
+          "title": "Le fonds ancien",
+          "text": "Formules arcaniques, recettes alchimiques, instructions rituelles, savoir sur les Plans Extérieurs. **La moitié est en profond.**"
+        }
+      ],
+      "notes": [
+        {
+          "id": "objectif",
+          "text": "**C’est l’objectif de l’aventure, et il tient dans un pot.** Ne le cache pas derrière un jet. Si le groupe a trouvé la porte secrète, il a l’urne."
+        },
+        {
+          "id": "sarah",
+          "text": "Si le journal de Sarah est là, **elle voit l’urne**. Elle ne fait rien de spectaculaire : elle s’assied à côté et n’en bouge plus."
+        }
+      ],
+      "treasure": [
+        {
+          "id": "urne",
+          "item": "**L’urne d’or**",
+          "value": "250 po — mais on ne la vend pas",
+          "note": "Les cendres de Lady Maria, Malik, Janus et Tianna."
+        }
+      ],
+      "connections": [
+        {
+          "to": "b7",
+          "via": "Porte secrète, vers la chapelle"
+        }
+      ]
+    },
+    {
+      "id": "b10",
+      "number": "B10",
+      "name": "L’ossuaire",
+      "tags": [
+        "énigme",
+        "exploration"
+      ],
+      "layout": "Cul-de-sac obscur au nord-est du niveau inférieur.",
+      "readAloud": [
+        {
+          "id": "0",
+          "text": "Cette chambre obscure sans issue abrite un monticule d’ossements calcinés, de membres desséchés et de crânes, éparpillés sur un drap de lin. **Des runes rouge et noir** en marquent les bords, tracées, semble-t-il, avec du sang.",
+          "summary": "Un monticule d’os calcinés sur un drap de lin bordé de runes de sang."
+        }
+      ],
+      "checks": [
+        {
+          "id": "arcanes",
+          "skill": "Intelligence (Arcanes)",
+          "dc": 15,
+          "text": "Les runes sont un **inventaire rituel**. Ces restes sont rassemblés pour alimenter un rituel bien plus vaste, prévu pour plus tard — **qui exigera des centaines de victimes**. Maîtrise d’Arcanes : réussite automatique.",
+          "failure": "Un charnier rangé. Le rangement est le plus inquiétant."
+        }
+      ],
+      "notes": [
+        {
+          "id": "echelle",
+          "text": "**C’est ici que l’aventure change de taille.** Jusqu’à cette salle, le culte est une affaire locale de vingt personnes. Après, c’est un projet. Laisse le silence s’installer."
+        },
+        {
+          "id": "e-puits",
+          "text": "**Version Améliorée.** Les runes disent aussi **où** : elles désignent un lieu situé sous Waterdeep, à plusieurs strates de profondeur. C’est pour cela que le culte a besoin d’un accès libre au puits du Portail Béant — et pour cela qu’il a fallu enlever Durnan.",
+          "only": "enhanced"
+        }
+      ],
+      "connections": [
+        {
+          "to": "b11",
+          "via": "Tunnel vers l’ouest"
+        }
+      ]
+    },
+    {
+      "id": "b11",
+      "number": "B11",
+      "name": "Les cellules",
+      "tags": [
+        "pnj",
+        "social",
+        "exploration"
+      ],
+      "layout": "Deux cellules creusées dans la roche, l’une au nord, l’autre au sud, fermées par des grilles de fer verrouillées. La cellule nord est **sous la trappe de [[r:b2|B2]]**.",
+      "readAloud": [
+        {
+          "id": "0",
+          "text": "Deux cellules, fermées par des grilles de fer. Celle du nord est vide. Dans celle du sud, six silhouettes se lèvent en même temps et personne ne crie : ils ont appris à ne pas crier.",
+          "summary": "Deux cellules ; celle du nord est vide, six prisonniers silencieux dans celle du sud."
+        }
+      ],
+      "features": [
+        {
+          "id": "serrures",
+          "title": "Les grilles",
+          "text": "Verrouillées. **Lord Viallis porte les clefs.** Outils de voleur DD 15."
+        },
+        {
+          "id": "nord",
+          "title": "Cellule nord",
+          "text": "Vide à l’arrivée du groupe. C’est là qu’atterrit **quiconque déclenche la trappe de [[r:b2|B2]]** : 6 m de chute, à terre, 2d6 dégâts. On peut remonter par le trou : Force (Athlétisme) DD 20."
+        }
+      ],
+      "npcs": [
+        {
+          "id": "yaeda",
+          "name": "Yaeda Firenni",
+          "role": "Sœur de la mairesse",
+          "attitude": "épuisée",
+          "monster": "commoner",
+          "description": "Elle a rejoint Viallis de son plein gré il y a deux mois. Quand elle a compris l’ampleur de la chose et tenté de partir, on l’a enfermée. **Roturière désarmée avec 4 niveaux d’épuisement.**",
+          "wants": "Revoir sa sœur, et qu’on ne lui raconte pas ce qu’elle a fait avant de comprendre.",
+          "dialogues": [
+            {
+              "id": "kara",
+              "trigger": "Si on prononce le nom de Kara",
+              "line": "« Ne lui dites pas que je suis venue ici toute seule. » *(Un temps.)* « Non. Dites-le-lui. »"
+            }
+          ]
+        },
+        {
+          "id": "vecken",
+          "name": "Sir Vecken",
+          "role": "Prisonnier, s’il est parti en avance",
+          "attitude": "furieux contre lui-même",
+          "monster": "vecken",
+          "description": "Présent **si au moins un jour s’est écoulé** entre la visite de [[r:w6|rue Immar]] et l’arrivée du groupe. Il a affronté une escouade de cultistes sur la Voie Marchande et a perdu. **Réduit à 25 PV.**",
+          "wants": "Se racheter, tout de suite, de préférence à l’épée.",
+          "secrets": [
+            "Assez solide pour **escorter les prisonniers dehors** pendant que le groupe finit. Pas assez pour descendre à la chapelle."
+          ],
+          "dialogues": [
+            {
+              "id": "honte",
+              "trigger": "En le libérant",
+              "line": "« Votre nouvelle m’a mis en selle avant de me mettre la cervelle en place. » *(Il se relève seul.)* « Donnez-moi une épée et sortez ces gens d’ici. »"
+            }
+          ]
+        },
+        {
+          "id": "e-durnan",
+          "only": "enhanced",
+          "name": "Durnan",
+          "role": "Le tavernier du Portail Béant",
+          "attitude": "silencieux",
+          "monster": "durnan",
+          "description": "**Il n’est pas ici.** Il est en [[r:b7|B7]], sur l’autel. Cette entrée est là pour le MJ : si le groupe descend trop vite et rate la chapelle, c’est ici qu’on lui apprend qu’il est arrivé trop tard d’une demi-heure.",
+          "wants": "Rentrer, rouvrir, et ne rien raconter.",
+          "secrets": [
+            "Les autres prisonniers l’ont vu passer. **Ils diront combien de temps il reste** : « ils l’ont emmené il y a une heure »."
+          ],
+          "dialogues": [
+            {
+              "id": "temoin",
+              "trigger": "Ce que disent les prisonniers",
+              "line": "« Le grand costaud ? Ils l’ont pris tout à l’heure. Il nous a dit de pas regarder. »"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "id": "six",
+          "text": "**Six prisonniers dans la cellule sud :** Yaeda Firenni, **trois roturiers désarmés** (Jalrax, Durz, Seffra) et **un enfant non combattant** (Ashlan), pris dans une caravane il y a quelques jours. Deux de leurs compagnons ont été emmenés il y a quelques heures : ce sont les corps de l’autel en [[r:b7|B7]]."
+        },
+        {
+          "id": "charge",
+          "text": "**Six civils à évacuer pendant que le temple s’éveille.** C’est la vraie difficulté du niveau inférieur, et elle ne se résout pas à l’épée. Vecken libéré règle le problème ; sinon, il faut choisir entre eux et Viallis."
+        },
+        {
+          "id": "e-cinq",
+          "text": "**Version Améliorée :** cinq prisonniers seulement — la sixième place est celle qu’occupait Durnan jusqu’à il y a une heure.",
+          "only": "enhanced"
+        }
+      ],
+      "connections": [
+        {
+          "to": "b3",
+          "via": "L’escalier incurvé, vers le niveau supérieur"
+        },
+        {
+          "to": "b10",
+          "via": "Tunnel vers l’est"
+        },
+        {
+          "to": "b12",
+          "via": "Tunnel vers le sud"
+        },
+        {
+          "to": "b2",
+          "via": "Le trou de la trappe, 6 m plus haut"
+        }
+      ]
+    },
+    {
+      "id": "b12",
+      "number": "B12",
+      "name": "La salle d’entraînement des acolytes",
+      "tags": [
+        "combat",
+        "pnj"
+      ],
+      "layout": "Alcôve de pierre taillée, éclairée. Des parchemins et des notes jonchent le sol.",
+      "readAloud": [
+        {
+          "id": "0",
+          "text": "Des parchemins et des notes couvrent le sol de cette alcôve de pierre. Quatre recrues s’y exercent : trois répètent une formule qui ne prend pas, et la quatrième les regarde faire avec une patience qui n’en est pas.",
+          "summary": "Quatre recrues du culte s’exercent à l’incantation."
+        }
+      ],
+      "enemies": [
+        {
+          "id": "recrues",
+          "monster": "cultist",
+          "count": 3,
+          "where": "Au centre, penchés sur leurs notes.",
+          "tactics": "**Distraits** si personne ne les a prévenus : le groupe a une manche gratuite. Alertés par [[r:b3|B3]], ils attendent en embuscade."
+        },
+        {
+          "id": "instructeur",
+          "monster": "cult-fanatic",
+          "count": 1,
+          "where": "Debout, dos au mur.",
+          "tactics": "*Immobilisation de personne*, puis il laisse les recrues frapper la cible immobilisée."
+        },
+        {
+          "id": "gricks",
+          "monster": "grick",
+          "count": 2,
+          "where": "Enroulés dans les anfractuosités du plafond.",
+          "tactics": "**Optionnel — pour durcir la rencontre.** Chiens de garde : ils tombent du plafond sur le premier qui passe dessous.",
+          "hidden": true
+        },
+        {
+          "id": "e-gricks",
+          "only": "enhanced",
+          "monster": "grick",
+          "count": 2,
+          "where": "Deux de plus, dans le tunnel derrière.",
+          "hidden": true,
+          "tactics": "Arrivent au round 2, **par le dos du groupe**."
+        }
+      ],
+      "npcs": [
+        {
+          "id": "jeune-fargo",
+          "name": "Le Jeune Fargo",
+          "role": "Recrue du culte, fils du tavernier",
+          "attitude": "exalté puis effondré",
+          "monster": "cultist",
+          "description": "Un des trois cultistes lui ressemble beaucoup : **c’est le fils du [[r:g2|Vieux Fargo]]**. Il se bat avec la même fureur que les autres, et la perd dès qu’on le maîtrise.",
+          "wants": "Avoir choisi quelque chose de grand. Il commence à comprendre qu’il n’a rien choisi du tout.",
+          "secrets": [
+            "**Nouvel initié**, il n’a pas encore été exposé au pire. Épargné, il finit par faire amende honorable.",
+            "Charisme (Persuasion) DD 12 après le combat, ou du bon jeu de rôle, lui fait comprendre qu’il a été utilisé."
+          ],
+          "dialogues": [
+            {
+              "id": "combat",
+              "trigger": "Pendant le combat",
+              "line": "« Vous ne savez pas ce que vous interrompez ! »"
+            },
+            {
+              "id": "apres",
+              "trigger": "Maîtrisé, après le DD 12",
+              "line": "*(Il regarde le symbole de bois dans sa main comme s’il ne l’avait jamais vu.)* « Il connaissait le nom de ma mère. Il l’a dit le premier jour. Je me suis dit que ça voulait dire quelque chose. »"
+            }
+          ]
+        }
+      ],
+      "treasure": [
+        {
+          "id": "parchemin",
+          "item": "**Parchemin de contresort**",
+          "value": "objet magique",
+          "note": "Dans les parchemins du sol."
+        }
+      ],
+      "notes": [
+        {
+          "id": "calibrage",
+          "text": "**Levier de calibrage.** Les deux gricks sont explicitement optionnels dans la source : retire-les si le groupe est à court de ressources, ajoute-les s’il arrive frais."
+        },
+        {
+          "id": "fargo",
+          "text": "Épargner le Jeune Fargo et le ramener vaut au groupe **l’hospitalité gratuite du Chaudron Bombé, à vie**. Le tuer ne coûte rien mécaniquement — seulement d’avoir à le dire à son père."
+        }
+      ],
+      "connections": [
+        {
+          "to": "b11",
+          "via": "Tunnel vers le nord"
+        },
+        {
+          "to": "b13",
+          "via": "Tunnel vers le sud"
+        }
+      ]
+    },
+    {
+      "id": "b13",
+      "number": "B13",
+      "name": "Les restes sacrificiels",
+      "tags": [
+        "exploration"
+      ],
+      "layout": "Deux renfoncements des tunnels du niveau inférieur, sous les quatre puits de la chapelle.",
+      "readAloud": [
+        {
+          "id": "0",
+          "text": "Des monticules de cendre et d’os s’entassent ici, tombés d’en haut. Il y en a deux tas, et ils ne sont pas de la même année.",
+          "summary": "Deux tas de cendres et d’ossements tombés des puits de la chapelle."
+        }
+      ],
+      "notes": [
+        {
+          "id": "compte",
+          "text": "**Un personnage qui prend le temps de compter les crânes en trouve trente et un.** Le culte tue depuis cinq ans, à raison de six par an. Ce chiffre vaut mieux qu’un discours."
+        },
+        {
+          "id": "acces",
+          "text": "Les quatre puits de [[r:b7|la chapelle]] débouchent ici : **on peut y monter** (9 m, Athlétisme DD 15 avec une corde), ou y tomber."
+        }
+      ],
+      "connections": [
+        {
+          "to": "b12",
+          "via": "Tunnel vers le nord"
+        },
+        {
+          "to": "b8",
+          "via": "Escalier vers le caveau"
+        },
+        {
+          "to": "b7",
+          "via": "Les puits, 9 m plus haut"
+        }
+      ]
+    }
+  ],
+  "monsters": [],
+  "trackers": [
+    {
+      "id": "rituel",
+      "name": "Le rituel de Gaernoo",
+      "icon": "skull",
+      "only": "enhanced",
+      "text": "Le culte a Durnan depuis la nuit dernière. **Un palier par tranche de six heures**, et un palier par repos long. Annonce-le toujours par un détail du monde, jamais par un chiffre : une cloche, une lumière qui change, un cultiste pressé.",
+      "steps": [
+        {
+          "label": "La nuit même",
+          "text": "Durnan est vivant, enfermé en [[r:b11|B11]] avec les autres. **Rien n’est joué.**"
+        },
+        {
+          "label": "Le premier jour",
+          "text": "On l’a interrogé. Il n’a rien dit. Les cultistes de [[r:g5|G5]] commencent à parler de « celui d’en haut »."
+        },
+        {
+          "label": "Le deuxième jour",
+          "text": "Viallis remonte du temple pour vérifier quelque chose au [[r:g3|hameau]]. **Le groupe peut le croiser sans le savoir.**"
+        },
+        {
+          "label": "La préparation",
+          "text": "Durnan est sorti de la cellule et attaché à l’autel de [[r:b7|B7]]. **Cinq prisonniers seulement dans la cellule sud.**"
+        },
+        {
+          "label": "Le rituel commence",
+          "text": "Deux victimes de la caravane sont sacrifiées les premières. **C’est la scène décrite à l’arrivée dans la chapelle.** Durnan est le suivant."
+        },
+        {
+          "label": "Trop tard",
+          "text": "**Durnan est mort et le puits est ouvert.** Le culte descend. L’aventure ne s’arrête pas — elle change : il faut les rattraper en bas, et il faudra dire à Bonnie ce qui s’est passé."
+        }
+      ]
+    }
+  ]
+}

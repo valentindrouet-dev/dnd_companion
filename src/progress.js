@@ -3,7 +3,7 @@
 
 import { store, key } from './store.js';
 import { elemId, asTextItem } from './dom.js';
-import { visibleItems } from './variant.js';
+import { visibleItems, visibleRooms } from './variant.js';
 
 const textItems = (x) => visibleItems(x, (it, i) => asTextItem(it, i).id);
 
@@ -71,14 +71,14 @@ export function cycleRoomStatus(advId, room) {
 /** Répartition des salles d'une aventure par statut. */
 export function statusTally(adv) {
   const tally = { inexploree: 0, encours: 0, fait: 0 };
-  for (const r of adv.rooms) tally[roomStatus(adv.id, r).key]++;
+  for (const r of visibleRooms(adv)) tally[roomStatus(adv.id, r).key]++;
   return tally;
 }
 
 /** Progression cumulée d'une aventure. */
 export function adventureProgress(adv) {
   let done = 0, total = 0, rooms = 0;
-  for (const r of adv.rooms) {
+  for (const r of visibleRooms(adv)) {
     const p = roomProgress(adv.id, r);
     done += p.forced ? p.total : p.done;
     total += p.total;

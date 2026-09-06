@@ -893,5 +893,215 @@
       "tactics": "Embuscade depuis un plafond ou un éboulis. Tentacules puis bec sur la même cible.",
       "weakness": "Résiste aux armes ordinaires : privilégier la magie ou les armes magiques."
     }
+  },
+  {
+    "id": "grell",
+    "name": "Grell",
+    "nameEn": "Grell",
+    "source": "Monster Manual 2024, p. 157",
+    "size": "M", "type": "Aberration", "alignment": "Neutre mauvais",
+    "cr": "3", "xp": 700, "pb": 2,
+    "ac": 12, "hp": 55, "hpFormula": "10d8 + 10", "speed": "3 m, vol 9 m (vol stationnaire)",
+    "abilities": { "str": 15, "dex": 14, "con": 13, "int": 12, "wis": 11, "cha": 9 },
+    "skills": "Perception +4, Discrétion +6",
+    "immunities": "foudre ; aveuglé, à terre",
+    "senses": "vision aveugle 18 m (aveugle au-delà) ; Perception passive 14",
+    "languages": "profond",
+    "traits": [
+      { "name": "Enlèvement", "text": "Le grell n’a pas besoin de mouvement supplémentaire pour déplacer une créature qu’il agrippe : il l’emporte en volant." }
+    ],
+    "actions": [
+      { "name": "Attaques multiples", "text": "Une attaque de *Bec* et une de *Tentacules paralysants*." },
+      { "name": "Bec", "text": "Jet d’attaque au corps à corps : +4, allonge 1,50 m. Touché : 11 (2d8 + 2) dégâts perforants." },
+      { "name": "Tentacules paralysants", "text": "Jet d’attaque au corps à corps : +4, allonge 3 m. Touché : 7 (1d6 + 4) dégâts perforants, et la cible est agrippée (DD 12 pour s’échapper). Jet de sauvegarde de Constitution DD 12 : échec, la cible est **empoisonnée 1 minute** et **paralysée** tant qu’elle l’est (nouveau jet à la fin de chacun de ses tours)." }
+    ],
+    "summary": {
+      "style": "Cerveau à tentacules qui flotte en silence dans le noir, agrippe et emporte.",
+      "intent": "Attraper une proie isolée et l’emmener ailleurs pour la manger tranquillement.",
+      "tactics": "Attend au plafond hors de portée de la lumière. Paralyse la cible la plus légère et **s’envole avec elle** : sépare le groupe plus qu’il ne le blesse.",
+      "flee": "Lâche sa proie et remonte hors d’allonge dès qu’il tombe sous 20 PV.",
+      "weakness": "Aveugle au-delà de 18 m et **immunisé à la foudre seulement** : le feu, le froid et le radiant passent. Une créature volante ou une arme d’hast le ramène au sol."
+    }
+  },
+  {
+    "id": "cult-fanatic",
+    "name": "Fanatique de secte",
+    "nameEn": "Cultist Fanatic",
+    "source": "Monster Manual 2024, p. 85",
+    "size": "M", "type": "Humanoïde", "alignment": "Neutre mauvais",
+    "cr": "2", "xp": 450, "pb": 2,
+    "ac": 13, "acNote": "armure de cuir", "hp": 44, "hpFormula": "8d8 + 8", "speed": "9 m",
+    "abilities": { "str": 11, "dex": 14, "con": 12, "int": 13, "wis": 16, "cha": 13 },
+    "saves": "Sag +5",
+    "skills": "Tromperie +3, Persuasion +3, Religion +2",
+    "senses": "Perception passive 12",
+    "languages": "commun",
+    "actions": [
+      { "name": "Attaques multiples", "text": "Deux attaques de *Dague brûlante*." },
+      { "name": "Dague brûlante", "text": "Jet d’attaque au corps à corps ou à distance : +4, allonge 1,50 m ou portée 6/18 m. Touché : 4 (1d4 + 2) dégâts perforants, plus 7 (2d6) dégâts nécrotiques." },
+      { "name": "Incantation", "text": "Sagesse, DD 13. **À volonté :** *lumière*, *thaumaturgie*. **2/jour :** *immobilisation de personne*. **1/jour :** *injonction*." }
+    ],
+    "summary": {
+      "style": "Prêcheur armé d’une dague : bloque un combattant et laisse les autres l’achever.",
+      "intent": "Servir. Le fanatique ne négocie pas et ne fuit pas.",
+      "tactics": "**Immobilisation de personne sur le corps à corps le plus dangereux**, puis les brutes frappent avec avantage et coup critique automatique à 1,50 m. *Injonction* « Fuyez » sur un lanceur de sorts.",
+      "flee": "Jamais. Se rend seulement si son maître le lui ordonne.",
+      "weakness": "44 PV, CA 13, aucune protection contre les zones. Deux fanatiques concentrent leurs immobilisations : les tuer d’abord raccourcit tout le combat."
+    }
+  },
+  {
+    "id": "warrior-veteran",
+    "name": "Vétéran",
+    "nameEn": "Warrior Veteran",
+    "source": "Monster Manual 2024, p. 320",
+    "size": "M", "type": "Humanoïde", "alignment": "Neutre",
+    "cr": "3", "xp": 700, "pb": 2,
+    "ac": 17, "acNote": "harnois de mailles", "hp": 65, "hpFormula": "10d8 + 20", "speed": "9 m",
+    "abilities": { "str": 16, "dex": 13, "con": 14, "int": 10, "wis": 11, "cha": 10 },
+    "senses": "Perception passive 10",
+    "languages": "commun",
+    "actions": [
+      { "name": "Attaques multiples", "text": "Deux attaques d’*Épée à deux mains* ou d’*Arbalète lourde*." },
+      { "name": "Épée à deux mains", "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 10 (2d6 + 3) dégâts tranchants." },
+      { "name": "Arbalète lourde", "text": "Jet d’attaque à distance : +3, portée 30/120 m. Touché : 12 (2d10 + 1) dégâts perforants." }
+    ],
+    "reactions": [
+      { "name": "Parade", "text": "Quand il est touché par une attaque au corps à corps en tenant une arme : +2 à sa CA contre cette attaque, ce qui peut la faire rater." }
+    ],
+    "summary": {
+      "style": "Soldat de métier : 65 PV, CA 17, deux coups à 10 dégâts par tour.",
+      "intent": "Faire son travail de garde du corps, puis rentrer.",
+      "tactics": "Se place entre l’attaquant et son protégé. Parade la première grosse attaque de chaque tour.",
+      "flee": "**Mercenaire sous contrat** : se rend quand plus de la moitié de l’escorte est à terre. Il ne meurt pas pour Faerl.",
+      "weakness": "Aucune résistance, aucune riposte à distance rapide. Le contourner pour atteindre son protégé fonctionne : il n’a qu’une réaction."
+    }
+  },
+  {
+    "id": "knight",
+    "name": "Chevalier",
+    "nameEn": "Knight",
+    "source": "Monster Manual 2024, p. 184",
+    "size": "M", "type": "Humanoïde", "alignment": "Neutre",
+    "cr": "3", "xp": 700, "pb": 2,
+    "ac": 18, "acNote": "harnois", "hp": 52, "hpFormula": "8d8 + 16", "speed": "9 m",
+    "abilities": { "str": 16, "dex": 11, "con": 14, "int": 11, "wis": 11, "cha": 15 },
+    "saves": "Con +4, Sag +2",
+    "immunities": "terrorisé",
+    "senses": "Perception passive 10",
+    "languages": "commun",
+    "actions": [
+      { "name": "Attaques multiples", "text": "Deux attaques d’*Épée à deux mains* ou d’*Arbalète lourde*." },
+      { "name": "Épée à deux mains", "text": "Jet d’attaque au corps à corps : +5, allonge 1,50 m. Touché : 10 (2d6 + 3) dégâts tranchants, plus 4 (1d8) dégâts radiants." },
+      { "name": "Arbalète lourde", "text": "Jet d’attaque à distance : +2, portée 30/120 m. Touché : 11 (2d10) dégâts perforants, plus 4 (1d8) dégâts radiants." }
+    ],
+    "reactions": [
+      { "name": "Parade", "text": "Quand il est touché par une attaque au corps à corps en tenant une arme : +2 à sa CA contre cette attaque." }
+    ],
+    "summary": {
+      "style": "Lame consacrée : CA 18, dégâts radiants, insensible à la peur.",
+      "intent": "Protéger les faibles, quel qu’en soit le prix.",
+      "tactics": "Charge la menace la plus visible et tient la ligne. Ne recule pas d’une case tant qu’un innocent est derrière lui.",
+      "flee": "Jamais tant qu’un civil est en danger.",
+      "weakness": "52 PV seulement sous cette CA : une seule bonne salve de sorts le met à terre."
+    }
+  },
+  {
+    "id": "noble",
+    "name": "Noble",
+    "nameEn": "Noble",
+    "source": "Monster Manual 2024, p. 227",
+    "size": "M", "type": "Humanoïde", "alignment": "Neutre",
+    "cr": "1/8", "xp": 25, "pb": 2,
+    "ac": 15, "acNote": "cuirasse", "hp": 9, "hpFormula": "2d8", "speed": "9 m",
+    "abilities": { "str": 11, "dex": 12, "con": 11, "int": 12, "wis": 14, "cha": 16 },
+    "skills": "Tromperie +5, Perspicacité +4, Persuasion +5",
+    "senses": "Perception passive 12",
+    "languages": "commun et deux autres langues",
+    "actions": [
+      { "name": "Rapière", "text": "Jet d’attaque au corps à corps : +3, allonge 1,50 m. Touché : 5 (1d8 + 1) dégâts perforants." }
+    ],
+    "reactions": [
+      { "name": "Parade", "text": "Quand il est touché par une attaque au corps à corps en tenant une arme : +2 à sa CA contre cette attaque." }
+    ],
+    "summary": {
+      "style": "Ne se bat pas : il paie des gens pour ça. Tromperie et Persuasion à +5.",
+      "intent": "Rester en vie et garder son rang.",
+      "tactics": "Se met à couvert derrière ses gardes du corps dès le premier round et cherche la sortie.",
+      "flee": "Immédiatement, et sans un regard pour son escorte.",
+      "weakness": "**9 PV.** Un seul coup porté le met hors combat. Toute sa dangerosité est sociale."
+    }
+  },
+  {
+    "id": "commoner",
+    "name": "Roturier",
+    "nameEn": "Commoner",
+    "source": "Monster Manual 2024, p. 77",
+    "size": "M", "type": "Humanoïde", "alignment": "Neutre",
+    "cr": "0", "xp": 10, "pb": 2,
+    "ac": 10, "hp": 4, "hpFormula": "1d8", "speed": "9 m",
+    "abilities": { "str": 10, "dex": 10, "con": 10, "int": 10, "wis": 10, "cha": 10 },
+    "senses": "Perception passive 10",
+    "languages": "commun",
+    "traits": [
+      { "name": "Métier", "text": "Maîtrise une compétence au choix du MJ, avec avantage à tous ses tests utilisant cette compétence." }
+    ],
+    "actions": [
+      { "name": "Gourdin", "text": "Jet d’attaque au corps à corps : +2, allonge 1,50 m. Touché : 2 (1d4) dégâts contondants." }
+    ],
+    "summary": {
+      "style": "Un habitant. Il ne se bat pas, il s’enfuit ou il meurt.",
+      "intent": "Rentrer chez lui.",
+      "tactics": "Aucune. En combat, il court vers la sortie la plus proche.",
+      "flee": "Au premier coup porté, dans n’importe quelle direction.",
+      "weakness": "4 PV. À la table, un roturier sert de **compte à rebours** : sa mort est le prix d’une hésitation."
+    }
+  },
+  {
+    "id": "guard",
+    "name": "Garde",
+    "nameEn": "Guard",
+    "source": "Monster Manual 2024, p. 162",
+    "size": "M", "type": "Humanoïde", "alignment": "Neutre",
+    "cr": "1/8", "xp": 25, "pb": 2,
+    "ac": 15, "acNote": "chemise de mailles et bouclier", "hp": 11, "hpFormula": "2d8 + 2", "speed": "9 m",
+    "abilities": { "str": 13, "dex": 12, "con": 12, "int": 10, "wis": 11, "cha": 10 },
+    "skills": "Perception +2",
+    "senses": "Perception passive 12",
+    "languages": "commun",
+    "actions": [
+      { "name": "Lance", "text": "Jet d’attaque au corps à corps ou à distance : +3, allonge 1,50 m ou portée 6/18 m. Touché : 4 (1d6 + 1) dégâts perforants, ou 5 (1d8 + 1) à deux mains au corps à corps." }
+    ],
+    "summary": {
+      "style": "Le Guet. Nombreux, disciplinés, et pas là pour mourir.",
+      "intent": "Faire cesser le trouble et emmener tout le monde au poste.",
+      "tactics": "Somme d’abord, encercle ensuite. Le Guet de Waterdeep arrive **par escouades de six** et siffle pour en appeler d’autres.",
+      "flee": "Se replie et attend les renforts plutôt que de perdre des hommes.",
+      "weakness": "11 PV. Le danger n’est pas le garde, c’est **la ville qui vient avec lui** : frapper le Guet à Waterdeep, c’est se mettre la cité à dos."
+    }
+  },
+  {
+    "id": "acolyte",
+    "name": "Acolyte",
+    "nameEn": "Priest Acolyte",
+    "source": "Monster Manual 2024, p. 247",
+    "size": "M", "type": "Humanoïde (clerc)", "alignment": "Neutre",
+    "cr": "1/4", "xp": 50, "pb": 2,
+    "ac": 13, "acNote": "chemise de mailles", "hp": 11, "hpFormula": "2d8 + 2", "speed": "9 m",
+    "abilities": { "str": 14, "dex": 10, "con": 12, "int": 10, "wis": 14, "cha": 11 },
+    "skills": "Médecine +4, Religion +2",
+    "senses": "Perception passive 12",
+    "languages": "commun",
+    "actions": [
+      { "name": "Masse d’armes", "text": "Jet d’attaque au corps à corps : +4, allonge 1,50 m. Touché : 5 (1d6 + 2) dégâts contondants, plus 2 (1d4) dégâts radiants." },
+      { "name": "Flamme radiante", "text": "Jet d’attaque à distance : +4, portée 15 m. Touché : 7 (2d6) dégâts radiants." },
+      { "name": "Incantation", "text": "Sagesse, DD 12. **À volonté :** *thaumaturgie*. **1/jour :** *bénédiction*, *soin des blessures*." }
+    ],
+    "summary": {
+      "style": "Petit clerc utile : soigne, bénit, et cogne mollement.",
+      "intent": "Servir son temple et tenir debout ceux qui comptent.",
+      "tactics": "Reste derrière, *bénédiction* sur les combattants, puis *soin des blessures* sur celui qui tombe.",
+      "flee": "Recule vers un lieu consacré et appelle à l’aide.",
+      "weakness": "11 PV et CA 13. Le premier à tuer si le camp d’en face doit durer."
+    }
   }
 ]

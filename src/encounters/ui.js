@@ -8,6 +8,7 @@ import { toast } from '../ui/toast.js';
 import { allMonsters, getMonster } from '../data.js';
 import { openMonsterPopup } from '../components/monster.js';
 import { generateEncounter, budgetFor, DIFFICULTIES } from './generator.js';
+import { visibleRooms } from '../variant.js';
 
 let level = 6;
 let party = 4;
@@ -18,7 +19,7 @@ let last = null;
 /** Créatures effectivement utilisées par une aventure. */
 function adventurePool(adv) {
   const ids = new Set();
-  for (const r of adv?.rooms || []) {
+  for (const r of visibleRooms(adv)) {
     for (const e of r.enemies || []) if (e.monster) ids.add(e.monster);
     for (const n of r.npcs || []) if (n.monster) ids.add(n.monster);
   }

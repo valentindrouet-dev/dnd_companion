@@ -788,6 +788,110 @@
           35.85
         ]
       }
+    },
+    "yellowcrest-greenfast": {
+      "complete": "assets/maps/yellowcrest-greenfast/complete.jpg",
+      "rooms": {
+        "g1": "assets/maps/yellowcrest-greenfast/g1.jpg",
+        "g2": "assets/maps/yellowcrest-greenfast/g2.jpg",
+        "g3": "assets/maps/yellowcrest-greenfast/g3.jpg",
+        "g4": "assets/maps/yellowcrest-greenfast/g4.jpg",
+        "g5": "assets/maps/yellowcrest-greenfast/g5.jpg"
+      },
+      "spots": {
+        "g1": [
+          60.53,
+          37.32
+        ],
+        "g2": [
+          71.66,
+          49.86
+        ],
+        "g3": [
+          37.65,
+          68.66
+        ],
+        "g4": [
+          19.43,
+          47.01
+        ],
+        "g5": [
+          6.48,
+          27.92
+        ]
+      }
+    },
+    "yellowcrest-temple": {
+      "complete": "assets/maps/yellowcrest-temple/complete.jpg",
+      "rooms": {
+        "b1": "assets/maps/yellowcrest-temple/b1.jpg",
+        "b2": "assets/maps/yellowcrest-temple/b2.jpg",
+        "b3": "assets/maps/yellowcrest-temple/b3.jpg",
+        "b4": "assets/maps/yellowcrest-temple/b4.jpg",
+        "b5": "assets/maps/yellowcrest-temple/b5.jpg",
+        "b6": "assets/maps/yellowcrest-temple/b6.jpg",
+        "b7": "assets/maps/yellowcrest-temple/b7.jpg",
+        "b8": "assets/maps/yellowcrest-temple/b8.jpg",
+        "b9": "assets/maps/yellowcrest-temple/b9.jpg",
+        "b10": "assets/maps/yellowcrest-temple/b10.jpg",
+        "b11": "assets/maps/yellowcrest-temple/b11.jpg",
+        "b12": "assets/maps/yellowcrest-temple/b12.jpg",
+        "b13": "assets/maps/yellowcrest-temple/b13.jpg"
+      },
+      "spots": {
+        "b1": [
+          22.66,
+          28.81
+        ],
+        "b2": [
+          8.75,
+          33.73
+        ],
+        "b3": [
+          42.94,
+          33.73
+        ],
+        "b4": [
+          28.63,
+          43.73
+        ],
+        "b5": [
+          7.55,
+          43.88
+        ],
+        "b6": [
+          25.84,
+          58.81
+        ],
+        "b7": [
+          24.85,
+          69.7
+        ],
+        "b8": [
+          39.96,
+          83.13
+        ],
+        "b9": [
+          7.55,
+          83.13
+        ],
+        "b10": [
+          77.73,
+          26.42
+        ],
+        "b11": [
+          65.01,
+          40.45
+        ],
+        "b12": [
+          60.64,
+          49.85
+        ],
+        "b13": [
+          71.17,
+          67.46
+        ]
+      }
     }
   },
   "files": [
@@ -947,6 +1051,26 @@
     "assets/maps/strate-3/8c.jpg",
     "assets/maps/strate-3/9a.jpg",
     "assets/maps/strate-3/9b.jpg",
-    "assets/maps/strate-3/complete.jpg"
+    "assets/maps/strate-3/complete.jpg",
+    "assets/maps/yellowcrest-greenfast/complete.jpg",
+    "assets/maps/yellowcrest-greenfast/g1.jpg",
+    "assets/maps/yellowcrest-greenfast/g2.jpg",
+    "assets/maps/yellowcrest-greenfast/g3.jpg",
+    "assets/maps/yellowcrest-greenfast/g4.jpg",
+    "assets/maps/yellowcrest-greenfast/g5.jpg",
+    "assets/maps/yellowcrest-temple/b1.jpg",
+    "assets/maps/yellowcrest-temple/b10.jpg",
+    "assets/maps/yellowcrest-temple/b11.jpg",
+    "assets/maps/yellowcrest-temple/b12.jpg",
+    "assets/maps/yellowcrest-temple/b13.jpg",
+    "assets/maps/yellowcrest-temple/b2.jpg",
+    "assets/maps/yellowcrest-temple/b3.jpg",
+    "assets/maps/yellowcrest-temple/b4.jpg",
+    "assets/maps/yellowcrest-temple/b5.jpg",
+    "assets/maps/yellowcrest-temple/b6.jpg",
+    "assets/maps/yellowcrest-temple/b7.jpg",
+    "assets/maps/yellowcrest-temple/b8.jpg",
+    "assets/maps/yellowcrest-temple/b9.jpg",
+    "assets/maps/yellowcrest-temple/complete.jpg"
   ]
 }
