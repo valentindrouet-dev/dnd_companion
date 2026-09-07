@@ -130,6 +130,25 @@ function checkAdventure(adv, meta) {
   }
   for (const n of adv.npcs || []) if (n.monster && !hasMonster(n.monster)) err(`${where} : PNJ « ${n.name} » → monstre inconnu « ${n.monster} »`);
 
+  // Vue d'ensemble : cheminement, enjeux, fins, ouvertures
+  const OV = ['steps', 'stakes', 'endings', 'next'];
+  for (const [groupe, liste] of Object.entries(adv.overview || {})) {
+    if (!OV.includes(groupe)) warn(`${where} : overview.${groupe} inconnu (attendu : ${OV.join(', ')})`);
+    if (!Array.isArray(liste)) { err(`${where} : overview.${groupe} doit être un tableau`); continue; }
+    const vus = new Set();
+    liste.forEach((e, i) => {
+      const w = `${where} overview.${groupe}[${i}]`;
+      if (!e.id) return err(`${w} : id manquant`);
+      if (vus.has(e.id)) err(`${w} : id en double « ${e.id} »`);
+      vus.add(e.id);
+      if (!e.title) err(`${w} : title manquant`);
+      if (!e.text) warn(`${w} : pas de texte`);
+      for (const rid of e.rooms || []) {
+        if (!roomIds.has(rid)) err(`${w} : salle inconnue « ${rid} »`);
+      }
+    });
+  }
+
   // Références [[m:…]] / [[r:…]] dans tous les textes
   walkStrings(adv, (s, path) => {
     for (const m of s.matchAll(/\[\[(m|r|monstre|salle):([^\]|]+)(?:\|[^\]]*)?\]\]/g)) {

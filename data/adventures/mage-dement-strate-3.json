@@ -8,6 +8,171 @@
     "pages": "43-58"
   },
   "summary": "Conçue pour **quatre personnages de niveau 7**, qui devraient atteindre le niveau 8 en la terminant. La **Sargauth**, rivière souterraine aux eaux lentes, traverse la strate du nord-est au sud-ouest et mène à **Skullport**. Sur ses berges s’étendent les ruines naines de **Stromkuhldur**, disputées par deux factions au bord de la guerre : la **maison Auvryndar**, menée par la prêtresse drow T’rissa qui a transformé un temple de Dumathoin en couveuse à araignées ([[r:6|zone 6]]), et la **Légion d’Azrok**, dont le seigneur de guerre hobgobelin est aveugle depuis qu’on lui a volé sa dague de vision aveugle ([[r:21n|zone 21]]). Trois **guenaudes aquatiques** ([[r:10c|zone 10]]) travaillent pour Halaster : elles veulent les drows morts. Et un **flagelleur mental** ([[r:21g|zone 21g]]) implante des dévoreurs d’intellect dans les crânes gobelinoïdes pour le compte de Xanathar.",
+  "overview": {
+    "steps": [
+      {
+        "id": "catacombes",
+        "title": "Entrer par les catacombes",
+        "rooms": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "text": "L’escalier de la strate 2 débouche dans l’ancien complexe funéraire de **Dumathoin**, gardé sur son flanc est par des tunnels entoilés. C’est calme, et c’est le seul moment de la strate qui le sera."
+      },
+      {
+        "id": "drows",
+        "title": "Buter sur la maison Auvryndar",
+        "rooms": [
+          "5a",
+          "6",
+          "7c",
+          "8b"
+        ],
+        "text": "**T’rissa Auvryndar** a transformé le temple nain en **couveuse à araignées géantes**, avec des humanoïdes vivants comme incubateurs. Les quartiers voisins sont devenus des salles de torture, et les ratés de l’Épreuve de Lolth sont bannis en driders dans les tunnels des lamentations."
+      },
+      {
+        "id": "riviere",
+        "title": "Prendre la rivière",
+        "rooms": [
+          "9a",
+          "10c",
+          "12",
+          "13a",
+          "13b"
+        ],
+        "text": "La **Sargauth** est la vraie route de la strate : radeaux drows, gondole d’Halaster, courant faible qu’on remonte à la perche. Sur ses berges, **trois guenaudes aquatiques** se présentent en collectionneuses de coquillages. Elles mentent, et elles vont proposer un marché."
+      },
+      {
+        "id": "legion",
+        "title": "Découvrir que la Légion s’effondre",
+        "rooms": [
+          "21",
+          "21n",
+          "21g"
+        ],
+        "text": "Les gobelinoïdes d’**Azrok** tiennent Stromkuhldur depuis trente ans. Le seigneur de guerre est **né aveugle** et voyait par une dague magique qu’on lui a volée : il cède du terrain sans se battre, ses soldats désertent, et un **flagelleur mental** de Xanathar les récolte un crâne à la fois."
+      },
+      {
+        "id": "dague",
+        "title": "La quête de la dague",
+        "rooms": [
+          "21n",
+          "18",
+          "16b"
+        ],
+        "text": "**Lurkana** paie 1 000 po — 1 500 si on négocie — pour retrouver la dague de son mari. La piste passe par un duergar abandonné des siens ([[r:18|18]]) et finit derrière une porte naine, **sous trois mètres d’eau** ([[r:16b|16b]])."
+      },
+      {
+        "id": "guerre",
+        "title": "Faire pencher la guerre",
+        "rooms": [
+          "17a",
+          "20",
+          "10e"
+        ],
+        "text": "Drows et gobelinoïdes sont au bord de l’affrontement, et **celui qui tient la caverne contestée tient l’accès à la strate 4**. En Version Améliorée, les guenaudes ouvrent une troisième voie : **noyer la ville des drows** plutôt que la prendre."
+      },
+      {
+        "id": "skullport",
+        "title": "Descendre vers Skullport",
+        "rooms": [
+          "22",
+          "23a"
+        ],
+        "text": "En aval de la rivière, au sud-ouest. Les sentinelles de la Légion regardent dans cette direction avec inquiétude : c’est de là que vient Xanathar, et c’est là que va la suite."
+      }
+    ],
+    "stakes": [
+      {
+        "id": "dague",
+        "title": "La dague de vision aveugle",
+        "rooms": [
+          "16b"
+        ],
+        "tone": "accent",
+        "text": "Le seul objet de la strate dont **trois factions** veulent la possession. La rendre à Azrok stabilise la Légion ; la garder l’achève ; la vendre aux drows accélère la guerre."
+      },
+      {
+        "id": "maree",
+        "only": "enhanced",
+        "title": "La Marée d’Halaster",
+        "rooms": [
+          "10e",
+          "14c"
+        ],
+        "tone": "danger",
+        "text": "Six paliers, un toutes les deux heures. Au sixième, **la moitié de la zone 20 est sous trois mètres d’eau** — avec ses habitants. On l’arrête en détruisant le chaudron, en tuant les trois sœurs, ou en rouvrant les écluses naines."
+      },
+      {
+        "id": "prisonniers",
+        "title": "Les gens qu’on enlève en haut",
+        "rooms": [
+          "6",
+          "10g"
+        ],
+        "text": "Les drows prennent des habitants de Waterdeep : ceux qui ne nourrissent pas les araignées sont offerts à Lolth. Les guenaudes en gardent aussi, **vivants, pour les manger**. Aucun n’est un objectif imposé — et c’est précisément ce qui rend le choix intéressant."
+      },
+      {
+        "id": "skullport",
+        "title": "Skullport mal gardée",
+        "tone": "info",
+        "text": "Les drows l’ont infiltrée et le savent. **Après Skullport, plus rien ne les sépare de la surface.** Les guenaudes le disent au groupe pour le mettre au travail — mais c’est vrai."
+      }
+    ],
+    "endings": [
+      {
+        "id": "drows",
+        "title": "Les drows l’emportent",
+        "tone": "danger",
+        "text": "T’rissa sécurise la strate et lance l’assaut sur Skullport. Sa sœur ouvre un front en strate 4, sa mère commande depuis la strate 10 : **le groupe a aidé une invasion**, ou n’a rien fait pour l’empêcher."
+      },
+      {
+        "id": "legion",
+        "title": "La Légion tient",
+        "tone": "ok",
+        "text": "Dague rendue, Ulquess démasqué, Azrok debout : les gobelinoïdes redeviennent une force. **Ils s’en souviennent** — l’Emprise devient une base sûre pour redescendre."
+      },
+      {
+        "id": "personne",
+        "title": "Les deux camps saignés",
+        "tone": "info",
+        "text": "Le groupe casse tout et repart. Les guenaudes obtiennent ce qu’elles voulaient, la strate se vide, et **Halaster est le seul à y gagner quelque chose**."
+      },
+      {
+        "id": "noyade",
+        "only": "enhanced",
+        "title": "La ville noyée",
+        "tone": "danger",
+        "text": "La Marée va au bout. Zone 20 sous l’eau, l’aboleth remonte de sa fosse dans les rues inondées. **Les guenaudes remercient poliment.**"
+      }
+    ],
+    "next": [
+      {
+        "id": "skullport",
+        "title": "Skullport",
+        "tone": "accent",
+        "text": "En aval, au sud-ouest. Marché d’esclaves, contrebande, fief de Xanathar — et la **Chope Noire**, où les voleurs de la dague ont bu avant de descendre plus bas."
+      },
+      {
+        "id": "strate4",
+        "title": "La strate 4",
+        "rooms": [
+          "17a",
+          "15b"
+        ],
+        "tone": "info",
+        "text": "Par la caverne contestée, ou par le portail immergé de [[r:15b|15b]] pour la strate 5. **Melith Auvryndar y ouvre déjà un second front.**"
+      },
+      {
+        "id": "auvryndar",
+        "title": "La maison Auvryndar",
+        "tone": "danger",
+        "text": "Trois générations, trois strates : **T’rissa** ici, **Melith** en 4, **Vlonwelv** au Défi de Muiral en strate 10. Ce qu’on fait ici se paie ou se récolte beaucoup plus bas."
+      }
+    ]
+  },
   "intro": [],
   "notes": [
     {

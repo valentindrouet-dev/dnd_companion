@@ -912,6 +912,41 @@ hr.sep { border: 0; border-top: 1px solid var(--border); margin: 16px 0; }
   border-top: 1px solid var(--border);
   font-size: 0.92em;
 }
+/* ---------- Vue d'ensemble : cheminement, enjeux, fins ---------- */
+.ov-steps { display: flex; flex-direction: column; gap: 2px; }
+.ov-step { display: flex; gap: 12px; padding: 10px 0; border-top: 1px solid var(--border); }
+.ov-step:first-child { border-top: none; }
+.ov-num {
+  flex: none;
+  width: 26px; height: 26px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  font-weight: 800; font-size: 0.82em;
+}
+.ov-body { flex: 1; min-width: 0; }
+.ov-title { font-weight: 700; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.ov-text { color: var(--text-2); margin-top: 3px; }
+.ov-rooms { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; }
+.pill.ov-room { cursor: pointer; font-weight: 700; }
+.pill.ov-room:hover { border-color: var(--accent); color: var(--accent); }
+
+.ov-list { display: flex; flex-direction: column; gap: 8px; }
+.ov-item {
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--border);
+}
+.ov-item.ok { border-left-color: var(--ok); }
+.ov-item.danger { border-left-color: var(--danger); }
+.ov-item.accent { border-left-color: var(--accent); }
+.ov-item.info { border-left-color: var(--info); }
+.ov-item .ov-title .icon { color: var(--muted); }
+
 /* ---------- Tableaux du balisage ---------- */
 .mk-tablebox { overflow-x: auto; margin: 10px 0; -webkit-overflow-scrolling: touch; }
 .mk-table {

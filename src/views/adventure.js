@@ -17,6 +17,7 @@ import { slug } from '../util.js';
 import { adventureProgress, roomStatus, statusTally, ROOM_STATUSES } from '../progress.js';
 import { openMapPopup, fullMap } from '../components/map.js';
 import { openEncounterPopup } from '../encounters/ui.js';
+import { overviewSections } from '../components/overview.js';
 
 export async function adventureView(route) {
   const adv = await loadAdventure(route.adv);
@@ -52,6 +53,8 @@ export async function adventureView(route) {
       icon('forward', 'card-arrow'))), { count: todos.length }) : null,
 
     adv.summary ? section('Synopsis', textBlock({ key: K('summary'), text: adv.summary, item: { summary: adv.tagline }, kind: 'note', hideLabel: 'Vu' })) : null,
+
+    overviewSections(adv).map((s) => section(s.title, s.node, { count: s.count })),
 
     list(adv.intro).length ? section('Introduction', list(adv.intro).map((t) =>
       textBlock({ key: K('intro', t.id), text: t.text, title: t.title, item: t, kind: 'read', hideLabel: 'Lu' }))) : null,

@@ -8,6 +8,150 @@
     "pages": "27-42"
   },
   "summary": "Conçue pour **quatre personnages de niveau 6** ; ils devraient atteindre le niveau 7 en la terminant. Une tribu de gobelins (Os-de-Rouille) a transformé une ancienne salle du trône en **bazar** ([[r:1d|zone 1]]). La **Guilde de Xanathar** veut fermer le marché et piller la strate depuis deux postes de garde : celui de Shunn « Yeux d’araignée » au nord ([[r:9b|zone 9]]) et celui de Nadia l’Inflexible au sud ([[r:20b|zone 20]]). Le mage drow **Rizzeryl** et ses huit rats-garous harcèlent la Guilde depuis leur base ([[r:14a|zone 14]]) ; ils ont volé une **clef de pierre** que Shunn veut récupérer. Les anciens apprentis d’Halaster, devenus babéliens et nothics, hantent la mine ([[r:13a|zone 13]]) sous la coupe d’un mezzoloth. Trois membres des **Fiers compagnons de Daggerford** sont éparpillés dans la strate.",
+  "overview": {
+    "steps": [
+      {
+        "id": "arrivee",
+        "title": "Arriver par le bazar",
+        "rooms": [
+          "1a",
+          "1d",
+          "1e"
+        ],
+        "text": "On descend de la strate 1 dans une ancienne salle du trône devenue **marché gobelin** : quarante gobelins, moitié gardes moitié marchands, et **Yek le Grand** qui règne dessus. Personne n’attaque tant qu’on achète. C’est le seul endroit neutre de la strate — et le meilleur poste d’écoute."
+      },
+      {
+        "id": "factions",
+        "title": "Comprendre à trois",
+        "rooms": [
+          "9b",
+          "20b",
+          "14a"
+        ],
+        "text": "Trois forces se disputent l’étage : la **Guilde de Xanathar** depuis deux postes de garde ([[r:9b|9b]] au nord, [[r:20b|20b]] au sud), le **Zhentarim** représenté par le mage drow **Rizzeryl** ([[r:14a|14a]]), et les gobelins au milieu qui voudraient qu’on les laisse tranquilles. **Chacun paiera pour qu’on nuise aux deux autres.**"
+      },
+      {
+        "id": "clef",
+        "title": "La clef de pierre",
+        "rooms": [
+          "14a",
+          "9b"
+        ],
+        "text": "Rizzeryl a volé aux hommes de Xanathar une **clef naine de 5 kg** ; Shunn offre 50 po pour la récupérer. Rizzeryl croit qu’elle ouvre une chambre-forte melairkyn : **elle ouvre en réalité un portail entre les strates 6 et 8.** Il la cède contre la vie sauve."
+      },
+      {
+        "id": "apprentis",
+        "title": "Les apprentis mutants",
+        "rooms": [
+          "13a",
+          "13e",
+          "13g"
+        ],
+        "text": "Halaster a laissé la strate à ses élèves ; la Toile les a rongés. Ce sont maintenant des **babéliens et des nothics** dans l’ancienne mine de mithral. **Nettoyer l’autel de Dumathoin** ([[r:13a|13a]]) révèle les sept portes secrètes de l’étage pendant 24 heures : c’est le meilleur coup de la strate."
+      },
+      {
+        "id": "assauts",
+        "title": "Frapper les postes de garde",
+        "rooms": [
+          "9b",
+          "20a",
+          "20b"
+        ],
+        "text": "Les deux avant-postes de la Guilde sont les gros morceaux : **Shunn** au nord avec ses dévoreurs d’intellect, **Nadia** au sud avec ses gobelours et son **zombi tyrannœil**. Les prendre l’un après l’autre est jouable ; les prendre ensemble ne l’est pas."
+      },
+      {
+        "id": "sortie",
+        "title": "Trouver la descente",
+        "rooms": [
+          "21",
+          "23a"
+        ],
+        "text": "Trois **portails-voûtes** mènent aux strates 4, 5 et 6, chacun réservé à un certain niveau. Mais l’escalier vers la **strate 3** part du couloir à l’est de [[r:23a|23a]], derrière les balistes animées de [[r:21|21]]."
+      }
+    ],
+    "stakes": [
+      {
+        "id": "clef",
+        "title": "La clef de pierre",
+        "rooms": [
+          "14a"
+        ],
+        "tone": "accent",
+        "text": "Un portail entre les strates 6 et 8 dans une poche de sac à dos. **Ni Rizzeryl ni Shunn ne savent ce qu’ils s’arrachent.** Le groupe, lui, peut le découvrir — et décider de ne le dire à personne."
+      },
+      {
+        "id": "diademe",
+        "title": "Le diadème de perfection humaine",
+        "rooms": [
+          "1e"
+        ],
+        "text": "Objet merveilleux dans le trésor de Yek. Il transforme son porteur en humain séduisant — et le porteur ne veut plus l’enlever. **Un piège à personnage, pas un butin.**"
+      },
+      {
+        "id": "prisonniers",
+        "title": "Ceux qu’on peut sauver",
+        "rooms": [
+          "1c",
+          "1e",
+          "11b"
+        ],
+        "text": "**Cuivre Forgeorage** dans sa cage, **Glom** la gobeline affamée, et ce qui reste des Fiers compagnons de Daggerford. Chacun donne une information que personne d’autre ne détient."
+      },
+      {
+        "id": "reputation",
+        "title": "Choisir un camp, ou pas",
+        "tone": "info",
+        "text": "Xanathar, le Zhentarim et les gobelins recrutent tous les trois. **On peut traverser la strate sans se déclarer** — mais Skullport se souviendra de qui a aidé qui."
+      }
+    ],
+    "endings": [
+      {
+        "id": "guilde",
+        "title": "La Guilde chassée",
+        "tone": "ok",
+        "text": "Les deux postes tombés, le bazar respire et les gobelins doivent une fière chandelle au groupe. **Le Zhentarim en profite** : Rizzeryl prend la place et devient le nouveau maître de l’étage."
+      },
+      {
+        "id": "zhent",
+        "title": "Le Zhentarim écrasé",
+        "tone": "danger",
+        "text": "Rizzeryl mort, la Guilde n’a plus de rival et ferme le marché. Yek et les siens partent ou meurent. **La strate 2 devient un couloir de Xanathar** — et un problème au retour."
+      },
+      {
+        "id": "neutre",
+        "title": "Traverser sans trancher",
+        "tone": "info",
+        "text": "Rien n’oblige à faire la guerre. Un groupe discret descend à la strate 3 en ayant seulement acheté des renseignements. **C’est une fin valable**, et elle laisse toutes les factions vivantes pour plus tard."
+      }
+    ],
+    "next": [
+      {
+        "id": "strate3",
+        "title": "La descente vers la Sargauth",
+        "rooms": [
+          "23a"
+        ],
+        "tone": "accent",
+        "text": "L’escalier de [[r:23a|23a]] mène à la strate 3. **Cuivre vend une carte** de ce qui attend en bas à qui l’a sorti de sa cage."
+      },
+      {
+        "id": "skullport",
+        "title": "Skullport",
+        "tone": "info",
+        "text": "Tout ce qui sort d’ici y descend : les prisonniers de Shunn, le butin de la Guilde, les gobelins qui désertent. **Bosskyn Gorrb** attend les amis du Zhentarim ; le commandant Sundeth attend les autres."
+      },
+      {
+        "id": "portails",
+        "title": "Trois portes pour plus tard",
+        "rooms": [
+          "5",
+          "12",
+          "20c"
+        ],
+        "text": "Les portails-voûtes vers les strates 4, 5 et 6 restent ouverts. **Ils ne servent pas maintenant** — mais un groupe qui note le geste d’ouverture aura un raccourci dans dix séances."
+      }
+    ]
+  },
   "intro": [],
   "notes": [
     {

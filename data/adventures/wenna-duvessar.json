@@ -8,6 +8,204 @@
     "pages": "106-113"
   },
   "summary": "Conçue pour **quatre personnages de niveau 7**, à jouer entre la strate 2 et la strate 3, quand le groupe remonte pour un repos long. Une enquête urbaine dense, **peu de combats jusqu’au dernier acte**, beaucoup de décisions.\n\n**Version de base :** le fantôme d’une servante sans langue apparaît à Castel-Suif ([[r:c1|C]]) et réclame justice pour un massacre vieux de cinq ans. La piste mène au **manoir Duvessar** ([[r:w4|W4]]), puis au hameau de **Fauverive** et au **temple du Verbe Éteint**, où **Lord Ostrian** — seul survivant apparent, meurtrier réel — sert une entité nommée **Grethuum**.\n\n**Version Améliorée :** le Portail Béant est fermé, la salle commune saccagée, **Durnan a disparu** ([[r:w1|W1]]). Tant qu’on ne le retrouve pas, Undermountain reste inaccessible. La piste des ravisseurs mène au même manoir, où le fantôme attend — et l’affaire froide se révèle être la même que l’affaire chaude.",
+  "overview": {
+    "steps": [
+      {
+        "id": "accroche-b",
+        "only": "base",
+        "title": "Le fantôme se manifeste",
+        "rooms": [
+          "c1"
+        ],
+        "text": "Aux archives de Castel-Suif, une servante translucide apparaît près d’un livre de cuir, ouvre la bouche — **il n’y a plus de langue** — et s’efface. Le journal donne un nom, **Duvessar**, une adresse à Waterdeep, et le croquis d’une créature. Le groupe accepte de chercher les restes de Lady Ysolde et de ses trois enfants."
+      },
+      {
+        "id": "accroche-e",
+        "only": "enhanced",
+        "title": "La taverne vide",
+        "rooms": [
+          "w1",
+          "w2",
+          "w3"
+        ],
+        "text": "Le groupe remonte pour un repos long et trouve le **Portail Béant** saccagé, le puits enchaîné par le haut, **Durnan disparu**. Trois pistes — le symbole de bois, le témoignage de Bonnie, la mémoire de Hesken — mènent toutes au même manoir abandonné du Quartier Nord. **Deux suffisent.**"
+      },
+      {
+        "id": "manoir",
+        "title": "Le manoir, et ce qui y attend",
+        "rooms": [
+          "w4"
+        ],
+        "text": "Rue Vantrelle. En version de base, le majordome Obrec raconte le massacre d’il y a cinq ans ; en Version Améliorée, la maison est vide, le **cercle de craie du cabinet n’a jamais été effacé**, et **Wenna s’accroche au groupe**. C’est ici que l’affaire froide et l’affaire chaude se révèlent être la même."
+      },
+      {
+        "id": "piste",
+        "title": "Remonter la piste de l’argent",
+        "rooms": [
+          "w5",
+          "w6"
+        ],
+        "text": "Sept commerces du Quartier des Artisans appartiennent encore à Ostrian. Leur intendant, **Thaevil**, vient relever les comptes tous les quinze jours avec sept gardes du corps — il donne **Fauverive** ou meurt en la donnant. **Corvan**, l’ancien fiancé de Wenna, apprend que les corps ont été emportés ; il refuse de suivre le groupe et part seul."
+      },
+      {
+        "id": "hameau",
+        "title": "Faire parler le hameau",
+        "rooms": [
+          "g1",
+          "g2",
+          "g3",
+          "g4",
+          "g5"
+        ],
+        "text": "À Fauverive, tout le monde sait quelque chose et personne ne veut le dire : la mairesse a perdu sa sœur, le tavernier a perdu son fils. Deux sources indépendantes donnent la direction de **la vieille tour**. La grange démasque le culte — et c’est le premier vrai combat de l’aventure."
+      },
+      {
+        "id": "temple-haut",
+        "title": "Descendre sans se faire annoncer",
+        "rooms": [
+          "b0",
+          "b1",
+          "b3",
+          "b2",
+          "b7"
+        ],
+        "text": "Le chantier de la tour est un décor et **personne ne garde l’escalier**. En dessous, le bruit décide de tout : un combat en [[r:b1|B1]] met en fuite le guetteur de [[r:b3|B3]], qui va prévenir Ostrian. La porte verrouillée de [[r:b2|B2]] ouvre un raccourci discret jusqu’à la chapelle."
+      },
+      {
+        "id": "temple-bas",
+        "title": "Les cellules, l’ossuaire, l’urne",
+        "rooms": [
+          "b11",
+          "b12",
+          "b10",
+          "b9"
+        ],
+        "text": "Le niveau inférieur porte tout ce qui compte : **six prisonniers** à évacuer, le fils du tavernier parmi les recrues, un charnier qui révèle l’ampleur réelle du projet — et, derrière une porte secrète de la chapelle, **l’urne d’or**. Sans elle, l’aventure n’a pas de fin."
+      },
+      {
+        "id": "chapelle",
+        "title": "La chapelle",
+        "rooms": [
+          "b7"
+        ],
+        "text": "Ostrian achève un rituel pendant que ses serviteurs retiennent le groupe. En Version Améliorée, **c’est Durnan qui est sur l’autel**, et tant qu’il y reste le mage a l’avantage à toutes ses sauvegardes — et aucune raison de fuir."
+      }
+    ],
+    "stakes": [
+      {
+        "id": "urne",
+        "title": "L’urne d’or",
+        "rooms": [
+          "b9"
+        ],
+        "tone": "accent",
+        "text": "Les cendres de Lady Ysolde, Perrin, Aldric et Sionne. **C’est le seul objectif obligatoire** : sans elle, les quatre âmes restent coincées et Wenna n’est pas libérée. Elle est derrière une porte secrète, DD 15, deux chances de la trouver."
+      },
+      {
+        "id": "durnan",
+        "only": "enhanced",
+        "title": "Durnan, et l’accès à Undermountain",
+        "rooms": [
+          "b7"
+        ],
+        "tone": "danger",
+        "text": "Tant qu’il manque, **le puits reste enchaîné et la strate 3 attend**. Le compteur du rituel court : six paliers, et au dernier il est mort et le culte descend."
+      },
+      {
+        "id": "prisonniers",
+        "title": "Six civils dans une cellule",
+        "rooms": [
+          "b11"
+        ],
+        "text": "**Nyla**, la sœur de la mairesse, trois roturiers et un enfant. Les évacuer pendant que le temple s’éveille est la vraie difficulté du niveau inférieur, et elle ne se résout pas à l’épée. **Corvan libéré règle le problème** ; sinon il faut choisir entre eux et Ostrian."
+      },
+      {
+        "id": "brannoc",
+        "title": "Le fils du tavernier",
+        "rooms": [
+          "b12"
+        ],
+        "text": "Le **Jeune Brannoc** se bat comme les autres et perd sa fureur dès qu’on le maîtrise. L’épargner ne coûte rien ; le tuer ne coûte rien non plus, mécaniquement — seulement d’avoir à le dire à son père."
+      },
+      {
+        "id": "preuve",
+        "title": "Une preuve, ou pas",
+        "rooms": [
+          "g3"
+        ],
+        "tone": "info",
+        "text": "En Version Améliorée, **le plan du treuil à demi brûlé** ([[r:g3|G3]]) est la seule pièce matérielle utilisable devant le Guet. Sans elle, un notable abattu chez lui reste un notable abattu chez lui."
+      }
+    ],
+    "endings": [
+      {
+        "id": "livre",
+        "title": "Ostrian livré vivant",
+        "tone": "ok",
+        "text": "Le fanatique avoue tout devant l’échafaud. **L’affaire Duvessar se referme publiquement**, la ville a sa justice, et le groupe est celui qui a résolu un massacre vieux de cinq ans."
+      },
+      {
+        "id": "abattu",
+        "title": "Ostrian abattu sans preuve",
+        "tone": "danger",
+        "text": "Le culte meurt avec lui, mais il reste **un notable tué chez lui par des aventuriers**. Le Guet aura des questions, et c’est une dette qu’on ressort plus tard."
+      },
+      {
+        "id": "fuite",
+        "title": "Ostrian s’échappe",
+        "tone": "danger",
+        "text": "Le parchemin de téléportation part, la destination t’appartient. **Ce n’est pas un échec** : il a tout perdu sauf Grethuum, et il recommence ailleurs."
+      },
+      {
+        "id": "repos",
+        "title": "Le dernier repos",
+        "tone": "ok",
+        "text": "Les cendres répandues en terre consacrée, les quatre spectres se matérialisent, Lady Ysolde croise le regard de chaque personnage — et **Wenna apparaît, libérée**. Puis les cinq esprits se dispersent. C’est la vraie fin de l’aventure, et elle n’a rien à voir avec le combat."
+      },
+      {
+        "id": "trop-tard",
+        "only": "enhanced",
+        "title": "Trop tard",
+        "tone": "danger",
+        "text": "Au sixième palier, **Durnan est mort et le puits est ouvert**. L’aventure ne s’arrête pas : il faut rattraper le culte en bas — et il faudra dire à Bonnie ce qui s’est passé."
+      }
+    ],
+    "next": [
+      {
+        "id": "rituel",
+        "title": "Le rituel qui vient",
+        "rooms": [
+          "b10"
+        ],
+        "tone": "danger",
+        "text": "Les runes de l’ossuaire disent que les restes accumulés préparent **un rituel bien plus vaste, qui exigera des centaines de victimes**. Le culte n’était qu’une antichambre. En Version Améliorée, elles désignent un lieu précis, très loin sous Waterdeep."
+      },
+      {
+        "id": "ostrian-libre",
+        "title": "Un ennemi qui a un nom",
+        "tone": "info",
+        "text": "S’il s’échappe, Ostrian garde sa connexion à Grethuum et recommence — à Waterdeep ou ailleurs. Un adversaire récurrent qui connaît les visages du groupe, et qui réfléchit lentement mais longtemps."
+      },
+      {
+        "id": "dette",
+        "title": "Le Guet de Waterdeep",
+        "tone": "info",
+        "text": "Selon la fin, la ville doit un service au groupe — ou lui en réclame un. Les deux se rejouent facilement au retour de la strate 3."
+      },
+      {
+        "id": "amis",
+        "title": "Des alliés durables",
+        "text": "**Corvan** peut devenir un ami à vie et une source d’aventures. **Fauverive** entier doit quelque chose au groupe. Le **Vieux Brannoc** offre le gîte à vie si son fils rentre. Et Castel-Suif accorde des faveurs pour *L’Anathème des Antérieurs* et la bibliothèque du culte."
+      },
+      {
+        "id": "durnan-sait",
+        "only": "enhanced",
+        "title": "Ce que Durnan a vu en bas",
+        "tone": "accent",
+        "text": "Il a reconnu le symbole parce qu’il l’a **déjà vu gravé quelque part sous la ville**. Sur le chemin du retour, il dit une seule chose utile : où. C’est un crochet tout prêt pour la strate 3 — ou pour beaucoup plus bas."
+      }
+    ]
+  },
   "intro": [
     {
       "id": "accroche",
