@@ -34,12 +34,20 @@ export function condense(item, text, max = 110) {
 }
 
 /**
- * @param {{key:string, text:string, title?:string, item?:object, kind?:string,
- *          hideLabel?:string, todo?:boolean, sid?:string}} o
+ * Les pièces communes à tout texte modifiable : les outils (« à faire »,
+ * « modifier », « vu »), le corps (éditeur, résumé condensé ou texte complet),
+ * l'annotation, et les classes d'état. `textBlock` les assemble dans le gabarit
+ * habituel ; les vues qui ont le leur — la vue d'ensemble — les placent où elles
+ * veulent, et héritent ainsi des mêmes réglages sans les réécrire.
+ *
+ * @param {{key:string, text:string, title?:string|Node, item?:object,
+ *          kind?:string, hideLabel?:string, todo?:boolean}} o
+ * @returns {{tools:Node, body:Node, note:Node|null, shown:string,
+ *            seen:boolean, override:string|null, isEditing:boolean, cls:string}}
  */
-export function textBlock(o) {
-  const { key, text, title, item, kind = 'note', hideLabel = 'Vu', todo = false, sid } = o;
-  const [cls, kindLabel, kindIcon] = BLOCK_TYPES[kind] || BLOCK_TYPES.note;
+export function blockParts(o) {
+  const { key, text, title, item, kind = 'note', hideLabel = 'Vu', todo = false } = o;
+  const [, kindLabel] = BLOCK_TYPES[kind] || BLOCK_TYPES.note;
   const override = store.getOverride(key);
   const shown = override ?? text;
   const seen = store.isHidden(key);
@@ -48,7 +56,7 @@ export function textBlock(o) {
   const summary = condense(item, shown);
 
   const openFull = () => openPopup({
-    title: title || kindLabel,
+    title: typeof title === 'string' ? title : kindLabel,
     render: () => markup(shown, 'div', 'block-body' + (kind === 'read' ? ' read' : '')),
   });
 
@@ -66,15 +74,6 @@ export function textBlock(o) {
       class: 'btn btn-sm btn-ghost' + (seen ? ' is-on' : ''),
       onclick: (e) => { e.stopPropagation(); store.setHidden(key, !seen); },
     }, icon(seen ? 'undo' : 'check'), seen ? 'Revoir' : hideLabel));
-
-  const head = h('div', { class: 'block-head' },
-    sid ? h('button', { class: 'grip', 'aria-label': 'Déplacer le bloc' }, icon('menu')) : null,
-    icon(kindIcon, 'kind-icon'),
-    title ? (typeof title === 'string' ? markup(title, 'div', 'block-title') : h('div', { class: 'block-title' }, title))
-          : h('div', { class: 'block-kind' }, kindLabel),
-    enhancedStar(item),
-    override != null ? h('span', { class: 'edited-flag' }, 'modifié') : null,
-    tools);
 
   let body;
   if (isEditing) {
@@ -96,11 +95,35 @@ export function textBlock(o) {
     body = markup(shown, 'div', 'block-body' + (kind === 'read' ? ' read' : ''));
   }
 
+  return {
+    tools, body, note: noteArea(key), shown, seen, override, isEditing,
+    cls: (override != null ? ' is-edited' : '') + (seen ? ' is-seen' : '')
+       + (store.isTodo(key) ? ' is-todo' : ''),
+  };
+}
+
+/**
+ * @param {{key:string, text:string, title?:string, item?:object, kind?:string,
+ *          hideLabel?:string, todo?:boolean, sid?:string}} o
+ */
+export function textBlock(o) {
+  const { title, item, kind = 'note', sid } = o;
+  const [cls, kindLabel, kindIcon] = BLOCK_TYPES[kind] || BLOCK_TYPES.note;
+  const p = blockParts(o);
+
+  const head = h('div', { class: 'block-head' },
+    sid ? h('button', { class: 'grip', 'aria-label': 'Déplacer le bloc' }, icon('menu')) : null,
+    icon(kindIcon, 'kind-icon'),
+    title ? (typeof title === 'string' ? markup(title, 'div', 'block-title') : h('div', { class: 'block-title' }, title))
+          : h('div', { class: 'block-kind' }, kindLabel),
+    enhancedStar(item),
+    p.override != null ? h('span', { class: 'edited-flag' }, 'modifié') : null,
+    p.tools);
+
   return h('div', {
-    class: `block ${cls}` + (override != null ? ' is-edited' : '') + (seen ? ' is-seen' : '')
-      + (store.isTodo(key) ? ' is-todo' : ''),
+    class: `block ${cls}` + p.cls,
     dataset: sid ? { sid } : {},
-  }, head, body, noteArea(key));
+  }, head, p.body, p.note);
 }
 
 /** Bouton « annoter » à placer dans les outils d'une carte. */

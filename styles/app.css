@@ -949,7 +949,6 @@ hr.sep { border: 0; border-top: 1px solid var(--border); margin: 16px 0; }
 }
 .ov-body { flex: 1; min-width: 0; }
 .ov-title { font-weight: 700; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-.ov-text { color: var(--text-2); margin-top: 3px; }
 .ov-rooms { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; }
 .pill.ov-room { cursor: pointer; font-weight: 700; }
 .pill.ov-room:hover { border-color: var(--accent); color: var(--accent); }
@@ -967,6 +966,17 @@ hr.sep { border: 0; border-top: 1px solid var(--border); margin: 16px 0; }
 .ov-item.accent { border-left-color: var(--accent); }
 .ov-item.info { border-left-color: var(--info); }
 .ov-item .ov-title .icon { color: var(--muted); }
+
+/* Les mêmes outils que sur les autres blocs : poussés à droite du titre,
+   et le corps prend la couleur secondaire. */
+.ov-title .block-tools { margin-left: auto; }
+.ov-step .block-body, .ov-item .block-body { color: var(--text-2); margin-top: 3px; }
+.ov-step .editor, .ov-item .editor { margin-top: 6px; }
+.ov-step .note-box, .ov-item .note-box { margin-top: 7px; }
+.ov-step.is-seen, .ov-item.is-seen { opacity: 0.72; }
+.ov-item.is-seen { background: transparent; }
+.ov-step.is-seen .ov-title, .ov-item.is-seen .ov-title { color: var(--muted); }
+.ov-step.is-edited .ov-num { border-color: var(--accent); }
 
 /* ---------- Tableaux du balisage ---------- */
 .mk-tablebox { overflow-x: auto; margin: 10px 0; -webkit-overflow-scrolling: touch; }
