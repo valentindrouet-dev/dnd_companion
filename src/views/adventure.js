@@ -18,6 +18,7 @@ import { adventureProgress, roomStatus, statusTally, ROOM_STATUSES } from '../pr
 import { openMapPopup, fullMap } from '../components/map.js';
 import { openEncounterPopup } from '../encounters/ui.js';
 import { overviewSections } from '../components/overview.js';
+import { sections, foldAllButton } from '../components/section.js';
 
 export async function adventureView(route) {
   const adv = await loadAdventure(route.adv);
@@ -27,6 +28,7 @@ export async function adventureView(route) {
   const resume = flag || store.lastRoom(adv.id);
   const resumeRoom = resume ? adv.roomById.get(resume) : null;
   const todos = collectTodos(adv);
+  const { section, titles } = sections('a:' + adv.id);
 
   const main = h('div', null,
     h('div', { class: 'hero' },
@@ -57,10 +59,12 @@ export async function adventureView(route) {
     overviewSections(adv).map((s) => section(s.title, s.node, { count: s.count })),
 
     list(adv.intro).length ? section('Introduction', list(adv.intro).map((t) =>
-      textBlock({ key: K('intro', t.id), text: t.text, title: t.title, item: t, kind: 'read', hideLabel: 'Lu' }))) : null,
+      textBlock({ key: K('intro', t.id), text: t.text, title: t.title, item: t, kind: 'read', hideLabel: 'Lu' })),
+      { count: list(adv.intro).length }) : null,
 
     list(adv.notes).length ? section('Notes MJ', list(adv.notes).map((t) =>
-      textBlock({ key: K('notes', t.id), text: t.text, title: t.title, item: t, kind: 'note', hideLabel: 'Vu', todo: true }))) : null,
+      textBlock({ key: K('notes', t.id), text: t.text, title: t.title, item: t, kind: 'note', hideLabel: 'Vu', todo: true })),
+      { count: list(adv.notes).length }) : null,
 
     visibleItems(adv.npcs, elemId).length ? section('PNJ récurrents', visibleItems(adv.npcs, elemId).map(({ item: n, id }) => {
       const npc = { ...n, id };
@@ -73,7 +77,7 @@ export async function adventureView(route) {
         sub: n.role,
         onOpen: () => openNpcPopup(adv.id, { id: '_adv', name: adv.title }, npc),
       });
-    })) : null,
+    }), { count: visibleItems(adv.npcs, elemId).length }) : null,
 
     section('Salles', [
       adv.sections.map((s) => h('div', { class: 'section-block' },
@@ -81,12 +85,13 @@ export async function adventureView(route) {
         s.intro ? h('p', { class: 'muted' }, s.intro) : null,
         h('div', { class: 'room-grid' }, (s.rooms || []).map((id) => adv.roomById.get(id)).filter(Boolean).map((r) => roomTile(adv, r))))),
       orphans(adv).length ? h('div', { class: 'section-block' }, h('h3', null, 'Autres salles'), h('div', { class: 'room-grid' }, orphans(adv).map((r) => roomTile(adv, r)))) : null,
-    ]),
+    ], { count: visibleRooms(adv).length }),
   );
 
   return shell({ title: adv.title, subtitle: 'Vue d’ensemble', back: '', sidebar: roomSidebar(adv, null), main,
     actions: [
       ...trackersOf(adv).map((t) => trackerButton(adv, t)),
+      foldAllButton('a:' + adv.id, titles),
       h('button', {
         class: 'btn btn-icon btn-ghost' + (store.settings.condensed ? ' is-on' : ''),
         'aria-label': store.settings.condensed ? 'Afficher les textes complets' : 'Résumer les textes',
@@ -101,13 +106,6 @@ function list(x) {
   return visibleItems(x, (it, i) => asTextItem(it, i).id).map(({ item, id }) => ({ ...asTextItem(item, id), id }));
 }
 function orphans(adv) { return visibleOrder(adv).filter((r) => !adv.sectionById.has(r.section)); }
-
-function section(title, children, opts) {
-  const count = opts?.count;
-  return h('div', { class: 'sec' },
-    h('div', { class: 'sec-head' }, h('h2', null, title), count != null ? h('span', { class: 'count' }, count) : null),
-    children);
-}
 
 /** Blocs de notes marqués « à faire », toutes salles confondues. */
 function collectTodos(adv) {

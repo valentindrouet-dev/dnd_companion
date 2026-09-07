@@ -19,6 +19,7 @@ const DEFAULT = {
   npcStatus: {},  // "adv/npc" -> statut
   lastRoom: {},   // adv -> room
   trackers: {},   // "adv/tracker" -> palier courant (compteur de progression, ex. la Marée)
+  folded: {},     // clé de section -> 1     (section repliée ; préférence d'affichage, pas d'état de partie)
 };
 
 function clone(o) { return JSON.parse(JSON.stringify(o)); }
@@ -96,6 +97,17 @@ export const store = {
   isHidden(key) { return !!state.hidden[key]; },
   setHidden(key, v) { if (v) state.hidden[key] = 1; else delete state.hidden[key]; emit(); },
   toggleHidden(key) { this.setHidden(key, !state.hidden[key]); },
+
+  // --- Sections repliées ---
+  // Ce sont des préférences d'affichage : elles ne dépendent pas d'une partie
+  // et survivent donc à « Réinitialiser la salle » ou « l'aventure ».
+  isFolded(key) { return !!state.folded[key]; },
+  setFolded(key, v) { if (v) state.folded[key] = 1; else delete state.folded[key]; emit(); },
+  toggleFolded(key) { this.setFolded(key, !state.folded[key]); },
+  foldMany(keys, v) {
+    for (const k of keys) { if (v) state.folded[k] = 1; else delete state.folded[k]; }
+    emit();
+  },
 
   // --- Texte modifié à la volée ---
   getOverride(key) { return state.overrides[key]; },

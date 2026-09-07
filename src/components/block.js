@@ -70,7 +70,8 @@ export function textBlock(o) {
   const head = h('div', { class: 'block-head' },
     sid ? h('button', { class: 'grip', 'aria-label': 'Déplacer le bloc' }, icon('menu')) : null,
     icon(kindIcon, 'kind-icon'),
-    title ? h('div', { class: 'block-title' }, title) : h('div', { class: 'block-kind' }, kindLabel),
+    title ? (typeof title === 'string' ? markup(title, 'div', 'block-title') : h('div', { class: 'block-title' }, title))
+          : h('div', { class: 'block-kind' }, kindLabel),
     enhancedStar(item),
     override != null ? h('span', { class: 'edited-flag' }, 'modifié') : null,
     tools);

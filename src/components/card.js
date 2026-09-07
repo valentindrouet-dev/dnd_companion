@@ -36,7 +36,7 @@ export function card(o) {
   const line = (v, cls) => (v == null || v === '' ? null
     : typeof v === 'string' ? markup(v, 'div', cls) : h('div', { class: cls }, v));
   const main = h('div', { class: 'card-main' },
-    h('div', { class: 'card-title' }, o.title, o.pills),
+    h('div', { class: 'card-title' }, typeof o.title === 'string' ? markup(o.title, 'span') : o.title, o.pills),
     line(o.sub, 'card-sub'),
     line(o.sub2, 'card-sub tactic'));
 

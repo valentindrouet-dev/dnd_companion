@@ -383,7 +383,7 @@
           "id": "cercle",
           "skill": "Intelligence (Arcanes)",
           "dc": 15,
-          "text": "Le croquis maladroit du cercle de runes est un **rituel de *contact extraplanaire***, et les runes désignent une entité des Plans Extérieurs. Maîtrise d’Arcanes requise ; sinon, un Avoué de Castel-Suif peut le dire.",
+          "text": "Le croquis maladroit du cercle de runes est un **rituel de** *contact extraplanaire*, et les runes désignent une entité des Plans Extérieurs. Maîtrise d’Arcanes requise ; sinon, un Avoué de Castel-Suif peut le dire.",
           "failure": "Un gribouillis de runes. Un Avoué saura."
         },
         {
@@ -1567,7 +1567,7 @@
         {
           "id": "fontaine",
           "title": "La fontaine",
-          "text": "Eau limpide, gobelet d’argent posé sur la margelle. *Détection de la magie* révèle une aura de **divination**. **Une gorgée confère l’effet du sortilège *assistance*** ; une créature ne peut en bénéficier qu’une fois par jour. L’eau emportée perd sa magie en 10 minutes."
+          "text": "Eau limpide, gobelet d’argent posé sur la margelle. *Détection de la magie* révèle une aura de **divination**. **Une gorgée confère l’effet du sortilège** *assistance* ; une créature ne peut en bénéficier qu’une fois par jour. L’eau emportée perd sa magie en 10 minutes."
         },
         {
           "id": "ouest",

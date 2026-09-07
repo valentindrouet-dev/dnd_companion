@@ -19,7 +19,10 @@ function inline(s) {
     const cleanId = id.trim();
     return `<a class="ref" data-ref="${type}:${cleanId}">${label ? label.trim() : cleanId}</a>`;
   });
-  s = s.replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>');
+  s = s.replace(/\*\*\*([^*]+)\*\*\*/g, '<b><i>$1</i></b>');
+  // le gras peut contenir une italique ; on s'arrête au premier ** fermant,
+  // sans jamais franchir une ligne vide (un ** orphelin ne mange pas la page)
+  s = s.replace(/\*\*((?:(?!\n\n)[\s\S])+?)\*\*/g, '<b>$1</b>');
   s = s.replace(/(^|[\s(«])\*([^*\n]+)\*(?=[\s).,;:!?»]|$)/g, '$1<i>$2</i>');
   s = s.replace(/«\s?([^»]+?)\s?»/g, '<span class="quote">«&nbsp;$1&nbsp;»</span>');
   s = s.replace(/(^|[^\w>])(\d+d\d+(?:\s?[+\-−]\s?\d+)?)(?![\w<])/g, '$1<span class="dice">$2</span>');

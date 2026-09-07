@@ -25,6 +25,7 @@ import { openEncounterPopup } from '../encounters/ui.js';
 import { roomProgress, roomStatus, cycleRoomStatus } from '../progress.js';
 import { visibleItems, filterVariant, enhancedStar, isVisible } from '../variant.js';
 import { slug } from '../util.js';
+import { sections, foldAllButton } from '../components/section.js';
 
 /** Blocs de texte visibles dans la version en cours, identifiants d'origine conservés. */
 function list(x) {
@@ -44,18 +45,6 @@ function blockList(scope, items, render) {
   return box;
 }
 
-function section(title, children, { count, actions, ico } = {}) {
-  const kids = Array.isArray(children) ? children.flat().filter(Boolean) : [children].filter(Boolean);
-  if (!kids.length) return null;
-  return h('div', { class: 'sec' },
-    h('div', { class: 'sec-head' },
-      ico ? icon(ico) : null,
-      h('h2', null, title),
-      count != null ? h('span', { class: 'count' }, count) : null,
-      actions),
-    kids);
-}
-
 /** Anneau de progression (proportion d'éléments cochés). */
 function progressRing(pct) {
   const r = 18, c = 2 * Math.PI * r;
@@ -72,6 +61,8 @@ export async function roomView(route) {
       main: h('div', { class: 'empty' }, `Salle introuvable : ${route.room}`) });
   }
   store.markVisited(adv.id, room.id);
+  // Les salles partagent leur pliage : replier « Sorties » ici la replie partout.
+  const { section, titles } = sections('r');
 
   const { prev, next } = roomNeighbours(adv, room);
   const sectionMeta = adv.sectionById.get(room.section);
@@ -253,6 +244,7 @@ export async function roomView(route) {
     actions: [
       ...trackersOf(adv).map((t) => trackerButton(adv, t)),
       roomMap(adv.map, room.id) ? h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Carte', onclick: () => openMapPopup(adv, room) }, icon('map')) : null,
+      foldAllButton('r', titles),
       h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Rencontre aléatoire', onclick: () => openEncounterPopup({ adv, room }) }, icon('dice')),
       h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Récolte d’ennemis', onclick: () => openLootPopup({ adv, room }) }, icon('gem')),
       h('button', { class: 'btn btn-icon btn-ghost', 'aria-label': 'Index', onclick: () => navigate(indexPath(adv.id)) }, icon('book')),

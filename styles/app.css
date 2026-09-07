@@ -369,6 +369,27 @@ p:last-child { margin-bottom: 0; }
   gap: 8px;
   margin-bottom: 5px;
 }
+/* Le titre entier replie la section : cible large, au doigt. */
+.sec-toggle {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  padding: 3px 0;
+  margin: -3px 0;
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.sec-toggle:hover h2 { color: var(--text-2); }
+.sec-caret { color: var(--muted); opacity: 0.7; flex: none; }
+.sec-toggle:hover .sec-caret { color: var(--accent); opacity: 1; }
+.sec.is-folded .sec-head { margin-bottom: 0; }
+.sec.is-folded .sec-toggle h2 { color: var(--text-2); }
 .sec-head h2 {
   font-size: 0.85em;
   text-transform: uppercase;
