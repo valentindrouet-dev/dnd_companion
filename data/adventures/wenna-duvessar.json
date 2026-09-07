@@ -7,7 +7,6 @@
     "book": "Module officiel adapté — référence en notes du MJ",
     "pages": "106-113"
   },
-  "summary": "Conçue pour **quatre personnages de niveau 7**, à jouer entre la strate 2 et la strate 3, quand le groupe remonte pour un repos long. Une enquête urbaine dense, **peu de combats jusqu’au dernier acte**, beaucoup de décisions.\n\n**Version de base :** le fantôme d’une servante sans langue apparaît à Castel-Suif ([[r:c1|C]]) et réclame justice pour un massacre vieux de cinq ans. La piste mène au **manoir Duvessar** ([[r:w4|W4]]), puis au hameau de **Fauverive** et au **temple du Verbe Éteint**, où **Lord Ostrian** — seul survivant apparent, meurtrier réel — sert une entité nommée **Grethuum**.\n\n**Version Améliorée :** le Portail Béant est fermé, la salle commune saccagée, **Durnan a disparu** ([[r:w1|W1]]). Tant qu’on ne le retrouve pas, Undermountain reste inaccessible. La piste des ravisseurs mène au même manoir, où le fantôme attend — et l’affaire froide se révèle être la même que l’affaire chaude.",
   "overview": {
     "steps": [
       {
@@ -17,7 +16,7 @@
         "rooms": [
           "c1"
         ],
-        "text": "Aux archives de Castel-Suif, une servante translucide apparaît près d’un livre de cuir, ouvre la bouche — **il n’y a plus de langue** — et s’efface. Le journal donne un nom, **Duvessar**, une adresse à Waterdeep, et le croquis d’une créature. Le groupe accepte de chercher les restes de Lady Ysolde et de ses trois enfants."
+        "text": "Aux archives de Castel-Suif, une servante translucide apparaît près d’un livre, ouvre la bouche — **plus de langue** — et s’efface. Le journal donne un nom, **Duvessar**, une adresse et le croquis d’une créature. Le groupe accepte de chercher les restes de Lady Ysolde et de ses trois enfants."
       },
       {
         "id": "accroche-e",
@@ -28,7 +27,7 @@
           "w2",
           "w3"
         ],
-        "text": "Le groupe remonte pour un repos long et trouve le **Portail Béant** saccagé, le puits enchaîné par le haut, **Durnan disparu**. Trois pistes — le symbole de bois, le témoignage de Bonnie, la mémoire de Hesken — mènent toutes au même manoir abandonné du Quartier Nord. **Deux suffisent.**"
+        "text": "Le groupe remonte pour un repos long et trouve le **Portail Béant** saccagé, le puits enchaîné, **Durnan disparu**. Trois pistes — le symbole, Bonnie, Hesken — mènent au même manoir. **Deux suffisent.**"
       },
       {
         "id": "manoir",
@@ -36,7 +35,7 @@
         "rooms": [
           "w4"
         ],
-        "text": "Rue Vantrelle. En version de base, le majordome Obrec raconte le massacre d’il y a cinq ans ; en Version Améliorée, la maison est vide, le **cercle de craie du cabinet n’a jamais été effacé**, et **Wenna s’accroche au groupe**. C’est ici que l’affaire froide et l’affaire chaude se révèlent être la même."
+        "text": "Rue Vantrelle. En base, le majordome Obrec raconte le massacre ; en Améliorée, la maison est vide, le **cercle de craie n’a jamais été effacé**, et **Wenna s’accroche au groupe**. L’affaire froide et l’affaire chaude n’en font qu’une."
       },
       {
         "id": "piste",
@@ -45,7 +44,7 @@
           "w5",
           "w6"
         ],
-        "text": "Sept commerces du Quartier des Artisans appartiennent encore à Ostrian. Leur intendant, **Thaevil**, vient relever les comptes tous les quinze jours avec sept gardes du corps — il donne **Fauverive** ou meurt en la donnant. **Corvan**, l’ancien fiancé de Wenna, apprend que les corps ont été emportés ; il refuse de suivre le groupe et part seul."
+        "text": "Sept commerces du Quartier des Artisans sont encore à Ostrian. Son intendant **Thaevil** vient relever les comptes avec sept gardes : il donne **Fauverive**, ou meurt en la donnant. **Corvan**, l’ancien fiancé de Wenna, refuse de suivre le groupe et part seul."
       },
       {
         "id": "hameau",
@@ -57,7 +56,7 @@
           "g4",
           "g5"
         ],
-        "text": "À Fauverive, tout le monde sait quelque chose et personne ne veut le dire : la mairesse a perdu sa sœur, le tavernier a perdu son fils. Deux sources indépendantes donnent la direction de **la vieille tour**. La grange démasque le culte — et c’est le premier vrai combat de l’aventure."
+        "text": "Tout le monde sait quelque chose et personne ne veut le dire : la mairesse a perdu sa sœur, le tavernier son fils. Deux sources donnent la direction de **la vieille tour**. La grange démasque le culte : premier vrai combat."
       },
       {
         "id": "temple-haut",
@@ -69,7 +68,7 @@
           "b2",
           "b7"
         ],
-        "text": "Le chantier de la tour est un décor et **personne ne garde l’escalier**. En dessous, le bruit décide de tout : un combat en [[r:b1|B1]] met en fuite le guetteur de [[r:b3|B3]], qui va prévenir Ostrian. La porte verrouillée de [[r:b2|B2]] ouvre un raccourci discret jusqu’à la chapelle."
+        "text": "Le chantier est un décor et **personne ne garde l’escalier**. En dessous, le bruit décide de tout : un combat en [[r:b1|B1]] met en fuite le guetteur de [[r:b3|B3]], qui prévient Ostrian. [[r:b2|B2]] ouvre un raccourci discret jusqu’à la chapelle."
       },
       {
         "id": "temple-bas",
@@ -80,7 +79,7 @@
           "b10",
           "b9"
         ],
-        "text": "Le niveau inférieur porte tout ce qui compte : **six prisonniers** à évacuer, le fils du tavernier parmi les recrues, un charnier qui révèle l’ampleur réelle du projet — et, derrière une porte secrète de la chapelle, **l’urne d’or**. Sans elle, l’aventure n’a pas de fin."
+        "text": "Tout ce qui compte est en bas : **six prisonniers** à évacuer, le fils du tavernier parmi les recrues, un charnier qui révèle l’ampleur du projet — et, derrière une porte secrète, **l’urne d’or**. Sans elle, pas de fin."
       },
       {
         "id": "chapelle",
@@ -88,7 +87,7 @@
         "rooms": [
           "b7"
         ],
-        "text": "Ostrian achève un rituel pendant que ses serviteurs retiennent le groupe. En Version Améliorée, **c’est Durnan qui est sur l’autel**, et tant qu’il y reste le mage a l’avantage à toutes ses sauvegardes — et aucune raison de fuir."
+        "text": "Ostrian achève son rituel pendant que ses serviteurs retiennent le groupe. En Améliorée, **Durnan est sur l’autel** : tant qu’il y reste, le mage a l’avantage à toutes ses sauvegardes et aucune raison de fuir."
       }
     ],
     "stakes": [
@@ -99,7 +98,7 @@
           "b9"
         ],
         "tone": "accent",
-        "text": "Les cendres de Lady Ysolde, Perrin, Aldric et Sionne. **C’est le seul objectif obligatoire** : sans elle, les quatre âmes restent coincées et Wenna n’est pas libérée. Elle est derrière une porte secrète, DD 15, deux chances de la trouver."
+        "text": "Les cendres de Lady Ysolde, Perrin, Aldric et Sionne. **Seul objectif obligatoire** : sans elle, les quatre âmes restent coincées et Wenna n’est pas libérée. Porte secrète, DD 15, deux chances."
       },
       {
         "id": "durnan",
@@ -109,7 +108,7 @@
           "b7"
         ],
         "tone": "danger",
-        "text": "Tant qu’il manque, **le puits reste enchaîné et la strate 3 attend**. Le compteur du rituel court : six paliers, et au dernier il est mort et le culte descend."
+        "text": "Tant qu’il manque, **le puits reste enchaîné et la strate 3 attend**. Six paliers de rituel ; au dernier, il est mort et le culte descend."
       },
       {
         "id": "prisonniers",
@@ -117,7 +116,7 @@
         "rooms": [
           "b11"
         ],
-        "text": "**Nyla**, la sœur de la mairesse, trois roturiers et un enfant. Les évacuer pendant que le temple s’éveille est la vraie difficulté du niveau inférieur, et elle ne se résout pas à l’épée. **Corvan libéré règle le problème** ; sinon il faut choisir entre eux et Ostrian."
+        "text": "**Nyla**, la sœur de la mairesse, trois roturiers et un enfant. Les évacuer pendant que le temple s’éveille ne se résout pas à l’épée. **Corvan libéré règle le problème** ; sinon, il faut choisir entre eux et Ostrian."
       },
       {
         "id": "brannoc",
@@ -125,7 +124,7 @@
         "rooms": [
           "b12"
         ],
-        "text": "Le **Jeune Brannoc** se bat comme les autres et perd sa fureur dès qu’on le maîtrise. L’épargner ne coûte rien ; le tuer ne coûte rien non plus, mécaniquement — seulement d’avoir à le dire à son père."
+        "text": "Le **Jeune Brannoc** perd sa fureur dès qu’on le maîtrise. Le tuer ne coûte rien, sauf d’avoir à le dire à son père."
       },
       {
         "id": "preuve",
@@ -134,7 +133,7 @@
           "g3"
         ],
         "tone": "info",
-        "text": "En Version Améliorée, **le plan du treuil à demi brûlé** ([[r:g3|G3]]) est la seule pièce matérielle utilisable devant le Guet. Sans elle, un notable abattu chez lui reste un notable abattu chez lui."
+        "text": "En Améliorée, **le plan du treuil à demi brûlé** ([[r:g3|G3]]) est la seule pièce utilisable devant le Guet."
       }
     ],
     "endings": [
@@ -142,32 +141,32 @@
         "id": "livre",
         "title": "Ostrian livré vivant",
         "tone": "ok",
-        "text": "Le fanatique avoue tout devant l’échafaud. **L’affaire Duvessar se referme publiquement**, la ville a sa justice, et le groupe est celui qui a résolu un massacre vieux de cinq ans."
+        "text": "Il avoue tout devant l’échafaud : **l’affaire Duvessar se referme publiquement**, et c’est le groupe qui a résolu un massacre vieux de cinq ans."
       },
       {
         "id": "abattu",
         "title": "Ostrian abattu sans preuve",
         "tone": "danger",
-        "text": "Le culte meurt avec lui, mais il reste **un notable tué chez lui par des aventuriers**. Le Guet aura des questions, et c’est une dette qu’on ressort plus tard."
+        "text": "Le culte meurt avec lui, mais il reste **un notable tué chez lui par des aventuriers** : le Guet aura des questions."
       },
       {
         "id": "fuite",
         "title": "Ostrian s’échappe",
         "tone": "danger",
-        "text": "Le parchemin de téléportation part, la destination t’appartient. **Ce n’est pas un échec** : il a tout perdu sauf Grethuum, et il recommence ailleurs."
+        "text": "Le parchemin de téléportation part, la destination t’appartient. Il a tout perdu sauf Grethuum."
       },
       {
         "id": "repos",
         "title": "Le dernier repos",
         "tone": "ok",
-        "text": "Les cendres répandues en terre consacrée, les quatre spectres se matérialisent, Lady Ysolde croise le regard de chaque personnage — et **Wenna apparaît, libérée**. Puis les cinq esprits se dispersent. C’est la vraie fin de l’aventure, et elle n’a rien à voir avec le combat."
+        "text": "Les cendres répandues en terre consacrée, les quatre spectres se matérialisent, Lady Ysolde croise le regard de chaque personnage — et **Wenna apparaît, libérée**. La vraie fin, et elle n’a rien à voir avec le combat."
       },
       {
         "id": "trop-tard",
         "only": "enhanced",
         "title": "Trop tard",
         "tone": "danger",
-        "text": "Au sixième palier, **Durnan est mort et le puits est ouvert**. L’aventure ne s’arrête pas : il faut rattraper le culte en bas — et il faudra dire à Bonnie ce qui s’est passé."
+        "text": "Au sixième palier, **Durnan est mort et le puits est ouvert** : rattraper le culte en bas, et le dire à Bonnie."
       }
     ],
     "next": [
@@ -178,104 +177,105 @@
           "b10"
         ],
         "tone": "danger",
-        "text": "Les runes de l’ossuaire disent que les restes accumulés préparent **un rituel bien plus vaste, qui exigera des centaines de victimes**. Le culte n’était qu’une antichambre. En Version Améliorée, elles désignent un lieu précis, très loin sous Waterdeep."
+        "text": "Les runes de l’ossuaire préparent **un rituel bien plus vaste, qui exigera des centaines de victimes**. En Améliorée, elles désignent un lieu précis sous Waterdeep."
       },
       {
         "id": "ostrian-libre",
         "title": "Un ennemi qui a un nom",
         "tone": "info",
-        "text": "S’il s’échappe, Ostrian garde sa connexion à Grethuum et recommence — à Waterdeep ou ailleurs. Un adversaire récurrent qui connaît les visages du groupe, et qui réfléchit lentement mais longtemps."
+        "text": "S’il s’échappe, il recommence ailleurs : un adversaire récurrent qui connaît les visages du groupe."
       },
       {
         "id": "dette",
         "title": "Le Guet de Waterdeep",
         "tone": "info",
-        "text": "Selon la fin, la ville doit un service au groupe — ou lui en réclame un. Les deux se rejouent facilement au retour de la strate 3."
+        "text": "Selon la fin, la ville doit un service au groupe — ou lui en réclame un."
       },
       {
         "id": "amis",
         "title": "Des alliés durables",
-        "text": "**Corvan** peut devenir un ami à vie et une source d’aventures. **Fauverive** entier doit quelque chose au groupe. Le **Vieux Brannoc** offre le gîte à vie si son fils rentre. Et Castel-Suif accorde des faveurs pour *L’Anathème des Antérieurs* et la bibliothèque du culte."
+        "text": "**Corvan**, ami à vie. **Fauverive** entier doit quelque chose au groupe. Le **Vieux Brannoc** offre le gîte à vie si son fils rentre. Castel-Suif accorde des faveurs pour *L’Anathème des Antérieurs* et la bibliothèque du culte."
       },
       {
         "id": "durnan-sait",
         "only": "enhanced",
         "title": "Ce que Durnan a vu en bas",
         "tone": "accent",
-        "text": "Il a reconnu le symbole parce qu’il l’a **déjà vu gravé quelque part sous la ville**. Sur le chemin du retour, il dit une seule chose utile : où. C’est un crochet tout prêt pour la strate 3 — ou pour beaucoup plus bas."
+        "text": "Il a reconnu le symbole pour l’avoir **déjà vu gravé sous la ville**. Au retour, il dit une seule chose utile : où."
       }
     ]
   },
+  "summary": "Pour **quatre personnages de niveau 7**, entre la strate 2 et la strate 3. Enquête urbaine, **peu de combats jusqu’au dernier acte**.\n\n**Base :** le fantôme d’une servante sans langue apparaît à Castel-Suif ([[r:c1|C]]) et réclame justice pour un massacre vieux de cinq ans. La piste mène au **manoir Duvessar** ([[r:w4|W4]]), puis à **Fauverive** et au **temple du Verbe Éteint**, où **Lord Ostrian** — seul survivant apparent, meurtrier réel — sert une entité nommée **Grethuum**.\n\n**Améliorée :** le Portail Béant est fermé, **Durnan a disparu** ([[r:w1|W1]]) et Undermountain avec lui. La piste des ravisseurs mène au même manoir.",
   "intro": [
     {
       "id": "accroche",
       "only": "base",
-      "text": "Le groupe est à **Castel-Suif**, entre deux expéditions. Wenna se manifeste pour la première fois en cinq ans, et le MJ choisit pourquoi : un personnage attaché à la loi ou au bien, un passé de tragédie semblable, une jeunesse pauvre comme la sienne — ou simplement quelqu’un qui lisait son journal.",
+      "text": "Le groupe est à **Castel-Suif**, entre deux expéditions. Wenna se manifeste pour la première fois en cinq ans ; choisis pourquoi : un personnage attaché à la loi, un passé semblable, une jeunesse pauvre comme la sienne — ou celui qui lisait son journal.",
       "summary": "À Castel-Suif, le fantôme se manifeste pour la première fois en cinq ans."
     },
     {
       "id": "e-accroche",
       "only": "enhanced",
-      "text": "**Le groupe remonte des Salles Arcaniques pour un repos long.** Il connaît le Portail Béant : c’est par là qu’il descend et remonte depuis des semaines.\n\nCe soir, la salle commune est vide, le feu est mort, et **le puits est enchaîné par le haut**. Durnan n’est nulle part.\n\n**Tant qu’il n’est pas retrouvé, la strate 3 attendra.**",
-      "summary": "Le Portail Béant est vide, le puits scellé, Durnan a disparu — et Undermountain avec lui."
+      "text": "**Le groupe remonte des Salles Arcaniques pour un repos long.** Ce soir, la salle commune du Portail Béant est vide, le feu est mort, et **le puits est enchaîné par le haut**. Durnan n’est nulle part.\n\n**Tant qu’il n’est pas retrouvé, la strate 3 attendra.**",
+      "summary": "Le Portail Béant est vide, le puits scellé, Durnan a disparu."
     },
     {
       "id": "e-mobile",
       "only": "enhanced",
-      "text": "**Pourquoi lui.** Durnan a passé quarante ans sous la ville. Il a reconnu le symbole du Verbe Éteint : **il l’a déjà vu gravé quelque part, en bas**. Il a commencé à poser des questions aux mauvaises personnes.\n\nLe culte l’a fait enlever pour deux raisons à la fois : **le faire taire**, et **récupérer ce qui verrouille le puits**. Il leur faut un accès libre aux profondeurs pour atteindre un lieu précis, très loin sous Waterdeep ([[r:b10|B10]]).",
-      "summary": "Durnan a reconnu le symbole du culte et posé des questions. Il fallait le faire taire et prendre sa clef."
+      "text": "**Pourquoi lui.** Quarante ans sous la ville : Durnan a reconnu le symbole du Verbe Éteint — **il l’a déjà vu gravé en bas** — et posé des questions aux mauvaises personnes.\n\nLe culte l’a enlevé pour **le faire taire** et **récupérer ce qui verrouille le puits** : il lui faut un accès libre vers un lieu précis, très loin sous Waterdeep ([[r:b10|B10]]).",
+      "summary": "Durnan a reconnu le symbole et posé des questions. Il fallait le faire taire et prendre sa clef."
     }
   ],
   "notes": [
     {
       "id": "cles",
-      "text": "**Les clés narratives — ce que chaque indice débloque, et ce qu’on perd à le manquer.**\n\n| Indice | Où | Débloque | Si on le manque |\n|---|---|---|---|\n| Le journal de Wenna | [[r:c1|C]] / [[r:w4|W4]] | Le nom d’Ostrian, l’existence du rituel, le croquis de Grethuum | Rien n’avance : c’est le seul indice **obligatoire** |\n| Le croquis de la créature | le journal | Le titre du grimoire, et la statue de [[r:b7|B7]] reconnue à l’avance | On entre dans la chapelle sans comprendre ce qu’on voit |\n| Le témoignage d’Obrec | [[r:w4|W4]] | Les langues coupées, les commerces du Quartier des Artisans | Les commerces se trouvent quand même, en une demi-journée de plus |\n| Thaevil | [[r:w5|W5]] | **Fauverive**, et un adversaire qui sait qu’on le suit | On trouve Fauverive par les contremaîtres ; Thaevil attendra au temple |\n| Corvan | [[r:w6|W6]] | Le sort des restes, les disparitions sur la route | On ignore que les corps ont été emportés — et Corvan part quand même |\n| Kessa ou le Vieux Brannoc | [[r:g1|G1]] / [[r:g2|G2]] | **La direction de la tour** | Bloquant si l’on rate **les deux**. Les cultistes de [[r:g5|G5]] la donnent aussi, sous la contrainte |\n| Les aveux de la grange | [[r:g5|G5]] | Le nom du culte, Grethuum, l’existence du niveau souterrain | On descend à l’aveugle, ce qui est plus effrayant et plus dangereux |\n| L’urne d’or | [[r:b9|B9]] | **L’objectif de Wenna**. Sans elle, l’aventure n’a pas de fin | Il faut trouver la porte secrète de la chapelle : **DD 15, deux chances** |\n| Les runes de l’ossuaire | [[r:b10|B10]] | L’échelle réelle du projet du culte | On croit avoir fini. On n’a pas fini. |"
+      "text": "**Les clés narratives.**\n\n| Indice | Où | Débloque | Si on le manque |\n|---|---|---|---|\n| Journal de Wenna | [[r:c1|C]] / [[r:w4|W4]] | Ostrian, le rituel, le croquis | Rien n’avance : seul indice **obligatoire** |\n| Le croquis | le journal | Le titre du grimoire, la statue de [[r:b7|B7]] | On entre dans la chapelle sans comprendre |\n| Obrec | [[r:w4|W4]] | Les langues coupées, les commerces | On les trouve quand même, en une demi-journée |\n| Thaevil | [[r:w5|W5]] | **Fauverive**, un adversaire qui sait qu’on le suit | Les contremaîtres donnent Fauverive ; il attendra au temple |\n| Corvan | [[r:w6|W6]] | Le sort des restes, les disparitions | On ignore que les corps ont été emportés |\n| Kessa ou Brannoc | [[r:g1|G1]] / [[r:g2|G2]] | **La direction de la tour** | Bloquant si l’on rate **les deux** ; [[r:g5|G5]] la donne sous la contrainte |\n| Aveux de la grange | [[r:g5|G5]] | Le culte, Grethuum, le niveau souterrain | On descend à l’aveugle : plus effrayant, plus dangereux |\n| L’urne d’or | [[r:b9|B9]] | **L’objectif de Wenna** | Porte secrète de la chapelle : **DD 15, deux chances** |\n| Runes de l’ossuaire | [[r:b10|B10]] | L’échelle réelle du projet | On croit avoir fini. On n’a pas fini. |"
     },
     {
       "id": "e-cles",
-      "text": "**Clés propres à la Version Améliorée.**\n\n| Indice | Où | Débloque | Si on le manque |\n|---|---|---|---|\n| Le symbole de bois | [[r:w1|W1]] | Le lien avec le culte, et la piste Hesken | Deux autres pistes mènent au manoir |\n| Bonnie | [[r:w2|W2]] | Le signalement de **Thaevil** : on peut le cueillir au lieu de l’écouter | On l’interroge poliment, et il repart |\n| Hesken | [[r:w3|W3]] | **L’adresse du manoir**, et le lien avec le vieux dossier | L’Investigation ou l’Histoire du Portail Béant y mènent aussi |\n| Le plan du treuil | [[r:g3|G3]] | **La seule preuve matérielle** utilisable devant le Guet | Ostrian abattu sans preuve : le Guet aura des questions |\n| Durnan libéré | [[r:b7|B7]] | Retire à Ostrian son avantage aux sauvegardes **et** sa raison de rester | Le combat reste gagnable, mais il dure |",
+      "text": "**Clés propres à la Version Améliorée.**\n\n| Indice | Où | Débloque | Si on le manque |\n|---|---|---|---|\n| Le symbole de bois | [[r:w1|W1]] | Le lien avec le culte, la piste Hesken | Deux autres pistes mènent au manoir |\n| Bonnie | [[r:w2|W2]] | Le signalement de **Thaevil** : on peut le cueillir | On l’interroge poliment, et il repart |\n| Hesken | [[r:w3|W3]] | **L’adresse du manoir** | Investigation ou Histoire y mènent aussi |\n| Le plan du treuil | [[r:g3|G3]] | **La seule preuve matérielle** | Le Guet aura des questions |\n| Durnan libéré | [[r:b7|B7]] | Retire à Ostrian son avantage **et** sa raison de rester | Le combat reste gagnable, mais il dure |",
       "only": "enhanced"
     },
     {
       "id": "calibrage",
-      "text": "**Calibrage.** L’aventure source vise le **niveau 7**. Si le groupe remonte encore niveau 6, fais-le passer niveau 7 à la remontée — la strate 2 le justifie. Sinon : retire les **deux gricks optionnels** de [[r:b12|B12]] et **un fanatique** de la chapelle.\n\n**Budget de rencontres :** version de base **13 435 PX** (3 358 par personnage) ; Version Améliorée **26 135 PX** (6 533 par personnage). Aucune des deux ne fait monter de niveau : c’est un intermède, pas une strate."
+      "text": "**Calibrage.** Visé pour le **niveau 7**. Si le groupe remonte encore niveau 6, fais-le passer niveau 7 — la strate 2 le justifie ; sinon retire les **deux gricks** de [[r:b12|B12]] et **un fanatique** de la chapelle.\n\n**Budget :** base **13 435 PX** (3 358/personnage) ; Améliorée **26 135 PX** (6 533/personnage). Aucune ne fait monter de niveau."
     },
     {
       "id": "clerc",
-      "text": "**Si le MJ joue un clerc dans le groupe :** **Bergil soigne et encaisse, il ne déduit pas.** Ne lui fais pas résoudre les énigmes à la place des joueurs, et ne lui fais pas reconnaître le cercle de craie ni les runes de l’ossuaire."
+      "text": "**Si le MJ joue un clerc : Bergil soigne et encaisse, il ne déduit pas.** Il ne résout rien à la place des joueurs et ne reconnaît ni le cercle de craie ni les runes de l’ossuaire."
     },
     {
       "id": "ton",
-      "text": "**Ton et rythme.** Enquête urbaine dense. **Pas de rencontres aléatoires en ville** — jamais. Le premier vrai combat est celui de [[r:w5|W5]] ou de [[r:g5|G5]], et il peut être évité. Tout se paie au dernier acte.\n\n**Le fantôme est muet et frustré.** Il en sait plus qu’il ne peut transmettre, et chaque canal — le doigt sur la page, l’écriture, la possession — est lent. **Ne raccourcis pas ces scènes** : c’est là que réside le dépaysement, pour des joueurs qui sortent de deux strates de couloirs."
+      "text": "**Ton et rythme. Pas de rencontres aléatoires en ville**, jamais. Le premier vrai combat est [[r:w5|W5]] ou [[r:g5|G5]], et il peut être évité.\n\n**Le fantôme est muet et frustré** : il en sait plus qu’il ne peut transmettre, et chaque canal — doigt sur la page, écriture, possession — est lent. **Ne raccourcis pas ces scènes.**"
     },
     {
       "id": "ostrian",
-      "text": "**Jouer Ostrian.** Affable, mesuré, parfaitement crédible en victime. **Il ne se trahit jamais par excès de zèle.** Si les joueurs le soupçonnent tôt, il coopère et les envoie sur une fausse piste — il ne nie pas.\n\n*« Je dois réfléchir, puis réfléchir encore. Les décisions ne se prennent pas vite. »* C’est son défaut, et c’est exploitable : le presser le fait jouer mal.\n\n**Hesken** est bavard et vaniteux, il ne mesure pas ce qu’il a eu entre les mains. **Bonnie** est terrorisée et donne les détails inutiles avant les utiles."
+      "text": "**Jouer Ostrian.** Affable, mesuré, crédible en victime. **Il ne se trahit jamais par excès de zèle** : soupçonné tôt, il coopère et envoie sur une fausse piste plutôt que de nier. *« Je dois réfléchir, puis réfléchir encore. »* Le presser le fait jouer mal.\n\n**Hesken** est bavard et vaniteux. **Bonnie** est terrorisée et donne les détails inutiles avant les utiles."
     },
     {
       "id": "e-halaster",
-      "text": "**Interdit : Halaster.** Cette affaire est humaine et sordide. Ne l’implique pas, ne suggère pas une manipulation du Mage dément, ne confirme jamais cette théorie si un joueur l’avance. **Le donjon garde ses propres mystères.**",
+      "text": "**Interdit : Halaster.** Cette affaire est humaine et sordide. Ne l’implique pas, ne le suggère pas, ne confirme jamais cette théorie si un joueur l’avance.",
       "only": "enhanced"
     },
     {
       "id": "e-route",
-      "text": "**Fauverive est à deux heures de cheval**, pas à une journée : l’horloge d’un enlèvement ne supporte pas deux jours de voyage. Si tu tiens au trajet long, il faut alors **poser explicitement que Durnan n’est pas en danger de mort immédiat** — sinon les joueurs auront raison de se sentir floués.",
+      "text": "**Fauverive est à deux heures de cheval**, pas à une journée : l’horloge d’un enlèvement ne supporte pas deux jours de route. Si tu tiens au trajet long, **pose que Durnan n’est pas en danger immédiat**.",
       "only": "enhanced"
     },
     {
       "id": "source",
-      "text": "**Source et correspondance des noms — à ne pas lire à la table.**\n\nCette aventure adapte « *Sarah of Yellowcrest Manor* » de Derek Ruiz (*Candlekeep Mysteries*, p. 106-113). **Tous les noms propres inventés par le module ont été changés** pour que les joueurs ne puissent pas retrouver la source en ligne. Les numéros de salle sont ceux du livre : G1-G5 pour le hameau, B1-B13 pour le temple.\n\n| Le livre dit | Nous disons |\n|---|---|\n| Sarah | **Wenna** |\n| Yellowcrest (maison) | **Duvessar** |\n| Lord Viallis | **Lord Ostrian** |\n| Lady Maria | **Lady Ysolde** |\n| Malik, Janus, Tianna | **Perrin, Aldric, Sionne** |\n| Faerl | **Thaevil** |\n| Sir Vecken of the Broken Horn | **Sir Corvan du Heaume Fendu** |\n| Arnulf, famille Falgarst | **Obrec**, famille **Menthyr** |\n| Sirok | **Hesken** |\n| Greenfast | **Fauverive** |\n| Kara / Yaeda Firenni | **Kessa / Nyla Vairon** |\n| Old / Young Fargo | **le Vieux / le Jeune Brannoc** |\n| The Bulging Cauldron | **Le Pichet Bossu** |\n| Gaernoo | **Grethuum** |\n| Burnt Tongue Cult | **culte du Verbe Éteint** |\n| une langue arrachée (symbole) | **une bouche cousue de trois points** |\n| Retribution of the Ancients | ***L’Anathème des Antérieurs*** |\n| Delzorin Street, Immar Street | **rue Vantrelle**, **rue des Cordiers** |\n| Jalrax, Durz, Seffra, Ashlan | **Bram, Odile, Teff, Mielle** |\n\n**Inchangés**, parce qu’ils appartiennent aux Royaumes et non au module : Waterdeep et ses quartiers, Undermountain, le Portail Béant, **Durnan**, **Bonnie**, Castel-Suif, Skullport, la Cité des Morts, la Voie Marchande. Les titres imprimés sur les deux cartes ont été repeints en français."
+      "text": "**Source et correspondance des noms — à ne pas lire à la table.**\n\nAdapté de « *Sarah of Yellowcrest Manor* » de Derek Ruiz (*Candlekeep Mysteries*, p. 106-113). **Tous les noms propres du module ont été changés** pour que les joueurs ne retrouvent pas la source en ligne. Numéros de salle : ceux du livre.\n\n| Le livre dit | Nous disons |\n|---|---|\n| Sarah | **Wenna** |\n| Yellowcrest (maison) | **Duvessar** |\n| Lord Viallis | **Lord Ostrian** |\n| Lady Maria | **Lady Ysolde** |\n| Malik, Janus, Tianna | **Perrin, Aldric, Sionne** |\n| Faerl | **Thaevil** |\n| Sir Vecken of the Broken Horn | **Sir Corvan du Heaume Fendu** |\n| Arnulf, famille Falgarst | **Obrec**, famille **Menthyr** |\n| Sirok | **Hesken** |\n| Greenfast | **Fauverive** |\n| Kara / Yaeda Firenni | **Kessa / Nyla Vairon** |\n| Old / Young Fargo | **le Vieux / le Jeune Brannoc** |\n| The Bulging Cauldron | **Le Pichet Bossu** |\n| Gaernoo | **Grethuum** |\n| Burnt Tongue Cult | **culte du Verbe Éteint** |\n| une langue arrachée (symbole) | **une bouche cousue de trois points** |\n| Retribution of the Ancients | ***L’Anathème des Antérieurs*** |\n| Delzorin Street, Immar Street | **rue Vantrelle**, **rue des Cordiers** |\n| Jalrax, Durz, Seffra, Ashlan | **Bram, Odile, Teff, Mielle** |\n\n**Inchangés**, parce qu’ils appartiennent aux Royaumes et non au module : Waterdeep, Undermountain, le Portail Béant, **Durnan**, **Bonnie**, Castel-Suif, Skullport, la Cité des Morts, la Voie Marchande. Les titres des cartes ont été repeints en français."
     },
     {
       "id": "fin",
-      "text": "**Le dernier repos.** Les cendres de Lady Ysolde, Perrin, Aldric et Sionne doivent être répandues en **terre consacrée** — n’importe quel mausolée de la Cité des Morts convient.\n\nÀ l’instant où on les inhume, les quatre spectres se matérialisent. Lady Ysolde serre ses trois enfants contre elle et croise le regard de chaque personnage. **Wenna apparaît**, son lien au journal rompu. Puis les cinq esprits se dispersent comme des pétales.\n\nSi Corvan est là, il pleure en la revoyant, puis remercie le groupe une fois tous les esprits passés."
+      "text": "**Le dernier repos.** Les cendres doivent être répandues en **terre consacrée** ; n’importe quel mausolée de la Cité des Morts convient.\n\nÀ l’inhumation, les quatre spectres se matérialisent. Lady Ysolde serre ses enfants contre elle et croise le regard de chaque personnage. **Wenna apparaît**, son lien au journal rompu. Puis les cinq se dispersent.\n\nSi Corvan est là, il pleure en la revoyant, puis remercie le groupe."
     }
   ],
   "sections": [
     {
       "id": "s1",
       "title": "Acte I — L’accroche",
-      "intro": "Version de base : le fantôme se manifeste à Castel-Suif. **Version Améliorée : la taverne est vide et Durnan a disparu.** Trois pistes, dont deux suffisent.",
+      "intro": "Base : le fantôme se manifeste à Castel-Suif. **Améliorée : la taverne est vide et Durnan a disparu.** Trois pistes, deux suffisent.",
       "rooms": [
         "c1",
         "w1",
@@ -286,7 +286,7 @@
     {
       "id": "s2",
       "title": "Acte II — Waterdeep",
-      "intro": "Le manoir, les commerces du Quartier des Artisans, et l’ancien fiancé de Wenna. C’est ici que l’affaire froide et l’affaire chaude se rejoignent.",
+      "intro": "Le manoir, les commerces du Quartier des Artisans, l’ancien fiancé de Wenna. L’affaire froide et l’affaire chaude se rejoignent.",
       "rooms": [
         "w4",
         "w5",
@@ -296,7 +296,7 @@
     {
       "id": "s3",
       "title": "Acte III — Fauverive",
-      "intro": "Un hameau agricole prospère, à deux heures de cheval au sud-est (**une journée en version de base**). Tout le monde sait quelque chose et personne ne veut le dire.",
+      "intro": "Hameau agricole à deux heures de cheval au sud-est (**une journée en base**). Tout le monde sait quelque chose et personne ne veut le dire.",
       "rooms": [
         "g1",
         "g2",
@@ -308,7 +308,7 @@
     {
       "id": "s4",
       "title": "Le temple — niveau supérieur",
-      "intro": "Une heure au nord du hameau. **Le bruit décide de tout** : l’alerte se propage de [[r:b1|B1]] à [[r:b3|B3]] puis à la chapelle.",
+      "intro": "Une heure au nord du hameau. **Le bruit décide de tout** : l’alerte va de [[r:b1|B1]] à [[r:b3|B3]] puis à la chapelle.",
       "rooms": [
         "b0",
         "b1",
@@ -323,7 +323,7 @@
     {
       "id": "s5",
       "title": "Le temple — niveau inférieur",
-      "intro": "Les tunnels sous la chapelle : les cellules, l’ossuaire, et ce que le culte garde derrière les portes secrètes.",
+      "intro": "Les tunnels sous la chapelle : cellules, ossuaire, et ce que le culte garde derrière les portes secrètes.",
       "rooms": [
         "b8",
         "b9",
@@ -346,29 +346,29 @@
         "pnj",
         "énigme"
       ],
-      "layout": "Un couloir d’archives où l’on range ce que personne ne demande. Étagères de chêne noirci, deux lampes à huile, et l’odeur de colle de reliure.",
+      "layout": "Couloir d’archives, chêne noirci, deux lampes à huile, odeur de colle.",
       "readAloud": [
         {
           "id": "0",
-          "text": "L’air se refroidit d’un coup. Une buée se met à briller le long des rayons, plus épaisse autour d’un livre de cuir sans titre. La brume prend la forme d’une jeune femme — un esprit translucide en tenue de servante, un arbre au soleil levant brodé à l’épaule.\n\nElle pleure. Elle ouvre la bouche pour parler : **il n’y a plus de langue**. Elle gémit, tend la main vers vous, puis la brume s’effiloche et l’esprit s’efface.",
-          "summary": "Le fantôme d’une servante sans langue apparaît près d’un livre de cuir, tend la main, disparaît."
+          "text": "L’air se refroidit. Une buée brille autour d’un livre de cuir sans titre et prend la forme d’une jeune servante, un arbre au soleil levant brodé à l’épaule.\n\nElle pleure et ouvre la bouche : **il n’y a plus de langue**. Elle gémit, tend la main, s’efface.",
+          "summary": "Un fantôme de servante sans langue apparaît près d’un livre et disparaît."
         }
       ],
       "features": [
         {
           "id": "livre",
           "title": "Le livre : *Wenna du manoir Duvessar*",
-          "text": "Reliure de cuir, coins de laiton, fermoir ouvragé. Sur le plat, le même symbole qu’à l’épaule du fantôme : **un citronnier devant un soleil levant**. Les premières pages ne sont que le prénom « Wenna » répété. Puis l’écriture s’assouplit : c’est un journal."
+          "text": "Cuir, coins de laiton, **un citronnier devant un soleil levant** sur le plat — le symbole vu à son épaule. Les premières pages ne sont que le prénom « Wenna » répété."
         },
         {
           "id": "rappel",
           "title": "Rappeler Wenna",
-          "text": "Elle réapparaît **chaque fois qu’on prononce son nom près du livre**. Elle ne peut pas s’éloigner de plus de 9 m de celui-ci."
+          "text": "Elle revient **chaque fois qu’on prononce son nom près du livre**, et ne s’en éloigne pas de plus de 9 m."
         },
         {
           "id": "sortir",
           "title": "Le livre ne sort pas",
-          "text": "Comme tout ouvrage de Castel-Suif, il reste à la bibliothèque. On peut le faire **copier au tarif habituel** — ou simplement considérer que le groupe retient ce qu’il faut."
+          "text": "Comme tout ouvrage de Castel-Suif. Le faire copier, ou considérer que le groupe retient l’essentiel."
         }
       ],
       "checks": [
@@ -376,44 +376,44 @@
           "id": "sceau",
           "skill": "Intelligence (Histoire)",
           "dc": 14,
-          "text": "Le citronnier au soleil levant est le **sceau de la famille Duvessar**, de Waterdeep. Automatique pour un personnage de haute naissance ou qui connaît bien la ville.",
-          "failure": "Un blason de marchand, sans plus."
+          "text": "Le citronnier au soleil levant est le **sceau de la maison Duvessar**, de Waterdeep. Automatique pour un noble ou qui connaît la ville.",
+          "failure": "Un blason de marchand."
         },
         {
           "id": "cercle",
           "skill": "Intelligence (Arcanes)",
           "dc": 15,
-          "text": "Le croquis maladroit du cercle de runes est un **rituel de** *contact extraplanaire*, et les runes désignent une entité des Plans Extérieurs. Maîtrise d’Arcanes requise ; sinon, un Avoué de Castel-Suif peut le dire.",
-          "failure": "Un gribouillis de runes. Un Avoué saura."
+          "text": "Un rituel de ***contact extraplanaire*** tourné vers une entité des Plans Extérieurs. Maîtrise d’Arcanes requise.",
+          "failure": "Des runes. Un Avoué saura."
         },
         {
           "id": "insight",
           "skill": "Sagesse (Perspicacité)",
           "dc": 12,
-          "text": "On finit par comprendre les gémissements de Wenna. **Un bon jeu de rôle remplace le jet.**"
+          "text": "On comprend ses gémissements. Un bon jeu de rôle remplace le jet."
         }
       ],
       "notes": [
         {
           "id": "contenu",
-          "text": "**Ce que le journal raconte.** Wenna était servante au manoir de **Lord Ostrian** et **Lady Ysolde Duvessar**. Ysolde, née pauvre, lui a appris à écrire et lui a offert ce livre. Les dernières entrées, datées d’il y a cinq ans, changent de ton : Ostrian passe ses nuits sur de vieux livres.",
+          "text": "**Le journal.** Wenna était servante chez **Lord Ostrian** et **Lady Ysolde Duvessar** ; Ysolde, née pauvre, lui a appris à écrire. Les dernières entrées, il y a cinq ans, s’inquiètent des nuits qu’Ostrian passe sur de vieux livres.\n\nIl nomme aussi deux fils, **Perrin** et **Aldric**, une fille, **Sionne**, l’associé elfe **Thaevil**, et **un écuyer, Corvan**, rue des Cordiers.",
           "summary": "Journal d’une servante ; les dernières pages s’inquiètent du maître de maison."
         },
         {
           "id": "derniere",
-          "text": "**La dernière page**, à lire à voix haute :\n\n« *Je me suis approchée de Lord Ostrian aujourd’hui, et j’ai vu qu’il avait tracé à la craie un cercle marqué de runes étranges sur le sol de son cabinet. Une flaque s’étendait à l’intérieur, et elle m’a paru être du sang qui bouillonnait. Lord Ostrian se tenait à côté, immobile, un de ses livres immondes à la main, et murmurait quelque chose que je n’entendais pas. Je me suis éclipsée vite, mais je crains qu’il m’ait entendue cette fois. Je n’ai jamais eu aussi peur, mais je dois dire à Lady Ysolde ce que j’ai vu. Je le dois !* »"
+          "text": "**Dernière page**, à lire :\n\n« *Lord Ostrian avait tracé à la craie un cercle de runes sur le sol de son cabinet. Une flaque s’y étendait, et elle m’a paru être du sang qui bouillonnait. Il se tenait à côté, un de ses livres immondes à la main. Je crains qu’il m’ait entendue. Je dois dire à Lady Ysolde ce que j’ai vu.* »"
         },
         {
           "id": "croquis",
-          "text": "**Le croquis.** Wenna a tenté de dessiner la couverture du livre que lisait Ostrian : une créature à **grosse tête bulbeuse, longs bras, tentacules en guise de jambes, yeux à facettes**. C’est la statue de la chapelle ([[r:b7|B7]]). Deux jours de recherche à Castel-Suif donnent son titre : ***Anathème des Antérieurs***."
+          "text": "**Le croquis.** La couverture du livre : **tête bulbeuse, longs bras, tentacules en guise de jambes, yeux à facettes** — la statue de [[r:b7|B7]]. Deux jours de recherche donnent le titre : ***L’Anathème des Antérieurs***."
         },
         {
           "id": "savoir",
-          "text": "**Ce que Wenna peut transmettre** — par gémissements, en montrant des pages, ou en possédant quelqu’un :\n• **Ostrian a tué** sa femme, ses enfants, elle-même et trois autres domestiques, dans un rituel.\n• Le livre qu’il lisait en était la source.\n• Les âmes de **Ysolde, Perrin, Aldric et Sionne** sont retenues ici tant que leurs restes ne reposent pas en terre consacrée.\n• **Ces restes ont disparu.** Elle ignore où. Elle sait qu’Ostrian y est pour quelque chose.\n\nAu-delà, elle ne sait rien : le traumatisme a effacé le reste, y compris sa propre mort."
+          "text": "**Ce qu’elle peut transmettre** (gémissements, doigt sur une page, possession) :\n• **Ostrian a tué** sa femme, ses trois enfants, elle-même et trois domestiques, dans un rituel, et le livre en était la source.\n• Les âmes de **Ysolde, Perrin, Aldric et Sionne** restent retenues tant que leurs restes ne reposent pas en terre consacrée.\n• **Ces restes ont disparu**, elle ignore où — et elle ne se souvient pas de sa propre mort."
         },
         {
           "id": "public",
-          "text": "**Ce que tout le monde sait à Waterdeep** (quelques heures de recherche, ou n’importe quel érudit) : Lord Duvessar était en voyage d’affaires ; il est rentré et a trouvé sa femme, ses trois enfants et quatre domestiques assassinés. Anéanti, il a tout vendu et quitté la ville. Le Guet a laissé filtrer des rumeurs de **culte**, sans jamais rien révéler. Aucun suspect. Personne n’a jamais soupçonné le veuf."
+          "text": "**Ce que tout Waterdeep sait.** Lord Duvessar était en voyage ; rentré, il a trouvé sa femme, ses trois enfants et quatre domestiques assassinés, puis a tout vendu et quitté la ville. Rumeurs de culte, aucun suspect — **personne n’a soupçonné le veuf.**"
         }
       ],
       "npcs": [
@@ -423,22 +423,22 @@
           "role": "Fantôme lié au journal",
           "attitude": "suppliante",
           "monster": "wenna",
-          "description": "Une servante d’une vingtaine d’années, en larmes, l’arbre au soleil levant à l’épaule. **Elle n’a plus de langue.**",
-          "wants": "Que Lady Ysolde et les trois enfants reposent en terre consacrée.",
+          "description": "Servante d’une vingtaine d’années, arbre au soleil levant à l’épaule, en larmes. **Plus de langue.**",
+          "wants": "Que Ysolde et les trois enfants reposent en terre consacrée.",
           "secrets": [
-            "Elle **ne se souvient pas** de sa propre mort : le traumatisme l’a effacée.",
-            "Détruire le journal la libère de ses 9 m — elle n’en devient que plus acharnée."
+            "Elle **ne se souvient pas** de sa mort.",
+            "Détruire le journal la libère de ses 9 m."
           ],
           "dialogues": [
             {
               "id": "muet",
-              "trigger": "À chaque tentative de parler",
-              "line": "*(Elle ouvre la bouche. Un souffle rauque sort, rien d’autre. Elle referme la bouche et détourne les yeux — elle a honte.)*"
+              "trigger": "Chaque tentative de parler",
+              "line": "*(Elle ouvre la bouche. Un souffle rauque. Elle referme et détourne les yeux.)*"
             },
             {
               "id": "page",
-              "trigger": "Quand on lui pose une question précise",
-              "line": "*(Elle traverse la table, ouvre le journal d’un coup de main qui ne déplace pas d’air, et pose l’index sur une ligne. Elle attend qu’on lise.)*"
+              "trigger": "Question précise",
+              "line": "*(Elle traverse la table, ouvre le journal, pose l’index sur une ligne, et attend qu’on lise.)*"
             }
           ]
         }
@@ -446,7 +446,7 @@
       "connections": [
         {
           "to": "w4",
-          "via": "Cap sur Waterdeep : la piste commence au manoir"
+          "via": "Waterdeep : le manoir"
         }
       ]
     },
@@ -461,34 +461,34 @@
         "social",
         "pnj"
       ],
-      "layout": "La grande salle commune de la taverne du Portail Béant, à Waterdeep. Au centre, le **puits** de trois mètres de diamètre qui descend dans Undermountain, entouré de sa margelle de pierre. Long comptoir à l’est, deux âtres, une trentaine de tables.",
+      "layout": "Salle commune. Au centre, le **puits** de 3 m vers Undermountain ; comptoir à l’est, deux âtres, une trentaine de tables.",
       "readAloud": [
         {
           "id": "0",
-          "text": "Vous remontez les derniers barreaux et vous vous hissez sur la margelle. Vous vous attendiez au bruit.\n\nIl n’y a rien. Pas un client, pas un feu, pas une chandelle. Trois tables sont renversées, une quatrième est fendue en deux dans le sens de la longueur. Le comptoir a été arraché de ses fixations sur deux mètres. Et le **treuil du puits a été verrouillé — depuis le haut, avec une chaîne qui n’appartient pas à la maison.**\n\nDurnan n’est pas là.",
-          "summary": "La salle commune est vide et saccagée. Le puits est enchaîné par le haut. Durnan a disparu."
+          "text": "Vous vous hissez sur la margelle. Vous vous attendiez au bruit — il n’y a rien.\n\nTrois tables renversées, une quatrième fendue en deux, le comptoir arraché sur deux mètres. Et **le treuil verrouillé par une chaîne qui n’est pas de la maison**.\n\nDurnan n’est pas là.",
+          "summary": "Salle vide et saccagée, puits enchaîné, Durnan disparu."
         }
       ],
       "features": [
         {
           "id": "lutte",
-          "title": "Les traces de lutte",
-          "text": "Trop de dégâts pour un homme seul, **et pas assez de sang**. Le comptoir a été arraché par-dessous. Aucune trace de pas dans la poussière, alors qu’il y en a partout ailleurs."
+          "title": "Les traces",
+          "text": "Trop de dégâts pour un homme seul, **et pas assez de sang**. Comptoir arraché par-dessous, aucune trace de pas là où il y en a partout ailleurs."
         },
         {
           "id": "chaine",
-          "title": "La chaîne du treuil",
-          "text": "Acier neuf, maillons soudés, **cadenassée du côté salle**. Personne n’est remonté après. Celui qui a fermé le puits est reparti par la porte."
+          "title": "La chaîne",
+          "text": "Acier neuf, **cadenassée côté salle** : celui qui a fermé le puits est reparti par la porte."
         },
         {
           "id": "objet",
           "title": "L’objet abandonné",
-          "text": "Sous une table renversée : **un symbole de bois, une bouche cousue de trois points**, taillé récemment. Il n’appartient à personne de la maison."
+          "text": "Sous une table renversée : **un symbole de bois, une bouche cousue de trois points**, taillé récemment, qui n’est à personne de la maison."
         },
         {
           "id": "consequence",
-          "title": "Ce que cela coûte",
-          "text": "**Tant que Durnan n’est pas retrouvé, Undermountain est fermé.** Il est le seul à avoir la clef du treuil, et le Guet a scellé la taverne. La strate 3 attendra."
+          "title": "Ce que ça coûte",
+          "text": "**Undermountain est fermé tant que Durnan manque** : seule clef du treuil, et le Guet a scellé la taverne."
         }
       ],
       "checks": [
@@ -496,39 +496,39 @@
           "id": "invest",
           "skill": "Intelligence (Investigation)",
           "dc": 13,
-          "text": "**Piste 1.** Le comptoir a été arraché **par en dessous** : la chose qui a fait ça était au sol, ou volait au ras. Et les tables sont tombées **vers le puits**, pas vers la porte : on a repoussé Durnan vers le trou avant de l’emmener.",
-          "failure": "Une bagarre de taverne comme une autre, en plus violent."
+          "text": "Le comptoir a été arraché **par en dessous** : la chose était au sol ou volait au ras. Les tables sont tombées **vers le puits** — on l’a repoussé vers le trou.",
+          "failure": "Une bagarre de taverne, en plus violent."
         },
         {
           "id": "histoire",
           "skill": "Intelligence (Histoire)",
           "dc": 14,
-          "text": "**Piste 1 bis.** Le symbole de bois n’est pas un ex-voto connu du Guet ni d’aucun temple de la ville. Mais un érudit a déjà vu cette forme — dans un livre. *(Renvoie vers [[r:w3|Hesken]].)*",
-          "failure": "Une amulette de secte, il y en a cent à Waterdeep."
+          "text": "Inconnu du Guet et des temples, mais un érudit l’a déjà vu dans un livre. *(Vers [[r:w3|Hesken]].)*",
+          "failure": "Une amulette de secte comme il y en a cent."
         },
         {
           "id": "medecine",
           "skill": "Sagesse (Médecine)",
           "dc": 12,
-          "text": "Le peu de sang au sol est **du sang de Durnan**, et il y en a très peu pour un tel désordre. Il n’a pas été maîtrisé de force : il a arrêté de se battre."
+          "text": "Le sang est celui de Durnan, et il y en a très peu pour un tel désordre. **Il a arrêté de se battre.**"
         }
       ],
       "notes": [
         {
           "id": "trois",
-          "text": "**Trois pistes, deux suffisent.** [[r:w2|Bonnie]] (le témoignage), l’indice matériel ci-dessus (Investigation **ou** Histoire), et [[r:w3|Hesken]] (le symbole). **Aucune ne doit être unique** : un mauvais jet ne ferme jamais l’aventure. Si le groupe patine, le Guet vient les chercher — quelqu’un a parlé d’aventuriers qui remontaient du puits."
+          "text": "**Trois pistes, deux suffisent** : [[r:w2|Bonnie]], l’indice matériel, [[r:w3|Hesken]]. Si le groupe patine, le Guet vient les chercher."
         },
         {
           "id": "comment",
-          "text": "**Comment ils l’ont eu — à trancher avant la séance.** Poison dans son propre fût · entrave magique posée par un lanceur sérieux · **reddition volontaire pour épargner Bonnie et les clients**. Ne laisse jamais entendre qu’une bande d’hommes de main ordinaires a maîtrisé Durnan de force : ce serait faux, et le groupe le sentirait."
+          "text": "**Comment ils l’ont eu — à trancher avant la séance.** Poison dans son fût · entrave magique · **reddition volontaire pour épargner Bonnie**. Jamais maîtrisé de force."
         },
         {
           "id": "halaster",
-          "text": "**Halaster n’y est pour rien.** Cette affaire est humaine et sordide ; le donjon garde ses propres mystères. Si un joueur avance cette théorie, laisse-le enquêter et se tromper — mais ne la confirme jamais."
+          "text": "**Halaster n’y est pour rien** : laisse enquêter, ne confirme jamais."
         },
         {
           "id": "guet",
-          "text": "**Le Guet est déjà passé** et n’a rien trouvé. Il a scellé la porte, pris trois dépositions et classé l’affaire « disparition ». Les gardes ([[m:guard|garde]]) sont polis et parfaitement inutiles."
+          "text": "Le Guet a classé en « disparition ». Les gardes ([[m:guard|garde]]) sont polis et inutiles."
         }
       ],
       "connections": [
@@ -538,11 +538,11 @@
         },
         {
           "to": "w3",
-          "via": "Vers l’échoppe de Hesken, quartier de la Mer"
+          "via": "Échoppe de Hesken, quartier de la Mer"
         },
         {
           "to": "w4",
-          "via": "Quartier Nord, rue Vantrelle"
+          "via": "Rue Vantrelle, Quartier Nord"
         }
       ]
     },
@@ -556,12 +556,12 @@
         "social",
         "pnj"
       ],
-      "layout": "Un arrière-cuisine de maison mitoyenne, deux portes plus loin que la taverne. Bonnie est assise près du fourneau depuis la nuit dernière et n’a pas dormi.",
+      "layout": "Arrière-cuisine mitoyenne. Bonnie est près du fourneau depuis la nuit dernière.",
       "readAloud": [
         {
           "id": "0",
-          "text": "La serveuse du Portail Béant est là, une couverture sur les épaules, une tasse froide entre les mains. Elle vous reconnaît et se lève trop vite.\n\n« Vous êtes redescendus quand ? Non — attendez. Je vais tout dire. Je vais tout dire, mais laissez-moi commencer par le début, sinon je vais m’embrouiller. »\n\nElle commence par le début. Le début, c’est quatre heures avant.",
-          "summary": "Bonnie est terrorisée et veut tout raconter — en commençant beaucoup trop tôt."
+          "text": "La serveuse est là, une couverture sur les épaules, une tasse froide entre les mains. Elle se lève trop vite.\n\n« Je vais tout dire, mais laissez-moi commencer par le début. »\n\nLe début, c’est quatre heures avant.",
+          "summary": "Bonnie veut tout raconter, en commençant beaucoup trop tôt."
         }
       ],
       "npcs": [
@@ -571,31 +571,31 @@
           "role": "Serveuse du Portail Béant",
           "attitude": "terrorisée",
           "monster": "commoner",
-          "description": "Jeune, vive d’ordinaire, méconnaissable ce matin. Elle parle vite et ne s’arrête pas.",
-          "wants": "Que quelqu’un lui dise que ce n’est pas sa faute.",
+          "description": "Jeune, vive d’ordinaire, méconnaissable ce matin.",
+          "wants": "Qu’on lui dise que ce n’est pas sa faute.",
           "secrets": [
-            "**Elle donne les détails inutiles avant les utiles.** Laisse-la parler : le bon détail arrive au bout, et il arrive tout seul si personne ne la coupe."
+            "**Elle donne les détails inutiles avant les utiles.** Le bon détail arrive tout seul si personne ne la coupe."
           ],
           "dialogues": [
             {
               "id": "inutile",
               "trigger": "Ce qu’elle raconte en premier",
-              "line": "« Il avait changé le fût de brune l’après-midi, et il avait râlé parce que la bonde était fendue, et moi j’avais dit qu’il fallait en commander d’autres, et il avait dit que non, que ça tiendrait encore l’hiver… »"
+              "line": "« Il avait changé le fût de brune l’après-midi, et il avait râlé parce que la bonde était fendue, et moi j’avais dit qu’il fallait en commander d’autres… »"
             },
             {
               "id": "utile1",
               "trigger": "Si on la laisse aller au bout",
-              "line": "« …et l’homme au chapeau, il est resté trois soirs. Il buvait rien. Il regardait le puits. Le troisième soir, Durnan est allé lui parler, et là il a changé de tête, Durnan. J’avais jamais vu ça. »"
+              "line": "« …et l’homme au chapeau, il est resté trois soirs. Il buvait rien. Il regardait le puits. Le troisième soir, Durnan est allé lui parler, et là il a changé de tête. »"
             },
             {
               "id": "utile2",
               "trigger": "Sur l’homme au chapeau",
-              "line": "« Un elfe. Bien mis. Un chapeau rouge, trop grand pour lui. Il parlait tellement bas qu’il fallait se pencher. Ça m’a mise mal à l’aise, cette façon d’obliger les gens à se pencher. »"
+              "line": "« Un elfe. Bien mis. Un chapeau rouge, trop grand. Il parlait tellement bas qu’il fallait se pencher. Ça m’a mise mal à l’aise, cette façon d’obliger les gens à se pencher. »"
             },
             {
               "id": "utile3",
               "trigger": "Sur la nuit même",
-              "line": "« Durnan m’a dit de sortir par la cave. Il m’a pas demandé, il m’a dit. Et il souriait. C’est ça qui me fait peur, en fait. **Il souriait.** »"
+              "line": "« Durnan m’a dit de sortir par la cave. Il m’a pas demandé, il m’a dit. Et il souriait. C’est ça qui me fait peur. **Il souriait.** »"
             },
             {
               "id": "faute",
@@ -608,15 +608,11 @@
       "notes": [
         {
           "id": "gain",
-          "text": "**Ce que Bonnie débloque :** le signalement de **Thaevil** — elfe, chapeau rouge trop grand, voix très basse. Le groupe le reconnaîtra en [[r:w5|W5]] sans avoir à le chercher, et pourra le prendre de vitesse."
-        },
-        {
-          "id": "rate",
-          "text": "**S’ils ratent Bonnie :** ils croiseront quand même Thaevil aux commerces, mais **sans savoir qui il est**. La rencontre passe alors de « on le tient » à « on l’interroge poliment » — et il repart."
+          "text": "**Elle débloque le signalement de Thaevil** — elfe, chapeau rouge trop grand, voix très basse — que le groupe reconnaîtra en [[r:w5|W5]]. **Sans elle**, on l’interroge poliment et il repart."
         },
         {
           "id": "sourire",
-          "text": "**Le sourire.** C’est l’indice qui compte et personne ne le comprendra sur le moment : Durnan s’est rendu. Il a fait sortir la petite et il est parti avec eux. Laisse le groupe y revenir tout seul, plus tard."
+          "text": "**Le sourire** est l’indice qui compte, et personne ne le comprendra sur le moment : Durnan s’est rendu."
         }
       ],
       "connections": [
@@ -626,7 +622,7 @@
         },
         {
           "to": "w5",
-          "via": "Vers le Quartier des Artisans"
+          "via": "Quartier des Artisans"
         }
       ]
     },
@@ -641,12 +637,12 @@
         "pnj",
         "énigme"
       ],
-      "layout": "Deux pièces au-dessus d’un chandelier, quartier de la Mer. Une table couverte de plumes, de bocaux et de choses qui fument doucement. Hesken n’a jamais rangé de sa vie.",
+      "layout": "Deux pièces au-dessus d’un chandelier, quartier de la Mer. Bocaux, plumes, choses qui fument.",
       "readAloud": [
         {
           "id": "0",
-          "text": "« Un symbole ? Montrez. » Il vous l’arrache presque des mains, le tient à bout de bras, l’approche, l’éloigne.\n\n« Ha ! **Ha.** Oui. Je l’ai vu. Pas ce bois-là, gravé — sur un plat de reliure. J’avais quinze ans, j’ai acheté un lot de livres à une brocante de la rue Vantrelle, une famille qui liquidait tout après un drame. J’ai revendu le lot, sauf un que j’ai donné à Castel-Suif pour payer mon entrée. » *(Il sourit, très content de lui.)* « Le journal d’une servante. Je ne l’ai jamais lu, remarquez. »",
-          "summary": "Hesken reconnaît le symbole : il l’a vu sur un livre acheté rue Vantrelle, il y a des années."
+          "text": "« Un symbole ? Montrez. » Il vous l’arrache presque des mains, le tient à bout de bras, l’approche, l’éloigne.\n\n« Ha ! Je l’ai vu — pas ce bois-là, gravé, sur un plat de reliure. Un lot de livres acheté rue Vantrelle, une famille qui liquidait après un drame. J’ai tout revendu, sauf un que j’ai donné à Castel-Suif pour payer mon entrée. » *(Très content de lui.)* « Le journal d’une servante. Jamais lu. »",
+          "summary": "Hesken reconnaît le symbole : vu sur un livre acheté rue Vantrelle."
         }
       ],
       "npcs": [
@@ -656,27 +652,27 @@
           "role": "Apprenti mage",
           "attitude": "bavard",
           "monster": "mage",
-          "description": "La quarantaine, apprenti depuis vingt-cinq ans et fier de l’être. Il parle en faisant des gestes qui renversent des choses.",
-          "wants": "Qu’on l’écoute, et qu’on trouve qu’il a eu du flair.",
+          "description": "La quarantaine, apprenti depuis vingt-cinq ans et fier de l’être. Il parle en renversant des choses.",
+          "wants": "Qu’on l’écoute et qu’on trouve qu’il a eu du flair.",
           "secrets": [
-            "**Il ne mesure pas ce qu’il a eu entre les mains.** Il a revendu un lot qui contenait *L’Anathème des Antérieurs* et il ne le sait toujours pas.",
-            "Il a gardé l’adresse de la brocante : **rue Vantrelle, le manoir Duvessar**."
+            "**Il ne mesure pas ce qu’il a eu entre les mains** : le lot revendu contenait *L’Anathème des Antérieurs*.",
+            "Il a gardé l’adresse : **rue Vantrelle, le manoir Duvessar**."
           ],
           "dialogues": [
             {
               "id": "adresse",
               "trigger": "Où il a acheté le lot",
-              "line": "« Rue Vantrelle, Quartier Nord. La grande bâtisse au portail de fer. On liquidait tout, le veuf partait. Personne n’osait acheter — moi je trouvais ça idiot, un livre n’a pas de mémoire. » *(Un temps.)* « Enfin. C’est ce que je croyais. »"
+              "line": "« Rue Vantrelle, Quartier Nord. La grande bâtisse au portail de fer. Personne n’osait acheter — moi je trouvais ça idiot, un livre n’a pas de mémoire. » *(Un temps.)* « C’est ce que je croyais. »"
             },
             {
               "id": "autres",
               "trigger": "Sur le reste du lot",
-              "line": "« Sept ou huit volumes. Un traité d’élevage, deux romans, et un gros, très laid, avec une bête sur le plat — des tentacules, une tête comme une outre. Celui-là je l’ai revendu tout de suite, il sentait mauvais. »"
+              "line": "« Sept ou huit volumes. Deux romans, et un gros, très laid, une bête sur le plat — des tentacules, une tête comme une outre. Celui-là, revendu tout de suite. »"
             },
             {
               "id": "acheteur",
               "trigger": "À qui il l’a revendu",
-              "line": "« Un intermédiaire. Un elfe. » *(Il fronce les sourcils.)* « Grand chapeau. Voix basse. Je m’en souviens parce qu’il a payé le prix demandé sans discuter, et ça, ça ne se fait pas. »"
+              "line": "« Un intermédiaire. Un elfe. Grand chapeau, voix basse. Je m’en souviens parce qu’il a payé le prix demandé sans discuter. »"
             }
           ]
         }
@@ -684,15 +680,7 @@
       "notes": [
         {
           "id": "gain",
-          "text": "**Ce que Hesken débloque :** l’adresse du **manoir Duvessar** ([[r:w4|W4]]) et le lien entre le symbole et le drame d’il y a cinq ans. C’est la piste la plus rapide vers l’acte II."
-        },
-        {
-          "id": "rate",
-          "text": "**S’ils ratent Hesken :** l’Investigation ou l’Histoire au [[r:w1|Portail Béant]], ou Bonnie et le chapeau rouge, mènent au même endroit — plus lentement, et **sans le lien avec le vieux dossier**. Le groupe découvrira alors le massacre au manoir sans y être préparé, ce qui n’est pas plus mal."
-        },
-        {
-          "id": "ton",
-          "text": "**Ton.** Hesken est vaniteux et inoffensif. Il ne cache rien, il ne comprend rien, et il sera enchanté d’apprendre plus tard qu’il a vendu un grimoire de rituels à un meurtrier."
+          "text": "**Il débloque l’adresse du [[r:w4|manoir]]** et le lien avec le drame d’il y a cinq ans : la piste la plus rapide. **Sans lui**, [[r:w1|W1]] ou Bonnie y mènent aussi, sans le vieux dossier."
         }
       ],
       "connections": [
@@ -716,50 +704,50 @@
         "pnj",
         "énigme"
       ],
-      "layout": "Rue Vantrelle, Quartier Nord. Grande bâtisse à portail de fer, jardin d’agrément, quatre étages. Le cabinet du maître est au troisième, plein est.",
+      "layout": "Rue Vantrelle, Quartier Nord. Portail de fer, jardin, quatre étages ; le cabinet du maître est au troisième, plein est.",
       "readAloud": [
         {
           "id": "0",
           "only": "base",
-          "text": "La porte s’ouvre sur un majordome court sur pattes, chauve, moustache soignée, sourire chaleureux — et une haleine qui sent le vin de midi.\n\n« Duvessar ! Ha. Vous n’êtes pas les premiers. » Il jette un œil derrière lui, puis baisse la voix comme s’il partageait une friandise. « Entrez donc. C’est une bien vilaine histoire. »",
-          "summary": "Obrec, majordome de la famille Menthyr, accueille le groupe avec un plaisir mal dissimulé."
+          "text": "Un majordome chauve ouvre, moustache soignée, haleine de vin de midi.\n\n« Duvessar ! Ha. Vous n’êtes pas les premiers. » Il baisse la voix. « Entrez donc. Vilaine histoire. »",
+          "summary": "Obrec, majordome des Menthyr, accueille le groupe avec gourmandise."
         },
         {
           "id": "e0",
           "only": "enhanced",
-          "text": "Le portail de fer n’est pas fermé : il n’a plus de chaîne depuis longtemps. Le jardin est retourné à l’herbe haute. Toutes les fenêtres sont volées, sauf une, au troisième, plein est.\n\nÀ l’intérieur, la poussière est épaisse et régulière — **sauf une bande, du vestibule à l’escalier**, où quelqu’un est passé récemment. Plusieurs fois.",
-          "summary": "Le manoir est abandonné. Des traces récentes mènent du vestibule à l’escalier."
+          "text": "Le portail n’a plus de chaîne, le jardin est retourné à l’herbe haute, toutes les fenêtres sont volées sauf une, au troisième, plein est.\n\nDedans, la poussière est épaisse — **sauf une bande, du vestibule à l’escalier**, où quelqu’un est passé récemment. Plusieurs fois.",
+          "summary": "Manoir abandonné. Des traces récentes mènent du vestibule à l’escalier."
         },
         {
           "id": "e1",
           "only": "enhanced",
-          "text": "Le cabinet du troisième est vide, sauf une chose : au centre du plancher, **un cercle tracé à la craie**, marqué de runes, si vieux que la craie s’est incrustée dans le bois. Il n’a jamais été effacé.\n\nL’air se refroidit d’un coup. Une buée se met à briller le long des lambris. Elle prend la forme d’une jeune femme en tenue de servante, un arbre au soleil levant brodé à l’épaule. Elle pleure. Elle ouvre la bouche : **il n’y a plus de langue**.",
-          "summary": "Dans le cabinet, le cercle de craie intact — et Wenna apparaît."
+          "text": "Le cabinet du troisième est vide, sauf **un cercle de craie couvert de runes**, si vieux que la craie s’est incrustée dans le bois.\n\nL’air se refroidit. Une buée prend la forme d’une servante, un arbre au soleil levant brodé à l’épaule. Elle pleure, ouvre la bouche : **il n’y a plus de langue**.",
+          "summary": "Le cercle de craie intact — et Wenna apparaît."
         }
       ],
       "features": [
         {
           "id": "e-journal",
           "only": "enhanced",
-          "title": "Le journal, resté sur place",
-          "text": "Sous une latte descellée du cabinet : un livre de cuir à coins de laiton, fermoir ouvragé, le **citronnier au soleil levant** sur le plat. Hesken n’a jamais fouillé cette pièce. *(Contenu complet : voir les notes ci-dessous.)*"
+          "title": "Le journal",
+          "text": "Sous une latte du cabinet, un livre de cuir au **citronnier au soleil levant**. Hesken n’est jamais monté ici."
         },
         {
           "id": "e-cercle",
           "only": "enhanced",
           "title": "Le cercle de craie",
-          "text": "Il est **authentique et intact** — la pièce a été condamnée, pas nettoyée. C’est là que tout a commencé."
+          "text": "**Authentique et intact** : la pièce a été condamnée, pas nettoyée."
         },
         {
           "id": "e-passage",
           "only": "enhanced",
-          "title": "Les traces récentes",
-          "text": "Quelqu’un vient ici régulièrement, monte au troisième, reste, et repart. Les traces sont d’une seule paire de bottes fines. **Lord Ostrian revient sur les lieux.**"
+          "title": "Les traces",
+          "text": "Une seule paire de bottes fines, qui monte, reste, et repart. **Ostrian revient sur les lieux.**"
         },
         {
           "id": "business",
           "title": "Les affaires Duvessar",
-          "text": "Trois cordonneries, deux ateliers de maroquinerie et deux tanneries du **Quartier des Artisans** appartiennent toujours à Ostrian. *(Voir [[r:w5|W5]].)*"
+          "text": "Sept ateliers du Quartier des Artisans sont toujours à Ostrian ([[r:w5|W5]])."
         }
       ],
       "checks": [
@@ -768,14 +756,14 @@
           "only": "base",
           "skill": "Sagesse (Perspicacité)",
           "dc": 10,
-          "text": "Obrec est sincèrement peiné pour les Duvessar — **et ravi** de la réputation sinistre que le drame donne à la maison."
+          "text": "Peiné pour les Duvessar — **et ravi** de la réputation sinistre que le drame donne à la maison."
         },
         {
           "id": "persu",
           "only": "base",
           "skill": "Charisme (Persuasion)",
           "dc": 14,
-          "text": "Il raconte tout ce qu’il sait. **Un verre d’alcool donne l’avantage** ; *charme-personne* est une réussite automatique. Un bon jeu de rôle suffit aussi, à condition de le rassurer sur les Menthyr.",
+          "text": "Il raconte tout. **Un verre donne l’avantage**, *charme-personne* réussit d’office, un bon jeu de rôle suffit s’il est rassuré sur les Menthyr.",
           "failure": "Il se referme poliment et parle du temps."
         },
         {
@@ -783,44 +771,42 @@
           "only": "enhanced",
           "skill": "Intelligence (Arcanes)",
           "dc": 15,
-          "text": "Le cercle est un rituel de ***contact extraplanaire***, et les runes désignent une entité des Plans Extérieurs. **Il a servi une fois, et il a fonctionné.**",
-          "failure": "Un cercle d’invocation, ancien. Un Avoué de Castel-Suif saurait le lire."
+          "text": "Rituel de ***contact extraplanaire***, runes d’une entité des Plans Extérieurs. **Il a servi une fois, et il a marché.**",
+          "failure": "Un cercle d’invocation ancien. Un Avoué de Castel-Suif saurait le lire."
         },
         {
           "id": "e-invest",
           "only": "enhanced",
           "skill": "Intelligence (Investigation)",
           "dc": 13,
-          "text": "La latte du plancher a été **descellée puis remise** — pas par le poseur, par quelqu’un de pressé. Le journal est dessous.",
-          "failure": "La pièce est vide. Wenna le montrera elle-même, si on la laisse faire."
+          "text": "Une latte a été **descellée puis remise** à la hâte. Le journal est dessous.",
+          "failure": "La pièce paraît vide. Wenna montrera la latte."
         }
       ],
       "notes": [
         {
           "id": "obrec",
-          "text": "**Ce qu’Obrec révèle :**\n• Le manoir appartenait aux Duvessar, tués en une nuit.\n• La rumeur veut que Lady Ysolde, les trois enfants et les quatre domestiques aient été **poignardés puis privés de leur langue**.\n• Seul survivant : **Lord Ostrian**, absent de la ville ce jour-là.\n• Il a tout vendu et s’est retiré dans un village de campagne.\n• Quelques tanneries et cordonneries du Quartier des Artisans **lui appartiennent encore**.",
+          "text": "**Ce qu’Obrec révèle :**\n• Les Duvessar tués en une nuit — Lady Ysolde, les trois enfants, les quatre domestiques — **poignardés puis privés de leur langue**.\n• Seul survivant : **Lord Ostrian**, absent ce jour-là, qui a tout vendu et s’est retiré à la campagne.\n• Des ateliers du Quartier des Artisans **lui appartiennent encore**.",
           "only": "base"
         },
         {
           "id": "contenu",
-          "text": "**Ce que le journal raconte.** Wenna était servante ici. **Lady Ysolde**, née pauvre, lui a appris à écrire et lui a offert ce livre. Les dernières entrées, cinq ans plus tôt, s’inquiètent des nuits qu’Ostrian passe sur de vieux livres. La dernière : *« …il avait tracé à la craie un cercle marqué de runes étranges sur le sol de son cabinet. Une flaque s’étendait à l’intérieur, et elle m’a paru être du sang qui bouillonnait. […] Je dois dire à Lady Ysolde ce que j’ai vu. Je le dois ! »*",
+          "text": "**Le journal.** Wenna était servante ici ; **Lady Ysolde** lui a appris à écrire et lui a offert ce livre. Les dernières entrées, cinq ans plus tôt, s’inquiètent des nuits qu’Ostrian passe sur de vieux livres. La dernière : *« …un cercle de craie et de runes sur le sol de son cabinet, avec dedans une flaque qui m’a paru être du sang bouillonnant. […] Je dois dire à Lady Ysolde ce que j’ai vu ! »*",
           "only": "enhanced"
         },
         {
           "id": "croquis",
-          "text": "**Le croquis.** Wenna a dessiné la couverture du livre d’Ostrian : **grosse tête bulbeuse, longs bras, tentacules en guise de jambes, yeux à facettes**. C’est la statue de la chapelle ([[r:b7|B7]]). Le titre — ***L’Anathème des Antérieurs*** — se trouve en deux jours de recherche à Castel-Suif, ou auprès de n’importe quel bibliothécaire sérieux de Waterdeep."
+          "text": "**Le croquis.** La couverture du livre : **tête bulbeuse, longs bras, tentacules en guise de jambes, yeux à facettes** — la statue de [[r:b7|B7]]. Le titre, ***L’Anathème des Antérieurs***, se trouve en deux jours à Castel-Suif.",
+          "only": "enhanced"
         },
         {
           "id": "savoir",
-          "text": "**Ce que Wenna peut transmettre** — gémissements, doigt sur une page, ou possession :\n• **Ostrian a tué** sa femme, ses trois enfants, elle-même et trois autres domestiques, dans un rituel.\n• Le livre qu’il lisait en était la source.\n• Les âmes de **Ysolde, Perrin, Aldric et Sionne** sont retenues tant que leurs restes ne reposent pas en terre consacrée.\n• **Ces restes ont disparu.**\n\nElle ne sait rien de plus, pas même comment elle est morte."
+          "text": "**Ce que Wenna transmet** (gémissements, doigt sur une page, possession) :\n• **Ostrian a tué** sa femme, ses trois enfants, elle-même et trois domestiques, dans un rituel, et le livre en était la source.\n• Les âmes de **Ysolde, Perrin, Aldric et Sionne** restent retenues tant que leurs restes ne reposent pas en terre consacrée.\n• **Ces restes ont disparu**, et elle ignore jusqu’à la façon dont elle est morte.",
+          "only": "enhanced"
         },
         {
           "id": "lore",
-          "text": "**Détails du journal, si on le lit en entier :** le manoir est rue Vantrelle ; Ostrian et Ysolde avaient deux fils, **Perrin** et **Aldric**, et une fille, **Sionne** ; la fortune venait du côté d’Ysolde ; l’associé d’Ostrian était **un elfe nommé Thaevil**, qui venait deux fois par décade ; Wenna aimait **un jeune écuyer, Corvan**, qui habitait rue des Cordiers."
-        },
-        {
-          "id": "e-lien",
-          "text": "**Le moment de bascule.** C’est ici que les joueurs comprennent que l’enlèvement d’hier soir et le massacre d’il y a cinq ans sont la même affaire. **Ne l’annonce pas** : laisse le symbole de bois du [[r:w1|Portail Béant]] et le croquis du journal se rencontrer sur la table, et attends.",
+          "text": "**Le reste du journal :** deux fils, **Perrin** et **Aldric**, une fille, **Sionne** ; la fortune venait d’Ysolde ; l’associé était **l’elfe Thaevil** ; Wenna aimait **un écuyer, Corvan**, rue des Cordiers.",
           "only": "enhanced"
         }
       ],
@@ -838,7 +824,7 @@
             {
               "id": "accueil",
               "trigger": "À la porte",
-              "line": "« Les Menthyr sont sortis. Mais si c’est pour l’histoire, c’est moi qu’il faut voir — j’ai fait ma petite inspection de la cave ce matin, je suis en verve. »"
+              "line": "« Les Menthyr sont sortis. Mais si c’est pour l’histoire, c’est moi qu’il faut voir — j’ai inspecté la cave ce matin, je suis en verve. »"
             },
             {
               "id": "langues",
@@ -854,27 +840,27 @@
           "role": "Fantôme lié au journal",
           "attitude": "suppliante",
           "monster": "wenna",
-          "description": "Une servante d’une vingtaine d’années, en larmes. **Elle n’a plus de langue.** Elle ne peut pas s’éloigner de plus de 9 m du journal.",
+          "description": "Servante d’une vingtaine d’années, en larmes. **Plus de langue.** Ne peut pas s’éloigner de plus de 9 m du journal.",
           "wants": "Que Lady Ysolde et les trois enfants reposent en terre consacrée.",
           "secrets": [
-            "**Elle s’accroche au groupe** dès qu’il entre : elle attend depuis cinq ans que quelqu’un monte au troisième.",
-            "Elle ignore tout de Durnan. Le rapprochement, c’est aux joueurs de le faire."
+            "**Elle s’accroche au groupe** : elle attend depuis cinq ans que quelqu’un monte au troisième.",
+            "Elle ignore tout de Durnan. Le rapprochement est aux joueurs."
           ],
           "dialogues": [
             {
               "id": "muet",
-              "trigger": "À chaque tentative de parler",
-              "line": "*(Elle ouvre la bouche. Un souffle rauque, rien d’autre. Elle referme la bouche et détourne les yeux.)*"
+              "trigger": "Chaque tentative de parler",
+              "line": "*(Elle ouvre la bouche. Un souffle rauque. Elle referme et détourne les yeux.)*"
             },
             {
               "id": "latte",
-              "trigger": "Si le groupe ne trouve pas le journal",
-              "line": "*(Elle s’agenouille au milieu du cercle de craie, pose la paume sur une latte, et lève les yeux. Elle recommence. Elle recommencera aussi longtemps qu’il le faudra.)*"
+              "trigger": "Si le journal n’est pas trouvé",
+              "line": "*(Elle s’agenouille dans le cercle, pose la paume sur une latte, lève les yeux. Elle recommence autant qu’il le faudra.)*"
             },
             {
               "id": "symbole",
-              "trigger": "Si on lui montre le symbole de bois du Portail Béant",
-              "line": "*(Elle recule d’un mètre. Elle secoue la tête, très vite, et montre sa propre bouche.)*"
+              "trigger": "Si on lui montre le symbole de bois",
+              "line": "*(Elle recule, secoue la tête très vite, et montre sa propre bouche.)*"
             }
           ]
         }
@@ -882,7 +868,7 @@
       "connections": [
         {
           "to": "w5",
-          "via": "Quartier des Artisans : les commerces"
+          "via": "Quartier des Artisans"
         },
         {
           "to": "w6",
@@ -900,12 +886,12 @@
         "social",
         "pnj"
       ],
-      "layout": "Trois cordonneries, deux maroquineries, deux tanneries, dans des ruelles où une calèche passe tout juste. Odeur de tan et de colle.",
+      "layout": "Sept ateliers de cuir dans des ruelles où une calèche passe tout juste. Odeur de tan et de colle.",
       "readAloud": [
         {
           "id": "0",
-          "text": "Peu après midi, une calèche privée s’engage dans la ruelle et s’y trouve trop large de deux doigts. Sept cavaliers l’escortent — beaucoup, pour un homme qui vient relever des comptes.\n\nLa portière s’ouvre. Un elfe en descend : soie sombre, **grand chapeau rouge**. Il vous regarde, sourit, et dit quelque chose. Vous n’entendez pas. Il faut s’avancer pour l’entendre.",
-          "summary": "Thaevil arrive en calèche avec sept gardes du corps. Il parle si bas qu’il faut s’approcher."
+          "text": "Peu après midi, une calèche s’engage dans la ruelle et s’y trouve trop large de deux doigts. Sept cavaliers l’escortent — beaucoup, pour relever des comptes.\n\nUn elfe en descend : soie sombre, **grand chapeau rouge**. Il sourit et dit quelque chose. Vous n’entendez pas : il faut s’avancer.",
+          "summary": "Thaevil arrive avec sept gardes. Il parle si bas qu’il faut s’approcher."
         }
       ],
       "enemies": [
@@ -914,14 +900,14 @@
           "monster": "cult-fanatic",
           "count": 2,
           "where": "À cheval, de part et d’autre de la calèche.",
-          "tactics": "*Immobilisation de personne* ou *injonction* sur les combattants au corps à corps, pour que les vétérans et les malfrats les achèvent."
+          "tactics": "*Immobilisation de personne* ou *injonction* sur les combattants au contact ; les vétérans achèvent."
         },
         {
           "id": "malfrats",
           "monster": "tough",
           "count": 3,
           "where": "Derrière la calèche.",
-          "tactics": "**Concentrent leurs coups sur une seule cible** pour profiter de leurs tactiques de meute."
+          "tactics": "**Une seule cible à la fois**, pour leurs tactiques de meute."
         },
         {
           "id": "veterans",
@@ -936,15 +922,15 @@
           "count": 1,
           "name": "Le cocher",
           "where": "Sur le siège.",
-          "tactics": "Désarmé. Il fouette les chevaux et part dès que Thaevil est remonté."
+          "tactics": "Désarmé. Il part dès que Thaevil est remonté."
         },
         {
           "id": "thaevil",
           "monster": "thaevil",
           "count": 1,
           "name": "Thaevil",
-          "where": "Il remonte en calèche au premier round.",
-          "tactics": "Ne combat pas. **9 PV.** Tout l’enjeu du combat est de l’atteindre avant qu’il ne parte."
+          "where": "Remonte en calèche au premier round.",
+          "tactics": "Ne combat pas. **9 PV.** L’enjeu est de l’atteindre avant qu’il ne parte."
         },
         {
           "id": "e-elu",
@@ -952,9 +938,9 @@
           "monster": "elu-verbe-eteint",
           "count": 1,
           "name": "L’Élu du chapeau",
-          "where": "À pied, à côté de la portière. On l’a pris pour un valet.",
+          "where": "À pied près de la portière. On l’a pris pour un valet.",
           "hidden": true,
-          "tactics": "Il ne parle pas et ne parlera pas. *Cécité* sur le lanceur de sorts, *immobilisation* sur le plus lourd, puis trois dagues sur la cible immobilisée."
+          "tactics": "*Cécité* sur le lanceur de sorts, *immobilisation* sur le plus lourd, puis trois dagues sur la cible immobilisée."
         }
       ],
       "npcs": [
@@ -967,29 +953,29 @@
           "description": "Elfe des bois, soie et grand chapeau rouge. Il parle si bas qu’on doit se pencher — **c’est délibéré**.",
           "wants": "Que rien ne lui arrive. Sa place dans le culte est tout ce qu’il a.",
           "secrets": [
-            "**Fanatique du Verbe Éteint.** Ni l’argent ni la menace ne l’entament ; *charme-personne* ne lui fera pas nommer le culte, même envers un ami.",
-            "Il appelle **le Guet** si on le bouscule — et il a raison de le faire, il est dans son bon droit à Waterdeep.",
-            "S’il s’échappe, il rentre à Fauverive et on le retrouve **avachi sur un banc de la chapelle** ([[r:b7|B7]])."
+            "**Fanatique du Verbe Éteint.** Ni l’argent ni la menace ne l’entament ; *charme-personne* ne lui fera pas nommer le culte.",
+            "Il appelle **le Guet** si on le bouscule, et il est dans son droit.",
+            "S’il s’échappe, on le retrouve **avachi sur un banc de la chapelle** de Fauverive ([[r:b7|B7]])."
           ],
           "dialogues": [
             {
               "id": "injustice",
-              "trigger": "Si on parle des meurtres Duvessar",
-              "line": "« Une terrible injustice. Cinq ans, et personne n’a été inquiété. » *(Il hoche la tête lentement.)* « Vous enquêtez ? À titre privé ? Comme c’est… charitable. »"
+              "trigger": "Sur les meurtres Duvessar",
+              "line": "« Une terrible injustice. Cinq ans, et personne n’a été inquiété. » *(Il hoche la tête.)* « Vous enquêtez ? À titre privé ? Comme c’est… charitable. »"
             },
             {
               "id": "ostrian",
               "trigger": "Sur Lord Ostrian",
-              "line": "« Brisé. Le mot n’est pas trop fort. Il a tout vendu, il est parti, et il ne parle plus de rien. Je gère ses affaires pour qu’il n’ait pas à y penser. »"
+              "line": "« Brisé. Le mot n’est pas trop fort. Il a tout vendu, il est parti, il ne parle plus de rien. Je gère ses affaires pour qu’il n’ait pas à y penser. »"
             },
             {
               "id": "accusation",
               "trigger": "Si on suggère qu’Ostrian est coupable",
-              "line": "*(Le sourire ne bouge pas.)* « Vous venez d’accuser un homme qui a enterré ses trois enfants. Je vous conseille de ne le répéter à personne d’autre que moi. »"
+              "line": "*(Le sourire ne bouge pas.)* « Vous venez d’accuser un homme qui a enterré ses trois enfants. Ne le répétez à personne d’autre que moi. »"
             },
             {
               "id": "menace",
-              "trigger": "Si le groupe annonce qu’il va aller interroger Ostrian",
+              "trigger": "Si le groupe annonce qu’il va voir Ostrian",
               "line": "« Ah. » *(À l’escorte, du même ton bas.)* « Tuez-les. »"
             },
             {
@@ -1006,7 +992,7 @@
           "id": "renseigner",
           "skill": "Charisme (Persuasion)",
           "dc": 15,
-          "text": "Un cordonnier ou un contremaître se déride — **ou 10 po de pot-de-vin**. Lord Ostrian a un intendant qui passe toutes les deux décades relever les comptes : **un elfe nommé Thaevil**, qui vit à **Fauverive**, au sud-est. Il est attendu en ville dans deux jours.",
+          "text": "Un contremaître se déride — **ou 10 po de pot-de-vin**. L’intendant relève les comptes toutes les deux décades : **l’elfe Thaevil**, qui vit à **Fauverive**, au sud-est. Attendu dans deux jours.",
           "failure": "Personne ne connaît Lord Ostrian. « Il vit à la campagne, quelque part. »"
         },
         {
@@ -1021,31 +1007,31 @@
           "id": "coffret",
           "item": "Coffret de fer verrouillé",
           "value": "35 po et 400 pa",
-          "note": "La recette des établissements visités dans la journée."
+          "note": "La recette de la journée."
         },
         {
           "id": "thaevil",
           "item": "Sur Thaevil",
           "value": "20 po + bijoux (20 po)",
-          "note": "Et une **potion de soins supérieure** à la ceinture."
+          "note": "Et une **potion de soins supérieure**."
         }
       ],
       "notes": [
         {
           "id": "reddition",
-          "text": "**Les gardes du corps se rendent** quand plus de la moitié sont à terre. Ce sont des mercenaires de Waterdeep sous contrat, ils ne connaissent pas Ostrian et ignorent tout du culte. Ils savent seulement : Thaevil vit à **Fauverive**, Ostrian aussi, et l’escorte devait rentrer là-bas le soir même avec la recette."
+          "text": "**Les gardes se rendent** quand plus de la moitié sont à terre. Mercenaires sous contrat : ils ignorent tout du culte et savent seulement que Thaevil vit à **Fauverive**."
         },
         {
           "id": "guet",
-          "text": "**Attention à la ville.** Une bagarre de sept cavaliers en plein Quartier des Artisans fait venir le Guet en 1d4 rounds. Attaquer les premiers, c’est un problème pour tout le reste de l’aventure — et Thaevil le sait très bien."
+          "text": "**Attention à la ville.** Sept cavaliers en bagarre font venir le Guet en 1d4 rounds. Attaquer les premiers pèse sur tout le reste — et Thaevil le sait."
         },
         {
           "id": "sauter",
-          "text": "**On peut sauter cette scène.** Rien n’oblige à attendre Thaevil : le groupe peut partir directement pour Fauverive et le trouver chez lui ([[r:g4|G4]])."
+          "text": "**Scène facultative.** Le groupe peut filer droit sur Fauverive et trouver Thaevil chez lui ([[r:g4|G4]])."
         },
         {
           "id": "e-avance",
-          "text": "**Version Améliorée — l’horloge tourne.** Attendre deux jours l’arrivée de Thaevil coûte **deux paliers du rituel**. Si le groupe hésite, rappelle-le : le puits est fermé et Durnan est quelque part. Bonnie a donné le signalement du chapeau rouge — ils peuvent le cueillir dès son arrivée au lieu de le laisser parler.",
+          "text": "**Version Améliorée.** Attendre deux jours coûte **deux paliers du rituel**. Avec le signalement de Bonnie, ils cueillent le chapeau rouge à l’arrivée.",
           "only": "enhanced"
         }
       ],
@@ -1056,7 +1042,7 @@
         },
         {
           "to": "g1",
-          "via": "Route du sud-est, vers Fauverive"
+          "via": "Route du sud-est"
         }
       ]
     },
@@ -1069,11 +1055,11 @@
         "social",
         "pnj"
       ],
-      "layout": "Une maison étroite à trois rues du manoir. Salon au rez-de-chaussée, cheminée, et **un vieux heaume fendu en deux** accroché au-dessus du foyer.",
+      "layout": "Maison étroite à trois rues du manoir. Salon, cheminée, **un vieux heaume fendu en deux** au-dessus du foyer.",
       "readAloud": [
         {
           "id": "0",
-          "text": "L’homme qui ouvre est bâti comme une porte et couvert de cicatrices, et il vous sourit comme à de vieux camarades.\n\n« Entrez, entrez — pardon, je ne remets pas les noms, c’est l’âge. » Puis il vous écoute, et le sourire s’en va, lentement, comme une marée. Il regarde le casque au-dessus de la cheminée.\n\n« Wenna. » *(Il se rassoit.)* « Vous voulez du thé. »",
+          "text": "L’homme qui ouvre est bâti comme une porte, couvert de cicatrices, et vous sourit comme à de vieux camarades.\n\n« Entrez — pardon, je ne remets pas les noms, c’est l’âge. » Puis il vous écoute, et le sourire s’en va. Il regarde le heaume au-dessus de la cheminée.\n\n« Wenna. » *(Il se rassoit.)* « Vous voulez du thé. »",
           "summary": "Corvan accueille chaleureusement, puis s’effondre au nom de Wenna."
         }
       ],
@@ -1084,22 +1070,22 @@
           "role": "Aventurier retiré, ancien fiancé de Wenna",
           "attitude": "chaleureux puis dévasté",
           "monster": "corvan",
-          "description": "Colosse balafré, d’humeur douce. Il a pris les armes après la mort de Wenna, s’est fait un nom au sud de Padhiver, puis est rentré s’occuper de son père.",
+          "description": "Colosse balafré, d’humeur douce. Il a pris les armes à la mort de Wenna, s’est fait un nom au sud de Padhiver, puis est rentré soigner son père.",
           "wants": "Que le passé reste passé. Il n’y arrive pas.",
           "secrets": [
-            "**Il refuse de les accompagner et part seul.** Dès que le groupe a le dos tourné, il enfile son harnois et prend la route de Fauverive à cheval.",
-            "S’il a au moins **un jour d’avance**, il arrive avant eux, affronte les cultistes sur la route et **se fait prendre** : on le retrouve prisonnier en [[r:b11|B11]], à 25 PV."
+            "**Il refuse de les suivre et part seul** : dès que le groupe a le dos tourné, il selle et prend la route de Fauverive.",
+            "Avec **un jour d’avance**, il arrive avant eux, tombe sur les cultistes et **se fait prendre** : prisonnier en [[r:b11|B11]], à 25 PV."
           ],
           "dialogues": [
             {
               "id": "fantome",
-              "trigger": "Si on lui dit qu’on a parlé au fantôme de Wenna",
-              "line": "*(Il ne dit rien pendant longtemps. Puis :)* « Elle a l’air… ? Non. Ne me dites pas. » *(Il pleure sans se cacher, sans bruit, et se ressert du thé.)*"
+              "trigger": "Si on lui parle du fantôme de Wenna",
+              "line": "*(Long silence.)* « Elle a l’air… ? Non. Ne me dites pas. » *(Il pleure sans bruit et se ressert du thé.)*"
             },
             {
               "id": "restes",
               "trigger": "Ce qu’il sait",
-              "line": "« Wenna et les trois autres domestiques ont été mis en terre à la Cité des Morts. Pas Lady Ysolde, pas les petits. Le veuf a dit qu’il voulait les avoir près de lui, là où il allait. Pour ne plus jamais avoir à revenir ici. »"
+              "line": "« Wenna et les trois autres domestiques sont à la Cité des Morts. Pas Lady Ysolde, pas les petits. Le veuf a dit qu’il voulait les avoir près de lui, là où il allait. Pour ne plus jamais revenir ici. »"
             },
             {
               "id": "routes",
@@ -1109,7 +1095,7 @@
             {
               "id": "refus",
               "trigger": "Si on lui propose de venir",
-              "line": "« Non. J’ai un père à nourrir et j’ai passé l’âge. » *(Il ment, et il ment mal, mais personne ne le relève.)*"
+              "line": "« Non. J’ai un père à nourrir et j’ai passé l’âge. » *(Il ment, et il ment mal.)*"
             }
           ]
         }
@@ -1117,15 +1103,15 @@
       "notes": [
         {
           "id": "consequence",
-          "text": "**Conséquence directe.** Si au moins un jour s’écoule entre cette visite et l’arrivée du groupe à Fauverive, **Corvan est capturé** et se trouve dans la cellule sud ([[r:b11|B11]]) à 25 PV. C’est le prix de la lenteur, et il est juste : dis-le après coup, pas avant."
+          "text": "**Conséquence.** Si au moins un jour s’écoule avant l’arrivée à Fauverive, **Corvan est capturé** : cellule sud ([[r:b11|B11]]), 25 PV. Dis-le après coup, pas avant."
         },
         {
           "id": "emmener",
-          "text": "**S’ils insistent pour l’emmener,** laisse-le refuser une fois de plus, puis céder si un joueur trouve le bon argument. Un [[m:knight|chevalier]] de FP 3 dans le groupe change l’équilibre : retire alors un vétéran de la [[r:g5|grange]] et un fanatique de la [[r:b7|chapelle]]."
+          "text": "**S’ils insistent,** laisse-le refuser encore, puis céder sur un bon argument. Un [[m:knight|chevalier]] FP 3 change l’équilibre : retire un vétéran de la [[r:g5|grange]] et un fanatique de la [[r:b7|chapelle]]."
         },
         {
           "id": "e-vitesse",
-          "text": "**Version Améliorée.** Fauverive est à **deux heures de cheval**, pas à une journée. Corvan part quand même en avance, mais il faut que le groupe **traîne une nuit entière** pour qu’il se fasse prendre. À eux de choisir entre dormir et le retrouver entier.",
+          "text": "**Version Améliorée.** Fauverive est à **deux heures de cheval** : il faut que le groupe **traîne une nuit entière** pour que Corvan se fasse prendre.",
           "only": "enhanced"
         }
       ],
@@ -1149,12 +1135,12 @@
         "social",
         "pnj"
       ],
-      "layout": "La plus grande bâtisse du hameau, au nord-est, de l’autre côté du ruisseau. Un jardin potager tenu au cordeau, et une femme dedans qui ne lève pas la tête.",
+      "layout": "La plus grande bâtisse, au nord-est, de l’autre côté du ruisseau. Un potager tenu au cordeau.",
       "readAloud": [
         {
           "id": "0",
-          "text": "Kessa Vairon est à genoux dans son potager. Elle vous répond sans se retourner, poliment, avec une brusquerie qui ne lui ressemble pas — vous le voyez à la façon dont elle s’excuse aussitôt, puis recommence.\n\n« Lord Ostrian ? Il vit ici. Il ne parle à personne. Je ne le connais pas. » *(Elle arrache une mauvaise herbe qui n’en était pas une.)* « Voilà. »",
-          "summary": "La mairesse répond trop vite et trop court. Elle cache quelque chose."
+          "text": "Kessa Vairon est à genoux dans son potager et répond sans se retourner, avec une brusquerie qui ne lui ressemble pas.\n\n« Lord Ostrian ? Il vit ici. Il ne parle à personne. Je ne le connais pas. » *(Elle arrache une mauvaise herbe qui n’en était pas une.)* « Voilà. »",
+          "summary": "La mairesse répond trop vite et trop court."
         }
       ],
       "npcs": [
@@ -1167,8 +1153,8 @@
           "description": "La cinquantaine, queue-de-cheval courte, bonne administratrice. Elle dort mal depuis deux mois.",
           "wants": "Récupérer sa sœur sans détruire le hameau.",
           "secrets": [
-            "**Sa sœur Nyla est prisonnière** en [[r:b11|B11]] depuis deux mois. Kessa la croit amoureuse d’Ostrian.",
-            "Elle sait qu’Ostrian s’est constitué **une suite d’admirateurs**. Elle ignore tout des enlèvements sur la Voie Marchande.",
+            "**Sa sœur Nyla est prisonnière** en [[r:b11|B11]] depuis deux mois ; Kessa la croit amoureuse d’Ostrian.",
+            "Elle sait qu’Ostrian s’est fait **une suite d’admirateurs**, mais ignore les enlèvements.",
             "Elle n’est **jamais** allée au « nouveau domaine ». Elle en donne pourtant la direction."
           ],
           "dialogues": [
@@ -1180,12 +1166,12 @@
             {
               "id": "ouvre",
               "trigger": "Après un DD 14 de Persuasion, ou du bon jeu de rôle",
-              "line": "*(Elle pose son transplantoir.)* « Ma sœur. Nyla. Il y a deux mois elle est montée là-haut et elle n’est pas redescendue. Elle m’écrit — enfin, on m’apporte des mots signés d’elle. » *(Un temps.)* « Elle n’écrit pas comme ça. »"
+              "line": "*(Elle pose son transplantoir.)* « Ma sœur. Nyla. Il y a deux mois elle est montée là-haut et elle n’est pas redescendue. On m’apporte des mots signés d’elle. » *(Un temps.)* « Elle n’écrit pas comme ça. »"
             },
             {
               "id": "marche",
               "trigger": "Si on promet de ramener Nyla",
-              "line": "« Alors je vous dis où c’est. Une heure au nord, la vieille tour. Et si vous me la ramenez, je vous jure que ce hameau vous devra quelque chose. »"
+              "line": "« Alors je vous dis où c’est. Une heure au nord, la vieille tour. Ramenez-la-moi et ce hameau vous devra quelque chose. »"
             }
           ]
         }
@@ -1195,20 +1181,14 @@
           "id": "insight",
           "skill": "Sagesse (Perspicacité)",
           "dc": 15,
-          "text": "Elle cache quelque chose, et ce n’est pas de la complicité : c’est de la peur."
+          "text": "Ce n’est pas de la complicité, c’est de la peur."
         },
         {
           "id": "persu",
           "skill": "Charisme (Persuasion)",
           "dc": 14,
           "text": "Elle parle. Un bon jeu de rôle suffit sans jet.",
-          "failure": "Elle se referme, mais [[r:g2|le Vieux Brannoc]] dira la même chose autrement."
-        }
-      ],
-      "notes": [
-        {
-          "id": "redondance",
-          "text": "**Deux sources pour la même direction.** Kessa et [[r:g2|le Vieux Brannoc]] mènent tous deux à la tour. Rater l’une ne ferme rien."
+          "failure": "Elle se referme, mais [[r:g2|Brannoc]] dira la même chose autrement."
         }
       ],
       "connections": [
@@ -1218,7 +1198,7 @@
         },
         {
           "to": "g3",
-          "via": "À travers le ruisseau, vers l’ouest"
+          "via": "Vers l’ouest"
         }
       ]
     },
@@ -1231,12 +1211,12 @@
         "social",
         "pnj"
       ],
-      "layout": "La taverne du hameau, au bord de l’eau, à l’est. Chaleureuse, pleine aux repas. Deux chambres à louer à l’étage.",
+      "layout": "Taverne du hameau, au bord de l’eau, à l’est. Deux chambres à louer à l’étage.",
       "readAloud": [
         {
           "id": "0",
-          "text": "Vieille chemise de flanelle, chapeau de cavalier qu’il ne quitte jamais : le Vieux Brannoc vous sert sans qu’on lui demande et s’accoude en face.\n\n« Vous montez au domaine, c’est ça ? » Il essuie un verre déjà sec. « Tout le monde monte au domaine, ces temps-ci. Presque tout le monde redescend. »",
-          "summary": "Le Vieux Brannoc devine où va le groupe et le dit sans y être invité."
+          "text": "Flanelle usée, chapeau de cavalier qu’il ne quitte jamais : le Vieux Brannoc vous sert sans qu’on demande et s’accoude en face.\n\n« Vous montez au domaine ? » Il essuie un verre déjà sec. « Tout le monde monte au domaine, ces temps-ci. Presque tout le monde redescend. »",
+          "summary": "Brannoc devine où va le groupe et le dit sans y être invité."
         }
       ],
       "npcs": [
@@ -1246,26 +1226,26 @@
           "role": "Tavernier du Pichet Bossu",
           "attitude": "méfiant envers Ostrian, franc avec le groupe",
           "monster": "commoner",
-          "description": "Chapeau de cavalier, flanelle usée, l’œil de quelqu’un qui a servi trente ans de clients et sait les lire.",
+          "description": "Chapeau de cavalier, l’œil de quelqu’un qui a servi trente ans de clients et sait les lire.",
           "wants": "Récupérer son fils.",
           "secrets": [
-            "**Son fils, le Jeune Brannoc, a rejoint le culte il y a un mois** et n’est pas revenu. On le retrouve en [[r:b12|B12]].",
-            "Il n’a aucune preuve contre Ostrian, juste trente ans de métier. Il a raison."
+            "**Son fils, le Jeune Brannoc, a rejoint le culte il y a un mois.** On le retrouve en [[r:b12|B12]].",
+            "Aucune preuve contre Ostrian, juste trente ans de métier. Il a raison."
           ],
           "dialogues": [
             {
               "id": "ostrian",
-              "trigger": "Sur Lord Ostrian (DD 13 de Persuasion, ou simplement l’écouter)",
-              "line": "« Un collectionneur de flatteurs. Il achète des gens avec de l’argent et il appelle ça de l’amitié. J’ai rien contre les riches, notez. J’ai contre celui-là. »"
+              "trigger": "Sur Lord Ostrian (DD 13 de Persuasion, ou l’écouter)",
+              "line": "« Un collectionneur de flatteurs. Il achète des gens avec de l’argent et il appelle ça de l’amitié. J’ai rien contre les riches. J’ai contre celui-là. »"
             },
             {
               "id": "fils",
               "trigger": "Sur son fils",
-              "line": "*(Il arrête d’essuyer.)* « Un mois. Il est monté un matin et il m’a dit qu’il rentrerait pour la moisson. » *(Il repose le verre.)* « La moisson est passée. »"
+              "line": "*(Il arrête d’essuyer.)* « Un mois. Il m’a dit qu’il rentrerait pour la moisson. » *(Il repose le verre.)* « La moisson est passée. »"
             },
             {
               "id": "supplique",
-              "trigger": "Si le groupe partage ses soupçons sur le culte",
+              "trigger": "Si le groupe parle du culte",
               "line": "« Alors ramenez-le. Je vous paierai pas, j’ai rien. Mais ramenez-le. »"
             }
           ]
@@ -1274,11 +1254,11 @@
       "notes": [
         {
           "id": "chambres",
-          "text": "**Deux chambres à louer.** Le seul repos long possible avant le temple. Chaque nuit passée ici coûte un palier du rituel en Version Améliorée."
+          "text": "**Deux chambres à louer** : le seul repos long avant le temple. Chaque nuit coûte un palier du rituel en Version Améliorée."
         },
         {
           "id": "recompense",
-          "text": "Si le **[[r:b12|Jeune Brannoc]]** est épargné et ramené, la maison est ouverte au groupe **à vie**, gratuitement, à chaque passage."
+          "text": "Si le **[[r:b12|Jeune Brannoc]]** est épargné et ramené, la maison est ouverte au groupe **à vie**."
         }
       ],
       "connections": [
@@ -1300,12 +1280,12 @@
       "tags": [
         "exploration"
       ],
-      "layout": "Une maison confortable au centre-ouest du hameau, sur la butte. Portes closes, volets tirés, rideaux fermés.",
+      "layout": "Au centre-ouest, sur la butte. Portes closes, volets tirés.",
       "readAloud": [
         {
           "id": "0",
-          "text": "La maison est confortable, bien tenue, et vide de toute vie. La cuisine et la pièce principale ont servi récemment ; le reste est sous des draps.\n\nIl n’y a rien ici. Pas un papier, pas un portrait, pas un souvenir. **Quelqu’un a déménagé tout ce qui comptait, et il l’a fait sans se presser.**",
-          "summary": "Maison presque vide : tout ce qui compte a été emporté ailleurs, méthodiquement."
+          "text": "La maison est bien tenue et vide de toute vie. La cuisine a servi récemment ; le reste est sous des draps.\n\nPas un papier, pas un portrait. **Quelqu’un a déménagé tout ce qui comptait, sans se presser.**",
+          "summary": "Maison presque vide : tout ce qui compte a été emporté ailleurs."
         }
       ],
       "checks": [
@@ -1319,11 +1299,11 @@
       "notes": [
         {
           "id": "rien",
-          "text": "**Il n’y a réellement rien.** C’est une information : Ostrian ne vit plus ici depuis un an, il vit au temple. Ne récompense pas la fouille par une trouvaille de consolation — le vide est la trouvaille."
+          "text": "**Il n’y a réellement rien**, et c’est l’information : Ostrian vit au temple depuis un an."
         },
         {
           "id": "e-preuve",
-          "text": "**Version Améliorée.** Une seule chose traîne, dans l’âtre de la cuisine, à moitié brûlée : **un plan du puits du Portail Béant**, avec le mécanisme du treuil dessiné en coupe et une annotation dans une écriture soignée — *« la chaîne ne suffira pas, il faut l’homme »*.",
+          "text": "**Version Améliorée.** Dans l’âtre, à moitié brûlé : **un plan du puits du Portail Béant**, treuil en coupe, annoté — *« la chaîne ne suffira pas, il faut l’homme »*.",
           "only": "enhanced"
         }
       ],
@@ -1333,7 +1313,7 @@
           "only": "enhanced",
           "item": "Plan du treuil du Portail Béant, à demi brûlé",
           "value": "—",
-          "note": "Preuve matérielle utilisable devant le Guet de Waterdeep. **La seule de toute l’aventure.**"
+          "note": "Preuve utilisable devant le Guet. **La seule de toute l’aventure.**"
         }
       ],
       "connections": [
@@ -1357,19 +1337,19 @@
         "exploration",
         "piège"
       ],
-      "layout": "Un cottage à l’ouest, dont la pièce principale sert de bureau. Registres, correspondance, plumes bien rangées. Une fenêtre donne sur le chemin de la grange.",
+      "layout": "Cottage à l’ouest, pièce principale en bureau. Une fenêtre donne sur la grange.",
       "readAloud": [
         {
           "id": "0",
-          "text": "Le bureau est celui d’un homme méticuleux. Des registres alignés par année, une correspondance classée, pas un grain de poussière sur l’encrier.\n\nTout concerne les affaires de Lord Ostrian. Tout est parfaitement en ordre. **Tout est parfaitement inintéressant.**",
-          "summary": "Bureau impeccable, registres commerciaux ordinaires, rien de compromettant."
+          "text": "Registres alignés par année, correspondance classée, pas un grain de poussière sur l’encrier.\n\nTout concerne les affaires de Lord Ostrian, tout est parfaitement en ordre. **Et parfaitement inintéressant.**",
+          "summary": "Bureau impeccable, registres ordinaires, rien de compromettant."
         }
       ],
       "features": [
         {
           "id": "fenetre",
           "title": "La fenêtre",
-          "text": "**Si Thaevil est là et se sent menacé**, il s’excuse et va « prendre un peu d’air » : c’est le signal convenu. Les quatre cultistes de la [[r:g5|grange]] arrivent en 1d4 rounds, prêts à en découdre."
+          "text": "**Si Thaevil est là et se sent menacé**, il va « prendre un peu d’air » : c’est le signal, et les quatre cultistes de la [[r:g5|grange]] arrivent en 1d4 rounds."
         }
       ],
       "checks": [
@@ -1377,18 +1357,18 @@
           "id": "perception",
           "skill": "Sagesse (Perception)",
           "dc": 13,
-          "text": "Le geste de la fenêtre n’est pas naturel : il l’ouvre en grand par temps froid, et il regarde vers l’ouest en le faisant.",
+          "text": "Il ouvre en grand par temps froid, et regarde vers l’ouest en le faisant.",
           "failure": "Un homme qui a chaud."
         }
       ],
       "notes": [
         {
           "id": "presence",
-          "text": "**Thaevil est ici** si le groupe n’est pas passé par [[r:w5|le Quartier des Artisans]], ou s’il s’est échappé de Waterdeep. Même personnage, mêmes répliques, même refus de nommer le culte."
+          "text": "**Thaevil est ici** si le groupe n’est pas passé par [[r:w5|W5]], ou s’il s’en est échappé."
         },
         {
           "id": "ordre",
-          "text": "**L’ordre parfait est l’indice.** Personne ne tient des registres aussi propres sans en tenir de sales ailleurs. Un test d’Investigation DD 15 le fait remarquer à voix haute."
+          "text": "**L’ordre parfait est l’indice** : personne ne tient des registres aussi propres sans en tenir de sales ailleurs (Investigation DD 15)."
         }
       ],
       "connections": [
@@ -1411,12 +1391,12 @@
         "combat",
         "pnj"
       ],
-      "layout": "Une grange à l’écart, au nord-ouest du hameau, sur la route de Waterdeep. Quatre hommes y travaillent le jour et n’ont jamais rien récolté.",
+      "layout": "À l’écart au nord-ouest, sur la route de Waterdeep. Quatre hommes y travaillent le jour et n’ont jamais rien récolté.",
       "readAloud": [
         {
           "id": "0",
-          "text": "Quatre hommes travaillent dans la grange. Ils s’arrêtent tous les quatre en même temps quand votre ombre passe la porte, et aucun ne repose son outil.\n\n« On peut vous aider ? » Celui qui parle a une fourche. Les trois autres se sont déplacés sans en avoir l’air : vous avez maintenant un homme de chaque côté.",
-          "summary": "Quatre cultistes déguisés en ouvriers agricoles encerclent lentement le groupe."
+          "text": "Quatre hommes travaillent dans la grange. Ils s’arrêtent tous les quatre en même temps quand votre ombre passe la porte, et aucun ne repose son outil.\n\n« On peut vous aider ? » Celui qui parle a une fourche. Les trois autres se sont déplacés sans en avoir l’air : un homme de chaque côté.",
+          "summary": "Quatre cultistes déguisés en ouvriers encerclent lentement le groupe."
         }
       ],
       "enemies": [
@@ -1431,8 +1411,8 @@
           "id": "veterans",
           "monster": "warrior-veteran",
           "count": 2,
-          "where": "De part et d’autre de la porte, déjà en position.",
-          "tactics": "Bloquent la sortie. **Ceux-là ne se rendent pas** : ce ne sont pas des mercenaires."
+          "where": "De part et d’autre de la porte.",
+          "tactics": "Bloquent la sortie. **Ceux-là ne se rendent pas.**"
         },
         {
           "id": "e-elu",
@@ -1440,16 +1420,16 @@
           "monster": "elu-verbe-eteint",
           "count": 1,
           "name": "Le contremaître",
-          "where": "Dans le fenil, au-dessus. On ne le voit pas entrer.",
+          "where": "Dans le fenil. On ne le voit pas entrer.",
           "hidden": true,
-          "tactics": "Descend au round 2. Il ouvre par *cécité* sur celui qui a une source de lumière."
+          "tactics": "Descend au round 2, ouvre par *cécité* sur celui qui porte la lumière."
         },
         {
           "id": "e-grell",
           "only": "enhanced",
           "monster": "grell",
           "count": 1,
-          "where": "Sous une bâche, au fond. **Ce n’est pas du foin sous cette toile.**",
+          "where": "Sous une bâche, au fond. **Ce n’est pas du foin.**",
           "hidden": true,
           "tactics": "Sort au round 3 si le combat dure. Paralyse et emporte le plus léger vers le fenil."
         }
@@ -1457,15 +1437,15 @@
       "notes": [
         {
           "id": "aveux",
-          "text": "**Ceux-là savent tout**, contrairement aux mercenaires de Waterdeep. Vaincus et pressés, ils lâchent :\n• **Lord Ostrian dirige le culte du Verbe Éteint**, dont Fauverive est le centre.\n• Il vénère **Grethuum** et canalise sa puissance en sacrifiant des prisonniers. Ce patron lui fournit **des créatures aberrantes**.\n• La vieille ruine au nord est un prétexte : les vraies salles sont **en dessous**, et le temple est terminé.\n\nIls ignorent où sont les restes de Lady Ysolde et des enfants. **Ostrian ne parle jamais de sa vie d’avant.**"
+          "text": "**Ceux-là savent tout.** Vaincus et pressés :\n• **Ostrian dirige le culte du Verbe Éteint**, dont Fauverive est le centre.\n• Il vénère **Grethuum**, canalise sa puissance en sacrifiant des prisonniers, et reçoit **des aberrations**.\n• La ruine au nord est un prétexte : les vraies salles sont **en dessous**, et le temple est fini.\n\nIls ignorent où sont les restes : **Ostrian ne parle jamais de sa vie d’avant.**"
         },
         {
           "id": "signal",
-          "text": "Ils surveillent [[r:g4|la maison de Thaevil]] et tout étranger dans le hameau. **Une question sur Ostrian suffit à déclencher l’attaque.**"
+          "text": "Ils surveillent [[r:g4|le cottage]] et tout étranger. **Une question sur Ostrian suffit à déclencher l’attaque.**"
         },
         {
           "id": "e-durnan",
-          "text": "**Version Améliorée.** Ajoute un aveu : *« Le tavernier est en bas. Le maître le garde pour le prochain. »* C’est la première confirmation que Durnan est vivant — et la première fois que le groupe apprend qu’il y a un compte à rebours.",
+          "text": "**Version Améliorée.** Un aveu de plus : *« Le tavernier est en bas. Le maître le garde pour le prochain. »* Première confirmation que Durnan est vivant.",
           "only": "enhanced"
         }
       ],
@@ -1488,27 +1468,23 @@
       "tags": [
         "exploration"
       ],
-      "layout": "Une heure au nord de Fauverive. Un bosquet d’arbustes tordus, une tour de pierre à moitié effondrée, et un chantier qui n’a jamais avancé.",
+      "layout": "Une heure au nord de Fauverive : bosquet d’arbustes tordus, tour à moitié effondrée, chantier qui n’a jamais avancé.",
       "readAloud": [
         {
           "id": "0",
-          "text": "Au milieu d’un bosquet d’arbustes noueux se dresse une tour de pierre à demi écroulée. Des tentes d’ouvriers, des tas de madriers, des outils épars : le site paraît en reconstruction, mais l’on n’a visiblement pas beaucoup progressé.",
+          "text": "Au milieu d’un bosquet noueux, une tour de pierre à demi écroulée. Tentes d’ouvriers, madriers, outils épars : un chantier qui n’a visiblement pas progressé.",
           "summary": "Une tour effondrée, un chantier à l’abandon, des tentes."
         },
         {
           "id": "1",
-          "text": "De plus près, la mise en scène s’effondre. **Les madriers ont des années et commencent à pourrir. Les outils sont rouillés.** Les tentes, elles, ont servi récemment — mais elles ne contiennent aucun effet personnel.\n\nÀ l’intérieur de la tour, un escalier de pierre descend dans le noir. **Personne ne le garde.**",
-          "summary": "Le chantier est un décor. L’escalier descend, sans la moindre sentinelle."
+          "text": "De près, la mise en scène s’effondre : **madriers pourris, outils rouillés**. Les tentes ont servi récemment, mais ne contiennent aucun effet personnel.\n\nDans la tour, un escalier descend dans le noir. **Personne ne le garde.**",
+          "summary": "Le chantier est un décor. L’escalier descend, sans sentinelle."
         }
       ],
       "notes": [
         {
-          "id": "garde",
-          "text": "**Aucune sentinelle, et c’est voulu.** Cinq ans que personne ne s’intéresse à eux : le culte est devenu négligent. C’est le seul cadeau que l’aventure fait au groupe, et il est mérité."
-        },
-        {
           "id": "bruit",
-          "text": "**Le bruit décide de tout ce qui suit.** Descendre en parlant, en armure lourde ou avec une lumière visible met [[r:b1|B1]] en alerte, ce qui met [[r:b3|B3]] en alerte, ce qui met **[[r:b7|Ostrian]]** en alerte. Note-le maintenant : la discrétion vaut ici plus que n’importe quel jet d’attaque."
+          "text": "**Aucune sentinelle, et c’est voulu** : cinq ans que personne ne s’intéresse à eux.\n\n**Le bruit décide de tout ce qui suit.** Descendre en parlant, en armure lourde ou avec une lumière met [[r:b1|B1]] en alerte, donc [[r:b3|B3]], donc **[[r:b7|Ostrian]]**."
         }
       ],
       "connections": [
@@ -1530,12 +1506,12 @@
         "combat",
         "exploration"
       ],
-      "layout": "Salle de pierre taillée, **plafond plat à 3 m**. Deux rangées de piliers sculptés de visages non humains. Deux braseros à l’entrée, une fontaine au fond. Trois issues : double porte au sud, porte à l’ouest, et un mur effondré à l’est qui ouvre sur un boyau.",
+      "layout": "**Plafond plat à 3 m**, deux rangées de piliers à visages non humains, braseros à l’entrée, fontaine au fond. Trois issues : double porte au sud, porte à l’ouest, mur effondré à l’est.",
       "readAloud": [
         {
           "id": "0",
-          "text": "L’escalier descend une dizaine de mètres avant de déboucher dans une salle de pierre taillée. Deux braseros encadrent l’entrée et brûlent d’une lumière **turquoise** qui n’est pas naturelle. Des piliers se dressent en deux rangées, chacun sculpté de visages de créatures d’ailleurs. Au fond, une fontaine coule doucement devant une double porte. Une autre porte s’ouvre dans le mur ouest, et le mur d’en face s’est effondré, révélant un boyau grossier.",
-          "summary": "Salle à piliers, braseros turquoise, fontaine au fond, trois issues."
+          "text": "L’escalier descend une dizaine de mètres jusqu’à une salle de pierre taillée. Deux braseros brûlent d’une lumière **turquoise** qui n’est pas naturelle, entre deux rangées de piliers sculptés de visages de créatures d’ailleurs. Au fond, une fontaine coule devant une double porte ; une autre porte s’ouvre à l’ouest, et le mur d’en face s’est effondré sur un boyau.",
+          "summary": "Salle à piliers, braseros turquoise, fontaine, trois issues."
         }
       ],
       "enemies": [
@@ -1544,14 +1520,14 @@
           "monster": "grell",
           "count": 2,
           "where": "En l’air, entre les piliers.",
-          "tactics": "Si le groupe est descendu **bruyamment**, ils se cachent contre les murs près de l’escalier, en l’air, et frappent les derniers de la file. Sinon, ils flottent au milieu et sont vus."
+          "tactics": "Descente **bruyante** : ils se plaquent en l’air près de l’escalier et frappent les derniers de la file. Sinon ils flottent au milieu et sont vus."
         },
         {
           "id": "cultistes",
           "monster": "cultist",
           "count": 4,
           "where": "Au sol, derrière les braseros.",
-          "tactics": "Retiennent, et surtout **crient**. Leur vraie fonction est d’alerter [[r:b3|B3]]."
+          "tactics": "Retiennent, et surtout **crient** : leur vraie fonction est d’alerter [[r:b3|B3]]."
         },
         {
           "id": "e-grells",
@@ -1560,30 +1536,30 @@
           "count": 1,
           "where": "Un troisième, au plafond, au-dessus de la fontaine.",
           "hidden": true,
-          "tactics": "N’intervient qu’au round 3, sur le personnage resté à l’arrière."
+          "tactics": "N’intervient qu’au round 3, sur qui est resté à l’arrière."
         }
       ],
       "features": [
         {
           "id": "fontaine",
           "title": "La fontaine",
-          "text": "Eau limpide, gobelet d’argent posé sur la margelle. *Détection de la magie* révèle une aura de **divination**. **Une gorgée confère l’effet du sortilège** *assistance* ; une créature ne peut en bénéficier qu’une fois par jour. L’eau emportée perd sa magie en 10 minutes."
+          "text": "Gobelet d’argent, aura de **divination** à la *détection de la magie*. **Une gorgée = *assistance***, une fois par jour et par créature ; emportée, l’eau perd sa magie en 10 minutes."
         },
         {
           "id": "ouest",
           "title": "La porte ouest ([[r:b2|B2]])",
-          "text": "**Verrouillée.** Lord Ostrian porte la clef. Outils de voleur DD 14, ou Force (Athlétisme) DD 17."
+          "text": "**Verrouillée** ; Ostrian porte la clef. Outils de voleur DD 14, ou Force (Athlétisme) DD 17."
         },
         {
           "id": "sud",
           "title": "La double porte sud",
-          "text": "Non verrouillée. Elle mène à [[r:b4|B4]] et [[r:b5|B5]], puis à l’escalier de la chapelle."
+          "text": "Non verrouillée. Mène à [[r:b4|B4]] et [[r:b5|B5]], puis à l’escalier de la chapelle."
         }
       ],
       "notes": [
         {
           "id": "alerte",
-          "text": "**Un combat ici alerte [[r:b3|B3]].** Le fanatique posté à l’escalier file prévenir Ostrian en passant par le niveau inférieur et [[r:b8|B8]]. Toute la suite du temple change alors de posture."
+          "text": "**Un combat ici alerte [[r:b3|B3]]** : le fanatique file prévenir Ostrian par le bas et [[r:b8|B8]], et tout le temple change de posture."
         }
       ],
       "connections": [
@@ -1614,33 +1590,33 @@
         "piège",
         "secret"
       ],
-      "layout": "Petite pièce à l’ouest, éclairée par deux sphères de cristal posées sur une étagère du mur nord. Un bureau, et du papier partout au sol.",
+      "layout": "Petite pièce à l’ouest : deux sphères de cristal sur une étagère au nord, un bureau, du papier partout.",
       "readAloud": [
         {
           "id": "0",
-          "text": "Des liasses de papiers, des diagrammes, des parchemins et des livres jonchent un bureau et le sol de cette pièce, éclairée par deux sphères de cristal qui luisent sur une étagère, au nord.",
+          "text": "Liasses, diagrammes, parchemins et livres jonchent le bureau et le sol, sous deux sphères de cristal posées sur une étagère au nord.",
           "summary": "Cabinet de travail encombré, éclairé par deux sphères de cristal."
         }
       ],
       "features": [
         {
           "id": "livre",
-          "title": "***Anathème des Antérieurs***",
-          "text": "Posé sur la table. **C’est le grimoire d’Ostrian** autant qu’un recueil de rituels. Sorts contenus : *cône de froid*, *contact extraplanaire*, *contresort*, *ténèbres*, *détection de la magie*, *frayeur*, *boule de feu*, *invisibilité supérieure*, *vol*, *tempête de grêle*, *armure du mage*, *projectile magique*, *pas brumeux*, *métamorphose*, *rayon empoisonné*, *bouclier*, *suggestion*.\n\nLe prendre maintenant **prive Ostrian de rien** — il connaît ses sorts. Mais c’est la pièce à conviction, et c’est un titre d’entrée à Castel-Suif."
+          "title": "***L’Anathème des Antérieurs***",
+          "text": "Sur la table. **Le grimoire d’Ostrian.** Sorts : *cône de froid*, *contact extraplanaire*, *contresort*, *ténèbres*, *détection de la magie*, *frayeur*, *boule de feu*, *invisibilité supérieure*, *vol*, *tempête de grêle*, *armure du mage*, *projectile magique*, *pas brumeux*, *métamorphose*, *rayon empoisonné*, *bouclier*, *suggestion*.\n\nLe prendre **ne le prive de rien** — il connaît ses sorts — mais c’est la pièce à conviction, et un titre d’entrée à Castel-Suif."
         },
         {
           "id": "secret",
           "title": "Porte secrète (mur sud)",
-          "text": "Sagesse (Perception) DD 15. Elle coulisse et donne sur un court passage terminé par **une seconde porte secrète, évidente depuis le couloir**, vers [[r:b5|B5]]."
+          "text": "Sagesse (Perception) DD 15. Court passage vers [[r:b5|B5]], terminé par **une seconde porte évidente depuis le couloir**."
         }
       ],
       "traps": [
         {
           "id": "fosse",
           "name": "La trappe de l’étagère",
-          "trigger": "**Retirer l’une des deux sphères de l’étagère.** Ce sont des *globes de lumière* fêlés, incapables de léviter ou d’éclairer le jour : de simples appâts.",
-          "effect": "Le sol s’ouvre. La créature devant l’étagère tombe de **6 m**, atterrit **à terre dans la cellule nord de [[r:b11|B11]]** et subit 7 (2d6) dégâts contondants. Le piège est magique, mais **le plancher doit être remis en place à la main** pour être réarmé.",
-          "disarm": "Sagesse (Perception) DD 16 pour repérer un léger enfoncement du sol devant l’étagère. Ensuite, il suffit de ne pas y poser le pied — ou d’attraper les sphères de loin."
+          "trigger": "**Retirer une sphère de l’étagère.** Ce sont des *globes de lumière* fêlés : de simples appâts.",
+          "effect": "Le sol s’ouvre : chute de **6 m** **à terre dans la cellule nord de [[r:b11|B11]]**, 7 (2d6) contondants. Piège magique, mais **le plancher se remet à la main**.",
+          "disarm": "Sagesse (Perception) DD 16 : un léger enfoncement devant l’étagère. Ensuite, ne pas y poser le pied."
         }
       ],
       "treasure": [
@@ -1658,19 +1634,15 @@
         },
         {
           "id": "grimoire",
-          "item": "***Anathème des Antérieurs***",
+          "item": "***L’Anathème des Antérieurs***",
           "value": "unique",
-          "note": "Titre d’entrée à Castel-Suif, ou une faveur des Avoués si on le leur remet."
+          "note": "Titre d’entrée à Castel-Suif, ou une faveur des Avoués."
         }
       ],
       "notes": [
         {
-          "id": "remonter",
-          "text": "Depuis la cellule nord de [[r:b11|B11]], on peut **remonter ici** par le trou : Force (Athlétisme) DD 20, tant que le plancher n’a pas été remis."
-        },
-        {
           "id": "raccourci",
-          "text": "**Cette pièce est un raccourci.** La porte secrète mène à [[r:b5|B5]], donc à la chapelle, sans passer par [[r:b4|B4]] où l’on est en vue. Un groupe discret qui crochète la porte ouest de [[r:b1|B1]] peut atteindre Ostrian sans avoir alerté personne."
+          "text": "**Raccourci.** La porte secrète mène à [[r:b5|B5]], donc à la chapelle, sans passer par [[r:b4|B4]] où l’on est en vue : crocheter la porte ouest de [[r:b1|B1]], et Ostrian n’est prévenu par personne."
         }
       ],
       "connections": [
@@ -1696,11 +1668,11 @@
         "combat",
         "exploration"
       ],
-      "layout": "Le boyau ouvert dans le mur effondré de [[r:b1|B1]], éclairé par un unique brasero. Au bout, un escalier de pierre incurvé descend vers le niveau inférieur.",
+      "layout": "Le boyau ouvert dans le mur effondré de [[r:b1|B1]], un brasero, et au bout un escalier incurvé vers le bas.",
       "readAloud": [
         {
           "id": "0",
-          "text": "Le tunnel ouvert dans le mur écroulé de l’antichambre est éclairé par un seul brasero. Au bout du passage, un escalier de pierre incurvé s’enfonce dans le noir.",
+          "text": "Le tunnel ouvert dans le mur écroulé est éclairé par un seul brasero. Au bout, un escalier de pierre incurvé s’enfonce dans le noir.",
           "summary": "Un boyau, un brasero, un escalier qui descend."
         }
       ],
@@ -1710,17 +1682,17 @@
           "monster": "cult-fanatic",
           "count": 1,
           "where": "Assis en haut de l’escalier.",
-          "tactics": "**Il ne se bat que s’il est surpris.** Alerté par un bruit venu de [[r:b1|B1]], il **fuit** : il descend, traverse les tunnels du niveau inférieur, remonte par [[r:b8|B8]] et franchit la porte secrète de [[r:b7|B7]] pour prévenir Ostrian."
+          "tactics": "**Il ne se bat que s’il est surpris.** Alerté par [[r:b1|B1]], il **fuit** : descente, tunnels, remontée par [[r:b8|B8]], porte secrète de [[r:b7|B7]] — et Ostrian est prévenu."
         }
       ],
       "notes": [
         {
           "id": "course",
-          "text": "**C’est une course, pas un combat.** S’il part, tout le temple sait. Le rattraper demande d’avoir plus de 9 m de vitesse ou un sort — c’est le bon moment pour un *rayon de givre*, une flèche, ou une porte fermée au bon endroit."
+          "text": "**Une course, pas un combat.** Le rattraper demande plus de 9 m de vitesse ou un sort : *rayon de givre*, une flèche, une porte fermée au bon endroit."
         },
         {
           "id": "consequence",
-          "text": "**Ce qui change s’il passe :** trois fanatiques attendent en embuscade au bas de l’escalier nord de [[r:b7|la chapelle]] au lieu d’être derrière la statue ; et les occupants de [[r:b12|B12]] sont prêts à se battre au lieu d’être distraits."
+          "text": "**S’il passe :** les trois fanatiques de [[r:b7|la chapelle]] passent de derrière la statue à une embuscade au bas de l’escalier nord, et [[r:b12|B12]] n’est plus distrait."
         }
       ],
       "connections": [
@@ -1730,7 +1702,7 @@
         },
         {
           "to": "b11",
-          "via": "L’escalier incurvé, vers le niveau inférieur"
+          "via": "L’escalier incurvé, vers le bas"
         }
       ]
     },
@@ -1742,11 +1714,11 @@
         "exploration",
         "piège"
       ],
-      "layout": "Alcôve au sud de l’antichambre, éclairée par un brasero. Un bureau de bois. **Pas de porte** entre cette pièce et l’escalier qui descend à la chapelle.",
+      "layout": "Alcôve au sud de l’antichambre, un brasero, un bureau. **Pas de porte** entre elle et l’escalier de la chapelle.",
       "readAloud": [
         {
           "id": "0",
-          "text": "Des livres et des babioles s’étalent sur un bureau de bois installé dans cette alcôve, qu’éclaire un brasero.",
+          "text": "Des livres et des babioles s’étalent sur un bureau de bois, dans une alcôve qu’éclaire un brasero.",
           "summary": "Un bureau couvert de livres et de bibelots."
         }
       ],
@@ -1754,22 +1726,22 @@
         {
           "id": "vue",
           "title": "**Aucune porte**",
-          "text": "Rien ne sépare cette alcôve de l’escalier de la chapelle. Entrer ici ou dans [[r:b5|B5]] peut **attirer l’attention des cultistes de [[r:b7|B7]]** — ou se faire sous leurs yeux, s’ils ont déjà été prévenus par [[r:b3|B3]]."
+          "text": "Rien ne sépare l’alcôve de l’escalier de la chapelle : y entrer, ou en [[r:b5|B5]], peut **attirer les cultistes de [[r:b7|B7]]**."
         }
       ],
       "traps": [
         {
           "id": "appat",
           "name": "Le piège à espions",
-          "trigger": "**Emporter l’un des livres ou l’une des babioles.**",
-          "effect": "Aucun effet immédiat. Mais Ostrian vérifie ces objets : **s’il en manque un, il sait que le temple a été infiltré** et prend ses dispositions. À la table, cela veut dire qu’il aura filé avant le combat final.",
-          "disarm": "Sagesse (Perspicacité) DD 15 après **10 minutes** d’examen : les registres sont l’œuvre de Thaevil, ils concernent des achats parfaitement licites, et ils n’ont rien à faire ici. Ce sont des appâts."
+          "trigger": "**Emporter un livre ou une babiole.**",
+          "effect": "Aucun effet immédiat, mais Ostrian vérifie ces objets : **s’il en manque un, il sait qu’on est entré** et aura filé avant le combat final.",
+          "disarm": "Sagesse (Perspicacité) DD 15 après **10 minutes** : registres de Thaevil, achats licites, rien à faire ici. Des appâts."
         }
       ],
       "notes": [
         {
           "id": "ton",
-          "text": "**Le piège le plus cruel de l’aventure est celui qui ne fait aucun dégât.** Ne préviens pas. Laisse le joueur empocher la babiole, note-le, et fais-en la raison pour laquelle Ostrian n’est pas là à la fin."
+          "text": "**Le piège le plus cruel ne fait aucun dégât.** Ne préviens pas : laisse empocher la babiole, note-le, et fais-en la raison de son absence à la fin."
         }
       ],
       "connections": [
@@ -1783,7 +1755,7 @@
         },
         {
           "to": "b7",
-          "via": "L’escalier sud, vers la chapelle"
+          "via": "Escalier sud, vers la chapelle"
         }
       ]
     },
@@ -1795,11 +1767,11 @@
         "exploration",
         "secret"
       ],
-      "layout": "Deux tables, une lampe à huile de bronze, des outils à bois. Une porte secrète dans le mur nord.",
+      "layout": "Deux tables, une lampe de bronze, des outils à bois. Porte secrète au mur nord.",
       "readAloud": [
         {
           "id": "0",
-          "text": "Une lampe de bronze brûle sur l’une des deux tables. Toutes deux portent des outils de sculpture sur bois et d’étranges objets de bois.\n\nCe sont des bouches. **Cinquante bouches de bois, cousues de trois points**, fraîchement taillées, alignées et prêtes à être distribuées.",
+          "text": "Une lampe de bronze brûle sur l’une des deux tables, couvertes d’outils de sculpture et d’étranges objets de bois.\n\nCe sont des bouches. **Cinquante bouches de bois cousues de trois points**, fraîchement taillées, prêtes à distribuer.",
           "summary": "Cinquante symboles du culte fraîchement taillés : une bouche cousue."
         }
       ],
@@ -1807,18 +1779,18 @@
         {
           "id": "secret",
           "title": "Porte secrète (mur nord)",
-          "text": "Identique à celle de [[r:b2|B2]] : Sagesse (Perception) DD 15, et évidente une fois dans le couloir."
+          "text": "Comme en [[r:b2|B2]] : Sagesse (Perception) DD 15, évidente depuis le couloir."
         },
         {
           "id": "echelle",
           "title": "**Cinquante**",
-          "text": "Le culte compte une vingtaine de membres. **Cinquante symboles, c’est un plan d’expansion**, pas un stock. Fais-le remarquer."
+          "text": "Le culte compte une vingtaine de membres. **Cinquante symboles, c’est un plan d’expansion.**"
         }
       ],
       "notes": [
         {
           "id": "e-lien",
-          "text": "**Version Améliorée.** C’est le même bois, la même taille et la même main que le symbole ramassé au [[r:w1|Portail Béant]]. Un personnage qui l’a gardé le vérifie sans jet.",
+          "text": "**Version Améliorée.** Même bois, même taille, même main que le symbole du [[r:w1|Portail Béant]]. Qui l’a gardé le vérifie sans jet.",
           "only": "enhanced"
         }
       ],
@@ -1841,12 +1813,12 @@
         "trésor",
         "exploration"
       ],
-      "layout": "Une pièce à plancher de bois, aménagée **à l’intérieur du volume de la chapelle** ([[r:b7|B7]]). Un divan, une haute bibliothèque, une sphère de cristal lumineuse. Porte non verrouillée.",
+      "layout": "Aménagée **dans le volume de la chapelle** : sa porte donne sur [[r:b7|B7]] et **on n’y entre ni n’en sort sans être vu**. Divan, bibliothèque, sphère de cristal.",
       "readAloud": [
         {
           "id": "0",
-          "text": "Une sphère de cristal éclaire cette chambre au plancher de bois, meublée d’un divan et d’une haute bibliothèque.",
-          "summary": "Petit salon de lecture : divan, bibliothèque, lumière de cristal."
+          "text": "Une sphère de cristal éclaire une chambre au plancher de bois, meublée d’un divan et d’une haute bibliothèque.",
+          "summary": "Salon de lecture : divan, bibliothèque, lumière de cristal."
         }
       ],
       "treasure": [
@@ -1854,17 +1826,7 @@
           "id": "biblio",
           "item": "La bibliothèque du culte",
           "value": "300 po",
-          "note": "Littérature avilie, mythologies noires, études de magie aberrante, traités déments sur les dieux anciens. Ostrian la constitue depuis des années **pour ses fidèles**. Vendable à un acheteur averti — ou **donnée à Castel-Suif** contre des faveurs."
-        }
-      ],
-      "notes": [
-        {
-          "id": "position",
-          "text": "**Cette pièce est dans la chapelle.** Sa porte donne sur [[r:b7|B7]]. On ne peut ni y entrer ni en sortir sans être vu de ceux qui s’y trouvent."
-        },
-        {
-          "id": "lecture",
-          "text": "C’est ici qu’Ostrian **fabrique ses fidèles** : on ne recrute pas des fanatiques, on les cultive, un livre à la fois. Le divan est usé à une seule place."
+          "note": "Mythologies noires, magie aberrante, traités déments. Vendable à un acheteur averti, ou **donnée à Castel-Suif** contre des faveurs."
         }
       ],
       "connections": [
@@ -1884,36 +1846,36 @@
         "trésor",
         "secret"
       ],
-      "layout": "Immense salle en ogive, murs sculptés d’images contre nature, deux rangées de bancs. Alcôve au sud avec la statue et l’autel. **Quatre puits** dans des alcôves latérales. Deux escaliers, nord et est. Portes secrètes de part et d’autre de l’autel.",
+      "layout": "Immense salle en ogive, deux rangées de bancs. Alcôve sud : la statue et l’autel. **Quatre puits** en alcôves latérales, escaliers nord et est, portes secrètes de part et d’autre de l’autel.",
       "readAloud": [
         {
           "id": "0",
-          "text": "Cet espace immense a l’allure d’une chapelle, ses murs sculptés d’images contre nature. Une vaste alcôve, au sud, abrite une **énorme statue de pierre violette** : une créature d’ailleurs à grosse tête bulbeuse, longs bras, tentacules en guise de jambes, et des yeux à facettes qui luisent d’une lumière turquoise.",
-          "summary": "La statue de Grethuum domine l’alcôve sud, les yeux luisants de turquoise."
+          "text": "Un espace immense en forme de chapelle, murs sculptés d’images contre nature. L’alcôve sud abrite une **énorme statue de pierre violette** : tête bulbeuse, longs bras, tentacules en guise de jambes, yeux à facettes luisant de turquoise.",
+          "summary": "La statue de Grethuum domine l’alcôve sud, les yeux luisants."
         },
         {
           "id": "1",
           "only": "base",
-          "text": "Deux corps sont étendus sur un autel devant la statue. Debout au-dessus d’eux, un homme grand et chauve tient un couteau ensanglanté. Deux cultistes en robe l’encadrent, et non loin flotte une chose hideuse : **un cerveau géant couvert de tentacules**.",
-          "summary": "Deux corps sur l’autel, Ostrian un couteau à la main, deux cultistes et un grell."
+          "text": "Deux corps sont étendus sur l’autel. Debout au-dessus d’eux, un homme grand et chauve tient un couteau ensanglanté, encadré de deux cultistes en robe. Non loin flotte **un cerveau géant couvert de tentacules**.",
+          "summary": "Deux corps sur l’autel, Ostrian couteau en main, deux cultistes et un grell."
         },
         {
           "id": "2",
           "only": "base",
-          "text": "**Au début du round 2 :** les deux corps sont consumés par un feu turquoise et réduits à l’os et à la cendre. **De cette cendre émerge un second grell.**",
-          "summary": "Round 2 : les corps brûlent et un second grell naît des cendres."
+          "text": "**Au début du round 2 :** les deux corps sont consumés par un feu turquoise et réduits à l’os. **De la cendre émerge un second grell.**",
+          "summary": "Round 2 : les corps brûlent, un second grell naît des cendres."
         },
         {
           "id": "e0",
           "only": "enhanced",
-          "text": "Ce n’est pas un inconnu qui est sur l’autel.\n\nDurnan est vivant, torse nu, les poignets liés à la pierre, et il tourne la tête vers vous sans hâte, comme un homme qu’on dérange. Il ne dit rien. Il regarde le couteau, puis vous, puis le couteau.\n\nAu-dessus de lui, le notable affable qui vous a offert son aide à Waterdeep lève les yeux. **Un troisième œil s’ouvre au milieu de son front.**\n\n« Ah. » *(Il sourit, réellement content.)* « Vous êtes venus. J’avais dit à Thaevil que vous viendriez. »",
-          "summary": "Durnan vivant sur l’autel. Ostrian lève les yeux — un troisième œil s’ouvre sur son front."
+          "text": "Durnan est vivant, torse nu, les poignets liés à la pierre. Il tourne la tête vers vous sans hâte, comme un homme qu’on dérange, et regarde le couteau, puis vous, puis le couteau.\n\nAu-dessus de lui, un homme grand et chauve lève les yeux. **Un troisième œil s’ouvre au milieu de son front.**\n\n« Ah. » *(Il sourit vraiment.)* « Vous êtes venus. J’avais dit à Thaevil que vous viendriez. »",
+          "summary": "Durnan vivant sur l’autel. Un troisième œil s’ouvre sur le front d’Ostrian."
         },
         {
           "id": "e1",
           "only": "enhanced",
-          "text": "Deux tas de cendres fument encore au pied de l’autel : les deux compagnons de caravane, sacrifiés il y a une heure. **Au début du round 2, un grell s’extrait de l’un d’eux.**\n\nDurnan regarde la chose se déplier et ne dit toujours rien. Puis, à personne en particulier : « Il en sort un à chaque fois. »",
-          "summary": "Round 2 : un grell naît des cendres des deux victimes précédentes."
+          "text": "Deux tas de cendres fument au pied de l’autel : les compagnons de caravane, sacrifiés il y a une heure. **Au début du round 2, un grell s’extrait de l’un d’eux.**\n\nDurnan le regarde se déplier. Puis, à personne : « Il en sort un à chaque fois. »",
+          "summary": "Round 2 : un grell naît des cendres des victimes précédentes."
         }
       ],
       "enemies": [
@@ -1924,7 +1886,7 @@
           "count": 1,
           "name": "Lord Ostrian Duvessar",
           "where": "À l’autel, dos à la statue.",
-          "tactics": "**Il finit son rituel** pendant que les autres retiennent le groupe : il n’entre en jeu qu’au **round 3**. *Armure du mage* est déjà active et son emplacement de niveau 5 est dépensé."
+          "tactics": "**Il finit son rituel** pendant que les autres retiennent : entrée en jeu au **round 3**. *Armure du mage* déjà active, emplacement de niveau 5 dépensé."
         },
         {
           "id": "e-ostrian",
@@ -1933,14 +1895,14 @@
           "count": 1,
           "name": "Lord Ostrian, l’Œil ouvert",
           "where": "À l’autel, au-dessus de Durnan.",
-          "tactics": "Round 1 : il achève le rituel. Round 2 : **Souffle de Grethuum** sur le groupe le plus dense. Tant que Durnan est lié à l’autel, il a l’avantage à toutes ses sauvegardes."
+          "tactics": "Round 1 : il achève le rituel. Round 2 : **Souffle de Grethuum** sur le groupe le plus dense. Tant que Durnan est lié, il a l’avantage à toutes ses sauvegardes."
         },
         {
           "id": "grell1",
           "monster": "grell",
           "count": 1,
           "where": "Flotte près de l’autel.",
-          "tactics": "Se détache du rituel dès l’entrée du groupe. Paralyse et emporte."
+          "tactics": "Se détache dès l’entrée du groupe. Paralyse et emporte."
         },
         {
           "id": "cultistes",
@@ -1961,16 +1923,16 @@
           "id": "fanatiques",
           "monster": "cult-fanatic",
           "count": 3,
-          "where": "**Derrière la statue** si le groupe est arrivé sans bruit. **En embuscade au bas de l’escalier nord** si [[r:b3|B3]] a donné l’alerte.",
-          "tactics": "Trois *immobilisations de personne* coordonnées sur les combattants au corps à corps. **C’est la vraie menace de la salle.**"
+          "where": "**Derrière la statue** si l’arrivée est silencieuse ; **au bas de l’escalier nord** si [[r:b3|B3]] a donné l’alerte.",
+          "tactics": "Trois *immobilisations de personne* coordonnées sur les combattants au contact. **La vraie menace de la salle.**"
         },
         {
           "id": "thaevil",
           "monster": "thaevil",
           "count": 1,
           "name": "Thaevil",
-          "where": "Sur un banc, **s’il a pu fuir Waterdeep** et qu’on ne l’a pas trouvé chez lui.",
-          "tactics": "Sans ses gardes du corps, il tente de fuir la salle — et le temple — dès le premier round.",
+          "where": "Sur un banc, **s’il a fui Waterdeep** et qu’on ne l’a pas trouvé chez lui.",
+          "tactics": "Sans ses gardes, il tente de fuir dès le premier round.",
           "hidden": true
         },
         {
@@ -1979,8 +1941,8 @@
           "monster": "elu-verbe-eteint",
           "count": 1,
           "name": "L’Élu de l’autel",
-          "where": "Agenouillé au pied de la statue, immobile depuis le début.",
-          "tactics": "Se lève au round 2. Sa mission est de **protéger l’autel**, pas Ostrian : il ne s’éloigne jamais de plus de 3 m de Durnan."
+          "where": "Agenouillé au pied de la statue, immobile.",
+          "tactics": "Se lève au round 2. Il **protège l’autel**, pas Ostrian : jamais à plus de 3 m de Durnan."
         },
         {
           "id": "e-grell",
@@ -1997,18 +1959,18 @@
         {
           "id": "puits",
           "title": "Les quatre puits",
-          "text": "Dans des alcôves latérales. Après chaque sacrifice, on y jette cendres et ossements : ils débouchent en [[r:b13|B13]], au niveau inférieur. **Une créature peut y être poussée** — 9 m de chute."
+          "text": "On y jette cendres et ossements ; ils débouchent en [[r:b13|B13]]. **On peut y pousser une créature** — 9 m de chute."
         },
         {
           "id": "secretes",
           "title": "Portes secrètes",
-          "text": "Sagesse (Perception) DD 15 : deux panneaux coulissants **de part et d’autre de l’autel**, vers [[r:b8|B8]] et [[r:b9|B9]]. Ils s’ouvrent sans effort une fois trouvés."
+          "text": "Sagesse (Perception) DD 15 : deux panneaux **de part et d’autre de l’autel**, vers [[r:b8|B8]] et [[r:b9|B9]]. Ils s’ouvrent sans effort une fois trouvés."
         },
         {
           "id": "e-autel",
           "only": "enhanced",
           "title": "Libérer Durnan",
-          "text": "Les liens sont **du cuir et de la chaîne, pas de la magie**. Une action et un test de Force (Athlétisme) DD 15, ou 12 dégâts tranchants sur la chaîne, ou la clef que porte Ostrian. **Le libérer retire immédiatement à Ostrian son avantage aux jets de sauvegarde**, et lui retire sa raison de rester."
+          "text": "Cuir et chaîne, **pas de magie** : une action et Athlétisme DD 15, 12 dégâts tranchants, ou la clef d’Ostrian. **Le libérer lui retire son avantage aux sauvegardes** — et sa raison de rester."
         }
       ],
       "treasure": [
@@ -2016,7 +1978,7 @@
           "id": "bracelets",
           "item": "Cinq bracelets d’or",
           "value": "150 po chacun",
-          "note": "Disposés en offrandes autour de l’autel, parmi des babioles sans valeur."
+          "note": "En offrandes autour de l’autel."
         },
         {
           "id": "robe",
@@ -2028,7 +1990,7 @@
           "id": "parchemin",
           "item": "**Parchemin de téléportation**",
           "value": "objet magique",
-          "note": "Dans une poche de la robe. **Il s’en sert pour fuir** — ne le trouve dans son butin que s’il meurt vite."
+          "note": "Dans une poche de la robe. **Il s’en sert pour fuir** : dans son butin seulement s’il meurt vite."
         },
         {
           "id": "clefs",
@@ -2040,16 +2002,12 @@
       "notes": [
         {
           "id": "fuite",
-          "text": "**Ostrian fuit par parchemin** dès que la bataille lui paraît perdue. Ce n’est pas un échec du groupe : c’est une fin, et elle laisse une dette. Sans le corps ni les aveux, **le Guet de Waterdeep n’a rien** — et Ostrian, lui, a tout à refaire mais garde Grethuum."
+          "text": "**Ostrian fuit par parchemin** dès que la bataille lui paraît perdue. Une fin, pas un échec — mais sans corps ni aveux, **le Guet n’a rien**."
         },
         {
           "id": "e-fuite",
-          "text": "**Version Améliorée : il ne fuit pas tant que Durnan est sur l’autel.** Il est venu chercher la clef du puits, il ne repartira pas sans. C’est ce qui rend le combat gagnable — et ce qui punit le groupe qui libère le tavernier trop tôt sans avoir affaibli le mage.",
+          "text": "**Version Améliorée : il ne fuit pas tant que Durnan est sur l’autel** — il est venu chercher la clef du puits. C’est ce qui rend le combat gagnable, et ce qui punit qui libère le tavernier trop tôt.",
           "only": "enhanced"
-        },
-        {
-          "id": "deux-fins",
-          "text": "**Deux fins, à annoncer clairement au groupe s’il hésite :**\n• **Ostrian vivant, livré à Waterdeep** — il avoue tout devant l’échafaud, l’affaire Duvessar se referme, la ville a sa justice.\n• **Ostrian abattu sans preuve** — le culte meurt avec lui, mais il reste un notable assassiné chez lui par des aventuriers. **Le Guet aura des questions**, et c’est une dette pour plus tard."
         }
       ],
       "connections": [
@@ -2083,7 +2041,7 @@
         "trésor",
         "secret"
       ],
-      "layout": "Un court couloir depuis la porte secrète est de la chapelle, puis un escalier qui descend. Pièce obscure, deux coffres, et un second escalier vers les tunnels du niveau inférieur.",
+      "layout": "Derrière la porte secrète est de la chapelle, en bas d’un escalier. Deux coffres, et un second escalier vers les tunnels.",
       "readAloud": [
         {
           "id": "0",
@@ -2096,17 +2054,17 @@
           "id": "coffres",
           "item": "Les affaires des prisonniers",
           "value": "115 po + boucles d’oreilles serties (150 po)",
-          "note": "Les deux coffres ne sont pas verrouillés. Aussi : **une épée longue et deux dagues**. Si le groupe se fait capturer, ses propres affaires atterrissent ici."
+          "note": "Coffres non verrouillés, plus **une épée longue et deux dagues**. Un groupe capturé retrouve ici son matériel."
         }
       ],
       "notes": [
         {
           "id": "capture",
-          "text": "**Le plan de secours du MJ.** Si le groupe est capturé, il se réveille en [[r:b11|B11]] et son matériel est ici, à deux salles. Ce n’est pas une fin, c’est un détour — et un très bon."
+          "text": "**Le plan de secours du MJ.** Groupe capturé : réveil en [[r:b11|B11]], matériel ici, à deux salles. Un détour, pas une fin."
         },
         {
           "id": "e-durnan",
-          "text": "**Version Améliorée.** L’épée longue du coffre est celle de Durnan : lame simple, garde usée, sans marque. Lui rendre son arme le fait passer de figurant à combattant ([[m:durnan|fiche]]).",
+          "text": "**Version Améliorée.** L’épée longue est celle de Durnan : lame simple, garde usée. La lui rendre le fait passer de figurant à combattant ([[m:durnan|fiche]]).",
           "only": "enhanced"
         }
       ],
@@ -2130,11 +2088,11 @@
         "secret",
         "énigme"
       ],
-      "layout": "Petite chambre obscure derrière la porte secrète ouest de la chapelle. Une table basse, **une urne d’or**, et une bibliothèque pleine de livres et de parchemins usés.",
+      "layout": "Derrière la porte secrète ouest de la chapelle. Table basse, **urne d’or**, bibliothèque de livres usés.",
       "readAloud": [
         {
           "id": "0",
-          "text": "Cette petite chambre obscure abrite une **urne d’or** posée sur une table basse, et une bibliothèque bourrée de livres et de parchemins, dont beaucoup sont anciens et abîmés.",
+          "text": "Une **urne d’or** sur une table basse, et une bibliothèque bourrée de livres et de parchemins, beaucoup anciens et abîmés.",
           "summary": "Une urne d’or sur une table, une bibliothèque de vieux ouvrages."
         }
       ],
@@ -2142,27 +2100,23 @@
         {
           "id": "urne",
           "title": "**L’urne d’or**",
-          "text": "Gravée de sigles arcaniques liés aux Plans Extérieurs. *Détection de la magie* : aura de **nécromancie**. Elle contient des cendres.\n\n**Ce sont Lady Ysolde, Perrin, Aldric et Sionne.** Ostrian a emporté ses morts avec lui pour s’en servir comme focalisateur de ses rituels. C’est l’objet que Wenna cherche depuis cinq ans."
+          "text": "Sigles des Plans Extérieurs, aura de **nécromancie** à la *détection de la magie*. Elle contient les cendres de **Lady Ysolde, Perrin, Aldric et Sionne** : Ostrian a emporté ses morts pour s’en servir comme focalisateur. C’est ce que Wenna cherche."
         },
         {
           "id": "journaux",
           "title": "Les journaux d’Ostrian",
-          "text": "Parmi les vieux ouvrages, plusieurs cahiers récents de sa main. **Quelques minutes de lecture donnent tout ce que le groupe aurait pu manquer** sur les meurtres du manoir — et désignent l’urne."
+          "text": "Plusieurs cahiers récents de sa main : **quelques minutes de lecture rattrapent tout ce que le groupe a pu manquer**, et désignent l’urne."
         },
         {
           "id": "fonds",
           "title": "Le fonds ancien",
-          "text": "Formules arcaniques, recettes alchimiques, instructions rituelles, savoir sur les Plans Extérieurs. **La moitié est en profond.**"
+          "text": "Formules arcaniques, alchimie, instructions rituelles, savoir planaire. **La moitié est en profond.**"
         }
       ],
       "notes": [
         {
-          "id": "objectif",
-          "text": "**C’est l’objectif de l’aventure, et il tient dans un pot.** Ne le cache pas derrière un jet. Si le groupe a trouvé la porte secrète, il a l’urne."
-        },
-        {
           "id": "wenna",
-          "text": "Si le journal de Wenna est là, **elle voit l’urne**. Elle ne fait rien de spectaculaire : elle s’assied à côté et n’en bouge plus."
+          "text": "Si le journal de Wenna est là, **elle voit l’urne**. Elle s’assied à côté et n’en bouge plus."
         }
       ],
       "treasure": [
@@ -2192,8 +2146,8 @@
       "readAloud": [
         {
           "id": "0",
-          "text": "Cette chambre obscure sans issue abrite un monticule d’ossements calcinés, de membres desséchés et de crânes, éparpillés sur un drap de lin. **Des runes rouge et noir** en marquent les bords, tracées, semble-t-il, avec du sang.",
-          "summary": "Un monticule d’os calcinés sur un drap de lin bordé de runes de sang."
+          "text": "Un monticule d’ossements calcinés, de membres desséchés et de crânes, sur un drap de lin bordé de **runes rouge et noir** tracées au sang.",
+          "summary": "Un monticule d’os calcinés sur un drap bordé de runes de sang."
         }
       ],
       "checks": [
@@ -2201,18 +2155,14 @@
           "id": "arcanes",
           "skill": "Intelligence (Arcanes)",
           "dc": 15,
-          "text": "Les runes sont un **inventaire rituel**. Ces restes sont rassemblés pour alimenter un rituel bien plus vaste, prévu pour plus tard — **qui exigera des centaines de victimes**. Maîtrise d’Arcanes : réussite automatique.",
+          "text": "Un **inventaire rituel** : ces restes alimenteront un rituel bien plus vaste, **qui exigera des centaines de victimes**. Maîtrise d’Arcanes : automatique.",
           "failure": "Un charnier rangé. Le rangement est le plus inquiétant."
         }
       ],
       "notes": [
         {
-          "id": "echelle",
-          "text": "**C’est ici que l’aventure change de taille.** Jusqu’à cette salle, le culte est une affaire locale de vingt personnes. Après, c’est un projet. Laisse le silence s’installer."
-        },
-        {
           "id": "e-puits",
-          "text": "**Version Améliorée.** Les runes disent aussi **où** : elles désignent un lieu situé sous Waterdeep, à plusieurs strates de profondeur. C’est pour cela que le culte a besoin d’un accès libre au puits du Portail Béant — et pour cela qu’il a fallu enlever Durnan.",
+          "text": "**Version Améliorée.** Les runes disent aussi **où** : un lieu sous Waterdeep, à plusieurs strates. D’où le besoin d’un accès libre au puits du Portail Béant — et l’enlèvement de Durnan.",
           "only": "enhanced"
         }
       ],
@@ -2232,24 +2182,24 @@
         "social",
         "exploration"
       ],
-      "layout": "Deux cellules creusées dans la roche, l’une au nord, l’autre au sud, fermées par des grilles de fer verrouillées. La cellule nord est **sous la trappe de [[r:b2|B2]]**.",
+      "layout": "Deux cellules creusées dans la roche, grilles de fer verrouillées. La cellule nord est **sous la trappe de [[r:b2|B2]]**.",
       "readAloud": [
         {
           "id": "0",
-          "text": "Deux cellules, fermées par des grilles de fer. Celle du nord est vide. Dans celle du sud, six silhouettes se lèvent en même temps et personne ne crie : ils ont appris à ne pas crier.",
-          "summary": "Deux cellules ; celle du nord est vide, six prisonniers silencieux dans celle du sud."
+          "text": "Deux cellules fermées par des grilles de fer. Celle du nord est vide. Dans celle du sud, six silhouettes se lèvent en même temps et personne ne crie : ils ont appris à ne pas crier.",
+          "summary": "Cellule nord vide, six prisonniers silencieux au sud."
         }
       ],
       "features": [
         {
           "id": "serrures",
           "title": "Les grilles",
-          "text": "Verrouillées. **Lord Ostrian porte les clefs.** Outils de voleur DD 15."
+          "text": "Verrouillées. **Ostrian porte les clefs.** Outils de voleur DD 15."
         },
         {
           "id": "nord",
           "title": "Cellule nord",
-          "text": "Vide à l’arrivée du groupe. C’est là qu’atterrit **quiconque déclenche la trappe de [[r:b2|B2]]** : 6 m de chute, à terre, 2d6 dégâts. On peut remonter par le trou : Force (Athlétisme) DD 20."
+          "text": "Vide. C’est là qu’atterrit **qui déclenche la trappe de [[r:b2|B2]]** : 6 m, à terre, 2d6. Remontée par le trou : Athlétisme DD 20."
         }
       ],
       "npcs": [
@@ -2259,8 +2209,8 @@
           "role": "Sœur de la mairesse",
           "attitude": "épuisée",
           "monster": "commoner",
-          "description": "Elle a rejoint Ostrian de son plein gré il y a deux mois. Quand elle a compris l’ampleur de la chose et tenté de partir, on l’a enfermée. **Roturière désarmée avec 4 niveaux d’épuisement.**",
-          "wants": "Revoir sa sœur, et qu’on ne lui raconte pas ce qu’elle a fait avant de comprendre.",
+          "description": "Venue à Ostrian de son plein gré il y a deux mois, enfermée quand elle a voulu partir. **Roturière désarmée, 4 niveaux d’épuisement.**",
+          "wants": "Revoir sa sœur, sans qu’on lui raconte ce qu’elle a fait avant de comprendre.",
           "dialogues": [
             {
               "id": "kessa",
@@ -2275,10 +2225,10 @@
           "role": "Prisonnier, s’il est parti en avance",
           "attitude": "furieux contre lui-même",
           "monster": "corvan",
-          "description": "Présent **si au moins un jour s’est écoulé** entre la visite de [[r:w6|rue des Cordiers]] et l’arrivée du groupe. Il a affronté une escouade de cultistes sur la Voie Marchande et a perdu. **Réduit à 25 PV.**",
-          "wants": "Se racheter, tout de suite, de préférence à l’épée.",
+          "description": "Présent **si au moins un jour s’est écoulé** depuis [[r:w6|W6]] : il a perdu contre une escouade sur la Voie Marchande. **25 PV.**",
+          "wants": "Se racheter tout de suite, de préférence à l’épée.",
           "secrets": [
-            "Assez solide pour **escorter les prisonniers dehors** pendant que le groupe finit. Pas assez pour descendre à la chapelle."
+            "Assez solide pour **escorter les prisonniers dehors**, pas pour descendre à la chapelle."
           ],
           "dialogues": [
             {
@@ -2295,10 +2245,10 @@
           "role": "Le tavernier du Portail Béant",
           "attitude": "silencieux",
           "monster": "durnan",
-          "description": "**Il n’est pas ici.** Il est en [[r:b7|B7]], sur l’autel. Cette entrée est là pour le MJ : si le groupe descend trop vite et rate la chapelle, c’est ici qu’on lui apprend qu’il est arrivé trop tard d’une demi-heure.",
+          "description": "**Il n’est pas ici**, il est sur l’autel en [[r:b7|B7]]. Cette entrée sert si le groupe descend trop vite : c’est ici qu’il apprend son retard d’une demi-heure.",
           "wants": "Rentrer, rouvrir, et ne rien raconter.",
           "secrets": [
-            "Les autres prisonniers l’ont vu passer. **Ils diront combien de temps il reste** : « ils l’ont emmené il y a une heure »."
+            "Les prisonniers l’ont vu passer et **disent combien de temps il reste** : « ils l’ont emmené il y a une heure »."
           ],
           "dialogues": [
             {
@@ -2312,22 +2262,18 @@
       "notes": [
         {
           "id": "six",
-          "text": "**Six prisonniers dans la cellule sud :** Nyla Vairon, **trois roturiers désarmés** (Bram, Odile, Teff) et **un enfant non combattant** (Mielle), pris dans une caravane il y a quelques jours. Deux de leurs compagnons ont été emmenés il y a quelques heures : ce sont les corps de l’autel en [[r:b7|B7]]."
-        },
-        {
-          "id": "charge",
-          "text": "**Six civils à évacuer pendant que le temple s’éveille.** C’est la vraie difficulté du niveau inférieur, et elle ne se résout pas à l’épée. Corvan libéré règle le problème ; sinon, il faut choisir entre eux et Ostrian."
+          "text": "**Six dans la cellule sud :** Nyla Vairon, **trois roturiers désarmés** (Bram, Odile, Teff) et **un enfant non combattant** (Mielle), pris dans une caravane. Deux compagnons emmenés il y a peu : les corps de l’autel en [[r:b7|B7]]."
         },
         {
           "id": "e-cinq",
-          "text": "**Version Améliorée :** cinq prisonniers seulement — la sixième place est celle qu’occupait Durnan jusqu’à il y a une heure.",
+          "text": "**Version Améliorée :** cinq prisonniers — la sixième place était celle de Durnan il y a une heure.",
           "only": "enhanced"
         }
       ],
       "connections": [
         {
           "to": "b3",
-          "via": "L’escalier incurvé, vers le niveau supérieur"
+          "via": "L’escalier incurvé, vers le haut"
         },
         {
           "to": "b10",
@@ -2351,11 +2297,11 @@
         "combat",
         "pnj"
       ],
-      "layout": "Alcôve de pierre taillée, éclairée. Des parchemins et des notes jonchent le sol.",
+      "layout": "Alcôve de pierre taillée, éclairée, parchemins et notes au sol.",
       "readAloud": [
         {
           "id": "0",
-          "text": "Des parchemins et des notes couvrent le sol de cette alcôve de pierre. Quatre recrues s’y exercent : trois répètent une formule qui ne prend pas, et la quatrième les regarde faire avec une patience qui n’en est pas.",
+          "text": "Des parchemins couvrent le sol. Quatre recrues s’exercent : trois répètent une formule qui ne prend pas, la quatrième les regarde avec une patience qui n’en est pas.",
           "summary": "Quatre recrues du culte s’exercent à l’incantation."
         }
       ],
@@ -2365,21 +2311,21 @@
           "monster": "cultist",
           "count": 3,
           "where": "Au centre, penchés sur leurs notes.",
-          "tactics": "**Distraits** si personne ne les a prévenus : le groupe a une manche gratuite. Alertés par [[r:b3|B3]], ils attendent en embuscade."
+          "tactics": "**Distraits** si personne ne les a prévenus : une manche gratuite. Alertés par [[r:b3|B3]], ils sont en embuscade."
         },
         {
           "id": "instructeur",
           "monster": "cult-fanatic",
           "count": 1,
           "where": "Debout, dos au mur.",
-          "tactics": "*Immobilisation de personne*, puis il laisse les recrues frapper la cible immobilisée."
+          "tactics": "*Immobilisation de personne*, puis les recrues frappent la cible immobilisée."
         },
         {
           "id": "gricks",
           "monster": "grick",
           "count": 2,
-          "where": "Enroulés dans les anfractuosités du plafond.",
-          "tactics": "**Optionnel — pour durcir la rencontre.** Chiens de garde : ils tombent du plafond sur le premier qui passe dessous.",
+          "where": "Enroulés au plafond.",
+          "tactics": "**Optionnel, pour durcir.** Ils tombent sur le premier qui passe dessous.",
           "hidden": true
         },
         {
@@ -2399,11 +2345,11 @@
           "role": "Recrue du culte, fils du tavernier",
           "attitude": "exalté puis effondré",
           "monster": "cultist",
-          "description": "Un des trois cultistes lui ressemble beaucoup : **c’est le fils du [[r:g2|Vieux Brannoc]]**. Il se bat avec la même fureur que les autres, et la perd dès qu’on le maîtrise.",
-          "wants": "Avoir choisi quelque chose de grand. Il commence à comprendre qu’il n’a rien choisi du tout.",
+          "description": "Un des trois cultistes ressemble au [[r:g2|Vieux Brannoc]] : **c’est son fils**. Il se bat comme les autres et perd sa fureur dès qu’on le maîtrise.",
+          "wants": "Avoir choisi quelque chose de grand. Il commence à comprendre qu’il n’a rien choisi.",
           "secrets": [
-            "**Nouvel initié**, il n’a pas encore été exposé au pire. Épargné, il finit par faire amende honorable.",
-            "Charisme (Persuasion) DD 12 après le combat, ou du bon jeu de rôle, lui fait comprendre qu’il a été utilisé."
+            "**Nouvel initié**, pas encore exposé au pire ; épargné, il fait amende honorable.",
+            "Charisme (Persuasion) DD 12 après le combat, ou du bon jeu de rôle : il comprend qu’il a été utilisé."
           ],
           "dialogues": [
             {
@@ -2427,16 +2373,6 @@
           "note": "Dans les parchemins du sol."
         }
       ],
-      "notes": [
-        {
-          "id": "calibrage",
-          "text": "**Levier de calibrage.** Les deux gricks sont explicitement optionnels dans la source : retire-les si le groupe est à court de ressources, ajoute-les s’il arrive frais."
-        },
-        {
-          "id": "brannoc",
-          "text": "Épargner le Jeune Brannoc et le ramener vaut au groupe **l’hospitalité gratuite du Pichet Bossu, à vie**. Le tuer ne coûte rien mécaniquement — seulement d’avoir à le dire à son père."
-        }
-      ],
       "connections": [
         {
           "to": "b11",
@@ -2455,22 +2391,22 @@
       "tags": [
         "exploration"
       ],
-      "layout": "Deux renfoncements des tunnels du niveau inférieur, sous les quatre puits de la chapelle.",
+      "layout": "Deux renfoncements des tunnels, sous les quatre puits de la chapelle.",
       "readAloud": [
         {
           "id": "0",
-          "text": "Des monticules de cendre et d’os s’entassent ici, tombés d’en haut. Il y en a deux tas, et ils ne sont pas de la même année.",
-          "summary": "Deux tas de cendres et d’ossements tombés des puits de la chapelle."
+          "text": "Des monticules de cendre et d’os s’entassent ici, tombés d’en haut. Deux tas, et ils ne sont pas de la même année.",
+          "summary": "Deux tas de cendres et d’ossements tombés des puits."
         }
       ],
       "notes": [
         {
           "id": "compte",
-          "text": "**Un personnage qui prend le temps de compter les crânes en trouve trente et un.** Le culte tue depuis cinq ans, à raison de six par an. Ce chiffre vaut mieux qu’un discours."
+          "text": "**Qui prend le temps de compter les crânes en trouve trente et un.** Cinq ans, six par an."
         },
         {
           "id": "acces",
-          "text": "Les quatre puits de [[r:b7|la chapelle]] débouchent ici : **on peut y monter** (9 m, Athlétisme DD 15 avec une corde), ou y tomber."
+          "text": "Les quatre puits de [[r:b7|B7]] débouchent ici : **on peut y monter** (9 m, Athlétisme DD 15 avec une corde), ou y tomber."
         }
       ],
       "connections": [
@@ -2496,31 +2432,31 @@
       "name": "Le rituel de Grethuum",
       "icon": "skull",
       "only": "enhanced",
-      "text": "Le culte a Durnan depuis la nuit dernière. **Un palier par tranche de six heures**, et un palier par repos long. Annonce-le toujours par un détail du monde, jamais par un chiffre : une cloche, une lumière qui change, un cultiste pressé.",
+      "text": "Le culte a Durnan depuis la nuit dernière. **Un palier par six heures**, et un palier par repos long. Annonce-le par un détail du monde, jamais par un chiffre.",
       "steps": [
         {
           "label": "La nuit même",
-          "text": "Durnan est vivant, enfermé en [[r:b11|B11]] avec les autres. **Rien n’est joué.**"
+          "text": "Durnan est vivant, enfermé en [[r:b11|B11]]. **Rien n’est joué.**"
         },
         {
           "label": "Le premier jour",
-          "text": "On l’a interrogé. Il n’a rien dit. Les cultistes de [[r:g5|G5]] commencent à parler de « celui d’en haut »."
+          "text": "On l’a interrogé, il n’a rien dit. Les cultistes de [[r:g5|G5]] parlent de « celui d’en haut »."
         },
         {
           "label": "Le deuxième jour",
-          "text": "Ostrian remonte du temple pour vérifier quelque chose au [[r:g3|hameau]]. **Le groupe peut le croiser sans le savoir.**"
+          "text": "Ostrian remonte vérifier quelque chose au [[r:g3|hameau]]. **Le groupe peut le croiser sans le savoir.**"
         },
         {
           "label": "La préparation",
-          "text": "Durnan est sorti de la cellule et attaché à l’autel de [[r:b7|B7]]. **Cinq prisonniers seulement dans la cellule sud.**"
+          "text": "Durnan est attaché à l’autel de [[r:b7|B7]]. **Cinq prisonniers seulement dans la cellule sud.**"
         },
         {
           "label": "Le rituel commence",
-          "text": "Deux victimes de la caravane sont sacrifiées les premières. **C’est la scène décrite à l’arrivée dans la chapelle.** Durnan est le suivant."
+          "text": "Deux victimes de la caravane passent les premières : **c’est la scène d’arrivée dans la chapelle.** Durnan est le suivant."
         },
         {
           "label": "Trop tard",
-          "text": "**Durnan est mort et le puits est ouvert.** Le culte descend. L’aventure ne s’arrête pas — elle change : il faut les rattraper en bas, et il faudra dire à Bonnie ce qui s’est passé."
+          "text": "**Durnan est mort et le puits est ouvert.** Le culte descend : rattrapage en bas, et il faudra le dire à Bonnie."
         }
       ]
     }
